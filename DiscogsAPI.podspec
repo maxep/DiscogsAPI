@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.0.0"
-  s.summary      = "An Objective C API client for the Discogs v 2.0 API."
+  s.version      = "1.0"
+  s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
-                    An Objective C API client for the Discogs v 2.0 API.
+                    An Objective-C interface for Discogs API v2.0.
                    DESC
-  s.homepage     = "https://bitbucket.org/maxep/discogsapi"
+  s.homepage     = "https://github.com/maxep/DiscogsAPI"
   s.license      = 'MIT'
   s.author       = { "Maxime Epain" => "maxime.epain@gmail.com" }
-  s.source       = { :git => "https://maxep@bitbucket.org/maxep/discogsapi.git" }
+  s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git" }
   s.requires_arc = true
   s.ios.deployment_target = '7.1'
   s.source_files = 'DiscogsAPI/**/*.{h,m}'
