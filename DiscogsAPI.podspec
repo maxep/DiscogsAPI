@@ -3,12 +3,16 @@ Pod::Spec.new do |s|
   s.version      = "1.0"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
-                    An Objective-C interface for Discogs API v2.0.
+                    Features:
+					- Handle OAuth process and store tokens in keychain.
+					- Database support: Release, Master Release, Master Release Versions, Artist, Artist Releases, Label, All Label Releases, Search.
+					- User support: Identify, Profile, Collection, Wantlist.
+					- Image support.
                    DESC
   s.homepage     = "https://github.com/maxep/DiscogsAPI"
   s.license      = 'MIT'
   s.author       = { "Maxime Epain" => "maxime.epain@gmail.com" }
-  s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git" }
+  s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git", :tag => "v#{s.version}" }
   s.requires_arc = true
   s.ios.deployment_target = '7.1'
   s.source_files = 'DiscogsAPI/**/*.{h,m}'
