@@ -24,7 +24,7 @@ The implementation is based on the [RestKit](http://restkit.org/) framework.
 
 ```ruby
 platform :ios, '7.1'
-pod 'DiscogSAPI'
+pod 'DiscogsAPI'
 ```
 
 ### Setup

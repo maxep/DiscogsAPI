@@ -67,7 +67,7 @@
 		D03C26171A934551000B4785 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = D03C25E81A934551000B4785 /* DGIdentity.m */; };
 		D03C26181A934551000B4785 /* DGProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D03C25EB1A934551000B4785 /* DGProfile.m */; };
 		D03C26191A934551000B4785 /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = D03C25EE1A934551000B4785 /* DGWantlist.m */; };
-		D03C261D1A934F20000B4785 /* DGResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D03C261C1A934F20000B4785 /* DGResource.m */; };
+		D0D2BA6E1A93B1EC0036F006 /* DGResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D2BA6D1A93B1EC0036F006 /* DGResource.m */; };
 		D0E32EA01A933BF10034A6FD /* DiscogsAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0E32E9F1A933BF10034A6FD /* DiscogsAPI.h */; };
 		D0E32EA21A933BF10034A6FD /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E32EA11A933BF10034A6FD /* DiscogsAPI.m */; };
 		D0E32EA81A933BF10034A6FD /* libDiscogsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E32E9C1A933BF10034A6FD /* libDiscogsAPI.a */; };
@@ -193,8 +193,8 @@
 		D03C25EB1A934551000B4785 /* DGProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGProfile.m; sourceTree = "<group>"; };
 		D03C25ED1A934551000B4785 /* DGWantlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWantlist.h; sourceTree = "<group>"; };
 		D03C25EE1A934551000B4785 /* DGWantlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWantlist.m; sourceTree = "<group>"; };
-		D03C261B1A934F20000B4785 /* DGResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGResource.h; sourceTree = "<group>"; };
-		D03C261C1A934F20000B4785 /* DGResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGResource.m; sourceTree = "<group>"; };
+		D0D2BA6C1A93B1EC0036F006 /* DGResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGResource.h; sourceTree = "<group>"; };
+		D0D2BA6D1A93B1EC0036F006 /* DGResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGResource.m; sourceTree = "<group>"; };
 		D0E32E9C1A933BF10034A6FD /* libDiscogsAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDiscogsAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E32E9F1A933BF10034A6FD /* DiscogsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscogsAPI.h; sourceTree = "<group>"; };
 		D0E32EA11A933BF10034A6FD /* DiscogsAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscogsAPI.m; sourceTree = "<group>"; };
@@ -528,13 +528,13 @@
 			path = Wantlist;
 			sourceTree = "<group>";
 		};
-		D03C261A1A934F20000B4785 /* Images */ = {
+		D0D2BA6B1A93B1EC0036F006 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D03C261B1A934F20000B4785 /* DGResource.h */,
-				D03C261C1A934F20000B4785 /* DGResource.m */,
+				D0D2BA6C1A93B1EC0036F006 /* DGResource.h */,
+				D0D2BA6D1A93B1EC0036F006 /* DGResource.m */,
 			);
-			path = Images;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		D0E32E931A933BF10034A6FD = {
@@ -568,8 +568,8 @@
 				D03C257A1A933F96000B4785 /* DGObject.m */,
 				D0E32EB61A933C800034A6FD /* Authentication */,
 				D03C25801A934551000B4785 /* Database */,
-				D03C261A1A934F20000B4785 /* Images */,
 				D03C25DC1A934551000B4785 /* User */,
+				D0D2BA6B1A93B1EC0036F006 /* Resource */,
 				D03C25A51A934551000B4785 /* Mapping */,
 			);
 			path = DiscogsAPI;
@@ -748,9 +748,9 @@
 				D03C260B1A934551000B4785 /* DGSearch+Mapping.m in Sources */,
 				D03C260E1A934551000B4785 /* DGCollectionRelease+Mapping.m in Sources */,
 				D03C26141A934551000B4785 /* DGCollectionRelease.m in Sources */,
-				D03C261D1A934F20000B4785 /* DGResource.m in Sources */,
 				D03C25F01A934551000B4785 /* DGArtistRelease.m in Sources */,
 				D03C25F51A934551000B4785 /* DGVideo.m in Sources */,
+				D0D2BA6E1A93B1EC0036F006 /* DGResource.m in Sources */,
 				D0E32EBD1A933C800034A6FD /* DGAuthentication.m in Sources */,
 				D0E32EBF1A933C800034A6FD /* DGTokenStore.m in Sources */,
 				D03C25F11A934551000B4785 /* DGMember.m in Sources */,
@@ -908,7 +908,7 @@
 			baseConfigurationReference = 818EE97FD52D4DA4F3959FF9 /* Pods-DiscogsAPI.debug.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = DiscogsAPI/DiscogsAPI.pch;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -919,7 +919,7 @@
 			baseConfigurationReference = B81B3B6A72E71920B665F86C /* Pods-DiscogsAPI.release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = DiscogsAPI/DiscogsAPI.pch;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -965,6 +965,7 @@
 				D0D2BA691A93615E0036F006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E32E971A933BF10034A6FD /* Build configuration list for PBXProject "DiscogsAPI" */ = {
 			isa = XCConfigurationList;

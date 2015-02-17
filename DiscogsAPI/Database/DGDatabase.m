@@ -303,32 +303,4 @@
     [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure
-{
-    DGCheckReachability();
-    
-    if( !imageURL || [imageURL isEqualToString:@""] )
-    {
-        if (failure) {
-            failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Image URL is empty"]);
-        }
-        return;
-    }
-    
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager.HTTPClient requestWithMethod:@"GET" path:imageURL parameters:nil];
-    
-    AFImageRequestOperation* objectRequestOperation = [AFImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil
-    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image){
-        if (success) {
-            success(image);
-        }
-    }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
-    
-    [RKObjectManager.sharedManager.HTTPClient enqueueHTTPRequestOperation:objectRequestOperation];
-}
-
 @end

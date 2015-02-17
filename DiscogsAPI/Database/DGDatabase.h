@@ -119,13 +119,4 @@
  */
 - (void) getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure;
 
-/**
- Gets a Discogs image.
- 
- @param imageURL The image URL.
- @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
- @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
- */
-- (void) getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
-
 @end
