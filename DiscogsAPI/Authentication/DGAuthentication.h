@@ -83,6 +83,13 @@
 - (void) authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
+ Check if a token exist.
+ 
+ @return Whether or not the user is authentified.
+ */
+- (BOOL) isAuthenticated;
+
+/**
  Remove Discogs account credential from device.
  */
 - (void) removeAccountCredential;

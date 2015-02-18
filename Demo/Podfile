@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target "DiscogsAPIDemo" do
+    platform :ios, '7.1'
+	pod 'DiscogsAPI', :path => '../'
+end

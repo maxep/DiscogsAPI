@@ -8,7 +8,7 @@ The implementation is based on the [RestKit](http://restkit.org/) framework.
 ** This library is still under construction.**
 
 ##Features
-- Handle OAuth process and store tokens in keychain.
+- Handle OAuth process and store the token in keychain.
 - Database support: Release, Master Release, Master Release Versions, Artist, Artist Releases, Label, All Label Releases, Search.
 - User support: Identify, Profile, Collection, Wantlist.
 - Image support.
@@ -50,7 +50,7 @@ In your Application delegate class, setup a DiscogsAPI static instance:
 ```
 ### Authenticate the user
 
-OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The ```oauth_token``` and ```oauth_token_secret``` will be automatically stored in the Apple keychain.
+OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The token will be automatically stored in the Apple keychain.
 
 ```objective-c
 	DiscogsAPI* discogs = [DiscogsAPI sharedClient];

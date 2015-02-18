@@ -70,21 +70,10 @@
 		D0D2BA6E1A93B1EC0036F006 /* DGResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D2BA6D1A93B1EC0036F006 /* DGResource.m */; };
 		D0E32EA01A933BF10034A6FD /* DiscogsAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0E32E9F1A933BF10034A6FD /* DiscogsAPI.h */; };
 		D0E32EA21A933BF10034A6FD /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E32EA11A933BF10034A6FD /* DiscogsAPI.m */; };
-		D0E32EA81A933BF10034A6FD /* libDiscogsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E32E9C1A933BF10034A6FD /* libDiscogsAPI.a */; };
 		D0E32EBD1A933C800034A6FD /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E32EB81A933C800034A6FD /* DGAuthentication.m */; };
 		D0E32EBE1A933C800034A6FD /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E32EBA1A933C800034A6FD /* DGAuthView.m */; };
 		D0E32EBF1A933C800034A6FD /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E32EBC1A933C800034A6FD /* DGTokenStore.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D0E32EA91A933BF10034A6FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0E32E941A933BF10034A6FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0E32E9B1A933BF10034A6FD;
-			remoteInfo = DiscogsAPI;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D0E32E9A1A933BF10034A6FD /* CopyFiles */ = {
@@ -198,8 +187,6 @@
 		D0E32E9C1A933BF10034A6FD /* libDiscogsAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDiscogsAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E32E9F1A933BF10034A6FD /* DiscogsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscogsAPI.h; sourceTree = "<group>"; };
 		D0E32EA11A933BF10034A6FD /* DiscogsAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscogsAPI.m; sourceTree = "<group>"; };
-		D0E32EA71A933BF10034A6FD /* DiscogsAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiscogsAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0E32EAD1A933BF10034A6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E32EB71A933C800034A6FD /* DGAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		D0E32EB81A933C800034A6FD /* DGAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		D0E32EB91A933C800034A6FD /* DGAuthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
@@ -214,14 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C56D171E1BC9F4CF06CC99 /* libPods-DiscogsAPI.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0E32EA41A933BF10034A6FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0E32EA81A933BF10034A6FD /* libDiscogsAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +520,6 @@
 			isa = PBXGroup;
 			children = (
 				D0E32E9E1A933BF10034A6FD /* DiscogsAPI */,
-				D0E32EAB1A933BF10034A6FD /* DiscogsAPITests */,
 				D0E32E9D1A933BF10034A6FD /* Products */,
 				2DEF9101598A973E49E60E3D /* Pods */,
 				B61CCDA83445E42BA4F6D0D3 /* Frameworks */,
@@ -552,7 +530,6 @@
 			isa = PBXGroup;
 			children = (
 				D0E32E9C1A933BF10034A6FD /* libDiscogsAPI.a */,
-				D0E32EA71A933BF10034A6FD /* DiscogsAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -573,22 +550,6 @@
 				D03C25A51A934551000B4785 /* Mapping */,
 			);
 			path = DiscogsAPI;
-			sourceTree = "<group>";
-		};
-		D0E32EAB1A933BF10034A6FD /* DiscogsAPITests */ = {
-			isa = PBXGroup;
-			children = (
-				D0E32EAC1A933BF10034A6FD /* Supporting Files */,
-			);
-			path = DiscogsAPITests;
-			sourceTree = "<group>";
-		};
-		D0E32EAC1A933BF10034A6FD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D0E32EAD1A933BF10034A6FD /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D0E32EB61A933C800034A6FD /* Authentication */ = {
@@ -626,24 +587,6 @@
 			productReference = D0E32E9C1A933BF10034A6FD /* libDiscogsAPI.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D0E32EA61A933BF10034A6FD /* DiscogsAPITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0E32EB31A933BF10034A6FD /* Build configuration list for PBXNativeTarget "DiscogsAPITests" */;
-			buildPhases = (
-				D0E32EA31A933BF10034A6FD /* Sources */,
-				D0E32EA41A933BF10034A6FD /* Frameworks */,
-				D0E32EA51A933BF10034A6FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D0E32EAA1A933BF10034A6FD /* PBXTargetDependency */,
-			);
-			name = DiscogsAPITests;
-			productName = DiscogsAPITests;
-			productReference = D0E32EA71A933BF10034A6FD /* DiscogsAPITests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -657,9 +600,6 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					D0E32E9B1A933BF10034A6FD = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
-					D0E32EA61A933BF10034A6FD = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -677,21 +617,10 @@
 			projectRoot = "";
 			targets = (
 				D0E32E9B1A933BF10034A6FD /* DiscogsAPI */,
-				D0E32EA61A933BF10034A6FD /* DiscogsAPITests */,
 				D0D2BA661A93615E0036F006 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		D0E32EA51A933BF10034A6FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		52B42F7CD61C1EC65E726698 /* Check Pods Manifest.lock */ = {
@@ -797,22 +726,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0E32EA31A933BF10034A6FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D0E32EAA1A933BF10034A6FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0E32E9B1A933BF10034A6FD /* DiscogsAPI */;
-			targetProxy = D0E32EA91A933BF10034A6FD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D0D2BA681A93615E0036F006 /* Debug */ = {
@@ -925,36 +839,6 @@
 			};
 			name = Release;
 		};
-		D0E32EB41A933BF10034A6FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DiscogsAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D0E32EB51A933BF10034A6FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DiscogsAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -981,15 +865,6 @@
 			buildConfigurations = (
 				D0E32EB11A933BF10034A6FD /* Debug */,
 				D0E32EB21A933BF10034A6FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0E32EB31A933BF10034A6FD /* Build configuration list for PBXNativeTarget "DiscogsAPITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0E32EB41A933BF10034A6FD /* Debug */,
-				D0E32EB51A933BF10034A6FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

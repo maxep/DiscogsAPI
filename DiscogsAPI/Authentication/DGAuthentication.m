@@ -100,6 +100,10 @@ NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsA
     [self authenticateWithCallback:callback success:success failure:failure];
 }
 
+- (BOOL) isAuthenticated {
+    return (self.oAuth1Client.accessToken != nil)? YES : NO;
+}
+
 - (void) removeAccountCredential
 {
     [DGTokenStore deleteCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
