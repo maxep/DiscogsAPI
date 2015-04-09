@@ -1,5 +1,9 @@
 # DiscogsAPI
 
+[![Version](https://img.shields.io/cocoapods/v/DiscogsAPI.svg?style=flat)](http://cocoadocs.org/docsets/DiscogsAPI)
+[![License](https://img.shields.io/cocoapods/l/DiscogsAPI.svg?style=flat)](http://cocoadocs.org/docsets/DiscogsAPI)
+[![Platform](https://img.shields.io/cocoapods/p/DiscogsAPI.svg?style=flat)](http://cocoadocs.org/docsets/DiscogsAPI)
+
 An Objective-C interface for [Discogs API v2.0](http://www.discogs.com/developers/).
 
 The implementation is based on the [RestKit](http://restkit.org/) framework.
@@ -83,9 +87,11 @@ OAuth process is all handled by the 'authentication' endpoint. You just have to 
 
 ## Documentation
 
-##Author
+## Author
 
-- [Maxime Epain](https://github.com/maxep)
+[![GitHub](https://img.shields.io/badge/github-maxep-lightgrey.svg?style=flat)](https://github.com/maxep)
+[![Twitter](https://img.shields.io/badge/twitter-%40MaximeEpain-blue.svg?style=flat)](https://twitter.com/MaximeEpain)
+[![Email](https://img.shields.io/badge/email-maxime.epain%40gmail.com-red.svg?style=flat)](mailto:maxime.epain@gmail.com)
 
 ## License
 
