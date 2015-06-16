@@ -64,18 +64,24 @@ NSString* const kCellIdentifier = @"ResultCell";
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    // Set the log button depending on the authentication status
-    UIBarButtonItem *logButton = nil;
+    
     
     DiscogsAPI* discogs = [DiscogsAPI sharedClient];
-    if (discogs.authentication.isAuthenticated) {
-        logButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
-    }
-    else {
-        logButton = [[UIBarButtonItem alloc] initWithTitle:@"login" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
-    }
     
-    [self.navigationItem setRightBarButtonItem:logButton];
+    [discogs isAuthenticated:^(BOOL success) {
+        
+        // Set the log button depending on the authentication status
+        UIBarButtonItem *logButton = nil;
+        
+        if (success) {
+            logButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+        }
+        else {
+            logButton = [[UIBarButtonItem alloc] initWithTitle:@"login" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
+        }
+        
+        [self.navigationItem setRightBarButtonItem:logButton];
+    }];
 }
 
 - (void) login {
