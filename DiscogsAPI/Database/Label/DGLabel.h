@@ -29,7 +29,6 @@
 @property (nonatomic, strong) NSString * releasesURL;
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * contactInfo;
-@property (nonatomic, strong) NSString * uri;
 @property (nonatomic, strong) NSArray  * subLabels;
 @property (nonatomic, strong) NSArray  * urls;
 @property (nonatomic, strong) NSArray  * images;

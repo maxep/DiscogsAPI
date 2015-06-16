@@ -49,7 +49,8 @@
                                                   @"notes"              : @"notes",
                                                   @"styles"             : @"styles",
                                                   @"genres"             : @"genres",
-                                                  @"resource_url"       : @"resourceURL"
+                                                  @"resource_url"       : @"resourceURL",
+                                                  @"uri"                : @"uri"
                                                   }
      ];
     

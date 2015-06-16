@@ -48,11 +48,6 @@
 @property (nonatomic, strong) NSString * title;
 
 /**
- Video URL.
- */
-@property (nonatomic, strong) NSString * uri;
-
-/**
  Creates and initializes a `DGVideo` object.
  
  @return The newly-initialized video object.

@@ -96,4 +96,6 @@
  */
 - (void) cancelAllOperations;
 
+- (void) isAuthenticated:(void (^)(BOOL success))success;
+
 @end

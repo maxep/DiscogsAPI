@@ -43,11 +43,6 @@
 @property (nonatomic, strong) NSString * type;
 
 /**
- Resource URL on Discogs API.
- */
-@property (nonatomic, strong) NSString * uri;
-
-/**
  Resource URL of the 150x150 image version on Discogs API.
  */
 @property (nonatomic, strong) NSString * uri150;

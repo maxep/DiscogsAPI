@@ -44,7 +44,6 @@
 @property (nonatomic, strong) NSNumber * numWantlist;
 @property (nonatomic, strong) NSString * inventoryURL;
 @property (nonatomic, strong) NSString * avatarURL;
-@property (nonatomic, strong) NSString * uri;
 @property (nonatomic, strong) NSString * email;
 
 + (DGProfile*) profile;

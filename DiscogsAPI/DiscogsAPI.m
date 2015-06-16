@@ -35,23 +35,19 @@ static DiscogsAPI * sharedClient = nil;
 
 @implementation DiscogsAPI
 
-+ (void) setSharedClient:(DiscogsAPI*)discogsAPI
-{
++ (void) setSharedClient:(DiscogsAPI*)discogsAPI {
     sharedClient = discogsAPI;
 }
 
-+ (DiscogsAPI*) sharedClient
-{
++ (DiscogsAPI*) sharedClient {
     return sharedClient;
 }
 
-+ (DiscogsAPI*) discogsWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret
-{
++ (DiscogsAPI*) discogsWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret {
     return [[DiscogsAPI alloc] initWithConsumerKey:consumerKey consumerSecret:consumerSecret];
 }
 
-- (id) initWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret
-{
+- (id) initWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret {
     self = [super init];
     if (self) {
         
@@ -100,32 +96,37 @@ static DiscogsAPI * sharedClient = nil;
     }
 }
 
-- (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure
-{
+- (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
     [self.user identityWithSuccess:^(DGIdentity *identity) {
-        
         success();
-        
     } failure:failure];
 }
 
-- (void) startOperation:(RKObjectRequestOperation*) requestOperation
-{
+- (void) startOperation:(RKObjectRequestOperation*) requestOperation {
  //   [requestOperation start];
     [[RKObjectManager sharedManager] enqueueObjectRequestOperation:requestOperation];
 }
 
-- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure
-{
+- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
     return [self.resource createImageRequestOperationWithUrl:url success:success failure:failure];
-}
-
-- (BOOL) isReachable {
-    return _isReachable;
 }
 
 - (void) cancelAllOperations {
     [RKObjectManager.sharedManager.operationQueue cancelAllOperations];
+}
+
+- (void) isAuthenticated:(void (^)(BOOL success))success {
+    
+    if (self.isReachable) {
+        [self identifyUserWithSuccess:^{
+            success(YES);
+        } failure:^(NSError *error) {
+            success(NO);
+        }];
+    }
+    else {
+        success( self.authentication.oAuth1Client.accessToken != nil );
+    }
 }
 
 @end

@@ -53,11 +53,6 @@
 @property (nonatomic, strong) NSString * dataQuality;
 
 /**
- Artist URL on Discogs website.
- */
-@property (nonatomic, strong) NSArray  * uri;
-
-/**
  Arist role.
  */
 @property (nonatomic, strong) NSString * role;

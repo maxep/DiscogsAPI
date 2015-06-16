@@ -40,7 +40,8 @@
                                                   @"year"               : @"year",
                                                   @"genres"             : @"genres",
                                                   @"styles"             : @"styles",
-                                                  @"main_release"       : @"mainReleaseID"
+                                                  @"main_release"       : @"mainReleaseID",
+                                                  @"uri"                : @"uri"
                                                   }
      ];
     

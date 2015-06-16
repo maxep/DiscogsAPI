@@ -25,8 +25,8 @@
 
 #import "DiscogsAPI.h"
 
-NSString* const ConsumerKey = @"Your consumer key";
-NSString* const ConsumerSecret= @"Your consumer secret";
+NSString* const ConsumerKey = @"lIEtyyEDwAkBTSCjSeCq";
+NSString* const ConsumerSecret= @"cUvBsdMhDgEIvNfBJrdsSyuhNcLLsKZG";
 
 @interface DGAppDelegate ()
 

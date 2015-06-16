@@ -38,6 +38,11 @@
 @property (nonatomic, strong) NSString * resourceURL;
 
 /**
+ Object URL on Discogs website.
+ */
+@property (nonatomic, strong) NSArray  * uri;
+
+/**
  Creates and initializes a 'DGObject'.
  
  @return The newly-initialized object.
