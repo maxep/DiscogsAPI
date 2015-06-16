@@ -40,7 +40,7 @@
 /**
  Object URL on Discogs website.
  */
-@property (nonatomic, strong) NSArray  * uri;
+@property (nonatomic, strong) NSString  * uri;
 
 /**
  Creates and initializes a 'DGObject'.
