@@ -117,16 +117,18 @@ static DiscogsAPI * sharedClient = nil;
 
 - (void) isAuthenticated:(void (^)(BOOL success))success {
     
-    if (self.isReachable) {
-        [self identifyUserWithSuccess:^{
+    [self identifyUserWithSuccess:^{
+        success(YES);
+    } failure:^(NSError *error) {
+        
+        if (error.code == NSURLErrorNotConnectedToInternet && self.authentication.oAuth1Client.accessToken) {
             success(YES);
-        } failure:^(NSError *error) {
+        }
+        else {
             success(NO);
-        }];
-    }
-    else {
-        success( self.authentication.oAuth1Client.accessToken != nil );
-    }
+        }
+        
+    }];
 }
 
 @end
