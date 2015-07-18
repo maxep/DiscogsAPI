@@ -42,7 +42,14 @@
 {
     DGCheckURL(url, nil);
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager.HTTPClient requestWithMethod:@"GET" path:url parameters:nil];
+    NSString *path = url;
+    
+    if (self.coxyURL) {
+        NSURL* discogsURL = [NSURL URLWithString:url];
+        path = [NSString stringWithFormat:@"%@%@", self.coxyURL, discogsURL.path];
+    }
+    
+    NSURLRequest *requestURL = [RKObjectManager.sharedManager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];
     
     AFImageRequestOperation* operation = [AFImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         if (success) {

@@ -28,6 +28,11 @@
 @interface DGResource : DGEndpoint
 
 /**
+ Coxy server url. (see https://github.com/hendriks73/coxy )
+ */
+@property (nonatomic, strong) NSString* coxyURL;
+
+/**
  Creates and initializes an 'DGImageResource' object.
  
  @return The newly-initialized image resource object.
