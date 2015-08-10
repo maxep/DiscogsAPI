@@ -48,7 +48,7 @@ NSString* const kCellIdentifier = @"ResultCell";
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    // Set up the serach controller (cf. https://developer.apple.com/library/ios/samplecode/TableSearch_UISearchController/Introduction/Intro.html )
+    // Set up the search controller (cf. https://developer.apple.com/library/ios/samplecode/TableSearch_UISearchController/Introduction/Intro.html )
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     [self.searchController.searchBar sizeToFit];
@@ -164,6 +164,12 @@ NSString* const kCellIdentifier = @"ResultCell";
         
         [cell.textLabel setText:result.title];
         [cell.detailTextLabel setText:result.type];
+        
+        [[DiscogsAPI sharedClient].resource getImage:result.thumb success:^(UIImage *image) {
+            cell.imageView.image = image;
+        } failure:^(NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
     }
     // Set the 'Load more' cell
     else {
@@ -172,7 +178,8 @@ NSString* const kCellIdentifier = @"ResultCell";
         NSInteger perPage = [self.response.pagination.perPage integerValue];
         NSInteger page = [self.response.pagination.page integerValue];
         NSInteger leftItems = items - (perPage * page);
-        [cell.detailTextLabel setText:[NSString stringWithFormat:@"%ld %@", leftItems, @"items left"]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld %@", leftItems, @"items left"];
+        cell.imageView.image = nil;
     }
     
     return cell;

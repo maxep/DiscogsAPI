@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "AFOAuth1Client.h"
+#import <AFOAuth1Client/AFOAuth1Client.h>
 
 /**
  Token store to save and retrieve OAuth account tokens into Apple keychain.

@@ -90,29 +90,4 @@
     }
 }
 
-- (void) loadNextPageWithResponseDesciptor:(RKResponseDescriptor*)responseDescriptor inStore:(RKManagedObjectStore*)store  success:(void (^)(NSArray* objects))success failure:(void (^)(NSError* error))failure
-{
-    if(self.urls.next)
-    {
-        NSURLRequest *requestURL = [[RKObjectManager sharedManager].HTTPClient requestWithMethod:@"GET" path:self.urls.next parameters:nil];
-        
-        RKManagedObjectRequestOperation *operation = [[RKManagedObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ responseDescriptor ]];
-        
-        operation.managedObjectCache = store.managedObjectCache;
-        operation.managedObjectContext = store.mainQueueManagedObjectContext;
-        
-        [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-         {
-             success(mappingResult.array);
-         }
-         failure:^(RKObjectRequestOperation *operation, NSError *error)
-         {
-             RKLogError(@"Operation failed with error: %@", error);
-             failure(error);
-         }];
-        
-        [operation start];
-    }
-}
-
 @end

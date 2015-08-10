@@ -38,6 +38,4 @@
 
 - (void) loadNextPageWithResponseDesciptor:(RKResponseDescriptor*) responseDescriptor success:(void (^)(NSArray* objects))success failure:(void (^)(NSError* error))failure;
 
-- (void) loadNextPageWithResponseDesciptor:(RKResponseDescriptor*)responseDescriptor inStore:(RKManagedObjectStore*)store  success:(void (^)(NSArray* objects))success failure:(void (^)(NSError* error))failure;
-
 @end
