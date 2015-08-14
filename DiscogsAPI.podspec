@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
                     Features:
@@ -15,38 +15,22 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git", :tag => "v#{s.version}" }
   s.requires_arc = true
   s.ios.deployment_target = '7.1'
-  s.osx.deployment_target = '10.7'
   s.ios.frameworks 	= 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration'
   s.osx.frameworks 	= 'CoreServices', 'SystemConfiguration'
   
   s.source_files = 'DiscogsAPI/*.{h,m}'
   s.default_subspecs = 'Authentication', 'Database', 'User', 'Resource'
+
+  s.subspec 'Core' do |ss|
+    ss.source_files   = 'DiscogsAPI/Core'
+  end
   
-  s.prefix_header_contents = <<-EOS
-#if __has_include("RKCoreData.h")
-    #import <CoreData/CoreData.h>
-#endif
-#import <Availability.h>
-
-#define _AFNETWORKING_PIN_SSL_CERTIFICATES_
-
-#if __IPHONE_OS_VERSION_MIN_REQUIRED
-  #import <SystemConfiguration/SystemConfiguration.h>
-  #import <MobileCoreServices/MobileCoreServices.h>
-  #import <Security/Security.h>
-#else
-  #import <SystemConfiguration/SystemConfiguration.h>
-  #import <CoreServices/CoreServices.h>
-  #import <Security/Security.h>
-#endif
-
-// Make RestKit globally available
-#import <RestKit/RestKit.h>
-EOS
-
   s.subspec 'Authentication' do |ss|
     ss.source_files   = 'DiscogsAPI/Authentication'
+    ss.dependency 'DiscogsAPI/Core'
     ss.dependency 'AFOAuth1Client', '~> 1.0.0'
+    ss.prefix_header_contents = '#import <SystemConfiguration/SystemConfiguration.h>',
+    							'#import <MobileCoreServices/MobileCoreServices.h>'
   end
   
   s.subspec 'Database' do |ss|
@@ -56,8 +40,9 @@ EOS
     						'DiscogsAPI/Database/Label', 
     						'DiscogsAPI/Database/Master', 
     						'DiscogsAPI/Database/Search',
-    						'DiscogsAPI/Database/Data'
-    ss.dependency 'DiscogsAPI/Mapping'
+    						'DiscogsAPI/Database/Data',
+    						'DiscogsAPI/Mapping/Database/**/*'
+    ss.dependency 'DiscogsAPI/Pagination'
   end
   
   s.subspec 'User' do |ss|
@@ -65,19 +50,31 @@ EOS
     						'DiscogsAPI/User/Identity', 
     						'DiscogsAPI/User/Profile', 
     						'DiscogsAPI/User/Collection', 
-    						'DiscogsAPI/User/Wantlist'
-    ss.dependency 'DiscogsAPI/Mapping'
+    						'DiscogsAPI/User/Wantlist',
+    						'DiscogsAPI/Mapping/User/**/*'
+    ss.dependency 'DiscogsAPI/Pagination'
+  end
+  
+  s.subspec 'Pagination' do |ss|
+    ss.source_files   = 'DiscogsAPI/Pagination',
+    					'DiscogsAPI/Mapping/Pagination'
+    ss.dependency 'DiscogsAPI/Configuration'
   end
   
   s.subspec 'Resource' do |ss|
     ss.source_files   = 'DiscogsAPI/Resource'
-    ss.dependency 'DiscogsAPI/Mapping'
+    ss.dependency 'DiscogsAPI/Configuration'
   end
   
-  s.subspec 'Mapping' do |ss|
-    ss.source_files   = 'DiscogsAPI/Mapping/**/*.{h,m}'
+  s.subspec 'Configuration' do |ss|
+    ss.source_files = 'DiscogsAPI/Configuration'
+    ss.dependency 'DiscogsAPI/Core'
     ss.dependency 'RestKit/ObjectMapping', '~> 0.25.0'
     ss.dependency 'RestKit/Network', '~> 0.25.0'
+    ss.prefix_header_contents = '#import <SystemConfiguration/SystemConfiguration.h>',
+    							'#import <MobileCoreServices/MobileCoreServices.h>',
+    							'#import <Security/Security.h>',
+    							'#import <RestKit/RestKit.h>'
   end
 
 end

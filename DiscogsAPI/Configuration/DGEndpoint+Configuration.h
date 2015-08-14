@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint.h"
+#import <RestKit/RestKit.h>
 
 #define DGCheckReachability(ret) { \
     if(![self.delegate isReachable]) { \

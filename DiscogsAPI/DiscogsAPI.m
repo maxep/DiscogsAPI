@@ -74,7 +74,7 @@ static DiscogsAPI * sharedClient = nil;
         self.resource.delegate = self;
         
         [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
-        
+
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
         
         [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
