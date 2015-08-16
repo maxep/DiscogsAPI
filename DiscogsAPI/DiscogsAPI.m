@@ -26,14 +26,16 @@
 static DiscogsAPI * sharedClient = nil;
 
 @interface DiscogsAPI ()
-@property (nonatomic, strong) DGAuthentication * authentication;
-@property (nonatomic, strong) DGDatabase       * database;
-@property (nonatomic, strong) DGUser           * user;
-@property (nonatomic, strong) DGResource       * resource;
-@property (nonatomic, readwrite) BOOL          isReachable;
+@property (nonatomic, strong) DGAuthentication  *authentication;
+@property (nonatomic, strong) RKObjectManager   *objectManager;
+@property (nonatomic, assign) BOOL isReachable;
 @end
 
 @implementation DiscogsAPI
+
+@synthesize database    = _database;
+@synthesize user        = _user;
+@synthesize resource    = _resource;
 
 + (void) setSharedClient:(DiscogsAPI*)discogsAPI {
     sharedClient = discogsAPI;
@@ -47,6 +49,8 @@ static DiscogsAPI * sharedClient = nil;
     return [[DiscogsAPI alloc] initWithConsumerKey:consumerKey consumerSecret:consumerSecret];
 }
 
+#pragma mark Public Methods
+
 - (id) initWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret {
     self = [super init];
     if (self) {
@@ -56,63 +60,13 @@ static DiscogsAPI * sharedClient = nil;
         self.authentication = [DGAuthentication authenticationWithConsumerKey:consumerKey consumerSecret:consumerSecret];
         self.authentication.delegate = self;
         
-        RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:[self.authentication oAuth1Client]];
-        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
-        
-        //Set up database
-        self.database           = [DGDatabase database];
-        self.database.delegate  = self;
-        [self.database configureManager:objectManager];
-        
-        //Set up user
-        self.user           = [DGUser user];
-        self.user.delegate  = self;
-        [self.user configureManager:objectManager];
-        
-        //Set up resource
-        self.resource   = [DGResource resource];
-        self.resource.delegate = self;
-        
-        [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
-
-        [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-        
-        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            [self setReachability:status];
-        }];
-        [self setReachability:objectManager.HTTPClient.networkReachabilityStatus];
-        
-        [RKObjectManager setSharedManager:objectManager];
+        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     }
     return self;
 }
 
-- (void) setReachability:(AFNetworkReachabilityStatus) status {
-    if (status == AFNetworkReachabilityStatusNotReachable) {
-        self.isReachable = NO;
-    }
-    else {
-        self.isReachable = YES;
-    }
-}
-
-- (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
-    [self.user identityWithSuccess:^(DGIdentity *identity) {
-        success();
-    } failure:failure];
-}
-
-- (void) startOperation:(RKObjectRequestOperation*) requestOperation {
- //   [requestOperation start];
-    [[RKObjectManager sharedManager] enqueueObjectRequestOperation:requestOperation];
-}
-
-- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
-    return [self.resource createImageRequestOperationWithUrl:url success:success failure:failure];
-}
-
 - (void) cancelAllOperations {
-    [RKObjectManager.sharedManager.operationQueue cancelAllOperations];
+    [self.objectManager.operationQueue cancelAllOperations];
 }
 
 - (void) isAuthenticated:(void (^)(BOOL success))success {
@@ -121,14 +75,85 @@ static DiscogsAPI * sharedClient = nil;
         success(YES);
     } failure:^(NSError *error) {
         
-        if (error.code == NSURLErrorNotConnectedToInternet && self.authentication.oAuth1Client.accessToken) {
-            success(YES);
-        }
-        else {
-            success(NO);
-        }
-        
+        success(    error.code == NSURLErrorNotConnectedToInternet &&
+                    self.authentication.oAuth1Client.accessToken);
     }];
+}
+
+#pragma mark Private Methods
+
+- (void) setReachability:(AFNetworkReachabilityStatus) status {
+    self.isReachable = status != AFNetworkReachabilityStatusNotReachable;
+}
+
+- (void) startOperation:(RKObjectRequestOperation*) requestOperation {
+    //   [requestOperation start];
+    [self.objectManager enqueueObjectRequestOperation:requestOperation];
+}
+
+#pragma mark Properties
+
+- (RKObjectManager *)objectManager {
+    RKObjectManager *objectManager = [RKObjectManager sharedManager];
+    if (!objectManager) {
+        
+        //Setup Object Manager
+        objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.oAuth1Client];
+        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+        [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
+        
+        //Init reachability
+        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            [self setReachability:status];
+        }];
+        [self setReachability:objectManager.HTTPClient.networkReachabilityStatus];
+        
+        //Share Object Manager
+        [RKObjectManager setSharedManager:objectManager];
+    }
+    return objectManager;
+}
+
+- (void)setObjectManager:(RKObjectManager *)objectManager {
+    [RKObjectManager setSharedManager:objectManager];
+}
+
+- (DGDatabase *)database {
+    if (!_database) {
+        _database           = [DGDatabase database];
+        _database.delegate  = self;
+        [_database configureManager:self.objectManager];
+    }
+    return _database;
+}
+
+- (DGUser *)user {
+    if (!_user) {
+        _user           = [DGUser user];
+        _user.delegate  = self;
+        [_user configureManager:self.objectManager];
+    }
+    return _user;
+}
+
+- (DGResource *)resource {
+    if (!_resource) {
+        _resource           = [DGResource resource];
+        _resource.delegate  = self;
+    }
+    return _resource;
+}
+
+#pragma mark <DGEndpointDelegate>
+
+- (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+    [self.user identityWithSuccess:^(DGIdentity *identity) {
+        success();
+    } failure:failure];
+}
+
+- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
+    return [self.resource createImageRequestOperationWithUrl:url success:success failure:failure];
 }
 
 @end

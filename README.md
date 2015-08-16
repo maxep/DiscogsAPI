@@ -88,6 +88,8 @@ OAuth process is all handled by the 'authentication' endpoint. You just have to 
 
 ## Documentation
 
+Documentation is available through [CocoaDocs](http://cocoadocs.org/docsets/DiscogsAPI)
+
 ## Author
 
 [![GitHub](https://img.shields.io/badge/github-maxep-lightgrey.svg?style=flat)](https://github.com/maxep)
