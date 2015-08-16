@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "DGAuthViewController.h"
-
 #import "DiscogsAPI.h"
 
 @implementation DGAuthViewController
@@ -29,13 +28,13 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController.navigationBar setTranslucent:YES];
-    [self.navigationController.navigationBar setOpaque:YES];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.opaque = YES;
     
     DiscogsAPI* discogs = [DiscogsAPI sharedClient];
     
     [discogs.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
-        [authView setFrame:[[UIScreen mainScreen] bounds]];
+        authView.frame = [[UIScreen mainScreen] bounds];
         [self.view addSubview:authView];
     } success:^{
         [self dismissViewControllerAnimated:YES completion:nil];

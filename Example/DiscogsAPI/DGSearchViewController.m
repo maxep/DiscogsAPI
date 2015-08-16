@@ -1,10 +1,24 @@
+// DGSearchViewController.m
 //
-//  ViewController.m
-//  DiscogsAPI
+// Copyright (c) 2015 Maxime Epain
 //
-//  Created by Maxime Epain on 16/08/2015.
-//  Copyright (c) 2015 Maxime Epain. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "DGSearchViewController.h"
 #import "DGAuthViewController.h"
@@ -57,7 +71,11 @@
 
 #pragma mark <UISearchDisplayDelegate>
 
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView {
+    tableView.rowHeight = 66.f;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
    
     // Create a request with the search text
     DGSearchRequest *request = [DGSearchRequest request];
@@ -75,10 +93,6 @@
 }
 
 #pragma mark <UISearchBarDelegate>
-
-- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView {
-    tableView.rowHeight = 66.f;
-}
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
@@ -106,10 +120,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DGSearchViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
     
-    if (cell == nil) {
-        cell = [[DGSearchViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"SearchCell"];
-    }
-    
     // Set the cell with the related result
     if (indexPath.row < self.response.results.count) {
         DGSearchResult* result = [self.response.results objectAtIndex:indexPath.row];
@@ -117,7 +127,7 @@
         cell.title.text = result.title;
         cell.type.text = result.type;
         
-        [[DiscogsAPI sharedClient].resource getImage:result.thumb success:^(UIImage *image) {
+        [self.discogs.resource getImage:result.thumb success:^(UIImage *image) {
             cell.cover.image = image;
         } failure:^(NSError *error) {
             NSLog(@"Error: %@", error);
@@ -127,7 +137,9 @@
             
             [self.response loadNextPageWithSuccess:^{
                 [self.tableView reloadData];
-            } failure:^(NSError *error) {}];
+            } failure:^(NSError *error) {
+                NSLog(@"Error: %@", error);
+            }];
         }
     }
     return cell;
