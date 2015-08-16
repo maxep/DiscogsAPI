@@ -1,4 +1,4 @@
-// DGEndpoint+Configuration.h
+// DGPagination+Mapping.h
 //
 // Copyright (c) 2015 Maxime Epain
 //
@@ -20,34 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint.h"
+#import "DGPagination.h"
 
-#define DGCheckReachability(ret) { \
-    if(![self.delegate isReachable]) { \
-        if(failure) \
-            failure([self errorWithCode:NSURLErrorNotConnectedToInternet info:@"Not connected"]); \
-        return ret; \
-    } \
-}
-
-#define DGCheckURL(url, ret) { \
-    if( !url || [url isEqualToString:@""] ) { \
-        if (failure) \
-            failure([self errorWithCode:NSURLErrorZeroByteResource info:@"URL is empty"]); \
-        return ret; \
-    } \
-}
-
-@interface DGEndpoint (Configuration)
-
-- (void) configureManager:(RKObjectManager*)objectManager;
-
-@end
-
-@interface RKErrorMessage (Mapping)
+@interface DGPaginationUrls (Mapping)
 
 + (RKMapping *) mapping;
 
-+ (RKResponseDescriptor*) responseDescriptor;
+@end
+
+@interface DGPagination (Mapping)
+
++ (RKMapping *) mapping;
+
+- (NSDictionary*) parameters;
+
++ (RKResponseDescriptor*) responseDescriptorFor;
+
+- (void) loadNextPageWithResponseDesciptor:(RKResponseDescriptor*) responseDescriptor success:(void (^)(NSArray* objects))success failure:(void (^)(NSError* error))failure;
 
 @end

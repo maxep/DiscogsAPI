@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DGEndpoint.h"
-#import "AFOAuth1Client.h"
+#import <AFOAuth1Client/AFOAuth1Client.h>
 
 /**
  Authentification class to manage the Discogs authentification process.
