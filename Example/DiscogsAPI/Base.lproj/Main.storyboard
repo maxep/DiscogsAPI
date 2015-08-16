@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mYB-9C-M3X">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--DiscogsAPI-->
+        <scene sceneID="wA6-Y3-6Ye">
+            <objects>
+                <tableViewController id="glv-s2-6pu" customClass="DGSearchViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="3Ux-sa-atb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="AlR-Xr-afT">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="glv-s2-6pu" id="er3-Pr-Wsa"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="66" id="Q1M-5T-TEc" customClass="DGSearchViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q1M-5T-TEc" id="Ck6-Nl-XfH">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjN-tm-HLW">
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wjN-tm-HLW" secondAttribute="height" multiplier="1:1" id="syG-IR-EfL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQS-9G-BLC">
+                                            <rect key="frame" x="73" y="40" width="519" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yro-yU-cnI">
+                                            <rect key="frame" x="73" y="8" width="519" height="22"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AQS-9G-BLC" firstAttribute="bottom" secondItem="Ck6-Nl-XfH" secondAttribute="bottomMargin" id="5ds-BF-wrN"/>
+                                        <constraint firstItem="wjN-tm-HLW" firstAttribute="top" secondItem="Ck6-Nl-XfH" secondAttribute="top" id="D9V-bi-6gJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="wjN-tm-HLW" secondAttribute="bottom" id="LlQ-Ec-VK0"/>
+                                        <constraint firstItem="Yro-yU-cnI" firstAttribute="leading" secondItem="wjN-tm-HLW" secondAttribute="trailing" constant="8" symbolic="YES" id="PQy-VD-wZH"/>
+                                        <constraint firstItem="Yro-yU-cnI" firstAttribute="leading" secondItem="AQS-9G-BLC" secondAttribute="leading" id="S6C-df-sZa"/>
+                                        <constraint firstItem="Yro-yU-cnI" firstAttribute="top" secondItem="Ck6-Nl-XfH" secondAttribute="topMargin" id="Tef-Aq-tJO"/>
+                                        <constraint firstItem="wjN-tm-HLW" firstAttribute="leading" secondItem="Ck6-Nl-XfH" secondAttribute="leading" id="XBx-sr-yOE"/>
+                                        <constraint firstItem="Yro-yU-cnI" firstAttribute="trailing" secondItem="AQS-9G-BLC" secondAttribute="trailing" id="YVr-kj-O5d"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Yro-yU-cnI" secondAttribute="trailing" id="hyO-5q-adG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cover" destination="wjN-tm-HLW" id="yhr-jR-VMq"/>
+                                    <outlet property="title" destination="Yro-yU-cnI" id="f0R-S8-OCv"/>
+                                    <outlet property="type" destination="AQS-9G-BLC" id="M0S-V9-lSl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="glv-s2-6pu" id="nBu-Ai-KoM"/>
+                            <outlet property="delegate" destination="glv-s2-6pu" id="DOm-xp-6ep"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="DiscogsAPI" id="t6s-N7-j4E"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="qwz-vU-9qf" id="IWL-mo-d9C"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXw-7z-ENA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="qwz-vU-9qf">
+                    <connections>
+                        <outlet property="delegate" destination="glv-s2-6pu" id="G3f-RX-ktm"/>
+                        <outlet property="searchBar" destination="AlR-Xr-afT" id="XMC-zl-gt5"/>
+                        <outlet property="searchContentsController" destination="glv-s2-6pu" id="bXJ-fV-sAM"/>
+                        <outlet property="searchResultsDataSource" destination="glv-s2-6pu" id="9VI-4C-GAb"/>
+                        <outlet property="searchResultsDelegate" destination="glv-s2-6pu" id="pvZ-7r-eiw"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="688" y="1058"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MOe-iz-Sq1">
+            <objects>
+                <navigationController id="mYB-9C-M3X" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cYC-nO-fNs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="glv-s2-6pu" kind="relationship" relationship="rootViewController" id="rEc-uH-g5F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="um1-sh-bpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="1058"/>
+        </scene>
+    </scenes>
+</document>
