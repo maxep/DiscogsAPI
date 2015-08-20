@@ -34,7 +34,7 @@ pod 'DiscogsAPI'
 Configure the .plist for your project:
 
 In Xcode right-click your .plist file and choose "Open As Source Code".
-Copy & Paste the XML snippet into the body of your file (<dict>...</dict>).
+Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`).
 Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Discogs App consumer key and secret. You can create them in your [profile settings](https://www.discogs.com/settings/developers).
 
 ```xml
