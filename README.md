@@ -49,9 +49,7 @@ Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Disco
 OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The token will be automatically stored in the Apple keychain.
 
 ```objective-c
-	DiscogsAPI* discogs = [DiscogsAPI sharedClient];
-    
-    [discogs.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
+    [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
         [authView setFrame:[[UIScreen mainScreen] bounds]];
         [self.view addSubview:authView];
         
@@ -71,9 +69,7 @@ OAuth process is all handled by the 'authentication' endpoint. You just have to 
     request.type = @"artist";
     request.pagination.perPage = @25;
     
-	DiscogsAPI* discogs = [DiscogsAPI sharedClient];
-    
-    [discogs.database searchFor:request success:^(DGSearchResponse *response) {
+    [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
         [self.searchView setResponse:response];
     } failure:^(NSError *error) {
          NSLog(@"Error: %@", error);
