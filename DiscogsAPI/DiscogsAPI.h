@@ -58,18 +58,11 @@
 @property (nonatomic, readonly, getter=isReachable) BOOL isReachable;
 
 /**
- Sets the discogs api shared client.
- 
- @param discogsAPI The discogs api client.
- */
-+ (void) setSharedClient:(DiscogsAPI*)discogsAPI;
-
-/**
- Get the discogs api shared client.
+ The shared discogs api client.
  
  @return The shared discogs api client.
  */
-+ (DiscogsAPI*) sharedClient;
++ (DiscogsAPI *) client;
 
 /**
  Creates a discogs api client.

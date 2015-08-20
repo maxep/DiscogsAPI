@@ -29,15 +29,8 @@
 
 @implementation DGAppDelegate
 
-NSString* const ConsumerKey = @"Your Consumer Key";
-NSString* const ConsumerSecret= @"Your Consumer Secret";
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    // Initiate your DiscogsAPI static instance
-    DiscogsAPI* discogs = [DiscogsAPI discogsWithConsumerKey:ConsumerKey consumerSecret:ConsumerSecret];
-    [DiscogsAPI setSharedClient:discogs];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 

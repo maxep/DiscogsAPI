@@ -14,6 +14,9 @@
 		D015703B1B80B772002C0B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D015703A1B80B772002C0B08 /* Images.xcassets */; };
 		D015703E1B80B772002C0B08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D015703C1B80B772002C0B08 /* LaunchScreen.xib */; };
 		D01570551B80BA1C002C0B08 /* DGAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01570541B80BA1C002C0B08 /* DGAuthViewController.m */; };
+		D02E79C11B85D35A00E1A80B /* DiscogsAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D02E79BE1B85D35A00E1A80B /* DiscogsAPI.podspec */; };
+		D02E79C21B85D35A00E1A80B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D02E79BF1B85D35A00E1A80B /* LICENSE */; };
+		D02E79C31B85D35A00E1A80B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D02E79C01B85D35A00E1A80B /* README.md */; };
 		DE4B6367767283143E020312 /* libPods-DiscogsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B22F67BB32A7A30313B0A5 /* libPods-DiscogsAPI.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		D015703D1B80B772002C0B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D01570531B80BA1C002C0B08 /* DGAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthViewController.h; sourceTree = "<group>"; };
 		D01570541B80BA1C002C0B08 /* DGAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthViewController.m; sourceTree = "<group>"; };
+		D02E79BE1B85D35A00E1A80B /* DiscogsAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DiscogsAPI.podspec; path = ../DiscogsAPI.podspec; sourceTree = "<group>"; };
+		D02E79BF1B85D35A00E1A80B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D02E79C01B85D35A00E1A80B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DB781B790650872641FF5B47 /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +73,7 @@
 		D01570211B80B772002C0B08 = {
 			isa = PBXGroup;
 			children = (
+				D02E79BD1B85D34000E1A80B /* Podspec Metadata */,
 				D015702C1B80B772002C0B08 /* DiscogsAPI */,
 				D015702B1B80B772002C0B08 /* Products */,
 				2C1B7A43E8AC0175D23683C7 /* Pods */,
@@ -106,6 +113,16 @@
 				D015702F1B80B772002C0B08 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D02E79BD1B85D34000E1A80B /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				D02E79BE1B85D35A00E1A80B /* DiscogsAPI.podspec */,
+				D02E79C01B85D35A00E1A80B /* README.md */,
+				D02E79BF1B85D35A00E1A80B /* LICENSE */,
+			);
+			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +184,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02E79C11B85D35A00E1A80B /* DiscogsAPI.podspec in Resources */,
 				D01570391B80B772002C0B08 /* Main.storyboard in Resources */,
 				D015703E1B80B772002C0B08 /* LaunchScreen.xib in Resources */,
 				D015703B1B80B772002C0B08 /* Images.xcassets in Resources */,
+				D02E79C21B85D35A00E1A80B /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +234,7 @@
 			files = (
 				D01570361B80B772002C0B08 /* DGSearchViewController.m in Sources */,
 				D01570551B80BA1C002C0B08 /* DGAuthViewController.m in Sources */,
+				D02E79C31B85D35A00E1A80B /* README.md in Sources */,
 				D01570331B80B772002C0B08 /* DGAppDelegate.m in Sources */,
 				D01570301B80B772002C0B08 /* main.m in Sources */,
 			);

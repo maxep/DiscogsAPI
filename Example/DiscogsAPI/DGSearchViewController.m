@@ -28,7 +28,6 @@
 @end
 
 @interface DGSearchViewController ()
-@property (nonatomic,readonly) DiscogsAPI *discogs;
 @property (nonatomic, strong) DGSearchResponse *response;
 @end
 
@@ -37,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.discogs isAuthenticated:^(BOOL success) {
+    [DiscogsAPI.client isAuthenticated:^(BOOL success) {
         if (!success) {
             [self presentAuthenticationController];
         }
@@ -50,10 +49,6 @@
 }
 
 #pragma mark Properties
-
-- (DiscogsAPI *)discogs {
-    return [DiscogsAPI sharedClient];
-}
 
 - (void)setResponse:(DGSearchResponse *)response {
     _response = response;
@@ -83,7 +78,7 @@
     request.pagination.perPage = @5;
     
     // Send the request and refresh the result table with the response
-    [self.discogs.database searchFor:request success:^(DGSearchResponse *response) {
+    [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
         self.response = response;
     } failure:^(NSError *error) {
         NSLog(@"Error: %@", error);
@@ -102,7 +97,7 @@
     request.pagination.perPage = @25;
     
     // Send the request and refresh the result table with the response
-    [self.discogs.database searchFor:request success:^(DGSearchResponse *response) {
+    [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
         self.response = response;
     } failure:^(NSError *error) {
         NSLog(@"Error: %@", error);
@@ -127,7 +122,7 @@
         cell.title.text = result.title;
         cell.type.text = result.type;
         
-        [self.discogs.resource getImage:result.thumb success:^(UIImage *image) {
+        [DiscogsAPI.client.resource getImage:result.thumb success:^(UIImage *image) {
             cell.cover.image = image;
         } failure:^(NSError *error) {
             NSLog(@"Error: %@", error);

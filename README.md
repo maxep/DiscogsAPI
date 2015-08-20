@@ -29,27 +29,21 @@ platform :ios, '7.1'
 pod 'DiscogsAPI'
 ```
 
-### Setup
-Import the header file
+### Configure Xcode Project
 
-```objective-c
-#import "DiscogsAPI.h"
+Configure the .plist for your project:
+
+In Xcode right-click your .plist file and choose "Open As Source Code".
+Copy & Paste the XML snippet into the body of your file (<dict>...</dict>).
+Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Discogs App consumer key and secret. You can create them in your [profile settings](https://www.discogs.com/settings/developers).
+
+```xml
+<key>DiscogsConsumerKey</key>
+<string>DISCOGS_APP_CONSUMER_SECRET</string>
+<key>DiscogsConsumerSecret</key>
+<string>DISCOGS_APP_CONSUMER_KEY</string>
 ```
 
-In your Application delegate class, setup a DiscogsAPI static instance:
-```objective-c
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-	[...]
-    
-    DiscogsAPI* discogs = [DiscogsAPI discogsWithConsumerKey:@"Your consumer key" consumerSecret:@"Your consumer secret"];
-    [DiscogsAPI setSharedClient:discogs];
-    
-    [...]
-    return YES;
-}
-```
 ### Authenticate the user
 
 OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The token will be automatically stored in the Apple keychain.
@@ -75,7 +69,7 @@ OAuth process is all handled by the 'authentication' endpoint. You just have to 
 	DGSearchRequest* request = [DGSearchRequest request];
     request.query = @"Cool band";
     request.type = @"artist";
-    [request.pagination setPerPage:@25];
+    request.pagination.perPage = @25;
     
 	DiscogsAPI* discogs = [DiscogsAPI sharedClient];
     

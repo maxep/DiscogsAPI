@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>DiscogsConsumerKey</key>
+    <string>DISCOGS_APP_CONSUMER_SECRET</string>
+    <key>DiscogsConsumerSecret</key>
+    <string>DISCOGS_APP_CONSUMER_KEY</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

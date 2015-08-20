@@ -23,8 +23,6 @@
 #import "DiscogsAPI.h"
 #import "DGEndpoint+Configuration.h"
 
-static DiscogsAPI * sharedClient = nil;
-
 @interface DiscogsAPI ()
 @property (nonatomic, strong) DGAuthentication  *authentication;
 @property (nonatomic, strong) RKObjectManager   *objectManager;
@@ -33,16 +31,23 @@ static DiscogsAPI * sharedClient = nil;
 
 @implementation DiscogsAPI
 
+static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
+static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
+
 @synthesize database    = _database;
 @synthesize user        = _user;
 @synthesize resource    = _resource;
 
-+ (void) setSharedClient:(DiscogsAPI*)discogsAPI {
-    sharedClient = discogsAPI;
-}
-
-+ (DiscogsAPI*) sharedClient {
-    return sharedClient;
++ (DiscogsAPI *) client {
+    static DiscogsAPI *client = nil;
+    
+    if (!client) {
+        NSString * key      = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
+        NSString * secret   = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
+        
+        client = [DiscogsAPI discogsWithConsumerKey:key consumerSecret:secret];
+    }
+    return client;
 }
 
 + (DiscogsAPI*) discogsWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret {

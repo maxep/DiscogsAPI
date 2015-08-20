@@ -31,9 +31,7 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.navigationBar.opaque = YES;
     
-    DiscogsAPI* discogs = [DiscogsAPI sharedClient];
-    
-    [discogs.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
+    [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
         authView.frame = [[UIScreen mainScreen] bounds];
         [self.view addSubview:authView];
     } success:^{
@@ -42,4 +40,5 @@
         NSLog(@"Error: %@", error);
     }];
 }
+
 @end
