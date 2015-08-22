@@ -30,11 +30,11 @@ platform :ios, '7.1'
 pod 'DiscogsAPI'
 ```
 
-### Configure Xcode Project
+### Authentication
 
 Configure the .plist for your project:
 
-In Xcode right-click your .plist file and choose "Open As Source Code".
+Right-click your .plist file and choose "Open As Source Code".
 Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`). You can use rather the key/secret pair or your personal access token (you can create them in your [profile settings](https://www.discogs.com/settings/developers)).
 
 ##### Key/Secret
@@ -56,8 +56,7 @@ Replace DISCOGS_PERSONAL_ACCESS_TOKEN by you personal access token.
 <key>DiscogsAccessToken</key>
 <string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>
 ```
-
-### Authentication
+#### Authentication flow
 
 Discogs supports two authentication methods: The Discogs Auth and OAuth. Please refer to the [documentation](http://www.discogs.com/developers/#page:authentication) for more details.
 
@@ -71,29 +70,64 @@ OAuth process is all handled by the 'authentication' endpoint. You just have to 
 
 ```objective-c
     [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
-    
-    	// Show the authView
-    	
+
+        // Show the authView
+
     } success:^{
         NSLog(@"The user has been successfully authentified");
     } failure:^(NSError *error) {
-    	NSLog(@"Error: %@", error);
+        NSLog(@"Error: %@", error);
     }];
 ```
 
-### Search on Discogs database
+### Database
+
+##### Release
 
 ```objective-c
+    [DiscogsAPI.client.database getRelease:@249504 success:^(DGRelease *release) {
+        NSLog(@"Release: %@", release);
+    } failure:^(NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+```
 
-	DGSearchRequest* request = [DGSearchRequest request];
+##### Master Release
+
+```objective-c
+    [DiscogsAPI.client.database getMaster:@1000 success:^(DGMaster *master) {
+        NSLog(@"Master: %@", master);
+    } failure:^(NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+```
+##### Master Release Versions
+
+```objective-c
+    DGMasterVersionRequest *request = [DGMasterVersionRequest request];
+    request.masterID = @1000;
+    request.pagination.page = @3;
+    request.pagination.perPage = @25;
+
+    [DiscogsAPI.client.database getMasterVersion:request success:^(DGMasterVersionResponse *response) {
+        NSLog(@"Versions: %@", response.versions);
+    } failure:^(NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+```
+
+##### Search
+
+```objective-c
+    DGSearchRequest* request = [DGSearchRequest request];
     request.query = @"Cool band";
     request.type = @"artist";
     request.pagination.perPage = @25;
-    
+
     [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
-        // Do something with the response
+        NSLog(@"Response: %@", response);
     } failure:^(NSError *error) {
-         NSLog(@"Error: %@", error);
+        NSLog(@"Error: %@", error);
     }];
 ```
 
