@@ -21,8 +21,17 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 #import "DGEndpoint.h"
-#import <AFOAuth1Client/AFOAuth1Client.h>
+
+@class DGAuthentication;
+
+@protocol DGAuthenticationDelegate <DGEndpointDelegate>
+
+@required
+- (void) authentication:(DGAuthentication*)authentication didAuthorizeClient:(AFHTTPClient*)client;
+
+@end
 
 /**
  Authentification class to manage the Discogs authentification process.
@@ -31,29 +40,19 @@
  */
 @interface DGAuthentication : DGEndpoint
 
-@property (nonatomic, strong) AFOAuth1Client * oAuth1Client;
+/**
+ The HTTP client with authorized header.
+ */
+@property (nonatomic, readonly) AFHTTPClient *HTTPClient;
+
+@property (nonatomic, weak) id<DGAuthenticationDelegate> delegate;
 
 /**
- Creates and initializes a `DGAuthentication` object with the specified consumer key and secret.
- 
- @param consumerKey    The consumer key for your Discogs application.
- @param consumerSecret The consumer secret for your Discogs application.
+ Creates and initializes a `DGAuthentication` object.
  
  @return The newly-initialized Authentication object.
  */
-+ (DGAuthentication*) authenticationWithConsumerKey:(NSString*)consumerKey consumerSecret:(NSString*)consumerSecret;
-
-/**
- Initializes an `DGAuthentication` object with the the specified consumer key and secret.
- 
- This is the designated initializer.
- 
- @param consumerKey    The consumer key for your Discogs application.
- @param consumerSecret The consumer secret for your Discogs application.
- 
- @return The initialized Authentication object.
- */
-- (id) initWithConsumerKey:(NSString*)consumerKey consumerSecret:(NSString*)consumerSecret;
++ (DGAuthentication*) authentication;
 
 /**
  Initiates an authenticate process.
@@ -61,11 +60,11 @@
  
  Here's how to respond to the custom URL scheme on iOS:
  
-    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-        NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:@{kAFApplicationLaunchOptionsURLKey: url}];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        return YES;
-    }
+ - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+ NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:@{kAFApplicationLaunchOptionsURLKey: url}];
+ [[NSNotificationCenter defaultCenter] postNotification:notification];
+ return YES;
+ }
  
  @param callback The callback for the custom URL scheme.
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.

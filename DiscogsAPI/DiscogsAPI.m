@@ -31,9 +31,6 @@
 
 @implementation DiscogsAPI
 
-static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
-static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
-
 @synthesize database    = _database;
 @synthesize user        = _user;
 @synthesize resource    = _resource;
@@ -42,33 +39,12 @@ static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
     static DiscogsAPI *client = nil;
     
     if (!client) {
-        NSString * key      = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
-        NSString * secret   = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
-        
-        client = [DiscogsAPI discogsWithConsumerKey:key consumerSecret:secret];
+        client = [[DiscogsAPI alloc] init];
     }
     return client;
 }
 
-+ (DiscogsAPI*) discogsWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret {
-    return [[DiscogsAPI alloc] initWithConsumerKey:consumerKey consumerSecret:consumerSecret];
-}
-
 #pragma mark Public Methods
-
-- (id) initWithConsumerKey:(NSString*) consumerKey consumerSecret:(NSString*) consumerSecret {
-    self = [super init];
-    if (self) {
-        
-        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-        
-        self.authentication = [DGAuthentication authenticationWithConsumerKey:consumerKey consumerSecret:consumerSecret];
-        self.authentication.delegate = self;
-        
-        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
-    }
-    return self;
-}
 
 - (void) cancelAllOperations {
     [self.objectManager.operationQueue cancelAllOperations];
@@ -80,8 +56,8 @@ static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
         success(YES);
     } failure:^(NSError *error) {
         
-        success(    error.code == NSURLErrorNotConnectedToInternet &&
-                    self.authentication.oAuth1Client.accessToken);
+        success(    error.code == NSURLErrorNotConnectedToInternet/* &&
+                    self.authentication.oAuth1Client.accessToken*/);
     }];
 }
 
@@ -100,10 +76,13 @@ static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
 
 - (RKObjectManager *)objectManager {
     RKObjectManager *objectManager = [RKObjectManager sharedManager];
+    
     if (!objectManager) {
         
+        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+        
         //Setup Object Manager
-        objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.oAuth1Client];
+        objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.HTTPClient];
         objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
         [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
         
@@ -115,12 +94,22 @@ static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
         
         //Share Object Manager
         [RKObjectManager setSharedManager:objectManager];
+        
+        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     }
     return objectManager;
 }
 
 - (void)setObjectManager:(RKObjectManager *)objectManager {
     [RKObjectManager setSharedManager:objectManager];
+}
+
+- (DGAuthentication *)authentication {
+    if (!_authentication) {
+        _authentication = [DGAuthentication authentication];
+        _authentication.delegate = self;
+    }
+    return _authentication;
 }
 
 - (DGDatabase *)database {
@@ -147,6 +136,12 @@ static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
         _resource.delegate  = self;
     }
     return _resource;
+}
+
+#pragma <DGAuthenticationDelegate>
+
+- (void)authentication:(DGAuthentication *)authentication didAuthorizeClient:(AFHTTPClient *)client {
+    self.objectManager.HTTPClient = client;
 }
 
 #pragma mark <DGEndpointDelegate>

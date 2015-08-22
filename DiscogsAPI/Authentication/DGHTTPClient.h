@@ -1,4 +1,4 @@
-// DiscogsAPI.h
+// DGHTTPClient.m
 //
 // Copyright (c) 2015 Maxime Epain
 //
@@ -20,55 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "AFHTTPClient.h"
 
-#import "DGAuthentication.h"
-#import "DGDatabase.h"
-#import "DGUser.h"
-#import "DGResource.h"
+@interface DGHTTPClient : AFHTTPClient
 
 /**
- Discogs API client class to manage client initialization and api endpoints.
- */
-@interface DiscogsAPI : NSObject <DGAuthenticationDelegate, DGEndpointDelegate>
-
-/**
- Autentication endpoint.
- */
-@property (nonatomic, readonly) DGAuthentication * authentication;
-
-/**
- Database endpoint.
- */
-@property (nonatomic, readonly) DGDatabase * database;
-
-/**
- User endpoint.
- */
-@property (nonatomic, readonly) DGUser * user;
-
-/**
- Resource endpoint.
- */
-@property (nonatomic, readonly) DGResource * resource;
-
-/**
- Network reachability.
- */
-@property (nonatomic, readonly, getter=isReachable) BOOL isReachable;
-
-/**
- The shared discogs api client.
+ Initializes an `DGHTTPClient` object with the specified consumer key and secret.
  
- @return The shared discogs api client.
+ @param key The consumer key.
+ @param secret The consumer secret.
  */
-+ (DiscogsAPI *) client;
+- (id)initWithBaseURL:(NSURL *)url key:(NSString *)key secret:(NSString *)secret;
 
 /**
- Cancell all queued and current operations with Discogs.
+ Initializes an `DGHTTPClient` object with the specified access token.
+ 
+ @param token The personal access token.
  */
-- (void) cancelAllOperations;
-
-- (void) isAuthenticated:(void (^)(BOOL success))success;
+- (id)initWithBaseURL:(NSURL *)url accessToken:(NSString *)token;
 
 @end

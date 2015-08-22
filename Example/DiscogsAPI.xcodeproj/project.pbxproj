@@ -14,9 +14,6 @@
 		D015703B1B80B772002C0B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D015703A1B80B772002C0B08 /* Images.xcassets */; };
 		D015703E1B80B772002C0B08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D015703C1B80B772002C0B08 /* LaunchScreen.xib */; };
 		D01570551B80BA1C002C0B08 /* DGAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01570541B80BA1C002C0B08 /* DGAuthViewController.m */; };
-		D02E79C11B85D35A00E1A80B /* DiscogsAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D02E79BE1B85D35A00E1A80B /* DiscogsAPI.podspec */; };
-		D02E79C21B85D35A00E1A80B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D02E79BF1B85D35A00E1A80B /* LICENSE */; };
-		D02E79C31B85D35A00E1A80B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D02E79C01B85D35A00E1A80B /* README.md */; };
 		DE4B6367767283143E020312 /* libPods-DiscogsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B22F67BB32A7A30313B0A5 /* libPods-DiscogsAPI.a */; };
 /* End PBXBuildFile section */
 
@@ -184,11 +181,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02E79C11B85D35A00E1A80B /* DiscogsAPI.podspec in Resources */,
 				D01570391B80B772002C0B08 /* Main.storyboard in Resources */,
 				D015703E1B80B772002C0B08 /* LaunchScreen.xib in Resources */,
 				D015703B1B80B772002C0B08 /* Images.xcassets in Resources */,
-				D02E79C21B85D35A00E1A80B /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +229,6 @@
 			files = (
 				D01570361B80B772002C0B08 /* DGSearchViewController.m in Sources */,
 				D01570551B80BA1C002C0B08 /* DGAuthViewController.m in Sources */,
-				D02E79C31B85D35A00E1A80B /* README.md in Sources */,
 				D01570331B80B772002C0B08 /* DGAppDelegate.m in Sources */,
 				D01570301B80B772002C0B08 /* main.m in Sources */,
 			);

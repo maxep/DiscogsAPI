@@ -10,7 +10,8 @@ An Objective-C interface for [Discogs API v2.0](http://www.discogs.com/developer
 The implementation is based on the [RestKit](http://restkit.org/) framework.
 
 ##Features
-- Handle OAuth process and store the token in keychain.
+- Supports OAuth process and store the token in keychain.
+- Supports Discogs Auth.
 - Database support: Release, Master Release, Master Release Versions, Artist, Artist Releases, Label, All Label Releases, Search.
 - User support: Identify, Profile, Collection, Wantlist.
 - Image support.
@@ -34,17 +35,37 @@ pod 'DiscogsAPI'
 Configure the .plist for your project:
 
 In Xcode right-click your .plist file and choose "Open As Source Code".
-Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`).
-Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Discogs App consumer key and secret. You can create them in your [profile settings](https://www.discogs.com/settings/developers).
+Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`). You can use rather the key/secret pair or your personal access token. You can create them in your [profile settings](https://www.discogs.com/settings/developers).
+
+#### Key/Secret
+
+Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Discogs App consumer key and secret. 
 
 ```xml
 <key>DiscogsConsumerKey</key>
-<string>DISCOGS_APP_CONSUMER_SECRET</string>
+<string>DISCOGS_APP_CONSUMER_Key</string>
 <key>DiscogsConsumerSecret</key>
-<string>DISCOGS_APP_CONSUMER_KEY</string>
+<string>DISCOGS_APP_CONSUMER_SECRET</string>
 ```
 
-### Authenticate the user
+#### Personal Access Token
+
+Replace DISCOGS_PERSONAL_ACCESS_TOKEN by you personal access token. 
+
+```xml
+<key>DiscogsAccessToken</key>
+<string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>
+```
+
+### Authentication
+
+Discogs supports two authentication methods: The Discogs Auth and OAuth. Please refer to the [documentation](http://www.discogs.com/developers/#page:authentication) for more details.
+
+#### Discogs Auth
+
+The key/secret or you personal access token will be automatically retrieved from your xcode configuration and used in your request headers. Nothing to be done on your side.
+
+#### OAuth Auth
 
 OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The token will be automatically stored in the Apple keychain.
 

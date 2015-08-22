@@ -38,7 +38,12 @@
     
     [DiscogsAPI.client isAuthenticated:^(BOOL success) {
         if (!success) {
-            [self presentAuthenticationController];
+            
+            //Present Authentication controller
+            DGAuthViewController *authentViewController = [[DGAuthViewController alloc] init];
+            UINavigationController *authentNavigationController = [[UINavigationController alloc] initWithRootViewController:authentViewController];
+            [self.navigationController presentViewController:authentNavigationController animated:YES completion:nil];
+            
         }
     }];
 }
@@ -54,14 +59,6 @@
     _response = response;
     [self.tableView reloadData];
     [self.searchDisplayController.searchResultsTableView reloadData];
-}
-
-#pragma mark Private Methods
-
-- (void)presentAuthenticationController {
-    DGAuthViewController *authentViewController = [[DGAuthViewController alloc] init];
-    UINavigationController *authentNavigationController = [[UINavigationController alloc] initWithRootViewController:authentViewController];
-    [self.navigationController presentViewController:authentNavigationController animated:YES completion:nil];
 }
 
 #pragma mark <UISearchDisplayDelegate>
