@@ -35,9 +35,9 @@ pod 'DiscogsAPI'
 Configure the .plist for your project:
 
 In Xcode right-click your .plist file and choose "Open As Source Code".
-Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`). You can use rather the key/secret pair or your personal access token. You can create them in your [profile settings](https://www.discogs.com/settings/developers).
+Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`). You can use rather the key/secret pair or your personal access token (you can create them in your [profile settings](https://www.discogs.com/settings/developers)).
 
-#### Key/Secret
+##### Key/Secret
 
 Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Discogs App consumer key and secret. 
 
@@ -48,7 +48,7 @@ Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Disco
 <string>DISCOGS_APP_CONSUMER_SECRET</string>
 ```
 
-#### Personal Access Token
+##### Personal Access Token
 
 Replace DISCOGS_PERSONAL_ACCESS_TOKEN by you personal access token. 
 
@@ -61,19 +61,19 @@ Replace DISCOGS_PERSONAL_ACCESS_TOKEN by you personal access token.
 
 Discogs supports two authentication methods: The Discogs Auth and OAuth. Please refer to the [documentation](http://www.discogs.com/developers/#page:authentication) for more details.
 
-#### Discogs Auth
+##### Discogs Auth
 
-The key/secret or you personal access token will be automatically retrieved from your xcode configuration and used in your request headers. Nothing to be done on your side.
+The key/secret or your personal access token will be automatically retrieved from your xcode configuration and used in your request headers. Nothing to be done on your side.
 
-#### OAuth Auth
+##### OAuth
 
 OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The token will be automatically stored in the Apple keychain.
 
 ```objective-c
     [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
-        [authView setFrame:[[UIScreen mainScreen] bounds]];
-        [self.view addSubview:authView];
-        
+    
+    	// Show the authView
+    	
     } success:^{
         NSLog(@"The user has been successfully authentified");
     } failure:^(NSError *error) {
@@ -91,7 +91,7 @@ OAuth process is all handled by the 'authentication' endpoint. You just have to 
     request.pagination.perPage = @25;
     
     [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
-        [self.searchView setResponse:response];
+        // Do something with the response
     } failure:^(NSError *error) {
          NSLog(@"Error: %@", error);
     }];
