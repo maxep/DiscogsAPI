@@ -16,10 +16,7 @@ The implementation is based on the [RestKit](http://restkit.org/) framework.
 - User support: Identify, Profile, Collection, Wantlist.
 - Image support.
 
-## Usage
-
-
-### Installation with CocoaPods
+## Installation with CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects.
 
@@ -30,106 +27,16 @@ platform :ios, '7.1'
 pod 'DiscogsAPI'
 ```
 
-### Authentication
+## Usage
 
-Configure the .plist for your project:
+If you want to try it, simply run:
 
-Right-click your .plist file and choose "Open As Source Code".
-Copy & Paste the XML snippet into the body of your file (`<dict>...</dict>`). You can use rather the key/secret pair or your personal access token (you can create them in your [profile settings](https://www.discogs.com/settings/developers)).
-
-##### Key/Secret
-
-Replace DISCOGS_APP_CONSUMER_KEY and DISCOGS_APP_CONSUMER_SECRET with your Discogs App consumer key and secret. 
-
-```xml
-<key>DiscogsConsumerKey</key>
-<string>DISCOGS_APP_CONSUMER_Key</string>
-<key>DiscogsConsumerSecret</key>
-<string>DISCOGS_APP_CONSUMER_SECRET</string>
 ```
-
-##### Personal Access Token
-
-Replace DISCOGS_PERSONAL_ACCESS_TOKEN by you personal access token. 
-
-```xml
-<key>DiscogsAccessToken</key>
-<string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>
+pod try DiscogsAPI
 ```
-#### Authentication flow
+Or clone the repo and run ```pod install``` from the Example directory first.
 
-Discogs supports two authentication methods: The Discogs Auth and OAuth. Please refer to the [documentation](http://www.discogs.com/developers/#page:authentication) for more details.
-
-##### Discogs Auth
-
-The key/secret or your personal access token will be automatically retrieved from your xcode configuration and used in your request headers. Nothing to be done on your side.
-
-##### OAuth
-
-OAuth process is all handled by the 'authentication' endpoint. You just have to show the 'authView' view to let the user enter his credentials and authorize the application. The token will be automatically stored in the Apple keychain.
-
-```objective-c
-    [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
-
-        // Show the authView
-
-    } success:^{
-        NSLog(@"The user has been successfully authentified");
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-```
-
-### Database
-
-##### Release
-
-```objective-c
-    [DiscogsAPI.client.database getRelease:@249504 success:^(DGRelease *release) {
-        NSLog(@"Release: %@", release);
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-```
-
-##### Master Release
-
-```objective-c
-    [DiscogsAPI.client.database getMaster:@1000 success:^(DGMaster *master) {
-        NSLog(@"Master: %@", master);
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-```
-##### Master Release Versions
-
-```objective-c
-    DGMasterVersionRequest *request = [DGMasterVersionRequest request];
-    request.masterID = @1000;
-    request.pagination.page = @3;
-    request.pagination.perPage = @25;
-
-    [DiscogsAPI.client.database getMasterVersion:request success:^(DGMasterVersionResponse *response) {
-        NSLog(@"Versions: %@", response.versions);
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-```
-
-##### Search
-
-```objective-c
-    DGSearchRequest* request = [DGSearchRequest request];
-    request.query = @"Cool band";
-    request.type = @"artist";
-    request.pagination.perPage = @25;
-
-    [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
-        NSLog(@"Response: %@", response);
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-```
+Detailed usage instructions are available in the [Wiki](https://github.com/maxep/DiscogsAPI/wiki).
 
 ## Documentation
 
