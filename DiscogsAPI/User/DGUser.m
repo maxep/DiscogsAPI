@@ -47,7 +47,7 @@
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
     
     //User Profile
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGProfile class] pathPattern:@"users/:userName" method:RKRequestMethodGET]];
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGProfile class] pathPattern:@"users/:userName" method:RKRequestMethodAny]];
     
     //User collection folders
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFolders class] pathPattern:@"users/:userName/collection/folders" method:RKRequestMethodAny]];
@@ -67,7 +67,6 @@
     //Post release in Collection folder
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGPutReleaseInFolderRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID" method:RKRequestMethodPOST]];
 
-    
     //Collection's release instance request
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGReleaseInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodAny]];
     
@@ -133,8 +132,35 @@
     [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure
-{
+- (void) postProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+
+    DGCheckReachability();
+    
+    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:profile method:RKRequestMethodPOST path:nil parameters:profile.parameters];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+         NSArray* results = mappingResult.array;
+         if ([[results firstObject] isKindOfClass:[DGProfile class]]) {
+             success([results firstObject]);
+         }
+         else {
+             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
+         }
+     }
+     failure:^(RKObjectRequestOperation *operation, NSError *error) {
+         RKLogError(@"Operation failed with error: %@", error);
+         failure(error);
+     }];
+    
+    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+}
+
+
+- (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure {
+    
     DGCollectionFolders* collection = [DGCollectionFolders collection];
     collection.userName = userName;
     
@@ -142,19 +168,17 @@
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionFolders responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGCollectionFolders class]]) {
              success([results firstObject]);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
      }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];

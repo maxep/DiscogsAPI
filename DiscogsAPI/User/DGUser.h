@@ -58,6 +58,15 @@
 - (void) getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure;
 
 /**
+ Edit a user’s profile data
+ 
+ @param profile The edited user's profile.
+ @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the edited user profile.
+ @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) postProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure;
+
+/**
  Gets the user's collection folders.
  
  @param userName The user's name.
