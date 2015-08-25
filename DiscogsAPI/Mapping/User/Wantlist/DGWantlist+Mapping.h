@@ -21,11 +21,6 @@
 // THE SOFTWARE.
 
 #import "DGWantlist.h"
-#import "DGPagination+Mapping.h"
-
-@interface DGWantlist (Mapping)
-
-@end
 
 @interface DGWantlistRequest (Mapping)
 

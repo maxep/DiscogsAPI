@@ -23,10 +23,6 @@
 #import "DGEndpoint+Configuration.h"
 #import "DGIdentity+Mapping.h"
 #import "DGProfile+Mapping.h"
-#import "DGCollection+Mapping.h"
-#import "DGCollectionRelease+Mapping.h"
-#import "DGReleaseInstance+Mapping.h"
-#import "DGWantlist+Mapping.h"
 
 #import "DGUser.h"
 
@@ -36,47 +32,46 @@
 
 @implementation DGUser
 
-+ (DGUser*) user
-{
+@synthesize wanlist     = _wanlist;
+@synthesize collection  = _collection;
+
++ (DGUser*) user {
     return [[DGUser alloc] init];
 }
 
-- (void) configureManager:(RKObjectManager*)objectManager
-{
+#pragma mark Properties
+
+- (DGWantlist *)wanlist {
+    if (!_wanlist) {
+        _wanlist = [DGWantlist wantlist];
+    }
+    return _wanlist;
+}
+
+- (DGCollection *)collection {
+    if (!_collection) {
+        _collection = [DGCollection collection];
+    }
+    return _collection;
+}
+
+#pragma mark Configuration
+
+- (void) configureManager:(RKObjectManager*)objectManager {
     //User Identity
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
     
     //User Profile
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGProfile class] pathPattern:@"users/:userName" method:RKRequestMethodAny]];
     
-    //User collection folders
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFolders class] pathPattern:@"users/:userName/collection/folders" method:RKRequestMethodAny]];
+    [self.wanlist configureManager:objectManager];
     
-    //User collection folder request
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFolderRequest class] pathPattern:@"users/:userName/collection/folders/:folderID" method:RKRequestMethodGET]];
-    
-    //User collection releases request
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionReleasesRequest class] pathPattern:@"users/:userName/collection/folders/:folderID/releases" method:RKRequestMethodGET]];
-    
-    //User wantlist
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGWantlistRequest class] pathPattern:@"users/:userName/wants" method:RKRequestMethodGET]];
-    
-    //Manage Wantlist
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGWantRequest class] pathPattern:@"/users/:userName/wants/:releaseID" method:RKRequestMethodAny]];
-    
-    //Post release in Collection folder
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGPutReleaseInFolderRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID" method:RKRequestMethodPOST]];
-
-    //Collection's release instance request
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGReleaseInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodAny]];
-    
-    //Edit instance field request
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGEditInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID/fields/:fieldID" method:RKRequestMethodPOST]];
-    [objectManager addRequestDescriptor:[DGEditInstanceRequest requestDescriptor]];
+    [self.collection configureManager:objectManager];
 }
 
-- (void) identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure
-{
+#pragma mark Public Methods
+
+- (void) identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
     DGIdentity* identity = [DGIdentity identity];
     
     NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:identity method:RKRequestMethodGET path:nil parameters:nil];
@@ -156,186 +151,6 @@
      }];
     
     [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-
-- (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure {
-    
-    DGCollectionFolders* collection = [DGCollectionFolders collection];
-    collection.userName = userName;
-    
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:collection method:RKRequestMethodGET path:nil parameters:nil];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionFolders responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGCollectionFolders class]]) {
-             success([results firstObject]);
-         }
-         else {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) getCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure
-{
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:nil];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionFolder responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGCollectionFolder class]]) {
-             success([results firstObject]);
-         }
-         else
-         {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* folder))success failure:(void (^)(NSError* error))failure
-{
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionReleasesResponse responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGCollectionReleasesResponse class]]) {
-             success([results firstObject]);
-         }
-         else
-         {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) getWantlist:(DGWantlistRequest*)request success:(void (^)(DGWantlistResponse* response))success failure:(void (^)(NSError* error))failure
-{
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGWantlistResponse responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGWantlistResponse class]]) {
-             success([results firstObject]);
-         }
-         else
-         {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) addToWantlist:(DGWantRequest*)request success:(void (^)(DGWant* want))success failure:(void (^)(NSError* error))failure {
-    
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodPUT path:nil parameters:request.parameters];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGWant responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGWant class]]) {
-             success([results firstObject]);
-         }
-         else {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) editReleaseInWantlist:(DGWantRequest*)request success:(void (^)(DGWant* want))success failure:(void (^)(NSError* error))failure {
-    
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodPOST path:nil parameters:request.parameters];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGWant responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        
-        NSArray* results = mappingResult.array;
-        if ([[results firstObject] isKindOfClass:[DGWant class]]) {
-            success([results firstObject]);
-        }
-        else {
-            failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-        }
-    }
-    failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        RKLogError(@"Operation failed with error: %@", error);
-        failure(error);
-    }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) deleteReleaseFromWantlist:(DGWantRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
-    
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodDELETE path:nil parameters:request.parameters];
-    
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGWant responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-         success();
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
-- (void) editInstanceField:(DGEditInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
-
-    [RKObjectManager.sharedManager postObject:request path:nil parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        success();
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        failure(error);
-    }];
 }
 
 @end

@@ -21,11 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGWantlist+Mapping.h"
+#import "DGPagination+Mapping.h"
 #import "DGRelease+Mapping.h"
-
-@implementation DGWantlist (Mapping)
-
-@end
 
 @implementation DGWantlistRequest (Mapping)
 
@@ -42,7 +39,7 @@
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
     
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"wants" toKeyPath:@"releases" withMapping:[DGRelease mapping]]];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"wants" toKeyPath:@"wants" withMapping:[DGWant mapping]]];
     
     return mapping;
 }
@@ -59,10 +56,7 @@
     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                       @"notes"  : self.notes,
                                                                                       @"rating" : self.rating
-                                                                                      }
-                                       ];
-    
-    
+                                                                                      }];
     return parameters;
 }
 

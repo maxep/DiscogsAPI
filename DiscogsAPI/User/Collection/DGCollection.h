@@ -21,7 +21,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "DGEndpoint.h"
 #import "DGPagination.h"
+#import "DGCollectionRelease.h"
+#import "DGReleaseInstance.h"
 
 @interface DGCollectionFolderRequest : NSObject
 
@@ -92,5 +95,47 @@
 + (DGCollectionReleasesResponse*) response;
 
 - (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
+
+@end
+
+
+/**
+ The DGCollection class to manage operation with User's collection.
+ */
+@interface DGCollection : DGEndpoint
+
+/**
+ Creates and initializes an 'DGCollection' object.
+ 
+ @return The newly-initialized collection object.
+ */
++ (DGCollection*) collection;
+
+/**
+ Gets the user's collection folders.
+ 
+ @param userName The user's name.
+ @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folders.
+ @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure;
+
+/**
+ Gets a collection folder.
+ 
+ @param request The collection folder request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folder.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) getCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
+
+/**
+ Gets the collection releases.
+ 
+ @param request The paginated collection releases request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated collection releases response.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* folder))success failure:(void (^)(NSError* error))failure;
 
 @end
