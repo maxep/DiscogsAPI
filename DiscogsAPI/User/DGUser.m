@@ -132,7 +132,7 @@
     [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) postProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+- (void) editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
 
     DGCheckReachability();
     

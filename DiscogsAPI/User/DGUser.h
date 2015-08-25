@@ -64,7 +64,7 @@
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the edited user profile.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) postProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure;
+- (void) editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets the user's collection folders.
@@ -96,16 +96,37 @@
 /**
  Gets the user's wantlist.
  
- @param request The paginatedwantlist request.
+ @param request The paginated wantlist request.
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated wantlist response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void) getWantlist:(DGWantlistRequest*)request success:(void (^)(DGWantlistResponse* response))success failure:(void (^)(NSError* error))failure;
 
+/**
+ Add release to user's wantlist.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the wanted release.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
 - (void) addToWantlist:(DGWantRequest*)request success:(void (^)(DGWant* want))success failure:(void (^)(NSError* error))failure;
 
+/**
+ Edit release in user's wantlist.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the wanted release.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
 - (void) editReleaseInWantlist:(DGWantRequest*)request success:(void (^)(DGWant* want))success failure:(void (^)(NSError* error))failure;
 
+/**
+ Delete release from user's wantlist.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value no argument: the wanted release.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
 - (void) deleteReleaseFromWantlist:(DGWantRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 @end
