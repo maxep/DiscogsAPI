@@ -41,8 +41,16 @@
 
 @end
 
-@interface DGPutInWantlistRequest (Mapping)
+@interface DGWantRequest (Mapping)
 
 - (NSDictionary*) parameters;
+
+@end
+
+@interface DGWant (Mapping)
+
++ (RKObjectMapping*) mapping;
+
++ (RKResponseDescriptor*) responseDescriptor;
 
 @end

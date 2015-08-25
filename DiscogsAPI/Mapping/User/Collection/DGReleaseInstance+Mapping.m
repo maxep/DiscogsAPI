@@ -24,8 +24,7 @@
 
 @implementation DGReleaseInstance (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGReleaseInstance class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"instance_id"    : @"ID",
@@ -36,8 +35,7 @@
                                                   @"basic_information.id"             : @"releaseID",
                                                   @"basic_information.artists"        : @"artists",
                                                   @"basic_information.labels"         : @"labels"
-                                                  }
-     ];
+                                                  }];
     
     return mapping;
 }
@@ -46,8 +44,7 @@
 
 @implementation DGReleaseInstanceRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     return nil;
 }
 
@@ -55,8 +52,7 @@
 
 @implementation DGEditInstanceRequest (Mapping)
 
-+ (RKRequestDescriptor*) requestDescriptor
-{
++ (RKRequestDescriptor*) requestDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping requestMapping];
     
     [mapping addAttributeMappingsFromDictionary:@{
@@ -67,8 +63,7 @@
     return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGEditInstanceRequest class] rootKeyPath:nil method:RKRequestMethodPOST];
 }
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     return @{@"value" : self.value};
 }
 

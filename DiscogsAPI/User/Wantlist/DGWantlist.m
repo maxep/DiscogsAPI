@@ -29,13 +29,11 @@
 
 @implementation DGWantlistRequest
 
-+ (DGWantlistRequest*) request
-{
++ (DGWantlistRequest*) request {
     return [[DGWantlistRequest alloc] init];
 }
 
-- (id) init
-{
+- (id) init {
     self = [super init];
     if (self) {
         
@@ -48,13 +46,12 @@
 
 @implementation DGWantlistResponse
 
-+ (DGWantlistResponse*) response
-{
++ (DGWantlistResponse*) response {
     return [[DGWantlistResponse alloc] init];
 }
 
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure
-{
+- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+    
     [self.pagination loadNextPageWithResponseDesciptor:[DGWantlistResponse responseDescriptor] success:^(NSArray *objects) {
         if ([[objects firstObject] isKindOfClass:[DGWantlistResponse class]]) {
             DGWantlistResponse* response = [objects firstObject];
@@ -74,21 +71,27 @@
 
 @end
 
-@implementation DGPutInWantlistRequest
+@implementation DGWantRequest
 
-+ (DGPutInWantlistRequest*) request
-{
-    return [[DGPutInWantlistRequest alloc] init];
++ (DGWantRequest*) request {
+    return [[DGWantRequest alloc] init];
 }
 
-- (id) init
-{
+- (id) init {
     self = [super init];
     if (self) {
         self.rating = @0;
         self.notes  = @"";
     }
     return self;
+}
+
+@end
+
+@implementation DGWant
+
++ (DGWant*) want {
+    return [[DGWant alloc] init];
 }
 
 @end

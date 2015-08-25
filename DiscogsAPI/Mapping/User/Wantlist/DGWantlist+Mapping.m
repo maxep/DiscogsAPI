@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGWantlist+Mapping.h"
-#import "DGReleaseInstance+Mapping.h"
+#import "DGRelease+Mapping.h"
 
 @implementation DGWantlist (Mapping)
 
@@ -29,8 +29,7 @@
 
 @implementation DGWantlistRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     return [self.pagination parameters];
 }
     
@@ -38,36 +37,55 @@
 
 @implementation DGWantlistResponse (Mapping)
 
-+ (RKObjectMapping*) mapping
-{
++ (RKObjectMapping*) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGWantlistResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
     
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"wants" toKeyPath:@"releases" withMapping:[DGReleaseInstance mapping]]];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"wants" toKeyPath:@"releases" withMapping:[DGRelease mapping]]];
     
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGWantlistResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end
 
-@implementation DGPutInWantlistRequest (Mapping)
+@implementation DGWantRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                      @"notes"      : self.notes,
-                                                                                      @"rating"     : self.rating
+                                                                                      @"notes"  : self.notes,
+                                                                                      @"rating" : self.rating
                                                                                       }
                                        ];
     
     
     return parameters;
+}
+
+@end
+
+@implementation DGWant (Mapping)
+
++ (RKObjectMapping*) mapping {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGWant class]];
+    [mapping addAttributeMappingsFromDictionary:@{
+                                                  @"id"             : @"ID",
+                                                  @"rating"         : @"rating",
+                                                  @"notes"          : @"notes",
+                                                  @"resource_url"   : @"resourceURL"
+                                                  }];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"basic_information" toKeyPath:@"DGRelease" withMapping:[DGRelease mapping]]];
+    
+    return mapping;
+}
+
++ (RKResponseDescriptor*) responseDescriptor {
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGWant mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

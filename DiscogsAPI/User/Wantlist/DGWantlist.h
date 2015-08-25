@@ -22,6 +22,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DGPagination.h"
+#import "DGRelease.h"
 
 @interface DGWantlist : NSObject
 
@@ -47,13 +48,23 @@
 
 @end
 
-@interface DGPutInWantlistRequest : NSObject
+@interface DGWantRequest : NSObject
 
 @property (nonatomic, strong) NSString* userName;
 @property (nonatomic, strong) NSNumber* releaseID;
 @property (nonatomic, strong) NSString* notes;
 @property (nonatomic, strong) NSNumber* rating;
 
-+ (DGPutInWantlistRequest*) request;
++ (DGWantRequest*) request;
+
+@end
+
+@interface DGWant : DGObject
+
+@property (nonatomic, strong) NSNumber  *rating;
+@property (nonatomic, strong) NSString  *notes;
+@property (nonatomic, strong) DGRelease *DGRelease;
+
++ (DGWant*) want;
 
 @end

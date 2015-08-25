@@ -30,8 +30,7 @@
 
 @implementation DGRelease (Mapping)
 
-+ (RKMapping*) mapping
-{
++ (RKMapping*) mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGRelease class]];
     
