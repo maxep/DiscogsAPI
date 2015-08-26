@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.2"
+  s.version      = "1.3"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
                     Features:
@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/maxep/DiscogsAPI"
   s.license      = 'MIT'
   s.author       = { "Maxime Epain" => "maxime.epain@gmail.com" }
+  s.social_media_url = 'https://twitter.com/MaximeEpain'
   s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git", :tag => "v#{s.version}" }
   s.requires_arc = true
   s.ios.deployment_target = '7.1'
@@ -52,7 +53,7 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/User/Collection', 
     						'DiscogsAPI/User/Wantlist',
     						'DiscogsAPI/Mapping/User/**/*'
-    ss.dependency 'DiscogsAPI/Pagination'
+    ss.dependency 'DiscogsAPI/Database'
   end
   
   s.subspec 'Pagination' do |ss|
