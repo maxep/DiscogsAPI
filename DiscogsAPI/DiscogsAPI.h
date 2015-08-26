@@ -30,7 +30,7 @@
 /**
  Discogs API client class to manage client initialization and api endpoints.
  */
-@interface DiscogsAPI : NSObject <DGAuthenticationDelegate, DGEndpointDelegate>
+@interface DiscogsAPI : NSObject <DGEndpointDelegate>
 
 /**
  Autentication endpoint.

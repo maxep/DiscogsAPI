@@ -29,7 +29,7 @@
 @implementation DGHTTPClient
 
 - (id)initWithBaseURL:(NSURL *)url key:(NSString *)key secret:(NSString *)secret {
-    if (self = [super initWithBaseURL:url]) {
+    if (self = [super initWithBaseURL:url key:key secret:secret]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs key=%@, secret=%@", key, secret];
     }
     return self;
@@ -48,9 +48,13 @@
                                       path:(NSString *)path
                                 parameters:(NSDictionary *)parameters
 {
+    NSMutableURLRequest *request = [super requestWithMethod:method
+                                                       path:path
+                                                 parameters:parameters];
+    if (self.accessToken) {
+        return request;
+    }
     
-    NSMutableURLRequest *request = [super requestWithMethod:method path:path parameters:parameters];
-
     [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
     [request setHTTPShouldHandleCookies:NO];
     
@@ -62,7 +66,13 @@
                                              parameters:(NSDictionary *)parameters
                               constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
 {
-    NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method path:path parameters:parameters constructingBodyWithBlock:block];
+    NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method
+                                                                    path:path
+                                                              parameters:parameters
+                                               constructingBodyWithBlock:block];
+    if (self.accessToken) {
+        return request;
+    }
     
     [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
     [request setHTTPShouldHandleCookies:NO];

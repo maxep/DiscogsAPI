@@ -21,17 +21,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
+#import "DGHTTPClient.h"
 #import "DGEndpoint.h"
-
-@class DGAuthentication;
-
-@protocol DGAuthenticationDelegate <DGEndpointDelegate>
-
-@required
-- (void) authentication:(DGAuthentication*)authentication didAuthorizeClient:(AFHTTPClient*)client;
-
-@end
 
 /**
  Authentification class to manage the Discogs authentification process.
@@ -43,9 +34,7 @@
 /**
  The HTTP client with authorized header.
  */
-@property (nonatomic, readonly) AFHTTPClient *HTTPClient;
-
-@property (nonatomic, weak) id<DGAuthenticationDelegate> delegate;
+@property (nonatomic, readonly) DGHTTPClient *HTTPClient;
 
 /**
  Creates and initializes a `DGAuthentication` object.

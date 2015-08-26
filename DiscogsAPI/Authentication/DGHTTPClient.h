@@ -20,9 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AFHTTPClient.h"
+#import <AFOAuth1Client/AFOAuth1Client.h>
 
-@interface DGHTTPClient : AFHTTPClient
+/**
+ `DGHTTPClient` encapsulates common patterns to authenticate against the Discogs API server.
+ 
+ @see The Discogs Auth Protocol: http://www.discogs.com/developers/#page:authentication,header:authentication-discogs-auth-flow
+ @see RFC 5849 The OAuth 1.0 Protocol: https://tools.ietf.org/html/rfc5849
+ */
+@interface DGHTTPClient : AFOAuth1Client
 
 /**
  Initializes an `DGHTTPClient` object with the specified consumer key and secret.

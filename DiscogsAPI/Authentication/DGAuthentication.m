@@ -20,7 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <AFOAuth1Client/AFOAuth1Client.h>
 #import "DGAuthentication.h"
 #import "DGHTTPClient.h"
 
@@ -42,7 +41,6 @@ NSString* const kDGCallback = @"discogsapi://success";
 static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
 
 @interface DGAuthentication ()
-@property (nonatomic,strong) AFOAuth1Client * oAuth1Client;
 @property (nonatomic,strong) NSString *consumerKey;
 @property (nonatomic,strong) NSString *consumerSecret;
 @property (nonatomic,strong) NSString *accessToken;
@@ -51,6 +49,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 @implementation DGAuthentication
 
 @dynamic delegate;
+@synthesize HTTPClient = _HTTPClient;
 
 + (DGAuthentication*) authentication {
     return [[DGAuthentication alloc] init];
@@ -75,7 +74,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
                 [self removeAccountCredential];
             }
             
-            [self.oAuth1Client authorizeUsingOAuthWithRequestTokenPath:kDGRequestTokenURL
+            [self.HTTPClient authorizeUsingOAuthWithRequestTokenPath:kDGRequestTokenURL
                                                  userAuthorizationPath:kDGAuthorizeURL
                                                            callbackURL:callback
                                                        accessTokenPath:kDGAccessTokenURL
@@ -83,7 +82,6 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
                                                                  scope:nil
             success:^(AFOAuth1Token *accessToken, id responseObject) {
                 [DGTokenStore storeCredential:accessToken withIdentifier:kDGOAuth1CredentialDiscogsAccount];
-                [self.delegate authentication:self didAuthorizeClient:self.oAuth1Client];
                 success();
             }
             failure:^(NSError *error) {
@@ -91,7 +89,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             }];
         }];
     }
-    else if (self.oAuth1Client.accessToken) {
+    else if (self.HTTPClient.accessToken) {
         success();
     }
     else {
@@ -103,7 +101,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     
     NSURL* callback = [NSURL URLWithString:kDGCallback];
     
-    [self.oAuth1Client setServiceProviderRequestHandler:^(NSURLRequest *request) {
+    [self.HTTPClient setServiceProviderRequestHandler:^(NSURLRequest *request) {
         DGAuthView* view = [DGAuthView viewWithRequest:request];
         authView(view);
     } completion:nil];
@@ -113,44 +111,30 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 
 - (void) removeAccountCredential {
     [DGTokenStore deleteCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
-    self.oAuth1Client.accessToken = nil;
+    self.HTTPClient.accessToken = nil;
 }
 
 #pragma mark Properties
 
-- (AFOAuth1Client *)oAuth1Client {
-    if (!_oAuth1Client) {
-        _oAuth1Client = [[AFOAuth1Client alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL]
+- (DGHTTPClient *)HTTPClient {
+    
+    if (!_HTTPClient) {
+        if (self.consumerKey && self.consumerSecret) {
+            _HTTPClient = [[DGHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL]
                                                             key:self.consumerKey
                                                          secret:self.consumerSecret];
-        
-        [_oAuth1Client setSignatureMethod:AFPlainTextSignatureMethod];
-        _oAuth1Client.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
-    }
-    return _oAuth1Client;
-}
-
-- (AFHTTPClient *)HTTPClient {
-    
-    NSURL *url = [NSURL URLWithString:kDGBaseURL];
-
-    if (self.consumerKey && self.consumerSecret) {
-        
-        if (self.oAuth1Client.accessToken) {
-            return self.oAuth1Client;
+        }
+        else if(self.accessToken) {
+            _HTTPClient = [[DGHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL] accessToken:self.accessToken];
+        }
+        else {
+            _HTTPClient = [[DGHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL]];
         }
         
-        return [[DGHTTPClient alloc] initWithBaseURL:url
-                                                 key:self.consumerKey
-                                              secret:self.consumerSecret];
+        _HTTPClient.signatureMethod = AFPlainTextSignatureMethod;
+        _HTTPClient.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
     }
-    
-    if (self.accessToken) {
-        return [[DGHTTPClient alloc] initWithBaseURL:url
-                                         accessToken:self.accessToken];
-    }
-    
-    return [[AFHTTPClient alloc] initWithBaseURL:url];
+    return _HTTPClient;
 }
 
 @end

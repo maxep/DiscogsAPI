@@ -126,12 +126,6 @@
     return _resource;
 }
 
-#pragma <DGAuthenticationDelegate>
-
-- (void)authentication:(DGAuthentication *)authentication didAuthorizeClient:(AFHTTPClient *)client {
-    RKObjectManager.sharedManager.HTTPClient = client;
-}
-
 #pragma mark <DGEndpointDelegate>
 
 - (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
