@@ -27,8 +27,8 @@
 
 @interface DGWantlistRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  * pagination;
-@property (nonatomic, strong) NSString * userName;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSString      *userName;
 
 + (DGWantlistRequest*) request;
 
@@ -36,8 +36,8 @@
 
 @interface DGWantlistResponse : NSObject
 
-@property (nonatomic, strong) DGPagination * pagination;
-@property (nonatomic, strong) NSArray *wants;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSArray       *wants;
 
 + (DGWantlistResponse*) response;
 
@@ -47,10 +47,10 @@
 
 @interface DGWantRequest : NSObject
 
-@property (nonatomic, strong) NSString* userName;
-@property (nonatomic, strong) NSNumber* releaseID;
-@property (nonatomic, strong) NSString* notes;
-@property (nonatomic, strong) NSNumber* rating;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSNumber *releaseID;
+@property (nonatomic, strong) NSString *notes;
+@property (nonatomic, strong) NSNumber *rating;
 
 + (DGWantRequest*) request;
 

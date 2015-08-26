@@ -142,6 +142,9 @@
     //Manage collection's release instance
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGReleaseInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodAny]];
     
+    //Change release's rating
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGChangeRatingOfReleaseRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodPOST]];
+    
     //Edit instance field request
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGEditFieldsInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID/fields/:fieldID" method:RKRequestMethodPOST]];
     [objectManager addRequestDescriptor:[DGEditFieldsInstanceRequest requestDescriptor]];
