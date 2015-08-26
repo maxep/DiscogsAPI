@@ -22,8 +22,6 @@
 
 #import "DGEndpoint+Configuration.h"
 #import "DGCollection+Mapping.h"
-
-#import "DGCollectionRelease.h"
 #import "DGReleaseInstance+Mapping.h"
 
 @implementation DGCollectionFolderRequest

@@ -23,7 +23,6 @@
 #import <Foundation/Foundation.h>
 #import "DGEndpoint.h"
 #import "DGPagination.h"
-#import "DGCollectionRelease.h"
 #import "DGReleaseInstance.h"
 
 @interface DGCollectionFolderRequest : NSObject
