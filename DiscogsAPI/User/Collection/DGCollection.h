@@ -150,6 +150,15 @@
 - (void) changeRatingOfRelease:(DGChangeRatingOfReleaseRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
+ Delete release from user's collection folder.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value no argument: the wanted release.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) deleteInstanceFromFolder:(DGReleaseInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+
+/**
  Change the value of a notes field on a particular instance.
  
  @param request The request.

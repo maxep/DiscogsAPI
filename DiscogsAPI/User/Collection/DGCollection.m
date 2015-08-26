@@ -139,7 +139,7 @@
     //Post release in Collection folder
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGAddToCollectionFolderRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID" method:RKRequestMethodPOST]];
     
-    //Collection's release instance request
+    //Manage collection's release instance
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGReleaseInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodAny]];
     
     //Edit instance field request
@@ -265,6 +265,26 @@
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request
                                                         method:RKRequestMethodPOST
+                                                          path:nil
+                                                    parameters:request.parameters];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:self.manager.responseDescriptors];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        success();
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
+        failure(error);
+    }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+}
+
+- (void) deleteInstanceFromFolder:(DGReleaseInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
+    
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodDELETE
                                                           path:nil
                                                     parameters:request.parameters];
     
