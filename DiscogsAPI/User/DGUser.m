@@ -63,10 +63,6 @@
     
     //User Profile
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGProfile class] pathPattern:@"users/:userName" method:RKRequestMethodAny]];
-    
-    [self.wanlist configureManager:objectManager];
-    
-    [self.collection configureManager:objectManager];
 }
 
 #pragma mark Public Methods
