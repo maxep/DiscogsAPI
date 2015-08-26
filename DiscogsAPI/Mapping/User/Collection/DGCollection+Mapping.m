@@ -25,16 +25,14 @@
 
 @implementation DGCollectionFolder (Mapping)
 
-+ (RKObjectMapping*) mapping
-{
++ (RKObjectMapping*) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionFolder class]];
     [mapping addAttributeMappingsFromDictionary:@{
-                                                  @"id"             : @"folderID",
+                                                  @"id"             : @"ID",
                                                   @"count"          : @"count",
                                                   @"name"           : @"name",
                                                   @"resource_url"   : @"resourceURL"
-                                                  }
-     ];
+                                                  }];
     return mapping;
 }
 
@@ -56,56 +54,48 @@
     return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     return @{ @"username" : self.userName };
 }
 
 @end
 
-@implementation DGPutReleaseInFolderRequest (Mapping)
+@implementation DGAddToCollectionFolderRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     return nil;
 }
 
 @end
 
-@implementation DGPutReleaseInFolderResponse (Mapping)
+@implementation DGAddToCollectionFolderResponse (Mapping)
 
-+ (RKObjectMapping*) mapping
-{
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPutReleaseInFolderResponse class]];
++ (RKObjectMapping*) mapping {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGAddToCollectionFolderResponse class]];
     
     [mapping addAttributeMappingsFromDictionary:@{
-                                                  @"instance_id"    : @"instanceID",
+                                                  @"instance_id"    : @"ID",
                                                   @"resource_url"   : @"resourceURL"
-                                                  }
-     ];
+                                                  }];
     
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
-    return [RKResponseDescriptor responseDescriptorWithMapping:[DGPutReleaseInFolderResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
++ (RKResponseDescriptor*) responseDescriptor {
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGAddToCollectionFolderResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end
 
 @implementation DGCollectionReleasesRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary*) parameters {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                       @"sort"       : kDGSortKeyAsString(self.sort),
                                                                                       @"sort_order" : kDGSortOrderAsString(self.sortOrder)
-                                                                                      }
-                                       ];
+                                                                                      }];
     
     [parameters addEntriesFromDictionary:[self.pagination parameters]];
-    
     return parameters;
 }
 
@@ -113,8 +103,7 @@
 
 @implementation DGCollectionReleasesResponse (Mapping)
 
-+ (RKObjectMapping*) mapping
-{
++ (RKObjectMapping*) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionReleasesResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
@@ -124,8 +113,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionReleasesResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

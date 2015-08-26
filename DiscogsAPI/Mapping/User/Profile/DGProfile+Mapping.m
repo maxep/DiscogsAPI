@@ -69,9 +69,6 @@
     // Q&D workaround :
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
     
-    if( self.userName ) {
-        [parameters setObject:self.userName forKey:@"username"];
-    }
     if( self.name ) {
         [parameters setObject:self.name forKey:@"name"];
     }

@@ -27,14 +27,14 @@
 + (RKMapping *) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGReleaseInstance class]];
     [mapping addAttributeMappingsFromDictionary:@{
-                                                  @"instance_id"    : @"ID",
-                                                  @"rating"         : @"rating",
-                                                  @"basic_information.thumb"          : @"thumb",
-                                                  @"basic_information.title"          : @"title",
-                                                  @"basic_information.year"           : @"year",
-                                                  @"basic_information.id"             : @"releaseID",
-                                                  @"basic_information.artists"        : @"artists",
-                                                  @"basic_information.labels"         : @"labels"
+                                                  @"instance_id"                : @"ID",
+                                                  @"rating"                     : @"rating",
+                                                  @"basic_information.thumb"    : @"thumb",
+                                                  @"basic_information.title"    : @"title",
+                                                  @"basic_information.year"     : @"year",
+                                                  @"basic_information.id"       : @"releaseID",
+                                                  @"basic_information.artists"  : @"artists",
+                                                  @"basic_information.labels"   : @"labels"
                                                   }];
     
     return mapping;
@@ -50,21 +50,38 @@
 
 @end
 
-@implementation DGEditInstanceRequest (Mapping)
+@implementation DGEditFieldsInstanceRequest (Mapping)
 
 + (RKRequestDescriptor*) requestDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping requestMapping];
     
-    [mapping addAttributeMappingsFromDictionary:@{
-                                                  @"value" : @"value"
-                                                  }
-     ];
+    [mapping addAttributeMappingsFromDictionary:@{@"value" : @"value"}];
     
-    return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGEditInstanceRequest class] rootKeyPath:nil method:RKRequestMethodPOST];
+    return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGEditFieldsInstanceRequest class] rootKeyPath:nil method:RKRequestMethodPOST];
 }
 
 - (NSDictionary*) parameters {
     return @{@"value" : self.value};
+}
+
+@end
+
+@implementation DGChangeRatingOfReleaseRequest (Mapping)
+
+- (NSDictionary*) parameters {
+    /* // Probleme with new restkit 0.24.0 : Empty property are added in parameters
+     NSError *error;
+     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:[RKObjectParameterization parametersWithObject:self requestDescriptor:[DGSearchRequest requestDescriptor] error:&error]];
+     */
+    
+    // Q&D workaround :
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    
+    if( self.rating ) {
+        [parameters setObject:self.rating forKey:@"rating"];
+    }
+    
+    return parameters;
 }
 
 @end

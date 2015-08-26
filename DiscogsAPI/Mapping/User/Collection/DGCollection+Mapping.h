@@ -39,13 +39,13 @@
 
 @end
 
-@interface DGPutReleaseInFolderRequest (Mapping)
+@interface DGAddToCollectionFolderRequest (Mapping)
 
 - (NSDictionary*) parameters;
 
 @end
 
-@interface DGPutReleaseInFolderResponse (Mapping)
+@interface DGAddToCollectionFolderResponse (Mapping)
 
 + (RKObjectMapping*) mapping;
 

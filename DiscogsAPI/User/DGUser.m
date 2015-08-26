@@ -74,9 +74,13 @@
 - (void) identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
     DGIdentity* identity = [DGIdentity identity];
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:identity method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:identity
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:nil];
     
-     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGIdentity responseDescriptor] ]];
+     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                      responseDescriptors:@[ [DGIdentity responseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
      {
@@ -88,24 +92,27 @@
          {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
+     } failure:^(RKObjectRequestOperation *operation, NSError *error)
      {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure
-{
+- (void) getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+    
     DGProfile* profile = [DGProfile profile];
     profile.userName = userName;
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:profile method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:profile
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:nil];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGProfile responseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
      {
@@ -117,23 +124,26 @@
          {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
+     } failure:^(RKObjectRequestOperation *operation, NSError *error)
      {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 - (void) editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
 
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:profile method:RKRequestMethodPOST path:nil parameters:profile.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:profile
+                                                        method:RKRequestMethodPOST
+                                                          path:nil
+                                                    parameters:profile.parameters];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGProfile responseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
@@ -150,7 +160,7 @@
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 @end

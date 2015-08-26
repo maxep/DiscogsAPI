@@ -21,11 +21,9 @@
 // THE SOFTWARE.
 
 #import "DiscogsAPI.h"
-#import "DGEndpoint+Configuration.h"
 
 @interface DiscogsAPI ()
 @property (nonatomic, strong) DGAuthentication  *authentication;
-@property (nonatomic, strong) RKObjectManager   *objectManager;
 @property (nonatomic, assign) BOOL isReachable;
 @end
 
@@ -46,8 +44,31 @@
 
 #pragma mark Public Methods
 
+- (instancetype)init {
+    if (self = [super init]) {
+        
+        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+        
+        //Setup Object Manager
+        RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.HTTPClient];
+        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+        
+        //Init reachability
+        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            [self setReachability:status];
+        }];
+        [self setReachability:objectManager.HTTPClient.networkReachabilityStatus];
+        
+        //Share Object Manager
+        [RKObjectManager setSharedManager:objectManager];
+        
+        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
+    }
+    return self;
+}
+
 - (void) cancelAllOperations {
-    [self.objectManager.operationQueue cancelAllOperations];
+    [RKObjectManager.sharedManager.operationQueue cancelAllOperations];
 }
 
 - (void) isAuthenticated:(void (^)(BOOL success))success {
@@ -55,7 +76,6 @@
     [self identifyUserWithSuccess:^{
         success(YES);
     } failure:^(NSError *error) {
-        
         success(    error.code == NSURLErrorNotConnectedToInternet/* &&
                     self.authentication.oAuth1Client.accessToken*/);
     }];
@@ -69,40 +89,10 @@
 
 - (void) startOperation:(RKObjectRequestOperation*) requestOperation {
     //   [requestOperation start];
-    [self.objectManager enqueueObjectRequestOperation:requestOperation];
+    [RKObjectManager.sharedManager enqueueObjectRequestOperation:requestOperation];
 }
 
 #pragma mark Properties
-
-- (RKObjectManager *)objectManager {
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    
-    if (!objectManager) {
-        
-        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-        
-        //Setup Object Manager
-        objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.HTTPClient];
-        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
-        [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
-        
-        //Init reachability
-        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            [self setReachability:status];
-        }];
-        [self setReachability:objectManager.HTTPClient.networkReachabilityStatus];
-        
-        //Share Object Manager
-        [RKObjectManager setSharedManager:objectManager];
-        
-        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
-    }
-    return objectManager;
-}
-
-- (void)setObjectManager:(RKObjectManager *)objectManager {
-    [RKObjectManager setSharedManager:objectManager];
-}
 
 - (DGAuthentication *)authentication {
     if (!_authentication) {
@@ -116,7 +106,6 @@
     if (!_database) {
         _database           = [DGDatabase database];
         _database.delegate  = self;
-        [_database configureManager:self.objectManager];
     }
     return _database;
 }
@@ -125,7 +114,6 @@
     if (!_user) {
         _user           = [DGUser user];
         _user.delegate  = self;
-        [_user configureManager:self.objectManager];
     }
     return _user;
 }
@@ -141,7 +129,7 @@
 #pragma <DGAuthenticationDelegate>
 
 - (void)authentication:(DGAuthentication *)authentication didAuthorizeClient:(AFHTTPClient *)client {
-    self.objectManager.HTTPClient = client;
+    RKObjectManager.sharedManager.HTTPClient = client;
 }
 
 #pragma mark <DGEndpointDelegate>

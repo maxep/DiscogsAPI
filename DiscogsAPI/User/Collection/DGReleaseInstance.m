@@ -24,8 +24,7 @@
 
 @implementation DGReleaseInstance
 
-+ (DGReleaseInstance*) instance
-{
++ (DGReleaseInstance*) instance {
     return [[DGReleaseInstance alloc] init];
 }
 
@@ -33,18 +32,31 @@
 
 @implementation DGReleaseInstanceRequest
 
-+ (DGReleaseInstanceRequest*) request
-{
++ (DGReleaseInstanceRequest*) request {
     return [[DGReleaseInstanceRequest alloc] init];
 }
 
 @end
 
-@implementation DGEditInstanceRequest
+@implementation DGEditFieldsInstanceRequest
 
-+ (DGEditInstanceRequest*) request
-{
-    return [[DGEditInstanceRequest alloc] init];
++ (DGEditFieldsInstanceRequest*) request {
+    return [[DGEditFieldsInstanceRequest alloc] init];
+}
+
+- (id) init {
+    if (self = [super init]) {
+        self.value = @"";
+    }
+    return self;
+}
+
+@end
+
+@implementation DGChangeRatingOfReleaseRequest
+
++ (DGChangeRatingOfReleaseRequest*) request {
+    return [[DGChangeRatingOfReleaseRequest alloc] init];
 }
 
 @end

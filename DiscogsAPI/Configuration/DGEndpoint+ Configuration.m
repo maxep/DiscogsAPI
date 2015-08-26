@@ -20,12 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <objc/runtime.h>
 #import "DGEndpoint+Configuration.h"
 
 @implementation DGEndpoint (Configuration)
 
-- (void) configureManager:(RKObjectManager*)objectManager
-{
+- (void) configureManager:(RKObjectManager*)objectManager {
+    [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
+}
+
+#pragma mark Properties
+
+- (RKObjectManager *)manager {
+    
+    RKObjectManager * manager = objc_getAssociatedObject(self, @selector(manager));
+    if (!manager) {
+        manager = RKObjectManager.sharedManager;
+        [self configureManager:manager];
+        objc_setAssociatedObject(self, @selector(manager), manager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return manager;
 }
 
 @end

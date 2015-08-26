@@ -25,21 +25,18 @@
 
 @implementation DGResource
 
-+ (DGResource*) resource
-{
++ (DGResource*) resource {
     return [[DGResource alloc] init];
 }
 
-- (void) getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure
-{
+- (void) getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability(); DGCheckURL(imageURL,);
     
     RKObjectRequestOperation* operation = (RKObjectRequestOperation*)[self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:operation];
+    [self.manager enqueueObjectRequestOperation:operation];
 }
 
-- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure
-{
+- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
     DGCheckURL(url, nil);
     
     NSString *path = url;
@@ -49,7 +46,7 @@
         path = [NSString stringWithFormat:@"%@%@", self.coxyURL, discogsURL.path];
     }
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];
+    NSURLRequest *requestURL = [self.manager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];
     
     AFImageRequestOperation* operation = [AFImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         if (success) {

@@ -50,15 +50,14 @@
 
 @end
 
-@implementation DGPutReleaseInFolderRequest
+@implementation DGAddToCollectionFolderRequest
 
-+ (DGPutReleaseInFolderRequest*) request {
-    return [[DGPutReleaseInFolderRequest alloc] init];
++ (DGAddToCollectionFolderRequest*) request {
+    return [[DGAddToCollectionFolderRequest alloc] init];
 }
 
 - (id) init {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         self.folderID = @1;
     }
     return self;
@@ -66,10 +65,10 @@
 
 @end
 
-@implementation DGPutReleaseInFolderResponse
+@implementation DGAddToCollectionFolderResponse
 
-+ (DGPutReleaseInFolderResponse*) response {
-    return [[DGPutReleaseInFolderResponse alloc] init];
++ (DGAddToCollectionFolderResponse*) response {
+    return [[DGAddToCollectionFolderResponse alloc] init];
 }
 
 @end
@@ -81,8 +80,7 @@
 }
 
 - (id) init {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         
         self.pagination = [DGPagination pagination];
         self.folderID   = @0;
@@ -139,14 +137,14 @@
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionReleasesRequest class] pathPattern:@"users/:userName/collection/folders/:folderID/releases" method:RKRequestMethodGET]];
     
     //Post release in Collection folder
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGPutReleaseInFolderRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID" method:RKRequestMethodPOST]];
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGAddToCollectionFolderRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID" method:RKRequestMethodPOST]];
     
     //Collection's release instance request
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGReleaseInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodAny]];
     
     //Edit instance field request
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGEditInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID/fields/:fieldID" method:RKRequestMethodPOST]];
-    [objectManager addRequestDescriptor:[DGEditInstanceRequest requestDescriptor]];
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGEditFieldsInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID/fields/:fieldID" method:RKRequestMethodPOST]];
+    [objectManager addRequestDescriptor:[DGEditFieldsInstanceRequest requestDescriptor]];
 }
 
 - (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure {
@@ -154,9 +152,13 @@
     DGCollectionFolders* collection = [DGCollectionFolders collection];
     collection.userName = userName;
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:collection method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:collection
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:nil];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionFolders responseDescriptor] ]];
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGCollectionFolders responseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
@@ -173,14 +175,18 @@
         failure(error);
     }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 - (void) getCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure {
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:nil];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionFolder responseDescriptor] ]];
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGCollectionFolder responseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
@@ -197,14 +203,18 @@
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 - (void) getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* folder))success failure:(void (^)(NSError* error))failure {
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:request.parameters];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGCollectionReleasesResponse responseDescriptor] ]];
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGCollectionReleasesResponse responseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
@@ -221,16 +231,74 @@
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) editInstanceField:(DGEditInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void) addToCollectionFolder:(DGAddToCollectionFolderRequest*)request success:(void (^)(DGAddToCollectionFolderResponse* response))success failure:(void (^)(NSError* error))failure {
     
-    [RKObjectManager.sharedManager postObject:request path:nil parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        success();
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodPOST
+                                                          path:nil
+                                                    parameters:request.parameters];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGAddToCollectionFolderResponse responseDescriptor] ]];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+        NSArray* results = mappingResult.array;
+        if ([[results firstObject] isKindOfClass:[DGAddToCollectionFolderResponse class]]) {
+            success([results firstObject]);
+        }
+        else {
+            failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
+        }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
         failure(error);
     }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+}
+
+- (void) changeRatingOfRelease:(DGChangeRatingOfReleaseRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
+    
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodPOST
+                                                          path:nil
+                                                    parameters:request.parameters];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:self.manager.responseDescriptors];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        success();
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
+        failure(error);
+    }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+}
+
+- (void) editFieldsInstance:(DGEditFieldsInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
+    
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodPOST
+                                                          path:nil
+                                                    parameters:request.parameters];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:self.manager.responseDescriptors];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        success();
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
+        failure(error);
+    }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 @end

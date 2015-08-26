@@ -28,20 +28,17 @@
 
 @interface DGCollectionFolderRequest : NSObject
 
-@property (nonatomic, strong) NSNumber * folderID;
-@property (nonatomic, strong) NSString * userName;
+@property (nonatomic, strong) NSNumber *folderID;
+@property (nonatomic, strong) NSString *userName;
 
 + (DGCollectionFolderRequest*) request;
 
 @end
 
-@interface DGCollectionFolder : NSObject
+@interface DGCollectionFolder : DGObject
 
-@property (nonatomic, strong) NSNumber * folderID;
-@property (nonatomic, strong) NSNumber * count;
-@property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSString * resourceURL;
-@property (nonatomic, strong) NSArray  * releases;
+@property (nonatomic, strong) NSNumber *count;
+@property (nonatomic, strong) NSString *name;
 
 + (DGCollectionFolder*) folder;
 
@@ -49,39 +46,36 @@
 
 @interface DGCollectionFolders : NSObject
 
-@property (nonatomic, strong) NSString * userName;
-@property (nonatomic, strong) NSArray  * folders;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSArray  *folders;
 
 + (DGCollectionFolders*) collection;
 
 @end
 
-@interface DGPutReleaseInFolderRequest : NSObject
+@interface DGAddToCollectionFolderRequest : NSObject
 
-@property (nonatomic, strong) NSString* userName;
-@property (nonatomic, strong) NSNumber* releaseID;
-@property (nonatomic, strong) NSNumber* folderID;
+@property (nonatomic, strong) NSString  *userName;
+@property (nonatomic, strong) NSNumber  *releaseID;
+@property (nonatomic, strong) NSNumber  *folderID;
 
-+ (DGPutReleaseInFolderRequest*) request;
++ (DGAddToCollectionFolderRequest*) request;
 
 @end
 
-@interface DGPutReleaseInFolderResponse : NSObject
+@interface DGAddToCollectionFolderResponse : DGObject
 
-@property (nonatomic, strong) NSNumber* instanceID;
-@property (nonatomic, strong) NSString* resourceURL;
-
-+ (DGPutReleaseInFolderResponse*) response;
++ (DGAddToCollectionFolderResponse*) response;
 
 @end
 
 @interface DGCollectionReleasesRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  * pagination;
-@property (nonatomic, strong) NSString * userName;
-@property (nonatomic, strong) NSNumber * folderID;
-@property (nonatomic, readwrite) DGSortKey sort;
-@property (nonatomic, readwrite) DGSortOrder sortOrder;
+@property (nonatomic, strong) DGPagination      *pagination;
+@property (nonatomic, strong) NSString          *userName;
+@property (nonatomic, strong) NSNumber          *folderID;
+@property (nonatomic, readwrite) DGSortKey      sort;
+@property (nonatomic, readwrite) DGSortOrder    sortOrder;
 
 + (DGCollectionReleasesRequest*) request;
 
@@ -89,15 +83,14 @@
 
 @interface DGCollectionReleasesResponse : NSObject
 
-@property (nonatomic, strong) DGPagination * pagination;
-@property (nonatomic, strong) NSArray * releases;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSArray       *releases;
 
 + (DGCollectionReleasesResponse*) response;
 
 - (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 @end
-
 
 /**
  The DGCollection class to manage operation with User's collection.
@@ -137,5 +130,32 @@
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void) getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* folder))success failure:(void (^)(NSError* error))failure;
+
+/**
+ Add release to user's collection folder.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the response.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) addToCollectionFolder:(DGAddToCollectionFolderRequest*)request success:(void (^)(DGAddToCollectionFolderResponse* response))success failure:(void (^)(NSError* error))failure;
+
+/**
+ Change release's rating.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) changeRatingOfRelease:(DGChangeRatingOfReleaseRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+
+/**
+ Change the value of a notes field on a particular instance.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) editFieldsInstance:(DGEditFieldsInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 @end

@@ -34,9 +34,15 @@
 
 @end
 
-@interface DGEditInstanceRequest (Mapping)
+@interface DGEditFieldsInstanceRequest (Mapping)
 
 + (RKRequestDescriptor*) requestDescriptor;
+
+- (NSDictionary*) parameters;
+
+@end
+
+@interface DGChangeRatingOfReleaseRequest (Mapping)
 
 - (NSDictionary*) parameters;
 

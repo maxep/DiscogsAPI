@@ -34,13 +34,13 @@
 
 @implementation DGDatabase
 
-+ (DGDatabase*) database
-{
++ (DGDatabase*) database {
     return [[DGDatabase alloc] init];
 }
 
-- (void) configureManager:(RKObjectManager*)objectManager
-{
+- (void) configureManager:(RKObjectManager*)objectManager {
+    [super configureManager:objectManager];
+    
     //search
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGSearchRequest class] pathPattern:@"database/search" method:RKRequestMethodGET]];
     
@@ -60,247 +60,208 @@
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGLabelReleasesRequest class] pathPattern:@"labels/:labelID/releases" method:RKRequestMethodGET]];
 }
 
-- (void) searchFor:(DGSearchRequest*)request success:(void (^)(DGSearchResponse* response))success failure:(void (^)(NSError* error))failure
-{
+- (void) searchFor:(DGSearchRequest*)request success:(void (^)(DGSearchResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGSearchResponse responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-    {        
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSArray* results = mappingResult.array;
         if ([[results firstObject] isKindOfClass:[DGSearchResponse class]]) {
             success([results firstObject]);
         }
-        else
-        {
+        else {
             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
         }
-    }
-    failure:^(RKObjectRequestOperation *operation, NSError *error)
-    {
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         failure(error);
     }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getArtist:(NSNumber*)artistID success:(void (^)(DGArtist* artist))success failure:(void (^)(NSError* error))failure
-{
+- (void) getArtist:(NSNumber*)artistID success:(void (^)(DGArtist* artist))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGArtist* artist    = [DGArtist artist];
     artist.ID           = artistID;
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:artist method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:artist method:RKRequestMethodGET path:nil parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGArtist responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGArtist class]]) {
              success([results firstObject]);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-      failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getArtistReleases:(DGArtistReleaseRequest*)request success:(void (^)(DGArtistReleaseResponse* response))success failure:(void (^)(NSError* error))failure
-{
+- (void) getArtistReleases:(DGArtistReleaseRequest*)request success:(void (^)(DGArtistReleaseResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGArtistReleaseResponse responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGArtistReleaseResponse class]]) {
              success([results firstObject]);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-   failure:^(RKObjectRequestOperation *operation, NSError *error)
-    {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getRelease:(NSNumber*)releaseID success:(void (^)(DGRelease* release))success failure:(void (^)(NSError* error))failure
-{
+- (void) getRelease:(NSNumber*)releaseID success:(void (^)(DGRelease* release))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGRelease* release  = [DGRelease release];
     release.ID          = releaseID;
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:release method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:release method:RKRequestMethodGET path:nil parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGRelease responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGRelease class]]) {
              DGRelease* release = [results firstObject];
              
              success(release);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
      }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getMaster:(NSNumber*)masterID success:(void (^)(DGMaster* master))success failure:(void (^)(NSError* error))failure;
-{
+- (void) getMaster:(NSNumber*)masterID success:(void (^)(DGMaster* master))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGMaster* master    = [DGMaster master];
     master.ID           = masterID;
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:master method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:master method:RKRequestMethodGET path:nil parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGMaster responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGMaster class]]) {
              DGMaster* master = [results firstObject];
              
              success(master);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure
-{
+- (void) getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGMasterVersionResponse responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGMasterVersionResponse class]]) {
              success([results firstObject]);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getLabel:(NSNumber*)labelID success:(void (^)(DGLabel* label))success failure:(void (^)(NSError* error))failure
-{
+- (void) getLabel:(NSNumber*)labelID success:(void (^)(DGLabel* label))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
-    DGLabel* label    = [DGLabel label];
-    label.ID     = labelID;
+    DGLabel* label  = [DGLabel label];
+    label.ID        = labelID;
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:label method:RKRequestMethodGET path:nil parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:label method:RKRequestMethodGET path:nil parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGLabel responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGLabel class]]) {
              DGLabel* label = [results firstObject];
              
              success(label);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getLabelReleases:(DGLabelReleasesRequest*)request success:(void (^)(DGLabelReleasesResponse* response))success failure:(void (^)(NSError* error))failure
-{
+- (void) getLabelReleases:(DGLabelReleasesRequest*)request success:(void (^)(DGLabelReleasesResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [RKObjectManager.sharedManager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGLabelReleasesResponse responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGLabelReleasesResponse class]]) {
              success([results firstObject]);
          }
-         else
-         {
+         else {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
          failure(error);
      }];
     
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 @end

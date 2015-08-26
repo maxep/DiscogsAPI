@@ -47,7 +47,7 @@
 
 @end
 
-@interface DGEditInstanceRequest : NSObject
+@interface DGEditFieldsInstanceRequest : NSObject
 
 @property (nonatomic, strong) NSString* userName;
 @property (nonatomic, strong) NSNumber* folderID;
@@ -56,6 +56,18 @@
 @property (nonatomic, strong) NSNumber* fieldID;
 @property (nonatomic, strong) NSString* value;
 
-+ (DGEditInstanceRequest*) request;
++ (DGEditFieldsInstanceRequest*) request;
+
+@end
+
+@interface DGChangeRatingOfReleaseRequest : NSObject
+
+@property (nonatomic, strong) NSString  *userName;
+@property (nonatomic, strong) NSNumber  *folderID;
+@property (nonatomic, strong) NSNumber  *releaseID;
+@property (nonatomic, strong) NSNumber  *instanceID;
+@property (nonatomic, strong) NSNumber  *rating;
+
++ (DGChangeRatingOfReleaseRequest*) request;
 
 @end
