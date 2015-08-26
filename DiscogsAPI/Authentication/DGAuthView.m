@@ -28,26 +28,20 @@ extern NSString * const kAFApplicationLaunchedWithURLNotification;
 
 @implementation DGAuthView
 
-+ (DGAuthView*) viewWithRequest:(NSURLRequest*) request
-{
++ (DGAuthView*) viewWithRequest:(NSURLRequest*) request {
     return [[DGAuthView alloc] initWithRequest:request];
 }
 
-- (id)initWithRequest:(NSURLRequest*) request
-{
+- (id)initWithRequest:(NSURLRequest*) request {
     if (self = [super init]) {
-        
         self.delegate = self;
-
         self.opaque = NO;
-        
         [self loadRequest:request];
     }
     return self;
 }
 
-- (void)loadRequest:(NSURLRequest *)request
-{
+- (void)loadRequest:(NSURLRequest *)request {
     // Enable cookies
     [NSHTTPCookieStorage sharedHTTPCookieStorage].cookieAcceptPolicy = NSHTTPCookieAcceptPolicyAlways;
     NSMutableURLRequest * mutableRequest = [request mutableCopy];
@@ -56,13 +50,11 @@ extern NSString * const kAFApplicationLaunchedWithURLNotification;
     [super loadRequest:mutableRequest];
 }
 
-- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString* callback = [[request URL] absoluteString];
     NSLog(@"Request string: %@", callback);
     
-    if( [callback hasPrefix:kDGCallback])
-    {
+    if( [callback hasPrefix:kDGCallback]) {
         NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:@{kAFApplicationLaunchOptionsURLKey: [request URL]}];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
         return NO;

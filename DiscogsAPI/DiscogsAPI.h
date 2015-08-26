@@ -53,6 +53,11 @@
 @property (nonatomic, readonly) DGResource * resource;
 
 /**
+ Media Type.
+ */
+@property (nonatomic,readwrite) DGMediaType mediaType;
+
+/**
  Network reachability.
  */
 @property (nonatomic, readonly, getter=isReachable) BOOL isReachable;

@@ -87,11 +87,6 @@
     self.isReachable = status != AFNetworkReachabilityStatusNotReachable;
 }
 
-- (void) startOperation:(RKObjectRequestOperation*) requestOperation {
-    //   [requestOperation start];
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:requestOperation];
-}
-
 #pragma mark Properties
 
 - (DGAuthentication *)authentication {
@@ -124,6 +119,14 @@
         _resource.delegate  = self;
     }
     return _resource;
+}
+
+- (DGMediaType)mediaType {
+    return self.authentication.HTTPClient.mediaType;
+}
+
+- (void)setMediaType:(DGMediaType)mediaType {
+    self.authentication.HTTPClient.mediaType = mediaType;
 }
 
 #pragma mark <DGEndpointDelegate>

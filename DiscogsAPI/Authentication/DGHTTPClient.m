@@ -22,8 +22,11 @@
 
 #import "DGHTTPClient.h"
 
+#define kDGMediaTypeAsString(enum) [@[@"discogs", @"html", @"plaintext"] objectAtIndex:enum]
+
 @interface DGHTTPClient ()
-@property (nonatomic,strong) NSString *authorizationHeader;
+@property (nonatomic,strong) NSString   *authorizationHeader;
+@property (nonatomic,readonly) NSString *acceptHeader;
 @end
 
 @implementation DGHTTPClient
@@ -42,6 +45,12 @@
     return self;
 }
 
+#pragma mark Properties
+
+- (NSString *)acceptHeader {
+    return [NSString stringWithFormat:@"application/vnd.discogs.v2.%@+json", kDGMediaTypeAsString(self.mediaType)];
+}
+
 #pragma mark - AFHTTPClient
 
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
@@ -51,13 +60,13 @@
     NSMutableURLRequest *request = [super requestWithMethod:method
                                                        path:path
                                                  parameters:parameters];
+    
+    [request setValue:self.acceptHeader forHTTPHeaderField:@"Accept"];
     if (self.accessToken) {
         return request;
     }
     
     [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
-    [request setHTTPShouldHandleCookies:NO];
-    
     return request;
 }
 
@@ -70,13 +79,13 @@
                                                                     path:path
                                                               parameters:parameters
                                                constructingBodyWithBlock:block];
+    
+    [request setValue:self.acceptHeader forHTTPHeaderField:@"Accept"];
     if (self.accessToken) {
         return request;
     }
     
     [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
-    [request setHTTPShouldHandleCookies:NO];
-    
     return request;
 }
 
