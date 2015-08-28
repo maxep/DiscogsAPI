@@ -174,7 +174,7 @@
     NSURLRequest *requestURL = [self.manager requestWithObject:request
                                                         method:RKRequestMethodDELETE
                                                           path:nil
-                                                    parameters:request.parameters];
+                                                    parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
                                                                                      responseDescriptors:self.manager.responseDescriptors];
@@ -269,7 +269,7 @@
     NSURLRequest *requestURL = [self.manager requestWithObject:request
                                                         method:RKRequestMethodDELETE
                                                           path:nil
-                                                    parameters:request.parameters];
+                                                    parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
                                                                                      responseDescriptors:self.manager.responseDescriptors];
