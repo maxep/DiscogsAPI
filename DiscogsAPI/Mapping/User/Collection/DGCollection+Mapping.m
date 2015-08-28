@@ -23,6 +23,31 @@
 #import "DGCollection+Mapping.h"
 #import "DGReleaseInstance+Mapping.h"
 
+@implementation DGCollectionFolderRequest (Mapping)
+
+- (NSDictionary*) parameters {
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    if( self.name ) {
+        [parameters setObject:self.name forKey:@"name"];
+    }
+    return parameters;
+}
+
+@end
+
+@implementation DGCreateCollectionFolderRequest (Mapping)
+
+- (NSDictionary*) parameters {
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    if( self.folderName ) {
+        [parameters setObject:self.folderName forKey:@"name"];
+    }
+    return parameters;
+}
+
+@end
+
+
 @implementation DGCollectionFolder (Mapping)
 
 + (RKObjectMapping*) mapping {
@@ -36,8 +61,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionFolder mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
@@ -45,8 +69,7 @@
 
 @implementation DGCollectionFolders (Mapping)
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionFolders class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"folders" toKeyPath:@"folders" withMapping:[DGCollectionFolder mapping]]];
@@ -55,7 +78,7 @@
 }
 
 - (NSDictionary*) parameters {
-    return @{ @"username" : self.userName };
+    return nil; // @{ @"username" : self.userName };
 }
 
 @end

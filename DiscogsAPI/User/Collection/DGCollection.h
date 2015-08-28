@@ -25,12 +25,25 @@
 #import "DGPagination.h"
 #import "DGReleaseInstance.h"
 
+/**
+ Manage folder request.
+ */
 @interface DGCollectionFolderRequest : NSObject
 
-@property (nonatomic, strong) NSNumber *folderID;
 @property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSNumber *folderID;
+@property (nonatomic, strong) NSString *name;
 
 + (DGCollectionFolderRequest*) request;
+
+@end
+
+@interface DGCreateCollectionFolderRequest : NSObject
+
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *folderName;
+
++ (DGCreateCollectionFolderRequest*) request;
 
 @end
 
@@ -122,16 +135,43 @@
 - (void) getCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
 
 /**
+ Edits a collection folder.
+ 
+ @param request The collection folder request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folder.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) editCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
+
+/**
+ Deletes a collection folder.
+ 
+ @param request The request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) deleteCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+
+/**
+ Creates a collection folder.
+ 
+ @param request The create collection folder request.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the created collection folder.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) createCollectionFolder:(DGCreateCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
+
+/**
  Gets the collection releases.
  
  @param request The paginated collection releases request.
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated collection releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* folder))success failure:(void (^)(NSError* error))failure;
+- (void) getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* response))success failure:(void (^)(NSError* error))failure;
 
 /**
- Add release to user's collection folder.
+ Adds release to user's collection folder.
  
  @param request The request.
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the response.
@@ -140,7 +180,7 @@
 - (void) addToCollectionFolder:(DGAddToCollectionFolderRequest*)request success:(void (^)(DGAddToCollectionFolderResponse* response))success failure:(void (^)(NSError* error))failure;
 
 /**
- Change release's rating.
+ Changes release's rating.
  
  @param request The request.
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
@@ -149,16 +189,16 @@
 - (void) changeRatingOfRelease:(DGChangeRatingOfReleaseRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
- Delete release from user's collection folder.
+ Deletes release from user's collection folder.
  
  @param request The request.
- @param success A block object to be executed when the get operation finishes successfully. This block has no return value no argument: the wanted release.
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void) deleteInstanceFromFolder:(DGReleaseInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
- Change the value of a notes field on a particular instance.
+ Changes the value of a notes field on a particular instance.
  
  @param request The request.
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.

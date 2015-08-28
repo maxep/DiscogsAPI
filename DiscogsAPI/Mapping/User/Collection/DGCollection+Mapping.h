@@ -23,6 +23,18 @@
 #import "DGCollection.h"
 #import "DGPagination+Mapping.h"
 
+@interface DGCollectionFolderRequest (Mapping)
+
+- (NSDictionary*) parameters;
+
+@end
+
+@interface DGCreateCollectionFolderRequest (Mapping)
+
+- (NSDictionary*) parameters;
+
+@end
+
 @interface DGCollectionFolder (Mapping)
 
 + (RKObjectMapping*) mapping;
