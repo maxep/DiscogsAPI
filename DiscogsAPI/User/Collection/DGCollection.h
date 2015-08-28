@@ -22,87 +22,9 @@
 
 #import <Foundation/Foundation.h>
 #import "DGEndpoint.h"
-#import "DGPagination.h"
 #import "DGReleaseInstance.h"
-
-/**
- Manage folder request.
- */
-@interface DGCollectionFolderRequest : NSObject
-
-@property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSNumber *folderID;
-@property (nonatomic, strong) NSString *name;
-
-+ (DGCollectionFolderRequest*) request;
-
-@end
-
-@interface DGCreateCollectionFolderRequest : NSObject
-
-@property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSString *folderName;
-
-+ (DGCreateCollectionFolderRequest*) request;
-
-@end
-
-@interface DGCollectionFolder : DGObject
-
-@property (nonatomic, strong) NSNumber *count;
-@property (nonatomic, strong) NSString *name;
-
-+ (DGCollectionFolder*) folder;
-
-@end
-
-@interface DGCollectionFolders : NSObject
-
-@property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSArray  *folders;
-
-+ (DGCollectionFolders*) collection;
-
-@end
-
-@interface DGAddToCollectionFolderRequest : NSObject
-
-@property (nonatomic, strong) NSString  *userName;
-@property (nonatomic, strong) NSNumber  *releaseID;
-@property (nonatomic, strong) NSNumber  *folderID;
-
-+ (DGAddToCollectionFolderRequest*) request;
-
-@end
-
-@interface DGAddToCollectionFolderResponse : DGObject
-
-+ (DGAddToCollectionFolderResponse*) response;
-
-@end
-
-@interface DGCollectionReleasesRequest : NSObject
-
-@property (nonatomic, strong) DGPagination      *pagination;
-@property (nonatomic, strong) NSString          *userName;
-@property (nonatomic, strong) NSNumber          *folderID;
-@property (nonatomic, readwrite) DGSortKey      sort;
-@property (nonatomic, readwrite) DGSortOrder    sortOrder;
-
-+ (DGCollectionReleasesRequest*) request;
-
-@end
-
-@interface DGCollectionReleasesResponse : NSObject
-
-@property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong) NSArray       *releases;
-
-+ (DGCollectionReleasesResponse*) response;
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
-
-@end
+#import "DGCollectionFolder.h"
+#import "DGCollectionField.h"
 
 /**
  The DGCollection class to manage operation with User's collection.
@@ -123,7 +45,7 @@
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folders.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure;
+- (void) getCollectionFolders:(NSString*)userName success:(void (^)(NSArray* folders))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a collection folder.
@@ -196,6 +118,15 @@
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void) deleteInstanceFromFolder:(DGReleaseInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+
+/**
+ Gets the user's collection fields.
+ 
+ @param userName The user's name.
+ @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection fields.
+ @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void) getCollectionFields:(NSString*)userName success:(void (^)(NSArray* fields))success failure:(void (^)(NSError* error))failure;
 
 /**
  Changes the value of a notes field on a particular instance.

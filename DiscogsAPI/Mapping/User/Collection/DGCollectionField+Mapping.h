@@ -1,4 +1,4 @@
-// DGCollection+Mapping.h
+// DGCollectionField+Mapping.h
 //
 // Copyright (c) 2015 Maxime Epain
 //
@@ -20,58 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGCollection.h"
-#import "DGPagination+Mapping.h"
+#import "DGCollectionField.h"
 
-@interface DGCollectionFolderRequest (Mapping)
-
-- (NSDictionary*) parameters;
-
-@end
-
-@interface DGCreateCollectionFolderRequest (Mapping)
-
-- (NSDictionary*) parameters;
-
-@end
-
-@interface DGCollectionFolder (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
-
-@end
-
-@interface DGCollectionFolders (Mapping)
-
-+ (RKResponseDescriptor*) responseDescriptor;
-
-- (NSDictionary*) parameters;
-
-@end
-
-@interface DGAddToCollectionFolderRequest (Mapping)
-
-- (NSDictionary*) parameters;
-
-@end
-
-@interface DGAddToCollectionFolderResponse (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
-
-@end
-
-@interface DGCollectionReleasesRequest (Mapping)
-
-- (NSDictionary*) parameters;
-
-@end
-
-@interface DGCollectionReleasesResponse (Mapping)
+@interface DGCollectionField (Mapping)
 
 + (RKObjectMapping*) mapping;
 

@@ -21,109 +21,10 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint+Configuration.h"
-#import "DGCollection+Mapping.h"
+#import "DGCollection.h"
 #import "DGReleaseInstance+Mapping.h"
-
-@implementation DGCollectionFolderRequest
-
-+ (DGCollectionFolderRequest*) request {
-    return [[DGCollectionFolderRequest alloc] init];
-}
-
-@end
-
-@implementation DGCreateCollectionFolderRequest
-
-+ (DGCreateCollectionFolderRequest*) request {
-    return [[DGCreateCollectionFolderRequest alloc] init];
-}
-
-@end
-
-@implementation DGCollectionFolder
-
-+ (DGCollectionFolder*) folder {
-    return [[DGCollectionFolder alloc] init];
-}
-
-@end
-
-@implementation DGCollectionFolders
-
-+ (DGCollectionFolders*) collection {
-    return [[DGCollectionFolders alloc] init];
-}
-
-@end
-
-@implementation DGAddToCollectionFolderRequest
-
-+ (DGAddToCollectionFolderRequest*) request {
-    return [[DGAddToCollectionFolderRequest alloc] init];
-}
-
-- (id) init {
-    if (self = [super init]) {
-        self.folderID = @1;
-    }
-    return self;
-}
-
-@end
-
-@implementation DGAddToCollectionFolderResponse
-
-+ (DGAddToCollectionFolderResponse*) response {
-    return [[DGAddToCollectionFolderResponse alloc] init];
-}
-
-@end
-
-@implementation DGCollectionReleasesRequest
-
-+ (DGCollectionReleasesRequest*) request {
-    return [[DGCollectionReleasesRequest alloc] init];
-}
-
-- (id) init {
-    if (self = [super init]) {
-        
-        self.pagination = [DGPagination pagination];
-        self.folderID   = @0;
-        self.sort       = DGSortKeyArtist;
-        self.sortOrder  = DGSortOrderDesc;
-    }
-    return self;
-}
-
-@end
-
-@implementation DGCollectionReleasesResponse
-
-+ (DGCollectionReleasesResponse*) response {
-    return [[DGCollectionReleasesResponse alloc] init];
-}
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
-    
-    [self.pagination loadNextPageWithResponseDesciptor:[DGCollectionReleasesResponse responseDescriptor] success:^(NSArray *objects) {
-        if ([[objects firstObject] isKindOfClass:[DGCollectionReleasesResponse class]]) {
-            DGCollectionReleasesResponse* response = [objects firstObject];
-            
-            self.pagination = response.pagination;
-            NSMutableArray* releases = [self.releases mutableCopy];
-            [releases addObjectsFromArray:response.releases];
-            self.releases = releases;
-            
-            success();
-        }
-    } failure:^(NSError *error) {
-        RKLogError(@"Operation failed with error: %@", error);
-        failure(error);
-    }];
-}
-
-@end
+#import "DGCollectionFolder+Mapping.h"
+#import "DGCollectionField+Mapping.h"
 
 @implementation DGCollection
 
@@ -134,7 +35,7 @@
 - (void) configureManager:(RKObjectManager*)objectManager {
     
     //User collection folders
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFolders class] pathPattern:@"users/:userName/collection/folders" method:RKRequestMethodAny]];
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFoldersRequest class] pathPattern:@"users/:userName/collection/folders" method:RKRequestMethodAny]];
     
     //User collection folder request
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFolderRequest class] pathPattern:@"users/:userName/collection/folders/:folderID" method:RKRequestMethodAny]];
@@ -154,14 +55,17 @@
     //Change release's rating
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGChangeRatingOfReleaseRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID" method:RKRequestMethodPOST]];
     
+    //Get release instance fields
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFieldsRequest class] pathPattern:@"users/:userName/collection/fields" method:RKRequestMethodGET]];
+    
     //Edit instance field request
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGEditFieldsInstanceRequest class] pathPattern:@"/users/:userName/collection/folders/:folderID/releases/:releaseID/instances/:instanceID/fields/:fieldID" method:RKRequestMethodPOST]];
     [objectManager addRequestDescriptor:[DGEditFieldsInstanceRequest requestDescriptor]];
 }
 
-- (void) getCollectionFolders:(NSString*)userName success:(void (^)(DGCollectionFolders* collection))success failure:(void (^)(NSError* error))failure {
+- (void) getCollectionFolders:(NSString*)userName success:(void (^)(NSArray* folders))success failure:(void (^)(NSError* error))failure {
     
-    DGCollectionFolders* collection = [DGCollectionFolders collection];
+    DGCollectionFoldersRequest* collection = [DGCollectionFoldersRequest collection];
     collection.userName = userName;
     
     NSURLRequest *requestURL = [self.manager requestWithObject:collection
@@ -170,17 +74,12 @@
                                                     parameters:nil];
     
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
-                                                                                     responseDescriptors:@[ [DGCollectionFolders responseDescriptor] ]];
+                                                                                     responseDescriptors:@[ [DGCollectionFolder foldersResponseDescriptor] ]];
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
-        NSArray* results = mappingResult.array;
-        if ([[results firstObject] isKindOfClass:[DGCollectionFolders class]]) {
-            success([results firstObject]);
-        }
-        else {
-            failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-        }
+        success(mappingResult.array);
+        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         failure(error);
@@ -377,6 +276,30 @@
     
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         success();
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
+        failure(error);
+    }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+}
+
+- (void) getCollectionFields:(NSString*)userName success:(void (^)(NSArray* fields))success failure:(void (^)(NSError* error))failure {
+    
+    DGCollectionFieldsRequest* request = [DGCollectionFieldsRequest request];
+    request.userName = userName;
+    
+    NSURLRequest *requestURL = [self.manager requestWithObject:request
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:nil];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGCollectionField responseDescriptor] ]];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        success(mappingResult.array);
+        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         failure(error);
