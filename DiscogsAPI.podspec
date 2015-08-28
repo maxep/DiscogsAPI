@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.3"
+  s.version      = "1.4"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
                     Features:
