@@ -1,4 +1,4 @@
-// DiscogsAPI.h
+// DGPrice.h
 //
 // Copyright (c) 2015 Maxime Epain
 //
@@ -22,64 +22,34 @@
 
 #import <Foundation/Foundation.h>
 
-#import "DGAuthentication.h"
-#import "DGDatabase.h"
-#import "DGUser.h"
-#import "DGResource.h"
-#import "DGMarketplace.h"
+@interface DGPrice : NSObject
 
-/**
- Discogs API client class to manage client initialization and api endpoints.
- */
-@interface DiscogsAPI : NSObject <DGEndpointDelegate>
+@property (nonatomic,strong) NSString *currency;
+@property (nonatomic,strong) NSNumber *value;
 
-/**
- Autentication endpoint.
- */
-@property (nonatomic, readonly) DGAuthentication * authentication;
++ (DGPrice *) price;
 
-/**
- Database endpoint.
- */
-@property (nonatomic, readonly) DGDatabase * database;
+@end
 
-/**
- User endpoint.
- */
-@property (nonatomic, readonly) DGUser * user;
+@interface DGPriceSuggectionsRequest : NSObject
 
-/**
- Marketplace endpoint.
- */
-@property (nonatomic, readonly) DGMarketplace * marketplace;
+@property (nonatomic,strong) NSNumber *releaseID;
 
-/**
- Resource endpoint.
- */
-@property (nonatomic, readonly) DGResource * resource;
++ (DGPriceSuggectionsRequest *) request;
 
-/**
- Media Type.
- */
-@property (nonatomic,readwrite) DGMediaType mediaType;
+@end
 
-/**
- Network reachability.
- */
-@property (nonatomic, readonly, getter=isReachable) BOOL isReachable;
+@interface DGPriceSuggectionsResponse : NSObject
 
-/**
- The shared discogs api client.
- 
- @return The shared discogs api client.
- */
-+ (DiscogsAPI *) client;
+@property (nonatomic,strong) DGPrice *mint;
+@property (nonatomic,strong) DGPrice *nearMint;
+@property (nonatomic,strong) DGPrice *veryGoodPlus;
+@property (nonatomic,strong) DGPrice *veryGood;
+@property (nonatomic,strong) DGPrice *goodPlus;
+@property (nonatomic,strong) DGPrice *good;
+@property (nonatomic,strong) DGPrice *fair;
+@property (nonatomic,strong) DGPrice *poor;
 
-/**
- Cancell all queued and current operations with Discogs.
- */
-- (void) cancelAllOperations;
-
-- (void) isAuthenticated:(void (^)(BOOL success))success;
++ (DGPriceSuggectionsResponse *) response;
 
 @end

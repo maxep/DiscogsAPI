@@ -24,14 +24,12 @@
 
 @implementation DGContributor (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGContributor class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"resource_url"   : @"resourceURL",
                                                   @"username"       : @"userName"
-                                                  }
-     ];
+                                                  }];
     
     return mapping;
 }
@@ -40,14 +38,13 @@
 
 @implementation DGRating (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *) mapping {
+    
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGRating class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"average"   : @"average",
                                                   @"count"     : @"count"
-                                                  }
-     ];
+                                                  }];
     
     return mapping;
 }
@@ -56,17 +53,15 @@
 
 @implementation DGCommunity (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *) mapping {
+    
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCommunity class]];
     [mapping addAttributeMappingsFromDictionary:@{
-
                                                   @"data_quality"   : @"dataQuality",
                                                   @"have"           : @"have",
                                                   @"status"         : @"status",
                                                   @"want"           : @"want"
-                                                  }
-     ];
+                                                  }];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"contributors" toKeyPath:@"contributors" withMapping:[DGContributor mapping]]];
     

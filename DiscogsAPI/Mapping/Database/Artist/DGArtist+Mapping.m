@@ -26,8 +26,8 @@
 
 @implementation DGArtist (Mapping)
 
-+ (RKMapping*) mapping
-{
++ (RKMapping*) mapping {
+    
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGArtist class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"name"           : @"name",
@@ -40,8 +40,7 @@
                                                   @"uri"            : @"uri",
                                                   @"resource_url"   : @"resourceURL",
                                                   @"role"           : @"role"
-                                                  }
-     ];
+                                                  }];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"images" toKeyPath:@"images" withMapping:[DGImage mapping]]];
     
@@ -50,8 +49,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGArtist mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

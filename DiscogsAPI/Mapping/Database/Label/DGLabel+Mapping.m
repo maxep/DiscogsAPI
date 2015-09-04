@@ -25,8 +25,7 @@
 
 @implementation DGLabel (Mapping)
 
-+ (RKMapping*) mapping
-{
++ (RKMapping*) mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGLabel class]];
     
@@ -40,8 +39,7 @@
                                                   @"resource_url"   : @"resourceURL",
                                                   @"id"             : @"ID",
                                                   @"data_quality"   : @"dataQuality"
-                                                  }
-     ];
+                                                  }];
     
     RKObjectMapping *subMapping = [RKObjectMapping mappingForClass:[DGLabel class]];
     
@@ -49,8 +47,7 @@
                                                   @"name"           : @"name",
                                                   @"resource_url"   : @"resourceURL",
                                                   @"id"             : @"ID",
-                                                  }
-     ];
+                                                  }];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"images" toKeyPath:@"images" withMapping:[DGImage mapping]]];
     
@@ -59,8 +56,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGLabel mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

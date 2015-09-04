@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.osx.frameworks 	= 'CoreServices', 'SystemConfiguration'
   
   s.source_files = 'DiscogsAPI/*.{h,m}'
-  s.default_subspecs = 'Authentication', 'Database', 'User', 'Resource'
+  s.default_subspecs = 'Authentication', 'Database', 'User', 'Marketplace', 'Resource'
 
   s.subspec 'Core' do |ss|
     ss.source_files   = 'DiscogsAPI/Core'
@@ -54,6 +54,13 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/User/Wantlist',
     						'DiscogsAPI/Mapping/User/**/*'
     ss.dependency 'DiscogsAPI/Database'
+  end
+  
+  s.subspec 'Marketplace' do |ss|
+    ss.source_files   = 	'DiscogsAPI/Marketplace',
+    						'DiscogsAPI/Marketplace/Price',
+    						'DiscogsAPI/Mapping/Marketplace/**/*'
+    ss.dependency 'DiscogsAPI/Pagination'
   end
   
   s.subspec 'Pagination' do |ss|

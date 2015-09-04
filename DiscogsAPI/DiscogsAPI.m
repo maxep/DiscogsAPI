@@ -32,6 +32,7 @@
 @synthesize database    = _database;
 @synthesize user        = _user;
 @synthesize resource    = _resource;
+@synthesize marketplace = _marketplace;
 
 + (DiscogsAPI *) client {
     static DiscogsAPI *client = nil;
@@ -111,6 +112,14 @@
         _user.delegate  = self;
     }
     return _user;
+}
+
+- (DGMarketplace *)marketplace {
+    if (!_marketplace) {
+        _marketplace           = [DGMarketplace marketplace];
+        _marketplace.delegate  = self;
+    }
+    return _marketplace;
 }
 
 - (DGResource *)resource {
