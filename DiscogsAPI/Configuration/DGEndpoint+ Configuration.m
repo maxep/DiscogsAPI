@@ -32,35 +32,27 @@
 #pragma mark Properties
 
 - (RKObjectManager *)manager {
-    
-    RKObjectManager * manager = objc_getAssociatedObject(self, @selector(manager));
-    if (!manager) {
-        manager = RKObjectManager.sharedManager;
-        [self configureManager:manager];
-        objc_setAssociatedObject(self, @selector(manager), manager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return manager;
+    return objc_getAssociatedObject(self, @selector(manager));
+}
+
+- (void)setManager:(RKObjectManager *)manager {
+    [self configureManager:manager];
+    objc_setAssociatedObject(self, @selector(manager), manager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
 
 @implementation RKErrorMessage (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *) mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
-//    [mapping addAttributeMappingsFromDictionary:@{
-//                                                  @"message" : @"message"
-//                                                  }
-//     ];
     
     [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
     
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[RKErrorMessage mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

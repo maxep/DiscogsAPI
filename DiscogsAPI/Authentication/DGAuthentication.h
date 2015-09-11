@@ -71,7 +71,7 @@
 - (void) authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
- Remove Discogs account credential from device.
+ Remove Discogs account credential from keychain.
  */
 - (void) removeAccountCredential;
 

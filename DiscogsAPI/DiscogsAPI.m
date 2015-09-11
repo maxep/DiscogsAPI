@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DiscogsAPI.h"
+#import "DGEndpoint+Configuration.h"
 
 @interface DiscogsAPI ()
 @property (nonatomic, strong) DGAuthentication  *authentication;
@@ -53,6 +54,13 @@
         //Setup Object Manager
         RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.HTTPClient];
         objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+        
+        //Configure Object manager
+        self.authentication.manager = objectManager;
+        self.database.manager       = objectManager;
+        self.user.manager           = objectManager;
+        self.marketplace.manager    = objectManager;
+        self.resource.manager       = objectManager;
         
         //Init reachability
         [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {

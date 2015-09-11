@@ -41,7 +41,7 @@
 
 @interface DGEndpoint (Configuration)
 
-@property (nonatomic,readonly) RKObjectManager *manager;
+@property (nonatomic,strong) RKObjectManager *manager;
 
 - (void) configureManager:(RKObjectManager*)objectManager;
 

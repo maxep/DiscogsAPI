@@ -51,18 +51,55 @@ typedef NS_ENUM(NSInteger, DGMediaType){
 @property (nonatomic,readwrite) DGMediaType mediaType;
 
 /**
+ Creates and initializes a `DGHTTPClient` object.
+ 
+ @return The newly-initialized Discogs client object.
+ */
++ (DGHTTPClient *) client;
+
+/**
+ Creates and initializes a `DGHTTPClient` object.
+ 
+ @param key    The Discogs app consumer key.
+ @param secret The Discogs app consumer secret.
+ 
+ @return The newly-initialized Discogs client object.
+ */
++ (DGHTTPClient *) clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
+
+/**
+ Creates and initializes a `DGHTTPClient` object.
+ 
+ @param token The Discogs personal access token.
+ 
+ @return The newly-initialized Discogs client object.
+ */
++ (DGHTTPClient *) clientWithAccessToken:(NSString *)token;
+
+/**
  Initializes an `DGHTTPClient` object with the specified consumer key and secret.
  
  @param key The consumer key.
  @param secret The consumer secret.
  */
-- (id)initWithBaseURL:(NSURL *)url key:(NSString *)key secret:(NSString *)secret;
+- (id)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
 
 /**
  Initializes an `DGHTTPClient` object with the specified access token.
  
  @param token The personal access token.
  */
-- (id)initWithBaseURL:(NSURL *)url accessToken:(NSString *)token;
+- (id)initWithAccessToken:(NSString *)token;
+
+/**
+ Creates and enqueues `AFHTTPRequestOperation` objects to make the necessary request token and access token requests.
+ 
+ @param callbackURL The callback URL.
+ @param success A block object to be executed when the request operation finishes successfully. This block has no return value and takes two arguments: the OAuth credential returned by the server, and the response object sent from the server.
+ @param failure A block object to be executed when the request operation finishes unsuccessfully, or that finishes successfully, but encountered an error while parsing the response data. This block has no return value and takes a single argument: the error returned from the server.
+ */
+- (void)authorizeUsingOAuthWithCallbackURL:(NSURL *)callbackURL
+                                   success:(void (^)(AFOAuth1Token *accessToken, id responseObject))success
+                                   failure:(void (^)(NSError *error))failure;
 
 @end

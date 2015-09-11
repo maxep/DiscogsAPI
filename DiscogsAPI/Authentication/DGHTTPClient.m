@@ -22,6 +22,12 @@
 
 #import "DGHTTPClient.h"
 
+static NSString* const kDGBaseURL = @"https://api.discogs.com/";
+
+static NSString* const kDGRequestTokenURL = @"https://api.discogs.com/oauth/request_token";
+static NSString* const kDGAuthorizeURL    = @"http://www.discogs.com/oauth/authorize";
+static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/access_token";
+
 #define kDGMediaTypeAsString(enum) [@[@"discogs", @"html", @"plaintext"] objectAtIndex:enum]
 
 @interface DGHTTPClient ()
@@ -31,18 +37,45 @@
 
 @implementation DGHTTPClient
 
-- (id)initWithBaseURL:(NSURL *)url key:(NSString *)key secret:(NSString *)secret {
-    if (self = [super initWithBaseURL:url key:key secret:secret]) {
++ (DGHTTPClient *)client {
+    NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
+    return [[DGHTTPClient alloc] initWithBaseURL:baseURL];
+}
+
++ (DGHTTPClient *)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
+    return [[DGHTTPClient alloc] initWithConsumerKey:key consumerSecret:secret];
+}
+
++ (DGHTTPClient *)clientWithAccessToken:(NSString *)token {
+    return [[DGHTTPClient alloc] initWithAccessToken:token];
+}
+
+- (id)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
+    NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
+    if (self = [super initWithBaseURL:baseURL key:key secret:secret]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs key=%@, secret=%@", key, secret];
     }
     return self;
 }
 
-- (id)initWithBaseURL:(NSURL *)url accessToken:(NSString *)token; {
-    if (self = [super initWithBaseURL:url]) {
+- (id)initWithAccessToken:(NSString *)token {
+    NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
+    if (self = [super initWithBaseURL:baseURL]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs token=%@", token];
     }
     return self;
+}
+
+- (void)authorizeUsingOAuthWithCallbackURL:(NSURL *)callbackURL success:(void (^)(AFOAuth1Token *, id))success failure:(void (^)(NSError *))failure {
+    
+    [super authorizeUsingOAuthWithRequestTokenPath:kDGRequestTokenURL
+                             userAuthorizationPath:kDGAuthorizeURL
+                                       callbackURL:callbackURL
+                                   accessTokenPath:kDGAccessTokenURL
+                                      accessMethod:@"POST"
+                                             scope:nil
+                                           success:success
+                                           failure:failure];
 }
 
 #pragma mark Properties

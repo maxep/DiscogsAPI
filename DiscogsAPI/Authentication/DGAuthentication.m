@@ -26,12 +26,6 @@
 #import "DGTokenStore.h"
 #import "DGAuthView.h"
 
-static NSString* const kDGBaseURL = @"https://api.discogs.com/";
-
-static NSString* const kDGRequestTokenURL = @"https://api.discogs.com/oauth/request_token";
-static NSString* const kDGAuthorizeURL    = @"http://www.discogs.com/oauth/authorize";
-static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/access_token";
-
 static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
 static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
 static NSString * const kDiscogsAccessToken    = @"DiscogsAccessToken";
@@ -74,19 +68,13 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
                 [self removeAccountCredential];
             }
             
-            [self.HTTPClient authorizeUsingOAuthWithRequestTokenPath:kDGRequestTokenURL
-                                                 userAuthorizationPath:kDGAuthorizeURL
-                                                           callbackURL:callback
-                                                       accessTokenPath:kDGAccessTokenURL
-                                                          accessMethod:@"POST"
-                                                                 scope:nil
-            success:^(AFOAuth1Token *accessToken, id responseObject) {
+            [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
                 [DGTokenStore storeCredential:accessToken withIdentifier:kDGOAuth1CredentialDiscogsAccount];
                 success();
-            }
-            failure:^(NSError *error) {
+            } failure:^(NSError *error) {
                 failure(error);
             }];
+            
         }];
     }
     else if (self.HTTPClient.accessToken) {
@@ -120,15 +108,14 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     
     if (!_HTTPClient) {
         if (self.consumerKey && self.consumerSecret) {
-            _HTTPClient = [[DGHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL]
-                                                            key:self.consumerKey
-                                                         secret:self.consumerSecret];
+            _HTTPClient = [DGHTTPClient clientWithConsumerKey:self.consumerKey
+                                               consumerSecret:self.consumerSecret];
         }
         else if(self.accessToken) {
-            _HTTPClient = [[DGHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL] accessToken:self.accessToken];
+            _HTTPClient = [DGHTTPClient clientWithAccessToken:self.accessToken];
         }
         else {
-            _HTTPClient = [[DGHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kDGBaseURL]];
+            _HTTPClient = [DGHTTPClient client];
         }
         
         _HTTPClient.signatureMethod = AFPlainTextSignatureMethod;
