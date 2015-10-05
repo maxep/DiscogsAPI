@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "DGAppDelegate.h"
-#import "DiscogsAPI.h"
 
 @interface DGAppDelegate ()
 

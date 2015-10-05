@@ -99,7 +99,9 @@ static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acce
         return request;
     }
     
-    [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
+    if (![path isEqualToString:kDGRequestTokenURL]) {
+        [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
+    }
     return request;
 }
 
@@ -118,7 +120,10 @@ static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acce
         return request;
     }
     
-    [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
+    if (![path isEqualToString:kDGRequestTokenURL])  {
+        [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
+    }
+    
     return request;
 }
 
