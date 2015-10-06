@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.4"
+  s.version      = "1.4.1"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
                     Features:
@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.author       = { "Maxime Epain" => "maxime.epain@gmail.com" }
   s.social_media_url = 'https://twitter.com/MaximeEpain'
   s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git", :tag => "v#{s.version}" }
+  s.documentation_url = 'http://cocoadocs.org/docsets/DiscogsAPI'
   s.requires_arc = true
   s.ios.deployment_target = '7.1'
   s.ios.frameworks 	= 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration'
