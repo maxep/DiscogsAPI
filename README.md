@@ -7,7 +7,7 @@
 
 An Objective-C interface for [Discogs API v2.0](http://www.discogs.com/developers/).
 
-The implementation is based on the [RestKit](http://restkit.org/) framework.
+The implementation is based on [RestKit v0.26.0](https://github.com/RestKit/RestKit).
 
 ##Features
 - Supports OAuth process and store the token in keychain.
@@ -23,7 +23,6 @@ The implementation is based on the [RestKit](http://restkit.org/) framework.
 ##### Podfile
 
 ```ruby
-platform :ios, '7.1'
 pod 'DiscogsAPI'
 ```
 
@@ -38,15 +37,23 @@ Or clone the repo and run ```pod install``` from the Example directory first.
 
 Detailed usage instructions are available in the [Wiki](https://github.com/maxep/DiscogsAPI/wiki).
 
+## Version History
+
+|       Version         |       Date            |       Description     |
+|-----------------------|-----------------------|-----------------------|
+|~~[1.4](https://github.com/maxep/DiscogsAPI/releases/tag/v1.4)~~|August 28, 2015  |See [wiki](https://github.com/maxep/DiscogsAPI/wiki) for API support. Upgrade to RestKit 0.25.0|
+|[1.4.1](https://github.com/maxep/DiscogsAPI/releases/tag/v1.4.1)| October 6, 2015|Fix OAuth major issue.|
+|[1.4.2](https://github.com/maxep/DiscogsAPI/releases/tag/v1.4.2)|November 26, 2015  |Upgrade to RestKit 0.26.0|
+
 ## Documentation
 
 Documentation is available through [CocoaDocs](http://cocoadocs.org/docsets/DiscogsAPI)
 
 ## Author
 
-[![GitHub](https://img.shields.io/badge/github-maxep-lightgrey.svg?style=flat)](https://github.com/maxep)
+[Maxime Epain](http://maxep.github.io)
+
 [![Twitter](https://img.shields.io/badge/twitter-%40MaximeEpain-blue.svg?style=flat)](https://twitter.com/MaximeEpain)
-[![Email](https://img.shields.io/badge/email-maxime.epain%40gmail.com-red.svg?style=flat)](mailto:maxime.epain@gmail.com)
 
 ## License
 

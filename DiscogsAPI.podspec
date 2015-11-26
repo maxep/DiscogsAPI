@@ -1,10 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.4.1"
+  s.version      = "1.4.2"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
                     Features:
-					- Handle OAuth process and store tokens in keychain.
+					- Supports OAuth process and store the token in keychain.
+                    - Supports Discogs Auth.
 					- Database support: Release, Master Release, Master Release Versions, Artist, Artist Releases, Label, All Label Releases, Search.
 					- User support: Identify, Profile, Collection, Wantlist.
 					- Image support.
