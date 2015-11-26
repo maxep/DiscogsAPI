@@ -78,8 +78,8 @@ Pod::Spec.new do |s|
   s.subspec 'Configuration' do |ss|
     ss.source_files = 'DiscogsAPI/Configuration'
     ss.dependency 'DiscogsAPI/Core'
-    ss.dependency 'RestKit/ObjectMapping', '~> 0.25.0'
-    ss.dependency 'RestKit/Network', '~> 0.25.0'
+    ss.dependency 'RestKit/ObjectMapping', '~> 0.26.0'
+    ss.dependency 'RestKit/Network', '~> 0.26.0'
     ss.prefix_header_contents = '#import <SystemConfiguration/SystemConfiguration.h>',
     							'#import <MobileCoreServices/MobileCoreServices.h>',
     							'#import <Security/Security.h>',

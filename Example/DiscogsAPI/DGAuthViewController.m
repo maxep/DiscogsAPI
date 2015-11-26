@@ -28,7 +28,7 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.translucent = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.opaque = YES;
     
     [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
