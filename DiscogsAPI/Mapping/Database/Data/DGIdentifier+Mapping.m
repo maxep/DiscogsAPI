@@ -32,6 +32,8 @@
                                                   @"description" : @"identifierDescription"
                                                   }
      ];
+    
+    return mapping;
 }
 
 @end
