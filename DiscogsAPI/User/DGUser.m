@@ -32,7 +32,7 @@
 
 @implementation DGUser
 
-@synthesize wanlist     = _wanlist;
+@synthesize wantlist     = _wantlist;
 @synthesize collection  = _collection;
 
 + (DGUser*) user {
@@ -41,16 +41,18 @@
 
 #pragma mark Properties
 
-- (DGWantlist *)wanlist {
-    if (!_wanlist) {
-        _wanlist = [DGWantlist wantlist];
+- (DGWantlist *)wantlist {
+    if (!_wantlist) {
+        _wantlist = [DGWantlist wantlist];
+        _wantlist.manager = self.manager;
     }
-    return _wanlist;
+    return _wantlist;
 }
 
 - (DGCollection *)collection {
     if (!_collection) {
         _collection = [DGCollection collection];
+        _collection.manager = self.manager;
     }
     return _collection;
 }

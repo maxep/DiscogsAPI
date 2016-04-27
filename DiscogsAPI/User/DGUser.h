@@ -34,7 +34,7 @@
 /**
  The wantlist endpoint.
  */
-@property (nonatomic,readonly) DGWantlist *wanlist;
+@property (nonatomic,readonly) DGWantlist *wantlist;
 
 /**
  The collection endpoint.
