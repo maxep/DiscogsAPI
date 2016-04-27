@@ -22,6 +22,7 @@
 
 #import "DGObject.h"
 #import "DGCommunity.h"
+#import "DGIdentifier.h"
 
 /**
  Release description class.
@@ -34,7 +35,7 @@
 @property (nonatomic, strong) NSString * title;
 
 /**
- List of artists that contibuted to teh release.
+ List of artists that contibuted to the release.
  */
 @property (nonatomic, strong) NSArray  * artists;
 
@@ -108,7 +109,7 @@
 @property (nonatomic, strong) NSArray  * styles;
 
 /**
- Releas track list.
+ Release track list.
  */
 @property (nonatomic, strong) NSArray  * trackList;
 
@@ -122,7 +123,10 @@
  */
 @property (nonatomic, strong) NSString * notes;
 
-/* ADD IDENTIFIERS */
+/**
+ Identifiers
+ */
+@property (nonatomic, strong) NSArray *identifiers;
 
 /* ADD THE REST */
 
