@@ -38,7 +38,7 @@
 @property (nonatomic, strong) NSString *value;
 
 /**
- * Identifier description (can't juse use `description` bc that's an NSObject overridden method
+ * Identifier description (can't just use `description` bc that's an NSObject overridden method
  */
 @property (nonatomic, strong) NSString *identifierDescription;
 
