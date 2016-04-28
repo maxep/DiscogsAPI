@@ -24,6 +24,7 @@
 #import "DGPagination+Mapping.h"
 #import "DGArtist+Mapping.h"
 #import "DGCommunity+Mapping.h"
+#import "DGIdentifier+Mapping.h"
 #import "DGImage+Mapping.h"
 #import "DGVideo+Mapping.h"
 #import "DGTrack+Mapping.h"
@@ -49,7 +50,7 @@
                                                   @"styles"             : @"styles",
                                                   @"genres"             : @"genres",
                                                   @"resource_url"       : @"resourceURL",
-                                                  @"uri"                : @"uri"
+                                                  @"uri"                : @"uri",
                                                   }
      ];
     
@@ -64,6 +65,8 @@
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"videos" toKeyPath:@"videos" withMapping:[DGVideo mapping]]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"tracklist" toKeyPath:@"trackList" withMapping:[DGTrack mapping]]];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"identifiers" toKeyPath:@"identifiers" withMapping:[DGIdentifier mapping]]];
     
     return mapping;
 }
