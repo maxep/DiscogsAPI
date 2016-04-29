@@ -22,6 +22,7 @@
 
 #import "DGObject.h"
 #import "DGCommunity.h"
+#import "DGFormat.h"
 #import "DGIdentifier.h"
 
 /**
@@ -33,6 +34,16 @@
  Release title.
  */
 @property (nonatomic, strong) NSString * title;
+
+/**
+ Master ID this release is based on
+ */
+@property (nonatomic, strong) NSNumber *masterID;
+
+/**
+ API URL to Master this release is based on
+ */
+@property (nonatomic, strong) NSString *masterURL;
 
 /**
  List of artists that contibuted to the release.
@@ -96,7 +107,10 @@
  */
 @property (nonatomic, strong) NSNumber * formatQuantity;
 
-/* ADD FORMAT */
+/**
+ Formats pertaining to this release
+ */
+@property (nonatomic, strong) NSArray<DGFormat *> *formats;
 
 /**
  Genres of release music.
@@ -126,7 +140,7 @@
 /**
  Identifiers
  */
-@property (nonatomic, strong) NSArray *identifiers;
+@property (nonatomic, strong) NSArray<DGIdentifier *> *identifiers;
 
 /* ADD THE REST */
 

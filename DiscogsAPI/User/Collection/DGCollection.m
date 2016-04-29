@@ -264,6 +264,29 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
+- (void)getInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(nonnull void (^)(DGReleaseInstance *response))success failure:(nonnull void (^)(NSError *error))failure {
+    
+    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGReleaseInstance responseDescriptor] ]];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSArray* results = mappingResult.array;
+        if ([[results firstObject] isKindOfClass:[DGReleaseInstance class]]) {
+            success([results firstObject]);
+        }
+        else {
+            failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
+        failure(error);
+    }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+}
+
 - (void) deleteInstanceFromFolder:(DGReleaseInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request

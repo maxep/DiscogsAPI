@@ -1,6 +1,8 @@
-// DGIdentifier.h
 //
-// Copyright (c) 2015 Maxime Epain
+//  DGFormat+Mapping.h
+//  Pods
+//
+//  Created by Nate Rivard on 4/28/16.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,27 +22,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGObject.h"
+#import "DGFormat.h"
 
-/**
- Identifier description class
- */
-@interface DGIdentifier : DGObject
+@interface DGFormat (Mapping)
 
-/// Identifier type
-@property (nonatomic, strong) NSString *type;
-
-/// Identifier value
-@property (nonatomic, strong) NSString *value;
-
-/// Identifier description (can't just use `description` bc that's an NSObject overridden method
-@property (nonatomic, strong) NSString *identifierDescription;
-
-/**
- Create an initializes new `DGIdentifier` object
- 
- @return new identifier object
- */
-+ (instancetype)identifier;
++ (RKMapping *)mapping;
 
 @end

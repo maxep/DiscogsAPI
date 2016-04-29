@@ -26,6 +26,8 @@
 
 + (RKObjectMapping*) mapping;
 
++ (RKResponseDescriptor *)responseDescriptor;
+
 @end
 
 @interface DGReleaseInstanceRequest (Mapping)
