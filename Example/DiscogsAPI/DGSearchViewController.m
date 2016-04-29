@@ -24,9 +24,6 @@
 #import "DGAuthViewController.h"
 #import "DiscogsAPI.h"
 
-@implementation DGSearchViewCell
-@end
-
 @interface DGSearchViewController ()
 @property (nonatomic, strong) DGSearchResponse *response;
 @end
@@ -135,6 +132,25 @@
         }
     }
     return cell;
+}
+
+@end
+
+
+#pragma mark - Search Cell
+
+@implementation DGSearchViewCell
+
+static UIImage *kDefaultReleaseImage = nil;
+
++ (void)load {
+    kDefaultReleaseImage = [UIImage imageNamed:@"default-release"];
+}
+
+- (void)prepareForReuse {
+    self.title.text     = nil;
+    self.type.text      = nil;
+    self.cover.image    = kDefaultReleaseImage;
 }
 
 @end
