@@ -40,6 +40,10 @@
     return mapping;
 }
 
++ (RKResponseDescriptor *)responseDescriptor {
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGReleaseInstance mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+}
+
 @end
 
 @implementation DGReleaseInstanceRequest (Mapping)

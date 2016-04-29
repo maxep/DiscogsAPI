@@ -26,6 +26,8 @@
 #import "DGCollectionFolder.h"
 #import "DGCollectionField.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  The DGCollection class to manage operation with User's collection.
  */
@@ -111,6 +113,15 @@
 - (void) changeRatingOfRelease:(DGChangeRatingOfReleaseRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
+ Gets user collection instance from specific folder
+ 
+ @param request the request that represents the specific folder instance
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection instance
+ @param failure A block object to be executed when the GET operation fails. The block has no return value and one argument: the associated error
+ */
+- (void)getInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(void (^)(DGReleaseInstance * response))success failure:(void (^)(NSError *error))failure;
+
+/**
  Deletes release from user's collection folder.
  
  @param request The request.
@@ -138,3 +149,5 @@
 - (void) editFieldsInstance:(DGEditFieldsInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 @end
+
+NS_ASSUME_NONNULL_END

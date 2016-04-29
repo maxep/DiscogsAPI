@@ -26,6 +26,4 @@
 
 + (RKMapping *)mapping;
 
-+ (RKResponseDescriptor *)responseDescriptor;
-
 @end
