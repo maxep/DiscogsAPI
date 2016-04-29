@@ -24,18 +24,18 @@
 
 @interface DGPaginationUrls (Mapping)
 
-+ (RKMapping *) mapping;
++ (RKMapping *)mapping;
 
 @end
 
 @interface DGPagination (Mapping)
 
-+ (RKMapping *) mapping;
++ (RKMapping *)mapping;
 
-- (NSDictionary*) parameters;
+- (NSDictionary *)parameters;
 
-+ (RKResponseDescriptor*) responseDescriptorFor;
++ (RKResponseDescriptor *)responseDescriptor;
 
-- (void) loadNextPageWithResponseDesciptor:(RKResponseDescriptor*) responseDescriptor success:(void (^)(NSArray* objects))success failure:(void (^)(NSError* error))failure;
+- (void)loadNextPageWithResponseDesciptor:(RKResponseDescriptor *)responseDescriptor success:(void (^)(NSArray *objects))success failure:(void (^)(NSError *error))failure;
 
 @end

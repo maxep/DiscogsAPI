@@ -25,8 +25,7 @@
 
 @implementation DGMasterVersion
 
-+ (DGMasterVersion*) version
-{
++ (DGMasterVersion *)version {
     return [[DGMasterVersion alloc] init];
 }
 
@@ -34,8 +33,7 @@
 
 @implementation DGMasterVersionRequest
 
-+ (DGMasterVersionRequest*) request
-{
++ (DGMasterVersionRequest *)request {
     return [[DGMasterVersionRequest alloc] init];
 }
 
@@ -43,13 +41,13 @@
 
 @implementation DGMasterVersionResponse
 
-+ (DGMasterVersionResponse*) response
-{
+@synthesize pagination;
+
++ (DGMasterVersionResponse *)response {
     return [[DGMasterVersionResponse alloc] init];
 }
 
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure
-{
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {
     [self.pagination loadNextPageWithResponseDesciptor:[DGMasterVersionResponse responseDescriptor] success:^(NSArray *objects) {
         if ([[objects firstObject] isKindOfClass:[DGMasterVersionResponse class]]) {
             DGMasterVersionResponse* response = [objects firstObject];

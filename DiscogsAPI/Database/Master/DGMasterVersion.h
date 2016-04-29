@@ -32,26 +32,23 @@
  
  @return The newly-initialized master version object.
  */
-+ (DGMasterVersion*) version;
++ (DGMasterVersion *)version;
 
 @end
 
 @interface DGMasterVersionRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  * pagination;
-@property (nonatomic, strong) NSNumber      * masterID;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSNumber      *masterID;
 
-+ (DGMasterVersionRequest*) request;
++ (DGMasterVersionRequest *)request;
 
 @end
 
-@interface DGMasterVersionResponse : NSObject
+@interface DGMasterVersionResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) DGPagination * pagination;
-@property (nonatomic, strong) NSArray * versions;
+@property (nonatomic, strong) NSArray *versions;
 
-+ (DGMasterVersionResponse*) response;
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
++ (DGMasterVersionResponse *)response;
 
 @end

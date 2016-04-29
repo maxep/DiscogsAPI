@@ -25,8 +25,7 @@
 
 @implementation DGLabelRelease
 
-+ (DGLabelRelease*) release
-{
++ (DGLabelRelease *)release {
     return [[DGLabelRelease alloc] init];
 }
 
@@ -34,16 +33,13 @@
 
 @implementation DGLabelReleasesRequest
 
-+ (DGLabelReleasesRequest*) request
-{
++ (DGLabelReleasesRequest *)request {
     return [[DGLabelReleasesRequest alloc] init];
 }
 
-- (id) init
-{
+- (id)init {
     self = [super init];
     if (self) {
-        
         self.pagination = [DGPagination pagination];
     }
     return self;
@@ -53,13 +49,13 @@
 
 @implementation DGLabelReleasesResponse
 
-+ (DGLabelReleasesResponse*) response
-{
+@synthesize pagination;
+
++ (DGLabelReleasesResponse *)response {
     return [[DGLabelReleasesResponse alloc] init];
 }
 
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure
-{
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {
     [self.pagination loadNextPageWithResponseDesciptor:[DGLabelReleasesResponse responseDescriptor] success:^(NSArray *objects) {
         if ([[objects firstObject] isKindOfClass:[DGLabelReleasesResponse class]]) {
             DGLabelReleasesResponse* response = [objects firstObject];

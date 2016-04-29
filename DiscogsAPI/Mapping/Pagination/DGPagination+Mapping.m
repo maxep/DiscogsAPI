@@ -24,8 +24,7 @@
 
 @implementation DGPaginationUrls (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPaginationUrls class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"first"  : @"first",
@@ -42,8 +41,7 @@
 
 @implementation DGPagination (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPagination class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"page"       : @"page",
@@ -58,18 +56,15 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptorFor
-{
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGPagination mapping] method:RKRequestMethodAny pathPattern:nil keyPath:@"pagination" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
-- (NSDictionary*) parameters
-{
+- (NSDictionary *)parameters {
     return @{ @"page" : self.page, @"per_page" : self.perPage };
 }
 
-- (void) loadNextPageWithResponseDesciptor:(RKResponseDescriptor*) responseDescriptor success:(void (^)(NSArray* objects))success failure:(void (^)(NSError* error))failure
-{
+- (void)loadNextPageWithResponseDesciptor:(RKResponseDescriptor *)responseDescriptor success:(void (^)(NSArray *objects))success failure:(void (^)(NSError *error))failure {
     if(self.urls.next)
     {
         NSURLRequest *requestURL = [[RKObjectManager sharedManager].HTTPClient requestWithMethod:@"GET" path:self.urls.next parameters:nil];

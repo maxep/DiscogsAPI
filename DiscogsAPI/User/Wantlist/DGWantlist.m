@@ -26,11 +26,11 @@
 
 @implementation DGWantlistRequest
 
-+ (DGWantlistRequest*) request {
++ (DGWantlistRequest *)request {
     return [[DGWantlistRequest alloc] init];
 }
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         self.pagination = [DGPagination pagination];
     }
@@ -41,11 +41,13 @@
 
 @implementation DGWantlistResponse
 
-+ (DGWantlistResponse*) response {
+@synthesize pagination;
+
++ (DGWantlistResponse *)response {
     return [[DGWantlistResponse alloc] init];
 }
 
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
     
     [self.pagination loadNextPageWithResponseDesciptor:[DGWantlistResponse responseDescriptor] success:^(NSArray *objects) {
         if ([[objects firstObject] isKindOfClass:[DGWantlistResponse class]]) {
@@ -68,11 +70,11 @@
 
 @implementation DGWantRequest
 
-+ (DGWantRequest*) request {
++ (DGWantRequest *)request {
     return [[DGWantRequest alloc] init];
 }
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         self.rating = @0;
         self.notes  = @"";
@@ -84,7 +86,7 @@
 
 @implementation DGWant
 
-+ (DGWant*) want {
++ (DGWant *)want {
     return [[DGWant alloc] init];
 }
 
@@ -92,7 +94,7 @@
 
 @implementation DGWantlist
 
-+ (DGWantlist*) wantlist {
++ (DGWantlist *)wantlist {
     return [[DGWantlist alloc] init];
 }
 
@@ -105,7 +107,7 @@
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGWantRequest class] pathPattern:@"/users/:userName/wants/:releaseID" method:RKRequestMethodAny]];
 }
 
-- (void) getWantlist:(DGWantlistRequest*)request success:(void (^)(DGWantlistResponse* response))success failure:(void (^)(NSError* error))failure {
+- (void)getWantlist:(DGWantlistRequest *)request success:(void (^)(DGWantlistResponse * response))success failure:(void (^)(NSError* error))failure {
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
     
@@ -128,7 +130,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) addToWantlist:(DGWantRequest*)request success:(void (^)(DGWant* want))success failure:(void (^)(NSError* error))failure {
+- (void)addToWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(void (^)(NSError *error))failure {
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodPUT path:nil parameters:request.parameters];
     
@@ -152,7 +154,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) editReleaseInWantlist:(DGWantRequest*)request success:(void (^)(DGWant* want))success failure:(void (^)(NSError* error))failure {
+- (void)editReleaseInWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(void (^)(NSError *error))failure {
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodPOST path:nil parameters:request.parameters];
     
@@ -175,7 +177,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) deleteReleaseFromWantlist:(DGWantRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request
                                                         method:RKRequestMethodDELETE

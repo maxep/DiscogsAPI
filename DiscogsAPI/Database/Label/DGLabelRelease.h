@@ -30,38 +30,35 @@
 /**
  Release date.
  */
-@property (nonatomic, strong) NSString * released;
+@property (nonatomic, strong) NSString *released;
 
 /**
  Release catalog number.
  */
-@property (nonatomic, strong) NSString * catno;
+@property (nonatomic, strong) NSString *catno;
 
 /**
  Creates and initializes a `DGLabelRelease` object.
  
  @return The newly-initialized label release object.
  */
-+ (DGLabelRelease*) release;
++ (DGLabelRelease *)release;
 
 @end
 
 @interface DGLabelReleasesRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  * pagination;
-@property (nonatomic, strong) NSNumber      * labelID;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSNumber      *labelID;
 
-+ (DGLabelReleasesRequest*) request;
++ (DGLabelReleasesRequest *)request;
 
 @end
 
-@interface DGLabelReleasesResponse : NSObject
+@interface DGLabelReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) DGPagination * pagination;
-@property (nonatomic, strong) NSArray * releases;
+@property (nonatomic, strong) NSArray *releases;
 
-+ (DGLabelReleasesResponse*) response;
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
++ (DGLabelReleasesResponse *)response;
 
 @end

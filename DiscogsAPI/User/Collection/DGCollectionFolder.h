@@ -32,7 +32,7 @@
 @property (nonatomic, strong) NSNumber *folderID;
 @property (nonatomic, strong) NSString *name;
 
-+ (DGCollectionFolderRequest*) request;
++ (DGCollectionFolderRequest *)request;
 
 @end
 
@@ -41,7 +41,7 @@
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *folderName;
 
-+ (DGCreateCollectionFolderRequest*) request;
++ (DGCreateCollectionFolderRequest *)request;
 
 @end
 
@@ -50,7 +50,7 @@
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSArray  *folders;
 
-+ (DGCollectionFoldersRequest*) collection;
++ (DGCollectionFoldersRequest *)collection;
 
 @end
 
@@ -59,7 +59,7 @@
 @property (nonatomic, strong) NSNumber *count;
 @property (nonatomic, strong) NSString *name;
 
-+ (DGCollectionFolder*) folder;
++ (DGCollectionFolder *)folder;
 
 @end
 
@@ -69,13 +69,13 @@
 @property (nonatomic, strong) NSNumber  *releaseID;
 @property (nonatomic, strong) NSNumber  *folderID;
 
-+ (DGAddToCollectionFolderRequest*) request;
++ (DGAddToCollectionFolderRequest *)request;
 
 @end
 
 @interface DGAddToCollectionFolderResponse : DGObject
 
-+ (DGAddToCollectionFolderResponse*) response;
++ (DGAddToCollectionFolderResponse *)response;
 
 @end
 
@@ -87,17 +87,14 @@
 @property (nonatomic, readwrite) DGSortKey      sort;
 @property (nonatomic, readwrite) DGSortOrder    sortOrder;
 
-+ (DGCollectionReleasesRequest*) request;
++ (DGCollectionReleasesRequest *)request;
 
 @end
 
-@interface DGCollectionReleasesResponse : NSObject
+@interface DGCollectionReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong) NSArray       *releases;
+@property (nonatomic, strong) NSArray *releases;
 
-+ (DGCollectionReleasesResponse*) response;
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
++ (DGCollectionReleasesResponse *)response;
 
 @end

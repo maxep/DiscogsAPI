@@ -25,8 +25,7 @@
 
 @implementation DGArtistRelease
 
-+ (DGArtistRelease*) release
-{
++ (DGArtistRelease *)release {
     return [[DGArtistRelease alloc] init];
 }
 
@@ -34,16 +33,13 @@
 
 @implementation DGArtistReleaseRequest
 
-+ (DGArtistReleaseRequest*) request
-{
++ (DGArtistReleaseRequest *)request {
     return [[DGArtistReleaseRequest alloc] init];
 }
 
-- (id) init
-{
+- (id)init {
     self = [super init];
     if (self) {
-        
         self.pagination = [DGPagination pagination];
     }
     return self;
@@ -53,13 +49,13 @@
 
 @implementation DGArtistReleaseResponse
 
-+ (DGArtistReleaseResponse*) response
-{
+@synthesize pagination;
+
++ (DGArtistReleaseResponse *)response {
     return [[DGArtistReleaseResponse alloc] init];
 }
 
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure
-{
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {
     [self.pagination loadNextPageWithResponseDesciptor:[DGArtistReleaseResponse responseDescriptor] success:^(NSArray *objects) {
         if ([[objects firstObject] isKindOfClass:[DGArtistReleaseResponse class]]) {
             DGArtistReleaseResponse* response = [objects firstObject];

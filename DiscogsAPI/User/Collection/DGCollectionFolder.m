@@ -56,11 +56,11 @@
 
 @implementation DGAddToCollectionFolderRequest
 
-+ (DGAddToCollectionFolderRequest*) request {
++ (DGAddToCollectionFolderRequest *)request {
     return [[DGAddToCollectionFolderRequest alloc] init];
 }
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         self.folderID = @1;
     }
@@ -71,7 +71,7 @@
 
 @implementation DGAddToCollectionFolderResponse
 
-+ (DGAddToCollectionFolderResponse*) response {
++ (DGAddToCollectionFolderResponse *)response {
     return [[DGAddToCollectionFolderResponse alloc] init];
 }
 
@@ -79,11 +79,11 @@
 
 @implementation DGCollectionReleasesRequest
 
-+ (DGCollectionReleasesRequest*) request {
++ (DGCollectionReleasesRequest *)request {
     return [[DGCollectionReleasesRequest alloc] init];
 }
 
-- (id) init {
+- (id)init {
     if (self = [super init]) {
         
         self.pagination = [DGPagination pagination];
@@ -98,11 +98,13 @@
 
 @implementation DGCollectionReleasesResponse
 
+@synthesize pagination;
+
 + (DGCollectionReleasesResponse*) response {
     return [[DGCollectionReleasesResponse alloc] init];
 }
 
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
     
     [self.pagination loadNextPageWithResponseDesciptor:[DGCollectionReleasesResponse responseDescriptor] success:^(NSArray *objects) {
         if ([[objects firstObject] isKindOfClass:[DGCollectionReleasesResponse class]]) {

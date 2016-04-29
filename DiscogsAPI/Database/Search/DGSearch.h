@@ -25,58 +25,55 @@
 
 @interface DGSearchRequest : NSObject
 
-@property (nonatomic, strong) NSString * query;
-@property (nonatomic, strong) NSString * type;
-@property (nonatomic, strong) NSString * title;
-@property (nonatomic, strong) NSString * releaseTitle;
-@property (nonatomic, strong) NSString * credit;
-@property (nonatomic, strong) NSString * artist;
-@property (nonatomic, strong) NSString * anv;
-@property (nonatomic, strong) NSString * label;
-@property (nonatomic, strong) NSString * genre;
-@property (nonatomic, strong) NSString * style;
-@property (nonatomic, strong) NSString * country;
-@property (nonatomic, strong) NSString * year;
-@property (nonatomic, strong) NSString * format;
-@property (nonatomic, strong) NSString * catno;
-@property (nonatomic, strong) NSString * barcode;
-@property (nonatomic, strong) NSString * track;
-@property (nonatomic, strong) NSString * submitter;
-@property (nonatomic, strong) NSString * contributor;
-@property (nonatomic, strong) DGPagination * pagination;
+@property (nonatomic, strong) NSString      *query;
+@property (nonatomic, strong) NSString      *type;
+@property (nonatomic, strong) NSString      *title;
+@property (nonatomic, strong) NSString      *releaseTitle;
+@property (nonatomic, strong) NSString      *credit;
+@property (nonatomic, strong) NSString      *artist;
+@property (nonatomic, strong) NSString      *anv;
+@property (nonatomic, strong) NSString      *label;
+@property (nonatomic, strong) NSString      *genre;
+@property (nonatomic, strong) NSString      *style;
+@property (nonatomic, strong) NSString      *country;
+@property (nonatomic, strong) NSString      *year;
+@property (nonatomic, strong) NSString      *format;
+@property (nonatomic, strong) NSString      *catno;
+@property (nonatomic, strong) NSString      *barcode;
+@property (nonatomic, strong) NSString      *track;
+@property (nonatomic, strong) NSString      *submitter;
+@property (nonatomic, strong) NSString      *contributor;
+@property (nonatomic, strong) DGPagination  *pagination;
 
-+ (DGSearchRequest*) request;
++ (DGSearchRequest *)request;
 
 @end
 
 @interface DGSearchResult : NSObject
 
-@property (nonatomic, strong) NSArray       * style;
-@property (nonatomic, strong) NSString      * thumb;
-@property (nonatomic, strong) NSString      * title;
-@property (nonatomic, strong) NSString      * country;
-@property (nonatomic, strong) NSArray       * format;
-@property (nonatomic, strong) NSString      * uri;
+@property (nonatomic, strong) NSArray   *style;
+@property (nonatomic, strong) NSString  *thumb;
+@property (nonatomic, strong) NSString  *title;
+@property (nonatomic, strong) NSString  *country;
+@property (nonatomic, strong) NSArray   *format;
+@property (nonatomic, strong) NSString  *uri;
 /* ADD COMMUNITY */
-@property (nonatomic, strong) NSArray       * label;
-@property (nonatomic, strong) NSString      * catno;
-@property (nonatomic, strong) NSString      * year;
-@property (nonatomic, strong) NSArray       * genre;
-@property (nonatomic, strong) NSString      * resourceUrl;
-@property (nonatomic, strong) NSString      * type;
-@property (nonatomic, strong) NSNumber      * ID;
+@property (nonatomic, strong) NSArray   *label;
+@property (nonatomic, strong) NSString  *catno;
+@property (nonatomic, strong) NSString  *year;
+@property (nonatomic, strong) NSArray   *genre;
+@property (nonatomic, strong) NSString  *resourceUrl;
+@property (nonatomic, strong) NSString  *type;
+@property (nonatomic, strong) NSNumber  *ID;
 
-+ (DGSearchResult*) result;
++ (DGSearchResult *)result;
 
 @end
 
-@interface DGSearchResponse : NSObject
+@interface DGSearchResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) DGPagination * pagination;
-@property (nonatomic, strong) NSArray * results;
+@property (nonatomic, strong) NSArray *results;
 
-+ (DGSearchResponse*) response;
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
++ (DGSearchResponse *)response;
 
 @end

@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger, DGSortOrder){
  
  @return The newly-initialized pagination URLs object.
  */
-+ (DGPaginationUrls*) urls;
++ (DGPaginationUrls *)urls;
 
 @end
 
@@ -118,22 +118,22 @@ typedef NS_ENUM(NSInteger, DGSortOrder){
 /**
  Current page number.
  */
-@property (nonatomic, strong) NSNumber* page;
+@property (nonatomic, strong) NSNumber *page;
 
 /**
  Number of pages.
  */
-@property (nonatomic, strong) NSNumber* pages;
+@property (nonatomic, strong) NSNumber *pages;
 
 /**
  Total number of items.
  */
-@property (nonatomic, strong) NSNumber* items;
+@property (nonatomic, strong) NSNumber *items;
 
 /**
  Number of items per page.
  */
-@property (nonatomic, strong) NSNumber* perPage;
+@property (nonatomic, strong) NSNumber *perPage;
 
 /**
  Pagination URLs.
@@ -145,6 +145,26 @@ typedef NS_ENUM(NSInteger, DGSortOrder){
  
  @return The newly-initialized pagination object.
  */
-+ (DGPagination*) pagination;
++ (DGPagination *)pagination;
+
+@end
+
+/**
+ Protocol for paginated responses.
+ */
+@protocol DGPaginated <NSObject>
+
+/**
+ The reponse's pagination.
+ */
+@property (nonatomic, strong) DGPagination *pagination;
+
+/**
+ Loads the response next page.
+ 
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
+ @param failure A block object to be executed when the operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure;
 
 @end

@@ -31,44 +31,44 @@
 /**
  Sttus of the release.
  */
-@property (nonatomic, strong) NSString * status;
+@property (nonatomic, strong) NSString *status;
 
 /**
  Release format.
  */
-@property (nonatomic, strong) NSString * format;
+@property (nonatomic, strong) NSString *format;
 
 /**
  Release label.
  */
-@property (nonatomic, strong) NSString * label;
+@property (nonatomic, strong) NSString *label;
 
 /**
  Role of the artist on the release.
  */
-@property (nonatomic, strong) NSString * role;
+@property (nonatomic, strong) NSString *role;
 
 /**
  Track info.
  */
-@property (nonatomic, strong) NSString * trackInfo;
+@property (nonatomic, strong) NSString *trackInfo;
 
 /**
  Release artist.
  */
-@property (nonatomic, strong) NSString * artist;
+@property (nonatomic, strong) NSString *artist;
 
 /**
  Release or Master type.
  */
-@property (nonatomic, strong) NSString * type;
+@property (nonatomic, strong) NSString *type;
 
 /**
  Creates and initializes a `DGArtistRelease` object.
  
  @return The newly-initialized artist release object.
  */
-+ (DGArtistRelease*) release;
++ (DGArtistRelease *)release;
 
 @end
 
@@ -77,20 +77,17 @@
  */
 @interface DGArtistReleaseRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  * pagination;
-@property (nonatomic, strong) NSNumber      * artistID;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSNumber      *artistID;
 
-+ (DGArtistReleaseRequest*) request;
++ (DGArtistReleaseRequest *)request;
 
 @end
 
-@interface DGArtistReleaseResponse : NSObject
+@interface DGArtistReleaseResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) DGPagination * pagination;
-@property (nonatomic, strong) NSArray * releases;
+@property (nonatomic, strong) NSArray *releases;
 
-+ (DGArtistReleaseResponse*) response;
-
-- (void) loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
++ (DGArtistReleaseResponse *)response;
 
 @end
