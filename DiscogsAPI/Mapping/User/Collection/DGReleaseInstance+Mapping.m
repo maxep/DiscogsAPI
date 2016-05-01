@@ -22,9 +22,12 @@
 
 #import "DGReleaseInstance+Mapping.h"
 
+#import "DGArtist+Mapping.h"
+#import "DGCollectionFieldInstance+Mapping.h"
+
 @implementation DGReleaseInstance (Mapping)
 
-+ (RKMapping *) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGReleaseInstance class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"instance_id"                : @"ID",
@@ -33,9 +36,12 @@
                                                   @"basic_information.title"    : @"title",
                                                   @"basic_information.year"     : @"year",
                                                   @"basic_information.id"       : @"releaseID",
-                                                  @"basic_information.artists"  : @"artists",
                                                   @"basic_information.labels"   : @"labels"
                                                   }];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"basic_information.artists" toKeyPath:@"artists" withMapping:[DGArtist mapping]]];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"notes" toKeyPath:@"notes" withMapping:[DGCollectionFieldInstance mapping]]];
     
     return mapping;
 }

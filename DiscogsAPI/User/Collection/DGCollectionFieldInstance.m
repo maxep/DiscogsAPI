@@ -1,6 +1,8 @@
-// DGCollectionField.h
 //
-// Copyright (c) 2015 Maxime Epain
+//  DGCollectionFieldInstance.m
+//  Pods
+//
+//  Created by Nate Rivard on 5/1/16.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,25 +22,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGObject.h"
+#import "DGCollectionFieldInstance.h"
 
-@interface DGCollectionFieldsRequest : NSObject
+@implementation DGCollectionFieldInstance
 
-@property (nonatomic, strong) NSString *userName;
-
-+ (DGCollectionFieldsRequest *)request;
-
-@end
-
-@interface DGCollectionField : DGObject
-
-@property (nonatomic, strong) NSString  *name;
-@property (nonatomic, strong) NSNumber  *lines;
-@property (nonatomic, strong) NSString  *type;
-@property (nonatomic, strong) NSNumber  *position;
-@property (nonatomic, strong) NSArray   *options;
-@property (nonatomic, readwrite) BOOL   isPublic;
-
-+ (DGCollectionField *)field;
+- (instancetype)fieldInstance {
+    return [[DGCollectionFieldInstance alloc] init];
+}
 
 @end

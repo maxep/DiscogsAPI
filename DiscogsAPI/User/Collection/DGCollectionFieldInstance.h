@@ -1,6 +1,8 @@
-// DGCollectionField.h
 //
-// Copyright (c) 2015 Maxime Epain
+//  DGCollectionFieldInstance.h
+//  Pods
+//
+//  Created by Nate Rivard on 5/1/16.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,23 +24,21 @@
 
 #import "DGObject.h"
 
-@interface DGCollectionFieldsRequest : NSObject
+/// a specific field instance on a release
+///
+/// Sample JSON:
+//    {
+//        "field_id" = 1;
+//        value = "Near Mint (NM or M-)";
+//    }
+@interface DGCollectionFieldInstance : DGObject
 
-@property (nonatomic, strong) NSString *userName;
+/// ID corresponding to an ID in the user's collection fields
+@property (nonatomic, strong) NSNumber *fieldID;
 
-+ (DGCollectionFieldsRequest *)request;
+/// the value for this particular field instance
+@property (nonatomic, strong) NSString *value;
 
-@end
-
-@interface DGCollectionField : DGObject
-
-@property (nonatomic, strong) NSString  *name;
-@property (nonatomic, strong) NSNumber  *lines;
-@property (nonatomic, strong) NSString  *type;
-@property (nonatomic, strong) NSNumber  *position;
-@property (nonatomic, strong) NSArray   *options;
-@property (nonatomic, readwrite) BOOL   isPublic;
-
-+ (DGCollectionField *)field;
+- (instancetype)fieldInstance;
 
 @end

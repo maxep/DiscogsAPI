@@ -21,42 +21,60 @@
 // THE SOFTWARE.
 
 #import "DGObject.h"
+#import "DGArtist.h"
+#import "DGCollectionFieldInstance.h"
 
 @interface DGReleaseInstance : DGObject
 
-@property (nonatomic, strong) NSNumber * rating;
-@property (nonatomic, strong) NSNumber * year;
-@property (nonatomic, strong) NSString * thumb;
-@property (nonatomic, strong) NSString * title;
-@property (nonatomic, strong) NSNumber * releaseID;
-@property (nonatomic, strong) NSArray  * artists;
-@property (nonatomic, strong) NSArray  * labels;
+/// user rating for this release instance
+@property (nonatomic, strong) NSNumber *rating;
 
-+ (DGReleaseInstance*) instance;
+/// release year
+@property (nonatomic, strong) NSNumber *year;
+
+/// thumbnail image URL
+@property (nonatomic, strong) NSString *thumb;
+
+/// release title
+@property (nonatomic, strong) NSString *title;
+
+/// release ID (regular ID is of this instance)
+@property (nonatomic, strong) NSNumber *releaseID;
+
+/// release artists
+@property (nonatomic, strong) NSArray<DGArtist *> *artists;
+
+/// technically notes but really encompasses instance fields
+@property (nonatomic, strong) NSArray<DGCollectionFieldInstance *> *notes;
+
+/// release labels (dictionary for now)
+@property (nonatomic, strong) NSArray  *labels;
+
++ (DGReleaseInstance *)instance;
 
 @end
 
 @interface DGReleaseInstanceRequest : NSObject
 
-@property (nonatomic, strong) NSString* userName;
-@property (nonatomic, strong) NSNumber* folderID;
-@property (nonatomic, strong) NSNumber* releaseID;
-@property (nonatomic, strong) NSNumber* instanceID;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSNumber *folderID;
+@property (nonatomic, strong) NSNumber *releaseID;
+@property (nonatomic, strong) NSNumber *instanceID;
 
-+ (DGReleaseInstanceRequest*) request;
++ (DGReleaseInstanceRequest *)request;
 
 @end
 
 @interface DGEditFieldsInstanceRequest : NSObject
 
-@property (nonatomic, strong) NSString* userName;
-@property (nonatomic, strong) NSNumber* folderID;
-@property (nonatomic, strong) NSNumber* releaseID;
-@property (nonatomic, strong) NSNumber* instanceID;
-@property (nonatomic, strong) NSNumber* fieldID;
-@property (nonatomic, strong) NSString* value;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSNumber *folderID;
+@property (nonatomic, strong) NSNumber *releaseID;
+@property (nonatomic, strong) NSNumber *instanceID;
+@property (nonatomic, strong) NSNumber *fieldID;
+@property (nonatomic, strong) NSString *value;
 
-+ (DGEditFieldsInstanceRequest*) request;
++ (DGEditFieldsInstanceRequest *)request;
 
 @end
 
