@@ -129,12 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D015704D1B80B772002C0B08 /* Build configuration list for PBXNativeTarget "DiscogsAPI" */;
 			buildPhases = (
-				5D3AF4A263AAF74A097DD301 /* Check Pods Manifest.lock */,
+				5D3AF4A263AAF74A097DD301 /* 📦 Check Pods Manifest.lock */,
 				D01570261B80B772002C0B08 /* Sources */,
 				D01570271B80B772002C0B08 /* Frameworks */,
 				D01570281B80B772002C0B08 /* Resources */,
-				582DB0114327C011F9E80C34 /* Copy Pods Resources */,
-				A117EF97E9EBFBC1DAC94E22 /* Embed Pods Frameworks */,
+				582DB0114327C011F9E80C34 /* 📦 Copy Pods Resources */,
+				A117EF97E9EBFBC1DAC94E22 /* 📦 Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,14 +191,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		582DB0114327C011F9E80C34 /* Copy Pods Resources */ = {
+		582DB0114327C011F9E80C34 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,14 +206,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D3AF4A263AAF74A097DD301 /* Check Pods Manifest.lock */ = {
+		5D3AF4A263AAF74A097DD301 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +221,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A117EF97E9EBFBC1DAC94E22 /* Embed Pods Frameworks */ = {
+		A117EF97E9EBFBC1DAC94E22 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
