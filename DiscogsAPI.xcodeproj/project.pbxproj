@@ -10,14 +10,14 @@
 		D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
-		D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */; };
 		D0A588871CFF9482008DF0A4 /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */; };
-		D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */; };
 		D0A588891CFF9482008DF0A4 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */; };
-		D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */; };
 		D0A5888B1CFF9482008DF0A4 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587EF1CFF9481008DF0A4 /* DGTokenStore.m */; };
-		D0A5888C1CFF9482008DF0A4 /* DGEndpoint+ Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F11CFF9481008DF0A4 /* DGEndpoint+ Configuration.m */; };
-		D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A5888C1CFF9482008DF0A4 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */; };
+		D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */; };
 		D0A5888E1CFF9482008DF0A4 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A5888F1CFF9482008DF0A4 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */; };
 		D0A588901CFF9482008DF0A4 /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F61CFF9481008DF0A4 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,53 +56,53 @@
 		D0A588B11CFF9482008DF0A4 /* DGSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5881E1CFF9481008DF0A4 /* DGSearch.m */; };
 		D0A588B21CFF9482008DF0A4 /* DiscogsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5881F1CFF9481008DF0A4 /* DiscogsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588B31CFF9482008DF0A4 /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588201CFF9481008DF0A4 /* DiscogsAPI.m */; };
-		D0A588B41CFF9482008DF0A4 /* DGArtist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588241CFF9481008DF0A4 /* DGArtist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588B41CFF9482008DF0A4 /* DGArtist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588241CFF9481008DF0A4 /* DGArtist+Mapping.h */; };
 		D0A588B51CFF9482008DF0A4 /* DGArtist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588251CFF9481008DF0A4 /* DGArtist+Mapping.m */; };
-		D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588261CFF9481008DF0A4 /* DGArtistRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588261CFF9481008DF0A4 /* DGArtistRelease+Mapping.h */; };
 		D0A588B71CFF9482008DF0A4 /* DGArtistRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588271CFF9481008DF0A4 /* DGArtistRelease+Mapping.m */; };
-		D0A588B81CFF9482008DF0A4 /* DGMember+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588281CFF9481008DF0A4 /* DGMember+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588B81CFF9482008DF0A4 /* DGMember+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588281CFF9481008DF0A4 /* DGMember+Mapping.h */; };
 		D0A588B91CFF9482008DF0A4 /* DGMember+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588291CFF9481008DF0A4 /* DGMember+Mapping.m */; };
-		D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5882B1CFF9481008DF0A4 /* DGCommunity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5882B1CFF9481008DF0A4 /* DGCommunity+Mapping.h */; };
 		D0A588BB1CFF9482008DF0A4 /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5882C1CFF9481008DF0A4 /* DGCommunity+Mapping.m */; };
-		D0A588BC1CFF9482008DF0A4 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5882D1CFF9481008DF0A4 /* DGFormat+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588BC1CFF9482008DF0A4 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5882D1CFF9481008DF0A4 /* DGFormat+Mapping.h */; };
 		D0A588BD1CFF9482008DF0A4 /* DGFormat+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5882E1CFF9481008DF0A4 /* DGFormat+Mapping.m */; };
-		D0A588BE1CFF9482008DF0A4 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5882F1CFF9481008DF0A4 /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588BE1CFF9482008DF0A4 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5882F1CFF9481008DF0A4 /* DGIdentifier+Mapping.h */; };
 		D0A588BF1CFF9482008DF0A4 /* DGIdentifier+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588301CFF9481008DF0A4 /* DGIdentifier+Mapping.m */; };
-		D0A588C01CFF9482008DF0A4 /* DGImage+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588311CFF9481008DF0A4 /* DGImage+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588C01CFF9482008DF0A4 /* DGImage+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588311CFF9481008DF0A4 /* DGImage+Mapping.h */; };
 		D0A588C11CFF9482008DF0A4 /* DGImage+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588321CFF9481008DF0A4 /* DGImage+Mapping.m */; };
-		D0A588C21CFF9482008DF0A4 /* DGTrack+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588331CFF9481008DF0A4 /* DGTrack+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588C21CFF9482008DF0A4 /* DGTrack+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588331CFF9481008DF0A4 /* DGTrack+Mapping.h */; };
 		D0A588C31CFF9482008DF0A4 /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588341CFF9481008DF0A4 /* DGTrack+Mapping.m */; };
-		D0A588C41CFF9482008DF0A4 /* DGVideo+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588351CFF9481008DF0A4 /* DGVideo+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588C41CFF9482008DF0A4 /* DGVideo+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588351CFF9481008DF0A4 /* DGVideo+Mapping.h */; };
 		D0A588C51CFF9482008DF0A4 /* DGVideo+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588361CFF9481008DF0A4 /* DGVideo+Mapping.m */; };
-		D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588381CFF9481008DF0A4 /* DGLabel+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588381CFF9481008DF0A4 /* DGLabel+Mapping.h */; };
 		D0A588C71CFF9482008DF0A4 /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588391CFF9481008DF0A4 /* DGLabel+Mapping.m */; };
-		D0A588C81CFF9482008DF0A4 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5883A1CFF9481008DF0A4 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588C81CFF9482008DF0A4 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5883A1CFF9481008DF0A4 /* DGLabelRelease+Mapping.h */; };
 		D0A588C91CFF9482008DF0A4 /* DGLabelRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5883B1CFF9481008DF0A4 /* DGLabelRelease+Mapping.m */; };
-		D0A588CA1CFF9482008DF0A4 /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5883D1CFF9481008DF0A4 /* DGMaster+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588CA1CFF9482008DF0A4 /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5883D1CFF9481008DF0A4 /* DGMaster+Mapping.h */; };
 		D0A588CB1CFF9482008DF0A4 /* DGMaster+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5883E1CFF9481008DF0A4 /* DGMaster+Mapping.m */; };
-		D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5883F1CFF9481008DF0A4 /* DGMasterVersion+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5883F1CFF9481008DF0A4 /* DGMasterVersion+Mapping.h */; };
 		D0A588CD1CFF9482008DF0A4 /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588401CFF9481008DF0A4 /* DGMasterVersion+Mapping.m */; };
-		D0A588CE1CFF9482008DF0A4 /* DGRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588421CFF9481008DF0A4 /* DGRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588CE1CFF9482008DF0A4 /* DGRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588421CFF9481008DF0A4 /* DGRelease+Mapping.h */; };
 		D0A588CF1CFF9482008DF0A4 /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588431CFF9481008DF0A4 /* DGRelease+Mapping.m */; };
-		D0A588D01CFF9482008DF0A4 /* DGSearch+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588451CFF9481008DF0A4 /* DGSearch+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588D01CFF9482008DF0A4 /* DGSearch+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588451CFF9481008DF0A4 /* DGSearch+Mapping.h */; };
 		D0A588D11CFF9482008DF0A4 /* DGSearch+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588461CFF9481008DF0A4 /* DGSearch+Mapping.m */; };
-		D0A588D21CFF9482008DF0A4 /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588491CFF9481008DF0A4 /* DGPrice+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588D21CFF9482008DF0A4 /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588491CFF9481008DF0A4 /* DGPrice+Mapping.h */; };
 		D0A588D31CFF9482008DF0A4 /* DGPrice+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5884A1CFF9481008DF0A4 /* DGPrice+Mapping.m */; };
-		D0A588D41CFF9482008DF0A4 /* DGPagination+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5884C1CFF9481008DF0A4 /* DGPagination+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588D41CFF9482008DF0A4 /* DGPagination+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5884C1CFF9481008DF0A4 /* DGPagination+Mapping.h */; };
 		D0A588D51CFF9482008DF0A4 /* DGPagination+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5884D1CFF9481008DF0A4 /* DGPagination+Mapping.m */; };
-		D0A588D61CFF9482008DF0A4 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588501CFF9482008DF0A4 /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588D61CFF9482008DF0A4 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588501CFF9482008DF0A4 /* DGCollectionField+Mapping.h */; };
 		D0A588D71CFF9482008DF0A4 /* DGCollectionField+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588511CFF9482008DF0A4 /* DGCollectionField+Mapping.m */; };
-		D0A588D81CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588521CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588D81CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588521CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.h */; };
 		D0A588D91CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588531CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.m */; };
-		D0A588DA1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588541CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588DA1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588541CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h */; };
 		D0A588DB1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588551CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m */; };
-		D0A588DC1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588561CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588DC1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588561CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h */; };
 		D0A588DD1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588571CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m */; };
-		D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588591CFF9482008DF0A4 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588591CFF9482008DF0A4 /* DGIdentity+Mapping.h */; };
 		D0A588DF1CFF9482008DF0A4 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5885A1CFF9482008DF0A4 /* DGIdentity+Mapping.m */; };
-		D0A588E01CFF9482008DF0A4 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5885C1CFF9482008DF0A4 /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588E01CFF9482008DF0A4 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5885C1CFF9482008DF0A4 /* DGProfile+Mapping.h */; };
 		D0A588E11CFF9482008DF0A4 /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5885D1CFF9482008DF0A4 /* DGProfile+Mapping.m */; };
-		D0A588E21CFF9482008DF0A4 /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5885F1CFF9482008DF0A4 /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D0A588E21CFF9482008DF0A4 /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5885F1CFF9482008DF0A4 /* DGWantlist+Mapping.h */; };
 		D0A588E31CFF9482008DF0A4 /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588601CFF9482008DF0A4 /* DGWantlist+Mapping.m */; };
 		D0A588E41CFF9482008DF0A4 /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588621CFF9482008DF0A4 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588E51CFF9482008DF0A4 /* DGMarketplace.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588631CFF9482008DF0A4 /* DGMarketplace.m */; };
@@ -149,7 +149,7 @@
 		D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
 		D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
 		D0A587EF1CFF9481008DF0A4 /* DGTokenStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
-		D0A587F11CFF9481008DF0A4 /* DGEndpoint+ Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+ Configuration.m"; sourceTree = "<group>"; };
+		D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Configuration.m"; sourceTree = "<group>"; };
 		D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
 		D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGEndpoint.h; sourceTree = "<group>"; };
 		D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEndpoint.m; sourceTree = "<group>"; };
@@ -303,8 +303,6 @@
 				D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */,
 				D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */,
 				D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */,
-				D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */,
-				D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */,
 				D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */,
 				D0A587EF1CFF9481008DF0A4 /* DGTokenStore.m */,
 			);
@@ -314,8 +312,8 @@
 		D0A587F01CFF9481008DF0A4 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				D0A587F11CFF9481008DF0A4 /* DGEndpoint+ Configuration.m */,
 				D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */,
+				D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -323,6 +321,8 @@
 		D0A587F31CFF9481008DF0A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */,
+				D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */,
 				D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */,
 				D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */,
 				D0A587F61CFF9481008DF0A4 /* DGObject.h */,
@@ -778,7 +778,6 @@
 				D0A5889A1CFF9482008DF0A4 /* DGFormat.h in Headers */,
 				D0A588E41CFF9482008DF0A4 /* DGMarketplace.h in Headers */,
 				D0A588FA1CFF9482008DF0A4 /* DGProfile.h in Headers */,
-				D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */,
 				D0A588921CFF9482008DF0A4 /* DGArtist.h in Headers */,
 				D0A588EA1CFF9482008DF0A4 /* DGResource.h in Headers */,
 				D0A588A01CFF9482008DF0A4 /* DGTrack.h in Headers */,
@@ -786,10 +785,10 @@
 				D0A588F01CFF9482008DF0A4 /* DGCollectionFieldInstance.h in Headers */,
 				D0A588E61CFF9482008DF0A4 /* DGPrice.h in Headers */,
 				D0A588FC1CFF9482008DF0A4 /* DGWantlist.h in Headers */,
-				D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */,
 				D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */,
 				D0A588DA1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h in Headers */,
 				D0A588D61CFF9482008DF0A4 /* DGCollectionField+Mapping.h in Headers */,
+				D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */,
 				D0A588D41CFF9482008DF0A4 /* DGPagination+Mapping.h in Headers */,
 				D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */,
 				D0A588C41CFF9482008DF0A4 /* DGVideo+Mapping.h in Headers */,
@@ -813,6 +812,7 @@
 				D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */,
 				D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */,
 				D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */,
+				D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -967,7 +967,7 @@
 				D0A588F51CFF9482008DF0A4 /* DGReleaseInstance.m in Sources */,
 				D0A588A31CFF9482008DF0A4 /* DGVideo.m in Sources */,
 				D0A5889F1CFF9482008DF0A4 /* DGImage.m in Sources */,
-				D0A5888C1CFF9482008DF0A4 /* DGEndpoint+ Configuration.m in Sources */,
+				D0A5888C1CFF9482008DF0A4 /* DGEndpoint+Configuration.m in Sources */,
 				D0A5888B1CFF9482008DF0A4 /* DGTokenStore.m in Sources */,
 				D0A588991CFF9482008DF0A4 /* DGCommunity.m in Sources */,
 				D0A5889D1CFF9482008DF0A4 /* DGIdentifier.m in Sources */,
