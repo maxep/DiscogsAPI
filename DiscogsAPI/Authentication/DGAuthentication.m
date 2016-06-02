@@ -20,8 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGAuthentication.h"
-#import "DGHTTPClient.h"
+#import "DGEndpoint+Configuration.h"
+#import "DGAuthentication+HTTPCLient.h"
 
 #import "DGTokenStore.h"
 #import "DGAuthView.h"
@@ -40,25 +40,22 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 @property (nonatomic,strong) NSString *accessToken;
 @end
 
-@implementation DGAuthentication
+@implementation DGAuthentication {
+    DGHTTPClient *_HTTPClient;
+}
 
 @dynamic delegate;
-@synthesize HTTPClient = _HTTPClient;
 
-+ (DGAuthentication*) authentication {
-    return [[DGAuthentication alloc] init];
+- (void)configureManager:(RKObjectManager *)objectManager {
+    
+    self.consumerKey    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
+    self.consumerSecret = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
+    self.accessToken    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsAccessToken];
+    
+    objectManager.HTTPClient = self.HTTPClient;
 }
 
-- (instancetype)init {
-    if (self = [super init]) {
-        self.consumerKey    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
-        self.consumerSecret = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
-        self.accessToken    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsAccessToken];
-    }
-    return self;
-}
-
-- (void) authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure {
     
     if ([self.delegate isReachable]) {
         [self.delegate identifyUserWithSuccess:success failure:^(NSError *error) {
@@ -85,7 +82,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     }
 }
 
-- (void) authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure {
     
     NSURL* callback = [NSURL URLWithString:kDGCallback];
     
@@ -97,7 +94,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     [self authenticateWithCallback:callback success:success failure:failure];
 }
 
-- (void) removeAccountCredential {
+- (void)removeAccountCredential {
     [DGTokenStore deleteCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
     self.HTTPClient.accessToken = nil;
 }

@@ -89,6 +89,9 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  
  @return The created NSError.
  */
-- (NSError*) errorWithCode:(NSInteger)code info:(NSString*)info;
+- (NSError*)errorWithCode:(NSInteger)code info:(NSString*)info;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end

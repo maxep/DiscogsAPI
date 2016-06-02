@@ -29,6 +29,24 @@
 #import "DGMarketplace.h"
 
 /**
+ Discogs Media Type.
+ */
+typedef NS_ENUM(NSInteger, DGMediaType){
+    /**
+     Discogs Media Type.
+     */
+    DGDiscogsMediaType = 0,
+    /**
+     HTML media type.
+     */
+    DGHTMLMediaType,
+    /**
+     Plain text media type.
+     */
+    DGPlainTextMediaType
+};
+
+/**
  Discogs API client class to manage client initialization and api endpoints.
  */
 @interface DiscogsAPI : NSObject <DGEndpointDelegate>
@@ -36,27 +54,27 @@
 /**
  Autentication endpoint.
  */
-@property (nonatomic, readonly) DGAuthentication * authentication;
+@property (nonatomic, readonly) DGAuthentication *authentication;
 
 /**
  Database endpoint.
  */
-@property (nonatomic, readonly) DGDatabase * database;
+@property (nonatomic, readonly) DGDatabase *database;
 
 /**
  User endpoint.
  */
-@property (nonatomic, readonly) DGUser * user;
+@property (nonatomic, readonly) DGUser *user;
 
 /**
  Marketplace endpoint.
  */
-@property (nonatomic, readonly) DGMarketplace * marketplace;
+@property (nonatomic, readonly) DGMarketplace *marketplace;
 
 /**
  Resource endpoint.
  */
-@property (nonatomic, readonly) DGResource * resource;
+@property (nonatomic, readonly) DGResource *resource;
 
 /**
  Media Type.
@@ -73,13 +91,13 @@
  
  @return The shared discogs api client.
  */
-+ (DiscogsAPI *) client;
++ (DiscogsAPI *)client;
 
 /**
  Cancell all queued and current operations with Discogs.
  */
-- (void) cancelAllOperations;
+- (void)cancelAllOperations;
 
-- (void) isAuthenticated:(void (^)(BOOL success))success;
+- (void)isAuthenticated:(void (^)(BOOL success))success;
 
 @end

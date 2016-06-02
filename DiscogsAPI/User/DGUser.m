@@ -35,31 +35,25 @@
 @synthesize wantlist     = _wantlist;
 @synthesize collection  = _collection;
 
-+ (DGUser*) user {
-    return [[DGUser alloc] init];
-}
-
 #pragma mark Properties
 
 - (DGWantlist *)wantlist {
     if (!_wantlist) {
-        _wantlist = [DGWantlist wantlist];
-        _wantlist.manager = self.manager;
+        _wantlist = [[DGWantlist alloc] initWithManager:self.manager];
     }
     return _wantlist;
 }
 
 - (DGCollection *)collection {
     if (!_collection) {
-        _collection = [DGCollection collection];
-        _collection.manager = self.manager;
+        _collection = [[DGCollection alloc] initWithManager:self.manager];
     }
     return _collection;
 }
 
 #pragma mark Configuration
 
-- (void) configureManager:(RKObjectManager*)objectManager {
+- (void)configureManager:(RKObjectManager*)objectManager {
     //User Identity
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
     
@@ -69,7 +63,7 @@
 
 #pragma mark Public Methods
 
-- (void) identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
+- (void)identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
     DGIdentity* identity = [DGIdentity identity];
     
     NSURLRequest *requestURL = [self.manager requestWithObject:identity
@@ -99,7 +93,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+- (void)getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
     
     DGProfile* profile = [DGProfile profile];
     profile.userName = userName;
@@ -131,7 +125,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+- (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
 
     DGCheckReachability();
     

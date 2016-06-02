@@ -42,13 +42,6 @@
 @property (nonatomic,readonly) DGCollection *collection;
 
 /**
- Creates and initializes an 'DGUser' object.
- 
- @return The newly-initialized user object.
- */
-+ (DGUser*) user;
-
-/**
  Gets authentified user identity.
  
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the user identity.

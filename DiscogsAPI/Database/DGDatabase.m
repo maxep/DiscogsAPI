@@ -34,11 +34,7 @@
 
 @implementation DGDatabase
 
-+ (DGDatabase*) database {
-    return [[DGDatabase alloc] init];
-}
-
-- (void) configureManager:(RKObjectManager*)objectManager {
+- (void)configureManager:(RKObjectManager*)objectManager {
     [super configureManager:objectManager];
     
     //search
@@ -60,7 +56,7 @@
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGLabelReleasesRequest class] pathPattern:@"labels/:labelID/releases" method:RKRequestMethodGET]];
 }
 
-- (void) searchFor:(DGSearchRequest*)request success:(void (^)(DGSearchResponse* response))success failure:(void (^)(NSError* error))failure {
+- (void)searchFor:(DGSearchRequest*)request success:(void (^)(DGSearchResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
@@ -83,7 +79,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getArtist:(NSNumber*)artistID success:(void (^)(DGArtist* artist))success failure:(void (^)(NSError* error))failure {
+- (void)getArtist:(NSNumber*)artistID success:(void (^)(DGArtist* artist))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGArtist* artist    = [DGArtist artist];
@@ -110,7 +106,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getArtistReleases:(DGArtistReleaseRequest*)request success:(void (^)(DGArtistReleaseResponse* response))success failure:(void (^)(NSError* error))failure {
+- (void)getArtistReleases:(DGArtistReleaseRequest*)request success:(void (^)(DGArtistReleaseResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
@@ -133,7 +129,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getRelease:(NSNumber*)releaseID success:(void (^)(DGRelease* release))success failure:(void (^)(NSError* error))failure {
+- (void)getRelease:(NSNumber*)releaseID success:(void (^)(DGRelease* release))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGRelease* release  = [DGRelease release];
@@ -162,7 +158,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getMaster:(NSNumber*)masterID success:(void (^)(DGMaster* master))success failure:(void (^)(NSError* error))failure {
+- (void)getMaster:(NSNumber*)masterID success:(void (^)(DGMaster* master))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGMaster* master    = [DGMaster master];
@@ -190,7 +186,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure {
+- (void)getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
@@ -213,7 +209,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getLabel:(NSNumber*)labelID success:(void (^)(DGLabel* label))success failure:(void (^)(NSError* error))failure {
+- (void)getLabel:(NSNumber*)labelID success:(void (^)(DGLabel* label))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGLabel* label  = [DGLabel label];
@@ -241,7 +237,7 @@
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
-- (void) getLabelReleases:(DGLabelReleasesRequest*)request success:(void (^)(DGLabelReleasesResponse* response))success failure:(void (^)(NSError* error))failure {
+- (void)getLabelReleases:(DGLabelReleasesRequest*)request success:(void (^)(DGLabelReleasesResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];

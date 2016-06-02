@@ -20,8 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "DGHTTPClient.h"
 #import "DGEndpoint.h"
 
 /**
@@ -30,18 +28,6 @@
  Next queries will contains these two tokens in their 'Authorization' header.
  */
 @interface DGAuthentication : DGEndpoint
-
-/**
- The HTTP client with authorized header.
- */
-@property (nonatomic, readonly) DGHTTPClient *HTTPClient;
-
-/**
- Creates and initializes a `DGAuthentication` object.
- 
- @return The newly-initialized Authentication object.
- */
-+ (DGAuthentication*) authentication;
 
 /**
  Initiates an authenticate process.
@@ -59,7 +45,7 @@
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
  Initiate an authenticate process.
@@ -68,11 +54,11 @@
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure  A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure;
 
 /**
  Remove Discogs account credential from keychain.
  */
-- (void) removeAccountCredential;
+- (void)removeAccountCredential;
 
 @end

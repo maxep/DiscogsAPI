@@ -23,6 +23,8 @@
 #import "DGEndpoint.h"
 #import <RestKit/RestKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define DGCheckReachability(ret) { \
     if(![self.delegate isReachable]) { \
         if(failure) \
@@ -41,16 +43,25 @@
 
 @interface DGEndpoint (Configuration)
 
-@property (nonatomic,strong) RKObjectManager *manager;
+/**
+ A block that can act as a failure for a task.
+ */
+typedef void(^DGFailureBlock)(NSError * _Nullable error);
 
-- (void) configureManager:(RKObjectManager*)objectManager;
+@property (nonatomic,readonly) RKObjectManager *manager;
+
+- (instancetype)initWithManager:(RKObjectManager *)manager;
+
+- (void)configureManager:(RKObjectManager*)objectManager;
 
 @end
 
 @interface RKErrorMessage (Mapping)
 
-+ (RKMapping *) mapping;
++ (nullable RKMapping *)mapping;
 
-+ (RKResponseDescriptor*) responseDescriptor;
++ (nullable RKResponseDescriptor*)responseDescriptor;
 
 @end
+
+NS_ASSUME_NONNULL_END

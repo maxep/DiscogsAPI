@@ -33,20 +33,13 @@
 @property (nonatomic, strong) NSString* coxyURL;
 
 /**
- Creates and initializes an 'DGImageResource' object.
- 
- @return The newly-initialized image resource object.
- */
-+ (DGResource*) resource;
-
-/**
  Gets a Discogs image
  
  @param discogsImageURL The Discogs image URL.
  @param success         A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
  @param failure         A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
+- (void)getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
 
 /**
  Creates a Coxy image request operation for AFNetworking (https://github.com/AFNetworking/AFNetworking ).
@@ -57,6 +50,6 @@
  
  @return The Coxy image request operation.
  */
-- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
+- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
 
 @end

@@ -25,18 +25,14 @@
 
 @implementation DGResource
 
-+ (DGResource*) resource {
-    return [[DGResource alloc] init];
-}
-
-- (void) getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
+- (void)getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability(); DGCheckURL(imageURL,);
     
     RKObjectRequestOperation* operation = (RKObjectRequestOperation*)[self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
     [self.manager enqueueObjectRequestOperation:operation];
 }
 
-- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
+- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
     DGCheckURL(url, nil);
     
     NSString *path = url;

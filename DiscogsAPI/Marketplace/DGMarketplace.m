@@ -27,18 +27,14 @@
 
 @implementation DGMarketplace
 
-+ (DGMarketplace*) marketplace {
-    return [[DGMarketplace alloc] init];
-}
-
-- (void) configureManager:(RKObjectManager*)objectManager {
+- (void)configureManager:(RKObjectManager*)objectManager {
     [super configureManager:objectManager];
     
     //Price suggestions
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGPriceSuggectionsRequest class] pathPattern:@"/marketplace/price_suggestions/:releaseID" method:RKRequestMethodGET]];
 }
 
-- (void) getPriceSuggestions:(NSNumber*)releaseID success:(void (^)(DGPriceSuggectionsResponse* response))success failure:(void (^)(NSError* error))failure {
+- (void)getPriceSuggestions:(NSNumber*)releaseID success:(void (^)(DGPriceSuggectionsResponse* response))success failure:(void (^)(NSError* error))failure {
     DGCheckReachability();
     
     DGPriceSuggectionsRequest* request = [DGPriceSuggectionsRequest request];

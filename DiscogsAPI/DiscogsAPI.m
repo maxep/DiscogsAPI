@@ -22,9 +22,19 @@
 
 #import "DiscogsAPI.h"
 #import "DGEndpoint+Configuration.h"
+#import "DGAuthentication+HTTPCLient.h"
+
+#import "DGHTTPClient.h"
+
+#define kDGMediaTypeAsString(enum) @[@"discogs", @"html", @"plaintext"][enum]
+#define kStringDGMediaType(str) [@{@"discogs":@0, @"html":@1, @"plaintext":@2}[str] integerValue]
 
 @interface DiscogsAPI ()
 @property (nonatomic, strong) DGAuthentication  *authentication;
+@property (nonatomic, strong) DGDatabase        *database;
+@property (nonatomic, strong) DGUser            *user;
+@property (nonatomic, strong) DGMarketplace     *marketplace;
+@property (nonatomic, strong) DGResource        *resource;
 @property (nonatomic, assign) BOOL isReachable;
 @end
 
@@ -52,15 +62,24 @@
         RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
         
         //Setup Object Manager
-        RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:self.authentication.HTTPClient];
-        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+        RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString: kDGBaseURL]];// [[RKObjectManager alloc] initWi];
+//        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
         
         //Configure Object manager
-        self.authentication.manager = objectManager;
-        self.database.manager       = objectManager;
-        self.user.manager           = objectManager;
-        self.marketplace.manager    = objectManager;
-        self.resource.manager       = objectManager;
+        self.authentication = [[DGAuthentication alloc] initWithManager:objectManager];
+        self.authentication.delegate = self;
+        
+        self.database       = [[DGDatabase alloc] initWithManager:objectManager];
+        self.database.delegate = self;
+        
+        self.user           = [[DGUser alloc] initWithManager:objectManager];
+        self.user.delegate = self;
+        
+        self.marketplace    = [[DGMarketplace alloc] initWithManager:objectManager];
+        self.marketplace.delegate = self;
+        
+        self.resource       = [[DGResource alloc] initWithManager:objectManager];
+        self.resource.delegate = self;
         
         //Init reachability
         [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
@@ -76,11 +95,11 @@
     return self;
 }
 
-- (void) cancelAllOperations {
+- (void)cancelAllOperations {
     [RKObjectManager.sharedManager.operationQueue cancelAllOperations];
 }
 
-- (void) isAuthenticated:(void (^)(BOOL success))success {
+- (void)isAuthenticated:(void (^)(BOOL success))success {
     
     [self identifyUserWithSuccess:^{
         success(YES);
@@ -92,58 +111,18 @@
 
 #pragma mark Private Methods
 
-- (void) setReachability:(AFNetworkReachabilityStatus) status {
+- (void)setReachability:(AFNetworkReachabilityStatus) status {
     self.isReachable = status != AFNetworkReachabilityStatusNotReachable;
 }
 
 #pragma mark Properties
 
-- (DGAuthentication *)authentication {
-    if (!_authentication) {
-        _authentication = [DGAuthentication authentication];
-        _authentication.delegate = self;
-    }
-    return _authentication;
-}
-
-- (DGDatabase *)database {
-    if (!_database) {
-        _database           = [DGDatabase database];
-        _database.delegate  = self;
-    }
-    return _database;
-}
-
-- (DGUser *)user {
-    if (!_user) {
-        _user           = [DGUser user];
-        _user.delegate  = self;
-    }
-    return _user;
-}
-
-- (DGMarketplace *)marketplace {
-    if (!_marketplace) {
-        _marketplace           = [DGMarketplace marketplace];
-        _marketplace.delegate  = self;
-    }
-    return _marketplace;
-}
-
-- (DGResource *)resource {
-    if (!_resource) {
-        _resource           = [DGResource resource];
-        _resource.delegate  = self;
-    }
-    return _resource;
-}
-
 - (DGMediaType)mediaType {
-    return self.authentication.HTTPClient.mediaType;
+    return kStringDGMediaType(self.authentication.HTTPClient.mediaType);
 }
 
 - (void)setMediaType:(DGMediaType)mediaType {
-    self.authentication.HTTPClient.mediaType = mediaType;
+    self.authentication.HTTPClient.mediaType = kDGMediaTypeAsString(mediaType);
 }
 
 #pragma mark <DGEndpointDelegate>

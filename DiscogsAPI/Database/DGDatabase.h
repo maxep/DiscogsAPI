@@ -40,20 +40,13 @@
 @interface DGDatabase : DGEndpoint
 
 /**
- Creates and initializes a `DGDatabase` object.
- 
- @return The newly-initialized Database object.
- */
-+ (DGDatabase*) database;
-
-/**
  Searches in Discogs database.
  
  @param request The search request.
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the search response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) searchFor:(DGSearchRequest*)request success:(void (^)(DGSearchResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)searchFor:(DGSearchRequest*)request success:(void (^)(DGSearchResponse* response))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets an artist from Discogs database.
@@ -62,7 +55,7 @@
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the artist.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getArtist:(NSNumber*)artistID success:(void (^)(DGArtist* artist))success failure:(void (^)(NSError* error))failure;
+- (void)getArtist:(NSNumber*)artistID success:(void (^)(DGArtist* artist))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets an artist's releases.
@@ -71,7 +64,7 @@
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated artist releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getArtistReleases:(DGArtistReleaseRequest*)request success:(void (^)(DGArtistReleaseResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)getArtistReleases:(DGArtistReleaseRequest*)request success:(void (^)(DGArtistReleaseResponse* response))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a release from Discogs database.
@@ -80,7 +73,7 @@
  @param success   A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the release.
  @param failure   A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getRelease:(NSNumber*)releaseID success:(void (^)(DGRelease* release))success failure:(void (^)(NSError* error))failure;
+- (void)getRelease:(NSNumber*)releaseID success:(void (^)(DGRelease* release))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a master release from Dsicogs database.
@@ -89,7 +82,7 @@
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the master release.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getMaster:(NSNumber*)masterID success:(void (^)(DGMaster* master))success failure:(void (^)(NSError* error))failure;
+- (void)getMaster:(NSNumber*)masterID success:(void (^)(DGMaster* master))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a label from Discogs database.
@@ -98,7 +91,7 @@
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the label.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getLabel:(NSNumber*)labelID success:(void (^)(DGLabel* label))success failure:(void (^)(NSError* error))failure;
+- (void)getLabel:(NSNumber*)labelID success:(void (^)(DGLabel* label))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a labels's releases.
@@ -107,7 +100,7 @@
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated label releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getLabelReleases:(DGLabelReleasesRequest*)request success:(void (^)(DGLabelReleasesResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)getLabelReleases:(DGLabelReleasesRequest*)request success:(void (^)(DGLabelReleasesResponse* response))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a master's versions
@@ -116,6 +109,6 @@
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated master releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void) getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)getMasterVersion:(DGMasterVersionRequest*)request success:(void (^)(DGMasterVersionResponse* response))success failure:(void (^)(NSError* error))failure;
 
 @end

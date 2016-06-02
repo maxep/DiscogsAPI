@@ -94,10 +94,6 @@
 
 @implementation DGWantlist
 
-+ (DGWantlist *)wantlist {
-    return [[DGWantlist alloc] init];
-}
-
 - (void)configureManager:(RKObjectManager *)objectManager {
     
     //User wantlist

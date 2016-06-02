@@ -25,8 +25,6 @@
 
 @interface DGMarketplace : DGEndpoint
 
-+ (DGMarketplace*) marketplace;
-
-- (void) getPriceSuggestions:(NSNumber*)releaseID success:(void (^)(DGPriceSuggectionsResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)getPriceSuggestions:(NSNumber*)releaseID success:(void (^)(DGPriceSuggectionsResponse* response))success failure:(void (^)(NSError* error))failure;
 
 @end

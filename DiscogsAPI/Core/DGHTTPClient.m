@@ -22,13 +22,11 @@
 
 #import "DGHTTPClient.h"
 
-static NSString* const kDGBaseURL = @"https://api.discogs.com/";
+NSString* const kDGBaseURL = @"https://api.discogs.com/";
 
 static NSString* const kDGRequestTokenURL = @"https://api.discogs.com/oauth/request_token";
 static NSString* const kDGAuthorizeURL    = @"http://www.discogs.com/oauth/authorize";
 static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/access_token";
-
-#define kDGMediaTypeAsString(enum) [@[@"discogs", @"html", @"plaintext"] objectAtIndex:enum]
 
 @interface DGHTTPClient ()
 @property (nonatomic,strong) NSString   *authorizationHeader;
@@ -81,15 +79,21 @@ static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acce
 #pragma mark Properties
 
 - (NSString *)acceptHeader {
-    return [NSString stringWithFormat:@"application/vnd.discogs.v2.%@+json", kDGMediaTypeAsString(self.mediaType)];
+    return [NSString stringWithFormat:@"application/vnd.discogs.v2.%@+json", self.mediaType];
+}
+
+- (NSString *)mediaType {
+    if (!_mediaType) {
+        _mediaType = @"plaintext";
+    }
+    return _mediaType;
 }
 
 #pragma mark - AFHTTPClient
 
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
                                       path:(NSString *)path
-                                parameters:(NSDictionary *)parameters
-{
+                                parameters:(NSDictionary *)parameters {
     NSMutableURLRequest *request = [super requestWithMethod:method
                                                        path:path
                                                  parameters:parameters];
@@ -108,8 +112,7 @@ static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acce
 - (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
                                                    path:(NSString *)path
                                              parameters:(NSDictionary *)parameters
-                              constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
-{
+                              constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block {
     NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method
                                                                     path:path
                                                               parameters:parameters

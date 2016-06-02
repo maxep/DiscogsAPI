@@ -25,7 +25,16 @@
 
 @implementation DGEndpoint (Configuration)
 
-- (void) configureManager:(RKObjectManager*)objectManager {
+- (instancetype)initWithManager:(RKObjectManager *)manager {
+    self = [super init];
+    if (self) {
+        objc_setAssociatedObject(self, @selector(manager), manager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self configureManager:manager];
+    }
+    return self;
+}
+
+- (void)configureManager:(RKObjectManager*)objectManager {
     [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
 }
 
@@ -33,11 +42,6 @@
 
 - (RKObjectManager *)manager {
     return objc_getAssociatedObject(self, @selector(manager));
-}
-
-- (void)setManager:(RKObjectManager *)manager {
-    [self configureManager:manager];
-    objc_setAssociatedObject(self, @selector(manager), manager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

@@ -68,13 +68,6 @@
 @interface DGWantlist : DGEndpoint
 
 /**
- Creates and initializes an 'DGWantlist' object.
- 
- @return The newly-initialized wantlist object.
- */
-+ (DGWantlist *)wantlist;
-
-/**
  Gets the user's wantlist.
  
  @param request The paginated wantlist request.

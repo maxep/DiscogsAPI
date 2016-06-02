@@ -22,23 +22,7 @@
 
 #import <AFOAuth1Client/AFOAuth1Client.h>
 
-/**
- Discogs Media Type.
- */
-typedef NS_ENUM(NSInteger, DGMediaType){
-    /**
-     Discogs Media Type.
-     */
-    DGDiscogsMediaType,
-    /**
-     HTML media type.
-     */
-    DGHTMLMediaType,
-    /**
-     Plain text media type.
-     */
-    DGPlainTextMediaType
-};
+FOUNDATION_EXTERN NSString* const kDGBaseURL;
 
 /**
  `DGHTTPClient` encapsulates common patterns to authenticate against the Discogs API server.
@@ -48,14 +32,14 @@ typedef NS_ENUM(NSInteger, DGMediaType){
  */
 @interface DGHTTPClient : AFOAuth1Client
 
-@property (nonatomic,readwrite) DGMediaType mediaType;
+@property (nonatomic,copy) NSString *mediaType;
 
 /**
  Creates and initializes a `DGHTTPClient` object.
  
  @return The newly-initialized Discogs client object.
  */
-+ (DGHTTPClient *) client;
++ (DGHTTPClient *)client;
 
 /**
  Creates and initializes a `DGHTTPClient` object.
@@ -65,7 +49,7 @@ typedef NS_ENUM(NSInteger, DGMediaType){
  
  @return The newly-initialized Discogs client object.
  */
-+ (DGHTTPClient *) clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
++ (DGHTTPClient *)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
 
 /**
  Creates and initializes a `DGHTTPClient` object.
@@ -74,7 +58,7 @@ typedef NS_ENUM(NSInteger, DGMediaType){
  
  @return The newly-initialized Discogs client object.
  */
-+ (DGHTTPClient *) clientWithAccessToken:(NSString *)token;
++ (DGHTTPClient *)clientWithAccessToken:(NSString *)token;
 
 /**
  Initializes an `DGHTTPClient` object with the specified consumer key and secret.
