@@ -28,6 +28,8 @@ class DGAuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController!.navigationBar.barStyle = UIBarStyle.Black
+        
         automaticallyAdjustsScrollViewInsets = false;
         navigationController?.navigationBar.opaque = true;
         

@@ -63,6 +63,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cYC-nO-fNs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="glv-s2-6pu" kind="relationship" relationship="rootViewController" id="rEc-uH-g5F"/>
@@ -76,4 +81,5 @@
     <resources>
         <image name="default-release" width="600" height="600"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

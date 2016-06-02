@@ -13,9 +13,11 @@ class DGAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UISearchBar.appearance().barTintColor = UIColor.blackColor()
+        UISearchBar.appearance().tintColor = UIColor.whiteColor()
+        
         return true
     }
 

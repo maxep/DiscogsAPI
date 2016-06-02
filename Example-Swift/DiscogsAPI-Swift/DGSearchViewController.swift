@@ -36,6 +36,8 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController!.navigationBar.barStyle = UIBarStyle.Black
+        
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
