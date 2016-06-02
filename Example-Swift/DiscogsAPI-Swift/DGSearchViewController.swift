@@ -23,7 +23,7 @@
 import UIKit
 import DiscogsAPI
 
-class DGSearchViewController: UITableViewController, UISearchResultsUpdating {
+class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     var searchController : UISearchController!
     
@@ -41,6 +41,9 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.scopeButtonTitles = ["All", "Release", "Master", "Artist", "Label"]
+        searchController.searchBar.delegate = self
         
         DiscogsAPI.client().isAuthenticated { (success) in
             
@@ -61,19 +64,27 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating {
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let query = searchController.searchBar.text as String?
+        let type = ["", "release", "master", "artist", "label"][searchController.searchBar.selectedScopeButtonIndex]
         
         if  !(query?.isEmpty)! {
             
             let request = DGSearchRequest()
             request.query = query
+            request.type = type
             request.pagination.perPage = 25
-            
+
             DiscogsAPI.client().database.searchFor(request, success: { (response) in
                 self.response = response
             }) { (error) in
                 NSLog("Error: %@", error)
             }
         }
+    }
+    
+    // MARK: UISearchResultsUpdating
+    
+    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        updateSearchResultsForSearchController(searchController)
     }
     
     // MARK: UITableViewDataSource
