@@ -60,15 +60,19 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating {
     // MARK: UISearchResultsUpdating
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let query = searchController.searchBar.text as String?
         
-        let request = DGSearchRequest()
-        request.query = searchController.searchBar.text
-        request.pagination.perPage = 5
-        
-        DiscogsAPI.client().database.searchFor(request, success: { (response) in
-            self.response = response
+        if  !(query?.isEmpty)! {
+            
+            let request = DGSearchRequest()
+            request.query = query
+            request.pagination.perPage = 25
+            
+            DiscogsAPI.client().database.searchFor(request, success: { (response) in
+                self.response = response
             }) { (error) in
                 NSLog("Error: %@", error)
+            }
         }
     }
     
@@ -90,13 +94,12 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating {
             cell?.textLabel?.text       = result.title
             cell?.detailTextLabel?.text = result.type
             
+            cell?.imageView?.image = UIImage.init(imageLiteral: "default-release")
             DiscogsAPI.client().resource.getImage(result.thumb, success: { (image) in
                 cell?.imageView?.image = image
-                }, failure: { (error) in
-                    NSLog("Error: %@", error)
-            })
+                }, failure:nil)
             
-            if tableView === self.tableView && result === self.response.results.last {
+            if result === self.response.results.last {
                 self.response.loadNextPageWithSuccess({ 
                     self.tableView.reloadData()
                     }, failure: { (error) in
