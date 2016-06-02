@@ -1,0 +1,24 @@
+//
+//  DiscogsAPI.pch
+//  DiscogsAPI
+//
+//  Created by Maxime Epain on 02/06/16.
+//  Copyright © 2016 Maxime Epain. All rights reserved.
+//
+
+#ifndef DiscogsAPI_pch
+#define DiscogsAPI_pch
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Security/Security.h>
+#import <RestKit/RestKit.h>
+
+#endif
+
+#endif /* DiscogsAPI_pch */

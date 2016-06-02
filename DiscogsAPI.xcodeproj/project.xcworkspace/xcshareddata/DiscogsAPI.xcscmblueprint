@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D78740BB5B159EA13C82AB5AF1D92A0F3C627237",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D78740BB5B159EA13C82AB5AF1D92A0F3C627237" : 0,
+    "7E078F141829F586043EB723D75BDB06A78405E1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B26FFA68-9E64-41CE-B55C-F40B7881E482",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D78740BB5B159EA13C82AB5AF1D92A0F3C627237" : "RestKit\/",
+    "7E078F141829F586043EB723D75BDB06A78405E1" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DiscogsAPI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DiscogsAPI\/DiscogsAPI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maxep\/DiscogsAPI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E078F141829F586043EB723D75BDB06A78405E1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/RestKit\/RestKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D78740BB5B159EA13C82AB5AF1D92A0F3C627237"
+    }
+  ]
+}
