@@ -22,8 +22,6 @@
 
 #import "DiscogsAPI.h"
 #import "DGEndpoint+Configuration.h"
-#import "DGAuthentication+HTTPCLient.h"
-
 #import "DGHTTPClient.h"
 
 #define kDGMediaTypeAsString(enum) @[@"discogs", @"html", @"plaintext"][enum]
@@ -62,23 +60,22 @@
         RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
         
         //Setup Object Manager
-        RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString: kDGBaseURL]];// [[RKObjectManager alloc] initWi];
-//        objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+        RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString: kDGBaseURL]];
         
-        //Configure Object manager
+        //Create and configure endpoints
         self.authentication = [[DGAuthentication alloc] initWithManager:objectManager];
         self.authentication.delegate = self;
         
-        self.database       = [[DGDatabase alloc] initWithManager:objectManager];
+        self.database = [[DGDatabase alloc] initWithManager:objectManager];
         self.database.delegate = self;
         
-        self.user           = [[DGUser alloc] initWithManager:objectManager];
+        self.user = [[DGUser alloc] initWithManager:objectManager];
         self.user.delegate = self;
         
-        self.marketplace    = [[DGMarketplace alloc] initWithManager:objectManager];
+        self.marketplace = [[DGMarketplace alloc] initWithManager:objectManager];
         self.marketplace.delegate = self;
         
-        self.resource       = [[DGResource alloc] initWithManager:objectManager];
+        self.resource = [[DGResource alloc] initWithManager:objectManager];
         self.resource.delegate = self;
         
         //Init reachability
@@ -118,16 +115,18 @@
 #pragma mark Properties
 
 - (DGMediaType)mediaType {
-    return kStringDGMediaType(self.authentication.HTTPClient.mediaType);
+    // TODO (maxep) : find a better way
+    return kStringDGMediaType([(DGHTTPClient *)RKObjectManager.sharedManager.HTTPClient mediaType]);
 }
 
 - (void)setMediaType:(DGMediaType)mediaType {
-    self.authentication.HTTPClient.mediaType = kDGMediaTypeAsString(mediaType);
+    // TODO (maxep) : find a better way
+    [(DGHTTPClient *)RKObjectManager.sharedManager.HTTPClient setMediaType:kDGMediaTypeAsString(mediaType)];
 }
 
 #pragma mark <DGEndpointDelegate>
 
-- (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
     [self.user identityWithSuccess:^(DGIdentity *identity) {
         success();
     } failure:failure];

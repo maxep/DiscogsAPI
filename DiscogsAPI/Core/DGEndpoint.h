@@ -22,6 +22,13 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ A block that can act as a failure for a task.
+ */
+typedef void(^DGFailureBlock)(NSError * _Nullable error);
+
 /**
  Defines of a progress block.
  
@@ -50,7 +57,7 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 @required
-- (void) identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void) identifyUserWithSuccess:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Creates an Image request for AFNetworking (https://github.com/AFNetworking/AFNetworking ).
@@ -62,7 +69,7 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  @return The image request operation.
  */
 @required
-- (NSOperation*) createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
+- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(nullable DGFailureBlock)failure;
 
 @end
 
@@ -74,12 +81,12 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
 /**
  Delegate instance.
  */
-@property (nonatomic, assign) id /*<DGEndpointDelegate>*/ delegate;
+@property (nonatomic, weak, nullable) id<DGEndpointDelegate> delegate;
 
 /**
  Progress block property.
  */
-@property (nonatomic, strong) DGProgressBlock progress;
+@property (nonatomic, strong, nullable) DGProgressBlock progress;
 
 /**
  Creates an NSError.
@@ -89,9 +96,11 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  
  @return The created NSError.
  */
-- (NSError*)errorWithCode:(NSInteger)code info:(NSString*)info;
+- (NSError*)errorWithCode:(NSInteger)code info:(nullable NSString*)info;
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END

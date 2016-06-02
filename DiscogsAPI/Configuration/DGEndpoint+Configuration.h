@@ -43,11 +43,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGEndpoint (Configuration)
 
-/**
- A block that can act as a failure for a task.
- */
-typedef void(^DGFailureBlock)(NSError * _Nullable error);
-
 @property (nonatomic,readonly) RKObjectManager *manager;
 
 - (instancetype)initWithManager:(RKObjectManager *)manager;

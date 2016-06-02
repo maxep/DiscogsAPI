@@ -21,7 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint+Configuration.h"
-#import "DGAuthentication+HTTPCLient.h"
+#import "DGAuthentication.h"
+#import "DGHTTPClient.h"
 
 #import "DGTokenStore.h"
 #import "DGAuthView.h"
