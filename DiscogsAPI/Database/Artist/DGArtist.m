@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGArtist.h"
+#import "DGMember.h"
 
 @implementation DGArtist
 

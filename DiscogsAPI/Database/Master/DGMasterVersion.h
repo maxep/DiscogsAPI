@@ -22,6 +22,8 @@
 
 #import "DGLabelRelease.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Master version description class.
  */
@@ -47,8 +49,10 @@
 
 @interface DGMasterVersionResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray *versions;
+@property (nonatomic, strong) NSArray<DGRelease *> *versions;
 
 + (DGMasterVersionResponse *)response;
 
 @end
+
+NS_ASSUME_NONNULL_END

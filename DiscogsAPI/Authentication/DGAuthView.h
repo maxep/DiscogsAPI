@@ -20,6 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  The authoriation web view.
  */
@@ -32,7 +36,7 @@
  
  @return The newly-initialized Authorization view object.
  */
-+ (DGAuthView*) viewWithRequest:(NSURLRequest*) request;
++ (DGAuthView*)viewWithRequest:(NSURLRequest*) request;
 
 /**
  Initializes a `DGAuthView` object with the specified request URL.
@@ -44,3 +48,5 @@
 - (id)initWithRequest:(NSURLRequest*) request;
 
 @end
+
+NS_ASSUME_NONNULL_END

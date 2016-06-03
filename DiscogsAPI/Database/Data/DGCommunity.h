@@ -22,6 +22,8 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Contributo desciption class.
  */
@@ -30,14 +32,14 @@
 /**
  Contributo name.
  */
-@property (nonatomic, strong) NSString * userName;
+@property (nonatomic, strong) NSString *userName;
 
 /**
  Creates and initializes a `DGContributor` object.
  
  @return The newly-initialized contributor object.
  */
-+ (DGContributor*) contributor;
++ (DGContributor *)contributor;
 
 @end
 
@@ -49,19 +51,19 @@
 /**
  Average rating.
  */
-@property (nonatomic, strong) NSNumber * average;
+@property (nonatomic, strong) NSNumber *average;
 
 /**
  Count of rating.
  */
-@property (nonatomic, strong) NSNumber * count;
+@property (nonatomic, strong) NSNumber *count;
 
 /**
  Creates and initializes a `DGRating` object.
  
  @return The newly-initialized rating object.
  */
-+ (DGRating*) rating;
++ (DGRating *)rating;
 
 @end
 
@@ -74,43 +76,45 @@
 /**
  List of contributor.
  */
-@property (nonatomic, strong) NSArray * contributors;
+@property (nonatomic, strong, nullable) NSArray<DGContributor *> *contributors;
 
 /**
  Data quality.
  */
-@property (nonatomic, strong) NSString * dataQuality;
+@property (nonatomic, strong, nullable) NSString *dataQuality;
 
 /**
  Number of 'have'.
  */
-@property (nonatomic, strong) NSNumber * have;
+@property (nonatomic, strong, nullable) NSNumber *have;
 
 /**
  Rating.
  */
-@property (nonatomic, strong) DGRating * rating;
+@property (nonatomic, strong, nullable) DGRating *rating;
 
 /**
  Status.
  */
-@property (nonatomic, strong) NSString * status;
+@property (nonatomic, strong, nullable) NSString *status;
 
 /**
  Submitter.
  */
-@property (nonatomic, strong) DGContributor * submitter;
+@property (nonatomic, strong, nullable) DGContributor *submitter;
 
 /**
  Number of 'want'.
  */
-@property (nonatomic, strong) NSNumber * want;
+@property (nonatomic, strong, nullable) NSNumber *want;
 
 /**
  Creates and initializes a `DGCommunity` object.
  
  @return The newly-initialized community object.
  */
-+ (DGCommunity*) community;
++ (DGCommunity *)community;
 
 @end
+
+NS_ASSUME_NONNULL_END

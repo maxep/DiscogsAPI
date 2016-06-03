@@ -48,7 +48,8 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  @return Discogs API reachability.
  */
 @required
-- (BOOL) isReachable;
+
+@property (readonly) BOOL isReachable;
 
 /**
  Identifies the user. This method will verify that the user stored in the depot still authorize the current OAuth token.
@@ -56,7 +57,6 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-@required
 - (void) identifyUserWithSuccess:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
@@ -68,7 +68,6 @@ typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteg
  
  @return The image request operation.
  */
-@required
 - (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(nullable DGFailureBlock)failure;
 
 @end

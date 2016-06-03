@@ -25,6 +25,8 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Sample JSON
  
@@ -48,16 +50,16 @@
 @interface DGFormat : DGObject
 
 /// media type: Vinyl, CD, DVD, etc.
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong, nullable) NSString *name;
 
 /// number of physical media objects: double LP == 2, etc.
-@property (nonatomic, strong) NSNumber *quantity;
+@property (nonatomic, strong, nullable) NSNumber *quantity;
 
 /// any special circumstances, especially applicable to vinyl like color, etc.
-@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong, nullable) NSString *text;
 
 /// a list of descriptions that apply: LP, RSD Release, Limited, etc.
-@property (nonatomic, strong) NSArray<NSString *> *descriptions;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *descriptions;
 
 /**
  Creates and initializes new release format object
@@ -67,3 +69,5 @@
 + (instancetype)format;
 
 @end
+
+NS_ASSUME_NONNULL_END

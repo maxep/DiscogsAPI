@@ -22,6 +22,8 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Image desciption class.
  */
@@ -30,28 +32,30 @@
 /**
  Image width.
  */
-@property (nonatomic, strong) NSNumber * width;
+@property (nonatomic, strong, nullable) NSNumber *width;
 
 /**
  Image height.
  */
-@property (nonatomic, strong) NSNumber * height;
+@property (nonatomic, strong, nullable) NSNumber *height;
 
 /**
  Image type.
  */
-@property (nonatomic, strong) NSString * type;
+@property (nonatomic, strong, nullable) NSString *type;
 
 /**
  Resource URL of the 150x150 image version on Discogs API.
  */
-@property (nonatomic, strong) NSString * uri150;
+@property (nonatomic, strong, nullable) NSString *uri150;
 
 /**
  Creates and initializes a `DGImage` object.
  
  @return The newly-initialized image object.
  */
-+ (DGImage*) image;
++ (DGImage *)image;
 
 @end
+
+NS_ASSUME_NONNULL_END

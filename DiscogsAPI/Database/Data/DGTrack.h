@@ -22,6 +22,8 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Track description class.
  */
@@ -30,28 +32,30 @@
 /**
  Track duration.
  */
-@property (nonatomic, strong) NSString * duration;
+@property (nonatomic, strong, nullable) NSString *duration;
 
 /**
  Track position in the release.
  */
-@property (nonatomic, strong) NSString * position;
+@property (nonatomic, strong, nullable) NSString *position;
 
 /**
  Track title.
  */
-@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong, nullable) NSString *title;
 
 /**
  Track type.
  */
-@property (nonatomic, strong) NSString * type;
+@property (nonatomic, strong, nullable) NSString *type;
 
 /**
  Creates and initializes a `DGTrack` object.
  
  @return The newly-initialized track object.
  */
-+ (DGTrack*) track;
++ (DGTrack *)track;
 
 @end
+
+NS_ASSUME_NONNULL_END

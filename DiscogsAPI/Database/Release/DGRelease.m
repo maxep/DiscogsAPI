@@ -22,16 +22,14 @@
 
 #import "DGRelease+Mapping.h"
 #import "DGPagination+Mapping.h"
-#import "DGVideo.h"
 
 @implementation DGRelease
 
-+ (DGRelease*) release
-{
++ (DGRelease *)release {
     return [[DGRelease alloc] init];
 }
 
-- (NSArray*) videos {
+- (NSArray *)videos {
     
     NSMutableArray* videos = [NSMutableArray array];
     

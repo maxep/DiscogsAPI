@@ -23,6 +23,8 @@
 #import "DGRelease.h"
 #import "DGPagination.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Artist release description class.
  */
@@ -31,37 +33,37 @@
 /**
  Sttus of the release.
  */
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong, nullable) NSString *status;
 
 /**
  Release format.
  */
-@property (nonatomic, strong) NSString *format;
+@property (nonatomic, strong, nullable) NSString *format;
 
 /**
  Release label.
  */
-@property (nonatomic, strong) NSString *label;
+@property (nonatomic, strong, nullable) NSString *label;
 
 /**
  Role of the artist on the release.
  */
-@property (nonatomic, strong) NSString *role;
+@property (nonatomic, strong, nullable) NSString *role;
 
 /**
  Track info.
  */
-@property (nonatomic, strong) NSString *trackInfo;
+@property (nonatomic, strong, nullable) NSString *trackInfo;
 
 /**
  Release artist.
  */
-@property (nonatomic, strong) NSString *artist;
+@property (nonatomic, strong, nullable) NSString *artist;
 
 /**
  Release or Master type.
  */
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong, nullable) NSString *type;
 
 /**
  Creates and initializes a `DGArtistRelease` object.
@@ -86,8 +88,10 @@
 
 @interface DGArtistReleaseResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray *releases;
+@property (nonatomic, strong) NSArray<DGRelease *> *releases;
 
 + (DGArtistReleaseResponse *)response;
 
 @end
+
+NS_ASSUME_NONNULL_END

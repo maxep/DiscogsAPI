@@ -22,6 +22,8 @@
 
 #import "DGEndpoint.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Authentification class to manage the Discogs authentification process.
  A successful authentication will store the oauth_token and oauth_token_secret credentials into Apple keychain.
@@ -45,7 +47,7 @@
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Initiate an authenticate process.
@@ -54,7 +56,7 @@
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure  A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Remove Discogs account credential from keychain.
@@ -62,3 +64,5 @@
 - (void)removeAccountCredential;
 
 @end
+
+NS_ASSUME_NONNULL_END

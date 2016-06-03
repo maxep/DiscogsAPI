@@ -23,6 +23,8 @@
 #import <Foundation/Foundation.h>
 #import <AFOAuth1Client/AFOAuth1Client.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Token store to save and retrieve OAuth account tokens into Apple keychain.
  */
@@ -35,7 +37,7 @@
  
  @return The credential if it exists. Otherwise 'nil'.
  */
-+ (AFOAuth1Token *)retrieveCredentialWithIdentifier:(NSString *)identifier;
++ (nullable AFOAuth1Token *)retrieveCredentialWithIdentifier:(NSString *)identifier;
 
 /**
  Deletes the OAuth credential from keychain.
@@ -54,7 +56,7 @@
  
  @return 'YES' if it succeeded. Otherwise 'NO'.
  */
-+ (BOOL)storeCredential:(AFOAuth1Token *)credential withIdentifier:(NSString *)identifier;
++ (BOOL)storeCredential:(nullable AFOAuth1Token *)credential withIdentifier:(NSString *)identifier;
 
 /**
  Stores the OAuth credential into keychain.
@@ -65,6 +67,8 @@
  
  @return 'YES' if it succeeded. Otherwise 'NO'.
  */
-+ (BOOL)storeCredential:(AFOAuth1Token *)credential withIdentifier:(NSString *)identifier withAccessibility:(id)securityAccessibility;
++ (BOOL)storeCredential:(nullable AFOAuth1Token *)credential withIdentifier:(NSString *)identifier withAccessibility:(id)securityAccessibility;
 
 @end
+
+NS_ASSUME_NONNULL_END

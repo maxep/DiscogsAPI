@@ -22,6 +22,11 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+@class DGImage;
+@class DGMember;
+
 /**
  Artist description class.
  */
@@ -30,47 +35,47 @@
 /**
  Artist name.
  */
-@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong, nullable) NSString *name;
 
 /**
  Artist name variations.
  */
-@property (nonatomic, strong) NSArray  * namevariations;
+@property (nonatomic, strong, nullable) NSArray  *namevariations;
 
 /**
  Artist profile.
  */
-@property (nonatomic, strong) NSString * profile;
+@property (nonatomic, strong, nullable) NSString *profile;
 
 /**
  Artist URLs.
  */
-@property (nonatomic, strong) NSArray  * urls;
+@property (nonatomic, strong, nullable) NSArray  *urls;
 
 /**
  Data quality.
  */
-@property (nonatomic, strong) NSString * dataQuality;
+@property (nonatomic, strong, nullable) NSString *dataQuality;
 
 /**
  Arist role.
  */
-@property (nonatomic, strong) NSString * role;
+@property (nonatomic, strong, nullable) NSString *role;
 
 /**
  Artist images.
  */
-@property (nonatomic, strong) NSArray  * images;
+@property (nonatomic, strong, nullable) NSArray<DGImage *> *images;
 
 /**
  Artist members.
  */
-@property (nonatomic, strong) NSArray  * members;
+@property (nonatomic, strong, nullable) NSArray<DGMember *> *members;
 
 /**
  Artist releases URL on Discogs API.
  */
-@property (nonatomic, strong) NSString * releasesURL;
+@property (nonatomic, strong, nullable) NSString *releasesURL;
 
 
 /**
@@ -78,6 +83,8 @@
  
  @return The newly-initialized artist object.
  */
-+ (DGArtist*) artist;
++ (DGArtist*)artist;
 
 @end
+
+NS_ASSUME_NONNULL_END

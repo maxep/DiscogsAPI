@@ -21,19 +21,24 @@
 // THE SOFTWARE.
 
 #import "DGObject.h"
-#import "DGPagination.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class DGImage;
 
 @interface DGLabel : DGObject
 
-@property (nonatomic, strong) NSString * profile;
-@property (nonatomic, strong) NSString * releasesURL;
-@property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSString * contactInfo;
-@property (nonatomic, strong) NSArray  * subLabels;
-@property (nonatomic, strong) NSArray  * urls;
-@property (nonatomic, strong) NSArray  * images;
-@property (nonatomic, strong) NSString * dataQuality;
+@property (nonatomic, strong, nullable) NSString *profile;
+@property (nonatomic, strong, nullable) NSString *releasesURL;
+@property (nonatomic, strong, nullable) NSString *name;
+@property (nonatomic, strong, nullable) NSString *contactInfo;
+@property (nonatomic, strong, nullable) NSArray<DGLabel *> *subLabels;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *urls;
+@property (nonatomic, strong, nullable) NSArray<DGImage *> *images;
+@property (nonatomic, strong, nullable) NSString *dataQuality;
 
-+ (DGLabel*) label;
++ (DGLabel *)label;
 
 @end
+
+NS_ASSUME_NONNULL_END

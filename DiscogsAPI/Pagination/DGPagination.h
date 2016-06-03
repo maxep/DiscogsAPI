@@ -22,6 +22,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Items sort keys.
  */
@@ -165,6 +167,8 @@ typedef NS_ENUM(NSInteger, DGSortOrder){
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure;
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void(^)(NSError * _Nullable error))failure;
 
 @end
+
+NS_ASSUME_NONNULL_END

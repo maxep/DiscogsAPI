@@ -22,19 +22,21 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Identifier description class
  */
 @interface DGIdentifier : DGObject
 
 /// Identifier type
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong, nullable) NSString *type;
 
 /// Identifier value
-@property (nonatomic, strong) NSString *value;
+@property (nonatomic, strong, nullable) NSString *value;
 
 /// Identifier description (can't just use `description` bc that's an NSObject overridden method
-@property (nonatomic, strong) NSString *identifierDescription;
+@property (nonatomic, strong, nullable) NSString *identifierDescription;
 
 /**
  Create an initializes new `DGIdentifier` object
@@ -44,3 +46,5 @@
 + (instancetype)identifier;
 
 @end
+
+NS_ASSUME_NONNULL_END

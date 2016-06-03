@@ -22,6 +22,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Discogs object desciption.
  */
@@ -30,23 +32,25 @@
 /**
  Object identifier.
  */
-@property (nonatomic, strong) NSNumber * ID;
+@property (nonatomic, strong, nullable) NSNumber *ID;
 
 /**
  Resource URL on Discogs API.
  */
-@property (nonatomic, strong) NSString * resourceURL;
+@property (nonatomic, strong, nullable) NSString *resourceURL;
 
 /**
  Object URL on Discogs website.
  */
-@property (nonatomic, strong) NSString  * uri;
+@property (nonatomic, strong, nullable) NSString  *uri;
 
 /**
  Creates and initializes a 'DGObject'.
  
  @return The newly-initialized object.
  */
-+ (DGObject*) object;
++ (DGObject*)object;
 
 @end
+
+NS_ASSUME_NONNULL_END

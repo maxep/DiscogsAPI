@@ -24,6 +24,12 @@
 #import "DGCommunity.h"
 #import "DGFormat.h"
 #import "DGIdentifier.h"
+#import "DGTrack.h"
+#import "DGVideo.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class DGArtist;
 
 /**
  Release description class.
@@ -33,114 +39,114 @@
 /**
  Release title.
  */
-@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong, nullable) NSString *title;
 
 /**
  Master ID this release is based on
  */
-@property (nonatomic, strong) NSNumber *masterID;
+@property (nonatomic, strong, nullable) NSNumber *masterID;
 
 /**
  API URL to Master this release is based on
  */
-@property (nonatomic, strong) NSString *masterURL;
+@property (nonatomic, strong, nullable) NSString *masterURL;
 
 /**
  List of artists that contibuted to the release.
  */
-@property (nonatomic, strong) NSArray  * artists;
+@property (nonatomic, strong, nullable) NSArray<DGArtist *> *artists;
 
 /**
  Data quality.
  */
-@property (nonatomic, strong) NSString * dataQuality;
+@property (nonatomic, strong, nullable) NSString *dataQuality;
 
 /**
  Release thumbnail image URL.
  */
-@property (nonatomic, strong) NSString * thumb;
+@property (nonatomic, strong, nullable) NSString *thumb;
 
 /**
  Community that contibuted to the release.
  */
-@property (nonatomic, strong) DGCommunity * community;
+@property (nonatomic, strong, nullable) DGCommunity *community;
 
 /* ADD COMPANIES */
 
 /**
  Release images.
  */
-@property (nonatomic, strong) NSArray  * images;
+@property (nonatomic, strong, nullable) NSArray  *images;
 
 /**
  Release videos.
  */
-@property (nonatomic, strong) NSArray  * videos;
+@property (nonatomic, strong, nullable) NSArray<DGVideo *> *videos;
 
 /**
  Release country.
  */
-@property (nonatomic, strong) NSString * country;
+@property (nonatomic, strong, nullable) NSString *country;
 
 /**
  Release creation date on Discogs.
  */
-@property (nonatomic, strong) NSString * dateAdded;
+@property (nonatomic, strong, nullable) NSString *dateAdded;
 
 /**
  Last update on discogs.
  */
-@property (nonatomic, strong) NSString * dateChanged;
+@property (nonatomic, strong, nullable) NSString *dateChanged;
 
 /**
  Estimated weight of the release.
  */
-@property (nonatomic, strong) NSNumber * estimatedWeight;
+@property (nonatomic, strong, nullable) NSNumber *estimatedWeight;
 
 /**
  Extra artists.
  */
-@property (nonatomic, strong) NSArray  * extraArtists;
+@property (nonatomic, strong, nullable) NSArray<DGArtist *> *extraArtists;
 
 /**
  Quantity of the format.
  */
-@property (nonatomic, strong) NSNumber * formatQuantity;
+@property (nonatomic, strong, nullable) NSNumber *formatQuantity;
 
 /**
  Formats pertaining to this release
  */
-@property (nonatomic, strong) NSArray<DGFormat *> *formats;
+@property (nonatomic, strong, nullable) NSArray<DGFormat *> *formats;
 
 /**
  Genres of release music.
  */
-@property (nonatomic, strong) NSArray  * genres;
+@property (nonatomic, strong, nullable) NSArray *genres;
 
 /**
  Styles of release music.
  */
-@property (nonatomic, strong) NSArray  * styles;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *styles;
 
 /**
  Release track list.
  */
-@property (nonatomic, strong) NSArray  * trackList;
+@property (nonatomic, strong, nullable) NSArray<DGTrack *>  * trackList;
 
 /**
  Released year.
  */
-@property (nonatomic, strong) NSNumber * year;
+@property (nonatomic, strong, nullable) NSNumber *year;
 
 /**
  Release notes.
  */
-@property (nonatomic, strong) NSString * notes;
+@property (nonatomic, strong, nullable) NSString *notes;
 
 /**
  Identifiers
  */
-@property (nonatomic, strong) NSArray<DGIdentifier *> *identifiers;
+@property (nonatomic, strong, nullable) NSArray<DGIdentifier *> *identifiers;
 
 /* ADD THE REST */
 
@@ -149,6 +155,8 @@
  
  @return The newly-initialized release object.
  */
-+ (DGRelease*) release;
++ (DGRelease *)release;
 
 @end
+
+NS_ASSUME_NONNULL_END

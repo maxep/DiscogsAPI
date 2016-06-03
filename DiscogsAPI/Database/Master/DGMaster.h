@@ -22,6 +22,8 @@
 
 #import "DGRelease.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Master release desciption.
  */
@@ -30,13 +32,15 @@
 /**
  Master ID.
  */
-@property (nonatomic, strong) NSNumber * mainReleaseID;
+@property (nonatomic, strong, nullable) NSNumber *mainReleaseID;
 
 /**
  Creates and initializes a `DGMaster` object.
  
  @return The newly-initialized master release object.
  */
-+ (DGMaster*) master;
++ (DGMaster *)master;
 
 @end
+
+NS_ASSUME_NONNULL_END

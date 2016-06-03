@@ -23,27 +23,29 @@
 #import <Foundation/Foundation.h>
 #import "DGPagination.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DGSearchRequest : NSObject
 
-@property (nonatomic, strong) NSString      *query;
-@property (nonatomic, strong) NSString      *type;
-@property (nonatomic, strong) NSString      *title;
-@property (nonatomic, strong) NSString      *releaseTitle;
-@property (nonatomic, strong) NSString      *credit;
-@property (nonatomic, strong) NSString      *artist;
-@property (nonatomic, strong) NSString      *anv;
-@property (nonatomic, strong) NSString      *label;
-@property (nonatomic, strong) NSString      *genre;
-@property (nonatomic, strong) NSString      *style;
-@property (nonatomic, strong) NSString      *country;
-@property (nonatomic, strong) NSString      *year;
-@property (nonatomic, strong) NSString      *format;
-@property (nonatomic, strong) NSString      *catno;
-@property (nonatomic, strong) NSString      *barcode;
-@property (nonatomic, strong) NSString      *track;
-@property (nonatomic, strong) NSString      *submitter;
-@property (nonatomic, strong) NSString      *contributor;
-@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong, nullable) NSString *query;
+@property (nonatomic, strong, nullable) NSString *type;
+@property (nonatomic, strong, nullable) NSString *title;
+@property (nonatomic, strong, nullable) NSString *releaseTitle;
+@property (nonatomic, strong, nullable) NSString *credit;
+@property (nonatomic, strong, nullable) NSString *artist;
+@property (nonatomic, strong, nullable) NSString *anv;
+@property (nonatomic, strong, nullable) NSString *label;
+@property (nonatomic, strong, nullable) NSString *genre;
+@property (nonatomic, strong, nullable) NSString *style;
+@property (nonatomic, strong, nullable) NSString *country;
+@property (nonatomic, strong, nullable) NSString *year;
+@property (nonatomic, strong, nullable) NSString *format;
+@property (nonatomic, strong, nullable) NSString *catno;
+@property (nonatomic, strong, nullable) NSString *barcode;
+@property (nonatomic, strong, nullable) NSString *track;
+@property (nonatomic, strong, nullable) NSString *submitter;
+@property (nonatomic, strong, nullable) NSString *contributor;
+@property (nonatomic, strong) DGPagination *pagination;
 
 + (DGSearchRequest *)request;
 
@@ -51,20 +53,20 @@
 
 @interface DGSearchResult : NSObject
 
-@property (nonatomic, strong) NSArray   *style;
-@property (nonatomic, strong) NSString  *thumb;
-@property (nonatomic, strong) NSString  *title;
-@property (nonatomic, strong) NSString  *country;
-@property (nonatomic, strong) NSArray   *format;
-@property (nonatomic, strong) NSString  *uri;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *style;
+@property (nonatomic, strong, nullable) NSString *thumb;
+@property (nonatomic, strong, nullable) NSString *title;
+@property (nonatomic, strong, nullable) NSString *country;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *format;
+@property (nonatomic, strong, nullable) NSString *uri;
 /* ADD COMMUNITY */
-@property (nonatomic, strong) NSArray   *label;
-@property (nonatomic, strong) NSString  *catno;
-@property (nonatomic, strong) NSString  *year;
-@property (nonatomic, strong) NSArray   *genre;
-@property (nonatomic, strong) NSString  *resourceUrl;
-@property (nonatomic, strong) NSString  *type;
-@property (nonatomic, strong) NSNumber  *ID;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *label;
+@property (nonatomic, strong, nullable) NSString *catno;
+@property (nonatomic, strong, nullable) NSString *year;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *genre;
+@property (nonatomic, strong, nullable) NSString *resourceUrl;
+@property (nonatomic, strong, nullable) NSString *type;
+@property (nonatomic, strong, nullable) NSNumber *ID;
 
 + (DGSearchResult *)result;
 
@@ -72,8 +74,10 @@
 
 @interface DGSearchResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray *results;
+@property (nonatomic, strong, nullable) NSArray<DGSearchResult *> *results;
 
 + (DGSearchResponse *)response;
 
 @end
+
+NS_ASSUME_NONNULL_END

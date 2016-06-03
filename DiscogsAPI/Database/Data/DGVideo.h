@@ -22,6 +22,8 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Video description class.
  */
@@ -30,28 +32,30 @@
 /**
  Video description.
  */
-@property (nonatomic, strong) NSString * notes;
+@property (nonatomic, strong, nullable) NSString *notes;
 
 /**
  Video duration.
  */
-@property (nonatomic, strong) NSNumber * duration;
+@property (nonatomic, strong, nullable) NSNumber *duration;
 
 /**
  Embedded video ('true' or 'false').
  */
-@property (nonatomic, strong) NSString  * embed;
+@property (nonatomic, strong, nullable) NSString  *embed;
 
 /**
  Video Title.
  */
-@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong, nullable) NSString *title;
 
 /**
  Creates and initializes a `DGVideo` object.
  
  @return The newly-initialized video object.
  */
-+ (DGVideo *) video;
++ (DGVideo *)video;
 
 @end
+
+NS_ASSUME_NONNULL_END

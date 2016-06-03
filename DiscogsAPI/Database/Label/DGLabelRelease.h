@@ -22,6 +22,8 @@
 
 #import "DGArtistRelease.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Label release desciption class.
  */
@@ -30,12 +32,12 @@
 /**
  Release date.
  */
-@property (nonatomic, strong) NSString *released;
+@property (nonatomic, strong, nullable) NSString *released;
 
 /**
  Release catalog number.
  */
-@property (nonatomic, strong) NSString *catno;
+@property (nonatomic, strong, nullable) NSString *catno;
 
 /**
  Creates and initializes a `DGLabelRelease` object.
@@ -48,8 +50,8 @@
 
 @interface DGLabelReleasesRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong) NSNumber      *labelID;
+@property (nonatomic, strong) DGPagination *pagination;
+@property (nonatomic, strong) NSNumber *labelID;
 
 + (DGLabelReleasesRequest *)request;
 
@@ -57,8 +59,10 @@
 
 @interface DGLabelReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray *releases;
+@property (nonatomic, strong, nullable) NSArray<DGRelease *> *releases;
 
 + (DGLabelReleasesResponse *)response;
 
 @end
+
+NS_ASSUME_NONNULL_END

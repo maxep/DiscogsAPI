@@ -22,6 +22,8 @@
 
 #import "DGArtist.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Member decription class.
  */
@@ -37,6 +39,8 @@
  
  @return The newly-initialized member object.
  */
-+ (DGMember*) member;
++ (DGMember*)member;
 
 @end
+
+NS_ASSUME_NONNULL_END
