@@ -23,8 +23,12 @@
 #import "DGEndpoint.h"
 #import "DGPrice.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DGMarketplace : DGEndpoint
 
-- (void)getPriceSuggestions:(NSNumber*)releaseID success:(void (^)(DGPriceSuggectionsResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggectionsResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 @end
+
+NS_ASSUME_NONNULL_END

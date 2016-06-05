@@ -21,34 +21,37 @@
 // THE SOFTWARE.
 
 #import "DGObject.h"
-#import "DGArtist.h"
 #import "DGCollectionFieldInstance.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class DGArtist;
 
 @interface DGReleaseInstance : DGObject
 
 /// user rating for this release instance
-@property (nonatomic, strong) NSNumber *rating;
+@property (nonatomic, strong, nullable) NSNumber *rating;
 
 /// release year
-@property (nonatomic, strong) NSNumber *year;
+@property (nonatomic, strong, nullable) NSNumber *year;
 
 /// thumbnail image URL
-@property (nonatomic, strong) NSString *thumb;
+@property (nonatomic, strong, nullable) NSString *thumb;
 
 /// release title
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong, nullable) NSString *title;
 
 /// release ID (regular ID is of this instance)
-@property (nonatomic, strong) NSNumber *releaseID;
+@property (nonatomic, strong, nullable) NSNumber *releaseID;
 
 /// release artists
-@property (nonatomic, strong) NSArray<DGArtist *> *artists;
+@property (nonatomic, strong, nullable) NSArray<DGArtist *> *artists;
 
 /// technically notes but really encompasses instance fields
-@property (nonatomic, strong) NSArray<DGCollectionFieldInstance *> *notes;
+@property (nonatomic, strong, nullable) NSArray<DGCollectionFieldInstance *> *notes;
 
 /// release labels (dictionary for now)
-@property (nonatomic, strong) NSArray  *labels;
+@property (nonatomic, strong, nullable) NSArray *labels;
 
 + (DGReleaseInstance *)instance;
 
@@ -86,6 +89,8 @@
 @property (nonatomic, strong) NSNumber  *instanceID;
 @property (nonatomic, strong) NSNumber  *rating;
 
-+ (DGChangeRatingOfReleaseRequest*) request;
++ (DGChangeRatingOfReleaseRequest *) request;
 
 @end
+
+NS_ASSUME_NONNULL_END

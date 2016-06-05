@@ -22,30 +22,34 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DGProfile : DGObject
 
-@property (nonatomic, strong) NSString * profile;
-@property (nonatomic, strong) NSString * wantlistURL;
-@property (nonatomic, strong) NSNumber * rank;
-@property (nonatomic, strong) NSNumber * numPending;
-@property (nonatomic, strong) NSNumber * numForSale;
-@property (nonatomic, strong) NSString * homePage;
-@property (nonatomic, strong) NSString * location;
-@property (nonatomic, strong) NSString * collectionFoldersURL;
-@property (nonatomic, strong) NSString * userName;
-@property (nonatomic, strong) NSString * collectionFieldsURL;
-@property (nonatomic, strong) NSNumber * releasesContributed;
-@property (nonatomic, strong) NSString * registered;
-@property (nonatomic, strong) NSNumber * ratingAvg;
-@property (nonatomic, strong) NSNumber * numCollection;
-@property (nonatomic, strong) NSNumber * releasesRated;
-@property (nonatomic, strong) NSNumber * numLists;
-@property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSNumber * numWantlist;
-@property (nonatomic, strong) NSString * inventoryURL;
-@property (nonatomic, strong) NSString * avatarURL;
-@property (nonatomic, strong) NSString * email;
+@property (nonatomic, strong, nullable) NSString *profile;
+@property (nonatomic, strong, nullable) NSString *wantlistURL;
+@property (nonatomic, strong, nullable) NSNumber *rank;
+@property (nonatomic, strong, nullable) NSNumber *numPending;
+@property (nonatomic, strong, nullable) NSNumber *numForSale;
+@property (nonatomic, strong, nullable) NSString *homePage;
+@property (nonatomic, strong, nullable) NSString *location;
+@property (nonatomic, strong, nullable) NSString *collectionFoldersURL;
+@property (nonatomic, strong, nullable) NSString *userName;
+@property (nonatomic, strong, nullable) NSString *collectionFieldsURL;
+@property (nonatomic, strong, nullable) NSNumber *releasesContributed;
+@property (nonatomic, strong, nullable) NSString *registered;
+@property (nonatomic, strong, nullable) NSNumber *ratingAvg;
+@property (nonatomic, strong, nullable) NSNumber *numCollection;
+@property (nonatomic, strong, nullable) NSNumber *releasesRated;
+@property (nonatomic, strong, nullable) NSNumber *numLists;
+@property (nonatomic, strong, nullable) NSString *name;
+@property (nonatomic, strong, nullable) NSNumber *numWantlist;
+@property (nonatomic, strong, nullable) NSString *inventoryURL;
+@property (nonatomic, strong, nullable) NSString *avatarURL;
+@property (nonatomic, strong, nullable) NSString *email;
 
 + (DGProfile*) profile;
 
 @end
+
+NS_ASSUME_NONNULL_END

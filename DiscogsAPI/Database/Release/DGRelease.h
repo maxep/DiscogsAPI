@@ -30,6 +30,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class DGArtist;
+@class DGImage;
 
 /**
  Release description class.
@@ -76,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Release images.
  */
-@property (nonatomic, strong, nullable) NSArray  *images;
+@property (nonatomic, strong, nullable) NSArray<DGImage *> *images;
 
 /**
  Release videos.
@@ -121,7 +122,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Genres of release music.
  */
-@property (nonatomic, strong, nullable) NSArray *genres;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *genres;
 
 /**
  Styles of release music.

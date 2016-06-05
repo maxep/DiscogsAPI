@@ -23,6 +23,8 @@
 
 #import "DGObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// a specific field instance on a release
 ///
 /// Sample JSON:
@@ -33,11 +35,13 @@
 @interface DGCollectionFieldInstance : DGObject
 
 /// ID corresponding to an ID in the user's collection fields
-@property (nonatomic, strong) NSNumber *fieldID;
+@property (nonatomic, strong, nullable) NSNumber *fieldID;
 
 /// the value for this particular field instance
-@property (nonatomic, strong) NSString *value;
+@property (nonatomic, strong, nullable) NSString *value;
 
 - (instancetype)fieldInstance;
 
 @end
+
+NS_ASSUME_NONNULL_END
