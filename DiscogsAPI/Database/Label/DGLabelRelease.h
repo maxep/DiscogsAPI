@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGLabelReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong, nullable) NSArray<DGLabelRelease *> *releases;
+@property (nonatomic, strong, nullable) NSArray<DGRelease *> *releases;
 
 + (DGLabelReleasesResponse *)response;
 

@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Artist name variations.
  */
-@property (nonatomic, strong, nullable) NSArray<NSString *> *namevariations;
+@property (nonatomic, strong, nullable) NSArray  *namevariations;
 
 /**
  Artist profile.
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Artist URLs.
  */
-@property (nonatomic, strong, nullable) NSArray<NSString *> *urls;
+@property (nonatomic, strong, nullable) NSArray  *urls;
 
 /**
  Data quality.
@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The newly-initialized artist object.
  */
-+ (DGArtist *)artist;
++ (DGArtist*)artist;
 
 @end
 

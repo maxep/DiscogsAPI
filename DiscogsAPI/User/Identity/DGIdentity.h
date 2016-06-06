@@ -22,8 +22,6 @@
 
 #import "DGObject.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  User identification class.
  */
@@ -32,20 +30,18 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  User name.
  */
-@property (nonatomic, strong, nullable) NSString *userName;
+@property (nonatomic, strong) NSString * userName;
 
 /**
  User consumer name.
  */
-@property (nonatomic, strong, nullable) NSString *consumerName;
+@property (nonatomic, strong) NSString * consumerName;
 
 /**
  Creates and initializes a 'DGIdentity' object.
  
  @return The newly-initialized identify object.
  */
-+ (DGIdentity *)identity;
++ (DGIdentity*) identity;
 
 @end
-
-NS_ASSUME_NONNULL_END

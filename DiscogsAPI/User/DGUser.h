@@ -26,8 +26,6 @@
 #import "DGCollection.h"
 #import "DGWantlist.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  The DGUser class to manage operation with Discogs Users.
  */
@@ -49,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the user identity.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)identityWithSuccess:(void (^)(DGIdentity *identity))success failure:(nullable DGFailureBlock)failure;
+- (void) identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure;
 
 /**
  Gets a user profile
@@ -58,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the user profile.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getProfile:(NSString *)userName success:(void (^)(DGProfile *profile))success failure:(nullable DGFailureBlock)failure;
+- (void) getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure;
 
 /**
  Edit a user’s profile data
@@ -67,8 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the edited user profile.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile *profile))success failure:(nullable DGFailureBlock)failure;
+- (void) editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -22,8 +22,6 @@
 
 #import "DGObject.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface DGCollectionFieldsRequest : NSObject
 
 @property (nonatomic, strong) NSString *userName;
@@ -34,15 +32,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGCollectionField : DGObject
 
-@property (nonatomic, strong, nullable) NSString  *name;
-@property (nonatomic, strong, nullable) NSNumber  *lines;
-@property (nonatomic, strong, nullable) NSString  *type;
-@property (nonatomic, strong, nullable) NSNumber  *position;
-@property (nonatomic, strong, nullable) NSArray   *options;
-@property (nonatomic, readwrite) BOOL isPublic;
+@property (nonatomic, strong) NSString  *name;
+@property (nonatomic, strong) NSNumber  *lines;
+@property (nonatomic, strong) NSString  *type;
+@property (nonatomic, strong) NSNumber  *position;
+@property (nonatomic, strong) NSArray   *options;
+@property (nonatomic, readwrite) BOOL   isPublic;
 
 + (DGCollectionField *)field;
 
 @end
-
-NS_ASSUME_NONNULL_END

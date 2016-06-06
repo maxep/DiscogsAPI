@@ -22,14 +22,12 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface DGPrice : NSObject
 
-@property (nonatomic,strong, nullable) NSString *currency;
-@property (nonatomic,strong, nullable) NSNumber *value;
+@property (nonatomic,strong) NSString *currency;
+@property (nonatomic,strong) NSNumber *value;
 
-+ (DGPrice *)price;
++ (DGPrice *) price;
 
 @end
 
@@ -37,23 +35,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong) NSNumber *releaseID;
 
-+ (DGPriceSuggectionsRequest *)request;
++ (DGPriceSuggectionsRequest *) request;
 
 @end
 
 @interface DGPriceSuggectionsResponse : NSObject
 
-@property (nonatomic,strong, nullable) DGPrice *mint;
-@property (nonatomic,strong, nullable) DGPrice *nearMint;
-@property (nonatomic,strong, nullable) DGPrice *veryGoodPlus;
-@property (nonatomic,strong, nullable) DGPrice *veryGood;
-@property (nonatomic,strong, nullable) DGPrice *goodPlus;
-@property (nonatomic,strong, nullable) DGPrice *good;
-@property (nonatomic,strong, nullable) DGPrice *fair;
-@property (nonatomic,strong, nullable) DGPrice *poor;
+@property (nonatomic,strong) DGPrice *mint;
+@property (nonatomic,strong) DGPrice *nearMint;
+@property (nonatomic,strong) DGPrice *veryGoodPlus;
+@property (nonatomic,strong) DGPrice *veryGood;
+@property (nonatomic,strong) DGPrice *goodPlus;
+@property (nonatomic,strong) DGPrice *good;
+@property (nonatomic,strong) DGPrice *fair;
+@property (nonatomic,strong) DGPrice *poor;
 
-+ (DGPriceSuggectionsResponse *)response;
++ (DGPriceSuggectionsResponse *) response;
 
 @end
-
-NS_ASSUME_NONNULL_END

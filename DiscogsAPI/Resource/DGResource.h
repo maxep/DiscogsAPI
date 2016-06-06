@@ -22,8 +22,6 @@
 
 #import "DGEndpoint.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  Resource class to manage Discogs resources.
  */
@@ -32,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Coxy server url. (see https://github.com/hendriks73/coxy )
  */
-@property (nonatomic, strong, nullable) NSString *coxyURL;
+@property (nonatomic, strong) NSString* coxyURL;
 
 /**
  Gets a Discogs image
@@ -41,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success         A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
  @param failure         A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
+- (void)getImage:(NSString*)imageURL success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
 
 /**
  Creates a Coxy image request operation for AFNetworking (https://github.com/AFNetworking/AFNetworking ).
@@ -52,8 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The Coxy image request operation.
  */
-- (NSOperation*)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
+- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure;
 
 @end
-
-NS_ASSUME_NONNULL_END

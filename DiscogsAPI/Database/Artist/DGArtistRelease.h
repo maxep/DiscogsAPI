@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGArtistReleaseResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray<DGArtistRelease *> *releases;
+@property (nonatomic, strong) NSArray<DGRelease *> *releases;
 
 + (DGArtistReleaseResponse *)response;
 

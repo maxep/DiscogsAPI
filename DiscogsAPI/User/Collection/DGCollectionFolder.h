@@ -23,19 +23,6 @@
 #import "DGObject.h"
 #import "DGPagination.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@class DGRelease;
-
-@interface DGCollectionFolder : DGObject
-
-@property (nonatomic, strong, nullable) NSNumber *count;
-@property (nonatomic, strong, nullable) NSString *name;
-
-+ (DGCollectionFolder *)folder;
-
-@end
-
 /**
  Manage folder request.
  */
@@ -43,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSNumber *folderID;
-@property (nonatomic, strong, nullable) NSString *name;
+@property (nonatomic, strong) NSString *name;
 
 + (DGCollectionFolderRequest *)request;
 
@@ -61,9 +48,18 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGCollectionFoldersRequest : NSObject
 
 @property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSArray<DGCollectionFolder *>  *folders;
+@property (nonatomic, strong) NSArray  *folders;
 
 + (DGCollectionFoldersRequest *)collection;
+
+@end
+
+@interface DGCollectionFolder : DGObject
+
+@property (nonatomic, strong) NSNumber *count;
+@property (nonatomic, strong) NSString *name;
+
++ (DGCollectionFolder *)folder;
 
 @end
 
@@ -97,10 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGCollectionReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray<DGRelease *> *releases;
+@property (nonatomic, strong) NSArray *releases;
 
 + (DGCollectionReleasesResponse *)response;
 
 @end
-
-NS_ASSUME_NONNULL_END
