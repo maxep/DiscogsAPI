@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Mapping/Database/Master/DGMasterVersion+Mapping.h

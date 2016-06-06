@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Core/DGObject.h

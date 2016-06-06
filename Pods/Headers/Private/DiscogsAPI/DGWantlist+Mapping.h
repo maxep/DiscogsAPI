@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Mapping/User/Wantlist/DGWantlist+Mapping.h

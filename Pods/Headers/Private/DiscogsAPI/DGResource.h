@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Resource/DGResource.h

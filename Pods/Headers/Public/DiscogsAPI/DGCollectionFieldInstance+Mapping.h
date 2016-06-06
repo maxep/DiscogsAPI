@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Mapping/User/Collection/DGCollectionFieldInstance+Mapping.h

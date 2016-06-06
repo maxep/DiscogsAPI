@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CA793F51D04ED5F0006EE89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */; };
+		9CA793F71D04ED5F0006EE89 /* DGAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793EC1D04ED5F0006EE89 /* DGAppDelegate.swift */; };
+		9CA793F81D04ED5F0006EE89 /* DGArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793ED1D04ED5F0006EE89 /* DGArtistViewController.swift */; };
+		9CA793F91D04ED5F0006EE89 /* DGAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793EE1D04ED5F0006EE89 /* DGAuthViewController.swift */; };
+		9CA793FA1D04ED5F0006EE89 /* DGLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793EF1D04ED5F0006EE89 /* DGLabelViewController.swift */; };
+		9CA793FB1D04ED5F0006EE89 /* DGMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F01D04ED5F0006EE89 /* DGMasterViewController.swift */; };
+		9CA793FC1D04ED5F0006EE89 /* DGReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */; };
+		9CA793FD1D04ED5F0006EE89 /* DGSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F21D04ED5F0006EE89 /* DGSearchViewController.swift */; };
+		9CA793FE1D04ED5F0006EE89 /* DGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F31D04ED5F0006EE89 /* DGViewController.swift */; };
+		9CA793FF1D04ED5F0006EE89 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CA793F41D04ED5F0006EE89 /* Info.plist */; };
+		9CA794021D04ED8A0006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794001D04ED8A0006EE89 /* Launch Screen.storyboard */; };
+		9CA794031D04ED8A0006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794011D04ED8A0006EE89 /* Main.storyboard */; };
+		9CA794041D04EDAF0006EE89 /* DiscogsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D63B311CFF91B10001942B /* DiscogsAPI.framework */; };
+		9CA7940D1D055FB40006EE89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA7940C1D055FB40006EE89 /* main.m */; };
+		9CA7942A1D0560460006EE89 /* DGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794221D0560460006EE89 /* DGAppDelegate.m */; };
+		9CA7942B1D0560460006EE89 /* DGAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794241D0560460006EE89 /* DGAuthViewController.m */; };
+		9CA7942C1D0560460006EE89 /* DGSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794261D0560460006EE89 /* DGSearchViewController.m */; };
+		9CA7942D1D0560460006EE89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794271D0560460006EE89 /* Images.xcassets */; };
+		9CA794311D0560560006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */; };
+		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
+		9EB6AB67B627AE94E755DB0D /* libPods-DiscogsAPI-Discogs-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6117B9595B64004BA4BBA84 /* libPods-DiscogsAPI-Discogs-objc.a */; };
 		D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
@@ -137,9 +158,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0205250D0E882E6A7A830D01 /* libPods-Discogs-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discogs-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33812A763705B9B4F13B5B96 /* Pods-Discogs-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		4FF4D721E5F82C1237C165D8 /* Pods-DiscogsAPI-Discogs-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI-Discogs-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc.debug.xcconfig"; sourceTree = "<group>"; };
 		88B061AB3D946D326A25443F /* Pods-DiscogsAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.release.xcconfig"; sourceTree = "<group>"; };
+		8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
 		96FA247B9286C3715E46D524 /* libPods-DiscogsAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiscogsAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9814D72CBC293A1A34B4968F /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		9CA793D81D04EB3A0006EE89 /* Discogs-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Discogs-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CA793EC1D04ED5F0006EE89 /* DGAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGAppDelegate.swift; sourceTree = "<group>"; };
+		9CA793ED1D04ED5F0006EE89 /* DGArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGArtistViewController.swift; sourceTree = "<group>"; };
+		9CA793EE1D04ED5F0006EE89 /* DGAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGAuthViewController.swift; sourceTree = "<group>"; };
+		9CA793EF1D04ED5F0006EE89 /* DGLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGLabelViewController.swift; sourceTree = "<group>"; };
+		9CA793F01D04ED5F0006EE89 /* DGMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGMasterViewController.swift; sourceTree = "<group>"; };
+		9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGReleaseViewController.swift; sourceTree = "<group>"; };
+		9CA793F21D04ED5F0006EE89 /* DGSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGSearchViewController.swift; sourceTree = "<group>"; };
+		9CA793F31D04ED5F0006EE89 /* DGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGViewController.swift; sourceTree = "<group>"; };
+		9CA793F41D04ED5F0006EE89 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA794001D04ED8A0006EE89 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9CA794011D04ED8A0006EE89 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CA794091D055FB40006EE89 /* Discogs-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Discogs-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA7940C1D055FB40006EE89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CA794211D0560460006EE89 /* DGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAppDelegate.h; sourceTree = "<group>"; };
+		9CA794221D0560460006EE89 /* DGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAppDelegate.m; sourceTree = "<group>"; };
+		9CA794231D0560460006EE89 /* DGAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthViewController.h; sourceTree = "<group>"; };
+		9CA794241D0560460006EE89 /* DGAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthViewController.m; sourceTree = "<group>"; };
+		9CA794251D0560460006EE89 /* DGSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGSearchViewController.h; sourceTree = "<group>"; };
+		9CA794261D0560460006EE89 /* DGSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGSearchViewController.m; sourceTree = "<group>"; };
+		9CA794271D0560460006EE89 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9CA794281D0560460006EE89 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9CA794301D0560560006EE89 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3960F4CF34B7E6F8663E349 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
+		C6117B9595B64004BA4BBA84 /* libPods-DiscogsAPI-Discogs-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiscogsAPI-Discogs-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DiscogsAPI-umbrella.h"; path = "Framework/DiscogsAPI-umbrella.h"; sourceTree = SOURCE_ROOT; };
 		D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
@@ -272,6 +324,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9CA793D51D04EB3A0006EE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA794041D04EDAF0006EE89 /* DiscogsAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA794061D055FB40006EE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB6AB67B627AE94E755DB0D /* libPods-DiscogsAPI-Discogs-objc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0D63B2D1CFF91B10001942B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +354,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CA793D91D04EB3A0006EE89 /* Example-swift */ = {
+			isa = PBXGroup;
+			children = (
+				9CA793EC1D04ED5F0006EE89 /* DGAppDelegate.swift */,
+				9CA793F31D04ED5F0006EE89 /* DGViewController.swift */,
+				9CA793EE1D04ED5F0006EE89 /* DGAuthViewController.swift */,
+				9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */,
+				9CA793F01D04ED5F0006EE89 /* DGMasterViewController.swift */,
+				9CA793F21D04ED5F0006EE89 /* DGSearchViewController.swift */,
+				9CA793ED1D04ED5F0006EE89 /* DGArtistViewController.swift */,
+				9CA793EF1D04ED5F0006EE89 /* DGLabelViewController.swift */,
+				9CA794001D04ED8A0006EE89 /* Launch Screen.storyboard */,
+				9CA794011D04ED8A0006EE89 /* Main.storyboard */,
+				9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */,
+				9CA793F41D04ED5F0006EE89 /* Info.plist */,
+			);
+			path = "Example-swift";
+			sourceTree = "<group>";
+		};
+		9CA7940A1D055FB40006EE89 /* Example-objc */ = {
+			isa = PBXGroup;
+			children = (
+				9CA794211D0560460006EE89 /* DGAppDelegate.h */,
+				9CA794221D0560460006EE89 /* DGAppDelegate.m */,
+				9CA794231D0560460006EE89 /* DGAuthViewController.h */,
+				9CA794241D0560460006EE89 /* DGAuthViewController.m */,
+				9CA794251D0560460006EE89 /* DGSearchViewController.h */,
+				9CA794261D0560460006EE89 /* DGSearchViewController.m */,
+				9CA794271D0560460006EE89 /* Images.xcassets */,
+				9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */,
+				9CA794301D0560560006EE89 /* Main.storyboard */,
+				9CA794281D0560460006EE89 /* Info.plist */,
+				9CA7940B1D055FB40006EE89 /* Supporting Files */,
+			);
+			path = "Example-objc";
+			sourceTree = "<group>";
+		};
+		9CA7940B1D055FB40006EE89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CA7940C1D055FB40006EE89 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D0A587E61CFF945D008DF0A4 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +804,8 @@
 			isa = PBXGroup;
 			children = (
 				D0D63B331CFF91B20001942B /* DiscogsAPI */,
+				9CA7940A1D055FB40006EE89 /* Example-objc */,
+				9CA793D91D04EB3A0006EE89 /* Example-swift */,
 				D0D63B321CFF91B10001942B /* Products */,
 				F8210DF5B87AA33096C2A7D5 /* Pods */,
 				FF897F03D06EC1AA5D72D640 /* Frameworks */,
@@ -701,6 +816,8 @@
 			isa = PBXGroup;
 			children = (
 				D0D63B311CFF91B10001942B /* DiscogsAPI.framework */,
+				9CA793D81D04EB3A0006EE89 /* Discogs-swift.app */,
+				9CA794091D055FB40006EE89 /* Discogs-objc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -729,6 +846,10 @@
 			children = (
 				9814D72CBC293A1A34B4968F /* Pods-DiscogsAPI.debug.xcconfig */,
 				88B061AB3D946D326A25443F /* Pods-DiscogsAPI.release.xcconfig */,
+				33812A763705B9B4F13B5B96 /* Pods-Discogs-objc.debug.xcconfig */,
+				8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */,
+				4FF4D721E5F82C1237C165D8 /* Pods-DiscogsAPI-Discogs-objc.debug.xcconfig */,
+				B3960F4CF34B7E6F8663E349 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -740,6 +861,8 @@
 				D0A589021CFF9B1A008DF0A4 /* SystemConfiguration.framework */,
 				D0A589001CFF9B0A008DF0A4 /* MobileCoreServices.framework */,
 				96FA247B9286C3715E46D524 /* libPods-DiscogsAPI.a */,
+				0205250D0E882E6A7A830D01 /* libPods-Discogs-objc.a */,
+				C6117B9595B64004BA4BBA84 /* libPods-DiscogsAPI-Discogs-objc.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -819,16 +942,53 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9CA793D71D04EB3A0006EE89 /* Discogs-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CA793E71D04EB3A0006EE89 /* Build configuration list for PBXNativeTarget "Discogs-swift" */;
+			buildPhases = (
+				9CA793D41D04EB3A0006EE89 /* Sources */,
+				9CA793D51D04EB3A0006EE89 /* Frameworks */,
+				9CA793D61D04EB3A0006EE89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Discogs-swift";
+			productName = Discogs;
+			productReference = 9CA793D81D04EB3A0006EE89 /* Discogs-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CA794081D055FB40006EE89 /* Discogs-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CA7941D1D055FB40006EE89 /* Build configuration list for PBXNativeTarget "Discogs-objc" */;
+			buildPhases = (
+				A6CBDE41DF618E21DD5DB92F /* [CP] Check Pods Manifest.lock */,
+				9CA794051D055FB40006EE89 /* Sources */,
+				9CA794061D055FB40006EE89 /* Frameworks */,
+				9CA794071D055FB40006EE89 /* Resources */,
+				6068160D1032CA4275BFFDCC /* [CP] Embed Pods Frameworks */,
+				B870A939637A254F6CE37E79 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Discogs-objc";
+			productName = "Discogs-objc";
+			productReference = 9CA794091D055FB40006EE89 /* Discogs-objc.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D0D63B301CFF91B10001942B /* DiscogsAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0D63B391CFF91B20001942B /* Build configuration list for PBXNativeTarget "DiscogsAPI" */;
 			buildPhases = (
-				DE23BD181AAC8057295E8750 /* 📦 Check Pods Manifest.lock */,
+				DE23BD181AAC8057295E8750 /* [CP] Check Pods Manifest.lock */,
 				D0D63B2C1CFF91B10001942B /* Sources */,
 				D0D63B2D1CFF91B10001942B /* Frameworks */,
 				D0D63B2E1CFF91B10001942B /* Headers */,
 				D0D63B2F1CFF91B10001942B /* Resources */,
-				D70B65CFA02948430B8C61B8 /* 📦 Copy Pods Resources */,
+				D70B65CFA02948430B8C61B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -845,9 +1005,19 @@
 		D0D63B281CFF91B10001942B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DG;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Maxime Epain";
 				TargetAttributes = {
+					9CA793D71D04EB3A0006EE89 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C75GEDTP26;
+					};
+					9CA794081D055FB40006EE89 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C75GEDTP26;
+					};
 					D0D63B301CFF91B10001942B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = C75GEDTP26;
@@ -860,6 +1030,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D0D63B271CFF91B10001942B;
 			productRefGroup = D0D63B321CFF91B10001942B /* Products */;
@@ -867,11 +1038,34 @@
 			projectRoot = "";
 			targets = (
 				D0D63B301CFF91B10001942B /* DiscogsAPI */,
+				9CA793D71D04EB3A0006EE89 /* Discogs-swift */,
+				9CA794081D055FB40006EE89 /* Discogs-objc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9CA793D61D04EB3A0006EE89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA794031D04ED8A0006EE89 /* Main.storyboard in Resources */,
+				9CA793F51D04ED5F0006EE89 /* Assets.xcassets in Resources */,
+				9CA794021D04ED8A0006EE89 /* Launch Screen.storyboard in Resources */,
+				9CA793FF1D04ED5F0006EE89 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA794071D055FB40006EE89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA794321D0560560006EE89 /* Main.storyboard in Resources */,
+				9CA7942D1D0560460006EE89 /* Images.xcassets in Resources */,
+				9CA794311D0560560006EE89 /* Launch Screen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0D63B2F1CFF91B10001942B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -882,14 +1076,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D70B65CFA02948430B8C61B8 /* 📦 Copy Pods Resources */ = {
+		6068160D1032CA4275BFFDCC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6CBDE41DF618E21DD5DB92F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B870A939637A254F6CE37E79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D70B65CFA02948430B8C61B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -897,14 +1136,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE23BD181AAC8057295E8750 /* 📦 Check Pods Manifest.lock */ = {
+		DE23BD181AAC8057295E8750 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,6 +1154,32 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9CA793D41D04EB3A0006EE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA793FA1D04ED5F0006EE89 /* DGLabelViewController.swift in Sources */,
+				9CA793FB1D04ED5F0006EE89 /* DGMasterViewController.swift in Sources */,
+				9CA793F81D04ED5F0006EE89 /* DGArtistViewController.swift in Sources */,
+				9CA793FE1D04ED5F0006EE89 /* DGViewController.swift in Sources */,
+				9CA793FC1D04ED5F0006EE89 /* DGReleaseViewController.swift in Sources */,
+				9CA793FD1D04ED5F0006EE89 /* DGSearchViewController.swift in Sources */,
+				9CA793F91D04ED5F0006EE89 /* DGAuthViewController.swift in Sources */,
+				9CA793F71D04ED5F0006EE89 /* DGAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA794051D055FB40006EE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA7940D1D055FB40006EE89 /* main.m in Sources */,
+				9CA7942A1D0560460006EE89 /* DGAppDelegate.m in Sources */,
+				9CA7942B1D0560460006EE89 /* DGAuthViewController.m in Sources */,
+				9CA7942C1D0560460006EE89 /* DGSearchViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0D63B2C1CFF91B10001942B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -986,6 +1251,61 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		9CA793E81D04EB3A0006EE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Example-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.maxep.Discogs-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CA793E91D04EB3A0006EE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Example-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.maxep.Discogs-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9CA7941E1D055FB40006EE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF4D721E5F82C1237C165D8 /* Pods-DiscogsAPI-Discogs-objc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Example-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.maxep.Discogs-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9CA7941F1D055FB40006EE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3960F4CF34B7E6F8663E349 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Example-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.maxep.Discogs-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D0D63B371CFF91B20001942B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1125,6 +1445,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9CA793E71D04EB3A0006EE89 /* Build configuration list for PBXNativeTarget "Discogs-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CA793E81D04EB3A0006EE89 /* Debug */,
+				9CA793E91D04EB3A0006EE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CA7941D1D055FB40006EE89 /* Build configuration list for PBXNativeTarget "Discogs-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CA7941E1D055FB40006EE89 /* Debug */,
+				9CA7941F1D055FB40006EE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0D63B2B1CFF91B10001942B /* Build configuration list for PBXProject "DiscogsAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Core/DGHTTPClient.h
