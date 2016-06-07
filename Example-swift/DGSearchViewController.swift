@@ -99,7 +99,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         }
     }
     
-    // MARK: UISearchResultsUpdating
+    // MARK: UISearchBarDelegate
     
     func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         updateSearchResultsForSearchController(searchController)

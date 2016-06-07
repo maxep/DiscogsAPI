@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
     
-    <key>DiscogsConsumerKey</key>
-    <string>DISCOGS_APP_CONSUMER_KEY</string>
-    
-    <key>DiscogsConsumerSecret</key>
-    <string>DISCOGS_APP_CONSUMER_SECRET</string>
+<!--    <key>DiscogsConsumerKey</key>-->
+<!--    <string>DISCOGS_APP_CONSUMER_KEY</string>-->
+<!--    -->
+<!--    <key>DiscogsConsumerSecret</key>-->
+<!--    <string>DISCOGS_APP_CONSUMER_SECRET</string>-->
 
-<!--    <key>DiscogsAccessToken</key>-->
-<!--    <string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>-->
+    <key>DiscogsAccessToken</key>
+    <string>EkdteImJEENxjOHmWzpMavzTfvgZNPUAHEdYzOEd</string>
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGAuthViewController.h"
-#import "DiscogsAPI.h"
+#import <DiscogsAPI/DiscogsAPI.h>
 
 @implementation DGAuthViewController
 

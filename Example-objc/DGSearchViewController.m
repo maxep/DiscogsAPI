@@ -22,9 +22,11 @@
 
 #import "DGSearchViewController.h"
 #import "DGAuthViewController.h"
-#import "DiscogsAPI.h"
+#import "DGViewController.h"
+#import <DiscogsAPI/DiscogsAPI.h>
 
-@interface DGSearchViewController ()
+@interface DGSearchViewController () <UISearchResultsUpdating, UISearchBarDelegate>
+@property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) DGSearchResponse *response;
 @end
 
@@ -32,6 +34,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.definesPresentationContext = YES;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
+    self.searchController.searchBar.scopeButtonTitles = @[@"All", @"Release", @"Master", @"Artist", @"Label"];
+    self.searchController.searchBar.delegate = self;
     
     [DiscogsAPI.client isAuthenticated:^(BOOL success) {
         if (!success) {
@@ -54,49 +67,34 @@
 - (void)setResponse:(DGSearchResponse *)response {
     _response = response;
     [self.tableView reloadData];
-    [self.searchDisplayController.searchResultsTableView reloadData];
 }
 
-#pragma mark <UISearchDisplayDelegate>
+#pragma mark <UISearchResultsUpdating>
 
-- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView {
-    tableView.rowHeight = 66.f;
-}
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-   
-    // Create a request with the search text
-    DGSearchRequest *request = [DGSearchRequest request];
-    request.query = searchString;
-    request.pagination.perPage = @5;
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSString *query = searchController.searchBar.text;
+    NSString *type = @[@"", @"release", @"master", @"artist", @"label"][searchController.searchBar.selectedScopeButtonIndex];
     
-    // Send the request and refresh the result table with the response
-    [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
-        self.response = response;
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    return NO;
+    if (query.length > 0) {
+        
+        // Search on Discogs
+        DGSearchRequest *request = [DGSearchRequest request];
+        request.query = query;
+        request.type = type;
+        request.pagination.perPage = @25;
+        
+        [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse * _Nonnull response) {
+            self.response = response;
+        } failure:^(NSError * _Nullable error) {
+            NSLog(@"Error: %@", error);
+        }];
+    }
 }
 
 #pragma mark <UISearchBarDelegate>
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    
-    // Create a request with the search text
-    DGSearchRequest *request = [DGSearchRequest request];
-    request.query = searchBar.text;
-    request.pagination.perPage = @25;
-    
-    // Send the request and refresh the result table with the response
-    [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse *response) {
-        self.response = response;
-    } failure:^(NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    [self.searchDisplayController setActive:NO animated:YES];
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+    [self updateSearchResultsForSearchController:self.searchController];
 }
 
 #pragma mark <UITableViewDataSource>
@@ -106,49 +104,48 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DGSearchViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
     
-    // Set the cell with the related result
-    if (indexPath.row < self.response.results.count) {
-        DGSearchResult* result = [self.response.results objectAtIndex:indexPath.row];
-        
-        cell.title.text = result.title;
-        cell.type.text = result.type;
-        
-        [DiscogsAPI.client.resource getImage:result.thumb success:^(UIImage *image) {
-            cell.cover.image = image;
-        } failure:^(NSError *error) {
-            NSLog(@"Error: %@", error);
-        }];
-        
-        if (tableView == self.tableView && result == [self.response.results lastObject]) {
-            
-            [self.response loadNextPageWithSuccess:^{
-                [self.tableView reloadData];
-            } failure:^(NSError *error) {
-                NSLog(@"Error: %@", error);
-            }];
-        }
-    }
+    DGSearchResult *result = self.response.results[indexPath.row];
+    UITableViewCell *cell = [self dequeueReusableCellWithResult:result];
+    
+    cell.textLabel.text       = result.title;
+    cell.detailTextLabel.text = result.type;
+    
+    // Get a Discogs image
+    [DiscogsAPI.client.resource getImage:result.thumb success:^(UIImage *image) {
+        cell.imageView.image = image;
+    } failure:nil];
+    
     return cell;
 }
 
-@end
-
-#pragma mark - Search Cell
-
-@implementation DGSearchViewCell
-
-static UIImage *kDefaultReleaseImage = nil;
-
-+ (void)load {
-    kDefaultReleaseImage = [UIImage imageNamed:@"default-release"];
+- (UITableViewCell *)dequeueReusableCellWithResult:(DGSearchResult *)result {
+    UITableViewCell *cell = nil;
+    
+    if ([result.type isEqualToString:@"artist"]) {
+        cell = [self.tableView dequeueReusableCellWithIdentifier:@"ArtistCell"];
+        cell.imageView.image = [UIImage imageNamed:@"default-artist"];
+    } else if ([result.type isEqualToString:@"label"]) {
+        cell = [self.tableView dequeueReusableCellWithIdentifier:@"LabelCell"];
+        cell.imageView.image = [UIImage imageNamed:@"default-label"];
+    } else if ([result.type isEqualToString:@"master"]) {
+        cell = [self.tableView dequeueReusableCellWithIdentifier:@"MasterCell"];
+        cell.imageView.image = [UIImage imageNamed:@"default-release"];
+    } else {
+        cell = [self.tableView dequeueReusableCellWithIdentifier:@"ReleaseCell"];
+        cell.imageView.image = [UIImage imageNamed:@"default-release"];
+    }
+    
+    return cell;
 }
 
-- (void)prepareForReuse {
-    self.title.text     = nil;
-    self.type.text      = nil;
-    self.cover.image    = kDefaultReleaseImage;
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[DGViewController class]]) {
+        DGSearchResult *result = self.response.results[self.tableView.indexPathForSelectedRow.row];
+        [(DGViewController *)segue.destinationViewController setObjectID:result.ID];
+    }
 }
 
 @end

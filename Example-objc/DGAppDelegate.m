@@ -25,7 +25,10 @@
 @implementation DGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UISearchBar.appearance.barTintColor = UIColor.blackColor;
+    UISearchBar.appearance.tintColor = UIColor.whiteColor;
+    
     return YES;
 }
 

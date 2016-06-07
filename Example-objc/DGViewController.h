@@ -1,4 +1,4 @@
-// DGSearchViewController.h
+// DGViewController.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -19,10 +19,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-
 #import <UIKit/UIKit.h>
 
-@interface DGSearchViewController : UITableViewController
+@interface DGViewController : UIViewController <UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UIImageView *coverView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *styleLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic,copy) NSNumber *objectID;
 
 @end
-

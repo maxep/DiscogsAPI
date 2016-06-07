@@ -1,4 +1,4 @@
-// DGSearchViewController.h
+// DGArtistViewController.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,9 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "DGViewController.h"
 
-@interface DGSearchViewController : UITableViewController
+@interface DGArtistViewController : DGViewController
 
 @end
-

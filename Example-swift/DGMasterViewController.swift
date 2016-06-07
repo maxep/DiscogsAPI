@@ -98,14 +98,14 @@ class DGMasterViewController: DGViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier("ReleaseCell")!
-        let result = self.response.versions[indexPath.row]
+        let version = self.response.versions[indexPath.row]
         
-        cell.textLabel?.text       = result.title
-        cell.detailTextLabel?.text = result.format
+        cell.textLabel?.text       = version.title
+        cell.detailTextLabel?.text = version.format
         cell.imageView?.image      = UIImage.init(imageLiteral: "default-release")
         
         // Get a Discogs image
-        DiscogsAPI.client().resource.getImage(result.thumb!, success: { (image) in
+        DiscogsAPI.client().resource.getImage(version.thumb!, success: { (image) in
             cell.imageView?.image = image
             }, failure:nil)
         
