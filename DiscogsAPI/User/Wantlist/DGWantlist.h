@@ -25,19 +25,13 @@
 #import "DGPagination.h"
 #import "DGRelease.h"
 
-@interface DGWantlistRequest : NSObject
+@interface DGWant : DGObject
 
-@property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong) NSString      *userName;
+@property (nonatomic, strong) NSNumber  *rating;
+@property (nonatomic, strong) NSString  *notes;
+@property (nonatomic, strong) DGRelease *DGRelease;
 
-+ (DGWantlistRequest *)request;
-
-@end
-
-@interface DGWantlistResponse : NSObject <DGPaginated>
-@property (nonatomic, strong) NSArray *wants;
-
-+ (DGWantlistResponse *)response;
++ (DGWant *)want;
 
 @end
 
@@ -52,13 +46,19 @@
 
 @end
 
-@interface DGWant : DGObject
+@interface DGWantlistRequest : NSObject
 
-@property (nonatomic, strong) NSNumber  *rating;
-@property (nonatomic, strong) NSString  *notes;
-@property (nonatomic, strong) DGRelease *DGRelease;
+@property (nonatomic, strong) DGPagination  *pagination;
+@property (nonatomic, strong) NSString      *userName;
 
-+ (DGWant *)want;
++ (DGWantlistRequest *)request;
+
+@end
+
+@interface DGWantlistResponse : NSObject <DGPaginated>
+@property (nonatomic, strong) NSArray<DGWant *> *wants;
+
++ (DGWantlistResponse *)response;
 
 @end
 

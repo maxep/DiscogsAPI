@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGMasterVersionResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray<DGRelease *> *versions;
+@property (nonatomic, strong) NSArray<DGMasterVersion *> *versions;
 
 + (DGMasterVersionResponse *)response;
 
