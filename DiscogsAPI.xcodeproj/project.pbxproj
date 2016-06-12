@@ -38,6 +38,7 @@
 		9CA794311D0560560006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */; };
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
 		9EB6AB67B627AE94E755DB0D /* libPods-DiscogsAPI-Discogs-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6117B9595B64004BA4BBA84 /* libPods-DiscogsAPI-Discogs-objc.a */; };
+		D02827D11D0DC64800FCCFFE /* DiscogsAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0D63B311CFF91B10001942B /* DiscogsAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
@@ -166,6 +167,30 @@
 		D0A589061CFF9E6A008DF0A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589051CFF9E6A008DF0A4 /* Security.framework */; };
 		E7F4DDB18589E8025C7D6F64 /* libPods-DiscogsAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA247B9286C3715E46D524 /* libPods-DiscogsAPI.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D02827D21D0DC64800FCCFFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D63B281CFF91B10001942B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D63B301CFF91B10001942B;
+			remoteInfo = DiscogsAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D02827D41D0DC64800FCCFFE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D02827D11D0DC64800FCCFFE /* DiscogsAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0205250D0E882E6A7A830D01 /* libPods-Discogs-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Discogs-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -984,10 +1009,12 @@
 				9CA793D41D04EB3A0006EE89 /* Sources */,
 				9CA793D51D04EB3A0006EE89 /* Frameworks */,
 				9CA793D61D04EB3A0006EE89 /* Resources */,
+				D02827D41D0DC64800FCCFFE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D02827D31D0DC64800FCCFFE /* PBXTargetDependency */,
 			);
 			name = "Discogs-swift";
 			productName = Discogs;
@@ -1289,6 +1316,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D02827D31D0DC64800FCCFFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D63B301CFF91B10001942B /* DiscogsAPI */;
+			targetProxy = D02827D21D0DC64800FCCFFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9CA793E81D04EB3A0006EE89 /* Debug */ = {

@@ -110,7 +110,7 @@ class DGMasterViewController: DGViewController {
             }, failure:nil)
         
         // Load the next response page
-        if result === self.response.versions.last {
+        if version === self.response.versions.last {
             self.response.loadNextPageWithSuccess({
                 self.tableView.reloadData()
                 }, failure: { (error) in
