@@ -121,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Genres of release music.
  */
-@property (nonatomic, strong, nullable) NSArray *genres;
+@property (nonatomic, strong, nullable) NSArray<NSString *> *genres;
 
 /**
  Styles of release music.
