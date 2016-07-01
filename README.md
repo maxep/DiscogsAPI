@@ -45,6 +45,7 @@ Detailed usage instructions are available in the [Wiki](https://github.com/maxep
 |~~[1.4](https://github.com/maxep/DiscogsAPI/releases/tag/v1.4)~~|August 28, 2015  |See [wiki](https://github.com/maxep/DiscogsAPI/wiki) for API support. Upgrade to RestKit 0.25.0|
 |[1.4.1](https://github.com/maxep/DiscogsAPI/releases/tag/v1.4.1)| October 6, 2015|Fix OAuth major issue.|
 |[1.4.2](https://github.com/maxep/DiscogsAPI/releases/tag/v1.4.2)|November 26, 2015  |Upgrade to RestKit 0.26.0|
+|[1.5.0](https://github.com/maxep/DiscogsAPI/releases/tag/v1.5.0)|July 1, 2016  |<ul><li>Build as modularized framework</li><li>Swift compatibility</li><li>Carthage compatibility</li></ul>|
 
 ## Documentation
 
