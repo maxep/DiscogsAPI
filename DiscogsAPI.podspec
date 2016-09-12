@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.osx.frameworks 	= 'CoreServices', 'SystemConfiguration'
   
   s.source_files = 'DiscogsAPI/*.{h,m}'
-  s.default_subspecs = 'Authentication', 'Database', 'User', 'Marketplace', 'Resource'
+  s.default_subspecs = 'Authentication', 'Database', 'User', 'Marketplace', 'Resource', 'Extensions'
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'DiscogsAPI/Core',
@@ -112,6 +112,10 @@ Pod::Spec.new do |s|
   s.subspec 'Mapping' do |ss|
     ss.source_files = 'DiscogsAPI/Mapping'
     ss.private_header_files = 'DiscogsAPI/Mapping/*.h'
+  end
+
+  s.subspec 'Extensions' do |ss|
+    ss.source_files = 'DiscogsAPI/Extensions'
   end
 
 end

@@ -37,7 +37,8 @@
     "Database",
     "User",
     "Marketplace",
-    "Resource"
+    "Resource",
+    "Extensions"
   ],
   "subspecs": [
     {
@@ -165,6 +166,10 @@
       "name": "Mapping",
       "source_files": "DiscogsAPI/Mapping",
       "private_header_files": "DiscogsAPI/Mapping/*.h"
+    },
+    {
+      "name": "Extensions",
+      "source_files": "DiscogsAPI/Extensions"
     }
   ]
 }
