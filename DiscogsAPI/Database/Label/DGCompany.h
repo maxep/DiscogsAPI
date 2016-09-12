@@ -24,6 +24,8 @@
 
 #import "DGCompany+DiscogsAPI.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** Sample JSON
      {
          catno = "86777-1";
@@ -43,22 +45,22 @@
 /**
  entity type. "Label" is 1. Use this in conjunction with entityTypeName to determine what entity type this is
  */
-@property (nonatomic, strong) NSNumber *entityType;
+@property (nonatomic, strong, nullable) NSNumber *entityType;
 
 /** 
  Entity type name. 1 is "Label". Use this in conjunction with entityType to determine what entity type this is.
  */
-@property (nonatomic, strong) NSString *entityTypeName;
+@property (nonatomic, strong, nullable) NSString *entityTypeName;
 
 /**
  Name of this company/entity
  */
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong, nullable) NSString *name;
 
 /**
  Catalog number per entity for a release. can be empty if this entity isn't an actual label (ie, Copyright, Phonograph Copyright, etc.)
  */
-@property (nonatomic, strong) NSString *catno;
+@property (nonatomic, strong, nullable) NSString *catno;
 
 /**
  use to create a new DGCompany object
@@ -66,3 +68,5 @@
 + (instancetype)company;
 
 @end
+
+NS_ASSUME_NONNULL_END
