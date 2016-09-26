@@ -31,6 +31,21 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGTokenStore : NSObject
 
 /**
+ Sets the accessibility type for all future credentials saved to the Keychain.
+ The default accessibility type is `kSecAttrAccessibleWhenUnlocked`.
+ 
+ @param accessibilityType One of the "Keychain Item Accessibility Constants" used for determining when a keychain item should be readable.
+ */
++ (void)setAccessibilityType:(CFTypeRef)accessibilityType;
+
+/**
+ Sets the access group type for all future tokens saved to the Keychain.
+ 
+ @param accessGroup The access group.
+ */
++ (void)setAccessGroup:(nullable NSString *)accessGroup;
+
+/**
  Retrieves the OAuth credential in keychain.
  
  @param identifier The credential identifier.
@@ -57,17 +72,6 @@ NS_ASSUME_NONNULL_BEGIN
  @return 'YES' if it succeeded. Otherwise 'NO'.
  */
 + (BOOL)storeCredential:(nullable AFOAuth1Token *)credential withIdentifier:(NSString *)identifier;
-
-/**
- Stores the OAuth credential into keychain.
- 
- @param credential            The OAuth credential.
- @param identifier            The credential identifier.
- @param securityAccessibility The security accessibility.
- 
- @return 'YES' if it succeeded. Otherwise 'NO'.
- */
-+ (BOOL)storeCredential:(nullable AFOAuth1Token *)credential withIdentifier:(NSString *)identifier withAccessibility:(id)securityAccessibility;
 
 @end
 

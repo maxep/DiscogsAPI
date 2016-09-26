@@ -22,24 +22,56 @@
 
 #import "DGTokenStore.h"
 
-NSString * const kDGOAuth1CredentialServiceName = @"DGOAuthCredentialService";
-
-static NSDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *identifier) {
-    return @{(__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
-             (__bridge id)kSecAttrAccount: identifier,
-             (__bridge id)kSecAttrService: kDGOAuth1CredentialServiceName
-             };
-}
-
 @implementation DGTokenStore
 
+static NSString * const DGOAuth1CredentialServiceName = @"DGOAuthCredentialService";
+static NSString * DGAccessGroup = nil;
+static CFTypeRef DGSecurityAccessibility = NULL;
+
+static NSMutableDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *identifier) {
+    
+    NSMutableDictionary *query = [NSMutableDictionary dictionary];
+    query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    query[(__bridge id)kSecAttrService] = DGOAuth1CredentialServiceName;
+    
+    if (identifier) {
+        query[(__bridge id)kSecAttrAccount] = identifier;
+    }
+    
+    if (DGAccessGroup) {
+        query[(__bridge id)kSecAttrAccessGroup] = DGAccessGroup;
+    }
+    
+    if (DGSecurityAccessibility) {
+        query[(__bridge id)kSecAttrAccessible] = (__bridge id)DGSecurityAccessibility;
+    }
+    
+    return query;
+}
+
++ (void)load {
+    DGSecurityAccessibility = kSecAttrAccessibleWhenUnlocked;
+}
+
++ (void)setAccessibilityType:(CFTypeRef)accessibilityType {
+    if (DGSecurityAccessibility) {
+        CFRelease(DGSecurityAccessibility);
+    }
+    CFRetain(accessibilityType);
+    DGSecurityAccessibility = accessibilityType;
+}
+
++ (void)setAccessGroup:(NSString *)accessGroup {
+    DGAccessGroup = accessGroup;
+}
+
 + (AFOAuth1Token *)retrieveCredentialWithIdentifier:(NSString *)identifier {
-    NSMutableDictionary *mutableQueryDictionary = [DGKeychainQueryDictionaryWithIdentifier(identifier) mutableCopy];
-    mutableQueryDictionary[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
-    mutableQueryDictionary[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
+    NSMutableDictionary *query = DGKeychainQueryDictionaryWithIdentifier(identifier);
+    query[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
+    query[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
     
     CFDataRef result = nil;
-    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)mutableQueryDictionary, (CFTypeRef *)&result);
+    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)query, (CFTypeRef *)&result);
     
     if (status != errSecSuccess) {
         NSLog(@"Unable to fetch credential with identifier \"%@\" (Error %li)", identifier, (long int)status);
@@ -53,9 +85,9 @@ static NSDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *identifi
 }
 
 + (BOOL)deleteCredentialWithIdentifier:(NSString *)identifier {
-    NSMutableDictionary *mutableQueryDictionary = [DGKeychainQueryDictionaryWithIdentifier(identifier) mutableCopy];
+    NSMutableDictionary *query = DGKeychainQueryDictionaryWithIdentifier(identifier);
     
-    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)mutableQueryDictionary);
+    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
     
     if (status != errSecSuccess) {
         NSLog(@"Unable to delete credential with identifier \"%@\" (Error %li)", identifier, (long int)status);
@@ -65,45 +97,29 @@ static NSDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *identifi
 }
 
 + (BOOL)storeCredential:(AFOAuth1Token *)credential
-         withIdentifier:(NSString *)identifier
-{
-    id securityAccessibility = nil;
-#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 43000) || (defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090)
-    securityAccessibility = (__bridge id)kSecAttrAccessibleWhenUnlocked;
-#endif
-    
-    return [[self class] storeCredential:credential withIdentifier:identifier withAccessibility:securityAccessibility];
-}
-
-+ (BOOL)storeCredential:(AFOAuth1Token *)credential
-         withIdentifier:(NSString *)identifier
-      withAccessibility:(id)securityAccessibility
-{
-    NSMutableDictionary *mutableQueryDictionary = [DGKeychainQueryDictionaryWithIdentifier(identifier) mutableCopy];
+         withIdentifier:(NSString *)identifier {
+    NSMutableDictionary *query = [DGKeychainQueryDictionaryWithIdentifier(identifier) mutableCopy];
     
     if (!credential) {
         return [self deleteCredentialWithIdentifier:identifier];
     }
     
-    NSMutableDictionary *mutableUpdateDictionary = [NSMutableDictionary dictionary];
+    NSMutableDictionary *update = [NSMutableDictionary dictionary];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:credential];
-    mutableUpdateDictionary[(__bridge id)kSecValueData] = data;
-    if (securityAccessibility) {
-        [mutableUpdateDictionary setObject:securityAccessibility forKey:(__bridge id)kSecAttrAccessible];
-    }
+    update[(__bridge id)kSecValueData] = data;
     
     OSStatus status;
     BOOL exists = !![self retrieveCredentialWithIdentifier:identifier];
     
     if (exists) {
-        status = SecItemUpdate((__bridge CFDictionaryRef)mutableQueryDictionary, (__bridge CFDictionaryRef)mutableUpdateDictionary);
+        status = SecItemUpdate((__bridge CFDictionaryRef)query, (__bridge CFDictionaryRef)update);
     } else {
-        [mutableQueryDictionary addEntriesFromDictionary:mutableUpdateDictionary];
-        status = SecItemAdd((__bridge CFDictionaryRef)mutableQueryDictionary, NULL);
+        [query addEntriesFromDictionary:update];
+        status = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
     }
     
     if (status != errSecSuccess) {
-        NSLog(@"Unable to %@ credential with identifier \"%@\" (Error %li)", exists ? @"update" : @"add", identifier, (long int)status);
+        NSLog(@"Unable to %@ token with identifier \"%@\" (Error %li)", exists ? @"update" : @"add", identifier, (long int)status);
     }
     
     return (status == errSecSuccess);
