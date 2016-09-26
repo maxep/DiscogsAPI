@@ -25,7 +25,7 @@ import DiscogsAPI
 
 class DGMasterViewController: DGViewController {
     
-    private var response : DGMasterVersionResponse! {
+    fileprivate var response : DGMasterVersionResponse! {
         didSet {
             tableView.reloadData()
         }
@@ -40,11 +40,11 @@ class DGMasterViewController: DGViewController {
             self.titleLabel.text    = master.title
             self.detailLabel.text   = master.artists!.first?.name
             self.yearLabel.text     = master.year!.stringValue
-            self.styleLabel.text    = master.genres?.joinWithSeparator(", ")
+            self.styleLabel.text    = master.genres?.joined(separator: ", ")
             
             // Get a Discogs image
             let image = master.images?.first
-            DiscogsAPI.client().resource.getImage(image!.resourceURL!, success: { (image) in
+            DiscogsAPI.client().resource.getImage((image! as AnyObject).resourceURL!, success: { (image) in
                 self.coverView?.image = image
                 }, failure:nil)
             
@@ -71,34 +71,34 @@ class DGMasterViewController: DGViewController {
     
     // MARK: Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.versions[indexPath.row]
+            let result = self.response.versions[(indexPath as NSIndexPath).row]
             
-            if let destination = segue.destinationViewController as? DGViewController {
-                destination.objectID = result.ID
+            if let destination = segue.destination as? DGViewController {
+                destination.objectID = result.id
             }
         }
     }
     
     // MARK: UITableViewDataSource
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.response?.versions.count as Int? {
             return count
         }
         return 0
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Versions"
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("ReleaseCell")!
-        let version = self.response.versions[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
+        let version = self.response.versions[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text       = version.title
         cell.detailTextLabel?.text = version.format
@@ -111,7 +111,7 @@ class DGMasterViewController: DGViewController {
         
         // Load the next response page
         if version === self.response.versions.last {
-            self.response.loadNextPageWithSuccess({
+            self.response.loadNextPage(success: {
                 self.tableView.reloadData()
                 }, failure: { (error) in
                     print(error)

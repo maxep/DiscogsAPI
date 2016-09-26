@@ -25,7 +25,7 @@ import DiscogsAPI
 
 class DGArtistViewController: DGViewController {
     
-    private var response : DGArtistReleaseResponse! {
+    fileprivate var response : DGArtistReleaseResponse! {
         didSet {
             tableView.reloadData()
         }
@@ -67,12 +67,12 @@ class DGArtistViewController: DGViewController {
         }
     }
     
-    func membersAsString(members: [DGMember]!) -> String {
+    func membersAsString(_ members: [DGMember]!) -> String {
         var names = [String]()
         for member in members {
             names.append(member.name!)
         }
-        return names.joinWithSeparator(", ")
+        return names.joined(separator: ", ")
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,33 +82,33 @@ class DGArtistViewController: DGViewController {
     
     // MARK: Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.releases[indexPath.row]
+            let result = self.response.releases[(indexPath as NSIndexPath).row]
             
-            if let destination = segue.destinationViewController as? DGViewController {
-                destination.objectID = result.ID
+            if let destination = segue.destination as? DGViewController {
+                destination.objectID = result.id
             }
         }
     }
     
     // MARK: UITableViewDataSource
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.response?.releases.count as Int? {
             return count
         }
         return 0
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Releases"
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let release = self.response.releases[indexPath.row]
+        let release = self.response.releases[(indexPath as NSIndexPath).row]
         let cell = dequeueReusableCellWithResult(release)
         
         cell.textLabel?.text       = release.title
@@ -122,7 +122,7 @@ class DGArtistViewController: DGViewController {
         
         // Load the next response page
         if release === self.response.releases.last {
-            self.response.loadNextPageWithSuccess({
+            self.response.loadNextPage(success: {
                 self.tableView.reloadData()
                 }, failure: { (error) in
                     print(error)
@@ -132,11 +132,11 @@ class DGArtistViewController: DGViewController {
         return cell
     }
     
-    func dequeueReusableCellWithResult(release : DGArtistRelease) -> UITableViewCell {
+    func dequeueReusableCellWithResult(_ release : DGArtistRelease) -> UITableViewCell {
         
         if  release.type == "master" {
-            return self.tableView.dequeueReusableCellWithIdentifier("MasterCell")!
+            return self.tableView.dequeueReusableCell(withIdentifier: "MasterCell")!
         }
-        return self.tableView.dequeueReusableCellWithIdentifier("ReleaseCell")!
+        return self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
     }
 }

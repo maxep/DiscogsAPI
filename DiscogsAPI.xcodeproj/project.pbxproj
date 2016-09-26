@@ -1075,6 +1075,7 @@
 					9CA793D71D04EB3A0006EE89 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = C75GEDTP26;
+						LastSwiftMigration = 0800;
 					};
 					9CA794081D055FB40006EE89 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1337,6 +1338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.maxep.Discogs-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1350,6 +1352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.maxep.Discogs-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

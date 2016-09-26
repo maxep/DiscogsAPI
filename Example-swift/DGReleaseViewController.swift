@@ -25,7 +25,7 @@ import DiscogsAPI
 
 class DGReleaseViewController: DGViewController {
 
-    private var trackList : [DGTrack]! {
+    fileprivate var trackList : [DGTrack]! {
         didSet {
             tableView.reloadData()
         }
@@ -40,12 +40,12 @@ class DGReleaseViewController: DGViewController {
             self.titleLabel.text    = release.title
             self.detailLabel.text   = release.artists!.first?.name
             self.yearLabel.text     = release.year!.stringValue
-            self.styleLabel.text    = release.genres?.joinWithSeparator(", ")
+            self.styleLabel.text    = release.genres?.joined(separator: ", ")
             self.trackList          = release.trackList!
             
             // Get a Discogs image
             if let image = release.images?.first {
-                DiscogsAPI.client().resource.getImage(image.resourceURL!, success: { (image) in
+                DiscogsAPI.client().resource.getImage((image as AnyObject).resourceURL!, success: { (image) in
                     self.coverView?.image = image
                     }, failure:nil)
             }
@@ -62,21 +62,21 @@ class DGReleaseViewController: DGViewController {
     
     // MARK: UITableViewDataSource
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.trackList?.count as Int? {
             return count
         }
         return 0
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Tracks"
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TrackCell")!
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrackCell")!
         
-        let track = self.trackList[indexPath.row]
+        let track = self.trackList[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = track.position! + ".\t" + track.title!
         cell.detailTextLabel?.text = track.duration
         

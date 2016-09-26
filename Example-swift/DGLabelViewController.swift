@@ -25,7 +25,7 @@ import DiscogsAPI
 
 class DGLabelViewController: DGViewController {
     
-    private var response : DGLabelReleasesResponse!  {
+    fileprivate var response : DGLabelReleasesResponse!  {
         didSet {
             tableView.reloadData()
         }
@@ -71,34 +71,34 @@ class DGLabelViewController: DGViewController {
 
     // MARK: Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.releases![indexPath.row]
+            let result = self.response.releases![(indexPath as NSIndexPath).row]
             
-            if let destination = segue.destinationViewController as? DGViewController {
-                destination.objectID = result.ID
+            if let destination = segue.destination as? DGViewController {
+                destination.objectID = result.id
             }
         }
     }
     
     // MARK: UITableViewDataSource
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.response?.releases!.count as Int? {
             return count
         }
         return 0
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Releases"
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("ReleaseCell")!
-        let result = self.response.releases![indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
+        let result = self.response.releases![(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text       = result.title
         cell.detailTextLabel?.text = result.catno
@@ -111,7 +111,7 @@ class DGLabelViewController: DGViewController {
         
         // Load the next response page
         if result === self.response.releases!.last {
-            self.response.loadNextPageWithSuccess({
+            self.response.loadNextPage(success: {
                 self.tableView.reloadData()
                 }, failure: { (error) in
                     print(error!)

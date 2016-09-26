@@ -28,7 +28,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     
     var searchController : UISearchController!
     
-    private var response: DGSearchResponse! {
+    fileprivate var response: DGSearchResponse! {
         didSet {
             tableView.reloadData()
         }
@@ -37,7 +37,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController!.navigationBar.barStyle = UIBarStyle.Black
+        navigationController!.navigationBar.barStyle = UIBarStyle.black
         
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -54,7 +54,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
             if !success {
                 let authentViewController = DGAuthViewController()
                 let authentNavigationController = UINavigationController.init(rootViewController: authentViewController)
-                self.navigationController?.presentViewController(authentNavigationController, animated: true, completion: nil)
+                self.navigationController?.present(authentNavigationController, animated: true, completion: nil)
             }
         }
     }
@@ -66,20 +66,20 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     
     // MARK: Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.results![indexPath.row]
+            let result = self.response.results![(indexPath as NSIndexPath).row]
             
-            if let destination = segue.destinationViewController as? DGViewController {
-                destination.objectID = result.ID
+            if let destination = segue.destination as? DGViewController {
+                destination.objectID = result.id
             }
         }
     }
 
     // MARK: UISearchResultsUpdating
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         let query = searchController.searchBar.text as String?
         let type = ["", "release", "master", "artist", "label"][searchController.searchBar.selectedScopeButtonIndex]
         
@@ -91,7 +91,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
             request.type = type
             request.pagination.perPage = 25
 
-            DiscogsAPI.client().database.searchFor(request, success: { (response) in
+            DiscogsAPI.client().database.search(for: request, success: { (response) in
                 self.response = response
             }) { (error) in
                 print(error)
@@ -101,22 +101,22 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     
     // MARK: UISearchBarDelegate
     
-    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        updateSearchResultsForSearchController(searchController)
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        updateSearchResults(for: searchController)
     }
     
     // MARK: UITableViewDataSource
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.response?.results!.count as Int? {
             return count
         }
         return 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let result = self.response.results![indexPath.row]
+        let result = self.response.results![(indexPath as NSIndexPath).row]
         let cell = dequeueReusableCellWithResult(result)
         
         cell.textLabel?.text       = result.title
@@ -129,7 +129,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         
         // Load the next response page
         if result === self.response.results!.last {
-            self.response.loadNextPageWithSuccess({
+            self.response.loadNextPage(success: {
                 self.tableView.reloadData()
                 }, failure: { (error) in
                     print(error)
@@ -139,21 +139,21 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         return cell
     }
     
-    func dequeueReusableCellWithResult(result : DGSearchResult) -> UITableViewCell {
+    func dequeueReusableCellWithResult(_ result : DGSearchResult) -> UITableViewCell {
         let cell : UITableViewCell
         
         switch result.type! {
         case "artist":
-            cell = self.tableView.dequeueReusableCellWithIdentifier("ArtistCell")!
+            cell = self.tableView.dequeueReusableCell(withIdentifier: "ArtistCell")!
             cell.imageView?.image = UIImage.init(imageLiteral: "default-artist")
         case "label":
-            cell = self.tableView.dequeueReusableCellWithIdentifier("LabelCell")!
+            cell = self.tableView.dequeueReusableCell(withIdentifier: "LabelCell")!
             cell.imageView?.image = UIImage.init(imageLiteral: "default-label")
         case "master":
-            cell = self.tableView.dequeueReusableCellWithIdentifier("MasterCell")!
+            cell = self.tableView.dequeueReusableCell(withIdentifier: "MasterCell")!
             cell.imageView?.image = UIImage.init(imageLiteral: "default-release")
         default:
-            cell = self.tableView.dequeueReusableCellWithIdentifier("ReleaseCell")!
+            cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
             cell.imageView?.image = UIImage.init(imageLiteral: "default-release")
         }
         

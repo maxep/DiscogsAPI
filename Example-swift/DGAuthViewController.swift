@@ -28,16 +28,16 @@ class DGAuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController!.navigationBar.barStyle = UIBarStyle.Black
+        navigationController!.navigationBar.barStyle = UIBarStyle.black
         automaticallyAdjustsScrollViewInsets = false;
-        navigationController?.navigationBar.opaque = true;
+        navigationController?.navigationBar.isOpaque = true;
         
         // Authenticate the user by showing the authentication view
-        DiscogsAPI.client().authentication.authenticateWithPreparedAuthorizationViewHandler({ (authView) in
-            authView.frame = UIScreen.mainScreen().bounds
+        DiscogsAPI.client().authentication.authenticate(preparedAuthorizationViewHandler: { (authView) in
+            authView.frame = UIScreen.main.bounds
             self.view.addSubview(authView)
             }, success: { 
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }) { (error) in
                 print(error)
         }
