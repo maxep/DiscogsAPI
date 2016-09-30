@@ -42,12 +42,25 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "DiscogsAPI/Core",
+      "source_files": [
+        "DiscogsAPI/Core",
+        "DiscogsAPI/Configuration",
+        "AFOAuth1Client/AFOAuth1Client"
+      ],
       "dependencies": {
-        "AFOAuth1Client": [
-          "~> 1.0.0"
+        "RestKit/ObjectMapping": [
+          "~> 0.27.0"
+        ],
+        "RestKit/Network": [
+          "~> 0.27.0"
         ]
-      }
+      },
+      "prefix_header_contents": [
+        "#import <SystemConfiguration/SystemConfiguration.h>",
+        "#import <MobileCoreServices/MobileCoreServices.h>",
+        "#import <Security/Security.h>",
+        "#import <RestKit/RestKit.h>"
+      ]
     },
     {
       "name": "Authentication",
@@ -56,11 +69,7 @@
         "DiscogsAPI/Core": [
 
         ]
-      },
-      "prefix_header_contents": [
-        "#import <SystemConfiguration/SystemConfiguration.h>",
-        "#import <MobileCoreServices/MobileCoreServices.h>"
-      ]
+      }
     },
     {
       "name": "Database",
@@ -116,7 +125,7 @@
         "DiscogsAPI/Mapping/Pagination"
       ],
       "dependencies": {
-        "DiscogsAPI/Configuration": [
+        "DiscogsAPI/Core": [
 
         ]
       }
@@ -125,31 +134,10 @@
       "name": "Resource",
       "source_files": "DiscogsAPI/Resource",
       "dependencies": {
-        "DiscogsAPI/Configuration": [
+        "DiscogsAPI/Core": [
 
         ]
       }
-    },
-    {
-      "name": "Configuration",
-      "source_files": "DiscogsAPI/Configuration",
-      "dependencies": {
-        "DiscogsAPI/Core": [
-
-        ],
-        "RestKit/ObjectMapping": [
-          "~> 0.26.0"
-        ],
-        "RestKit/Network": [
-          "~> 0.26.0"
-        ]
-      },
-      "prefix_header_contents": [
-        "#import <SystemConfiguration/SystemConfiguration.h>",
-        "#import <MobileCoreServices/MobileCoreServices.h>",
-        "#import <Security/Security.h>",
-        "#import <RestKit/RestKit.h>"
-      ]
     }
   ]
 }

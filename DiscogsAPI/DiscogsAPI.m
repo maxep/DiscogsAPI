@@ -79,7 +79,7 @@
         self.resource.delegate = self;
         
         //Init reachability
-        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFRKNetworkReachabilityStatus status) {
             [self setReachability:status];
         }];
         [self setReachability:objectManager.HTTPClient.networkReachabilityStatus];
@@ -87,7 +87,7 @@
         //Share Object Manager
         [RKObjectManager setSharedManager:objectManager];
         
-        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
+        AFRKNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     }
     return self;
 }
@@ -108,8 +108,8 @@
 
 #pragma mark Private Methods
 
-- (void)setReachability:(AFNetworkReachabilityStatus) status {
-    self.isReachable = status != AFNetworkReachabilityStatusNotReachable;
+- (void)setReachability:(AFRKNetworkReachabilityStatus) status {
+    self.isReachable = status != AFRKNetworkReachabilityStatusNotReachable;
 }
 
 #pragma mark Properties

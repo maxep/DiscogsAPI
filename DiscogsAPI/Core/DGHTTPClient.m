@@ -112,7 +112,7 @@ static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acce
 - (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
                                                    path:(NSString *)path
                                              parameters:(NSDictionary *)parameters
-                              constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block {
+                              constructingBodyWithBlock:(void (^)(id <AFRKMultipartFormData> formData))block {
     NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method
                                                                     path:path
                                                               parameters:parameters
