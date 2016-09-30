@@ -102,7 +102,7 @@ class DGLabelViewController: DGViewController {
         
         cell.textLabel?.text       = result.title
         cell.detailTextLabel?.text = result.catno
-        cell.imageView?.image      = UIImage.init(imageLiteral: "default-release")
+        cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
         DiscogsAPI.client().resource.getImage(result.thumb!, success: { (image) in

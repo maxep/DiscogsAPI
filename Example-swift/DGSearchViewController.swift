@@ -145,16 +145,16 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         switch result.type! {
         case "artist":
             cell = self.tableView.dequeueReusableCell(withIdentifier: "ArtistCell")!
-            cell.imageView?.image = UIImage.init(imageLiteral: "default-artist")
+            cell.imageView?.image = UIImage(named: "default-artist")
         case "label":
             cell = self.tableView.dequeueReusableCell(withIdentifier: "LabelCell")!
-            cell.imageView?.image = UIImage.init(imageLiteral: "default-label")
+            cell.imageView?.image = UIImage(named: "default-label")
         case "master":
             cell = self.tableView.dequeueReusableCell(withIdentifier: "MasterCell")!
-            cell.imageView?.image = UIImage.init(imageLiteral: "default-release")
+            cell.imageView?.image = UIImage(named: "default-release")
         default:
             cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
-            cell.imageView?.image = UIImage.init(imageLiteral: "default-release")
+            cell.imageView?.image = UIImage(named: "default-release")
         }
         
         return cell

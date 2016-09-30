@@ -113,7 +113,7 @@ class DGArtistViewController: DGViewController {
         
         cell.textLabel?.text       = release.title
         cell.detailTextLabel?.text = release.year?.stringValue
-        cell.imageView?.image      = UIImage.init(imageLiteral: "default-release")
+        cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
         DiscogsAPI.client().resource.getImage(release.thumb!, success: { (image) in
