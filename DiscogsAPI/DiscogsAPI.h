@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, DGMediaType){
 /**
  Discogs API client class to manage client initialization and api endpoints.
  */
-@interface DiscogsAPI : NSObject <DGEndpointDelegate>
+@interface Discogs : DGEndpoint
 
 /**
  Autentication endpoint.
@@ -84,16 +84,11 @@ typedef NS_ENUM(NSInteger, DGMediaType){
 @property (nonatomic,readwrite) DGMediaType mediaType;
 
 /**
- Network reachability.
- */
-@property (nonatomic, readonly, getter=isReachable) BOOL isReachable;
-
-/**
  The shared discogs api client.
  
  @return The shared discogs api client.
  */
-+ (DiscogsAPI *)client;
++ (Discogs *)api;
 
 /**
  Cancell all queued and current operations with Discogs.

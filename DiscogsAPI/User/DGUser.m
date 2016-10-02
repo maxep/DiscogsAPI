@@ -26,13 +26,9 @@
 
 #import "DGUser.h"
 
-@interface DGUser ()
-@property (nonatomic, strong) RKManagedObjectStore *store;
-@end
-
 @implementation DGUser
 
-@synthesize wantlist     = _wantlist;
+@synthesize wantlist    = _wantlist;
 @synthesize collection  = _collection;
 
 #pragma mark Properties
@@ -54,46 +50,15 @@
 #pragma mark Configuration
 
 - (void)configureManager:(RKObjectManager*)objectManager {
-    //User Identity
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
-    
     //User Profile
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGProfile class] pathPattern:@"users/:userName" method:RKRequestMethodAny]];
 }
 
 #pragma mark Public Methods
 
-- (void)identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
-    DGIdentity* identity = [DGIdentity identity];
-    
-    NSURLRequest *requestURL = [self.manager requestWithObject:identity
-                                                        method:RKRequestMethodGET
-                                                          path:nil
-                                                    parameters:nil];
-    
-     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
-                                                                                      responseDescriptors:@[ [DGIdentity responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGIdentity class]]) {
-             success([results firstObject]);
-         }
-         else
-         {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     } failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
-         RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
-     }];
-    
-    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
-}
-
 - (void)getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+    
+    DGCheckReachability();
     
     DGProfile* profile = [DGProfile profile];
     profile.userName = userName;
@@ -106,20 +71,16 @@
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
                                                                                      responseDescriptors:@[ [DGProfile responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGProfile class]]) {
              success([results firstObject]);
-         }
-         else
-         {
+         } else if (failure) {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     } failure:^(RKObjectRequestOperation *operation, NSError *error)
-     {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
+         if (failure) failure(error);
      }];
     
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];
@@ -142,14 +103,12 @@
          NSArray* results = mappingResult.array;
          if ([[results firstObject] isKindOfClass:[DGProfile class]]) {
              success([results firstObject]);
-         }
-         else {
+         } else if (failure) {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
-     }
-     failure:^(RKObjectRequestOperation *operation, NSError *error) {
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Operation failed with error: %@", error);
-         failure(error);
+         if (failure) failure(error);
      }];
     
     [self.manager enqueueObjectRequestOperation:objectRequestOperation];

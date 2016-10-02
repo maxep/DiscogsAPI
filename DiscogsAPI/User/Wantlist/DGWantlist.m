@@ -62,7 +62,7 @@
         }
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
-        failure(error);
+        if (failure) failure(error);
     }];
 }
 

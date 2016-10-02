@@ -24,8 +24,7 @@
 
 @implementation DGContributor
 
-+ (DGContributor*) contributor
-{
++ (DGContributor *)contributor {
     return [[DGContributor alloc] init];
 }
 
@@ -33,8 +32,7 @@
 
 @implementation DGRating
 
-+ (DGRating*) rating
-{
++ (DGRating *)rating {
     return [[DGRating alloc] init];
 }
 
@@ -42,8 +40,7 @@
 
 @implementation DGCommunity
 
-+ (DGCommunity*) community
-{
++ (DGCommunity *)community {
     return [[DGCommunity alloc] init];
 }
 

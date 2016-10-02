@@ -20,15 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint.h"
+#import "DGEndpoint+Configuration.h"
 
 @implementation DGEndpoint
-
-- (NSError*) errorWithCode:(NSInteger)code info:(NSString*)info
-{
-    NSMutableDictionary *errorDetail = [NSMutableDictionary dictionary];
-    [errorDetail setValue:info forKey:NSLocalizedDescriptionKey];
-    return [NSError errorWithDomain:@"DiscogsAPI" code:code userInfo:errorDetail];
-}
 
 @end

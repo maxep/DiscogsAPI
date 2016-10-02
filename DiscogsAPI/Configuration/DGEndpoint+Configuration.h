@@ -26,7 +26,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #define DGCheckReachability(ret) { \
-    if(![self.delegate isReachable]) { \
+    if(!self.isReachable) { \
         if(failure) \
             failure([self errorWithCode:NSURLErrorNotConnectedToInternet info:@"Not connected"]); \
         return ret; \
@@ -43,19 +43,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DGEndpoint (Configuration)
 
-@property (nonatomic,readonly) RKObjectManager *manager;
+@property (nonatomic, readonly) BOOL isReachable;
+
+@property (nonatomic, readonly) RKObjectManager *manager;
 
 - (instancetype)initWithManager:(RKObjectManager *)manager;
 
-- (void)configureManager:(RKObjectManager*)objectManager;
+- (void)configureManager:(RKObjectManager *)objectManager;
+
+- (NSError *)errorWithCode:(NSInteger)code info:(nullable NSString *)info;
 
 @end
 
 @interface RKErrorMessage (Mapping)
 
-+ (nullable RKMapping *)mapping;
++ (RKMapping *)mapping;
 
-+ (nullable RKResponseDescriptor*)responseDescriptor;
++ (RKResponseDescriptor *)responseDescriptor;
 
 @end
 

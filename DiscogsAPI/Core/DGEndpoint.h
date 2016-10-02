@@ -25,77 +25,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- A block that can act as a failure for a task.
- */
-typedef void(^DGFailureBlock)(NSError * _Nullable error);
-
-/**
- Defines of a progress block.
- 
- @param numberOfFinishedOperations Number of finished operations.
- @param totalNumberOfOperations    Total number of operations.
- */
-typedef void (^DGProgressBlock) (NSUInteger numberOfFinishedOperations, NSUInteger totalNumberOfOperations);
-
-/**
- DGEndpoint delegate protocol.
- */
-@protocol DGEndpointDelegate <NSObject>
-
-/**
- Tells whether or not Discogs API is reachable.
- 
- @return Discogs API reachability.
- */
-@required
-
-@property (readonly) BOOL isReachable;
-
-/**
- Identifies the user. This method will verify that the user stored in the depot still authorize the current OAuth token.
- 
- @param success A block object to be executed when the search operation finishes successfully. This block has no return value and no argument.
- @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
- */
-- (void) identifyUserWithSuccess:(void (^)())success failure:(nullable DGFailureBlock)failure;
-
-/**
- Creates an Image request for AFNetworking (https://github.com/AFNetworking/AFNetworking ).
- 
- @param url     The Discogs image URL.
- @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
- @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
- 
- @return The image request operation.
- */
-- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(nullable DGFailureBlock)failure;
-
-@end
-
-/**
  Discogs api endpoint superclass.
  */
 @interface DGEndpoint : NSObject
 
 /**
- Delegate instance.
+ A block that can act as a failure for a task.
  */
-@property (nonatomic, weak, nullable) id<DGEndpointDelegate> delegate;
-
-/**
- Progress block property.
- */
-@property (nonatomic, strong, nullable) DGProgressBlock progress;
-
-/**
- Creates an NSError.
- 
- @param code Error code.
- @param info Error info.
- 
- @return The created NSError.
- */
-- (NSError*)errorWithCode:(NSInteger)code info:(nullable NSString*)info;
+typedef void(^DGFailureBlock)(NSError * _Nullable error);
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;

@@ -35,7 +35,7 @@ class DGReleaseViewController: DGViewController {
         super.viewDidLoad()
         
         // Get release details
-        DiscogsAPI.client().database.getRelease(self.objectID, success: { (release) in
+        Discogs.api().database.getRelease(self.objectID, success: { (release) in
 
             self.titleLabel.text    = release.title
             self.detailLabel.text   = release.artists!.first?.name
@@ -45,9 +45,9 @@ class DGReleaseViewController: DGViewController {
             
             // Get a Discogs image
             if let image = release.images?.first {
-                DiscogsAPI.client().resource.getImage((image as AnyObject).resourceURL!, success: { (image) in
+                Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
                     self.coverView?.image = image
-                    }, failure:nil)
+                })
             }
             
         }) { (error) in
@@ -76,7 +76,7 @@ class DGReleaseViewController: DGViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrackCell")!
         
-        let track = self.trackList[(indexPath as NSIndexPath).row]
+        let track = self.trackList[indexPath.row]
         cell.textLabel?.text = track.position! + ".\t" + track.title!
         cell.detailTextLabel?.text = track.duration
         

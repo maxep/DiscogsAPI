@@ -22,7 +22,7 @@
 
 #import <AFOAuth1Client/AFOAuth1Client.h>
 
-FOUNDATION_EXTERN NSString* const kDGBaseURL;
+FOUNDATION_EXTERN NSString * const kDGBaseURL;
 
 /**
  `DGHTTPClient` encapsulates common patterns to authenticate against the Discogs API server.
@@ -32,7 +32,7 @@ FOUNDATION_EXTERN NSString* const kDGBaseURL;
  */
 @interface DGHTTPClient : AFOAuth1Client
 
-@property (nonatomic,copy) NSString *mediaType;
+@property (nonatomic, copy) NSString *mediaType;
 
 /**
  Creates and initializes a `DGHTTPClient` object.

@@ -33,13 +33,13 @@
     [super viewDidLoad];
    
     // Get label details
-    [DiscogsAPI.client .database getLabel:self.objectID success:^(DGLabel * _Nonnull label) {
+    [Discogs.api .database getLabel:self.objectID success:^(DGLabel * _Nonnull label) {
         
         self.titleLabel.text    = label.name;
         self.detailLabel.text   = label.contactInfo;
         self.styleLabel.text    = label.profile;
         
-        [DiscogsAPI.client.resource getImage:label.images.firstObject.resourceURL success:^(UIImage *image) {
+        [Discogs.api.resource getImage:label.images.firstObject.resourceURL success:^(UIImage *image) {
             self.coverView.image = image;
         } failure:nil];
         
@@ -52,7 +52,7 @@
     request.labelID = self.objectID;
     request.pagination.perPage = @25;
     
-    [DiscogsAPI.client.database getLabelReleases:request success:^(DGLabelReleasesResponse * _Nonnull response) {
+    [Discogs.api.database getLabelReleases:request success:^(DGLabelReleasesResponse * _Nonnull response) {
         self.response = response;
     } failure:^(NSError * _Nullable error) {
         NSLog(@"Error : %@", error);
@@ -88,7 +88,7 @@
     cell.imageView.image      = [UIImage imageNamed:@"default-release"];
     
     // Get a Discogs image
-    [DiscogsAPI.client.resource getImage:release.thumb success:^(UIImage *image) {
+    [Discogs.api.resource getImage:release.thumb success:^(UIImage *image) {
         cell.imageView.image = image;
     } failure:nil];
     

@@ -25,13 +25,13 @@
 
 @implementation DGAuthViewController
 
-- (void) viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.opaque = YES;
     
-    [DiscogsAPI.client.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
+    [Discogs.api.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
         authView.frame = [[UIScreen mainScreen] bounds];
         [self.view addSubview:authView];
     } success:^{

@@ -27,6 +27,8 @@
 #import "DGTokenStore.h"
 #import "DGAuthView.h"
 
+#import "DGIdentity+Mapping.h"
+
 static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
 static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
 static NSString * const kDiscogsAccessToken    = @"DiscogsAccessToken";
@@ -45,8 +47,6 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     DGHTTPClient *_HTTPClient;
 }
 
-@dynamic delegate;
-
 - (void)configureManager:(RKObjectManager *)objectManager {
     
     self.consumerKey    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
@@ -54,12 +54,44 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     self.accessToken    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsAccessToken];
     
     objectManager.HTTPClient = self.HTTPClient;
+    
+    //User Identity
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
+}
+
+- (void)identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
+    DGIdentity* identity = [DGIdentity identity];
+    
+    NSURLRequest *requestURL = [self.manager requestWithObject:identity
+                                                        method:RKRequestMethodGET
+                                                          path:nil
+                                                    parameters:nil];
+    
+    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
+                                                                                     responseDescriptors:@[ [DGIdentity responseDescriptor] ]];
+    
+    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+         NSArray* results = mappingResult.array;
+         if ([[results firstObject] isKindOfClass:[DGIdentity class]]) {
+             success([results firstObject]);
+         } else if (failure) {
+             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
+         }
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+         RKLogError(@"Operation failed with error: %@", error);
+         if (failure) failure(error);
+     }];
+    
+    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
 }
 
 - (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure {
     
-    if ([self.delegate isReachable]) {
-        [self.delegate identifyUserWithSuccess:success failure:^(NSError *error) {
+    if (self.isReachable) {
+        
+        [self identityWithSuccess:^(DGIdentity * _Nonnull identity) {
+            success();
+        } failure:^(NSError *error) {
             
        //     if (error.code == 401) {
             if (error.code == -1011) {
@@ -74,16 +106,14 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             }];
             
         }];
-    }
-    else if (self.HTTPClient.accessToken) {
+    } else if (self.HTTPClient.accessToken) {
         success();
-    }
-    else {
+    } else if (failure) {
         failure([self errorWithCode:NSURLErrorNotConnectedToInternet info:@"User not athenticated yet but no internet connection"]);
     }
 }
 
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView *authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure {
     
     NSURL* callback = [NSURL URLWithString:kDGCallback];
     
@@ -108,11 +138,9 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         if (self.consumerKey && self.consumerSecret) {
             _HTTPClient = [DGHTTPClient clientWithConsumerKey:self.consumerKey
                                                consumerSecret:self.consumerSecret];
-        }
-        else if(self.accessToken) {
+        } else if(self.accessToken) {
             _HTTPClient = [DGHTTPClient clientWithAccessToken:self.accessToken];
-        }
-        else {
+        } else {
             _HTTPClient = [DGHTTPClient client];
         }
         

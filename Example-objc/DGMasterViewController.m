@@ -33,14 +33,14 @@
     [super viewDidLoad];
     
     // Get master details
-    [DiscogsAPI.client.database getMaster:self.objectID success:^(DGMaster * _Nonnull master) {
+    [Discogs.api.database getMaster:self.objectID success:^(DGMaster * _Nonnull master) {
         
         self.titleLabel.text    = master.title;
         self.detailLabel.text   = master.artists.firstObject.name;
         self.yearLabel.text     = master.year.stringValue;
         self.styleLabel.text    = [master.genres componentsJoinedByString:@", "];
         
-        [DiscogsAPI.client.resource getImage:master.thumb success:^(UIImage *image) {
+        [Discogs.api.resource getImage:master.thumb success:^(UIImage *image) {
             self.coverView.image = image;
         } failure:nil];
         
@@ -53,7 +53,7 @@
     request.masterID = self.objectID;
     request.pagination.perPage = @25;
     
-    [DiscogsAPI.client .database getMasterVersion:request success:^(DGMasterVersionResponse * _Nonnull response) {
+    [Discogs.api .database getMasterVersion:request success:^(DGMasterVersionResponse * _Nonnull response) {
         self.response = response;
     } failure:^(NSError * _Nullable error) {
         NSLog(@"Error : %@", error);
@@ -89,7 +89,7 @@
     cell.imageView.image      = [UIImage imageNamed:@"default-release"];
     
     // Get a Discogs image
-    [DiscogsAPI.client.resource getImage:version.thumb success:^(UIImage *image) {
+    [Discogs.api.resource getImage:version.thumb success:^(UIImage *image) {
         cell.imageView.image = image;
     } failure:nil];
     

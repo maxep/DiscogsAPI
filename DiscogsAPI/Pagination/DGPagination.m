@@ -24,8 +24,7 @@
 
 @implementation DGPaginationUrls
 
-+ (DGPaginationUrls*) urls
-{
++ (DGPaginationUrls *)urls {
     return [[DGPaginationUrls alloc] init];
 }
 
@@ -33,19 +32,17 @@
 
 @implementation DGPagination
 
-+ (DGPagination*) pagination
-{
++ (DGPagination *)pagination {
     return [[DGPagination alloc] init];
 }
 
-- (id) init
-{
+- (id)init {
     self = [super init];
     if (self) {
-        _page    = [NSNumber numberWithInt:1];
-        _pages   = [NSNumber numberWithInt:1];
-        _items   = [NSNumber numberWithInt:50];
-        _perPage = [NSNumber numberWithInt:100];
+        _page    = @1;
+        _pages   = @1;
+        _items   = @50;
+        _perPage = @100;
         
         _urls = [DGPaginationUrls urls];
     }

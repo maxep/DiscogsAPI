@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folders.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getCollectionFolders:(NSString*)userName success:(void (^)(NSArray* folders))success failure:(void (^)(NSError* error))failure;
+- (void)getCollectionFolders:(NSString *)userName success:(void (^)(NSArray<DGCollectionFolder *> *folders))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Gets a collection folder.
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folder.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
+- (void)getCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Edits a collection folder.
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection folder.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
+- (void)editCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Deletes a collection folder.
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)deleteCollectionFolder:(DGCollectionFolderRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)deleteCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Creates a collection folder.
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the created collection folder.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)createCollectionFolder:(DGCreateCollectionFolderRequest*)request success:(void (^)(DGCollectionFolder* folder))success failure:(void (^)(NSError* error))failure;
+- (void)createCollectionFolder:(DGCreateCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Gets the collection releases.
@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated collection releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getCollectionReleases:(DGCollectionReleasesRequest*)request success:(void (^)(DGCollectionReleasesResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)getCollectionReleases:(DGCollectionReleasesRequest *)request success:(void (^)(DGCollectionReleasesResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Adds release to user's collection folder.
@@ -94,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)addToCollectionFolder:(DGAddToCollectionFolderRequest*)request success:(void (^)(DGAddToCollectionFolderResponse* response))success failure:(void (^)(NSError* error))failure;
+- (void)addToCollectionFolder:(DGAddToCollectionFolderRequest *)request success:(void (^)(DGAddToCollectionFolderResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Changes release's rating.
@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)changeRatingOfRelease:(DGChangeRatingOfReleaseRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)changeRatingOfRelease:(DGChangeRatingOfReleaseRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Gets user collection instance from specific folder
@@ -112,7 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection instance
  @param failure A block object to be executed when the GET operation fails. The block has no return value and one argument: the associated error
  */
-- (void)getInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(void (^)(DGReleaseInstance * response))success failure:(void (^)(NSError *error))failure;
+- (void)getInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(void (^)(DGReleaseInstance *response))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Deletes release from user's collection folder.
@@ -121,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)deleteInstanceFromFolder:(DGReleaseInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)deleteInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Gets the user's collection fields.
@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection fields.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getCollectionFields:(NSString*)userName success:(void (^)(NSArray* fields))success failure:(void (^)(NSError* error))failure;
+- (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray *fields))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Changes the value of a notes field on a particular instance.
@@ -139,7 +139,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editFieldsInstance:(DGEditFieldsInstanceRequest*)request success:(void (^)())success failure:(void (^)(NSError* error))failure;
+- (void)editFieldsInstance:(DGEditFieldsInstanceRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 @end
 

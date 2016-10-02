@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint.h"
+#import "DGIdentity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,6 +31,14 @@ NS_ASSUME_NONNULL_BEGIN
  Next queries will contains these two tokens in their 'Authorization' header.
  */
 @interface DGAuthentication : DGEndpoint
+
+/**
+ Gets authentified user identity.
+ 
+ @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the user identity.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void)identityWithSuccess:(void (^)(DGIdentity *identity))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Initiates an authenticate process.
@@ -47,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)authenticateWithCallback:(NSURL *) callback success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Initiate an authenticate process.
@@ -56,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure  A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView* authView))authView success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView *authView))authView success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Remove Discogs account credential from keychain.

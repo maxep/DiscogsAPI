@@ -34,8 +34,14 @@
     return self;
 }
 
-- (void)configureManager:(RKObjectManager*)objectManager {
+- (void)configureManager:(RKObjectManager *)objectManager {
     [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
+}
+
+- (NSError *)errorWithCode:(NSInteger)code info:(NSString *)info {
+    NSMutableDictionary *errorDetail = [NSMutableDictionary dictionary];
+    [errorDetail setValue:info forKey:NSLocalizedDescriptionKey];
+    return [NSError errorWithDomain:@"DiscogsAPI" code:code userInfo:errorDetail];
 }
 
 #pragma mark Properties
@@ -44,11 +50,15 @@
     return objc_getAssociatedObject(self, @selector(manager));
 }
 
+- (BOOL)isReachable {
+    return self.manager.HTTPClient.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable;
+}
+
 @end
 
 @implementation RKErrorMessage (Mapping)
 
-+ (RKMapping *) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
     
     [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
@@ -56,7 +66,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[RKErrorMessage mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

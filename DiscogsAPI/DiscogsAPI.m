@@ -27,78 +27,57 @@
 #define kDGMediaTypeAsString(enum) @[@"discogs", @"html", @"plaintext"][enum]
 #define kStringDGMediaType(str) [@{@"discogs":@0, @"html":@1, @"plaintext":@2}[str] integerValue]
 
-@interface DiscogsAPI ()
+@interface Discogs ()
 @property (nonatomic, strong) DGAuthentication  *authentication;
 @property (nonatomic, strong) DGDatabase        *database;
 @property (nonatomic, strong) DGUser            *user;
 @property (nonatomic, strong) DGMarketplace     *marketplace;
 @property (nonatomic, strong) DGResource        *resource;
-@property (nonatomic, assign) BOOL isReachable;
 @end
 
-@implementation DiscogsAPI
+@implementation Discogs
 
-@synthesize database    = _database;
-@synthesize user        = _user;
-@synthesize resource    = _resource;
-@synthesize marketplace = _marketplace;
-
-+ (DiscogsAPI *) client {
-    static DiscogsAPI *client = nil;
++ (Discogs *)api {
+    static Discogs *discogs = nil;
     
-    if (!client) {
-        client = [[DiscogsAPI alloc] init];
+    if (!discogs) {
+        
+        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+        
+        //Setup client
+        RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString: kDGBaseURL]];
+        discogs = [[Discogs alloc] initWithManager:manager];
+        
+        //Share Object Manager
+        [RKObjectManager setSharedManager:manager];
+        
+        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     }
-    return client;
+    return discogs;
 }
 
 #pragma mark Public Methods
 
-- (instancetype)init {
-    if (self = [super init]) {
-        
-        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-        
-        //Setup Object Manager
-        RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString: kDGBaseURL]];
-        
+- (instancetype)initWithManager:(RKObjectManager *)manager {
+    self = [super initWithManager:manager];
+    if (self) {
         //Create and configure endpoints
-        self.authentication = [[DGAuthentication alloc] initWithManager:objectManager];
-        self.authentication.delegate = self;
-        
-        self.database = [[DGDatabase alloc] initWithManager:objectManager];
-        self.database.delegate = self;
-        
-        self.user = [[DGUser alloc] initWithManager:objectManager];
-        self.user.delegate = self;
-        
-        self.marketplace = [[DGMarketplace alloc] initWithManager:objectManager];
-        self.marketplace.delegate = self;
-        
-        self.resource = [[DGResource alloc] initWithManager:objectManager];
-        self.resource.delegate = self;
-        
-        //Init reachability
-        [objectManager.HTTPClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            [self setReachability:status];
-        }];
-        [self setReachability:objectManager.HTTPClient.networkReachabilityStatus];
-        
-        //Share Object Manager
-        [RKObjectManager setSharedManager:objectManager];
-        
-        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
+        self.authentication = [[DGAuthentication alloc] initWithManager:manager];
+        self.database       = [[DGDatabase alloc] initWithManager:manager];
+        self.user           = [[DGUser alloc] initWithManager:manager];
+        self.marketplace    = [[DGMarketplace alloc] initWithManager:manager];
+        self.resource       = [[DGResource alloc] initWithManager:manager];
     }
     return self;
 }
 
 - (void)cancelAllOperations {
-    [RKObjectManager.sharedManager.operationQueue cancelAllOperations];
+    [self.manager.operationQueue cancelAllOperations];
 }
 
 - (void)isAuthenticated:(void (^)(BOOL success))success {
     
-    [self identifyUserWithSuccess:^{
+    [self.authentication identityWithSuccess:^(DGIdentity * _Nonnull identity) {
         success(YES);
     } failure:^(NSError *error) {
         success(    error.code == NSURLErrorNotConnectedToInternet/* &&
@@ -106,34 +85,16 @@
     }];
 }
 
-#pragma mark Private Methods
-
-- (void)setReachability:(AFNetworkReachabilityStatus) status {
-    self.isReachable = status != AFNetworkReachabilityStatusNotReachable;
-}
-
 #pragma mark Properties
 
 - (DGMediaType)mediaType {
     // TODO (maxep) : find a better way
-    return kStringDGMediaType([(DGHTTPClient *)RKObjectManager.sharedManager.HTTPClient mediaType]);
+    return kStringDGMediaType([(DGHTTPClient *)self.manager.HTTPClient mediaType]);
 }
 
 - (void)setMediaType:(DGMediaType)mediaType {
     // TODO (maxep) : find a better way
-    [(DGHTTPClient *)RKObjectManager.sharedManager.HTTPClient setMediaType:kDGMediaTypeAsString(mediaType)];
-}
-
-#pragma mark <DGEndpointDelegate>
-
-- (void)identifyUserWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
-    [self.user identityWithSuccess:^(DGIdentity *identity) {
-        success();
-    } failure:failure];
-}
-
-- (NSOperation*)createImageRequestOperationWithUrl:(NSString*)url success:(void (^)(UIImage*image))success failure:(void (^)(NSError* error))failure {
-    return [self.resource createImageRequestOperationWithUrl:url success:success failure:failure];
+    [(DGHTTPClient *)self.manager.HTTPClient setMediaType:kDGMediaTypeAsString(mediaType)];
 }
 
 @end

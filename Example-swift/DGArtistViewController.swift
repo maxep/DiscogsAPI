@@ -35,7 +35,7 @@ class DGArtistViewController: DGViewController {
         super.viewDidLoad()
         
         // Get artist details
-        DiscogsAPI.client().database.getArtist(self.objectID, success: { (artist) in
+        Discogs.api().database.getArtist(self.objectID, success: { (artist) in
             
             self.titleLabel.text    = artist.name
             self.styleLabel.text    = artist.profile
@@ -46,7 +46,7 @@ class DGArtistViewController: DGViewController {
             
             // Get a Discogs image
             if let image = artist.images?.first {
-                DiscogsAPI.client().resource.getImage(image.resourceURL!, success: { (image) in
+                Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
                     self.coverView?.image = image
                     }, failure:nil)
             }
@@ -60,7 +60,7 @@ class DGArtistViewController: DGViewController {
         request.artistID = self.objectID
         request.pagination.perPage = 25
         
-        DiscogsAPI.client().database .getArtistReleases(request, success: { (response) in
+        Discogs.api().database .getArtistReleases(request, success: { (response) in
             self.response = response
             }) { (error) in
                 print(error)
@@ -85,7 +85,7 @@ class DGArtistViewController: DGViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.releases[(indexPath as NSIndexPath).row]
+            let result = self.response.releases[indexPath.row]
             
             if let destination = segue.destination as? DGViewController {
                 destination.objectID = result.id
@@ -108,7 +108,7 @@ class DGArtistViewController: DGViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let release = self.response.releases[(indexPath as NSIndexPath).row]
+        let release = self.response.releases[indexPath.row]
         let cell = dequeueReusableCellWithResult(release)
         
         cell.textLabel?.text       = release.title
@@ -116,16 +116,14 @@ class DGArtistViewController: DGViewController {
         cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
-        DiscogsAPI.client().resource.getImage(release.thumb!, success: { (image) in
+        Discogs.api().resource.getImage(release.thumb!, success: { (image) in
             cell.imageView?.image = image
-            }, failure:nil)
+        })
         
         // Load the next response page
         if release === self.response.releases.last {
             self.response.loadNextPage(success: {
                 self.tableView.reloadData()
-                }, failure: { (error) in
-                    print(error)
             })
         }
         

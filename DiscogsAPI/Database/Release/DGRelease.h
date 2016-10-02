@@ -24,6 +24,7 @@
 #import "DGCommunity.h"
 #import "DGFormat.h"
 #import "DGIdentifier.h"
+#import "DGImage.h"
 #import "DGTrack.h"
 #import "DGVideo.h"
 
@@ -76,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Release images.
  */
-@property (nonatomic, strong, nullable) NSArray  *images;
+@property (nonatomic, strong, nullable) NSArray<DGImage *> *images;
 
 /**
  Release videos.

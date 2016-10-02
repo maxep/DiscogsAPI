@@ -24,8 +24,7 @@
 
 @implementation DGTrack
 
-+ (DGTrack*) track
-{
++ (DGTrack *) track {
     return [[DGTrack alloc] init];
 }
 

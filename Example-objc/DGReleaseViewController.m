@@ -32,14 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [DiscogsAPI.client.database getRelease:self.objectID success:^(DGRelease * _Nonnull release) {
+    [Discogs.api.database getRelease:self.objectID success:^(DGRelease * _Nonnull release) {
         self.titleLabel.text    = release.title;
         self.detailLabel.text   = release.artists.firstObject.name;
         self.yearLabel.text     = release.year.stringValue;
         self.styleLabel.text    = [release.genres componentsJoinedByString:@", "];
         self.trackList          = release.trackList;
         
-        [DiscogsAPI.client.resource getImage:release.thumb success:^(UIImage *image) {
+        [Discogs.api.resource getImage:release.thumb success:^(UIImage *image) {
             self.coverView.image = image;
         } failure:nil];
         

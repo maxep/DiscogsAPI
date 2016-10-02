@@ -46,7 +46,7 @@
     self.searchController.searchBar.scopeButtonTitles = @[@"All", @"Release", @"Master", @"Artist", @"Label"];
     self.searchController.searchBar.delegate = self;
     
-    [DiscogsAPI.client isAuthenticated:^(BOOL success) {
+    [Discogs.api isAuthenticated:^(BOOL success) {
         if (!success) {
             
             //Present Authentication controller
@@ -83,7 +83,7 @@
         request.type = type;
         request.pagination.perPage = @25;
         
-        [DiscogsAPI.client.database searchFor:request success:^(DGSearchResponse * _Nonnull response) {
+        [Discogs.api.database searchFor:request success:^(DGSearchResponse * _Nonnull response) {
             self.response = response;
         } failure:^(NSError * _Nullable error) {
             NSLog(@"Error: %@", error);
@@ -112,9 +112,19 @@
     cell.detailTextLabel.text = result.type;
     
     // Get a Discogs image
-    [DiscogsAPI.client.resource getImage:result.thumb success:^(UIImage *image) {
+    [Discogs.api.resource getImage:result.thumb success:^(UIImage *image) {
         cell.imageView.image = image;
     } failure:nil];
+    
+    // Load the next response page
+    if (result == self.response.results.lastObject) {
+        
+        [self.response loadNextPageWithSuccess:^{
+            [self.tableView reloadData];
+        } failure:^(NSError * _Nullable error) {
+            NSLog(@"Error : %@", error);
+        }];
+    }
     
     return cell;
 }

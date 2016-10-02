@@ -35,7 +35,7 @@ class DGMasterViewController: DGViewController {
         super.viewDidLoad()
         
         // Get master details
-        DiscogsAPI.client().database .getMaster(self.objectID, success: { (master) in
+        Discogs.api().database .getMaster(self.objectID, success: { (master) in
             
             self.titleLabel.text    = master.title
             self.detailLabel.text   = master.artists!.first?.name
@@ -43,10 +43,11 @@ class DGMasterViewController: DGViewController {
             self.styleLabel.text    = master.genres?.joined(separator: ", ")
             
             // Get a Discogs image
-            let image = master.images?.first
-            DiscogsAPI.client().resource.getImage((image! as AnyObject).resourceURL!, success: { (image) in
-                self.coverView?.image = image
-                }, failure:nil)
+            if let image = master.images?.first {
+                Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
+                    self.coverView?.image = image
+                })
+            }
             
         }) { (error) in
             print(error)
@@ -57,7 +58,7 @@ class DGMasterViewController: DGViewController {
         request.masterID = self.objectID
         request.pagination.perPage = 25
         
-        DiscogsAPI.client().database.getMasterVersion(request, success: { (response) in
+        Discogs.api().database.getMasterVersion(request, success: { (response) in
             self.response = response
         }) { (error) in
             print(error)
@@ -98,23 +99,21 @@ class DGMasterViewController: DGViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
-        let version = self.response.versions[(indexPath as NSIndexPath).row]
+        let version = self.response.versions[indexPath.row]
         
         cell.textLabel?.text       = version.title
         cell.detailTextLabel?.text = version.format
         cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
-        DiscogsAPI.client().resource.getImage(version.thumb!, success: { (image) in
+        Discogs.api().resource.getImage(version.thumb!, success: { (image) in
             cell.imageView?.image = image
-            }, failure:nil)
+        })
         
         // Load the next response page
         if version === self.response.versions.last {
             self.response.loadNextPage(success: {
                 self.tableView.reloadData()
-                }, failure: { (error) in
-                    print(error)
             })
         }
         

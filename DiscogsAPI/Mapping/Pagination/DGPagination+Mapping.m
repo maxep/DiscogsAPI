@@ -65,23 +65,21 @@
 }
 
 - (void)loadNextPageWithResponseDesciptor:(RKResponseDescriptor *)responseDescriptor success:(void (^)(NSArray *objects))success failure:(void (^)(NSError *error))failure {
-    if(self.urls.next)
-    {
-        NSURLRequest *requestURL = [[RKObjectManager sharedManager].HTTPClient requestWithMethod:@"GET" path:self.urls.next parameters:nil];
+    if(self.urls.next) {
+        
+        RKObjectManager *manager = [RKObjectManager sharedManager];
+        NSURLRequest *requestURL = [manager.HTTPClient requestWithMethod:@"GET" path:self.urls.next parameters:nil];
         
         RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ responseDescriptor ]];
         
-        [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-         {
+        [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
              success(mappingResult.array);
-         }
-         failure:^(RKObjectRequestOperation *operation, NSError *error)
-         {
+         } failure:^(RKObjectRequestOperation *operation, NSError *error) {
              RKLogError(@"Operation failed with error: %@", error);
-             failure(error);
+             if (failure) failure(error);
          }];
         
-        [objectRequestOperation start];
+        [manager enqueueObjectRequestOperation:objectRequestOperation];
     }
 }
 
