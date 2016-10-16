@@ -1,4 +1,4 @@
-// DGPrice+Mapping.h
+// DGOperation.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,14 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import <RestKit/RestKit.h>
 #import "DGMapping.h"
 
-@interface DGPrice (Mapping) <DGObject>
+@interface DGOperation<DGResponseType> : RKObjectRequestOperation
+
++ (instancetype)operationWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass;
+
+- (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass;
+
+- (void)setCompletionBlockWithSuccess:(void (^)(DGResponseType response))success failure:(void (^)(NSError *error))failure;
 
 @end
-
-@interface DGPriceSuggectionsResponse (Mapping) <DGResponseObject>
-
-@end
-

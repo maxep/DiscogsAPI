@@ -27,8 +27,7 @@
 
 @implementation DGMaster (Mapping)
 
-+ (RKMapping*) mapping
-{
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGMaster class]];
     
@@ -54,8 +53,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGMaster mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

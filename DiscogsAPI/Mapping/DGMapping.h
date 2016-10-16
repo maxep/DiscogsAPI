@@ -1,4 +1,4 @@
-// DGPrice+Mapping.h
+// DGMapping.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,14 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
-#import "DGMapping.h"
+#import <Foundation/Foundation.h>
 
-@interface DGPrice (Mapping) <DGObject>
+@protocol DGObject <NSObject>
 
-@end
-
-@interface DGPriceSuggectionsResponse (Mapping) <DGResponseObject>
++ (RKMapping *)mapping;
 
 @end
 
+@protocol DGRequestObject <NSObject>
+
+@optional
+
+@property (nonatomic, readonly) NSDictionary *parameters;
+
++ (RKRequestDescriptor *)requestDescriptor;
+
+@end
+
+@protocol DGResponseObject <NSObject>
+
++ (RKResponseDescriptor *)responseDescriptor;
+
+@end

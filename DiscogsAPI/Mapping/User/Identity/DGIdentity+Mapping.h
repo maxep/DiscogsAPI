@@ -21,11 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGIdentity.h"
+#import "DGMapping.h"
 
-@interface DGIdentity (Mapping)
-
-+(RKMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGIdentity (Mapping) <DGObject, DGResponseObject>
 
 @end

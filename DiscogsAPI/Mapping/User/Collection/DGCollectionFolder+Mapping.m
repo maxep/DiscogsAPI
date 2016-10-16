@@ -25,32 +25,29 @@
 
 @implementation DGCollectionFolderRequest (Mapping)
 
-- (NSDictionary*) parameters {
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+- (NSDictionary *)parameters {
     if( self.name ) {
-        [parameters setObject:self.name forKey:@"name"];
+        return @{ @"name" : self.name };
     }
-    return parameters;
+    return nil;
 }
 
 @end
 
 @implementation DGCreateCollectionFolderRequest (Mapping)
 
-- (NSDictionary*) parameters {
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+- (NSDictionary *)parameters {
     if( self.folderName ) {
-        [parameters setObject:self.folderName forKey:@"name"];
+        return @{@"name" : self.folderName};
     }
-    return parameters;
+    return nil;
 }
 
 @end
 
-
 @implementation DGCollectionFolder (Mapping)
 
-+ (RKObjectMapping*) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionFolder class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"id"             : @"ID",
@@ -61,11 +58,11 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) foldersResponseDescriptor {
++ (RKResponseDescriptor *)foldersResponseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionFolder mapping] method:RKRequestMethodAny pathPattern:nil keyPath:@"folders" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionFolder mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
@@ -73,7 +70,7 @@
 
 @implementation DGCollectionFoldersRequest (Mapping)
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionFoldersRequest class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"folders" toKeyPath:@"folders" withMapping:[DGCollectionFolder mapping]]];
@@ -89,7 +86,7 @@
 
 @implementation DGAddToCollectionFolderRequest (Mapping)
 
-- (NSDictionary*) parameters {
+- (NSDictionary *)parameters {
     return nil;
 }
 
@@ -97,7 +94,7 @@
 
 @implementation DGAddToCollectionFolderResponse (Mapping)
 
-+ (RKObjectMapping*) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGAddToCollectionFolderResponse class]];
     
     [mapping addAttributeMappingsFromDictionary:@{
@@ -108,7 +105,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGAddToCollectionFolderResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
@@ -116,10 +113,10 @@
 
 @implementation DGCollectionReleasesRequest (Mapping)
 
-- (NSDictionary*) parameters {
+- (NSDictionary *)parameters {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                      @"sort"       : kDGSortKeyAsString(self.sort),
-                                                                                      @"sort_order" : kDGSortOrderAsString(self.sortOrder)
+                                                                                      @"sort"       : DGSortFolderItemsAsString(self.sort),
+                                                                                      @"sort_order" : DGSortOrderAsString(self.sortOrder)
                                                                                       }];
     
     [parameters addEntriesFromDictionary:[self.pagination parameters]];
@@ -130,7 +127,7 @@
 
 @implementation DGCollectionReleasesResponse (Mapping)
 
-+ (RKObjectMapping*) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionReleasesResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
@@ -140,7 +137,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionReleasesResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

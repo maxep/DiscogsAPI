@@ -26,15 +26,15 @@
 
 @implementation DGWantlistRequest (Mapping)
 
-- (NSDictionary*) parameters {
-    return [self.pagination parameters];
+- (NSDictionary *)parameters {
+    return self.pagination.parameters;
 }
     
 @end
 
 @implementation DGWantlistResponse (Mapping)
 
-+ (RKObjectMapping*) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGWantlistResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
@@ -44,7 +44,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGWantlistResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
@@ -52,19 +52,17 @@
 
 @implementation DGWantRequest (Mapping)
 
-- (NSDictionary*) parameters {
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                      @"notes"  : self.notes,
-                                                                                      @"rating" : self.rating
-                                                                                      }];
-    return parameters;
+- (NSDictionary *)parameters {
+    return @{ @"notes"  : self.notes,
+              @"rating" : self.rating
+            };
 }
 
 @end
 
 @implementation DGWant (Mapping)
 
-+ (RKObjectMapping*) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGWant class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"id"             : @"ID",
@@ -78,7 +76,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGWant mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

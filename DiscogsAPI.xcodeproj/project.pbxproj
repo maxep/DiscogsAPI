@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C55DB2C1D06196000DF8AFE /* DGViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C55DB2A1D06196000DF8AFE /* DGViewController.h */; };
-		9C55DB301D0619B800DF8AFE /* DGReleaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C55DB2E1D0619B800DF8AFE /* DGReleaseViewController.h */; };
-		9C55DB341D0619CB00DF8AFE /* DGMasterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C55DB321D0619CB00DF8AFE /* DGMasterViewController.h */; };
-		9C55DB381D0619DC00DF8AFE /* DGArtistViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C55DB361D0619DC00DF8AFE /* DGArtistViewController.h */; };
-		9C55DB3C1D0619F300DF8AFE /* DGLabelViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C55DB3A1D0619F300DF8AFE /* DGLabelViewController.h */; };
+		9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F097E1DB37D4100FB09D9 /* DGMapping.h */; };
+		9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09811DB3F8C600FB09D9 /* DGOperation.h */; };
+		9C0F09841DB3F8C600FB09D9 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09821DB3F8C600FB09D9 /* DGOperation.m */; };
 		9C55DB3E1D06FE1600DF8AFE /* DGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2B1D06196000DF8AFE /* DGViewController.m */; };
 		9C55DB3F1D06FE1A00DF8AFE /* DGReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2F1D0619B800DF8AFE /* DGReleaseViewController.m */; };
 		9C55DB401D06FE1E00DF8AFE /* DGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB331D0619CB00DF8AFE /* DGMasterViewController.m */; };
@@ -200,6 +198,12 @@
 		8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
 		96FA247B9286C3715E46D524 /* libPods-DiscogsAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiscogsAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9814D72CBC293A1A34B4968F /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		9C0F097B1DB2626100FB09D9 /* DiscogsAPI.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DiscogsAPI.podspec; sourceTree = "<group>"; };
+		9C0F097C1DB2626100FB09D9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9C0F097D1DB2626100FB09D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9C0F097E1DB37D4100FB09D9 /* DGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGMapping.h; sourceTree = "<group>"; };
+		9C0F09811DB3F8C600FB09D9 /* DGOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperation.h; sourceTree = "<group>"; };
+		9C0F09821DB3F8C600FB09D9 /* DGOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperation.m; sourceTree = "<group>"; };
 		9C55DB2A1D06196000DF8AFE /* DGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGViewController.h; sourceTree = "<group>"; };
 		9C55DB2B1D06196000DF8AFE /* DGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGViewController.m; sourceTree = "<group>"; };
 		9C55DB2E1D0619B800DF8AFE /* DGReleaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGReleaseViewController.h; sourceTree = "<group>"; };
@@ -399,6 +403,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0F097A1DB2623A00FB09D9 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				9C0F097B1DB2626100FB09D9 /* DiscogsAPI.podspec */,
+				9C0F097C1DB2626100FB09D9 /* LICENSE */,
+				9C0F097D1DB2626100FB09D9 /* README.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		9CA793D91D04EB3A0006EE89 /* Example-swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +496,8 @@
 			children = (
 				D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */,
 				D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */,
+				9C0F09811DB3F8C600FB09D9 /* DGOperation.h */,
+				9C0F09821DB3F8C600FB09D9 /* DGOperation.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -589,6 +605,7 @@
 		D0A588211CFF9481008DF0A4 /* Mapping */ = {
 			isa = PBXGroup;
 			children = (
+				9C0F097E1DB37D4100FB09D9 /* DGMapping.h */,
 				D0A588221CFF9481008DF0A4 /* Database */,
 				D0A588471CFF9481008DF0A4 /* Marketplace */,
 				D0A5884B1CFF9481008DF0A4 /* Pagination */,
@@ -858,6 +875,7 @@
 		D0D63B271CFF91B10001942B = {
 			isa = PBXGroup;
 			children = (
+				9C0F097A1DB2623A00FB09D9 /* Metadata */,
 				D0D63B331CFF91B20001942B /* DiscogsAPI */,
 				9CA7940A1D055FB40006EE89 /* Example-objc */,
 				9CA793D91D04EB3A0006EE89 /* Example-swift */,
@@ -936,7 +954,6 @@
 				D0A588AC1CFF9482008DF0A4 /* DGMasterVersion.h in Headers */,
 				D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */,
 				D0A588F61CFF9482008DF0A4 /* DGUser.h in Headers */,
-				9C55DB381D0619DC00DF8AFE /* DGArtistViewController.h in Headers */,
 				D0A5889C1CFF9482008DF0A4 /* DGIdentifier.h in Headers */,
 				D0A588901CFF9482008DF0A4 /* DGObject.h in Headers */,
 				D0A588F41CFF9482008DF0A4 /* DGReleaseInstance.h in Headers */,
@@ -948,7 +965,6 @@
 				D0A588F21CFF9482008DF0A4 /* DGCollectionFolder.h in Headers */,
 				D0A588A21CFF9482008DF0A4 /* DGVideo.h in Headers */,
 				D0A5888E1CFF9482008DF0A4 /* DGEndpoint.h in Headers */,
-				9C55DB3C1D0619F300DF8AFE /* DGLabelViewController.h in Headers */,
 				D0A588981CFF9482008DF0A4 /* DGCommunity.h in Headers */,
 				D0A588941CFF9482008DF0A4 /* DGArtistRelease.h in Headers */,
 				D0A588AE1CFF9482008DF0A4 /* DGRelease.h in Headers */,
@@ -967,14 +983,12 @@
 				D0A588FC1CFF9482008DF0A4 /* DGWantlist.h in Headers */,
 				D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */,
 				D0A588DA1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h in Headers */,
-				9C55DB341D0619CB00DF8AFE /* DGMasterViewController.h in Headers */,
 				D0A588D61CFF9482008DF0A4 /* DGCollectionField+Mapping.h in Headers */,
 				D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */,
 				D0A588D41CFF9482008DF0A4 /* DGPagination+Mapping.h in Headers */,
 				D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */,
 				D0A588C41CFF9482008DF0A4 /* DGVideo+Mapping.h in Headers */,
 				D0A588C01CFF9482008DF0A4 /* DGImage+Mapping.h in Headers */,
-				9C55DB2C1D06196000DF8AFE /* DGViewController.h in Headers */,
 				D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */,
 				D0A588C21CFF9482008DF0A4 /* DGTrack+Mapping.h in Headers */,
 				D0A588DC1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h in Headers */,
@@ -988,13 +1002,14 @@
 				D0A588BE1CFF9482008DF0A4 /* DGIdentifier+Mapping.h in Headers */,
 				D0A588D21CFF9482008DF0A4 /* DGPrice+Mapping.h in Headers */,
 				D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */,
+				9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */,
 				D0A588BC1CFF9482008DF0A4 /* DGFormat+Mapping.h in Headers */,
 				D0A588C81CFF9482008DF0A4 /* DGLabelRelease+Mapping.h in Headers */,
-				9C55DB301D0619B800DF8AFE /* DGReleaseViewController.h in Headers */,
 				D0A588E01CFF9482008DF0A4 /* DGProfile+Mapping.h in Headers */,
 				D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */,
 				D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */,
 				D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */,
+				9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */,
 				D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1296,6 +1311,7 @@
 				D0A588971CFF9482008DF0A4 /* DGMember.m in Sources */,
 				D0A588DD1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m in Sources */,
 				D0A588AD1CFF9482008DF0A4 /* DGMasterVersion.m in Sources */,
+				9C0F09841DB3F8C600FB09D9 /* DGOperation.m in Sources */,
 				D0A588D91CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.m in Sources */,
 				D0A588FD1CFF9482008DF0A4 /* DGWantlist.m in Sources */,
 				D0A588BB1CFF9482008DF0A4 /* DGCommunity+Mapping.m in Sources */,

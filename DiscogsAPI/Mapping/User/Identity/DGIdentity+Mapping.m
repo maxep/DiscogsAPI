@@ -25,8 +25,7 @@
 
 @implementation DGIdentity (Mapping)
 
-+(RKMapping*) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGIdentity class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"id"             : @"ID",
@@ -38,8 +37,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGIdentity mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

@@ -25,45 +25,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Items sort keys.
- */
-typedef NS_ENUM(NSInteger, DGSortKey){
-    /**
-     Sort by Label.
-     */
-    DGSortKeyLabel,
-    /**
-     Sort by Artist.
-     */
-    DGSortKeyArtist,
-    /**
-     Sort by Title.
-     */
-    DGSortKeyTitle,
-    /**
-     Sort by Catalog Number.
-     */
-    DGSortKeyCatno,
-    /**
-     Sort by Format.
-     */
-    DGSortKeyFormat,
-    /**
-     Sort by Rating
-     */
-    DGSortKeyRating,
-    /**
-     Sort by added date.
-     */
-    DGSortKeyAdded,
-    /**
-     Sort by Year.
-     */
-    DGSortKeyYear
-};
-#define kDGSortKeyAsString(enum) [@[@"label", @"artist", @"title", @"catno", @"format", @"rating", @"added", @"year"] objectAtIndex:enum]
-
-/**
  Items sort orders.
  */
 typedef NS_ENUM(NSInteger, DGSortOrder){
@@ -76,7 +37,8 @@ typedef NS_ENUM(NSInteger, DGSortOrder){
      */
     DGSortOrderDesc
 };
-#define kDGSortOrderAsString(enum) [@[@"asc", @"desc"] objectAtIndex:enum]
+
+extern NSString *DGSortOrderAsString(DGSortOrder order);
 
 /**
  Pagination URLs class.

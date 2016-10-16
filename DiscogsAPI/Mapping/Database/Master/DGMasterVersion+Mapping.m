@@ -25,8 +25,7 @@
 
 @implementation DGMasterVersion (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGMasterVersion class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"status"         : @"status",
@@ -49,17 +48,15 @@
 
 @implementation DGMasterVersionRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
-    return [self.pagination parameters];
+- (NSDictionary *)parameters {
+    return self.pagination.parameters;
 }
 
 @end
 
 @implementation DGMasterVersionResponse (Mapping)
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor *)responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGMasterVersionResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];

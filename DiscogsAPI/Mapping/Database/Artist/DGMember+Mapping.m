@@ -24,8 +24,7 @@
 
 @implementation DGMember (Mapping)
 
-+ (RKMapping*) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGMember class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"name"           : @"name",

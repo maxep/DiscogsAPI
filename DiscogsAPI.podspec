@@ -39,6 +39,7 @@ Pod::Spec.new do |s|
   s.subspec 'Authentication' do |ss|
     ss.source_files   = 'DiscogsAPI/Authentication'
     ss.dependency 'DiscogsAPI/Core'
+    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'Database' do |ss|
@@ -51,6 +52,7 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/Database/Data',
     						'DiscogsAPI/Mapping/Database/**/*'
     ss.dependency 'DiscogsAPI/Pagination'
+    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'User' do |ss|
@@ -61,13 +63,16 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/User/Wantlist',
     						'DiscogsAPI/Mapping/User/**/*'
     ss.dependency 'DiscogsAPI/Database'
+    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'Marketplace' do |ss|
     ss.source_files   = 	'DiscogsAPI/Marketplace',
     						'DiscogsAPI/Marketplace/Price',
+                            'DiscogsAPI/Marketplace/Listing',
     						'DiscogsAPI/Mapping/Marketplace/**/*'
     ss.dependency 'DiscogsAPI/Pagination'
+    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'Pagination' do |ss|
@@ -79,6 +84,10 @@ Pod::Spec.new do |s|
   s.subspec 'Resource' do |ss|
     ss.source_files   = 'DiscogsAPI/Resource'
     ss.dependency 'DiscogsAPI/Core'
+  end
+
+  s.subspec 'Mapping' do |ss|
+    ss.source_files   = 'DiscogsAPI/Mapping'
   end
 
 end

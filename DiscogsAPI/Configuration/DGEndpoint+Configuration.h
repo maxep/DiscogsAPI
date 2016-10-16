@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint.h"
-#import <RestKit/RestKit.h>
+#import "DGOperation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -24,7 +24,7 @@
 
 @implementation DGProfile (Mapping)
 
-+ (RKMapping*) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGProfile class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"profile"                : @"profile",
@@ -56,17 +56,11 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGProfile mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
-- (NSDictionary*) parameters {
-    /* // Probleme with new restkit 0.24.0 : Empty property are added in parameters
-     NSError *error;
-     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:[RKObjectParameterization parametersWithObject:self requestDescriptor:[DGSearchRequest requestDescriptor] error:&error]];
-     */
-    
-    // Q&D workaround :
+- (NSDictionary *)parameters {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
     
     if( self.name ) {

@@ -21,11 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGMaster.h"
+#import "DGMapping.h"
 
-@interface DGMaster (Mapping)
-
-+ (RKMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGMaster (Mapping) <DGObject, DGResponseObject>
 
 @end

@@ -24,6 +24,46 @@
 #import "DGPagination.h"
 
 /**
+ Items sort keys.
+ */
+typedef NS_ENUM(NSInteger, DGSortFolderItems){
+    /**
+     Sort by Label.
+     */
+    DGSortFolderItemsLabel,
+    /**
+     Sort by Artist.
+     */
+    DGSortFolderItemsArtist,
+    /**
+     Sort by Title.
+     */
+    DGSortFolderItemsTitle,
+    /**
+     Sort by Catalog Number.
+     */
+    DGSortFolderItemsCatno,
+    /**
+     Sort by Format.
+     */
+    DGSortFolderItemsFormat,
+    /**
+     Sort by Rating
+     */
+    DGSortFolderItemsRating,
+    /**
+     Sort by added date.
+     */
+    DGSortFolderItemsAdded,
+    /**
+     Sort by Year.
+     */
+    DGSortFolderItemsYear
+};
+
+extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
+
+/**
  Manage folder request.
  */
 @interface DGCollectionFolderRequest : NSObject
@@ -84,7 +124,7 @@
 @property (nonatomic, strong) DGPagination      *pagination;
 @property (nonatomic, strong) NSString          *userName;
 @property (nonatomic, strong) NSNumber          *folderID;
-@property (nonatomic, readwrite) DGSortKey      sort;
+@property (nonatomic, readwrite) DGSortFolderItems      sort;
 @property (nonatomic, readwrite) DGSortOrder    sortOrder;
 
 + (DGCollectionReleasesRequest *)request;

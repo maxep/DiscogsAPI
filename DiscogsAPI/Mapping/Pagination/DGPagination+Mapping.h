@@ -21,20 +21,13 @@
 // THE SOFTWARE.
 
 #import "DGPagination.h"
+#import "DGMapping.h"
 
-@interface DGPaginationUrls (Mapping)
-
-+ (RKMapping *)mapping;
+@interface DGPaginationUrls (Mapping) <DGObject>
 
 @end
 
-@interface DGPagination (Mapping)
-
-+ (RKMapping *)mapping;
-
-- (NSDictionary *)parameters;
-
-+ (RKResponseDescriptor *)responseDescriptor;
+@interface DGPagination (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 - (void)loadNextPageWithResponseDesciptor:(RKResponseDescriptor *)responseDescriptor success:(void (^)(NSArray *objects))success failure:(void (^)(NSError *error))failure;
 

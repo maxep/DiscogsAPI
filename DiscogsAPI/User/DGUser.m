@@ -56,25 +56,19 @@
 
 #pragma mark Public Methods
 
-- (void)getProfile:(NSString*)userName success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
-    
+- (void)getProfile:(NSString *)userName success:(void (^)(DGProfile *profile))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    DGProfile* profile = [DGProfile profile];
+    DGProfile *profile = [DGProfile profile];
     profile.userName = userName;
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:profile
-                                                        method:RKRequestMethodGET
-                                                          path:nil
-                                                    parameters:nil];
+    NSURLRequest *requestURL = [self.manager requestWithObject:profile method:RKRequestMethodGET path:nil parameters:nil];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
-                                                                                     responseDescriptors:@[ [DGProfile responseDescriptor] ]];
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGProfile class]]) {
-             success([results firstObject]);
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *results) {
+         if ([results.firstObject isKindOfClass:[DGProfile class]]) {
+             success(results.firstObject);
          } else if (failure) {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
@@ -83,26 +77,20 @@
          if (failure) failure(error);
      }];
     
-    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:operation];
 }
 
-- (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile* profile))success failure:(void (^)(NSError* error))failure {
+- (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile *profile))success failure:(void (^)(NSError *error))failure {
 
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:profile
-                                                        method:RKRequestMethodPOST
-                                                          path:nil
-                                                    parameters:profile.parameters];
+    NSURLRequest *requestURL = [self.manager requestWithObject:profile method:RKRequestMethodPOST path:nil parameters:profile.parameters];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
-                                                                                     responseDescriptors:@[ [DGProfile responseDescriptor] ]];
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
     
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGProfile class]]) {
-             success([results firstObject]);
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *results) {
+         if ([results.firstObject isKindOfClass:[DGProfile class]]) {
+             success(results.firstObject);
          } else if (failure) {
              failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
          }
@@ -111,7 +99,7 @@
          if (failure) failure(error);
      }];
     
-    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:operation];
 }
 
 @end

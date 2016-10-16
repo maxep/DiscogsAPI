@@ -25,8 +25,7 @@
 
 @implementation DGArtistRelease (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGArtistRelease class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"status"         : @"status",
@@ -51,17 +50,15 @@
 
 @implementation DGArtistReleaseRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
-    return [self.pagination parameters];
+- (NSDictionary *)parameters {
+    return self.pagination.parameters;
 }
 
 @end
 
 @implementation DGArtistReleaseResponse (Mapping)
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor*) responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGArtistReleaseResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];

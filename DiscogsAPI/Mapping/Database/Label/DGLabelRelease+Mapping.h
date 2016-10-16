@@ -21,21 +21,16 @@
 // THE SOFTWARE.
 
 #import "DGLabelRelease.h"
+#import "DGMapping.h"
 
-@interface DGLabelRelease (Mapping)
-
-+ (RKMapping *) mapping;
-
-@end
-
-@interface DGLabelReleasesRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGLabelRelease (Mapping) <DGObject>
 
 @end
 
-@interface DGLabelReleasesResponse (Mapping)
+@interface DGLabelReleasesRequest (Mapping) <DGRequestObject>
 
-+ (RKResponseDescriptor*) responseDescriptor;
+@end
+
+@interface DGLabelReleasesResponse (Mapping) <DGResponseObject>
 
 @end

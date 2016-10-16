@@ -21,11 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGArtist.h"
+#import "DGMapping.h"
 
-@interface DGArtist (Mapping)
-
-+ (RKMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGArtist (Mapping) <DGObject, DGResponseObject>
 
 @end

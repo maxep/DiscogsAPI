@@ -21,21 +21,16 @@
 // THE SOFTWARE.
 
 #import "DGMasterVersion.h"
+#import "DGMapping.h"
 
-@interface DGMasterVersion (Mapping)
-
-+ (RKMapping *) mapping;
-
-@end
-
-@interface DGMasterVersionRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGMasterVersion (Mapping) <DGObject>
 
 @end
 
-@interface DGMasterVersionResponse (Mapping)
+@interface DGMasterVersionRequest (Mapping) <DGRequestObject>
 
-+ (RKResponseDescriptor*) responseDescriptor;
+@end
+
+@interface DGMasterVersionResponse (Mapping) <DGResponseObject>
 
 @end

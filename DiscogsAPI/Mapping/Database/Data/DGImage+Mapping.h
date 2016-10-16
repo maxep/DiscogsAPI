@@ -21,9 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGImage.h"
+#import "DGMapping.h"
 
-@interface DGImage (Mapping)
-
-+ (RKMapping *) mapping;
+@interface DGImage (Mapping) <DGObject>
 
 @end

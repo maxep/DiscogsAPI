@@ -24,7 +24,7 @@
 
 @implementation DGPrice (Mapping)
 
-+ (RKMapping*) mapping {
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPrice class]];
     [mapping addAttributeMappingsFromDictionary:@{
@@ -38,7 +38,7 @@
 
 @implementation DGPriceSuggectionsResponse (Mapping)
 
-+ (RKMapping*) mapping {
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPriceSuggectionsResponse class]];
     
@@ -61,7 +61,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGPriceSuggectionsResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

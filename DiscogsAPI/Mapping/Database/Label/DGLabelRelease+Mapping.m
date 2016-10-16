@@ -25,8 +25,7 @@
 
 @implementation DGLabelRelease (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGLabelRelease class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"status"         : @"status",
@@ -51,17 +50,15 @@
 
 @implementation DGLabelReleasesRequest (Mapping)
 
-- (NSDictionary*) parameters
-{
-    return [self.pagination parameters];
+- (NSDictionary *)parameters {
+    return self.pagination.parameters;
 }
 
 @end
 
 @implementation DGLabelReleasesResponse (Mapping)
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor *)responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGLabelReleasesResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];

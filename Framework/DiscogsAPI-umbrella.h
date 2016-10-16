@@ -20,12 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
-#import <UIKit/UIKit.h>
-#import <DiscogsAPI/DiscogsAPI.h>
-
 //! Project version number for DiscogsAPI.
 FOUNDATION_EXPORT double DiscogsAPIVersionNumber;
 
 //! Project version string for DiscogsAPI.
 FOUNDATION_EXPORT const unsigned char DiscogsAPIVersionString[];
+
+#import <DiscogsAPI/DiscogsAPI.h>

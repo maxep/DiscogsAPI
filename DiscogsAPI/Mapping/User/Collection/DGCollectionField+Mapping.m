@@ -24,7 +24,7 @@
 
 @implementation DGCollectionField (Mapping)
 
-+ (RKObjectMapping*) mapping {
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionField class]];
     
@@ -40,7 +40,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionField mapping] method:RKRequestMethodAny pathPattern:nil keyPath:@"fields" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

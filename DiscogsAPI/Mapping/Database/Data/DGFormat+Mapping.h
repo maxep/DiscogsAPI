@@ -23,9 +23,8 @@
 // THE SOFTWARE.
 
 #import "DGFormat.h"
+#import "DGMapping.h"
 
-@interface DGFormat (Mapping)
-
-+ (RKMapping *)mapping;
+@interface DGFormat (Mapping) <DGObject>
 
 @end

@@ -62,7 +62,7 @@
 
 @implementation DGEditFieldsInstanceRequest (Mapping)
 
-+ (RKRequestDescriptor*) requestDescriptor {
++ (RKRequestDescriptor *)requestDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping requestMapping];
     
     [mapping addAttributeMappingsFromDictionary:@{@"value" : @"value"}];
@@ -70,7 +70,7 @@
     return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGEditFieldsInstanceRequest class] rootKeyPath:nil method:RKRequestMethodPOST];
 }
 
-- (NSDictionary*) parameters {
+- (NSDictionary *)parameters {
     return @{@"value" : self.value};
 }
 
@@ -78,20 +78,11 @@
 
 @implementation DGChangeRatingOfReleaseRequest (Mapping)
 
-- (NSDictionary*) parameters {
-    /* // Probleme with new restkit 0.24.0 : Empty property are added in parameters
-     NSError *error;
-     NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:[RKObjectParameterization parametersWithObject:self requestDescriptor:[DGSearchRequest requestDescriptor] error:&error]];
-     */
-    
-    // Q&D workaround :
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
-    
+- (NSDictionary *)parameters {
     if( self.rating ) {
-        [parameters setObject:self.rating forKey:@"rating"];
+        return @{ @"rating" : self.rating };
     }
-    
-    return parameters;
+    return nil;
 }
 
 @end

@@ -22,9 +22,8 @@
 // THE SOFTWARE.
 
 #import "DGCollectionFieldInstance.h"
+#import "DGMapping.h"
 
-@interface DGCollectionFieldInstance (Mapping)
-
-+ (RKObjectMapping *)mapping;
+@interface DGCollectionFieldInstance (Mapping) <DGObject>
 
 @end

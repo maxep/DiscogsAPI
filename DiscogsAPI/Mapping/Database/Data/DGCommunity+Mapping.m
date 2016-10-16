@@ -24,7 +24,7 @@
 
 @implementation DGContributor (Mapping)
 
-+ (RKMapping *) mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGContributor class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"resource_url"   : @"resourceURL",
@@ -38,7 +38,7 @@
 
 @implementation DGRating (Mapping)
 
-+ (RKMapping *) mapping {
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGRating class]];
     [mapping addAttributeMappingsFromDictionary:@{
@@ -53,7 +53,7 @@
 
 @implementation DGCommunity (Mapping)
 
-+ (RKMapping *) mapping {
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCommunity class]];
     [mapping addAttributeMappingsFromDictionary:@{

@@ -25,7 +25,7 @@
 
 @implementation DGCollectionFieldInstance (Mapping)
 
-+ (RKObjectMapping *)mapping {
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionFieldInstance class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"field_id" : @"fieldID",

@@ -21,9 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGIdentifier.h"
+#import "DGMapping.h"
 
-@interface DGIdentifier (Mapping)
-
-+ (RKMapping *)mapping;
+@interface DGIdentifier (Mapping) <DGObject>
 
 @end

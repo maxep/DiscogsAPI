@@ -22,23 +22,16 @@
 
 #import "DGSearch.h"
 #import "DGPagination+Mapping.h"
+#import "DGMapping.h"
 
-@interface DGSearchRequest (Mapping)
-
-+ (RKRequestDescriptor*) requestDescriptor;
-
-- (NSDictionary*) parameters;
+@interface DGSearchRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGSearchResult (Mapping)
-
-+ (RKMapping *) mapping;
+@interface DGSearchResult (Mapping) <DGObject>
 
 @end
 
-@interface DGSearchResponse (Mapping)
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGSearchResponse (Mapping) <DGResponseObject>
 
 @end

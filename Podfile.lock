@@ -10,13 +10,17 @@ PODS:
     - DiscogsAPI/User (= 1.5.0)
   - DiscogsAPI/Authentication (1.5.0):
     - DiscogsAPI/Core
+    - DiscogsAPI/Mapping
   - DiscogsAPI/Core (1.5.0):
     - AFOAuth1Client (~> 1.0.0)
     - RestKit/Network (~> 0.26.0)
     - RestKit/ObjectMapping (~> 0.26.0)
   - DiscogsAPI/Database (1.5.0):
+    - DiscogsAPI/Mapping
     - DiscogsAPI/Pagination
+  - DiscogsAPI/Mapping (1.5.0)
   - DiscogsAPI/Marketplace (1.5.0):
+    - DiscogsAPI/Mapping
     - DiscogsAPI/Pagination
   - DiscogsAPI/Pagination (1.5.0):
     - DiscogsAPI/Core
@@ -24,6 +28,7 @@ PODS:
     - DiscogsAPI/Core
   - DiscogsAPI/User (1.5.0):
     - DiscogsAPI/Database
+    - DiscogsAPI/Mapping
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
   - RestKit/Network (0.26.0):
@@ -54,7 +59,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   AFOAuth1Client: 51d32174520b54d7e15a8b3dd618a9a5b87a6344
-  DiscogsAPI: a9a26dcbb811e70d02d37fa184da6ab2c329d99c
+  DiscogsAPI: e135c32149bb3bc6f83594fd2e8b5066955b5547
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   RestKit: 112fba5bd1f97598aac0db7981863d5fdc0263a2
   RKValueTransformers: e5ed67e3811229b616fe01bddeeafe3bb337b1b9

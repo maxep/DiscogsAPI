@@ -24,10 +24,9 @@
 
 @implementation DGSearchRequest (Mapping)
 
-+ (RKRequestDescriptor*) requestDescriptor
-{
++ (RKRequestDescriptor *)requestDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping requestMapping];
-    
+    mapping.assignsDefaultValueForMissingAttributes = NO;
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"query"          : @"q",
                                                   @"type"           : @"type",
@@ -46,21 +45,16 @@
                                                   @"barcode"        : @"barcode",
                                                   @"track"          : @"track",
                                                   @"submitter"      : @"submitter",
-                                                  @"contributor"    : @"contributor"
+                                                  @"contributor"    : @"contributor",
+                                                  @"pagination.page": @"page",
+                                                  @"pagination.perPage" :@"per_page"
                                                   }
      ];
     
-    return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGSearchRequest class] rootKeyPath:nil method:RKRequestMethodGET];
+    return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGSearchRequest class] rootKeyPath:@"search" method:RKRequestMethodGET];
 }
 
-- (NSDictionary*) parameters
-{
-    /* // Probleme with new restkit 0.24.0 : Empty property are added in parameters
-    NSError *error;
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:[RKObjectParameterization parametersWithObject:self requestDescriptor:[DGSearchRequest requestDescriptor] error:&error]];
-     */
-    
-    // Q&D workaround :
+- (NSDictionary *)parameters {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
     
     if( self.query ) {
@@ -118,7 +112,7 @@
         [parameters setObject:self.contributor forKey:@"contributor"];
     }
     
-    [parameters addEntriesFromDictionary:[self.pagination parameters]];
+    [parameters addEntriesFromDictionary:self.pagination.parameters];
     
     return parameters;
 }
@@ -127,8 +121,7 @@
 
 @implementation DGSearchResult (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGSearchResult class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"style"          : @"style",
@@ -154,8 +147,7 @@
 
 @implementation DGSearchResponse (Mapping)
 
-+ (RKResponseDescriptor*) responseDescriptor
-{
++ (RKResponseDescriptor *)responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGSearchResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];

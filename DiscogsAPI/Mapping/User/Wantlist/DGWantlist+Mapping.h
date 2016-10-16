@@ -21,31 +21,20 @@
 // THE SOFTWARE.
 
 #import "DGWantlist.h"
+#import "DGMapping.h"
 
-@interface DGWantlistRequest (Mapping)
-
-- (NSDictionary*) parameters;
-
-@end
-
-@interface DGWantlistResponse (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGWantlistRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGWantRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGWantlistResponse (Mapping) <DGResponseObject>
 
 @end
 
-@interface DGWant (Mapping)
+@interface DGWantRequest (Mapping) <DGRequestObject>
 
-+ (RKObjectMapping*) mapping;
+@end
 
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGWant (Mapping) <DGObject, DGResponseObject>
 
 @end

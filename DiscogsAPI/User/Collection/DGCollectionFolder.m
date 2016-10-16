@@ -22,6 +22,10 @@
 
 #import "DGCollectionFolder+Mapping.h"
 
+extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
+    return @[@"label", @"artist", @"title", @"catno", @"format", @"rating", @"added", @"year"][sort];
+}
+
 @implementation DGCreateCollectionFolderRequest
 
 + (DGCreateCollectionFolderRequest*) request {
@@ -88,7 +92,7 @@
         
         self.pagination = [DGPagination pagination];
         self.folderID   = @0;
-        self.sort       = DGSortKeyArtist;
+        self.sort       = DGSortFolderItemsArtist;
         self.sortOrder  = DGSortOrderDesc;
     }
     return self;

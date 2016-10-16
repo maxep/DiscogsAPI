@@ -21,31 +21,20 @@
 // THE SOFTWARE.
 
 #import "DGReleaseInstance.h"
+#import "DGMapping.h"
 
-@interface DGReleaseInstance (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor *)responseDescriptor;
+@interface DGReleaseInstance (Mapping) <DGObject, DGResponseObject>
 
 @end
 
-@interface DGReleaseInstanceRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGReleaseInstanceRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGEditFieldsInstanceRequest (Mapping)
-
-+ (RKRequestDescriptor*) requestDescriptor;
-
-- (NSDictionary*) parameters;
+@interface DGEditFieldsInstanceRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGChangeRatingOfReleaseRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGChangeRatingOfReleaseRequest (Mapping) <DGRequestObject>
 
 @end

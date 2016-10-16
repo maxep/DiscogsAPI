@@ -21,13 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGProfile.h"
+#import "DGMapping.h"
 
-@interface DGProfile (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
-
-- (NSDictionary*) parameters;
+@interface DGProfile (Mapping) <DGObject, DGResponseObject, DGRequestObject>
 
 @end

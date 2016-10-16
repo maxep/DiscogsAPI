@@ -35,13 +35,11 @@
 }
 
 - (void)configureManager:(RKObjectManager *)objectManager {
-    [objectManager addResponseDescriptor:[RKErrorMessage responseDescriptor]];
+
 }
 
 - (NSError *)errorWithCode:(NSInteger)code info:(NSString *)info {
-    NSMutableDictionary *errorDetail = [NSMutableDictionary dictionary];
-    [errorDetail setValue:info forKey:NSLocalizedDescriptionKey];
-    return [NSError errorWithDomain:@"DiscogsAPI" code:code userInfo:errorDetail];
+    return [NSError errorWithDomain:@"Discogs.api" code:code userInfo:@{ NSLocalizedDescriptionKey : info}];
 }
 
 #pragma mark Properties
@@ -67,7 +65,11 @@
 }
 
 + (RKResponseDescriptor *)responseDescriptor {
-    return [RKResponseDescriptor responseDescriptorWithMapping:[RKErrorMessage mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
+    
+    [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
+    
+    return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

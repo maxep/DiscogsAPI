@@ -24,8 +24,7 @@
 
 @implementation DGVideo (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGVideo class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"description"    : @"notes",

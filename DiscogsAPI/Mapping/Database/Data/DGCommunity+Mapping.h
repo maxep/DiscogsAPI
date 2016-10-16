@@ -21,21 +21,16 @@
 // THE SOFTWARE.
 
 #import "DGCommunity.h"
+#import "DGMapping.h"
 
-@interface DGContributor (Mapping)
-
-+ (RKMapping *) mapping;
-
-@end
-
-@interface DGRating (Mapping)
-
-+ (RKMapping *) mapping;
+@interface DGContributor (Mapping) <DGObject>
 
 @end
 
-@interface DGCommunity (Mapping)
+@interface DGRating (Mapping) <DGObject>
 
-+ (RKMapping *) mapping;
+@end
+
+@interface DGCommunity (Mapping) <DGObject>
 
 @end

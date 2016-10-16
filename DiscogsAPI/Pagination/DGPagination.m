@@ -22,6 +22,10 @@
 
 #import "DGPagination.h"
 
+NSString *DGSortOrderAsString(DGSortOrder order) {
+    return @[@"asc", @"desc"][order];
+}
+
 @implementation DGPaginationUrls
 
 + (DGPaginationUrls *)urls {

@@ -21,11 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGRelease.h"
+#import "DGMapping.h"
 
-@interface DGRelease (Mapping)
-
-+ (RKMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGRelease (Mapping) <DGObject, DGResponseObject>
 
 @end

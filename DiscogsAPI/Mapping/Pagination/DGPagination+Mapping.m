@@ -56,6 +56,15 @@
     return mapping;
 }
 
++ (RKRequestDescriptor *)requestDescriptor {
+    RKObjectMapping *mapping = [RKObjectMapping requestMapping];
+    [mapping addAttributeMappingsFromDictionary:@{ @"page" : @"page",
+                                                  @"perPage" : @"per_page"
+                                                   }];
+    return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGPagination class] rootKeyPath:nil method:RKRequestMethodAny];
+    
+}
+
 + (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGPagination mapping] method:RKRequestMethodAny pathPattern:nil keyPath:@"pagination" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }

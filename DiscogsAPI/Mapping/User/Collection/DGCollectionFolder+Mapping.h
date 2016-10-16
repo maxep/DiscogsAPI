@@ -23,61 +23,37 @@
 #import "DGCollectionFolder.h"
 #import "DGPagination+Mapping.h"
 
-@interface DGCollectionFolderRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGCollectionFolderRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGCreateCollectionFolderRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGCreateCollectionFolderRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGCollectionFolder (Mapping)
+@interface DGCollectionFolder (Mapping) <DGObject, DGResponseObject>
 
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
-
-+ (RKResponseDescriptor*) foldersResponseDescriptor;
++ (RKResponseDescriptor *)foldersResponseDescriptor;
 
 @end
 
-@interface DGCollectionFoldersRequest (Mapping)
-
-+ (RKResponseDescriptor*) responseDescriptor;
-
-- (NSDictionary*) parameters;
+@interface DGCollectionFoldersRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGAddToCollectionFolderRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGAddToCollectionFolderRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGAddToCollectionFolderResponse (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGAddToCollectionFolderResponse (Mapping) <DGResponseObject>
 
 @end
 
-@interface DGCollectionReleasesRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGCollectionReleasesRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGCollectionReleasesResponse (Mapping)
-
-+ (RKObjectMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGCollectionReleasesResponse (Mapping) <DGResponseObject>
 
 @end
 

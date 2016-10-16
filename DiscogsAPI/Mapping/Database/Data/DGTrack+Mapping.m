@@ -24,8 +24,7 @@
 
 @implementation DGTrack (Mapping)
 
-+ (RKMapping *) mapping
-{
++ (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGTrack class]];
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"duration"   : @"duration",

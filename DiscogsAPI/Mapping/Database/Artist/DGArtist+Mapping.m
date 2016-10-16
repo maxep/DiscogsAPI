@@ -26,7 +26,7 @@
 
 @implementation DGArtist (Mapping)
 
-+ (RKMapping*) mapping {
++ (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGArtist class]];
     [mapping addAttributeMappingsFromDictionary:@{
@@ -49,7 +49,7 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor*) responseDescriptor {
++ (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGArtist mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 

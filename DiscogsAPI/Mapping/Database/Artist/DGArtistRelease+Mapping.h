@@ -21,21 +21,16 @@
 // THE SOFTWARE.
 
 #import "DGArtistRelease.h"
+#import "DGMapping.h"
 
-@interface DGArtistRelease (Mapping)
-
-+ (RKMapping *) mapping;
-
-@end
-
-@interface DGArtistReleaseRequest (Mapping)
-
-- (NSDictionary*) parameters;
+@interface DGArtistRelease (Mapping) <DGObject>
 
 @end
 
-@interface DGArtistReleaseResponse (Mapping)
+@interface DGArtistReleaseRequest (Mapping) <DGRequestObject>
 
-+ (RKResponseDescriptor*) responseDescriptor;
+@end
+
+@interface DGArtistReleaseResponse (Mapping) <DGResponseObject>
 
 @end

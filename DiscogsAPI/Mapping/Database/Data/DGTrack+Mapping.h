@@ -21,9 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGTrack.h"
+#import "DGMapping.h"
 
-@interface DGTrack (Mapping)
-
-+ (RKMapping *) mapping;
+@interface DGTrack (Mapping) <DGObject>
 
 @end

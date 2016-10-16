@@ -40,8 +40,8 @@
 + (Discogs *)api {
     static Discogs *discogs = nil;
     
-    if (!discogs) {
-        
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
         
         //Setup client
@@ -52,7 +52,8 @@
         [RKObjectManager setSharedManager:manager];
         
         AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
-    }
+    });
+    
     return discogs;
 }
 

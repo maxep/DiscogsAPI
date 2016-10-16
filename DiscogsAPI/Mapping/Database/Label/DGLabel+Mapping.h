@@ -21,11 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGLabel.h"
+#import "DGMapping.h"
 
-@interface DGLabel (Mapping)
-
-+ (RKMapping*) mapping;
-
-+ (RKResponseDescriptor*) responseDescriptor;
+@interface DGLabel (Mapping) <DGObject, DGResponseObject>
 
 @end

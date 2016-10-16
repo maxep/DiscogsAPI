@@ -46,6 +46,6 @@
 @property (nonatomic, strong) NSString * avatarURL;
 @property (nonatomic, strong) NSString * email;
 
-+ (DGProfile*) profile;
++ (DGProfile *)profile;
 
 @end

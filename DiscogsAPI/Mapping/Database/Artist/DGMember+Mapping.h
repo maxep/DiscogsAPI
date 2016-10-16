@@ -21,9 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGMember.h"
+#import "DGMapping.h"
 
-@interface DGMember (Mapping)
-
-+ (RKMapping*) mapping;
+@interface DGMember (Mapping) <DGObject>
 
 @end
