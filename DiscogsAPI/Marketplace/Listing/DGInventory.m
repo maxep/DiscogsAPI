@@ -1,4 +1,4 @@
-// DGPrice.m
+// DGInventory.m
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,32 +20,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import "DGInventory.h"
+#import "DGPagination+Mapping.h"
+#import "DGListing+Mapping.h"
 
-NSString *DGCurrencyAsString(DGCurrency currency) {
-    return @[@"", @"USD", @"GBP", @"EUR", @"CAD", @"AUD", @"JPY", @"CHF", @"MXN", @"BRL", @"NZD", @"SEK", @"ZAR"][currency];
-}
-
-@implementation DGPrice
-
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
-}
+@implementation DGInventoryRequest
 
 @end
 
-@implementation DGPriceSuggectionsRequest
+@implementation DGInventoryResponse
 
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
+@synthesize pagination;
 
-@end
-
-@implementation DGPriceSuggectionsResponse
-
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void(^)(NSError * _Nullable error))failure {
+    
+    [self.pagination loadNextPageWithResponseDesciptor:[DGListing responseDescriptor] success:^(NSArray *objects) {
+        if ([objects.firstObject isKindOfClass:[DGListing class]]) {
+            DGInventoryResponse* response = objects.firstObject;
+            
+            self.pagination = response.pagination;
+            NSMutableArray *results = self.listings.mutableCopy;
+            [results addObjectsFromArray:response.listings];
+            self.listings = results;
+            
+            success();
+        }
+    } failure:^(NSError *error) {
+        RKLogError(@"Operation failed with error: %@", error);
+        if (failure) failure(error);
+    }];
 }
 
 @end

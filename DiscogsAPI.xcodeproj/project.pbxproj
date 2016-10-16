@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0AB1EB1DB11ABD004716A1 /* DGListing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0AB1E91DB11ABD004716A1 /* DGListing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C0AB1EC1DB11ABD004716A1 /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0AB1EA1DB11ABD004716A1 /* DGListing.m */; };
+		9C0AB1F01DB11B0D004716A1 /* DGListing+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0AB1EE1DB11B0D004716A1 /* DGListing+Mapping.h */; };
+		9C0AB1F11DB11B0D004716A1 /* DGListing+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0AB1EF1DB11B0D004716A1 /* DGListing+Mapping.m */; };
+		9C0F09741DB17E2900FB09D9 /* DGInventory+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09721DB17E2900FB09D9 /* DGInventory+Mapping.h */; };
+		9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09731DB17E2900FB09D9 /* DGInventory+Mapping.m */; };
+		9C0F09781DB261CE00FB09D9 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09761DB261CE00FB09D9 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C0F09791DB261CE00FB09D9 /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09771DB261CE00FB09D9 /* DGInventory.m */; };
 		9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F097E1DB37D4100FB09D9 /* DGMapping.h */; };
 		9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09811DB3F8C600FB09D9 /* DGOperation.h */; };
 		9C0F09841DB3F8C600FB09D9 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09821DB3F8C600FB09D9 /* DGOperation.m */; };
@@ -198,6 +206,14 @@
 		8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
 		96FA247B9286C3715E46D524 /* libPods-DiscogsAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiscogsAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9814D72CBC293A1A34B4968F /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		9C0AB1E91DB11ABD004716A1 /* DGListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DGListing.h; path = Listing/DGListing.h; sourceTree = "<group>"; };
+		9C0AB1EA1DB11ABD004716A1 /* DGListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGListing.m; path = Listing/DGListing.m; sourceTree = "<group>"; };
+		9C0AB1EE1DB11B0D004716A1 /* DGListing+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DGListing+Mapping.h"; path = "Listing/DGListing+Mapping.h"; sourceTree = "<group>"; };
+		9C0AB1EF1DB11B0D004716A1 /* DGListing+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DGListing+Mapping.m"; path = "Listing/DGListing+Mapping.m"; sourceTree = "<group>"; };
+		9C0F09721DB17E2900FB09D9 /* DGInventory+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DGInventory+Mapping.h"; path = "Listing/DGInventory+Mapping.h"; sourceTree = "<group>"; };
+		9C0F09731DB17E2900FB09D9 /* DGInventory+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DGInventory+Mapping.m"; path = "Listing/DGInventory+Mapping.m"; sourceTree = "<group>"; };
+		9C0F09761DB261CE00FB09D9 /* DGInventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DGInventory.h; path = Listing/DGInventory.h; sourceTree = "<group>"; };
+		9C0F09771DB261CE00FB09D9 /* DGInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGInventory.m; path = Listing/DGInventory.m; sourceTree = "<group>"; };
 		9C0F097B1DB2626100FB09D9 /* DiscogsAPI.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DiscogsAPI.podspec; sourceTree = "<group>"; };
 		9C0F097C1DB2626100FB09D9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C0F097D1DB2626100FB09D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -403,6 +419,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0AB1E81DB11A7E004716A1 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				9C0AB1E91DB11ABD004716A1 /* DGListing.h */,
+				9C0AB1EA1DB11ABD004716A1 /* DGListing.m */,
+				9C0F09761DB261CE00FB09D9 /* DGInventory.h */,
+				9C0F09771DB261CE00FB09D9 /* DGInventory.m */,
+			);
+			name = Listing;
+			sourceTree = "<group>";
+		};
+		9C0AB1ED1DB11AE3004716A1 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				9C0AB1EE1DB11B0D004716A1 /* DGListing+Mapping.h */,
+				9C0AB1EF1DB11B0D004716A1 /* DGListing+Mapping.m */,
+				9C0F09721DB17E2900FB09D9 /* DGInventory+Mapping.h */,
+				9C0F09731DB17E2900FB09D9 /* DGInventory+Mapping.m */,
+			);
+			name = Listing;
+			sourceTree = "<group>";
+		};
 		9C0F097A1DB2623A00FB09D9 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,6 +740,7 @@
 		D0A588471CFF9481008DF0A4 /* Marketplace */ = {
 			isa = PBXGroup;
 			children = (
+				9C0AB1ED1DB11AE3004716A1 /* Listing */,
 				D0A588481CFF9481008DF0A4 /* Price */,
 			);
 			path = Marketplace;
@@ -783,6 +822,7 @@
 			children = (
 				D0A588621CFF9482008DF0A4 /* DGMarketplace.h */,
 				D0A588631CFF9482008DF0A4 /* DGMarketplace.m */,
+				9C0AB1E81DB11A7E004716A1 /* Listing */,
 				D0A588641CFF9482008DF0A4 /* Price */,
 			);
 			path = Marketplace;
@@ -965,9 +1005,11 @@
 				D0A588F21CFF9482008DF0A4 /* DGCollectionFolder.h in Headers */,
 				D0A588A21CFF9482008DF0A4 /* DGVideo.h in Headers */,
 				D0A5888E1CFF9482008DF0A4 /* DGEndpoint.h in Headers */,
+				9C0F09741DB17E2900FB09D9 /* DGInventory+Mapping.h in Headers */,
 				D0A588981CFF9482008DF0A4 /* DGCommunity.h in Headers */,
 				D0A588941CFF9482008DF0A4 /* DGArtistRelease.h in Headers */,
 				D0A588AE1CFF9482008DF0A4 /* DGRelease.h in Headers */,
+				9C0AB1F01DB11B0D004716A1 /* DGListing+Mapping.h in Headers */,
 				D0A588E81CFF9482008DF0A4 /* DGPagination.h in Headers */,
 				D0A588EE1CFF9482008DF0A4 /* DGCollectionField.h in Headers */,
 				D0A588A61CFF9482008DF0A4 /* DGLabel.h in Headers */,
@@ -977,6 +1019,8 @@
 				D0A588921CFF9482008DF0A4 /* DGArtist.h in Headers */,
 				D0A588EA1CFF9482008DF0A4 /* DGResource.h in Headers */,
 				D0A588A01CFF9482008DF0A4 /* DGTrack.h in Headers */,
+				9C0AB1EB1DB11ABD004716A1 /* DGListing.h in Headers */,
+				9C0F09781DB261CE00FB09D9 /* DGInventory.h in Headers */,
 				D0A588EC1CFF9482008DF0A4 /* DGCollection.h in Headers */,
 				D0A588F01CFF9482008DF0A4 /* DGCollectionFieldInstance.h in Headers */,
 				D0A588E61CFF9482008DF0A4 /* DGPrice.h in Headers */,
@@ -1280,6 +1324,7 @@
 				D0A588E51CFF9482008DF0A4 /* DGMarketplace.m in Sources */,
 				D0A588EB1CFF9482008DF0A4 /* DGResource.m in Sources */,
 				D0A588951CFF9482008DF0A4 /* DGArtistRelease.m in Sources */,
+				9C0F09791DB261CE00FB09D9 /* DGInventory.m in Sources */,
 				D0A588871CFF9482008DF0A4 /* DGAuthView.m in Sources */,
 				D0A588A91CFF9482008DF0A4 /* DGLabelRelease.m in Sources */,
 				D0A588C11CFF9482008DF0A4 /* DGImage+Mapping.m in Sources */,
@@ -1291,6 +1336,7 @@
 				D0A588D51CFF9482008DF0A4 /* DGPagination+Mapping.m in Sources */,
 				D0A588F91CFF9482008DF0A4 /* DGIdentity.m in Sources */,
 				D0A588F11CFF9482008DF0A4 /* DGCollectionFieldInstance.m in Sources */,
+				9C0AB1EC1DB11ABD004716A1 /* DGListing.m in Sources */,
 				D0A588F31CFF9482008DF0A4 /* DGCollectionFolder.m in Sources */,
 				D0A588C51CFF9482008DF0A4 /* DGVideo+Mapping.m in Sources */,
 				D0A588DF1CFF9482008DF0A4 /* DGIdentity+Mapping.m in Sources */,
@@ -1300,6 +1346,7 @@
 				D0A588B91CFF9482008DF0A4 /* DGMember+Mapping.m in Sources */,
 				D0A588F71CFF9482008DF0A4 /* DGUser.m in Sources */,
 				D0A588D71CFF9482008DF0A4 /* DGCollectionField+Mapping.m in Sources */,
+				9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */,
 				D0A588D31CFF9482008DF0A4 /* DGPrice+Mapping.m in Sources */,
 				D0A588BF1CFF9482008DF0A4 /* DGIdentifier+Mapping.m in Sources */,
 				D0A588E71CFF9482008DF0A4 /* DGPrice.m in Sources */,
@@ -1332,6 +1379,7 @@
 				D0A588A51CFF9482008DF0A4 /* DGDatabase.m in Sources */,
 				D0A588A11CFF9482008DF0A4 /* DGTrack.m in Sources */,
 				D0A5888F1CFF9482008DF0A4 /* DGEndpoint.m in Sources */,
+				9C0AB1F11DB11B0D004716A1 /* DGListing+Mapping.m in Sources */,
 				D0A588931CFF9482008DF0A4 /* DGArtist.m in Sources */,
 				D0A588E11CFF9482008DF0A4 /* DGProfile+Mapping.m in Sources */,
 			);

@@ -1,4 +1,4 @@
-// DGPrice.m
+// DGListing+Mapping.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,32 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import "DGListing.h"
+#import "DGMapping.h"
 
-NSString *DGCurrencyAsString(DGCurrency currency) {
-    return @[@"", @"USD", @"GBP", @"EUR", @"CAD", @"AUD", @"JPY", @"CHF", @"MXN", @"BRL", @"NZD", @"SEK", @"ZAR"][currency];
-}
-
-@implementation DGPrice
-
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
-}
+@interface DGListing (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end
 
-@implementation DGPriceSuggectionsRequest
-
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
+@interface DGListingRequest (Mapping) <DGRequestObject>
 
 @end
 
-@implementation DGPriceSuggectionsResponse
+@interface DGCreateListingRequest (Mapping) <DGRequestObject>
 
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
-}
+@end
+
+@interface DGCreateListingResponse (Mapping) <DGResponseObject>
 
 @end

@@ -1,4 +1,4 @@
-// DGPrice.m
+// DGInventory+Mapping.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,32 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import "DGInventory.h"
 
-NSString *DGCurrencyAsString(DGCurrency currency) {
-    return @[@"", @"USD", @"GBP", @"EUR", @"CAD", @"AUD", @"JPY", @"CHF", @"MXN", @"BRL", @"NZD", @"SEK", @"ZAR"][currency];
-}
+@interface DGInventoryResponse (Mapping)
 
-@implementation DGPrice
++ (RKMapping *)mapping;
 
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
-}
-
-@end
-
-@implementation DGPriceSuggectionsRequest
-
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
-
-@end
-
-@implementation DGPriceSuggectionsResponse
-
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
-}
++ (RKResponseDescriptor *)responseDescriptor;
 
 @end

@@ -1,4 +1,4 @@
-// DGPrice.m
+// DGListing.m
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,32 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import "DGListing.h"
 
-NSString *DGCurrencyAsString(DGCurrency currency) {
-    return @[@"", @"USD", @"GBP", @"EUR", @"CAD", @"AUD", @"JPY", @"CHF", @"MXN", @"BRL", @"NZD", @"SEK", @"ZAR"][currency];
+NSString *DGListingSortAsString(DGListingSort sort){
+    return @[@"listed",
+             @"price",
+             @"item",
+             @"artist",
+             @"label",
+             @"catno",
+             @"audio",
+             @"status",
+             @"location"][sort];
 }
 
-@implementation DGPrice
-
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
-}
+@implementation DGListing
 
 @end
 
-@implementation DGPriceSuggectionsRequest
-
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
+@implementation DGListingRequest
 
 @end
 
-@implementation DGPriceSuggectionsResponse
+@implementation DGCreateListingRequest
 
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
-}
+@end
+
+@implementation DGCreateListingResponse
 
 @end

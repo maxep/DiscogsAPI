@@ -1,4 +1,4 @@
-// DGPrice.m
+// DGInventory+Mapping.m
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,32 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import "DGInventory+Mapping.h"
+#import "DGListing+Mapping.h"
+#import "DGPagination+Mapping.h"
 
-NSString *DGCurrencyAsString(DGCurrency currency) {
-    return @[@"", @"USD", @"GBP", @"EUR", @"CAD", @"AUD", @"JPY", @"CHF", @"MXN", @"BRL", @"NZD", @"SEK", @"ZAR"][currency];
+@implementation DGInventoryResponse (Mapping)
+
++ (RKMapping *)mapping {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGInventoryResponse class]];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"listings" toKeyPath:@"listings" withMapping:[DGListing mapping]]];
+    return mapping;
 }
 
-@implementation DGPrice
-
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
-}
-
-@end
-
-@implementation DGPriceSuggectionsRequest
-
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
-
-@end
-
-@implementation DGPriceSuggectionsResponse
-
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
++ (RKResponseDescriptor *)responseDescriptor {
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGInventoryResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

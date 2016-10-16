@@ -1,4 +1,4 @@
-// DGPrice.m
+// DGInventory.h
 //
 // Copyright (c) 2016 Maxime Epain
 //
@@ -20,32 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGPrice.h"
+#import "DGPagination.h"
+#import "DGListing.h"
 
-NSString *DGCurrencyAsString(DGCurrency currency) {
-    return @[@"", @"USD", @"GBP", @"EUR", @"CAD", @"AUD", @"JPY", @"CHF", @"MXN", @"BRL", @"NZD", @"SEK", @"ZAR"][currency];
-}
+NS_ASSUME_NONNULL_BEGIN
 
-@implementation DGPrice
+@interface DGInventoryRequest : NSObject
 
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
-}
+@property (nonatomic, strong, nullable) NSString *username;
 
-@end
+@property (nonatomic, strong, nullable) NSString *status;
 
-@implementation DGPriceSuggectionsRequest
+@property (nonatomic) DGListingSort sort;
 
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
+@property (nonatomic) DGSortOrder sortOrder;
 
 @end
 
-@implementation DGPriceSuggectionsResponse
+@interface DGInventoryResponse : NSObject <DGPaginated>
 
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
-}
+@property (nonatomic, strong, nullable) NSArray<DGListing *> *listings;
 
 @end
+
+NS_ASSUME_NONNULL_END

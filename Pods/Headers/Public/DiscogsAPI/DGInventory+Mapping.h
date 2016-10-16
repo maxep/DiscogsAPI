@@ -1,0 +1,1 @@
+../../../../DiscogsAPI/Mapping/Marketplace/Listing/DGInventory+Mapping.h

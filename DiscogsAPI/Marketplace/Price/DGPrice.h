@@ -22,12 +22,30 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, DGCurrency){
+    DGCurrencyNone = 0,
+    DGCurrencyUSD,
+    DGCurrencyGBP,
+    DGCurrencyEUR,
+    DGCurrencyCAD,
+    DGCurrencyAUD,
+    DGCurrencyJPY,
+    DGCurrencyCHF,
+    DGCurrencyMXN,
+    DGCurrencyBRL,
+    DGCurrencyNZD,
+    DGCurrencySEK,
+    DGCurrencyZAR
+};
+
+extern NSString *DGCurrencyAsString(DGCurrency current);
+
 @interface DGPrice : NSObject
 
 @property (nonatomic,strong) NSString *currency;
 @property (nonatomic,strong) NSNumber *value;
 
-+ (DGPrice *) price;
++ (DGPrice *)price;
 
 @end
 
@@ -35,7 +53,7 @@
 
 @property (nonatomic,strong) NSNumber *releaseID;
 
-+ (DGPriceSuggectionsRequest *) request;
++ (DGPriceSuggectionsRequest *)request;
 
 @end
 
@@ -50,6 +68,6 @@
 @property (nonatomic,strong) DGPrice *fair;
 @property (nonatomic,strong) DGPrice *poor;
 
-+ (DGPriceSuggectionsResponse *) response;
++ (DGPriceSuggectionsResponse *)response;
 
 @end
