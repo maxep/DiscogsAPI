@@ -31,7 +31,7 @@
 }
 
 - (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass {
-    self = [super initWithRequest:request responseDescriptors:@[ [responseClass responseDescriptor] ]];
+    self = [super initWithRequest:request responseDescriptors: (responseClass? @[ [responseClass responseDescriptor] ] : @[]) ];
     if (self) {
         _responseClass = responseClass;
     }
@@ -42,7 +42,11 @@
     
     __unsafe_unretained typeof(self) weakSelf = self;
     [super setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        if ([mappingResult.firstObject isKindOfClass:weakSelf->_responseClass]) {
+        
+        if (!weakSelf->_responseClass) {
+            success(nil);
+            
+        } else if ([mappingResult.firstObject isKindOfClass:weakSelf->_responseClass]) {
             success(mappingResult.firstObject);
             
         } else if (failure) {
@@ -58,6 +62,24 @@
 
 - (NSError *)errorWithCode:(NSInteger)code info:(NSString *)info {
     return [NSError errorWithDomain:@"Discogs.api" code:code userInfo:@{NSLocalizedDescriptionKey : info}];
+}
+
+@end
+
+@implementation RKObjectManager (DGOperation)
+
+- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method {
+    return [self operationWithRequest:request method:method responseClass:nil];
+}
+
+- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method responseClass:(Class<DGResponseObject>)responseClass {
+    NSDictionary *parameters = nil;
+    if ([request respondsToSelector:@selector(parameters)]) {
+        parameters = request.parameters;
+    }
+    
+    NSURLRequest *requestURL = [self requestWithObject:request method:method path:nil parameters:parameters];
+    return [DGOperation operationWithRequest:requestURL responseClass:responseClass];
 }
 
 @end

@@ -23,6 +23,6 @@
 #import "DGLabel.h"
 #import "DGMapping.h"
 
-@interface DGLabel (Mapping) <DGObject, DGResponseObject>
+@interface DGLabel (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end

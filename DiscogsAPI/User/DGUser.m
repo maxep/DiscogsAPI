@@ -62,20 +62,8 @@
     DGProfile *profile = [DGProfile profile];
     profile.userName = userName;
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:profile method:RKRequestMethodGET path:nil parameters:nil];
-    
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
-    
-    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *results) {
-         if ([results.firstObject isKindOfClass:[DGProfile class]]) {
-             success(results.firstObject);
-         } else if (failure) {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Operation failed with error: %@", error);
-         if (failure) failure(error);
-     }];
+    DGOperation *operation = [self.manager operationWithRequest:profile method:RKRequestMethodGET responseClass:[DGProfile class]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
 }
@@ -84,20 +72,8 @@
 
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:profile method:RKRequestMethodPOST path:nil parameters:profile.parameters];
-    
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ [DGProfile responseDescriptor] ]];
-    
-    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *results) {
-         if ([results.firstObject isKindOfClass:[DGProfile class]]) {
-             success(results.firstObject);
-         } else if (failure) {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Operation failed with error: %@", error);
-         if (failure) failure(error);
-     }];
+    DGOperation *operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
 }

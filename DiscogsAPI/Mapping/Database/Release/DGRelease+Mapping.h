@@ -23,6 +23,6 @@
 #import "DGRelease.h"
 #import "DGMapping.h"
 
-@interface DGRelease (Mapping) <DGObject, DGResponseObject>
+@interface DGRelease (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end

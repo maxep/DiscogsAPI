@@ -23,6 +23,6 @@
 #import "DGProfile.h"
 #import "DGMapping.h"
 
-@interface DGProfile (Mapping) <DGObject, DGResponseObject, DGRequestObject>
+@interface DGProfile (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end

@@ -27,8 +27,16 @@
 
 + (instancetype)operationWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass;
 
-- (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass;
+- (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass NS_DESIGNATED_INITIALIZER;
 
 - (void)setCompletionBlockWithSuccess:(void (^)(DGResponseType response))success failure:(void (^)(NSError *error))failure;
+
+@end
+
+@interface RKObjectManager (DGOperation)
+
+- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method;
+
+- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method responseClass:(Class<DGResponseObject>)responseClass;
 
 @end

@@ -23,6 +23,6 @@
 #import "DGArtist.h"
 #import "DGMapping.h"
 
-@interface DGArtist (Mapping) <DGObject, DGResponseObject>
+@interface DGArtist (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end

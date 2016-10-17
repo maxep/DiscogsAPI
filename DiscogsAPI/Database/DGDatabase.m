@@ -58,9 +58,7 @@
 - (void)searchFor:(DGSearchRequest *)request success:(void (^)(DGSearchResponse *response))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGSearchResponse class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGSearchResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
 
     [self.manager enqueueObjectRequestOperation:operation];
@@ -72,9 +70,7 @@
     DGArtist *artist    = [DGArtist artist];
     artist.ID           = artistID;
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:artist method:RKRequestMethodGET path:nil parameters:nil];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGArtist class]];
+    DGOperation *operation = [self.manager operationWithRequest:artist method:RKRequestMethodGET responseClass:[DGArtist class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
@@ -83,9 +79,7 @@
 - (void)getArtistReleases:(DGArtistReleaseRequest *)request success:(void (^)(DGArtistReleaseResponse *response))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGArtistReleaseResponse class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGArtistReleaseResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
@@ -97,9 +91,7 @@
     DGRelease *release  = [DGRelease release];
     release.ID          = releaseID;
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:release method:RKRequestMethodGET path:nil parameters:nil];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGRelease class]];
+    DGOperation *operation = [self.manager operationWithRequest:release method:RKRequestMethodGET responseClass:[DGRelease class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
@@ -111,9 +103,7 @@
     DGMaster *master    = [DGMaster master];
     master.ID           = masterID;
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:master method:RKRequestMethodGET path:nil parameters:nil];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGMaster class]];
+    DGOperation *operation = [self.manager operationWithRequest:master method:RKRequestMethodGET responseClass:[DGMaster class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
@@ -122,9 +112,7 @@
 - (void)getMasterVersion:(DGMasterVersionRequest *)request success:(void (^)(DGMasterVersionResponse *response))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGMasterVersionResponse class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGMasterVersionResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
 
     [self.manager enqueueObjectRequestOperation:operation];
@@ -136,9 +124,7 @@
     DGLabel *label  = [DGLabel label];
     label.ID        = labelID;
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:label method:RKRequestMethodGET path:nil parameters:nil];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGLabel class]];
+    DGOperation *operation = [self.manager operationWithRequest:label method:RKRequestMethodGET responseClass:[DGLabel class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
@@ -147,9 +133,7 @@
 - (void)getLabelReleases:(DGLabelReleasesRequest *)request success:(void (^)(DGLabelReleasesResponse *response))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:request.parameters];
-    
-    DGOperation *operation = [DGOperation operationWithRequest:requestURL responseClass:[DGLabelReleasesResponse class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGLabelReleasesResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.manager enqueueObjectRequestOperation:operation];
