@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import <RestKit/RestKit.h>
-#import "DGMapping.h"
+#import <DiscogsAPI/DGMapping.h>
 
 /**
  `DGOperation` is an `RKObjectRequestOperation` subclass that uses `DGResponseObject` class to perform response mapping.

@@ -150,7 +150,7 @@
     [self.manager enqueueObjectRequestOperation:operation];
 }
 
-- (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray *fields))success failure:(void (^)(NSError *error))failure {
+- (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray<DGCollectionField *> *fields))success failure:(void (^)(NSError *error))failure {
     
     DGCollectionFieldsRequest* request = [DGCollectionFieldsRequest new];
     request.userName = userName;

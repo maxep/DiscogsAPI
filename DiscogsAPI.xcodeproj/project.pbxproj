@@ -15,8 +15,8 @@
 		9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09731DB17E2900FB09D9 /* DGInventory+Mapping.m */; };
 		9C0F09781DB261CE00FB09D9 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09761DB261CE00FB09D9 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0F09791DB261CE00FB09D9 /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09771DB261CE00FB09D9 /* DGInventory.m */; };
-		9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F097E1DB37D4100FB09D9 /* DGMapping.h */; };
-		9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09811DB3F8C600FB09D9 /* DGOperation.h */; };
+		9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F097E1DB37D4100FB09D9 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09811DB3F8C600FB09D9 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C0F09841DB3F8C600FB09D9 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09821DB3F8C600FB09D9 /* DGOperation.m */; };
 		9C0F098B1DB5228F00FB09D9 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09891DB5228F00FB09D9 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0F098C1DB5228F00FB09D9 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F098A1DB5228F00FB09D9 /* DGOrder.m */; };
@@ -54,12 +54,12 @@
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
 		D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */; };
 		D0A588871CFF9482008DF0A4 /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */; };
-		D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */; };
+		D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A588891CFF9482008DF0A4 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */; };
-		D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */; };
+		D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A5888B1CFF9482008DF0A4 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587EF1CFF9481008DF0A4 /* DGTokenStore.m */; };
 		D0A5888C1CFF9482008DF0A4 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */; };
-		D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */; };
+		D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A5888E1CFF9482008DF0A4 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A5888F1CFF9482008DF0A4 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */; };
 		D0A588901CFF9482008DF0A4 /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F61CFF9481008DF0A4 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1054,6 +1054,11 @@
 				9C0F098B1DB5228F00FB09D9 /* DGOrder.h in Headers */,
 				D0A588EC1CFF9482008DF0A4 /* DGCollection.h in Headers */,
 				D0A588F01CFF9482008DF0A4 /* DGCollectionFieldInstance.h in Headers */,
+				D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */,
+				9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */,
+				9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */,
+				D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */,
+				D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */,
 				D0A588E61CFF9482008DF0A4 /* DGPrice.h in Headers */,
 				D0A588FC1CFF9482008DF0A4 /* DGWantlist.h in Headers */,
 				D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */,
@@ -1064,7 +1069,6 @@
 				D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */,
 				D0A588C41CFF9482008DF0A4 /* DGVideo+Mapping.h in Headers */,
 				D0A588C01CFF9482008DF0A4 /* DGImage+Mapping.h in Headers */,
-				D0A5888A1CFF9482008DF0A4 /* DGTokenStore.h in Headers */,
 				D0A588C21CFF9482008DF0A4 /* DGTrack+Mapping.h in Headers */,
 				D0A588DC1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h in Headers */,
 				D0A588CE1CFF9482008DF0A4 /* DGRelease+Mapping.h in Headers */,
@@ -1077,16 +1081,12 @@
 				D0A588CA1CFF9482008DF0A4 /* DGMaster+Mapping.h in Headers */,
 				D0A588BE1CFF9482008DF0A4 /* DGIdentifier+Mapping.h in Headers */,
 				D0A588D21CFF9482008DF0A4 /* DGPrice+Mapping.h in Headers */,
-				D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */,
-				9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */,
 				D0A588BC1CFF9482008DF0A4 /* DGFormat+Mapping.h in Headers */,
 				D0A588C81CFF9482008DF0A4 /* DGLabelRelease+Mapping.h in Headers */,
 				D0A588E01CFF9482008DF0A4 /* DGProfile+Mapping.h in Headers */,
 				D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */,
 				D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */,
 				D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */,
-				9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */,
-				D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

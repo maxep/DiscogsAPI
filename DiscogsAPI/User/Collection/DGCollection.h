@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the collection fields.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray *fields))success failure:(nullable DGFailureBlock)failure;
+- (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray<DGCollectionField *> *fields))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Changes the value of a notes field on a particular instance.

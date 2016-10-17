@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGObject.h"
+#import "DGCollectionFieldInstance.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
