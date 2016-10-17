@@ -69,7 +69,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.results![(indexPath as NSIndexPath).row]
+            let result = self.response.results[(indexPath as NSIndexPath).row]
             
             if let destination = segue.destination as? DGViewController {
                 destination.objectID = result.id
@@ -108,7 +108,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     // MARK: UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.response?.results!.count as Int? {
+        if let count = self.response?.results.count as Int? {
             return count
         }
         return 0
@@ -116,7 +116,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let result = self.response.results![indexPath.row]
+        let result = self.response.results[indexPath.row]
         let cell = dequeueReusableCellWithResult(result)
         
         cell.textLabel?.text       = result.title
@@ -128,7 +128,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         })
         
         // Load the next response page
-        if result === self.response.results!.last {
+        if result === self.response.results.last {
             self.response.loadNextPage(success: {
                 self.tableView.reloadData()
             })

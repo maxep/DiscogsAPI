@@ -49,7 +49,7 @@
     }];
     
     // Get master versions
-    DGMasterVersionRequest *request = [DGMasterVersionRequest request];
+    DGMasterVersionRequest *request = [DGMasterVersionRequest new];
     request.masterID = self.objectID;
     request.pagination.perPage = @25;
     

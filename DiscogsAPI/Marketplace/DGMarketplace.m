@@ -23,9 +23,10 @@
 #import "DGEndpoint+Configuration.h"
 #import "DGMarketplace.h"
 
-#import "DGPrice+Mapping.h"
 #import "DGInventory+Mapping.h"
 #import "DGListing+Mapping.h"
+#import "DGOrder+Mapping.h"
+#import "DGPrice+Mapping.h"
 
 @implementation DGMarketplace
 
@@ -37,11 +38,19 @@
     
     //Listing
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGListingRequest class] pathPattern:@"/marketplace/listings/:listingID" method:RKRequestMethodGET]];
+    
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGListing class] pathPattern:@"/marketplace/listings/:ID" method:RKRequestMethodPOST]];
     [manager addRequestDescriptor:[DGListing requestDescriptor]];
-    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCreateListingRequest class] pathPattern:@"/marketplace/listings/" method:RKRequestMethodPOST]];
+    
+    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCreateListingRequest class] pathPattern:@"/marketplace/listings" method:RKRequestMethodPOST]];
     [manager addRequestDescriptor:[DGCreateListingRequest requestDescriptor]];
+    
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGListing class] pathPattern:@"/marketplace/listings/:ID" method:RKRequestMethodDELETE]];
+    
+    //Order
+    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGListOrdersRequest class] pathPattern:@"/marketplace/orders" method:RKRequestMethodGET]];
+    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGOrder class] pathPattern:@"/marketplace/orders/:ID" method:RKRequestMethodAny]];
+    [manager addRequestDescriptor:[DGOrder requestDescriptor]];
     
     //Price suggestions
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGPriceSuggestionsRequest class] pathPattern:@"/marketplace/price_suggestions/:releaseID" method:RKRequestMethodGET]];
@@ -99,7 +108,37 @@
     [self.manager enqueueObjectRequestOperation:operation];
 }
 
-- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(void (^)(NSError* error))failure {
+- (void)getOrder:(NSNumber *)orderID success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure {
+    DGCheckReachability();
+    
+    DGOrder *order = [DGOrder new];
+    order.ID = orderID;
+    
+    DGOperation *operation = [self.manager operationWithRequest:order method:RKRequestMethodGET responseClass:[DGOrder class]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
+    
+    [self.manager enqueueObjectRequestOperation:operation];
+}
+
+- (void)getOrders:(DGListOrdersRequest *)request success:(void (^)(DGListOrdersResponse *response))success failure:(nullable DGFailureBlock)failure {
+    DGCheckReachability();
+    
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGListOrdersResponse class]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
+    
+    [self.manager enqueueObjectRequestOperation:operation];
+}
+
+- (void)editOrder:(DGOrder *)order success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure {
+    DGCheckReachability();
+    
+    DGOperation *operation = [self.manager operationWithRequest:order method:RKRequestMethodPOST responseClass:[DGOrder class]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
+    
+    [self.manager enqueueObjectRequestOperation:operation];
+}
+
+- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(nullable DGFailureBlock)failure {
     DGCheckReachability();
     
     DGPriceSuggestionsRequest *request = [DGPriceSuggestionsRequest new];

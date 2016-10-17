@@ -38,13 +38,13 @@ class DGReleaseViewController: DGViewController {
         Discogs.api().database.getRelease(self.objectID, success: { (release) in
 
             self.titleLabel.text    = release.title
-            self.detailLabel.text   = release.artists!.first?.name
+            self.detailLabel.text   = release.artists.first?.name
             self.yearLabel.text     = release.year!.stringValue
-            self.styleLabel.text    = release.genres?.joined(separator: ", ")
-            self.trackList          = release.trackList!
+            self.styleLabel.text    = release.genres.joined(separator: ", ")
+            self.trackList          = release.trackList
             
             // Get a Discogs image
-            if let image = release.images?.first {
+            if let image = release.images.first {
                 Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
                     self.coverView?.image = image
                 })

@@ -70,6 +70,7 @@ Pod::Spec.new do |s|
     ss.source_files   = 	'DiscogsAPI/Marketplace',
     						'DiscogsAPI/Marketplace/Price',
                             'DiscogsAPI/Marketplace/Listing',
+                            'DiscogsAPI/Marketplace/Order',
     						'DiscogsAPI/Mapping/Marketplace/**/*'
     ss.dependency 'DiscogsAPI/Pagination'
     ss.dependency 'DiscogsAPI/Mapping'

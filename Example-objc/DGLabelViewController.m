@@ -48,7 +48,7 @@
     }];
     
     // Get label release
-    DGLabelReleasesRequest *request = [DGLabelReleasesRequest request];
+    DGLabelReleasesRequest *request = [DGLabelReleasesRequest new];
     request.labelID = self.objectID;
     request.pagination.perPage = @25;
     

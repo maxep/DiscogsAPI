@@ -21,8 +21,10 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint.h"
-#import "DGPrice.h"
 #import "DGInventory.h"
+#import "DGOrder.h"
+#import "DGPrice.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -87,6 +89,40 @@ NS_ASSUME_NONNULL_BEGIN
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+
+/**
+ Edits the data associated with an order.
+ Authentication as the seller is required.
+ The response contains a next_status key – an array of valid next statuses for this order, which you can display to the user in (for example) a dropdown control. This also renders your application more resilient to any future changes in the order status logic.
+ Changing the order status using this resource will always message the buyer with:
+ 
+ Seller changed status from Old Status to New Status and does not provide a facility for including a custom message along with the change. For more fine-grained control, use the Add a new message resource, which allows you to simultaneously add a message and change the order status.
+ If the order status is neither cancelled, Payment Received, nor Shipped, you can change the shipping. Doing so will send an invoice to the buyer and set the order status to Invoice Sent. (For that reason, you cannot set the shipping and the order status in the same request.)
+
+ @param orderID The order to edit.
+ @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the edited order.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void)editOrder:(DGOrder *)order success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure;
+
+/**
+ Gets the data associated with an order.
+ Authentication as the seller is required.
+ 
+ @param orderID The order ID.
+ @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the requested order.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void)getOrder:(NSNumber *)orderID success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure;
+
+/**
+ Gets a list of the authenticated user’s orders. Accepts Pagination parameters.
+ 
+ @param request The order list request.
+ @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the orders response.
+ @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ */
+- (void)getOrders:(DGListOrdersRequest *)request success:(void (^)(DGListOrdersResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Retrieves price suggestions for the provided Release ID. If no suggestions are available, an empty object will be returned.

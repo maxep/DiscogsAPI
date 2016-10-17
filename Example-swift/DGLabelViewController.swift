@@ -42,7 +42,7 @@ class DGLabelViewController: DGViewController {
             self.styleLabel.text    = label.profile
             
             // Get a Discogs image
-            if let image = label.images?.first {
+            if let image = label.images.first {
                 Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
                     self.coverView?.image = image
                 })
@@ -74,7 +74,7 @@ class DGLabelViewController: DGViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.releases![indexPath.row]
+            let result = self.response.releases[indexPath.row]
             
             if let destination = segue.destination as? DGViewController {
                 destination.objectID = result.id
@@ -85,7 +85,7 @@ class DGLabelViewController: DGViewController {
     // MARK: UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.response?.releases!.count as Int? {
+        if let count = self.response?.releases.count as Int? {
             return count
         }
         return 0
@@ -98,7 +98,7 @@ class DGLabelViewController: DGViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
-        let result = self.response.releases![indexPath.row]
+        let result = self.response.releases[indexPath.row]
         
         cell.textLabel?.text       = result.title
         cell.detailTextLabel?.text = result.catno
@@ -110,7 +110,7 @@ class DGLabelViewController: DGViewController {
         })
         
         // Load the next response page
-        if result === self.response.releases!.last {
+        if result === self.response.releases.last {
             self.response.loadNextPage(success: {
                 self.tableView.reloadData()
             })

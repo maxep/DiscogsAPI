@@ -122,6 +122,7 @@
         "DiscogsAPI/Marketplace",
         "DiscogsAPI/Marketplace/Price",
         "DiscogsAPI/Marketplace/Listing",
+        "DiscogsAPI/Marketplace/Order",
         "DiscogsAPI/Mapping/Marketplace/**/*"
       ],
       "dependencies": {

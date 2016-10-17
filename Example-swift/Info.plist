@@ -9,8 +9,8 @@
     <key>DiscogsConsumerSecret</key>
     <string>DISCOGS_APP_CONSUMER_SECRET</string>
     
-<!--    <key>DiscogsAccessToken</key>-->
-<!--    <string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>-->
+    <key>DiscogsAccessToken</key>
+    <string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>
     
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

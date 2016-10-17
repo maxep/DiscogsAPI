@@ -104,3 +104,11 @@ DGMediaType StringDGMediaType(NSString *str) {
 }
 
 @end
+
+@implementation DiscogsAPI
+
++ (Discogs *)client {
+    return [Discogs api];
+}
+
+@end

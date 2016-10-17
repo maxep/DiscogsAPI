@@ -9,8 +9,9 @@
     <key>DiscogsConsumerSecret</key>
     <string>DISCOGS_APP_CONSUMER_SECRET</string>
     
-<!--    <key>DiscogsAccessToken</key>-->
-<!--    <string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>-->
+    <key>DiscogsAccessToken</key>
+    <string>DISCOGS_PERSONAL_ACCESS_TOKEN</string>
+
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
@@ -28,15 +29,28 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Discogs Authentication</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>discogs</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>

@@ -38,12 +38,12 @@ class DGMasterViewController: DGViewController {
         Discogs.api().database .getMaster(self.objectID, success: { (master) in
             
             self.titleLabel.text    = master.title
-            self.detailLabel.text   = master.artists!.first?.name
+            self.detailLabel.text   = master.artists.first?.name
             self.yearLabel.text     = master.year!.stringValue
-            self.styleLabel.text    = master.genres?.joined(separator: ", ")
+            self.styleLabel.text    = master.genres.joined(separator: ", ")
             
             // Get a Discogs image
-            if let image = master.images?.first {
+            if let image = master.images.first {
                 Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
                     self.coverView?.image = image
                 })

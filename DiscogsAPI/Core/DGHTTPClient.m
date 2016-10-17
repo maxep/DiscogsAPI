@@ -22,11 +22,11 @@
 
 #import "DGHTTPClient.h"
 
-NSString* const kDGBaseURL = @"https://api.discogs.com/";
+NSString * const kDGBaseURL = @"https://api.discogs.com/";
 
-static NSString* const kDGRequestTokenURL = @"https://api.discogs.com/oauth/request_token";
-static NSString* const kDGAuthorizeURL    = @"http://www.discogs.com/oauth/authorize";
-static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/access_token";
+static NSString * const kDGRequestTokenURL = @"https://api.discogs.com/oauth/request_token";
+static NSString * const kDGAuthorizeURL    = @"http://www.discogs.com/oauth/authorize";
+static NSString * const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/access_token";
 
 @interface DGHTTPClient ()
 @property (nonatomic,strong) NSString   *authorizationHeader;
@@ -73,7 +73,11 @@ static NSString* const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acce
                                       accessMethod:@"POST"
                                              scope:nil
                                            success:success
-                                           failure:failure];
+                                           failure:^(NSError *error) {
+                                               //nilify the token when failed
+                                               self.accessToken = nil;
+                                               if (failure) failure(error);
+                                           }];
 }
 
 #pragma mark Properties

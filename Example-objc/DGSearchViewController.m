@@ -49,10 +49,12 @@
     [Discogs.api isAuthenticated:^(BOOL success) {
         if (!success) {
             
+            [self authenticate];
+            
             //Present Authentication controller
-            DGAuthViewController *authentViewController = [[DGAuthViewController alloc] init];
-            UINavigationController *authentNavigationController = [[UINavigationController alloc] initWithRootViewController:authentViewController];
-            [self.navigationController presentViewController:authentNavigationController animated:YES completion:nil];
+//            DGAuthViewController *authentViewController = [[DGAuthViewController alloc] init];
+//            UINavigationController *authentNavigationController = [[UINavigationController alloc] initWithRootViewController:authentViewController];
+//            [self.navigationController presentViewController:authentNavigationController animated:YES completion:nil];
         }
     }];
 }
@@ -60,6 +62,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)authenticate {
+    
+    NSURL *callback = [NSURL URLWithString:@"discogs://success"];
+    [Discogs.api.authentication authenticateWithCallback:callback success:^{
+        
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 #pragma mark Properties
@@ -78,7 +90,7 @@
     if (query.length > 0) {
         
         // Search on Discogs
-        DGSearchRequest *request = [DGSearchRequest request];
+        DGSearchRequest *request = [DGSearchRequest new];
         request.query = query;
         request.type = type;
         request.pagination.perPage = @25;

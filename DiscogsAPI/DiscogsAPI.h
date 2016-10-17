@@ -104,4 +104,10 @@ typedef NS_ENUM(NSInteger, DGMediaType){
 
 @end
 
+@interface DiscogsAPI : Discogs
+
++ (Discogs *)client DEPRECATED_MSG_ATTRIBUTE("[DiscogsAPI client] has been renamed to [Discogs api]");
+
+@end
+
 NS_ASSUME_NONNULL_END

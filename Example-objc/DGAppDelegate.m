@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGAppDelegate.h"
+#import <DiscogsAPI/DGAuthentication.h>
 
 @implementation DGAppDelegate
 
@@ -53,5 +54,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    NSNotification *notification = [NSNotification notificationWithName:DGApplicationLaunchedWithURLNotification object:nil userInfo:@{DGApplicationLaunchOptionsURLKey: url}];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+    return YES;
+}
+
 
 @end
