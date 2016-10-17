@@ -23,8 +23,9 @@
 #import "DGAuthView.h"
 #import "AFOAuth1Client.h"
 
-extern NSString * const kDGCallback;
-extern NSString * const kAFApplicationLaunchedWithURLNotification;
+extern NSString * const DGCallback;
+extern NSString * const DGApplicationLaunchedWithURLNotification;
+extern NSString * const DGApplicationLaunchOptionsURLKey;
 
 @implementation DGAuthView
 
@@ -50,12 +51,10 @@ extern NSString * const kAFApplicationLaunchedWithURLNotification;
     [super loadRequest:mutableRequest];
 }
 
-- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSString* callback = [[request URL] absoluteString];
-    NSLog(@"Request string: %@", callback);
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-    if( [callback hasPrefix:kDGCallback]) {
-        NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:@{kAFApplicationLaunchOptionsURLKey: [request URL]}];
+    if( [request.URL.absoluteString hasPrefix:DGCallback]) {
+        NSNotification *notification = [NSNotification notificationWithName:DGApplicationLaunchedWithURLNotification object:nil userInfo:@{DGApplicationLaunchOptionsURLKey: [request URL]}];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
         return NO;
     }

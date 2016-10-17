@@ -23,6 +23,6 @@
 #import "DGIdentity.h"
 #import "DGMapping.h"
 
-@interface DGIdentity (Mapping) <DGObject, DGResponseObject>
+@interface DGIdentity (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end

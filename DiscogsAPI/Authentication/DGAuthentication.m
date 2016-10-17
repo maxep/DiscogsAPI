@@ -33,7 +33,9 @@ static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
 static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
 static NSString * const kDiscogsAccessToken    = @"DiscogsAccessToken";
 
-NSString* const kDGCallback = @"discogsapi://success";
+NSString * const DGApplicationLaunchedWithURLNotification = @"kAFApplicationLaunchedWithURLNotification";
+NSString * const DGApplicationLaunchOptionsURLKey = @"UIApplicationLaunchOptionsURLKey";
+NSString * const DGCallback = @"discogsapi://success";
 
 static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
 
@@ -59,33 +61,16 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
 }
 
-- (void)identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
-    DGIdentity* identity = [DGIdentity new];
+- (void)identityWithSuccess:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
+    DGIdentity *identity = [DGIdentity new];
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:identity
-                                                        method:RKRequestMethodGET
-                                                          path:nil
-                                                    parameters:nil];
+    DGOperation *operation = [self.manager operationWithRequest:identity method:RKRequestMethodGET responseClass:[DGIdentity class]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL
-                                                                                     responseDescriptors:@[ [DGIdentity responseDescriptor] ]];
-    
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-         NSArray* results = mappingResult.array;
-         if ([[results firstObject] isKindOfClass:[DGIdentity class]]) {
-             success([results firstObject]);
-         } else if (failure) {
-             failure([self errorWithCode:NSURLErrorCannotParseResponse info:@"Bad response from Discogs server"]);
-         }
-     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         RKLogError(@"Operation failed with error: %@", error);
-         if (failure) failure(error);
-     }];
-    
-    [self.manager enqueueObjectRequestOperation:objectRequestOperation];
+    [self.manager enqueueObjectRequestOperation:operation];
 }
 
-- (void)authenticateWithCallback:(NSURL*) callback success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)authenticateWithCallback:(NSURL *)callback success:(void (^)())success failure:(void (^)(NSError *error))failure {
     
     if (self.isReachable) {
         
@@ -113,12 +98,12 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     }
 }
 
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView *authView))authView success:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)())success failure:(void (^)(NSError *error))failure {
     
-    NSURL* callback = [NSURL URLWithString:kDGCallback];
+    NSURL *callback = [NSURL URLWithString:DGCallback];
     
     [self.HTTPClient setServiceProviderRequestHandler:^(NSURLRequest *request) {
-        DGAuthView* view = [DGAuthView viewWithRequest:request];
+        DGAuthView *view = [DGAuthView viewWithRequest:request];
         authView(view);
     } completion:nil];
     

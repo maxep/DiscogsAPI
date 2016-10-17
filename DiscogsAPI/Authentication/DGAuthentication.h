@@ -26,6 +26,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ */
+extern NSString * const DGApplicationLaunchedWithURLNotification;
+
+/**
+ */
+extern NSString * const DGApplicationLaunchOptionsURLKey;
+
+/**
  Authentification class to manage the Discogs authentification process.
  A successful authentication will store the oauth_token and oauth_token_secret credentials into Apple keychain.
  Next queries will contains these two tokens in their 'Authorization' header.
@@ -46,11 +54,13 @@ NS_ASSUME_NONNULL_BEGIN
  
  Here's how to respond to the custom URL scheme on iOS:
  
- - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
- NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:@{kAFApplicationLaunchOptionsURLKey: url}];
- [[NSNotificationCenter defaultCenter] postNotification:notification];
- return YES;
- }
+ ```
+    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+         NSNotification *notification = [NSNotification notificationWithName:DGApplicationLaunchedWithURLNotification object:nil userInfo:@{DGApplicationLaunchOptionsURLKey: url}];
+         [[NSNotificationCenter defaultCenter] postNotification:notification];
+         return YES;
+    }
+ ```
  
  @param callback The callback for the custom URL scheme.
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
@@ -65,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure  A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIView *authView))authView success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Remove Discogs account credential from keychain.

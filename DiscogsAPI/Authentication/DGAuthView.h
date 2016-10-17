@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The newly-initialized Authorization view object.
  */
-+ (DGAuthView*)viewWithRequest:(NSURLRequest*) request;
++ (DGAuthView *)viewWithRequest:(NSURLRequest *)request;
 
 /**
  Initializes a `DGAuthView` object with the specified request URL.
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The initialized Authorization view object.
  */
-- (id)initWithRequest:(NSURLRequest*) request;
+- (instancetype)initWithRequest:(NSURLRequest *)request;
 
 @end
 
