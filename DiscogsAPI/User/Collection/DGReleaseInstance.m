@@ -24,28 +24,42 @@
 
 @implementation DGReleaseInstance
 
-+ (DGReleaseInstance*) instance {
-    return [[DGReleaseInstance alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.artists = @[];
+        self.notes = @[];
+        self.labels = @[];
+    }
+    return self;
 }
 
 @end
 
 @implementation DGReleaseInstanceRequest
 
-+ (DGReleaseInstanceRequest*) request {
-    return [[DGReleaseInstanceRequest alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.userName = @"";
+        self.folderID = @0;
+        self.releaseID = @0;
+        self.instanceID = @0;
+    }
+    return self;
 }
 
 @end
 
 @implementation DGEditFieldsInstanceRequest
 
-+ (DGEditFieldsInstanceRequest*) request {
-    return [[DGEditFieldsInstanceRequest alloc] init];
-}
-
 - (id) init {
     if (self = [super init]) {
+        self.userName = @"";
+        self.folderID = @0;
+        self.releaseID = @0;
+        self.instanceID = @0;
+        self.fieldID = @0;
         self.value = @"";
     }
     return self;
@@ -55,8 +69,15 @@
 
 @implementation DGChangeRatingOfReleaseRequest
 
-+ (DGChangeRatingOfReleaseRequest*) request {
-    return [[DGChangeRatingOfReleaseRequest alloc] init];
+- (id) init {
+    if (self = [super init]) {
+        self.userName = @"";
+        self.folderID = @0;
+        self.releaseID = @0;
+        self.instanceID = @0;
+        self.rating = @0;
+    }
+    return self;
 }
 
 @end

@@ -88,7 +88,7 @@
 - (void)getRelease:(NSNumber *)releaseID success:(void (^)(DGRelease *release))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    DGRelease *release  = [DGRelease release];
+    DGRelease *release  = [DGRelease new];
     release.ID          = releaseID;
     
     DGOperation *operation = [self.manager operationWithRequest:release method:RKRequestMethodGET responseClass:[DGRelease class]];
@@ -100,7 +100,7 @@
 - (void)getMaster:(NSNumber *)masterID success:(void (^)(DGMaster *master))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    DGMaster *master    = [DGMaster master];
+    DGMaster *master    = [DGMaster new];
     master.ID           = masterID;
     
     DGOperation *operation = [self.manager operationWithRequest:master method:RKRequestMethodGET responseClass:[DGMaster class]];
@@ -121,7 +121,7 @@
 - (void)getLabel:(NSNumber *)labelID success:(void (^)(DGLabel *label))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    DGLabel *label  = [DGLabel label];
+    DGLabel *label  = [DGLabel new];
     label.ID        = labelID;
     
     DGOperation *operation = [self.manager operationWithRequest:label method:RKRequestMethodGET responseClass:[DGLabel class]];

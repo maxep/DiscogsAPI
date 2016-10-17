@@ -61,7 +61,7 @@
 
 - (void)getCollectionFolders:(NSString *)userName success:(void (^)(NSArray<DGCollectionFolder *> *folders))success failure:(void (^)(NSError *error))failure {
     
-    DGCollectionFoldersRequest *request = [DGCollectionFoldersRequest collection];
+    DGCollectionFoldersRequest *request = [DGCollectionFoldersRequest new];
     request.userName = userName;
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:nil];
@@ -154,7 +154,7 @@
 
 - (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray *fields))success failure:(void (^)(NSError *error))failure {
     
-    DGCollectionFieldsRequest* request = [DGCollectionFieldsRequest request];
+    DGCollectionFieldsRequest* request = [DGCollectionFieldsRequest new];
     request.userName = userName;
     
     NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:nil];

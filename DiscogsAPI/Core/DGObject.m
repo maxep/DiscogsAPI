@@ -24,10 +24,6 @@
 
 @implementation DGObject
 
-+ (DGObject*) object {
-    return [[DGObject alloc] init];
-}
-
 - (NSString *)description {
     NSString *format = @"<%@: \rObject ID: %@\rResource URL: %@\rURI: %@ >";
     return [NSString stringWithFormat:format, NSStringFromClass(self.class), self.ID, self.resourceURL, self.uri];

@@ -24,16 +24,15 @@
 
 @implementation DGCollectionFieldsRequest
 
-+ (DGCollectionFieldsRequest*) request {
-    return [[DGCollectionFieldsRequest alloc] init];
-}
-
 @end
 
 @implementation DGCollectionField
 
-+ (DGCollectionField*) field {
-    return [[DGCollectionField alloc] init];
+- (NSArray<NSString *> *)options {
+    if (!_options) {
+        _options = @[];
+    }
+    return _options;
 }
 
 @end

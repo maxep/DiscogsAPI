@@ -47,36 +47,30 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *contributor;
 @property (nonatomic, strong) DGPagination *pagination;
 
-+ (DGSearchRequest *)request;
-
 @end
 
 @interface DGSearchResult : NSObject
 
-@property (nonatomic, strong, nullable) NSArray<NSString *> *style;
+@property (nonatomic, strong) NSArray<NSString *> *style;
 @property (nonatomic, strong, nullable) NSString *thumb;
 @property (nonatomic, strong, nullable) NSString *title;
 @property (nonatomic, strong, nullable) NSString *country;
-@property (nonatomic, strong, nullable) NSArray<NSString *> *format;
+@property (nonatomic, strong) NSArray<NSString *> *format;
 @property (nonatomic, strong, nullable) NSString *uri;
 /* ADD COMMUNITY */
-@property (nonatomic, strong, nullable) NSArray<NSString *> *label;
+@property (nonatomic, strong) NSArray<NSString *> *label;
 @property (nonatomic, strong, nullable) NSString *catno;
 @property (nonatomic, strong, nullable) NSString *year;
-@property (nonatomic, strong, nullable) NSArray<NSString *> *genre;
+@property (nonatomic, strong) NSArray<NSString *> *genre;
 @property (nonatomic, strong, nullable) NSString *resourceUrl;
 @property (nonatomic, strong, nullable) NSString *type;
 @property (nonatomic, strong, nullable) NSNumber *ID;
-
-+ (DGSearchResult *)result;
 
 @end
 
 @interface DGSearchResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong, nullable) NSArray<DGSearchResult *> *results;
-
-+ (DGSearchResponse *)response;
+@property (nonatomic, strong) NSArray<DGSearchResult *> *results;
 
 @end
 

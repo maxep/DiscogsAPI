@@ -39,13 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *catno;
 
-/**
- Creates and initializes a `DGLabelRelease` object.
- 
- @return The newly-initialized label release object.
- */
-+ (DGLabelRelease *)release;
-
 @end
 
 @interface DGLabelReleasesRequest : NSObject
@@ -53,15 +46,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) DGPagination *pagination;
 @property (nonatomic, strong) NSNumber *labelID;
 
-+ (DGLabelReleasesRequest *)request;
-
 @end
 
 @interface DGLabelReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong, nullable) NSArray<DGLabelRelease *> *releases;
-
-+ (DGLabelReleasesResponse *)response;
+@property (nonatomic, strong) NSArray<DGLabelRelease *> *releases;
 
 @end
 

@@ -25,21 +25,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Contributo desciption class.
+ Contributor desciption class.
  */
 @interface DGContributor: DGObject
 
 /**
  Contributo name.
  */
-@property (nonatomic, strong) NSString *userName;
-
-/**
- Creates and initializes a `DGContributor` object.
- 
- @return The newly-initialized contributor object.
- */
-+ (DGContributor *)contributor;
+@property (nonatomic, strong, nullable) NSString *userName;
 
 @end
 
@@ -51,19 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Average rating.
  */
-@property (nonatomic, strong) NSNumber *average;
+@property (nonatomic, strong, nullable) NSNumber *average;
 
 /**
  Count of rating.
  */
-@property (nonatomic, strong) NSNumber *count;
-
-/**
- Creates and initializes a `DGRating` object.
- 
- @return The newly-initialized rating object.
- */
-+ (DGRating *)rating;
+@property (nonatomic, strong, nullable) NSNumber *count;
 
 @end
 
@@ -76,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  List of contributor.
  */
-@property (nonatomic, strong, nullable) NSArray<DGContributor *> *contributors;
+@property (nonatomic, strong) NSArray<DGContributor *> *contributors;
 
 /**
  Data quality.
@@ -91,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Rating.
  */
-@property (nonatomic, strong, nullable) DGRating *rating;
+@property (nonatomic, strong) DGRating *rating;
 
 /**
  Status.
@@ -101,19 +87,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Submitter.
  */
-@property (nonatomic, strong, nullable) DGContributor *submitter;
+@property (nonatomic, strong) DGContributor *submitter;
 
 /**
  Number of 'want'.
  */
 @property (nonatomic, strong, nullable) NSNumber *want;
-
-/**
- Creates and initializes a `DGCommunity` object.
- 
- @return The newly-initialized community object.
- */
-+ (DGCommunity *)community;
 
 @end
 

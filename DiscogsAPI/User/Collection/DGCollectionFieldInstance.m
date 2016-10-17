@@ -25,8 +25,4 @@
 
 @implementation DGCollectionFieldInstance
 
-- (instancetype)fieldInstance {
-    return [[DGCollectionFieldInstance alloc] init];
-}
-
 @end

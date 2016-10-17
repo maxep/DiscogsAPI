@@ -24,8 +24,4 @@
 
 @implementation DGImage
 
-+ (DGImage *) image {
-    return [[DGImage alloc] init];
-}
-
 @end

@@ -24,8 +24,4 @@
 
 @implementation DGProfile
 
-+ (DGProfile*) profile {
-    return [[DGProfile alloc] init];
-}
-
 @end

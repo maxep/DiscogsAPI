@@ -36,11 +36,11 @@
 
 @end
 
-@implementation DGPriceSuggectionsResponse (Mapping)
+@implementation DGPriceSuggestionsResponse (Mapping)
 
 + (RKMapping *)mapping {
     
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPriceSuggectionsResponse class]];
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGPriceSuggestionsResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"Mint (M)" toKeyPath:@"mint" withMapping:[DGPrice mapping]]];
     
@@ -62,7 +62,7 @@
 }
 
 + (RKResponseDescriptor *)responseDescriptor {
-    return [RKResponseDescriptor responseDescriptorWithMapping:[DGPriceSuggectionsResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGPriceSuggestionsResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

@@ -23,8 +23,10 @@
 #import "DGObject.h"
 #import "DGPagination.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
- Items sort keys.
+ Sort description of folder items.
  */
 typedef NS_ENUM(NSInteger, DGSortFolderItems){
     /**
@@ -72,8 +74,6 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 @property (nonatomic, strong) NSNumber *folderID;
 @property (nonatomic, strong) NSString *name;
 
-+ (DGCollectionFolderRequest *)request;
-
 @end
 
 @interface DGCreateCollectionFolderRequest : NSObject
@@ -81,25 +81,18 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *folderName;
 
-+ (DGCreateCollectionFolderRequest *)request;
-
 @end
 
 @interface DGCollectionFoldersRequest : NSObject
 
 @property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSArray  *folders;
-
-+ (DGCollectionFoldersRequest *)collection;
 
 @end
 
 @interface DGCollectionFolder : DGObject
 
 @property (nonatomic, strong) NSNumber *count;
-@property (nonatomic, strong) NSString *name;
-
-+ (DGCollectionFolder *)folder;
+@property (nonatomic, strong, nullable) NSString *name;
 
 @end
 
@@ -109,13 +102,9 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 @property (nonatomic, strong) NSNumber  *releaseID;
 @property (nonatomic, strong) NSNumber  *folderID;
 
-+ (DGAddToCollectionFolderRequest *)request;
-
 @end
 
 @interface DGAddToCollectionFolderResponse : DGObject
-
-+ (DGAddToCollectionFolderResponse *)response;
 
 @end
 
@@ -124,17 +113,17 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 @property (nonatomic, strong) DGPagination      *pagination;
 @property (nonatomic, strong) NSString          *userName;
 @property (nonatomic, strong) NSNumber          *folderID;
-@property (nonatomic, readwrite) DGSortFolderItems      sort;
-@property (nonatomic, readwrite) DGSortOrder    sortOrder;
-
-+ (DGCollectionReleasesRequest *)request;
+@property (nonatomic) DGSortFolderItems      sort;
+@property (nonatomic) DGSortOrder    sortOrder;
 
 @end
+
+@class DGReleaseInstance;
 
 @interface DGCollectionReleasesResponse : NSObject <DGPaginated>
 
-@property (nonatomic, strong) NSArray *releases;
-
-+ (DGCollectionReleasesResponse *)response;
+@property (nonatomic, strong) NSArray<DGReleaseInstance *> *releases;
 
 @end
+
+NS_ASSUME_NONNULL_END

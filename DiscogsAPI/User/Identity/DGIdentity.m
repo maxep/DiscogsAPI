@@ -24,9 +24,4 @@
 
 @implementation DGIdentity
 
-+ (DGIdentity*) identity
-{
-    return [[DGIdentity alloc] init];
-}
-
 @end

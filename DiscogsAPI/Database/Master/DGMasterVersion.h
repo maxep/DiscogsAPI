@@ -29,13 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface DGMasterVersion : DGLabelRelease
 
-/**
- Creates and initializes a `DGMasterVersion` object.
- 
- @return The newly-initialized master version object.
- */
-+ (DGMasterVersion *)version;
-
 @end
 
 @interface DGMasterVersionRequest : NSObject
@@ -43,15 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) DGPagination  *pagination;
 @property (nonatomic, strong) NSNumber      *masterID;
 
-+ (DGMasterVersionRequest *)request;
-
 @end
 
 @interface DGMasterVersionResponse : NSObject <DGPaginated>
 
 @property (nonatomic, strong) NSArray<DGMasterVersion *> *versions;
-
-+ (DGMasterVersionResponse *)response;
 
 @end
 

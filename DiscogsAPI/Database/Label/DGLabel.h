@@ -32,12 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *releasesURL;
 @property (nonatomic, strong, nullable) NSString *name;
 @property (nonatomic, strong, nullable) NSString *contactInfo;
-@property (nonatomic, strong, nullable) NSArray<DGLabel *> *subLabels;
-@property (nonatomic, strong, nullable) NSArray<NSString *> *urls;
-@property (nonatomic, strong, nullable) NSArray<DGImage *> *images;
+@property (nonatomic, strong) NSArray<DGLabel *> *subLabels;
+@property (nonatomic, strong) NSArray<NSString *> *urls;
+@property (nonatomic, strong) NSArray<DGImage *> *images;
 @property (nonatomic, strong, nullable) NSString *dataQuality;
-
-+ (DGLabel *)label;
 
 @end
 

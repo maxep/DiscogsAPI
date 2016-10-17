@@ -30,9 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGResource : DGEndpoint
 
 /**
- Coxy server url. (see https://github.com/hendriks73/coxy )
+ Proxy server url. (@example https://github.com/hendriks73/coxy )
  */
-@property (nonatomic, strong, nullable) NSString *coxyURL;
+@property (nonatomic, strong, nullable) NSString *proxyURL;
 
 /**
  Gets a Discogs image

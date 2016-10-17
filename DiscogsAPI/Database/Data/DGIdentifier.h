@@ -38,13 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// Identifier description (can't just use `description` bc that's an NSObject overridden method
 @property (nonatomic, strong, nullable) NSString *identifierDescription;
 
-/**
- Create an initializes new `DGIdentifier` object
- 
- @return new identifier object
- */
-+ (instancetype)identifier;
-
 @end
 
 NS_ASSUME_NONNULL_END

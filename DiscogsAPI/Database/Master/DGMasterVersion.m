@@ -25,16 +25,17 @@
 
 @implementation DGMasterVersion
 
-+ (DGMasterVersion *)version {
-    return [[DGMasterVersion alloc] init];
-}
-
 @end
 
 @implementation DGMasterVersionRequest
 
-+ (DGMasterVersionRequest *)request {
-    return [[DGMasterVersionRequest alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.pagination = [DGPagination new];
+        self.masterID = @0;
+    }
+    return self;
 }
 
 @end
@@ -43,8 +44,12 @@
 
 @synthesize pagination;
 
-+ (DGMasterVersionResponse *)response {
-    return [[DGMasterVersionResponse alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.versions = @[];
+    }
+    return self;
 }
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {

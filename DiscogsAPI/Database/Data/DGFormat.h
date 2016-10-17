@@ -59,14 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *text;
 
 /// a list of descriptions that apply: LP, RSD Release, Limited, etc.
-@property (nonatomic, strong, nullable) NSArray<NSString *> *descriptions;
-
-/**
- Creates and initializes new release format object
- 
- @return new format object
- */
-+ (instancetype)format;
+@property (nonatomic, strong) NSArray<NSString *> *descriptions;
 
 @end
 

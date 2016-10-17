@@ -40,6 +40,14 @@ NSString *DGListingSortAsString(DGListingSort sort){
 
 @implementation DGListingRequest
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.listingID = @0;
+    }
+    return self;
+}
+
 @end
 
 @implementation DGCreateListingRequest

@@ -59,7 +59,7 @@
 - (void)getProfile:(NSString *)userName success:(void (^)(DGProfile *profile))success failure:(void (^)(NSError *error))failure {
     DGCheckReachability();
     
-    DGProfile *profile = [DGProfile profile];
+    DGProfile *profile = [DGProfile new];
     profile.userName = userName;
     
     DGOperation *operation = [self.manager operationWithRequest:profile method:RKRequestMethodGET responseClass:[DGProfile class]];

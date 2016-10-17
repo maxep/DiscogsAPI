@@ -25,14 +25,10 @@
 
 @implementation DGSearchRequest
 
-+ (DGSearchRequest *)request {
-    return [[DGSearchRequest alloc] init];
-}
-
 - (id)init {
     self = [super init];
     if (self) {
-        self.pagination = [DGPagination pagination];
+        self.pagination = [DGPagination new];
     }
     return self;
 }
@@ -41,8 +37,15 @@
 
 @implementation DGSearchResult
 
-+ (DGSearchResult *)result {
-    return [[DGSearchResult alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.style = @[];
+        self.format = @[];
+        self.label = @[];
+        self.genre = @[];
+    }
+    return self;
 }
 
 @end
@@ -51,8 +54,12 @@
 
 @synthesize pagination;
 
-+ (DGSearchResponse*)response {
-    return [[DGSearchResponse alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.results = @[];
+    }
+    return self;
 }
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {

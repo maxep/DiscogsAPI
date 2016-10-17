@@ -87,13 +87,13 @@ extern NSString *DGListingSortAsString(DGListingSort sort);
 
 @interface DGCreateListingRequest : NSObject
 
-@property (nonatomic, strong) DGListing *listing;
+@property (nonatomic, strong, nullable) DGListing *listing;
 
 @end
 
 @interface DGCreateListingResponse : NSObject
 
-@property (nonatomic, strong) NSNumber *listingID;
+@property (nonatomic, strong, nullable) NSNumber *listingID;
 
 @property (nonatomic, strong, nullable) NSString *resourceURL;
 

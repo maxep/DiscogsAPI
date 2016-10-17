@@ -40,7 +40,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.pagination = [DGPagination pagination];
+        self.pagination = [DGPagination new];
     }
     return self;
 }

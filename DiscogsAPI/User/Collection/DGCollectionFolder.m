@@ -26,47 +26,63 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
     return @[@"label", @"artist", @"title", @"catno", @"format", @"rating", @"added", @"year"][sort];
 }
 
-@implementation DGCreateCollectionFolderRequest
+@implementation DGCollectionFolderRequest
 
-+ (DGCreateCollectionFolderRequest*) request {
-    return [[DGCreateCollectionFolderRequest alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.userName = @"";
+        self.folderID = @0;
+        self.name = @"";
+    }
+    return self;
 }
 
 @end
 
-@implementation DGCollectionFolderRequest
+@implementation DGCreateCollectionFolderRequest
 
-+ (DGCollectionFolderRequest*) request {
-    return [[DGCollectionFolderRequest alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.userName = @"";
+        self.folderName = @"";
+    }
+    return self;
 }
 
 @end
 
 @implementation DGCollectionFoldersRequest
 
-+ (DGCollectionFoldersRequest*) collection {
-    return [[DGCollectionFoldersRequest alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.userName = @"";
+    }
+    return self;
 }
 
 @end
 
 @implementation DGCollectionFolder
 
-+ (DGCollectionFolder*) folder {
-    return [[DGCollectionFolder alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.count = @0;
+    }
 }
 
 @end
 
 @implementation DGAddToCollectionFolderRequest
 
-+ (DGAddToCollectionFolderRequest *)request {
-    return [[DGAddToCollectionFolderRequest alloc] init];
-}
-
 - (id)init {
     if (self = [super init]) {
         self.folderID = @1;
+        self.userName = @"";
+        self.releaseID = @0;
     }
     return self;
 }
@@ -75,23 +91,16 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @implementation DGAddToCollectionFolderResponse
 
-+ (DGAddToCollectionFolderResponse *)response {
-    return [[DGAddToCollectionFolderResponse alloc] init];
-}
-
 @end
 
 @implementation DGCollectionReleasesRequest
 
-+ (DGCollectionReleasesRequest *)request {
-    return [[DGCollectionReleasesRequest alloc] init];
-}
-
 - (id)init {
     if (self = [super init]) {
         
-        self.pagination = [DGPagination pagination];
+        self.pagination = [DGPagination new];
         self.folderID   = @0;
+        self.userName   = @"";
         self.sort       = DGSortFolderItemsArtist;
         self.sortOrder  = DGSortOrderDesc;
     }
@@ -104,8 +113,12 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @synthesize pagination;
 
-+ (DGCollectionReleasesResponse*) response {
-    return [[DGCollectionReleasesResponse alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.releases = @[];
+    }
+    return self;
 }
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {

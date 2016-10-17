@@ -26,13 +26,10 @@
 
 @implementation DGWantlistRequest
 
-+ (DGWantlistRequest *)request {
-    return [[DGWantlistRequest alloc] init];
-}
-
 - (id)init {
     if (self = [super init]) {
-        self.pagination = [DGPagination pagination];
+        self.pagination = [DGPagination new];
+        self.userName = @"";
     }
     return self;
 }
@@ -43,8 +40,12 @@
 
 @synthesize pagination;
 
-+ (DGWantlistResponse *)response {
-    return [[DGWantlistResponse alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.wants = @[];
+    }
+    return self;
 }
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
@@ -70,12 +71,10 @@
 
 @implementation DGWantRequest
 
-+ (DGWantRequest *)request {
-    return [[DGWantRequest alloc] init];
-}
-
 - (id)init {
     if (self = [super init]) {
+        self.userName = @"";
+        self.releaseID = @0;
         self.rating = @0;
         self.notes  = @"";
     }
@@ -85,10 +84,6 @@
 @end
 
 @implementation DGWant
-
-+ (DGWant *)want {
-    return [[DGWant alloc] init];
-}
 
 @end
 

@@ -22,6 +22,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, DGCurrency){
     DGCurrencyNone = 0,
     DGCurrencyUSD,
@@ -42,32 +44,28 @@ extern NSString *DGCurrencyAsString(DGCurrency current);
 
 @interface DGPrice : NSObject
 
-@property (nonatomic,strong) NSString *currency;
-@property (nonatomic,strong) NSNumber *value;
-
-+ (DGPrice *)price;
+@property (nonatomic, strong, nullable) NSString *currency;
+@property (nonatomic, strong, nullable) NSNumber *value;
 
 @end
 
-@interface DGPriceSuggectionsRequest : NSObject
+@interface DGPriceSuggestionsRequest : NSObject
 
-@property (nonatomic,strong) NSNumber *releaseID;
-
-+ (DGPriceSuggectionsRequest *)request;
+@property (nonatomic, strong) NSNumber *releaseID;
 
 @end
 
-@interface DGPriceSuggectionsResponse : NSObject
+@interface DGPriceSuggestionsResponse : NSObject
 
-@property (nonatomic,strong) DGPrice *mint;
-@property (nonatomic,strong) DGPrice *nearMint;
-@property (nonatomic,strong) DGPrice *veryGoodPlus;
-@property (nonatomic,strong) DGPrice *veryGood;
-@property (nonatomic,strong) DGPrice *goodPlus;
-@property (nonatomic,strong) DGPrice *good;
-@property (nonatomic,strong) DGPrice *fair;
-@property (nonatomic,strong) DGPrice *poor;
-
-+ (DGPriceSuggectionsResponse *)response;
+@property (nonatomic, strong, nullable) DGPrice *mint;
+@property (nonatomic, strong, nullable) DGPrice *nearMint;
+@property (nonatomic, strong, nullable) DGPrice *veryGoodPlus;
+@property (nonatomic, strong, nullable) DGPrice *veryGood;
+@property (nonatomic, strong, nullable) DGPrice *goodPlus;
+@property (nonatomic, strong, nullable) DGPrice *good;
+@property (nonatomic, strong, nullable) DGPrice *fair;
+@property (nonatomic, strong, nullable) DGPrice *poor;
 
 @end
+
+NS_ASSUME_NONNULL_END

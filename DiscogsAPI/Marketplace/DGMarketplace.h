@@ -96,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the price suggestion response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggectionsResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 @end
 

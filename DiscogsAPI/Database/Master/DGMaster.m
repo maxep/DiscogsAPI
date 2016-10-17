@@ -24,9 +24,4 @@
 
 @implementation DGMaster
 
-+ (DGMaster*) master
-{
-    return [[DGMaster alloc] init];
-}
-
 @end

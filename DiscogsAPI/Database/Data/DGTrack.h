@@ -49,13 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *type;
 
-/**
- Creates and initializes a `DGTrack` object.
- 
- @return The newly-initialized track object.
- */
-+ (DGTrack *)track;
-
 @end
 
 NS_ASSUME_NONNULL_END

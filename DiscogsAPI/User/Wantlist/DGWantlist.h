@@ -33,34 +33,27 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString  *notes;
 @property (nonatomic, strong, nullable) DGRelease *DGRelease;
 
-+ (DGWant *)want;
-
 @end
 
 @interface DGWantRequest : NSObject
 
-@property (nonatomic, strong, nullable) NSString *userName;
-@property (nonatomic, strong, nullable) NSNumber *releaseID;
-@property (nonatomic, strong, nullable) NSString *notes;
-@property (nonatomic, strong, nullable) NSNumber *rating;
-
-+ (DGWantRequest *)request;
+@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSNumber *releaseID;
+@property (nonatomic, strong) NSString *notes;
+@property (nonatomic, strong) NSNumber *rating;
 
 @end
 
 @interface DGWantlistRequest : NSObject
 
 @property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong, nullable) NSString      *userName;
-
-+ (DGWantlistRequest *)request;
+@property (nonatomic, strong) NSString *userName;
 
 @end
 
 @interface DGWantlistResponse : NSObject <DGPaginated>
-@property (nonatomic, strong, nullable) NSArray<DGWant *> *wants;
 
-+ (DGWantlistResponse *)response;
+@property (nonatomic, strong) NSArray<DGWant *> *wants;
 
 @end
 

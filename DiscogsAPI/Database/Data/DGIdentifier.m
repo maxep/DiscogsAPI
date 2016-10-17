@@ -24,8 +24,4 @@
 
 @implementation DGIdentifier
 
-+ (instancetype)identifier {
-    return [[DGIdentifier alloc] init];
-}
-
 @end

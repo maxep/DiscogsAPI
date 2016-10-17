@@ -24,24 +24,23 @@
 
 @implementation DGContributor
 
-+ (DGContributor *)contributor {
-    return [[DGContributor alloc] init];
-}
-
 @end
 
 @implementation DGRating
-
-+ (DGRating *)rating {
-    return [[DGRating alloc] init];
-}
 
 @end
 
 @implementation DGCommunity
 
-+ (DGCommunity *)community {
-    return [[DGCommunity alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.contributors = @[];
+        self.rating = [DGRating new];
+        self.submitter = [DGContributor new];
+        
+    }
+    return self;
 }
 
 @end

@@ -25,20 +25,25 @@
 
 @implementation DGRelease
 
-+ (DGRelease *)release {
-    return [[DGRelease alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.artists = @[];
+        self.community = [DGCommunity new];
+        self.images = @[];
+        self.videos = @[];
+        self.extraArtists = @[];
+        self.formats = @[];
+        self.genres = @[];
+        self.styles = @[];
+        self.trackList = @[];
+        self.identifiers = @[];
+    }
+    return self;
 }
 
 - (NSArray *)videos {
-    
-    NSMutableArray* videos = [NSMutableArray array];
-    
-    for (DGVideo* video in _videos) {
-        if ([video.embed isEqualToString:@"true"]) {
-            [videos addObject:video];
-        }
-    }
-    return videos;
+    return [_videos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"embed == true"]];
 }
 
 @end

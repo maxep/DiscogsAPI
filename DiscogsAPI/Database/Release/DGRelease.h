@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  List of artists that contibuted to the release.
  */
-@property (nonatomic, strong, nullable) NSArray<DGArtist *> *artists;
+@property (nonatomic, strong) NSArray<DGArtist *> *artists;
 
 /**
  Data quality.
@@ -70,19 +70,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Community that contibuted to the release.
  */
-@property (nonatomic, strong, nullable) DGCommunity *community;
+@property (nonatomic, strong) DGCommunity *community;
 
 /* ADD COMPANIES */
 
 /**
  Release images.
  */
-@property (nonatomic, strong, nullable) NSArray<DGImage *> *images;
+@property (nonatomic, strong) NSArray<DGImage *> *images;
 
 /**
  Release videos.
  */
-@property (nonatomic, strong, nullable) NSArray<DGVideo *> *videos;
+@property (nonatomic, strong) NSArray<DGVideo *> *videos;
 
 /**
  Release country.
@@ -107,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Extra artists.
  */
-@property (nonatomic, strong, nullable) NSArray<DGArtist *> *extraArtists;
+@property (nonatomic, strong) NSArray<DGArtist *> *extraArtists;
 
 /**
  Quantity of the format.
@@ -117,22 +117,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Formats pertaining to this release
  */
-@property (nonatomic, strong, nullable) NSArray<DGFormat *> *formats;
+@property (nonatomic, strong,) NSArray<DGFormat *> *formats;
 
 /**
  Genres of release music.
  */
-@property (nonatomic, strong, nullable) NSArray<NSString *> *genres;
+@property (nonatomic, strong) NSArray<NSString *> *genres;
 
 /**
  Styles of release music.
  */
-@property (nonatomic, strong, nullable) NSArray<NSString *> *styles;
+@property (nonatomic, strong) NSArray<NSString *> *styles;
 
 /**
  Release track list.
  */
-@property (nonatomic, strong, nullable) NSArray<DGTrack *>  * trackList;
+@property (nonatomic, strong) NSArray<DGTrack *> *trackList;
 
 /**
  Released year.
@@ -147,16 +147,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Identifiers
  */
-@property (nonatomic, strong, nullable) NSArray<DGIdentifier *> *identifiers;
+@property (nonatomic, strong) NSArray<DGIdentifier *> *identifiers;
 
 /* ADD THE REST */
-
-/**
- Creates and initializes a `DGRelease` object.
- 
- @return The newly-initialized release object.
- */
-+ (DGRelease *)release;
 
 @end
 

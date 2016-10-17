@@ -28,24 +28,21 @@ NSString *DGCurrencyAsString(DGCurrency currency) {
 
 @implementation DGPrice
 
-+ (DGPrice *) price {
-    return [[DGPrice alloc] init];
+
+@end
+
+@implementation DGPriceSuggestionsRequest
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.releaseID = @0;
+    }
+    return self;
 }
 
 @end
 
-@implementation DGPriceSuggectionsRequest
-
-+ (DGPriceSuggectionsRequest *) request {
-    return [[DGPriceSuggectionsRequest alloc] init];
-}
-
-@end
-
-@implementation DGPriceSuggectionsResponse
-
-+ (DGPriceSuggectionsResponse *) response {
-    return [[DGPriceSuggectionsResponse alloc] init];
-}
+@implementation DGPriceSuggestionsResponse
 
 @end

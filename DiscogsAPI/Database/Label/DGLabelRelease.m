@@ -25,22 +25,15 @@
 
 @implementation DGLabelRelease
 
-+ (DGLabelRelease *)release {
-    return [[DGLabelRelease alloc] init];
-}
-
 @end
 
 @implementation DGLabelReleasesRequest
 
-+ (DGLabelReleasesRequest *)request {
-    return [[DGLabelReleasesRequest alloc] init];
-}
-
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
-        self.pagination = [DGPagination pagination];
+        self.pagination = [DGPagination new];
+        self.labelID = @0;
     }
     return self;
 }
@@ -51,8 +44,12 @@
 
 @synthesize pagination;
 
-+ (DGLabelReleasesResponse *)response {
-    return [[DGLabelReleasesResponse alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.releases = @[];
+    }
+    return self;
 }
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {

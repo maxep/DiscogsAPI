@@ -44,13 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString  *uri;
 
-/**
- Creates and initializes a 'DGObject'.
- 
- @return The newly-initialized object.
- */
-+ (DGObject*)object;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -60,7 +60,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 }
 
 - (void)identityWithSuccess:(void (^)(DGIdentity* identity))success failure:(void (^)(NSError* error))failure {
-    DGIdentity* identity = [DGIdentity identity];
+    DGIdentity* identity = [DGIdentity new];
     
     NSURLRequest *requestURL = [self.manager requestWithObject:identity
                                                         method:RKRequestMethodGET

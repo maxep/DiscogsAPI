@@ -24,9 +24,14 @@
 
 @implementation DGLabel
 
-+ (DGLabel*) label
-{
-    return [[DGLabel alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.subLabels = @[];
+        self.urls = @[];
+        self.images = @[];
+    }
+    return self;
 }
 
 @end

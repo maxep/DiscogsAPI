@@ -49,13 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *uri150;
 
-/**
- Creates and initializes a `DGImage` object.
- 
- @return The newly-initialized image object.
- */
-+ (DGImage *)image;
-
 @end
 
 NS_ASSUME_NONNULL_END

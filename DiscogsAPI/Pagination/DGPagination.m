@@ -28,27 +28,19 @@ NSString *DGSortOrderAsString(DGSortOrder order) {
 
 @implementation DGPaginationUrls
 
-+ (DGPaginationUrls *)urls {
-    return [[DGPaginationUrls alloc] init];
-}
-
 @end
 
 @implementation DGPagination
 
-+ (DGPagination *)pagination {
-    return [[DGPagination alloc] init];
-}
-
 - (id)init {
     self = [super init];
     if (self) {
-        _page    = @1;
-        _pages   = @1;
-        _items   = @50;
-        _perPage = @100;
+        self.page    = @1;
+        self.pages   = @1;
+        self.items   = @50;
+        self.perPage = @100;
         
-        _urls = [DGPaginationUrls urls];
+        self.urls = [DGPaginationUrls new];
     }
     return self;
 }

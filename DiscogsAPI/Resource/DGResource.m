@@ -37,9 +37,9 @@
     
     NSString *path = url;
     
-    if (self.coxyURL) {
-        NSURL* discogsURL = [NSURL URLWithString:url];
-        path = [NSString stringWithFormat:@"%@%@", self.coxyURL, discogsURL.path];
+    if (self.proxyURL) {
+        NSURL *discogsURL = [NSURL URLWithString:url];
+        path = [NSString stringWithFormat:@"%@%@", self.proxyURL, discogsURL.path];
     }
     
     NSURLRequest *requestURL = [self.manager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];

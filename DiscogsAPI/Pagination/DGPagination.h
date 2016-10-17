@@ -48,29 +48,22 @@ extern NSString *DGSortOrderAsString(DGSortOrder order);
 /**
  First page URL.
  */
-@property (nonatomic, strong) NSString *first;
+@property (nonatomic, strong, nullable) NSString *first;
 
 /**
  Previous page URL.
  */
-@property (nonatomic, strong) NSString *prev;
+@property (nonatomic, strong, nullable) NSString *prev;
 
 /**
  Next page URL.
  */
-@property (nonatomic, strong) NSString *next;
+@property (nonatomic, strong, nullable) NSString *next;
 
 /**
  Last page URL.
  */
-@property (nonatomic, strong) NSString *last;
-
-/**
- Creates and initializes a `DGPaginationUrls` object.
- 
- @return The newly-initialized pagination URLs object.
- */
-+ (DGPaginationUrls *)urls;
+@property (nonatomic, strong, nullable) NSString *last;
 
 @end
 
@@ -103,13 +96,6 @@ extern NSString *DGSortOrderAsString(DGSortOrder order);
  Pagination URLs.
  */
 @property (nonatomic, strong) DGPaginationUrls *urls;
-
-/**
- Creates and initializes a `DGPagination` object.
- 
- @return The newly-initialized pagination object.
- */
-+ (DGPagination *)pagination;
 
 @end
 

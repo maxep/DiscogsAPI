@@ -24,8 +24,4 @@
 
 @implementation DGVideo
 
-+ (DGVideo *) video {
-    return [[DGVideo alloc] init];
-}
-
 @end

@@ -30,16 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGMaster : DGRelease
 
 /**
- Master ID.
+ Main release ID.
  */
 @property (nonatomic, strong, nullable) NSNumber *mainReleaseID;
-
-/**
- Creates and initializes a `DGMaster` object.
- 
- @return The newly-initialized master release object.
- */
-+ (DGMaster *)master;
 
 @end
 

@@ -49,13 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *title;
 
-/**
- Creates and initializes a `DGVideo` object.
- 
- @return The newly-initialized video object.
- */
-+ (DGVideo *)video;
-
 @end
 
 NS_ASSUME_NONNULL_END

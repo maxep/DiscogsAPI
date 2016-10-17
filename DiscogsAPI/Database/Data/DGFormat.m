@@ -27,8 +27,12 @@
 
 @implementation DGFormat
 
-+ (instancetype)format {
-    return [[DGFormat alloc] init];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.descriptions = @[];
+    }
+    return self;
 }
 
 @end
