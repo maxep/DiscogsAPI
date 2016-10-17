@@ -36,6 +36,10 @@
 
 @end
 
+@implementation DGPriceSuggestionsRequest (Mapping)
+
+@end
+
 @implementation DGPriceSuggestionsResponse (Mapping)
 
 + (RKMapping *)mapping {

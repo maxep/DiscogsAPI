@@ -24,8 +24,13 @@
 #import "DGEndpoint+Configuration.h"
 #import "DGHTTPClient.h"
 
-#define kDGMediaTypeAsString(enum) @[@"discogs", @"html", @"plaintext"][enum]
-#define kStringDGMediaType(str) [@{@"discogs":@0, @"html":@1, @"plaintext":@2}[str] integerValue]
+NSString *DGMediaTypeAsString(DGMediaType type) {
+    return @[@"discogs", @"html", @"plaintext"][type];
+}
+
+DGMediaType StringDGMediaType(NSString *str) {
+    return [@{@"discogs":@0, @"html":@1, @"plaintext":@2}[str] integerValue];
+}
 
 @interface Discogs ()
 @property (nonatomic, strong) DGAuthentication  *authentication;
@@ -90,12 +95,12 @@
 
 - (DGMediaType)mediaType {
     // TODO (maxep) : find a better way
-    return kStringDGMediaType([(DGHTTPClient *)self.manager.HTTPClient mediaType]);
+    return StringDGMediaType([(DGHTTPClient *)self.manager.HTTPClient mediaType]);
 }
 
 - (void)setMediaType:(DGMediaType)mediaType {
     // TODO (maxep) : find a better way
-    [(DGHTTPClient *)self.manager.HTTPClient setMediaType:kDGMediaTypeAsString(mediaType)];
+    [(DGHTTPClient *)self.manager.HTTPClient setMediaType:DGMediaTypeAsString(mediaType)];
 }
 
 @end

@@ -27,6 +27,10 @@
 
 @end
 
+@interface DGPriceSuggestionsRequest (Mapping) <DGRequestObject>
+
+@end
+
 @interface DGPriceSuggestionsResponse (Mapping) <DGResponseObject>
 
 @end

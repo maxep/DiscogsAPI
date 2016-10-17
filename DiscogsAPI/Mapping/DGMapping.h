@@ -22,24 +22,51 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Protocol adopted by objects mapped with Discogs objects.
+ */
 @protocol DGObject <NSObject>
 
+/**
+ Class method defining the object mapping.
+
+ @return The object mapping.
+ */
 + (RKMapping *)mapping;
 
 @end
 
+/**
+ Protocol adotped by request object.
+ */
 @protocol DGRequestObject <NSObject>
 
 @optional
 
+/**
+ The request dynamic parameters.
+ */
 @property (nonatomic, readonly) NSDictionary *parameters;
 
+/**
+ Class method defining the request object description for POST and PUT http method.
+
+ @return The request description.
+ */
 + (RKRequestDescriptor *)requestDescriptor;
 
 @end
 
+/**
+ Protocol adotped by response object.
+ */
 @protocol DGResponseObject <NSObject>
 
+/**
+ Class method defining the response object description.
+ 
+ @return The response description.
+ */
 + (RKResponseDescriptor *)responseDescriptor;
 
 @end

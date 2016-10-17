@@ -41,16 +41,45 @@ NS_ASSUME_NONNULL_BEGIN
     } \
 }
 
+/**
+ `DGEndpoint` category to hold and configure the `RKObjectManager` with the endpoint specifications.
+ */
 @interface DGEndpoint (Configuration)
 
+/**
+ Whether or not the endpoint is reachable.
+ */
 @property (nonatomic, readonly) BOOL isReachable;
 
+/**
+ The `RKObjectManager`
+ */
 @property (nonatomic, readonly) RKObjectManager *manager;
 
+/**
+ Initializes an endpoint and configure the `RKObjectManager`object.
+
+ @param manager The manager to configure.
+
+ @return The initialized endpoint.
+ */
 - (instancetype)initWithManager:(RKObjectManager *)manager;
 
+/**
+ Abstract method to configure the manager.
+
+ @param objectManager The manager to configure.
+ */
 - (void)configureManager:(RKObjectManager *)objectManager;
 
+/**
+ Create a `NSError`
+
+ @param code The error code.
+ @param info The error descritpion.
+
+ @return The create error.
+ */
 - (NSError *)errorWithCode:(NSInteger)code info:(nullable NSString *)info;
 
 @end

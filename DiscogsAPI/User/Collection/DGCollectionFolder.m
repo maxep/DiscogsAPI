@@ -72,6 +72,7 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
     if (self) {
         self.count = @0;
     }
+    return self;
 }
 
 @end

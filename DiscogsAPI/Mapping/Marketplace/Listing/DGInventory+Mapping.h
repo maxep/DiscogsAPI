@@ -21,11 +21,12 @@
 // THE SOFTWARE.
 
 #import "DGInventory.h"
+#import "DGMapping.h"
 
-@interface DGInventoryResponse (Mapping)
+@interface DGInventoryRequest (Mapping) <DGRequestObject>
 
-+ (RKMapping *)mapping;
+@end
 
-+ (RKResponseDescriptor *)responseDescriptor;
+@interface DGInventoryResponse (Mapping) <DGObject, DGResponseObject>
 
 @end

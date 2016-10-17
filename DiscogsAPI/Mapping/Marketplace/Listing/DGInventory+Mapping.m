@@ -24,6 +24,14 @@
 #import "DGListing+Mapping.h"
 #import "DGPagination+Mapping.h"
 
+@implementation DGInventoryRequest (Mapping)
+
+- (NSDictionary *)parameters {
+    return nil;
+}
+
+@end
+
 @implementation DGInventoryResponse (Mapping)
 
 + (RKMapping *)mapping {

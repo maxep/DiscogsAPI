@@ -32,6 +32,9 @@ FOUNDATION_EXTERN NSString * const kDGBaseURL;
  */
 @interface DGHTTPClient : AFOAuth1Client
 
+/**
+ Application media type: 'html', 'plaintext' or 'discogs'.
+ */
 @property (nonatomic, copy) NSString *mediaType;
 
 /**

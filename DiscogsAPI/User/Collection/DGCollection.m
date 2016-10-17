@@ -80,8 +80,6 @@
 
 - (void)getCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(void (^)(NSError *error))failure {
     
-    NSURLRequest *requestURL = [self.manager requestWithObject:request method:RKRequestMethodGET path:nil parameters:nil];
-    
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGCollectionFolder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     

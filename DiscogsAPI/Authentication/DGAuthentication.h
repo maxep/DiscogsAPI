@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithCallback:(NSURL *) callback success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)authenticateWithCallback:(NSURL *)callback success:(void (^)())success failure:(nullable DGFailureBlock)failure;
 
 /**
  Initiate an authenticate process.
