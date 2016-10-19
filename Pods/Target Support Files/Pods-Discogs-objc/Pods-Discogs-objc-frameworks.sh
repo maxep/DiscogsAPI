@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/RestKit/RestKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SOCKit/SOCKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TransitionKit/TransitionKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DiscogsAPI/DiscogsAPI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework"
@@ -96,4 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/RestKit/RestKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SOCKit/SOCKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TransitionKit/TransitionKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DiscogsAPI/DiscogsAPI.framework"
 fi

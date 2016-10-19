@@ -1,8 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ISO8601DateFormatterValueTransformer" "$PODS_CONFIGURATION_BUILD_DIR/RKValueTransformers" "$PODS_CONFIGURATION_BUILD_DIR/RestKit" "$PODS_CONFIGURATION_BUILD_DIR/SOCKit" "$PODS_CONFIGURATION_BUILD_DIR/TransitionKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/DiscogsAPI" "${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer" "${PODS_ROOT}/Headers/Public/RKValueTransformers" "${PODS_ROOT}/Headers/Public/RestKit" "${PODS_ROOT}/Headers/Public/SOCKit" "${PODS_ROOT}/Headers/Public/TransitionKit"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ISO8601DateFormatterValueTransformer" "$PODS_CONFIGURATION_BUILD_DIR/RKValueTransformers" "$PODS_CONFIGURATION_BUILD_DIR/RestKit" "$PODS_CONFIGURATION_BUILD_DIR/SOCKit" "$PODS_CONFIGURATION_BUILD_DIR/TransitionKit"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/DiscogsAPI" -isystem "${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer" -isystem "${PODS_ROOT}/Headers/Public/RKValueTransformers" -isystem "${PODS_ROOT}/Headers/Public/RestKit" -isystem "${PODS_ROOT}/Headers/Public/SOCKit" -isystem "${PODS_ROOT}/Headers/Public/TransitionKit"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"ISO8601DateFormatterValueTransformer" -l"RKValueTransformers" -l"RestKit" -l"SOCKit" -l"TransitionKit" -framework "CFNetwork" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RKValueTransformers/RKValueTransformers.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RestKit/RestKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SOCKit/SOCKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/TransitionKit/TransitionKit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "ISO8601DateFormatterValueTransformer" -framework "RKValueTransformers" -framework "RestKit" -framework "SOCKit" -framework "TransitionKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

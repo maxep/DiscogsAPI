@@ -1,1 +1,0 @@
-../../../../DiscogsAPI/Mapping/Database/Data/DGImage+Mapping.h

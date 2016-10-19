@@ -1,10 +1,21 @@
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-target "DiscogsAPI" do
-    pod 'RestKit', '~> 0.27.0', :subspecs => ['Network', 'ObjectMapping']
+def import_pods
+    pod 'DiscogsAPI', :path => '.'
+end
+
+target 'DiscogsAPI' do
+    podspec
     
-    target "Discogs-objc" do
-        pod 'DiscogsAPI', :path => '.'
+    target 'Discogs-objc' do
+        inherit! :search_paths
+        import_pods
+    end
+    
+    target 'Discogs-swift' do
+        inherit! :search_paths
+        import_pods
     end
 end
 
