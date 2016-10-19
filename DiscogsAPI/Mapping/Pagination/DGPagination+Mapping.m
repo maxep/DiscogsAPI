@@ -81,7 +81,7 @@
              failure(error);
          }];
         
-        [objectRequestOperation start];
+        [[RKObjectManager sharedManager] enqueueObjectRequestOperation:objectRequestOperation];
     }
 }
 
