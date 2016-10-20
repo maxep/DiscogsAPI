@@ -49,7 +49,7 @@
 }
 
 - (BOOL)isReachable {
-    return self.manager.HTTPClient.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable;
+    return self.manager.HTTPClient.networkReachabilityStatus != AFRKNetworkReachabilityStatusNotReachable;
 }
 
 @end

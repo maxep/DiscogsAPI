@@ -46,7 +46,7 @@
 
  @return The initialized operation.
  */
-- (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass;
 
 /**
  Sets the `completionBlock` property with a block that executes either the specified success or failure block, depending on the state of the object request on completion. 

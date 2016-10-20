@@ -56,7 +56,7 @@ DGMediaType StringDGMediaType(NSString *str) {
         //Share Object Manager
         [RKObjectManager setSharedManager:manager];
         
-        AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
+        AFRKNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     });
     
     return discogs;

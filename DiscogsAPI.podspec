@@ -25,23 +25,28 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Authentication', 'Database', 'User', 'Marketplace', 'Resource'
 
   s.subspec 'Core' do |ss|
-    ss.source_files   = 'DiscogsAPI/Core',
-    					'DiscogsAPI/Configuration'
-    ss.dependency 'AFOAuth1Client', '~> 1.0.0'
-    ss.dependency 'RestKit/ObjectMapping', '~> 0.26.0'
-    ss.dependency 'RestKit/Network', '~> 0.26.0'
+    ss.source_files   = 	'DiscogsAPI/Core',
+    						'DiscogsAPI/Configuration',
+    						'AFOAuth1Client/AFOAuth1Client'
+    ss.dependency 'RestKit/ObjectMapping', '~> 0.27.0'
+    ss.dependency 'RestKit/Network', '~> 0.27.0'
     ss.prefix_header_contents = '#import <SystemConfiguration/SystemConfiguration.h>',
-    							'#import <MobileCoreServices/MobileCoreServices.h>',
-    							'#import <Security/Security.h>',
-    							'#import <RestKit/RestKit.h>'
+                                '#import <MobileCoreServices/MobileCoreServices.h>',
+                                '#import <Security/Security.h>',
+                                '#import <RestKit/RestKit.h>'
+    ss.private_header_files = 'DiscogsAPI/Core/DGHTTPClient.h',
+                              'DiscogsAPI/Mapping/Configuration/*.h',
+                              'AFOAuth1Client/AFOAuth1Client/*.h'
   end
   
   s.subspec 'Authentication' do |ss|
-    ss.source_files   = 'DiscogsAPI/Authentication'
+    ss.source_files   = 	'DiscogsAPI/Authentication'
     ss.dependency 'DiscogsAPI/Core'
     ss.dependency 'DiscogsAPI/Mapping'
+    ss.private_header_files = 'DiscogsAPI/Authentication/DGAuthView.h',
+                              'DiscogsAPI/Authentication/DGTokenStore.h'
   end
-  
+
   s.subspec 'Database' do |ss|
     ss.source_files   = 	'DiscogsAPI/Database',
     						'DiscogsAPI/Database/Release', 
@@ -51,6 +56,7 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/Database/Search',
     						'DiscogsAPI/Database/Data',
     						'DiscogsAPI/Mapping/Database/**/*'
+    ss.private_header_files = 'DiscogsAPI/Mapping/Database/**/*.h'
     ss.dependency 'DiscogsAPI/Pagination'
     ss.dependency 'DiscogsAPI/Mapping'
   end
@@ -62,6 +68,7 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/User/Collection', 
     						'DiscogsAPI/User/Wantlist',
     						'DiscogsAPI/Mapping/User/**/*'
+    ss.private_header_files = 'DiscogsAPI/Mapping/User/**/*.h'
     ss.dependency 'DiscogsAPI/Database'
     ss.dependency 'DiscogsAPI/Mapping'
   end
@@ -72,18 +79,20 @@ Pod::Spec.new do |s|
                             'DiscogsAPI/Marketplace/Listing',
                             'DiscogsAPI/Marketplace/Order',
     						'DiscogsAPI/Mapping/Marketplace/**/*'
+    ss.private_header_files = 'DiscogsAPI/Mapping/Marketplace/**/*.h'
     ss.dependency 'DiscogsAPI/Pagination'
     ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'Pagination' do |ss|
-    ss.source_files   = 'DiscogsAPI/Pagination',
-    					'DiscogsAPI/Mapping/Pagination'
+    ss.source_files   = 	'DiscogsAPI/Pagination',
+    						'DiscogsAPI/Mapping/Pagination'
+    ss.private_header_files = 'DiscogsAPI/Mapping/Pagination/**/*.h'
     ss.dependency 'DiscogsAPI/Core'
   end
   
   s.subspec 'Resource' do |ss|
-    ss.source_files   = 'DiscogsAPI/Resource'
+    ss.source_files   = 	'DiscogsAPI/Resource'
     ss.dependency 'DiscogsAPI/Core'
   end
 

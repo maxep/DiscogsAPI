@@ -44,17 +44,15 @@
       "name": "Core",
       "source_files": [
         "DiscogsAPI/Core",
-        "DiscogsAPI/Configuration"
+        "DiscogsAPI/Configuration",
+        "AFOAuth1Client/AFOAuth1Client"
       ],
       "dependencies": {
-        "AFOAuth1Client": [
-          "~> 1.0.0"
-        ],
         "RestKit/ObjectMapping": [
-          "~> 0.26.0"
+          "~> 0.27.0"
         ],
         "RestKit/Network": [
-          "~> 0.26.0"
+          "~> 0.27.0"
         ]
       },
       "prefix_header_contents": [
@@ -62,6 +60,11 @@
         "#import <MobileCoreServices/MobileCoreServices.h>",
         "#import <Security/Security.h>",
         "#import <RestKit/RestKit.h>"
+      ],
+      "private_header_files": [
+        "DiscogsAPI/Core/DGHTTPClient.h",
+        "DiscogsAPI/Mapping/Configuration/*.h",
+        "AFOAuth1Client/AFOAuth1Client/*.h"
       ]
     },
     {
@@ -74,7 +77,11 @@
         "DiscogsAPI/Mapping": [
 
         ]
-      }
+      },
+      "private_header_files": [
+        "DiscogsAPI/Authentication/DGAuthView.h",
+        "DiscogsAPI/Authentication/DGTokenStore.h"
+      ]
     },
     {
       "name": "Database",
@@ -88,6 +95,7 @@
         "DiscogsAPI/Database/Data",
         "DiscogsAPI/Mapping/Database/**/*"
       ],
+      "private_header_files": "DiscogsAPI/Mapping/Database/**/*.h",
       "dependencies": {
         "DiscogsAPI/Pagination": [
 
@@ -107,6 +115,7 @@
         "DiscogsAPI/User/Wantlist",
         "DiscogsAPI/Mapping/User/**/*"
       ],
+      "private_header_files": "DiscogsAPI/Mapping/User/**/*.h",
       "dependencies": {
         "DiscogsAPI/Database": [
 
@@ -125,6 +134,7 @@
         "DiscogsAPI/Marketplace/Order",
         "DiscogsAPI/Mapping/Marketplace/**/*"
       ],
+      "private_header_files": "DiscogsAPI/Mapping/Marketplace/**/*.h",
       "dependencies": {
         "DiscogsAPI/Pagination": [
 
@@ -140,6 +150,7 @@
         "DiscogsAPI/Pagination",
         "DiscogsAPI/Mapping/Pagination"
       ],
+      "private_header_files": "DiscogsAPI/Mapping/Pagination/**/*.h",
       "dependencies": {
         "DiscogsAPI/Core": [
 

@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <AFOAuth1Client/AFOAuth1Client.h>
+#import "AFOAuth1Client.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

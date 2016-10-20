@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <AFOAuth1Client/AFOAuth1Client.h>
+#import "AFOAuth1Client.h"
 
 FOUNDATION_EXTERN NSString * const kDGBaseURL;
 

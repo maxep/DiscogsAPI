@@ -44,7 +44,7 @@
     
     NSURLRequest *requestURL = [self.manager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];
     
-    AFImageRequestOperation* operation = [AFImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+    AFRKImageRequestOperation* operation = [AFRKImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         if (success) {
             success(image);
         }

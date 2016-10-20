@@ -1,12 +1,21 @@
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-target "DiscogsAPI" do
-	pod 'AFOAuth1Client', '~> 1.0.0'
-    pod 'RestKit/ObjectMapping', '~> 0.26.0'
-    pod 'RestKit/Network', '~> 0.26.0'
+def import_pods
+    pod 'DiscogsAPI', :path => '.'
+end
+
+target 'DiscogsAPI' do
+    podspec
     
-    target "Discogs-objc" do
-        pod 'DiscogsAPI', :path => '.'
+    target 'Discogs-objc' do
+        inherit! :search_paths
+        import_pods
+    end
+    
+    target 'Discogs-swift' do
+        inherit! :search_paths
+        import_pods
     end
 end
 

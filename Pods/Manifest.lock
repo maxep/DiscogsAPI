@@ -1,7 +1,4 @@
 PODS:
-  - AFNetworking (1.3.4)
-  - AFOAuth1Client (1.0.0):
-    - AFNetworking (~> 1.3)
   - DiscogsAPI (1.5.0):
     - DiscogsAPI/Authentication (= 1.5.0)
     - DiscogsAPI/Database (= 1.5.0)
@@ -12,9 +9,8 @@ PODS:
     - DiscogsAPI/Core
     - DiscogsAPI/Mapping
   - DiscogsAPI/Core (1.5.0):
-    - AFOAuth1Client (~> 1.0.0)
-    - RestKit/Network (~> 0.26.0)
-    - RestKit/ObjectMapping (~> 0.26.0)
+    - RestKit/Network (~> 0.27.0)
+    - RestKit/ObjectMapping (~> 0.27.0)
   - DiscogsAPI/Database (1.5.0):
     - DiscogsAPI/Mapping
     - DiscogsAPI/Pagination
@@ -31,41 +27,37 @@ PODS:
     - DiscogsAPI/Mapping
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
-  - RestKit/Network (0.26.0):
-    - AFNetworking (~> 1.3.0)
+  - RestKit/Network (0.27.0):
     - RestKit/ObjectMapping
     - RestKit/Support
     - SOCKit
-  - RestKit/ObjectMapping (0.26.0):
+  - RestKit/ObjectMapping (0.27.0):
     - ISO8601DateFormatterValueTransformer (~> 0.6.1)
     - RestKit/Support
     - RKValueTransformers (~> 1.1.0)
-  - RestKit/Support (0.26.0):
+  - RestKit/Support (0.27.0):
     - TransitionKit (~> 2.2)
   - RKValueTransformers (1.1.3)
   - SOCKit (1.1)
   - TransitionKit (2.2.1)
 
 DEPENDENCIES:
-  - AFOAuth1Client (~> 1.0.0)
   - DiscogsAPI (from `.`)
-  - RestKit/Network (~> 0.26.0)
-  - RestKit/ObjectMapping (~> 0.26.0)
+  - RestKit/Network (~> 0.27.0)
+  - RestKit/ObjectMapping (~> 0.27.0)
 
 EXTERNAL SOURCES:
   DiscogsAPI:
     :path: .
 
 SPEC CHECKSUMS:
-  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
-  AFOAuth1Client: 51d32174520b54d7e15a8b3dd618a9a5b87a6344
-  DiscogsAPI: d50c504c62a28cef1cd5626db77cda46e83c0d37
+  DiscogsAPI: e48477ab6eff991ee4974447bc8b2fc9d14d9066
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
-  RestKit: 112fba5bd1f97598aac0db7981863d5fdc0263a2
+  RestKit: a0244db34e14ed9cf059fcee2be6733cc162c34a
   RKValueTransformers: e5ed67e3811229b616fe01bddeeafe3bb337b1b9
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
 
-PODFILE CHECKSUM: b21666864006f43150151a155acccc4ff672f2c2
+PODFILE CHECKSUM: a2e1ba453ac6421c675aa359abade9051fdf0ecb
 
 COCOAPODS: 1.0.1
