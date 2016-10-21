@@ -9,13 +9,12 @@ target 'DiscogsAPI' do
     podspec
     
     target 'Discogs-objc' do
-        inherit! :search_paths
-        import_pods
+		import_pods
     end
     
-    target 'Discogs-swift' do
-        inherit! :search_paths
-        import_pods
-    end
+   target 'Discogs-swift' do
+       import_pods
+   end
+   
 end
 

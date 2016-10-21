@@ -206,6 +206,8 @@ third-party archives.
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
+			<key>License</key>
+			<string>Apache2</string>
 			<key>Title</key>
 			<string>ISO8601DateFormatterValueTransformer</string>
 			<key>Type</key>
@@ -405,6 +407,8 @@ third-party archives.
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
+			<key>License</key>
+			<string>Apache2</string>
 			<key>Title</key>
 			<string>RKValueTransformers</string>
 			<key>Type</key>
@@ -615,6 +619,8 @@ third-party archives.
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
+			<key>License</key>
+			<string>Apache License, Version 2.0</string>
 			<key>Title</key>
 			<string>RestKit</string>
 			<key>Type</key>
@@ -825,6 +831,8 @@ third-party archives.
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
+			<key>License</key>
+			<string>Apache License, Version 2.0</string>
 			<key>Title</key>
 			<string>SOCKit</string>
 			<key>Type</key>
@@ -1035,6 +1043,8 @@ third-party archives.
    See the License for the specific language governing permissions and
    limitations under the License.
 </string>
+			<key>License</key>
+			<string>Apache2</string>
 			<key>Title</key>
 			<string>TransitionKit</string>
 			<key>Type</key>
@@ -1065,6 +1075,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 </string>
+			<key>License</key>
+			<string>MIT</string>
 			<key>Title</key>
 			<string>DiscogsAPI</string>
 			<key>Type</key>

@@ -1,4 +1,6 @@
+#ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#endif
 
 #import "ISO8601DateFormatterValueTransformer.h"
 #import "RKISO8601DateFormatter.h"

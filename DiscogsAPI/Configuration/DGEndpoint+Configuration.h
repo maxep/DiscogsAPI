@@ -20,8 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <DiscogsAPI/DGEndpoint.h>
-#import <DiscogsAPI/DGOperation.h>
+#import "DGEndpoint.h"
+#import "DGOperation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -1,0 +1,6 @@
+framework module Pods_DiscogsAPI_Discogs_swift {
+  umbrella header "Pods-DiscogsAPI-Discogs-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
