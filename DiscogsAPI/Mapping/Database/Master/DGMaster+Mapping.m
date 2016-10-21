@@ -30,17 +30,23 @@
 + (RKMapping *)mapping {
     
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGMaster class]];
-    
     [mapping addAttributeMappingsFromDictionary:@{
                                                   @"title"              : @"title",
                                                   @"id"                 : @"ID",
                                                   @"data_quality"       : @"dataQuality",
                                                   @"thumb"              : @"thumb",
+                                                  @"country"            : @"country",
+                                                  @"date_added"         : @"dateAdded",
+                                                  @"date_changed"       : @"dateChanged",
+                                                  @"estimated_weight"   : @"estimatedWeight",
+                                                  @"format_quantity"    : @"formatQuantity",
                                                   @"year"               : @"year",
-                                                  @"genres"             : @"genres",
+                                                  @"notes"              : @"notes",
                                                   @"styles"             : @"styles",
+                                                  @"genres"             : @"genres",
+                                                  @"resource_url"       : @"resourceURL",
+                                                  @"uri"                : @"uri",
                                                   @"main_release"       : @"mainReleaseID",
-                                                  @"uri"                : @"uri"
                                                   }
      ];
     
