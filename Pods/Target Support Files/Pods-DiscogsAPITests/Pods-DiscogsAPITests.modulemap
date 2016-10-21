@@ -1,0 +1,6 @@
+framework module Pods_DiscogsAPITests {
+  umbrella header "Pods-DiscogsAPITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

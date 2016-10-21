@@ -37,6 +37,8 @@ PODS:
     - RKValueTransformers (~> 1.1.0)
   - RestKit/Support (0.27.0):
     - TransitionKit (~> 2.2)
+  - RestKit/Testing (0.27.0):
+    - RestKit/Network
   - RKValueTransformers (1.1.3)
   - SOCKit (1.1)
   - TransitionKit (2.2.1)
@@ -45,6 +47,7 @@ DEPENDENCIES:
   - DiscogsAPI (from `.`)
   - RestKit/Network (~> 0.27.0)
   - RestKit/ObjectMapping (~> 0.27.0)
+  - RestKit/Testing (~> 0.27.0)
 
 EXTERNAL SOURCES:
   DiscogsAPI:
@@ -58,6 +61,6 @@ SPEC CHECKSUMS:
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
 
-PODFILE CHECKSUM: bc4c33a1eb448bbba4984e8881f38aabcc70ad93
+PODFILE CHECKSUM: ab60c717cd481acb0fbfaf66c74dd1bf592ab90b
 
 COCOAPODS: 1.1.1
