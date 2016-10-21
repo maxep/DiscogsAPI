@@ -50,7 +50,8 @@ DGMediaType StringDGMediaType(NSString *str) {
         RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
         
         //Setup client
-        RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString: kDGBaseURL]];
+        DGHTTPClient *client = [[DGHTTPClient alloc] init];
+        RKObjectManager *manager = [[RKObjectManager alloc] initWithHTTPClient:client];
         discogs = [[Discogs alloc] initWithManager:manager];
         
         //Share Object Manager

@@ -40,13 +40,6 @@ FOUNDATION_EXTERN NSString * const kDGBaseURL;
 /**
  Creates and initializes a `DGHTTPClient` object.
  
- @return The newly-initialized Discogs client object.
- */
-+ (DGHTTPClient *)client;
-
-/**
- Creates and initializes a `DGHTTPClient` object.
- 
  @param key    The Discogs app consumer key.
  @param secret The Discogs app consumer secret.
  

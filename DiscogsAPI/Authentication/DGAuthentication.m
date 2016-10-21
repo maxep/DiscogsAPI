@@ -126,7 +126,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         } else if(self.accessToken) {
             _HTTPClient = [DGHTTPClient clientWithAccessToken:self.accessToken];
         } else {
-            _HTTPClient = [DGHTTPClient client];
+            _HTTPClient = [DGHTTPClient new];
         }
         
         _HTTPClient.signatureMethod = AFPlainTextSignatureMethod;

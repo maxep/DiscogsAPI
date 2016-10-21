@@ -35,17 +35,16 @@ static NSString * const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acc
 
 @implementation DGHTTPClient
 
-+ (DGHTTPClient *)client {
-    NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
-    return [[DGHTTPClient alloc] initWithBaseURL:baseURL];
-}
-
 + (DGHTTPClient *)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
     return [[DGHTTPClient alloc] initWithConsumerKey:key consumerSecret:secret];
 }
 
 + (DGHTTPClient *)clientWithAccessToken:(NSString *)token {
     return [[DGHTTPClient alloc] initWithAccessToken:token];
+}
+
+- (instancetype)init {
+    return [super initWithBaseURL:[NSURL URLWithString:kDGBaseURL]];
 }
 
 - (id)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {

@@ -216,7 +216,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
  @param secret The OAuth token secret.
  @param session The OAuth token session.
  @param expiration The OAuth token expiration date
- @param renewable Whether the OAuth token can be renewed.
+ @param canBeRenewed Whether the OAuth token can be renewed.
  */
 - (id)initWithKey:(NSString *)key
            secret:(NSString *)secret
@@ -232,7 +232,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
  Stores the specified OAuth token for a given web service identifier in the Keychain
  with the default Keychain Accessibilty of kSecAttrAccessibleWhenUnlocked.
  
- @param token The OAuth credential to be stored.
+ @param credential The OAuth credential to be stored.
  @param identifier The service identifier associated with the specified token.
  
  @return Whether or not the credential was stored in the keychain.
@@ -243,7 +243,7 @@ extern NSString * const kAFApplicationLaunchOptionsURLKey;
 /**
  Stores the specified OAuth token for a given web service identifier in the Keychain.
 
- @param token The OAuth credential to be stored.
+ @param credential The OAuth credential to be stored.
  @param identifier The service identifier associated with the specified token.
  @param securityAccessibility The Keychain security accessibility to store the credential with.
 

@@ -99,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
  Seller changed status from Old Status to New Status and does not provide a facility for including a custom message along with the change. For more fine-grained control, use the Add a new message resource, which allows you to simultaneously add a message and change the order status.
  If the order status is neither cancelled, Payment Received, nor Shipped, you can change the shipping. Doing so will send an invoice to the buyer and set the order status to Invoice Sent. (For that reason, you cannot set the shipping and the order status in the same request.)
 
- @param orderID The order to edit.
+ @param order   The order to edit.
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the edited order.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */

@@ -37,9 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Gets a Discogs image
  
- @param discogsImageURL The Discogs image URL.
- @param success         A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
- @param failure         A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
+ @param imageURL The Discogs image URL.
+ @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
+ @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
 
