@@ -28,23 +28,13 @@
 
 @implementation DGUser
 
-@synthesize wantlist    = _wantlist;
-@synthesize collection  = _collection;
-
-#pragma mark Properties
-
-- (DGWantlist *)wantlist {
-    if (!_wantlist) {
-        _wantlist = [[DGWantlist alloc] initWithManager:self.manager];
+- (instancetype)initWithManager:(RKObjectManager *)manager {
+    self = [super initWithManager:manager];
+    if (self) {
+        _wantlist = [[DGWantlist alloc] initWithManager:manager];
+        _collection = [[DGCollection alloc] initWithManager:manager];
     }
-    return _wantlist;
-}
-
-- (DGCollection *)collection {
-    if (!_collection) {
-        _collection = [[DGCollection alloc] initWithManager:self.manager];
-    }
-    return _collection;
+    return self;
 }
 
 #pragma mark Configuration
