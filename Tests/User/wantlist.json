@@ -1,0 +1,95 @@
+{
+  "pagination": {
+    "per_page": 50,
+    "pages": 1,
+    "page": 1,
+    "items": 2,
+    "urls": {}
+  },
+  "wants": [
+    {
+      "rating": 4,
+      "basic_information": {
+        "formats": [
+          {
+            "text": "Digipak",
+            "qty": "1",
+            "descriptions": [
+              "Album"
+            ],
+            "name": "CD"
+          }
+        ],
+        "thumb": "https://api-img.discogs.com/PsLAcp_I0-EPPkSBaHx2t7dmXTg=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb()/discogs-images/R-1867708-1248886216.jpeg.jpg",
+        "title": "Year Zero",
+        "labels": [
+          {
+            "resource_url": "https://api.discogs.com/labels/2311",
+            "entity_type": "",
+            "catno": "B0008764-02",
+            "id": 2311,
+            "name": "Interscope Records"
+          }
+        ],
+        "year": 2007,
+        "artists": [
+          {
+            "join": "",
+            "name": "Nine Inch Nails",
+            "anv": "",
+            "tracks": "",
+            "role": "",
+            "resource_url": "https://api.discogs.com/artists/3857",
+            "id": 3857
+          }
+        ],
+        "resource_url": "https://api.discogs.com/releases/1867708",
+        "id": 1867708
+      },
+      "resource_url": "https://api.discogs.com/users/example/wants/1867708",
+      "id": 1867708
+    },
+    {
+      "rating": 0,
+      "basic_information": {
+        "formats": [
+          {
+            "qty": "1",
+            "descriptions": [
+              "Album"
+            ],
+            "name": "CDr"
+          }
+        ],
+        "thumb": "https://api-img.discogs.com/w1cVy7ppMYEDlqY9sjoAojC3MhQ=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb()/discogs-images/R-1675174-1236118359.jpeg.jpg",
+        "title": "Dawn Metropolis",
+        "labels": [
+          {
+            "resource_url": "https://api.discogs.com/labels/141550",
+            "entity_type": "",
+            "catno": "NORM007",
+            "id": 141550,
+            "name": "Normative"
+          }
+        ],
+        "year": 2009,
+        "artists": [
+          {
+            "join": "",
+            "name": "Anamanaguchi",
+            "anv": "",
+            "tracks": "",
+            "role": "",
+            "resource_url": "https://api.discogs.com/artists/667233",
+            "id": 667233
+          }
+        ],
+        "resource_url": "https://api.discogs.com/releases/1675174",
+        "id": 1675174
+      },
+      "notes": "Sample notes.",
+      "resource_url": "https://api.discogs.com/users/example/wants/1675174",
+      "id": 1675174
+    }
+  ]
+}

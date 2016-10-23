@@ -1,0 +1,127 @@
+{
+  "pagination": {
+    "per_page": 50,
+    "items": 4,
+    "page": 1,
+    "urls": {},
+    "pages": 1
+  },
+  "listings": [
+    {
+      "status": "For Sale",
+      "price": {
+        "currency": "USD",
+        "value": 149.99
+      },
+      "allow_offers": true,
+      "sleeve_condition": "Near Mint (NM or M-)",
+      "id": 150899904,
+      "condition": "Near Mint (NM or M-)",
+      "posted": "2014-07-01T10:20:17-07:00",
+      "ships_from": "United States",
+      "uri": "http://www.discogs.com/sell/item/150899904",
+      "comments": "Includes promotional booklet from original purchase!",
+      "seller": {
+        "username": "rappcats",
+        "resource_url": "https://api.discogs.com/users/rappcats",
+        "id": 2098225
+      },
+      "release": {
+        "catalog_number": "509990292346, TMR092",
+        "resource_url": "https://api.discogs.com/releases/2992668",
+        "year": 2011,
+        "id": 2992668,
+        "description": "Danger Mouse & Daniele Luppi - Rome (LP, Ora + LP, Whi + Album, Ltd, Tip)"
+      },
+      "resource_url": "https://api.discogs.com/marketplace/listings/150899904",
+      "audio": false
+    },
+    {
+      "status": "For Sale",
+      "price": {
+        "currency": "USD",
+        "value": 49.99
+      },
+      "allow_offers": false,
+      "sleeve_condition": "Very Good Plus (VG+)",
+      "id": 155473349,
+      "condition": "Very Good Plus (VG+)",
+      "posted": "2014-07-01T10:20:17-07:00",
+      "ships_from": "United States",
+      "uri": "http://www.discogs.com/sell/item/155473349",
+      "comments": "Includes slipmats",
+      "seller": {
+        "username": "rappcats",
+        "resource_url": "https://api.discogs.com/users/rappcats",
+        "id": 2098225
+      },
+      "release": {
+        "catalog_number": "STH 2222",
+        "resource_url": "https://api.discogs.com/releases/1900152",
+        "year": 2009,
+        "id": 1900152,
+        "description": "Various - Stones Throw X Serato (2x12\", Ltd, Cle)"
+      },
+      "resource_url": "https://api.discogs.com/marketplace/listings/155473349",
+      "audio": false
+    },
+    {
+      "status": "For Sale",
+      "price": {
+        "currency": "USD",
+        "value": 39.99
+      },
+      "allow_offers": true,
+      "sleeve_condition": "Near Mint (NM or M-)",
+      "id": 150899171,
+      "condition": "Very Good Plus (VG+)",
+      "posted": "2014-07-07T11:40:08-07:00",
+      "ships_from": "United States",
+      "uri": "http://www.discogs.com/sell/item/150899171",
+      "comments": "",
+      "seller": {
+        "username": "rappcats",
+        "resource_url": "https://api.discogs.com/users/rappcats",
+        "id": 2098225
+      },
+      "release": {
+        "catalog_number": "STH 2172",
+        "resource_url": "https://api.discogs.com/releases/1842118",
+        "year": 2009,
+        "id": 1842118,
+        "description": "Last Electro-Acoustic Space Jazz & Percussion Ensemble, The - Summer Suite (CD, MiniAlbum, Ltd)"
+      },
+      "resource_url": "https://api.discogs.com/marketplace/listings/150899171",
+      "audio": false
+    },
+    {
+      "status": "For Sale",
+      "price": {
+        "currency": "USD",
+        "value": 229.99
+      },
+      "allow_offers": false,
+      "sleeve_condition": "Near Mint (NM or M-)",
+      "id": 171931719,
+      "condition": "Near Mint (NM or M-)",
+      "posted": "2014-07-12T16:23:14-07:00",
+      "ships_from": "United States",
+      "uri": "http://www.discogs.com/sell/item/171931719",
+      "comments": "Includes poster, includes download card, includes 7\", in original bag w/ hype sticker. Complete set!",
+      "seller": {
+        "username": "rappcats",
+        "resource_url": "https://api.discogs.com/users/rappcats",
+        "id": 2098225
+      },
+      "release": {
+        "catalog_number": "NSD-120",
+        "resource_url": "https://api.discogs.com/releases/2791275",
+        "year": 2011,
+        "id": 2791275,
+        "description": "Metal Fingers - Presents Special Herbs The Box Set Vol. 0-9 (Box, Comp, Ltd + 10xLP + 7\")"
+      },
+      "resource_url": "https://api.discogs.com/marketplace/listings/171931719",
+      "audio": false
+    }
+  ]
+}

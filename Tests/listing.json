@@ -1,0 +1,29 @@
+{
+  "status": "For Sale",
+  "price": {
+    "currency": "USD",
+    "value": 120
+  },
+  "allow_offers": false,
+  "sleeve_condition": "Mint (M)",
+  "id": 172723812,
+  "condition": "Mint (M)",
+  "posted": "2014-07-15T12:55:01-07:00",
+  "ships_from": "United States",
+  "uri": "http://www.discogs.com/sell/item/172723812",
+  "comments": "Brand new... Still sealed!",
+  "seller": {
+    "username": "Booms528",
+    "resource_url": "https://api.discogs.com/users/Booms528",
+    "id": 1369620
+  },
+  "release": {
+    "catalog_number": "541125-1, 1-541125 (K1)",
+    "resource_url": "https://api.discogs.com/releases/5610049",
+    "year": 2014,
+    "id": 5610049,
+    "description": "LCD Soundsystem - The Long Goodbye: LCD Soundsystem Live At Madison Square Garden (5xLP + Box)"
+  },
+  "resource_url": "https://api.discogs.com/marketplace/listings/172723812",
+  "audio": false
+}

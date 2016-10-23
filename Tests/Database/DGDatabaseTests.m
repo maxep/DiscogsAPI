@@ -12,6 +12,7 @@
 #import <DiscogsAPI/DGMaster+Mapping.h>
 #import <DiscogsAPI/DGArtist+Mapping.h>
 #import <DiscogsAPI/DGLabel+Mapping.h>
+#import <DiscogsAPI/DGSearch+Mapping.h>
 
 @interface DGDatabaseTests<DGDatabase> : DGTestCase
 
@@ -103,9 +104,9 @@
 
 #pragma mark Label
 
-- (void)testLabeltMapping {
+- (void)testLabelMapping {
     id json = [RKTestFixture parsedObjectWithContentsOfFixture:@"label.json"];
-    RKMappingTest *test = [RKMappingTest testForMapping:[DGMaster mapping] sourceObject:json destinationObject:nil];
+    RKMappingTest *test = [RKMappingTest testForMapping:[DGLabel mapping] sourceObject:json destinationObject:nil];
     
     [test addExpectation:[RKPropertyMappingTestExpectation expectationWithSourceKeyPath:@"id" destinationKeyPath:@"ID" value:@1]];
     XCTAssertTrue(test.evaluate);
@@ -122,6 +123,43 @@
     
     XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
     XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGLabel class]], @"Expected to load a label");
+}
+
+#pragma mark Search
+
+- (void)testSearchMapping {
+    DGSearchResponse *response =  [DGSearchResponse new];
+    
+    id json = [RKTestFixture parsedObjectWithContentsOfFixture:@"search.json"];
+    RKMappingTest *test = [RKMappingTest testForMapping:DGSearchResponse.responseDescriptor.mapping sourceObject:json destinationObject:response];
+    
+    XCTAssertTrue(test.evaluate);
+    
+    XCTAssertEqualObjects(response.pagination.perPage, @3);
+    XCTAssertEqualObjects(response.pagination.pages, @66);
+    XCTAssertEqualObjects(response.pagination.page, @1);
+    XCTAssertEqualObjects(response.pagination.items, @198);
+    
+    DGSearchResult *result = response.results[0];
+    XCTAssertEqualObjects(result.title, @"Nirvana - Nevermind");
+    XCTAssertEqualObjects(result.year, @"2005");
+    XCTAssertEqualObjects(result.ID, @2028757);
+}
+
+- (void)testSearchOperation {
+    
+    DGSearchRequest *request = [DGSearchRequest new];
+    request.releaseTitle = @"nevermind";
+    request.artist = @"nirvana";
+    request.pagination.perPage = @3;
+    
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGSearchResponse class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
+    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGSearchResponse class]], @"Expected to load a label");
 }
 
 @end

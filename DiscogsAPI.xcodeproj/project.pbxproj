@@ -34,6 +34,11 @@
 		9C31E3011DBACC7600BA48B5 /* label.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3001DBACC7600BA48B5 /* label.json */; };
 		9C31E3041DBB818D00BA48B5 /* DGUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31E3031DBB818D00BA48B5 /* DGUserTests.m */; };
 		9C31E3061DBB825300BA48B5 /* profile.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3051DBB825300BA48B5 /* profile.json */; };
+		9C31E3091DBD249600BA48B5 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3071DBD226900BA48B5 /* search.json */; };
+		9C31E30D1DBD292100BA48B5 /* wantlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E30C1DBD292100BA48B5 /* wantlist.json */; };
+		9C31E3101DBD31EA00BA48B5 /* DGMaketplaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */; };
+		9C31E3121DBD329B00BA48B5 /* inventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3111DBD329B00BA48B5 /* inventory.json */; };
+		9C31E3141DBD356800BA48B5 /* listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3131DBD356800BA48B5 /* listing.json */; };
 		9C55DB3E1D06FE1600DF8AFE /* DGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2B1D06196000DF8AFE /* DGViewController.m */; };
 		9C55DB3F1D06FE1A00DF8AFE /* DGReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2F1D0619B800DF8AFE /* DGReleaseViewController.m */; };
 		9C55DB401D06FE1E00DF8AFE /* DGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB331D0619CB00DF8AFE /* DGMasterViewController.m */; };
@@ -242,6 +247,11 @@
 		9C31E3001DBACC7600BA48B5 /* label.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = label.json; sourceTree = "<group>"; };
 		9C31E3031DBB818D00BA48B5 /* DGUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGUserTests.m; path = User/DGUserTests.m; sourceTree = "<group>"; };
 		9C31E3051DBB825300BA48B5 /* profile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = profile.json; path = User/profile.json; sourceTree = "<group>"; };
+		9C31E3071DBD226900BA48B5 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = search.json; path = Database/search.json; sourceTree = "<group>"; };
+		9C31E30C1DBD292100BA48B5 /* wantlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wantlist.json; path = User/wantlist.json; sourceTree = "<group>"; };
+		9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGMaketplaceTests.m; path = Maketplace/DGMaketplaceTests.m; sourceTree = "<group>"; };
+		9C31E3111DBD329B00BA48B5 /* inventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = inventory.json; path = Maketplace/inventory.json; sourceTree = "<group>"; };
+		9C31E3131DBD356800BA48B5 /* listing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listing.json; sourceTree = "<group>"; };
 		9C55DB2A1D06196000DF8AFE /* DGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGViewController.h; sourceTree = "<group>"; };
 		9C55DB2B1D06196000DF8AFE /* DGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGViewController.m; sourceTree = "<group>"; };
 		9C55DB2E1D0619B800DF8AFE /* DGReleaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGReleaseViewController.h; sourceTree = "<group>"; };
@@ -514,6 +524,7 @@
 				9C1CCA541DBAA55E0049AD5D /* DGTestCase.m */,
 				9C1CCA4D1DBAA1700049AD5D /* Database */,
 				9C31E3021DBB814F00BA48B5 /* User */,
+				9C31E30E1DBD31BB00BA48B5 /* Marketplace */,
 				9C1CCA461DBA9AEA0049AD5D /* Info.plist */,
 			);
 			path = Tests;
@@ -526,6 +537,7 @@
 				9C31E2FC1DBAC48F00BA48B5 /* master.json */,
 				9C31E2FE1DBACAA100BA48B5 /* artist.json */,
 				9C31E3001DBACC7600BA48B5 /* label.json */,
+				9C31E3071DBD226900BA48B5 /* search.json */,
 				9C1CCA511DBAA4A70049AD5D /* DGDatabaseTests.m */,
 			);
 			name = Database;
@@ -535,9 +547,20 @@
 			isa = PBXGroup;
 			children = (
 				9C31E3051DBB825300BA48B5 /* profile.json */,
+				9C31E30C1DBD292100BA48B5 /* wantlist.json */,
 				9C31E3031DBB818D00BA48B5 /* DGUserTests.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		9C31E30E1DBD31BB00BA48B5 /* Marketplace */ = {
+			isa = PBXGroup;
+			children = (
+				9C31E3131DBD356800BA48B5 /* listing.json */,
+				9C31E3111DBD329B00BA48B5 /* inventory.json */,
+				9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */,
+			);
+			name = Marketplace;
 			sourceTree = "<group>";
 		};
 		9C88BCC21DB90AE200DC9E61 /* AFOAuth1Client */ = {
@@ -1327,10 +1350,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C31E3141DBD356800BA48B5 /* listing.json in Resources */,
+				9C31E3091DBD249600BA48B5 /* search.json in Resources */,
 				9C31E3061DBB825300BA48B5 /* profile.json in Resources */,
 				9C1CCA501DBAA2750049AD5D /* release.json in Resources */,
 				9C31E2FF1DBACAA100BA48B5 /* artist.json in Resources */,
+				9C31E3121DBD329B00BA48B5 /* inventory.json in Resources */,
 				9C31E3011DBACC7600BA48B5 /* label.json in Resources */,
+				9C31E30D1DBD292100BA48B5 /* wantlist.json in Resources */,
 				9C31E2FD1DBAC48F00BA48B5 /* master.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1541,6 +1568,7 @@
 				9C1CCA571DBAA5DB0049AD5D /* DGTestCase.m in Sources */,
 				9C31E3041DBB818D00BA48B5 /* DGUserTests.m in Sources */,
 				9C1CCA521DBAA4A70049AD5D /* DGDatabaseTests.m in Sources */,
+				9C31E3101DBD31EA00BA48B5 /* DGMaketplaceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

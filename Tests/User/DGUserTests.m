@@ -9,6 +9,7 @@
 #import "DGTestCase.h"
 
 #import <DiscogsAPI/DGProfile+Mapping.h>
+#import <DiscogsAPI/DGWantlist+Mapping.h>
 
 @interface DGUserTests<DGUser> : DGTestCase
 
@@ -49,6 +50,40 @@
     
     XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
     XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
+}
+
+#pragma mark Profile
+
+- (void)testWantlistMapping {
+    
+    DGWantlistResponse *response = [DGWantlistResponse new];
+    id json = [RKTestFixture parsedObjectWithContentsOfFixture:@"wantlist.json"];
+    RKMappingTest *test = [RKMappingTest testForMapping:DGWantlistResponse.responseDescriptor.mapping sourceObject:json destinationObject:response];
+    
+    XCTAssertTrue(test.evaluate);
+    
+    XCTAssertEqualObjects(response.pagination.perPage, @50);
+    XCTAssertEqualObjects(response.pagination.pages, @1);
+    XCTAssertEqualObjects(response.pagination.page, @1);
+    XCTAssertEqualObjects(response.pagination.items, @2);
+    
+    DGWant *want = response.wants[0];
+    XCTAssertEqualObjects(want.rating, @4);
+    XCTAssertEqualObjects(want.DGRelease.title, @"Year Zero");
+    XCTAssertEqualObjects(want.DGRelease.ID, @1867708);
+}
+
+- (void)testWantlistOperation {
+    DGWantlistRequest *request = [DGWantlistRequest new];
+    request.userName = @"maxepTestUser";
+    
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGWantlistResponse class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
+    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGWantlistResponse class]], @"Expected to load a profile");
 }
 
 @end
