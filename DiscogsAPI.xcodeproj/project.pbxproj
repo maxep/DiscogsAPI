@@ -252,6 +252,7 @@
 		9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGMaketplaceTests.m; path = Maketplace/DGMaketplaceTests.m; sourceTree = "<group>"; };
 		9C31E3111DBD329B00BA48B5 /* inventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = inventory.json; path = Maketplace/inventory.json; sourceTree = "<group>"; };
 		9C31E3131DBD356800BA48B5 /* listing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listing.json; sourceTree = "<group>"; };
+		9C31E3151DBD391F00BA48B5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		9C55DB2A1D06196000DF8AFE /* DGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGViewController.h; sourceTree = "<group>"; };
 		9C55DB2B1D06196000DF8AFE /* DGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGViewController.m; sourceTree = "<group>"; };
 		9C55DB2E1D0619B800DF8AFE /* DGReleaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGReleaseViewController.h; sourceTree = "<group>"; };
@@ -494,6 +495,7 @@
 				9C0F097B1DB2626100FB09D9 /* DiscogsAPI.podspec */,
 				9C0F097C1DB2626100FB09D9 /* LICENSE */,
 				9C0F097D1DB2626100FB09D9 /* README.md */,
+				9C31E3151DBD391F00BA48B5 /* CHANGELOG.md */,
 				9C0F09871DB4C7EC00FB09D9 /* .travis.yml */,
 			);
 			name = Metadata;
