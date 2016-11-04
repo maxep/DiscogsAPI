@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/maxep/DiscogsAPI.git", :tag => "v#{s.version}" }
   s.documentation_url = 'http://cocoadocs.org/docsets/DiscogsAPI'
   s.requires_arc = true
-  s.ios.deployment_target = '7.1'
+  s.ios.deployment_target = '8.0'
   s.ios.frameworks 	= 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration'
   s.osx.frameworks 	= 'CoreServices', 'SystemConfiguration'
   
@@ -37,14 +37,17 @@ Pod::Spec.new do |s|
     ss.private_header_files = 'DiscogsAPI/Core/DGHTTPClient.h',
                               'DiscogsAPI/Configuration/*.h',
                               'AFOAuth1Client/AFOAuth1Client/*.h'
+    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'Authentication' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Authentication'
-    ss.dependency 'DiscogsAPI/Core'
-    ss.dependency 'DiscogsAPI/Mapping'
+    ss.source_files   = 	'DiscogsAPI/Authentication',
+    						'DiscogsAPI/Authentication/Identity',
+    						'DiscogsAPI/Mapping/Authentication/**/*'
     ss.private_header_files = 'DiscogsAPI/Authentication/DGAuthView.h',
-                              'DiscogsAPI/Authentication/DGTokenStore.h'
+                              'DiscogsAPI/Authentication/DGTokenStore.h',
+                              'DiscogsAPI/Mapping/Authentication/**/*.h'
+    ss.dependency 'DiscogsAPI/Core'
   end
 
   s.subspec 'Database' do |ss|
@@ -58,19 +61,16 @@ Pod::Spec.new do |s|
     						'DiscogsAPI/Mapping/Database/**/*'
     ss.private_header_files = 'DiscogsAPI/Mapping/Database/**/*.h'
     ss.dependency 'DiscogsAPI/Pagination'
-    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'User' do |ss|
     ss.source_files   = 	'DiscogsAPI/User',
-    						'DiscogsAPI/User/Identity', 
     						'DiscogsAPI/User/Profile', 
     						'DiscogsAPI/User/Collection', 
     						'DiscogsAPI/User/Wantlist',
     						'DiscogsAPI/Mapping/User/**/*'
     ss.private_header_files = 'DiscogsAPI/Mapping/User/**/*.h'
     ss.dependency 'DiscogsAPI/Database'
-    ss.dependency 'DiscogsAPI/Mapping'
   end
   
   s.subspec 'Marketplace' do |ss|
@@ -80,8 +80,7 @@ Pod::Spec.new do |s|
                             'DiscogsAPI/Marketplace/Order',
     						'DiscogsAPI/Mapping/Marketplace/**/*'
     ss.private_header_files = 'DiscogsAPI/Mapping/Marketplace/**/*.h'
-    ss.dependency 'DiscogsAPI/Pagination'
-    ss.dependency 'DiscogsAPI/Mapping'
+    ss.dependency 'DiscogsAPI/User'
   end
   
   s.subspec 'Pagination' do |ss|

@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint+Configuration.h"
-#import "DGIdentity+Mapping.h"
 #import "DGProfile+Mapping.h"
 
 #import "DGUser.h"

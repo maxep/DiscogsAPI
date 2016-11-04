@@ -45,6 +45,8 @@
 		9C55DB411D06FE2200DF8AFE /* DGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB371D0619DC00DF8AFE /* DGArtistViewController.m */; };
 		9C55DB421D06FE2600DF8AFE /* DGLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB3B1D0619F300DF8AFE /* DGLabelViewController.m */; };
 		9C55DB441D07124B00DF8AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C55DB431D07124B00DF8AFE /* Assets.xcassets */; };
+		9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */; };
+		9C5B32DF1DCCFBE200CCF140 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B32DD1DCCFBE200CCF140 /* DGIdentity+Mapping.m */; };
 		9C88BCC81DB90AE200DC9E61 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C88BCC41DB90AE200DC9E61 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C88BCC91DB90AE200DC9E61 /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C88BCC51DB90AE200DC9E61 /* AFOAuth1Client.m */; };
 		9CA793F51D04ED5F0006EE89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */; };
@@ -156,8 +158,6 @@
 		D0A588DB1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588551CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m */; };
 		D0A588DC1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588561CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A588DD1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A588571CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m */; };
-		D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A588591CFF9482008DF0A4 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D0A588DF1CFF9482008DF0A4 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5885A1CFF9482008DF0A4 /* DGIdentity+Mapping.m */; };
 		D0A588E01CFF9482008DF0A4 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5885C1CFF9482008DF0A4 /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A588E11CFF9482008DF0A4 /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A5885D1CFF9482008DF0A4 /* DGProfile+Mapping.m */; };
 		D0A588E21CFF9482008DF0A4 /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A5885F1CFF9482008DF0A4 /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -264,6 +264,8 @@
 		9C55DB3A1D0619F300DF8AFE /* DGLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGLabelViewController.h; sourceTree = "<group>"; };
 		9C55DB3B1D0619F300DF8AFE /* DGLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DGLabelViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9C55DB431D07124B00DF8AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
+		9C5B32DD1DCCFBE200CCF140 /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		9C88BCC41DB90AE200DC9E61 /* AFOAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth1Client.h; sourceTree = "<group>"; };
 		9C88BCC51DB90AE200DC9E61 /* AFOAuth1Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
 		9C88BCC61DB90AE200DC9E61 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -385,8 +387,6 @@
 		D0A588551CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFolder+Mapping.m"; sourceTree = "<group>"; };
 		D0A588561CFF9482008DF0A4 /* DGReleaseInstance+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGReleaseInstance+Mapping.h"; sourceTree = "<group>"; };
 		D0A588571CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGReleaseInstance+Mapping.m"; sourceTree = "<group>"; };
-		D0A588591CFF9482008DF0A4 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
-		D0A5885A1CFF9482008DF0A4 /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		D0A5885C1CFF9482008DF0A4 /* DGProfile+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGProfile+Mapping.h"; sourceTree = "<group>"; };
 		D0A5885D1CFF9482008DF0A4 /* DGProfile+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGProfile+Mapping.m"; sourceTree = "<group>"; };
 		D0A5885F1CFF9482008DF0A4 /* DGWantlist+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGWantlist+Mapping.h"; sourceTree = "<group>"; };
@@ -565,6 +565,23 @@
 			name = Marketplace;
 			sourceTree = "<group>";
 		};
+		9C5B32DA1DCCFBE200CCF140 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B32DB1DCCFBE200CCF140 /* Identity */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		9C5B32DB1DCCFBE200CCF140 /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */,
+				9C5B32DD1DCCFBE200CCF140 /* DGIdentity+Mapping.m */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
 		9C88BCC21DB90AE200DC9E61 /* AFOAuth1Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +675,7 @@
 				D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */,
 				D0A587EE1CFF9481008DF0A4 /* DGTokenStore.h */,
 				D0A587EF1CFF9481008DF0A4 /* DGTokenStore.m */,
+				D0A5887B1CFF9482008DF0A4 /* Identity */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -777,6 +795,7 @@
 			isa = PBXGroup;
 			children = (
 				9C0F097E1DB37D4100FB09D9 /* DGMapping.h */,
+				9C5B32DA1DCCFBE200CCF140 /* Authentication */,
 				D0A588221CFF9481008DF0A4 /* Database */,
 				D0A588471CFF9481008DF0A4 /* Marketplace */,
 				D0A5884B1CFF9481008DF0A4 /* Pagination */,
@@ -902,7 +921,6 @@
 			isa = PBXGroup;
 			children = (
 				D0A5884F1CFF9481008DF0A4 /* Collection */,
-				D0A588581CFF9482008DF0A4 /* Identity */,
 				D0A5885B1CFF9482008DF0A4 /* Profile */,
 				D0A5885E1CFF9482008DF0A4 /* Wantlist */,
 			);
@@ -922,15 +940,6 @@
 				D0A588571CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m */,
 			);
 			path = Collection;
-			sourceTree = "<group>";
-		};
-		D0A588581CFF9482008DF0A4 /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				D0A588591CFF9482008DF0A4 /* DGIdentity+Mapping.h */,
-				D0A5885A1CFF9482008DF0A4 /* DGIdentity+Mapping.m */,
-			);
-			path = Identity;
 			sourceTree = "<group>";
 		};
 		D0A5885B1CFF9482008DF0A4 /* Profile */ = {
@@ -996,7 +1005,6 @@
 				D0A588791CFF9482008DF0A4 /* DGUser.h */,
 				D0A5887A1CFF9482008DF0A4 /* DGUser.m */,
 				D0A5886E1CFF9482008DF0A4 /* Collection */,
-				D0A5887B1CFF9482008DF0A4 /* Identity */,
 				D0A5887E1CFF9482008DF0A4 /* Profile */,
 				D0A588811CFF9482008DF0A4 /* Wantlist */,
 			);
@@ -1159,6 +1167,7 @@
 				D0A5889A1CFF9482008DF0A4 /* DGFormat.h in Headers */,
 				D0A588E41CFF9482008DF0A4 /* DGMarketplace.h in Headers */,
 				D0A588FA1CFF9482008DF0A4 /* DGProfile.h in Headers */,
+				9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */,
 				D0A588921CFF9482008DF0A4 /* DGArtist.h in Headers */,
 				D0A588EA1CFF9482008DF0A4 /* DGResource.h in Headers */,
 				D0A588A01CFF9482008DF0A4 /* DGTrack.h in Headers */,
@@ -1179,7 +1188,6 @@
 				D0A588D61CFF9482008DF0A4 /* DGCollectionField+Mapping.h in Headers */,
 				D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */,
 				D0A588D41CFF9482008DF0A4 /* DGPagination+Mapping.h in Headers */,
-				D0A588DE1CFF9482008DF0A4 /* DGIdentity+Mapping.h in Headers */,
 				D0A588C41CFF9482008DF0A4 /* DGVideo+Mapping.h in Headers */,
 				D0A588C01CFF9482008DF0A4 /* DGImage+Mapping.h in Headers */,
 				D0A588C21CFF9482008DF0A4 /* DGTrack+Mapping.h in Headers */,
@@ -1633,7 +1641,6 @@
 				9C0AB1EC1DB11ABD004716A1 /* DGListing.m in Sources */,
 				D0A588F31CFF9482008DF0A4 /* DGCollectionFolder.m in Sources */,
 				D0A588C51CFF9482008DF0A4 /* DGVideo+Mapping.m in Sources */,
-				D0A588DF1CFF9482008DF0A4 /* DGIdentity+Mapping.m in Sources */,
 				D0A588B11CFF9482008DF0A4 /* DGSearch.m in Sources */,
 				D0A588C71CFF9482008DF0A4 /* DGLabel+Mapping.m in Sources */,
 				D0A588DB1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m in Sources */,
@@ -1671,6 +1678,7 @@
 				D0A588BD1CFF9482008DF0A4 /* DGFormat+Mapping.m in Sources */,
 				D0A588891CFF9482008DF0A4 /* DGHTTPClient.m in Sources */,
 				D0A588D11CFF9482008DF0A4 /* DGSearch+Mapping.m in Sources */,
+				9C5B32DF1DCCFBE200CCF140 /* DGIdentity+Mapping.m in Sources */,
 				D0A588A51CFF9482008DF0A4 /* DGDatabase.m in Sources */,
 				D0A588A11CFF9482008DF0A4 /* DGTrack.m in Sources */,
 				D0A5888F1CFF9482008DF0A4 /* DGEndpoint.m in Sources */,
