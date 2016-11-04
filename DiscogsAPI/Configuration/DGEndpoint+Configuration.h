@@ -56,24 +56,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)configureManager:(RKObjectManager *)objectManager;
 
-/**
- Create a `NSError`
-
- @param code The error code.
- @param info The error descritpion.
-
- @return The create error.
- */
-- (NSError *)errorWithCode:(NSInteger)code info:(nullable NSString *)info;
-
-@end
-
-@interface RKErrorMessage (Mapping)
-
-+ (RKMapping *)mapping;
-
-+ (RKResponseDescriptor *)responseDescriptor;
-
 @end
 
 NS_ASSUME_NONNULL_END

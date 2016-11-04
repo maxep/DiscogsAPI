@@ -38,10 +38,6 @@
 
 }
 
-- (NSError *)errorWithCode:(NSInteger)code info:(NSString *)info {
-    return [NSError errorWithDomain:@"Discogs.api" code:code userInfo:@{ NSLocalizedDescriptionKey : info}];
-}
-
 #pragma mark Properties
 
 - (RKObjectManager *)manager {
@@ -50,26 +46,6 @@
 
 - (BOOL)isReachable {
     return self.manager.HTTPClient.networkReachabilityStatus != AFRKNetworkReachabilityStatusNotReachable;
-}
-
-@end
-
-@implementation RKErrorMessage (Mapping)
-
-+ (RKMapping *)mapping {
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
-    
-    [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
-    
-    return mapping;
-}
-
-+ (RKResponseDescriptor *)responseDescriptor {
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
-    
-    [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
-    
-    return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

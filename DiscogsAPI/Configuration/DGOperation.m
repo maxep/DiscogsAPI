@@ -22,6 +22,9 @@
 
 #import "DGOperation.h"
 
+// The error domain for Discogs generated errors
+NSString * const DGErrorDomain = @"com.discogs.api";
+
 @implementation DGOperation {
     Class _responseClass;
 }
@@ -31,7 +34,12 @@
 }
 
 - (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass {
-    self = [super initWithRequest:request responseDescriptors: (responseClass? @[ [responseClass responseDescriptor] ] : @[]) ];
+    NSMutableArray *responseDescriptors = [NSMutableArray arrayWithObject:[NSError responseDescriptor]];
+    if (responseClass) {
+        [responseDescriptors addObject:[responseClass responseDescriptor]];
+    }
+    
+    self = [super initWithRequest:request responseDescriptors:responseDescriptors];
     if (self) {
         _responseClass = responseClass;
     }
@@ -50,18 +58,16 @@
             success(mappingResult.firstObject);
             
         } else if (failure) {
-            failure([NSError errorWithDomain:@"Discogs.api"
-                                        code:NSURLErrorCannotParseResponse
-                                    userInfo:@{NSLocalizedDescriptionKey : @"Bad response from Discogs server"}]);
+            failure([NSError errorWithCode:NSURLErrorCannotParseResponse description:@"Bad response from Discogs server"]);
         }
+        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        RKLogError(@"Operation failed with error: %@", error);
-        if (failure) failure(error);
+        if (failure) {
+            NSInteger code = operation.HTTPRequestOperation.response.statusCode;
+            NSString *description = error.userInfo[NSLocalizedDescriptionKey];
+            failure([NSError errorWithCode:code description:description]);
+        }
     }];
-}
-
-- (NSError *)errorWithCode:(NSInteger)code info:(NSString *)info {
-    return [NSError errorWithDomain:@"Discogs.api" code:code userInfo:@{NSLocalizedDescriptionKey : info}];
 }
 
 @end
@@ -80,6 +86,22 @@
     
     NSURLRequest *requestURL = [self requestWithObject:request method:method path:nil parameters:parameters];
     return [DGOperation operationWithRequest:requestURL responseClass:responseClass];
+}
+
+@end
+
+@implementation NSError (Discogs)
+
++ (instancetype)errorWithCode:(NSInteger)code description:(NSString *)description {
+    return [self errorWithDomain:DGErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey : description}];
+}
+
++ (RKResponseDescriptor *)responseDescriptor {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
+    
+    [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
+    
+    return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)];
 }
 
 @end

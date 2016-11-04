@@ -78,8 +78,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             success();
         } failure:^(NSError *error) {
             
-       //     if (error.code == 401) {
-            if (error.code == -1011) {
+            if (error.code == 401) {
                 [self removeAccountCredential];
             }
             
@@ -94,7 +93,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     } else if (self.HTTPClient.accessToken) {
         success();
     } else if (failure) {
-        failure([self errorWithCode:NSURLErrorNotConnectedToInternet info:@"User not athenticated yet but no internet connection"]);
+        failure([NSError errorWithCode:NSURLErrorNotConnectedToInternet description:@"User not athenticated yet but no internet connection"]);
     }
 }
 
