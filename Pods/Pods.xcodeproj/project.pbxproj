@@ -10,12 +10,12 @@
 		03A1EA48DD97387F4B338F0A85E39878 /* RKHTTPUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2570162B5442187A1269B7246B23F575 /* RKHTTPUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03E1107CAFCDA13E90E9949991ED05CE /* RKURLEncodedSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEFD5FF962327ABB2138141D1468A0C /* RKURLEncodedSerialization.m */; };
 		05CC45C85723910AA01EF2822BAF5188 /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
-		06654E99CFC19D9F3D9B2ACECC3E467F /* DGProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = B8D8AA57644E9F31E23EE2A1065E3B3B /* DGProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06654E99CFC19D9F3D9B2ACECC3E467F /* DGProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E43EB4B463892CFD1B1250544FB6C0 /* DGProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		075F2C5B90517F852389F90AC23E4C81 /* RKRequestDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A2804A942471D34D066D134F58A37 /* RKRequestDescriptor.m */; };
 		08BF60242287D2593B38AA6D36CA2D5C /* RKMappingTest.h in Headers */ = {isa = PBXBuildFile; fileRef = DC99DB70F5A51B6CABC0366A8DA0E0B3 /* RKMappingTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		096C0891FB1D891ACA8A880A761FB2E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		09B90BCE07C2AE448C80729984BD996A /* RKMIMETypeSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F64416315799267D2A884A282BCC51D9 /* RKMIMETypeSerialization.m */; };
-		0A7D5BFE38253C3F4CF4548FA42D27E6 /* DGCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EA99E433B50D0C1186A050B8B6AB35 /* DGCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A7D5BFE38253C3F4CF4548FA42D27E6 /* DGCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = C00FBD9A1133A2FFC5C854AC4AD74291 /* DGCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A9FF743D0D9BC15500E8A0AE39D46CF /* DGLabelRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EF2F44DCF019F2E8DD98921C069C13 /* DGLabelRelease.m */; };
 		0BC063F99793F82A9CE410A8EDD9C8B0 /* Pods-DiscogsAPI-Discogs-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A695DC1CE1C0844CA04B320DE5C5C8 /* Pods-DiscogsAPI-Discogs-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C63BC3203AED16F677F6247F3260EB6 /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = 481E80FF48FB4AB6D428809FDCA402E1 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,7 +23,7 @@
 		0DC6F2E91E385235FC4EA19AFF96F63C /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F03782CC2A1098A112F579D1EBE985 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0DFC8F5DE58D57A565563D1B2A1A4399 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA202D5EC5F7EF92A7576CB1DEEFCF8 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E9C73836D7262D72ADAF1B3DE4E0C26 /* DGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D68361C2D3AC9AEDD98F5205DD481079 /* DGArtist.m */; };
-		0EA0BEF4427E81F277E9ABE146CC6EF6 /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B47754546B6B7F8EB2ABBA352B3F34 /* DGCollection.m */; };
+		0EA0BEF4427E81F277E9ABE146CC6EF6 /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86193DEABC5E285F761809021BEFD4EA /* DGCollection.m */; };
 		10BA07CEDB935EA5F92147602FCF8155 /* RKPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0296C59EF92FB5E5BFB346CD4B10C /* RKPaginator.m */; };
 		10D44A515790C05379EC9835C712F185 /* RKOperationStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B05AF7D078BBF8462BA1239FA3A33 /* RKOperationStateMachine.m */; };
 		124F59EE1CC5A8370D022922C4B9CE1D /* RKRequestDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C005CCFB83F575B4F29054F84CA7770C /* RKRequestDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,14 +49,14 @@
 		1F8E96ABE602F9A6D86547C58D9DBD73 /* RKMappingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6F7A1F03DA648EE42C6662DDD1CA65 /* RKMappingResult.m */; };
 		2085A073A87DE0B39AB460A120BDA762 /* lcl_RK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFD596C9F4AA0818DB2F246C4874865 /* lcl_RK.m */; };
 		21410E655A94657A6C74BEFEF5E3AB11 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0F3C3EB50CAC8D41CD3D2ABD856EC7 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21FEE79F6299C44FCEF5F10406801FA9 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2072EEA55D1361AF8A78D29EA3D8A677 /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		21FEE79F6299C44FCEF5F10406801FA9 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		22498811F7831A1B83F11DD56681FD4C /* AFRKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8356DA8236F7C0ED307D7B1F95A68 /* AFRKHTTPRequestOperation.m */; };
 		23FA088FC1C4DA7230CF11C37683F0AC /* RKMapperOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA3AFF8E0592EB192C53EABCC885F9D /* RKMapperOperation_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24EB2D6C3D86E31FD25EE6949C9EC988 /* RKISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C61DE0BF5A87A3FCB2BE57D963C462FA /* RKISO8601DateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2595951889A7F5677682C122DC5339CE /* DGMasterVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E074D93B34581EF7BD3AF12CCB232BA5 /* DGMasterVersion.m */; };
 		2617075B6C1F3AD6A15BADF74D1F7241 /* TKState.h in Headers */ = {isa = PBXBuildFile; fileRef = 03644BD415C744237ED5004B6A427229 /* TKState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27A059A20F0E97160ED4FC265A1F8F15 /* TKStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A6F4E348114BA41DDD4E2BB4A6032B /* TKStateMachine.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		27ACE79998F2337B72398D61B0439BC4 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E03E75890E27CD03660F82FDE7363B /* DGReleaseInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		27ACE79998F2337B72398D61B0439BC4 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = BB19812864F717734A35142B7C35EC6A /* DGReleaseInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		27DA3C60B3BCCAA5B0DFC469606377F7 /* AFRKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4D02DF5516DD5AC9ED96F5CF9B6AAD /* AFRKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29975E3508B3E319CA613B20DD6CD688 /* RKMapperOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D53C185BD4ED1FDA636D78110B1C3076 /* RKMapperOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29AC87119D99346779D38485B9082535 /* RKOperationStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E7EA53BCB7811C0D0081A5285B83749 /* RKOperationStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,21 +71,21 @@
 		31916D7257DB86D00EFB3C56BD42634E /* DGVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9686CA33554BDD3140170B40B7EFF /* DGVideo.m */; };
 		319A733197F2D13E174C94085C1A7B01 /* DGOrder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B780CFEDECC3F22633B4120F3734AF37 /* DGOrder+Mapping.m */; };
 		3208FD4776E7F9B048E53E30C7B2A0DB /* TKEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = BF89F4A4D6F097F16CC94FC4EFE8E36A /* TKEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		324BA6C3FBDBFED69CFD1418B452DC5B /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFABABE450F44C7E5A743CC564414B90 /* DGAuthView.m */; };
+		324BA6C3FBDBFED69CFD1418B452DC5B /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = D910CB028A95984D1943085833F72AB1 /* DGAuthView.m */; };
 		32511EE9D64D8C3878C34AE60310F406 /* DGResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 66CA4CDBB603199565A8618D78D6831D /* DGResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326D9A39EB87AEF5A8921D04157CB9B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		330282168C7322069F2F0CD5D92D2BE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */; };
 		33A6411DEDC11DEB4E290FBF220107A8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */; };
-		33D03594AB66D21B404A6200F17DABBD /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B38B8EB47113BAD4891C927797FC8E9B /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		33D03594AB66D21B404A6200F17DABBD /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E081A70F599B47D0EC65CBCDC7004B /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		33D1F42674A434F06BD0BEEFC24B64E0 /* DGSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74E8B810D43C41748B3660DE020473 /* DGSearch.m */; };
 		33EBB16647EEA80D824B146CFA7C3C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		359F6F57A0377BC3B65CEC60222AC146 /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CCBCB7FFCAD1127D976815569DDC5 /* DGRelease+Mapping.m */; };
-		35ED2C78BE38E9766323CD101F53E1BA /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 477E8859DAF3DD30154A4A00472C4718 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35ED2C78BE38E9766323CD101F53E1BA /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 59DA28BFD086821CAA550872DF73D861 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		395B4EBF2DC30FFD754BD57825543738 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 8670DD237F17144656B8081430021F7B /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		397B16E94D24FD19C1758E35A72FCFFC /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB59B1D678500DDC0B2077DA0BF0613 /* DGMaster+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		39F34E6A0279466AFDB1D22D83A779C5 /* DGCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E1434693415C2530C0EC6BEBC47DA /* DGCommunity.m */; };
 		3A0AB049A802103C1EED13A92398D910 /* RKMIMETypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF9730CE7A8DC4EB655060B1E824AA /* RKMIMETypes.m */; };
-		3BE37A14F67F0504A8629D4164E8999C /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8110BDC1C698C1A53BEA353D570FC4 /* DGProfile+Mapping.m */; };
+		3BE37A14F67F0504A8629D4164E8999C /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */; };
 		3DED833C51D88F361FBC11548C14E4C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
 		3DEFDD72CC2B5215DE6808242D8BA2B5 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7795D66807B4BBF4F0B294443F9357 /* DGEndpoint.m */; };
 		40775FD09182A88350B1B3A2592DB8CC /* DGVideo+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F57B838576E1E4B28DE19DB7ADB9F /* DGVideo+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -94,10 +94,10 @@
 		449523075D48B8358882E004906111B2 /* DGFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AE3E9B194B2546524D8647E8E8C5 /* DGFormat.m */; };
 		44F9621222EF6A5D3656DD117967CFE5 /* RKISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 108EA661F270F1D4F16EF3D0E93A6277 /* RKISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		457A19E25BD0590BBC3C9AA2C8F10864 /* DGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E1B536DC7C73467B27544FFC575677 /* DGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46965EA184BD6A05792773EFA4D9F0AC /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 459FF93D2B3AC1B73C0182948E4BC4E7 /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		46965EA184BD6A05792773EFA4D9F0AC /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B0600E8D151BCD913201402006CCBE0C /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		474416D3803AE5734CE14AFC18128307 /* RKMappingErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = B2562DA8D5C734D02F1F8FDA2D511A8E /* RKMappingErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47465E16E3B37DDE90419EB042F009CC /* RKConnectionTestExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = CB4D95706211F528BD9D9357C80144E1 /* RKConnectionTestExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47B3B30363CAF403BE41F02456430BE4 /* DGCollectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = F9743C4F2BF7E408A98EAFCEAFACC926 /* DGCollectionField.m */; };
+		47B3B30363CAF403BE41F02456430BE4 /* DGCollectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FB7A0E8F02A07FB6F977BD5920C35D /* DGCollectionField.m */; };
 		49BA1FA9569A96CA8C66A532FD53EDA6 /* DGRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = 913A2EE101889FA287C4AAC252FA4E99 /* DGRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AF1DEDE214C7B34B092B5D5A3B62E69 /* RKMIMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E0F6FA96B250955140457B5BA7684E4C /* RKMIMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D329A9118370A1DFCD5872EE62024AB /* TransitionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD8A144BC2DC1F89AACC3FEFD0AEB9 /* TransitionKit-dummy.m */; };
@@ -114,7 +114,7 @@
 		5723A0B482D8FEB860F919FAB4F3FDE8 /* AFRKImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70485FA947B3C1BEAA9AD98A86AE3561 /* AFRKImageRequestOperation.m */; };
 		58A39B4D4D2DB2A2026DFD11BF32261C /* Pods-DiscogsAPI-Discogs-objc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3CB61D005543784316A0D16A02A8B72 /* Pods-DiscogsAPI-Discogs-objc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58CE082239E7B1C141A4532287B7B2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		592BAE3500BC9CD38807B6FD50D6AF5B /* DGCollectionFieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C8486546BD3AC94D8FFD680A52CAF1 /* DGCollectionFieldInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		592BAE3500BC9CD38807B6FD50D6AF5B /* DGCollectionFieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A335F8D5D459340CE0E91F5B157A618 /* DGCollectionFieldInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A9D2926279C277381E5A22F83BBC775 /* RKTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDECDBDE789B95DAA083ABCA3DD5403 /* RKTestConstants.m */; };
 		5BC8F6443A7D9E3D0EDCCED31560F709 /* RKRelationshipMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C71724B9ACE5AD4DAA67EC2F42F3CB /* RKRelationshipMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C33235097DF619A8C6DDB21EA6B3945 /* RKURLEncodedSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E0C9CE4199EF882B0499D0A855799F1 /* RKURLEncodedSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,12 +127,12 @@
 		639694E698BDCCCA290DCAA248D62769 /* Pods-DiscogsAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE54B03D9D89C54C5BA4FB1B23BF203 /* Pods-DiscogsAPITests-dummy.m */; };
 		64F8F75DDC8FE252FA1262ADAD441082 /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E5D7AD1E7AD16580AFF53D487D2001 /* DGMasterVersion+Mapping.m */; };
 		659A8C295B60585D113E8C71F374474F /* UIImageView+AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 62FCEA87A5D747BBB0141BA9ED73BB0B /* UIImageView+AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		665C98DD5F4B2C1438F1580FA9E9718F /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = D508AFC44E407E3FD04F45A826F68633 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		665C98DD5F4B2C1438F1580FA9E9718F /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		672A608CAD241FFDAE9BF6ACA465B0AA /* RKResponseDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EA5368A3656222A335A3D0337CABE2B /* RKResponseDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68D1D08EF5BD3FBA12EB757FD0266D31 /* TKStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC2B58E1543A6929B8173A5B50A4F3A /* TKStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6972C9508776995FB498FD7ED5B845A0 /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94DCCC52C26256824622985140BECE /* DGLabel+Mapping.m */; };
 		6AE706F4A1ED22D6A5D58259A92E842A /* RKPropertyMappingTestExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE072B2CE41BF61AAE2CE2ADB2CAC54 /* RKPropertyMappingTestExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CA10004763F4A9EED873B40E6E63ADB /* DGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F0BC756A84BBDF5E189B84F49604C8 /* DGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CA10004763F4A9EED873B40E6E63ADB /* DGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C5322833468905636FEFB314271A12 /* DGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D0BE2C70D2A885D44E66CC6D5969599 /* RKStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D84E2B7C4EC3F17FE1D22E953B17645 /* RKStringTokenizer.m */; };
 		6D149A6376EBEB9F2062AE24C7C3C09D /* RKConnectionTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 230599FCBC6CA7A070F3BE2D72E4C688 /* RKConnectionTestExpectation.m */; };
 		6D3387138370E45BFEED70DC71EA60FF /* RKValueTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 908CC6AFF8B6C3E69EFE76093D0FB716 /* RKValueTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -158,21 +158,21 @@
 		7F392AD0CAD953D57794C365C9C9D9D2 /* RKDotNetDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD992FD4388B5CB11EFEBB51483D91F /* RKDotNetDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		803474E8BB2D729E15E0EFDB92159277 /* DGArtistRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BF6106505B57717680B8F386C3763E /* DGArtistRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8145BF18A268071443A3792D735E0E79 /* AFRKXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDED473B869DE1D2D870B8506B11027 /* AFRKXMLRequestOperation.m */; };
-		818AD8B7B4860176B13792DE7A9B1FE2 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD920D3F5A57109E19CD5EF606BB14 /* DGTokenStore.m */; };
+		818AD8B7B4860176B13792DE7A9B1FE2 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FD9C893848A8935614E6F65E9BE1AC /* DGTokenStore.m */; };
 		81AA5FC9146CD10E253966274DC680DC /* RKBenchmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CB02FD79F52716E1924BECE1B183230 /* RKBenchmark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		826B05FA9C98F1816EF89F8FC630805F /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5FA89EB2479A74D37B4A5A14E9A813 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		826B05FA9C98F1816EF89F8FC630805F /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E5F46E047E2F68D8F1B7C8E2E8C005 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		83DF556CF2209EF38468039B76616031 /* DGIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CD941411506A81580DA5322638250217 /* DGIdentifier.m */; };
 		8443500FC757F4CA8FCF06F796AB94AE /* RKObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D030B9CBBE0FE4B8F054F13107091BC /* RKObjectManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847736DBB02431DDD44DDCCD2153898B /* Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4A1163E64339F3D6F0BBBD8D15B17B /* Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84AD6267B778F8A0598FFDB075004351 /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21753FE30E9A0D39D8D8997DE9E0CDDA /* SOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85257E8054CE7FA47297DADB5EEAA480 /* DGListing.h in Headers */ = {isa = PBXBuildFile; fileRef = A651AF0C92B3E6799C70129C1C50FADE /* DGListing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85A72167F4F850E5F5AF9AF223C2ADB9 /* DGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EC13E9E4FADCA3CC01157271DF8B1A37 /* DGUser.m */; };
+		85A72167F4F850E5F5AF9AF223C2ADB9 /* DGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD156913D6E5B1D53711AA532421B70 /* DGUser.m */; };
 		8649FB39060E76A98E2F00D42FDDD250 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 627EC94F132E2169AB651C78E3E3AC10 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		86E27B8DE536A3905AFC9C2D2B389F86 /* SOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */; };
 		86F14DAE34308C597AD7C69E78FEB7D8 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9289DE456F5B82C7A7CDFA21059DCE08 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8786B399C18FE68D2CC6B67958754623 /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D780B85261865E7D70D2044D4F2B2D9 /* DGTrack.m */; };
 		880BA173E15D398DE640A951242FF737 /* TransitionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E45A5B0CD5F64B2A47368E48E58DD25 /* TransitionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88579A607EE1C802064DBBBA84D8FD24 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CD413CE82DEFFA83D275B5AA27726 /* DGReleaseInstance+Mapping.m */; };
+		88579A607EE1C802064DBBBA84D8FD24 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E15F42CB7CED86DFA24678BC5E7E29 /* DGReleaseInstance+Mapping.m */; };
 		88BC3178A378DF5E8CC0EDB57E64FD7E /* SOCKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E78B56FFE6505980D61B3C39439440 /* SOCKit-dummy.m */; };
 		891503A9666873331BA66347BE41FBE7 /* RKPathMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6199F326A1BC6771AA1F34E9A5DDB4 /* RKPathMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89DF919D6B329967D97F5D0485D0CF75 /* RKObjectUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E0AB874FB7DD082B1A02B08DAC647E /* RKObjectUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -181,13 +181,13 @@
 		8CE4BEFA25F2ACB79EA32862D7FB5E54 /* Pods-DiscogsAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD75E820F4CB385EE82F452EEBA3EB /* Pods-DiscogsAPI-dummy.m */; };
 		8EC1BD245F282E20A74696764DFE73B3 /* AFRKJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 43B7941D25511F4F14723FF51C5575D8 /* AFRKJSONRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F91BB17C6D0ABD26F83C4095920EC76 /* RKRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = B7072B7D13D170CE3CD43FC5A295CF6F /* RKRoute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FE44B8F42F5178CDBFC6664C4354814 /* DGReleaseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = E83267C7E8A292C5EB4F5528C995DBB4 /* DGReleaseInstance.m */; };
+		8FE44B8F42F5178CDBFC6664C4354814 /* DGReleaseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AADDD9FAD1E66ADB8249D2F3753C145 /* DGReleaseInstance.m */; };
 		9095449059265D8B05E669D0E2BA7846 /* RKDynamicMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = DF54478A0C7F04E5D1E4C305E30884A7 /* RKDynamicMapping.m */; };
 		92B7173C83C59008D6D95AF933DE1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		94291BE5F70E80E8E16E3886928933CB /* RKNSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = ED78ABB06472A7E1894323A2DD4FAFE7 /* RKNSJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		942B1214CB6E1CDF47ECC0CB025AD43B /* RKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BE6CB048F65F844100257C62981AB5 /* RKRouter.m */; };
 		946742661E6CF7AFE6F4B5C0DDD7F0DB /* RKErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4926479BBFD94C009E4E02BE31EE5205 /* RKErrors.m */; };
-		95AEC9473F6F996461FAF993CD0C7634 /* DGProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F4E529B098A1B51F659E1B19750172 /* DGProfile.m */; };
+		95AEC9473F6F996461FAF993CD0C7634 /* DGProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FD73E6DA0CC0F1217640151A04524C /* DGProfile.m */; };
 		9683751652A6CF5664AECBB53EA56724 /* DGMarketplace.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EFB00777B1001518941259E0B75F6 /* DGMarketplace.m */; };
 		986C25B7E65E920C1E9A76851C73D9C2 /* Pods-DiscogsAPI-Discogs-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB868B2B7CBB82DD5B5EBC13E57300F4 /* Pods-DiscogsAPI-Discogs-objc-dummy.m */; };
 		9A379EA915A56279B951392FFB4CEFA4 /* RestKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED08E6827DCBA3079C26DD09720EDE /* RestKit-dummy.m */; };
@@ -201,7 +201,7 @@
 		A1AFDCD9CF501D7EBF73A8ED1F62508B /* RKResponseMapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 445BC27D7CA137C09D12778798186C7A /* RKResponseMapperOperation.m */; };
 		A25C02A5449044AE5F63EA9B0923CDEC /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = C48B9BEC34CE27D8FD23E8ECB299C6C6 /* AFOAuth1Client.m */; };
 		A27EAC45DC7029557315F37CD7BD1373 /* DGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7639C60417B4A68623998B34A0425B3C /* DGImage.m */; };
-		A5B22C04E9908D12226570CA7A4E2D3B /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B971BD60C8C15CA10C0150161E4421 /* DGCollectionFolder+Mapping.m */; };
+		A5B22C04E9908D12226570CA7A4E2D3B /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB15984B9C5A8944048365B56D6C1 /* DGCollectionFolder+Mapping.m */; };
 		A761A4DE0B8DDB64C16DD0A8678E3130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		A77C7AE3CD869D6E94CA84913E951895 /* RKTestNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 362B1EEFAA64956C3DD71C085E525DBF /* RKTestNotificationObserver.m */; };
 		A7D1C6F86F512BE9CE085DCE7A856E91 /* DGSearch+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FD94A5C88C5DF0FA85ECBE07871FB1 /* DGSearch+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -210,21 +210,21 @@
 		A8C227A295F726B5B9E983E01CA3BCCB /* DGPagination+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 55062F777931729ADCEA11032096F2C8 /* DGPagination+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A8D3E3B5619499C951CAAB7C79FAC8AB /* AFRKPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B4782701D993763100C50932170F389B /* AFRKPropertyListRequestOperation.m */; };
 		A8EAC0961915B602ABDE12430254CB2D /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC84AA926C602D5C538165137B18A1A /* DGCommunity+Mapping.m */; };
-		A9428BEFC18803D6218077D3A0A934C5 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1666873241266AF81119FB7A35C0E45F /* DGIdentity+Mapping.m */; };
+		A9428BEFC18803D6218077D3A0A934C5 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 397A6F39F664A95EE6C7D6EA3B9FEA0E /* DGIdentity+Mapping.m */; };
 		AA1857C4F8B75F80CB494A663335BF4C /* TKState.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A2178652A7D290050A4C3E0D8D4EE /* TKState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AA3D1480D276DF62A4FDA08F60323492 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9AA2C8B483F0BB845D5961F02BCCA60 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AAC7AC33B2956E02770ED4AF4B1B2CD7 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 2063926E614977C321BA952721BC03EA /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC7AC33B2956E02770ED4AF4B1B2CD7 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = E543EE0DBC74A8D8EEFAED85655A605A /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABEEEFBBCE8003938279C5E5C8D2C6CB /* AFRKImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C8CBDE5E24D1FF119E14E07032DAB8 /* AFRKImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABF856BFC9BA4788769A86836AAE3A91 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = A555BD048A321E33461F89C5AFD8FC76 /* DGOrder.m */; };
 		AC69676A9974A008F732F8BF14C01104 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFE5D131BB01827EF8DAFC830CBD5DA /* DGObject.m */; };
 		AC8F78376BBA3F13FB68E10336ED487C /* RKPropertyInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B255DBD5216C917320CADE27692C9 /* RKPropertyInspector.m */; };
 		AC9DA7672B9F4472CC8BC0B1DCAE8C33 /* RKPropertyInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DC13F6EE0A61D405D90390A598C23B62 /* RKPropertyInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACCB39910159F975A9C55763C8A2EF35 /* RKAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DA771FE63B276102773A5ECD5C412A /* RKAttributeMapping.m */; };
-		ACE8408953D0CDE7EA8F3E05D365F1BD /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FE0F6968FEF0EC8F9687B8836CCB061 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ACE8408953D0CDE7EA8F3E05D365F1BD /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 7083E123EF3DF51E8E0567B007A987F8 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AF4AC34F13138A09CDDD7F79DA2D78F4 /* RKTestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CC287D5E3229539D58F644275047CF1E /* RKTestHelpers.m */; };
 		AF70F2F6598A09538C05F46859DC44AB /* RKObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8872CC57CF9E94404C904AC53BE179E0 /* RKObjectRequestOperation.m */; };
 		AFB405659596C41F13526826440E29EE /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4E90F6CF3DA7E5A69C149F665AC7C0 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AFBB286B6FAF8BD3711FCAF74BD0D7C2 /* DGCollectionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D483EB2DD8C933E5BC44EF04958BAE /* DGCollectionFolder.m */; };
+		AFBB286B6FAF8BD3711FCAF74BD0D7C2 /* DGCollectionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */; };
 		B066A5D7DF4E48D6532789E1C1B9051F /* DGPagination+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B761641F84DB080D6CBDD2EB5D6730 /* DGPagination+Mapping.m */; };
 		B08407D2E3B766012EC509BA96897A43 /* RKMappingResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0DD85B4446E2D786875093BEFDC9B0 /* RKMappingResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0A1189E85DA7FD804486E39C1720580 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
@@ -237,7 +237,7 @@
 		B69D7712C58C3955FE3037D2E823DD31 /* ISO8601DateFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F7A23C1B6150015CC1A192CC61587 /* ISO8601DateFormatterValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B7592411B0F737FB95A9CB78FCBDEB5C /* RKAttributeMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 34925FECCED6C9119ADB0729B58E822F /* RKAttributeMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7F110A3BCB7226B30339D6266048E3C /* RKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CDC2F062B16DF3BFFEB10E8267BC /* RKLog.m */; };
-		B827F80684D0E6807BC9272E32DA3B7A /* DGCollectionFieldInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE8D30875C2AA1C8BCCA438F0F62F14 /* DGCollectionFieldInstance+Mapping.m */; };
+		B827F80684D0E6807BC9272E32DA3B7A /* DGCollectionFieldInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3BD5E424C55FF5F944C775958ADE6 /* DGCollectionFieldInstance+Mapping.m */; };
 		B8BE2BA193F20630C8A1ADD0FD80DE03 /* TransitionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */; };
 		B9448A6E1AE165EED913D9B034335CD0 /* RKObjectMappingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D896D2B4D78745A437486071FA653C2 /* RKObjectMappingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA95E0953AA0722D142CF8B7D1530A9F /* AFRKHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F44F02D215CDEA426565946E07F9A8 /* AFRKHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -256,7 +256,7 @@
 		C4333DB30D6A66360B74361AF960B934 /* RKValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F342089993ABFD284E5CEBE72E904 /* RKValueTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C43A94B286F9221DC395F41342521EEF /* RKStringTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2AB66B7965E9EC2C1BE3F27F5FB5CEA /* RKStringTokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5BD72415986B9161089BF2023B91A6A /* RKValueTransformers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E3C7E26714F8AB6A9410A8C8EF2D06 /* RKValueTransformers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5E3D8D6B4B56D08DE766E375BE1EBCB /* DGReleaseInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE6D457C8EA4FC8328E484CA4EE211F /* DGReleaseInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5E3D8D6B4B56D08DE766E375BE1EBCB /* DGReleaseInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84CBC5BEC8600FD6559591A790BDCC /* DGReleaseInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C633E4F7A425A65D1488949993193CB0 /* RKDynamicMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E050AEFCFE38E49574A1628135F8C0C7 /* RKDynamicMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C69612E2260EDA3D8D6A184827C85971 /* DGArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 1701043A5EC0E07A6556CD77CB98C065 /* DGArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C80E9FDA79B269EFA18BC1E72D1C0380 /* DGMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B9668E6CEB6CE4E6F9780C98144E05 /* DGMaster.m */; };
@@ -271,10 +271,10 @@
 		CD7BB6C4D5761BF7560296822E5684AB /* ObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7360278C5FD2C5F61D68545B95AC68 /* ObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF623BB3D01F6F2DF65371A57BE19234 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8B0AE62EC7B6D3621BF691A549217 /* DGHTTPClient.m */; };
 		CF91910FC065C08949B50D4DFD9CBD98 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0694DF1EA3B96CA13154C5F2D1CA1AA8 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF96CC00A91B1789060775F8300B8CB5 /* DGCollectionField+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E72B76179FA8405089E92BCADC4BB9B5 /* DGCollectionField+Mapping.m */; };
+		CF96CC00A91B1789060775F8300B8CB5 /* DGCollectionField+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 697B038A9AC9DA8C26D602AA571C7927 /* DGCollectionField+Mapping.m */; };
 		D03D63FCA63C4C20DD333266511F168C /* RKManagedObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59498D0D1FA09931DCD449EA0255CB /* RKManagedObjectRequestOperation.m */; };
 		D072BEE7AC57116FF4E59F9DA6F2C733 /* RKObjectMappingOperationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BE58DB509A211B0048B2A4CF6CB56E /* RKObjectMappingOperationDataSource.m */; };
-		D342507CB4F7BF09173BD8D9D72B6CE8 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = E37CA594BCD2939D064EEADFA711D46F /* DGIdentity.m */; };
+		D342507CB4F7BF09173BD8D9D72B6CE8 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F64406D3448BA8CE0FAC200C761 /* DGIdentity.m */; };
 		D350C7C1DA513A1C57612FB430E88349 /* RKResponseDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8FD3A39CAE9474ACA5B180891D8B16 /* RKResponseDescriptor.m */; };
 		D3A2F316B7B84C0B5043234797EAD194 /* AFRKURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF718FD221B8445F6598DE9012F705F6 /* AFRKURLConnectionOperation.m */; };
 		D3BE918141838F0C957D6264E1DAB0B1 /* DGLabel+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D01BD4618E8E13DB69509B9A26D08D5 /* DGLabel+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -282,7 +282,7 @@
 		D486E64639EB53F26DCEE370583FB80E /* Pods-DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA82F6A1542D8FC2882F661DCADB750 /* Pods-DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4E253CCF66F707AC973534E772CD8EA /* DGDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A3EFB92980596AB78500B7E4E6ACFB /* DGDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D52A93C9466D99A36070E3F374A29C2B /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4D631DEE061B9C61A44C28954B3B3D /* DGTrack+Mapping.m */; };
-		D544CD56B237B8C1DB25007D6B641047 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 165D3816C5B6995EDEB197E5E6B92CD4 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D544CD56B237B8C1DB25007D6B641047 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = A48DDE92944C9950F00B2C3929F60EEC /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5E258F824434CB3BA913BEC30720FFF /* RKDictionaryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5484094171257ACDA6A2190557C8CF /* RKDictionaryUtilities.m */; };
 		D6BEECD5EFCECCFDCA3B103D62DB2E89 /* DGMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 929C45D15204EBFEA714B4365D3C5484 /* DGMaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D71506174F6FF08C774616F3EF3641BD /* RestKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D374D9419BAD7609760A20393E86D6 /* RestKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -291,9 +291,9 @@
 		D85AB5A725FD60B498F504F9EE51F10E /* DiscogsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6199F99E75943D038653CFD4B53A4F3F /* DiscogsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D87F635BD2E86A7FF2CF08B4F4EA2900 /* DGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F906F4C3F6E3F2565A08ED021DFF1BF /* DGPagination.m */; };
 		D8986A3DBF9A91CC8B0D7B011A8BE5E6 /* RKObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8F63A7873C89D449A83D8D32E45BED /* RKObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D90673B23290E283E7B30D4859EF5684 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 98748BF8403D6C8C648DF926B692DF07 /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D90673B23290E283E7B30D4859EF5684 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 361F5D2A87A62C149D06214F8F325FDA /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D9148506241C2D842C13E7E91AE1F200 /* RKMappingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB8B2597492613A67EC7FFA0D72436A /* RKMappingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9CDB848710A9AF601843EEDEC0FF1F3 /* DGCollectionFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC6DE384A0AAB7AA7F646146728257A /* DGCollectionFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9CDB848710A9AF601843EEDEC0FF1F3 /* DGCollectionFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 82538C90B037D58F214B3D7C82E45AD5 /* DGCollectionFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAA143D4155768EBAD63BFE73B109E57 /* DGMasterVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F0B747984456C6D74B174325713155 /* DGMasterVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC06DEFA353B6646DE431B50339869EF /* RKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = CED6F8C933EB79F185EB7915B43D8CE5 /* RKRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD8B9BA6B890964F343533140DA9F766 /* DGCommunity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0A5B69BD540A7D6E168E508F1B2FCA /* DGCommunity.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -309,33 +309,33 @@
 		E6574632AE395F92587182AEE5408165 /* RKPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD99491EACAF4EC06EC620A7FD047D2 /* RKPathMatcher.m */; };
 		E69FB7A718E58A413270A9459F722298 /* RKMapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F65B4679AC8A37EECA7276BB802EA /* RKMapperOperation.m */; };
 		E7ED51E1F2FDE6F81021F1CB8EF84668 /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6BC5515DC731D6F916D53B01D8FBC0 /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8464CCA58217ACAD83363F3712F6C3E /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 66BE5BBE205770375F7FE1407A6C18EA /* DGWantlist.m */; };
+		E8464CCA58217ACAD83363F3712F6C3E /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B50BB8070E70D494D62AB0A23FC12 /* DGWantlist.m */; };
 		E9E99146A232E0C1041C79A4B138B4A4 /* Pods-DiscogsAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6BF27122AD682743E6009F9184077D8 /* Pods-DiscogsAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9F2A5E632D0C20E42EBE7C3FE23A242 /* RKManagedObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B5121CDBFF8FE7F07433DD40ABA5B07 /* RKManagedObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA1B773FF64C2A7B1013851D77DA8A61 /* RKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C7BB318F3960111F8D9D46D159FC6D /* RKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA882C9CB0E307F383FBF14731337B12 /* AFRKNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DDCF557F123180BF25CCF899C8D387 /* AFRKNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB1739113CA72CE5809FE1F449FF9AD9 /* RKRouteSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE729663DC07EDE4716C4889ED244B3 /* RKRouteSet.m */; };
-		ECEF0A285ED7CDF08F1ABA0CF83DFFF0 /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A303FFA89D41AFB2163D973064208730 /* DGWantlist+Mapping.m */; };
-		ED5373567464FC20B080D5B2E42F2FDE /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = F33B5BF3CB55F5A29F30B5A34E031884 /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ECEF0A285ED7CDF08F1ABA0CF83DFFF0 /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 716D68EEE46E2B74CBFAEE3A9E73A8F9 /* DGWantlist+Mapping.m */; };
+		ED5373567464FC20B080D5B2E42F2FDE /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC7805D5B387A1D2307DA795B293CEF /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F168D21040977687FC404B3AEAE3E00F /* RKSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F8248A69EC4540522101462797669C /* RKSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1C9DA82E77C5FC72EAE46F72020BB76 /* RKTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1280E0481CEA379CC5CE0224958F2197 /* RKTestFactory.m */; };
 		F2AB8F2CD347C9EA3DE13C688DD985E3 /* DGArtistRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = AB70A64CE5FF84E4BE6AC9883A65AFD6 /* DGArtistRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3598E1F27E309532212A007030DDE2D /* SOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */; };
 		F35D9F9ED5F289E42F7725FE7ACE4633 /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D700EF5FAD0FC790010E386BEFA7CAC5 /* DGPrice+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F3D7380F0FAC71F64D87CDE5831E4915 /* DGCollectionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 199AFD4FF078AB8AB918F840717336DC /* DGCollectionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3D7380F0FAC71F64D87CDE5831E4915 /* DGCollectionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 796A6F734895056F91934511B55CBFDB /* DGCollectionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4B71DF292AAF47A6E4557950DDF9C3B /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A5E0511D8C946E9D35C803DCC22BC /* DGListing.m */; };
 		F4CE7660FE93F4F25CAFE31B03CB7243 /* SOCKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0091FC6F110888B25629548DF5D2A792 /* SOCKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5611CED65F129280218A67DAA4FD86C /* DGLabelRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD6617F8DE2DDB460A444611B24D6B3 /* DGLabelRelease+Mapping.m */; };
 		F7E1F682284D52AA469EBBE24439D733 /* RKPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F328146E9FE6B7E883CEC775B2ACA1E /* RKPathUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7EC411A2DA96FBBB9522EE769D21E1D /* DGArtistRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = DF629C00AE369EE0E735EA8666F485CF /* DGArtistRelease.m */; };
-		F80DB5EF783D7F15FD55726C26F04D32 /* DGCollectionFieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D0681D3F1B2CDD0979553FD7BDCE5 /* DGCollectionFieldInstance.m */; };
+		F80DB5EF783D7F15FD55726C26F04D32 /* DGCollectionFieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D1784116484461C22ADCCB99F2AAE0 /* DGCollectionFieldInstance.m */; };
 		F92C445EA3AA5ACBCBCC354B9E86A96E /* AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F742D43175B8495E0328263C38F345 /* AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA0CCEF625A61886934CBC3A54919850 /* DGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3535E164B566604DB924F208AA5EA929 /* DGDatabase.m */; };
 		FAB33B94FE194FA0026D886720F4700C /* RKDictionaryUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CB39B9195FA6F4A45715BBC9A8681C7 /* RKDictionaryUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAB70A5A386F9AD83DC00FD83A4CCD11 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 537FE7C7F44D9C4412025366B44FE374 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB1D53A67A124BDE375A159FD960EDA2 /* RKTestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7533B46D332CF6146ED803BC4E28FEE1 /* RKTestFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCB038BBF9FE11429A49A8728B322A1B /* AFRKPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A227F8D15E121FC79482DEB0047929 /* AFRKPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCBCDB4BAB359439CAC2762F1ADDBC01 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FA219A504EC28D1E11B7F4156EDA9 /* DGAuthentication.m */; };
+		FCBCDB4BAB359439CAC2762F1ADDBC01 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6DCD3591B95AFED69BE1FB227890C /* DGAuthentication.m */; };
 		FCC64FE247E823A272138DCAB561062E /* DGOrder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E56BF9B45149E67834F1A785A54749 /* DGOrder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FD2D7A5D08E015023C06051A73637042 /* DGLabelRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = A527CE55E3117B381BE7287AB878BA0E /* DGLabelRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDED7B4316597E3F82FCE3A66BC04D19 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE1DD945C7235D217C28E6A212F813D /* DGFormat+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -586,12 +586,13 @@
 		08E1B536DC7C73467B27544FFC575677 /* DGLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGLabel.h; sourceTree = "<group>"; };
 		09A5C55ADE8ACAA9485E0F43732010F2 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPI-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
 		09A8356DA8236F7C0ED307D7B1F95A68 /* AFRKHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKHTTPRequestOperation.m; path = Code/Network/AFNetworking/AFRKHTTPRequestOperation.m; sourceTree = "<group>"; };
+		09E081A70F599B47D0EC65CBCDC7004B /* DGWantlist+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGWantlist+Mapping.h"; sourceTree = "<group>"; };
 		0A1F5ED276CDB4AAD971369D457D178E /* Pods-DiscogsAPI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPI-resources.sh"; sourceTree = "<group>"; };
+		0A335F8D5D459340CE0E91F5B157A618 /* DGCollectionFieldInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionFieldInstance.h; sourceTree = "<group>"; };
 		0A7B05AF7D078BBF8462BA1239FA3A33 /* RKOperationStateMachine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKOperationStateMachine.m; path = Code/Support/RKOperationStateMachine.m; sourceTree = "<group>"; };
 		0AD42267ABB2CCC19DD54895F7FDAA08 /* SOCKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SOCKit.modulemap; sourceTree = "<group>"; };
 		0BCA6BE976805F313875EB8F6443EC0A /* RKErrorMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKErrorMessage.m; path = Code/ObjectMapping/RKErrorMessage.m; sourceTree = "<group>"; };
 		0BDED473B869DE1D2D870B8506B11027 /* AFRKXMLRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKXMLRequestOperation.m; path = Code/Network/AFNetworking/AFRKXMLRequestOperation.m; sourceTree = "<group>"; };
-		0BFD920D3F5A57109E19CD5EF606BB14 /* DGTokenStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
 		0C232DAF0A0649A4EC78BD4CEF7321FC /* Pods-DiscogsAPI-Discogs-swift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPI-Discogs-swift-frameworks.sh"; sourceTree = "<group>"; };
 		0E45A5B0CD5F64B2A47368E48E58DD25 /* TransitionKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TransitionKit.h; path = Code/TransitionKit.h; sourceTree = "<group>"; };
 		0E5484094171257ACDA6A2190557C8CF /* RKDictionaryUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKDictionaryUtilities.m; path = Code/Support/RKDictionaryUtilities.m; sourceTree = "<group>"; };
@@ -602,15 +603,14 @@
 		126E8009360A9207FA65CA07B9BB7AFC /* DGArtist+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGArtist+Mapping.h"; sourceTree = "<group>"; };
 		1280E0481CEA379CC5CE0224958F2197 /* RKTestFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestFactory.m; path = Code/Testing/RKTestFactory.m; sourceTree = "<group>"; };
 		12C7BB318F3960111F8D9D46D159FC6D /* RKMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMacros.h; path = Code/Support/RKMacros.h; sourceTree = "<group>"; };
+		12E43EB4B463892CFD1B1250544FB6C0 /* DGProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGProfile.h; sourceTree = "<group>"; };
 		14AC5EC75776B58E07B2F52545A3D0E8 /* RKObjectManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectManager.m; path = Code/Network/RKObjectManager.m; sourceTree = "<group>"; };
 		14DDCF557F123180BF25CCF899C8D387 /* AFRKNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKNetworkActivityIndicatorManager.h; path = Code/Network/AFNetworking/AFRKNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		165D3816C5B6995EDEB197E5E6B92CD4 /* DGIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentity.h; sourceTree = "<group>"; };
-		1666873241266AF81119FB7A35C0E45F /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
+		16E5F46E047E2F68D8F1B7C8E2E8C005 /* DGTokenStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
 		1701043A5EC0E07A6556CD77CB98C065 /* DGArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGArtist.h; sourceTree = "<group>"; };
 		1706DBF5F05AC450A8177B51409819DA /* DGMember+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMember+Mapping.m"; sourceTree = "<group>"; };
 		177B255DBD5216C917320CADE27692C9 /* RKPropertyInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyInspector.m; path = Code/ObjectMapping/RKPropertyInspector.m; sourceTree = "<group>"; };
 		18A227F8D15E121FC79482DEB0047929 /* AFRKPropertyListRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKPropertyListRequestOperation.h; path = Code/Network/AFNetworking/AFRKPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		199AFD4FF078AB8AB918F840717336DC /* DGCollectionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionField.h; sourceTree = "<group>"; };
 		19BF6106505B57717680B8F386C3763E /* DGArtistRelease+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGArtistRelease+Mapping.h"; sourceTree = "<group>"; };
 		1A876888A67EA757E56FFADD4972CE9E /* RKRouteSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRouteSet.h; path = Code/Network/RKRouteSet.h; sourceTree = "<group>"; };
 		1B2506107749B1BD37D4BC4A0AB12D32 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -626,9 +626,6 @@
 		1F328146E9FE6B7E883CEC775B2ACA1E /* RKPathUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPathUtilities.h; path = Code/Support/RKPathUtilities.h; sourceTree = "<group>"; };
 		1F74E8B810D43C41748B3660DE020473 /* DGSearch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGSearch.m; sourceTree = "<group>"; };
 		2008E4BFBE5C52DB8C66CFE4C729D307 /* Pods-DiscogsAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DiscogsAPI.modulemap"; sourceTree = "<group>"; };
-		2063926E614977C321BA952721BC03EA /* DGWantlist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGWantlist.h; sourceTree = "<group>"; };
-		2072EEA55D1361AF8A78D29EA3D8A677 /* DGCollectionField+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionField+Mapping.h"; sourceTree = "<group>"; };
-		20E03E75890E27CD03660F82FDE7363B /* DGReleaseInstance+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGReleaseInstance+Mapping.h"; sourceTree = "<group>"; };
 		21753FE30E9A0D39D8D8997DE9E0CDDA /* SOCKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SOCKit.h; sourceTree = "<group>"; };
 		22EED688E1E8533049F8A03842EC55D6 /* RKHTTPUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKHTTPUtilities.m; path = Code/Network/RKHTTPUtilities.m; sourceTree = "<group>"; };
 		230599FCBC6CA7A070F3BE2D72E4C688 /* RKConnectionTestExpectation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKConnectionTestExpectation.m; path = Code/Testing/RKConnectionTestExpectation.m; sourceTree = "<group>"; };
@@ -656,6 +653,8 @@
 		2FCF4017730E7B3404611179CA87AF8E /* DGIdentifier+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentifier+Mapping.m"; sourceTree = "<group>"; };
 		30F0B747984456C6D74B174325713155 /* DGMasterVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGMasterVersion.h; sourceTree = "<group>"; };
 		31D9EF36C1F7307AEBC335E988AB352C /* DGArtist+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGArtist+Mapping.m"; sourceTree = "<group>"; };
+		31FD73E6DA0CC0F1217640151A04524C /* DGProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGProfile.m; sourceTree = "<group>"; };
+		321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGProfile+Mapping.m"; sourceTree = "<group>"; };
 		33156A8C3E1369F999F524356D370C92 /* DGRelease.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGRelease.m; sourceTree = "<group>"; };
 		33A596A818FD42D83D52A0BBE556DA00 /* DGImage+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGImage+Mapping.h"; sourceTree = "<group>"; };
 		34925FECCED6C9119ADB0729B58E822F /* RKAttributeMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKAttributeMapping.h; path = Code/ObjectMapping/RKAttributeMapping.h; sourceTree = "<group>"; };
@@ -664,26 +663,26 @@
 		35C2ECF15A51D59CB7BEB80C9D5A8142 /* TKTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKTransition.m; path = Code/TKTransition.m; sourceTree = "<group>"; };
 		35C52DCF621BD8CDB2922F00D9D2133A /* RKMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMapping.h; path = Code/ObjectMapping/RKMapping.h; sourceTree = "<group>"; };
 		35E78B56FFE6505980D61B3C39439440 /* SOCKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SOCKit-dummy.m"; sourceTree = "<group>"; };
+		361F5D2A87A62C149D06214F8F325FDA /* DGProfile+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGProfile+Mapping.h"; sourceTree = "<group>"; };
 		362B1EEFAA64956C3DD71C085E525DBF /* RKTestNotificationObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestNotificationObserver.m; path = Code/Testing/RKTestNotificationObserver.m; sourceTree = "<group>"; };
-		36D483EB2DD8C933E5BC44EF04958BAE /* DGCollectionFolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFolder.m; sourceTree = "<group>"; };
 		394D35BEE99F5C1E2D4A667104BEA28A /* Pods-DiscogsAPITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPITests-resources.sh"; sourceTree = "<group>"; };
+		397A6F39F664A95EE6C7D6EA3B9FEA0E /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		39D358D4DB9EBCD763520FB6A43DF338 /* RKObjectUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectUtilities.m; path = Code/ObjectMapping/RKObjectUtilities.m; sourceTree = "<group>"; };
 		3A597EE6D25E169E7A257E6C60E19855 /* RKPropertyMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPropertyMapping.h; path = Code/ObjectMapping/RKPropertyMapping.h; sourceTree = "<group>"; };
 		3C5DB1810AC3A2DBC851F38AB5F0A1A1 /* SOCKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SOCKit.m; sourceTree = "<group>"; };
 		3C6F342089993ABFD284E5CEBE72E904 /* RKValueTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKValueTransformers.m; path = Code/RKValueTransformers.m; sourceTree = "<group>"; };
 		3E0A5B69BD540A7D6E168E508F1B2FCA /* DGCommunity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCommunity.h; sourceTree = "<group>"; };
 		3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA3BD5E424C55FF5F944C775958ADE6 /* DGCollectionFieldInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFieldInstance+Mapping.m"; sourceTree = "<group>"; };
 		40A3EFB92980596AB78500B7E4E6ACFB /* DGDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGDatabase.h; sourceTree = "<group>"; };
+		422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		4289D8AC6AFA126089042E8DA9E8CEE2 /* Pods-DiscogsAPI-Discogs-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPI-Discogs-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		434F742120D50C675631874C7A288723 /* DGIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentifier.h; sourceTree = "<group>"; };
 		43B7941D25511F4F14723FF51C5575D8 /* AFRKJSONRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKJSONRequestOperation.h; path = Code/Network/AFNetworking/AFRKJSONRequestOperation.h; sourceTree = "<group>"; };
 		445994B7D1E3128153E149ED6A7CDC2C /* DiscogsAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DiscogsAPI.xcconfig; sourceTree = "<group>"; };
 		445BC27D7CA137C09D12778798186C7A /* RKResponseMapperOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKResponseMapperOperation.m; path = Code/Network/RKResponseMapperOperation.m; sourceTree = "<group>"; };
-		459FF93D2B3AC1B73C0182948E4BC4E7 /* DGCollectionFieldInstance+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionFieldInstance+Mapping.h"; sourceTree = "<group>"; };
-		46EA99E433B50D0C1186A050B8B6AB35 /* DGCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollection.h; sourceTree = "<group>"; };
 		46F44F02D215CDEA426565946E07F9A8 /* AFRKHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKHTTPClient.h; path = Code/Network/AFNetworking/AFRKHTTPClient.h; sourceTree = "<group>"; };
-		477E8859DAF3DD30154A4A00472C4718 /* DGAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		481E80FF48FB4AB6D428809FDCA402E1 /* DGMarketplace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGMarketplace.h; sourceTree = "<group>"; };
 		488337F42DE4F119CF041FBDE19A69CC /* RKValueTransformers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RKValueTransformers-dummy.m"; sourceTree = "<group>"; };
 		48DE142EFD6CAAA4679922E13CEC9AB5 /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
@@ -692,6 +691,7 @@
 		4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4BD79D1CFA94E347C01D3081A425A941 /* RKResponseMapperOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKResponseMapperOperation.h; path = Code/Network/RKResponseMapperOperation.h; sourceTree = "<group>"; };
 		4C0A5E0511D8C946E9D35C803DCC22BC /* DGListing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGListing.m; sourceTree = "<group>"; };
+		4C5FB15984B9C5A8944048365B56D6C1 /* DGCollectionFolder+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFolder+Mapping.m"; sourceTree = "<group>"; };
 		4CE54B03D9D89C54C5BA4FB1B23BF203 /* Pods-DiscogsAPITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DiscogsAPITests-dummy.m"; sourceTree = "<group>"; };
 		4E5A7404DF8291EF9E031668120BF963 /* RKPropertyMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyMapping.m; path = Code/ObjectMapping/RKPropertyMapping.m; sourceTree = "<group>"; };
 		4FE1DD945C7235D217C28E6A212F813D /* DGFormat+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGFormat+Mapping.h"; sourceTree = "<group>"; };
@@ -704,15 +704,18 @@
 		55062F777931729ADCEA11032096F2C8 /* DGPagination+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGPagination+Mapping.h"; sourceTree = "<group>"; };
 		560481BEA226355F5C4BB004FFF2E652 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57BD5E0E26D51C153DCFD6BB26DD28D7 /* RKObjectMappingMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectMappingMatcher.m; path = Code/ObjectMapping/RKObjectMappingMatcher.m; sourceTree = "<group>"; };
+		599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFolder.m; sourceTree = "<group>"; };
+		59DA28BFD086821CAA550872DF73D861 /* DGAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		5A0F3C3EB50CAC8D41CD3D2ABD856EC7 /* DGOrder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGOrder.h; sourceTree = "<group>"; };
+		5AADDD9FAD1E66ADB8249D2F3753C145 /* DGReleaseInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGReleaseInstance.m; sourceTree = "<group>"; };
 		5BA4778B6BC0869DE978D8F70FF5186A /* TransitionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionKit-prefix.pch"; sourceTree = "<group>"; };
 		5D464E25DD94855A91428A3050D10517 /* DGFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGFormat.h; sourceTree = "<group>"; };
+		5D9B50BB8070E70D494D62AB0A23FC12 /* DGWantlist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGWantlist.m; sourceTree = "<group>"; };
 		5DB0FFB60442529B91E35D8D058EF9A2 /* lcl_RK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lcl_RK.h; path = Code/Support/lcl_RK.h; sourceTree = "<group>"; };
 		5DF3977F53990A8AFEB78EEA89F299EF /* Pods-DiscogsAPI-Discogs-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DiscogsAPI-Discogs-swift-dummy.m"; sourceTree = "<group>"; };
 		5E452BFF5BE44174B62F2606CDB19826 /* DGInventory+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGInventory+Mapping.h"; sourceTree = "<group>"; };
 		5F0404D1B32F8A717EF6DCDB04272EEC /* RKPaginator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPaginator.h; path = Code/Network/RKPaginator.h; sourceTree = "<group>"; };
 		5FD6617F8DE2DDB460A444611B24D6B3 /* DGLabelRelease+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGLabelRelease+Mapping.m"; sourceTree = "<group>"; };
-		5FE0F6968FEF0EC8F9687B8836CCB061 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		614C2EECC2929885103F68D2A9179484 /* RKMappingTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMappingTest.m; path = Code/Testing/RKMappingTest.m; sourceTree = "<group>"; };
 		6199F99E75943D038653CFD4B53A4F3F /* DiscogsAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DiscogsAPI.h; sourceTree = "<group>"; };
 		62771A44B9D4FE3FF9748A0A011EFE33 /* DGImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGImage.h; sourceTree = "<group>"; };
@@ -720,35 +723,36 @@
 		62FCEA87A5D747BBB0141BA9ED73BB0B /* UIImageView+AFRKNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFRKNetworking.h"; path = "Code/Network/AFNetworking/UIImageView+AFRKNetworking.h"; sourceTree = "<group>"; };
 		640AE82F12A9103CF900DF2779003DF0 /* DGPrice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGPrice.h; sourceTree = "<group>"; };
 		6463163A48B4B14D84DEA4C692412337 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		66BE5BBE205770375F7FE1407A6C18EA /* DGWantlist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGWantlist.m; sourceTree = "<group>"; };
 		66CA4CDBB603199565A8618D78D6831D /* DGResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGResource.h; sourceTree = "<group>"; };
 		66EB2F1D787836057F59113DDF58546B /* TransitionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TransitionKit.modulemap; sourceTree = "<group>"; };
 		676CC910005863F2BDA746428A400AE1 /* RKBenchmark.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKBenchmark.m; path = Code/Testing/RKBenchmark.m; sourceTree = "<group>"; };
 		68F8248A69EC4540522101462797669C /* RKSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKSerialization.h; path = Code/Support/RKSerialization.h; sourceTree = "<group>"; };
+		697B038A9AC9DA8C26D602AA571C7927 /* DGCollectionField+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionField+Mapping.m"; sourceTree = "<group>"; };
 		69E56BF9B45149E67834F1A785A54749 /* DGOrder+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGOrder+Mapping.h"; sourceTree = "<group>"; };
 		6C0DD85B4446E2D786875093BEFDC9B0 /* RKMappingResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingResult.h; path = Code/ObjectMapping/RKMappingResult.h; sourceTree = "<group>"; };
 		6C4A1163E64339F3D6F0BBBD8D15B17B /* Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Testing.h; path = Code/Testing.h; sourceTree = "<group>"; };
 		6C58DBC7EEBB2C0362482F3863E8E256 /* RKValueTransformers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKValueTransformers.xcconfig; sourceTree = "<group>"; };
+		6CC6DCD3591B95AFED69BE1FB227890C /* DGAuthentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		6D84E2B7C4EC3F17FE1D22E953B17645 /* RKStringTokenizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKStringTokenizer.m; path = Code/Support/RKStringTokenizer.m; sourceTree = "<group>"; };
-		6E5FA89EB2479A74D37B4A5A14E9A813 /* DGTokenStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
 		6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9F65B4679AC8A37EECA7276BB802EA /* RKMapperOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMapperOperation.m; path = Code/ObjectMapping/RKMapperOperation.m; sourceTree = "<group>"; };
 		70485FA947B3C1BEAA9AD98A86AE3561 /* AFRKImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKImageRequestOperation.m; path = Code/Network/AFNetworking/AFRKImageRequestOperation.m; sourceTree = "<group>"; };
+		7083E123EF3DF51E8E0567B007A987F8 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		7155E9BFBC03A81991CD9098D54A94D1 /* TransitionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionKit-umbrella.h"; sourceTree = "<group>"; };
+		716D68EEE46E2B74CBFAEE3A9E73A8F9 /* DGWantlist+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGWantlist+Mapping.m"; sourceTree = "<group>"; };
 		722E8FA3B3982CE73B744A14F49542DD /* RKMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMapping.m; path = Code/ObjectMapping/RKMapping.m; sourceTree = "<group>"; };
 		73BC0334C18058540D5E97DAFCCDEB70 /* DGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGObject.h; sourceTree = "<group>"; };
 		73C85A417C1F5289FC950152850B626F /* Pods-DiscogsAPITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPITests-frameworks.sh"; sourceTree = "<group>"; };
 		744FEC2AE14D6A0F4E25E68569F3ED8F /* TKEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKEvent.m; path = Code/TKEvent.m; sourceTree = "<group>"; };
-		74B47754546B6B7F8EB2ABBA352B3F34 /* DGCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollection.m; sourceTree = "<group>"; };
 		7533B46D332CF6146ED803BC4E28FEE1 /* RKTestFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestFactory.h; path = Code/Testing/RKTestFactory.h; sourceTree = "<group>"; };
 		7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		75C71E7C6626C58922E416A090B97A0D /* RKObjectMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectMapping.m; path = Code/ObjectMapping/RKObjectMapping.m; sourceTree = "<group>"; };
-		762D0681D3F1B2CDD0979553FD7BDCE5 /* DGCollectionFieldInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFieldInstance.m; sourceTree = "<group>"; };
 		7639C60417B4A68623998B34A0425B3C /* DGImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGImage.m; sourceTree = "<group>"; };
 		76B9668E6CEB6CE4E6F9780C98144E05 /* DGMaster.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMaster.m; sourceTree = "<group>"; };
 		76BF9CCA30A455E426705655E133B2D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77882B7A5CFBB9E2E1880158947743EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C243AF3AA66B0C57142842646D4663 /* DGListing+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGListing+Mapping.h"; sourceTree = "<group>"; };
+		796A6F734895056F91934511B55CBFDB /* DGCollectionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionField.h; sourceTree = "<group>"; };
 		7A3D454DD746F53931D76119A4765A47 /* RKMappingOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMappingOperation.m; path = Code/ObjectMapping/RKMappingOperation.m; sourceTree = "<group>"; };
 		7C3E1434693415C2530C0EC6BEBC47DA /* DGCommunity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCommunity.m; sourceTree = "<group>"; };
 		7C6F7A1F03DA648EE42C6662DDD1CA65 /* RKMappingResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMappingResult.m; path = Code/ObjectMapping/RKMappingResult.m; sourceTree = "<group>"; };
@@ -760,22 +764,22 @@
 		7EC84AA926C602D5C538165137B18A1A /* DGCommunity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCommunity+Mapping.m"; sourceTree = "<group>"; };
 		7F3CCBCB7FFCAD1127D976815569DDC5 /* DGRelease+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGRelease+Mapping.m"; sourceTree = "<group>"; };
 		7FA202D5EC5F7EF92A7576CB1DEEFCF8 /* DGInventory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGInventory.h; sourceTree = "<group>"; };
-		7FC6DE384A0AAB7AA7F646146728257A /* DGCollectionFolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionFolder.h; sourceTree = "<group>"; };
+		7FC7805D5B387A1D2307DA795B293CEF /* DGCollectionFolder+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionFolder+Mapping.h"; sourceTree = "<group>"; };
 		80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		80F74CC0345891372195E30F478AC302 /* Pods-DiscogsAPI-Discogs-objc-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DiscogsAPI-Discogs-objc-acknowledgements.markdown"; sourceTree = "<group>"; };
 		824B5893D32FE9A930EC0BA9C6E2F711 /* RKDotNetDateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKDotNetDateFormatter.m; path = Code/Support/RKDotNetDateFormatter.m; sourceTree = "<group>"; };
+		82538C90B037D58F214B3D7C82E45AD5 /* DGCollectionFolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionFolder.h; sourceTree = "<group>"; };
 		8318D8ED20829952755825BF5BE7E3D1 /* Pods-DiscogsAPITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DiscogsAPITests.modulemap"; sourceTree = "<group>"; };
+		86193DEABC5E285F761809021BEFD4EA /* DGCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollection.m; sourceTree = "<group>"; };
 		8670DD237F17144656B8081430021F7B /* DGIdentifier+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentifier+Mapping.h"; sourceTree = "<group>"; };
 		87D1A0BD46612650B10B754575534DF2 /* UIImageView+AFRKNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFRKNetworking.m"; path = "Code/Network/AFNetworking/UIImageView+AFRKNetworking.m"; sourceTree = "<group>"; };
 		8872CC57CF9E94404C904AC53BE179E0 /* RKObjectRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectRequestOperation.m; path = Code/Network/RKObjectRequestOperation.m; sourceTree = "<group>"; };
 		88E5D7AD1E7AD16580AFF53D487D2001 /* DGMasterVersion+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMasterVersion+Mapping.m"; sourceTree = "<group>"; };
-		89C8486546BD3AC94D8FFD680A52CAF1 /* DGCollectionFieldInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionFieldInstance.h; sourceTree = "<group>"; };
 		89EF23F16EABB2311BBC530AC0B2BCA1 /* DGInventory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGInventory.m; sourceTree = "<group>"; };
 		8A7ED498AD780EDA6919AE8DF90B9B1D /* DGPrice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGPrice.m; sourceTree = "<group>"; };
 		8B8D26427DD6082D29D251D60666810C /* RKRelationshipMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKRelationshipMapping.m; path = Code/ObjectMapping/RKRelationshipMapping.m; sourceTree = "<group>"; };
 		8BC2B58E1543A6929B8173A5B50A4F3A /* TKStateMachine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKStateMachine.h; path = Code/TKStateMachine.h; sourceTree = "<group>"; };
 		8CB02FD79F52716E1924BECE1B183230 /* RKBenchmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKBenchmark.h; path = Code/Testing/RKBenchmark.h; sourceTree = "<group>"; };
-		8F6CD413CE82DEFFA83D275B5AA27726 /* DGReleaseInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGReleaseInstance+Mapping.m"; sourceTree = "<group>"; };
 		8FB0E73E01D8A54CF603F3C240955DFA /* AFRKXMLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKXMLRequestOperation.h; path = Code/Network/AFNetworking/AFRKXMLRequestOperation.h; sourceTree = "<group>"; };
 		8FB8B2597492613A67EC7FFA0D72436A /* RKMappingOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingOperation.h; path = Code/ObjectMapping/RKMappingOperation.h; sourceTree = "<group>"; };
 		8FFE370FDEE58643F07569C5D80D75A0 /* ISO8601DateFormatterValueTransformer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatterValueTransformer-prefix.pch"; sourceTree = "<group>"; };
@@ -790,8 +794,8 @@
 		94CF2ED48C7B418E63EE23EB9480FDBB /* RKTestFixture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestFixture.h; path = Code/Testing/RKTestFixture.h; sourceTree = "<group>"; };
 		954554EF07A2E7D5CA6F8655A2CE8F42 /* DGMember.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMember.m; sourceTree = "<group>"; };
 		958F57B838576E1E4B28DE19DB7ADB9F /* DGVideo+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGVideo+Mapping.h"; sourceTree = "<group>"; };
+		96FD9C893848A8935614E6F65E9BE1AC /* DGTokenStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
 		97BE58DB509A211B0048B2A4CF6CB56E /* RKObjectMappingOperationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectMappingOperationDataSource.m; path = Code/ObjectMapping/RKObjectMappingOperationDataSource.m; sourceTree = "<group>"; };
-		98748BF8403D6C8C648DF926B692DF07 /* DGProfile+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGProfile+Mapping.h"; sourceTree = "<group>"; };
 		98B97CAE3CFCD833A687172A1772AB46 /* DGArtistRelease+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGArtistRelease+Mapping.m"; sourceTree = "<group>"; };
 		99729DB37F1A12CD1E357FA3E73B8488 /* Pods-DiscogsAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DiscogsAPI-acknowledgements.plist"; sourceTree = "<group>"; };
 		9A7FE038E9A00E5CE9F7D8181ED2C6C7 /* Pods-DiscogsAPITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DiscogsAPITests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -799,6 +803,7 @@
 		9B825C572CB5AB81B3726FBBD2F8502B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C4E90F6CF3DA7E5A69C149F665AC7C0 /* DGHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
 		9C6A3CB6E7A7BABA846DE02618529650 /* DGMember+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGMember+Mapping.h"; sourceTree = "<group>"; };
+		9CD156913D6E5B1D53711AA532421B70 /* DGUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGUser.m; sourceTree = "<group>"; };
 		9CE072B2CE41BF61AAE2CE2ADB2CAC54 /* RKPropertyMappingTestExpectation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPropertyMappingTestExpectation.h; path = Code/Testing/RKPropertyMappingTestExpectation.h; sourceTree = "<group>"; };
 		9E865A267285C4365AA12FC1E58AB911 /* Pods-DiscogsAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FA3AFF8E0592EB192C53EABCC885F9D /* RKMapperOperation_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMapperOperation_Private.h; path = Code/ObjectMapping/RKMapperOperation_Private.h; sourceTree = "<group>"; };
@@ -807,10 +812,9 @@
 		A0C8CBDE5E24D1FF119E14E07032DAB8 /* AFRKImageRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKImageRequestOperation.h; path = Code/Network/AFNetworking/AFRKImageRequestOperation.h; sourceTree = "<group>"; };
 		A0FD94A5C88C5DF0FA85ECBE07871FB1 /* DGSearch+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGSearch+Mapping.h"; sourceTree = "<group>"; };
 		A19EE4380CD6552F000A33C0057ED4F3 /* RKObjectMappingOperationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectMappingOperationDataSource.h; path = Code/ObjectMapping/RKObjectMappingOperationDataSource.h; sourceTree = "<group>"; };
-		A303FFA89D41AFB2163D973064208730 /* DGWantlist+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGWantlist+Mapping.m"; sourceTree = "<group>"; };
 		A34359B6DE2841B5C9BC1D040853C22A /* RKTestNotificationObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestNotificationObserver.h; path = Code/Testing/RKTestNotificationObserver.h; sourceTree = "<group>"; };
 		A446D4FCFF1DD5544E1282398DD23995 /* SOCKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SOCKit.xcconfig; sourceTree = "<group>"; };
-		A4B971BD60C8C15CA10C0150161E4421 /* DGCollectionFolder+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFolder+Mapping.m"; sourceTree = "<group>"; };
+		A48DDE92944C9950F00B2C3929F60EEC /* DGIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentity.h; sourceTree = "<group>"; };
 		A4FBD222A7219098E079A0A563EEBE01 /* DGVideo+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGVideo+Mapping.m"; sourceTree = "<group>"; };
 		A527CE55E3117B381BE7287AB878BA0E /* DGLabelRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGLabelRelease.h; sourceTree = "<group>"; };
 		A555BD048A321E33461F89C5AFD8FC76 /* DGOrder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGOrder.m; sourceTree = "<group>"; };
@@ -825,30 +829,31 @@
 		AB1B641039BD33A1F0700F073BC78E63 /* RKObjectParameterization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectParameterization.m; path = Code/Network/RKObjectParameterization.m; sourceTree = "<group>"; };
 		AB41EE80BE09FD965501FABE1ADCA762 /* RKPathUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPathUtilities.m; path = Code/Support/RKPathUtilities.m; sourceTree = "<group>"; };
 		AB70A64CE5FF84E4BE6AC9883A65AFD6 /* DGArtistRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGArtistRelease.h; sourceTree = "<group>"; };
+		AB84CBC5BEC8600FD6559591A790BDCC /* DGReleaseInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGReleaseInstance.h; sourceTree = "<group>"; };
 		AC4C21B5CBA3B5C2044D109E9AA391D9 /* RKErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKErrors.h; path = Code/Support/RKErrors.h; sourceTree = "<group>"; };
+		ACE07F64406D3448BA8CE0FAC200C761 /* DGIdentity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentity.m; sourceTree = "<group>"; };
 		ADBA9DFD7FEDAD2C29E0B7E43A568762 /* DGResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGResource.m; sourceTree = "<group>"; };
 		AE7795D66807B4BBF4F0B294443F9357 /* DGEndpoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGEndpoint.m; sourceTree = "<group>"; };
 		AE8FD3A39CAE9474ACA5B180891D8B16 /* RKResponseDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKResponseDescriptor.m; path = Code/Network/RKResponseDescriptor.m; sourceTree = "<group>"; };
 		AFD08C288E65FB1835020AE9F4030072 /* DGTrack+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGTrack+Mapping.h"; sourceTree = "<group>"; };
+		B0600E8D151BCD913201402006CCBE0C /* DGCollectionFieldInstance+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionFieldInstance+Mapping.h"; sourceTree = "<group>"; };
 		B0D425D5DD4B58BAE7FC9C89EB4465FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E1414F8524E00D87A7AC801E95FE43 /* DGSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGSearch.h; sourceTree = "<group>"; };
 		B1AD43CD6A342D052F897059E02E0364 /* AFRKURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKURLConnectionOperation.h; path = Code/Network/AFNetworking/AFRKURLConnectionOperation.h; sourceTree = "<group>"; };
 		B2562DA8D5C734D02F1F8FDA2D511A8E /* RKMappingErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingErrors.h; path = Code/ObjectMapping/RKMappingErrors.h; sourceTree = "<group>"; };
-		B38B8EB47113BAD4891C927797FC8E9B /* DGWantlist+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGWantlist+Mapping.h"; sourceTree = "<group>"; };
 		B3C71724B9ACE5AD4DAA67EC2F42F3CB /* RKRelationshipMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRelationshipMapping.h; path = Code/ObjectMapping/RKRelationshipMapping.h; sourceTree = "<group>"; };
 		B3EAFB911AC24895E7CCC0F823DF8901 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4782701D993763100C50932170F389B /* AFRKPropertyListRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKPropertyListRequestOperation.m; path = Code/Network/AFNetworking/AFRKPropertyListRequestOperation.m; sourceTree = "<group>"; };
 		B7072B7D13D170CE3CD43FC5A295CF6F /* RKRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRoute.h; path = Code/Network/RKRoute.h; sourceTree = "<group>"; };
 		B778C7485AAB3BD433572E022FF178B1 /* RKPropertyMappingTestExpectation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyMappingTestExpectation.m; path = Code/Testing/RKPropertyMappingTestExpectation.m; sourceTree = "<group>"; };
 		B780CFEDECC3F22633B4120F3734AF37 /* DGOrder+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGOrder+Mapping.m"; sourceTree = "<group>"; };
-		B8D8AA57644E9F31E23EE2A1065E3B3B /* DGProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGProfile.h; sourceTree = "<group>"; };
 		BA162DC055A1791A0D13120BD31A71D7 /* RKValueTransformers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RKValueTransformers.modulemap; sourceTree = "<group>"; };
 		BA5B3500FB2539A012B0C3B92CEC6919 /* lcl_config_logger_RK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lcl_config_logger_RK.h; path = Code/Support/lcl_config_logger_RK.h; sourceTree = "<group>"; };
 		BAC055254E8F8585F73838DC51DA28FA /* DGEndpoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGEndpoint.h; sourceTree = "<group>"; };
+		BB19812864F717734A35142B7C35EC6A /* DGReleaseInstance+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGReleaseInstance+Mapping.h"; sourceTree = "<group>"; };
 		BB6BC5515DC731D6F916D53B01D8FBC0 /* RestKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RestKit.h; path = Code/RestKit.h; sourceTree = "<group>"; };
 		BCDDEE0EA70113C9FE9F82022268B0A1 /* DGImage+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGImage+Mapping.m"; sourceTree = "<group>"; };
 		BD4CC5A9277A9B5D8C4A40E4E2298E1B /* Pods-DiscogsAPI-Discogs-objc-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPI-Discogs-objc-resources.sh"; sourceTree = "<group>"; };
-		BE8110BDC1C698C1A53BEA353D570FC4 /* DGProfile+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGProfile+Mapping.m"; sourceTree = "<group>"; };
 		BF20EA0FAF2D00E33EA434723736A5D8 /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		BF4D02DF5516DD5AC9ED96F5CF9B6AAD /* AFRKHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKHTTPRequestOperation.h; path = Code/Network/AFNetworking/AFRKHTTPRequestOperation.h; sourceTree = "<group>"; };
 		BF89F4A4D6F097F16CC94FC4EFE8E36A /* TKEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKEvent.h; path = Code/TKEvent.h; sourceTree = "<group>"; };
@@ -857,13 +862,14 @@
 		BFFDF91DF43282A1ED45F02AE9E64879 /* DGRelease+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRelease+Mapping.h"; sourceTree = "<group>"; };
 		C005CCFB83F575B4F29054F84CA7770C /* RKRequestDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRequestDescriptor.h; path = Code/Network/RKRequestDescriptor.h; sourceTree = "<group>"; };
 		C00D68C004A949F7AFC579DA192EF8FE /* DGFormat+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGFormat+Mapping.m"; sourceTree = "<group>"; };
+		C00FBD9A1133A2FFC5C854AC4AD74291 /* DGCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollection.h; sourceTree = "<group>"; };
 		C2AB66B7965E9EC2C1BE3F27F5FB5CEA /* RKStringTokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKStringTokenizer.h; path = Code/Support/RKStringTokenizer.h; sourceTree = "<group>"; };
-		C2F0BC756A84BBDF5E189B84F49604C8 /* DGUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGUser.h; sourceTree = "<group>"; };
 		C33209C4EBDD67FDB565C772E4290316 /* Pods-DiscogsAPI-Discogs-swift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPI-Discogs-swift-resources.sh"; sourceTree = "<group>"; };
 		C33D0AC70F9DFB0FD2FB8A6542FBAFDB /* RestKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RestKit.modulemap; sourceTree = "<group>"; };
 		C3A5EED28B5541153C620C1E90DB5E86 /* RKHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKHTTPRequestOperation.h; path = Code/Network/RKHTTPRequestOperation.h; sourceTree = "<group>"; };
 		C44EFB00777B1001518941259E0B75F6 /* DGMarketplace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMarketplace.m; sourceTree = "<group>"; };
 		C48B9BEC34CE27D8FD23E8ECB299C6C6 /* AFOAuth1Client.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
+		C4E15F42CB7CED86DFA24678BC5E7E29 /* DGReleaseInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGReleaseInstance+Mapping.m"; sourceTree = "<group>"; };
 		C5D8B0AE62EC7B6D3621BF691A549217 /* DGHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
 		C5E0AB874FB7DD082B1A02B08DAC647E /* RKObjectUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectUtilities.h; path = Code/ObjectMapping/RKObjectUtilities.h; sourceTree = "<group>"; };
 		C61DE0BF5A87A3FCB2BE57D963C462FA /* RKISO8601DateFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKISO8601DateFormatter.h; path = Code/RKISO8601DateFormatter.h; sourceTree = "<group>"; };
@@ -871,6 +877,7 @@
 		C73A2178652A7D290050A4C3E0D8D4EE /* TKState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKState.m; path = Code/TKState.m; sourceTree = "<group>"; };
 		C8BE6CB048F65F844100257C62981AB5 /* RKRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKRouter.m; path = Code/Network/RKRouter.m; sourceTree = "<group>"; };
 		C8DA771FE63B276102773A5ECD5C412A /* RKAttributeMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKAttributeMapping.m; path = Code/ObjectMapping/RKAttributeMapping.m; sourceTree = "<group>"; };
+		C8FB7A0E8F02A07FB6F977BD5920C35D /* DGCollectionField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionField.m; sourceTree = "<group>"; };
 		C97F7532B210E6E1035702AA2AE02054 /* DGMaster+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMaster+Mapping.m"; sourceTree = "<group>"; };
 		C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FBB3D22FDCA016F292479DC1218CD0 /* Pods_DiscogsAPI_Discogs_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI_Discogs_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -881,18 +888,18 @@
 		CED6F8C933EB79F185EB7915B43D8CE5 /* RKRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRouter.h; path = Code/Network/RKRouter.h; sourceTree = "<group>"; };
 		CF718FD221B8445F6598DE9012F705F6 /* AFRKURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKURLConnectionOperation.m; path = Code/Network/AFNetworking/AFRKURLConnectionOperation.m; sourceTree = "<group>"; };
 		CF8F63A7873C89D449A83D8D32E45BED /* RKObjectRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectRequestOperation.h; path = Code/Network/RKObjectRequestOperation.h; sourceTree = "<group>"; };
-		CFABABE450F44C7E5A743CC564414B90 /* DGAuthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
 		D0E3C7E26714F8AB6A9410A8C8EF2D06 /* RKValueTransformers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKValueTransformers-umbrella.h"; sourceTree = "<group>"; };
 		D1A03A84047F3F2CE05F4B7CBFD9B5EE /* RKLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKLog.h; path = Code/Support/RKLog.h; sourceTree = "<group>"; };
 		D1BBDDB687E283171BACB1F873C85B96 /* RKRoute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKRoute.m; path = Code/Network/RKRoute.m; sourceTree = "<group>"; };
 		D25F7A23C1B6150015CC1A192CC61587 /* ISO8601DateFormatterValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ISO8601DateFormatterValueTransformer.m; path = Code/ISO8601DateFormatterValueTransformer.m; sourceTree = "<group>"; };
 		D47A8FB3F2865DFB19361ECCDD7EDCE6 /* RKHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKHTTPRequestOperation.m; path = Code/Network/RKHTTPRequestOperation.m; sourceTree = "<group>"; };
-		D508AFC44E407E3FD04F45A826F68633 /* DGAuthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		D53C185BD4ED1FDA636D78110B1C3076 /* RKMapperOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMapperOperation.h; path = Code/ObjectMapping/RKMapperOperation.h; sourceTree = "<group>"; };
 		D68361C2D3AC9AEDD98F5205DD481079 /* DGArtist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGArtist.m; sourceTree = "<group>"; };
+		D6C5322833468905636FEFB314271A12 /* DGUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGUser.h; sourceTree = "<group>"; };
 		D700EF5FAD0FC790010E386BEFA7CAC5 /* DGPrice+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGPrice+Mapping.h"; sourceTree = "<group>"; };
 		D709CD92772AB805F98E538052302D90 /* Pods_DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D89FA219A504EC28D1E11B7F4156EDA9 /* DGAuthentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
+		D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionField+Mapping.h"; sourceTree = "<group>"; };
+		D910CB028A95984D1943085833F72AB1 /* DGAuthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
 		D9C53CBCBD9CDACC06472F40ED6BC65C /* RKValueTransformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKValueTransformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEFD5FF962327ABB2138141D1468A0C /* RKURLEncodedSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKURLEncodedSerialization.m; path = Code/Support/RKURLEncodedSerialization.m; sourceTree = "<group>"; };
 		DB5E350B16FB6896AA071D2FCED61316 /* DGVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGVideo.h; sourceTree = "<group>"; };
@@ -911,16 +918,13 @@
 		E074D93B34581EF7BD3AF12CCB232BA5 /* DGMasterVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMasterVersion.m; sourceTree = "<group>"; };
 		E0F6FA96B250955140457B5BA7684E4C /* RKMIMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMIMETypes.h; path = Code/Support/RKMIMETypes.h; sourceTree = "<group>"; };
 		E11D025DCC0631B34624CEE7F04E16C0 /* Pods-DiscogsAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DiscogsAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E37CA594BCD2939D064EEADFA711D46F /* DGIdentity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentity.m; sourceTree = "<group>"; };
 		E446BFCCD5AA6F6EF484CF7DDB1EE299 /* lcl_config_components_RK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lcl_config_components_RK.h; path = Code/Support/lcl_config_components_RK.h; sourceTree = "<group>"; };
 		E51CBB7F7AB648B34CBC82DD5D8EEAD7 /* RKTestFixture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestFixture.m; path = Code/Testing/RKTestFixture.m; sourceTree = "<group>"; };
+		E543EE0DBC74A8D8EEFAED85655A605A /* DGWantlist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGWantlist.h; sourceTree = "<group>"; };
 		E5973D7843294EF0AC1EBDC4CFE6F632 /* DGTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGTrack.h; sourceTree = "<group>"; };
-		E5F4E529B098A1B51F659E1B19750172 /* DGProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGProfile.m; sourceTree = "<group>"; };
 		E634C76518100230C4ED1FEC745A01BB /* DiscogsAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DiscogsAPI-dummy.m"; sourceTree = "<group>"; };
 		E6BF27122AD682743E6009F9184077D8 /* Pods-DiscogsAPITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DiscogsAPITests-umbrella.h"; sourceTree = "<group>"; };
-		E72B76179FA8405089E92BCADC4BB9B5 /* DGCollectionField+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionField+Mapping.m"; sourceTree = "<group>"; };
 		E74DA2A8E85FE4E97CE44DB249CFFDE3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E83267C7E8A292C5EB4F5528C995DBB4 /* DGReleaseInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGReleaseInstance.m; sourceTree = "<group>"; };
 		E93DCF2B63AE2E7B9DD7E1AD314DDAF1 /* AFRKNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKNetworkActivityIndicatorManager.m; path = Code/Network/AFNetworking/AFRKNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		E9AA2C8B483F0BB845D5961F02BCCA60 /* DGMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGMapping.h; sourceTree = "<group>"; };
 		E9E4422B92C348A451DF563040B57519 /* DGCommunity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCommunity+Mapping.h"; sourceTree = "<group>"; };
@@ -928,15 +932,14 @@
 		EA6199F326A1BC6771AA1F34E9A5DDB4 /* RKPathMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPathMatcher.h; path = Code/Network/RKPathMatcher.h; sourceTree = "<group>"; };
 		EB59498D0D1FA09931DCD449EA0255CB /* RKManagedObjectRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKManagedObjectRequestOperation.m; path = Code/Network/RKManagedObjectRequestOperation.m; sourceTree = "<group>"; };
 		EBF8DE3AEE7CE499B0C10D18C40F0FE4 /* RKNSJSONSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKNSJSONSerialization.m; path = Code/Support/RKNSJSONSerialization.m; sourceTree = "<group>"; };
-		EC13E9E4FADCA3CC01157271DF8B1A37 /* DGUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGUser.m; sourceTree = "<group>"; };
 		ECFE5D131BB01827EF8DAFC830CBD5DA /* DGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGObject.m; sourceTree = "<group>"; };
 		ED04B118A0835C338B142C5A7205DD3F /* RKTestHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestHelpers.h; path = Code/Testing/RKTestHelpers.h; sourceTree = "<group>"; };
 		ED78ABB06472A7E1894323A2DD4FAFE7 /* RKNSJSONSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKNSJSONSerialization.h; path = Code/Support/RKNSJSONSerialization.h; sourceTree = "<group>"; };
 		EDA1C08B77AB30092C6C8A88477238C0 /* RestKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RestKit-prefix.pch"; sourceTree = "<group>"; };
 		F06663A7CAC40D360CAA342C102A2D7D /* Pods-DiscogsAPI-Discogs-swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DiscogsAPI-Discogs-swift-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F1016E52CE70D27D5319FE927B96EA0A /* RKMIMETypeSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMIMETypeSerialization.h; path = Code/Support/RKMIMETypeSerialization.h; sourceTree = "<group>"; };
+		F2D1784116484461C22ADCCB99F2AAE0 /* DGCollectionFieldInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFieldInstance.m; sourceTree = "<group>"; };
 		F317C97057D6F6377E877598517A39ED /* AFRKHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKHTTPClient.m; path = Code/Network/AFNetworking/AFRKHTTPClient.m; sourceTree = "<group>"; };
-		F33B5BF3CB55F5A29F30B5A34E031884 /* DGCollectionFolder+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionFolder+Mapping.h"; sourceTree = "<group>"; };
 		F34354F6A1E5CA7DED417AA3FEB98E1A /* RKValueTransformers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKValueTransformers-prefix.pch"; sourceTree = "<group>"; };
 		F3CB61D005543784316A0D16A02A8B72 /* Pods-DiscogsAPI-Discogs-objc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DiscogsAPI-Discogs-objc-umbrella.h"; sourceTree = "<group>"; };
 		F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKValueTransformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -946,10 +949,7 @@
 		F7AD8A144BC2DC1F89AACC3FEFD0AEB9 /* TransitionKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionKit-dummy.m"; sourceTree = "<group>"; };
 		F81E97C983F2195917F66349550C1C6C /* ISO8601DateFormatterValueTransformer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatterValueTransformer-umbrella.h"; sourceTree = "<group>"; };
 		F8EF2F44DCF019F2E8DD98921C069C13 /* DGLabelRelease.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGLabelRelease.m; sourceTree = "<group>"; };
-		F9743C4F2BF7E408A98EAFCEAFACC926 /* DGCollectionField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionField.m; sourceTree = "<group>"; };
 		FACE7AFF94D5A1B4BD8DFBF78C5D7FD3 /* SOCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBE8D30875C2AA1C8BCCA438F0F62F14 /* DGCollectionFieldInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFieldInstance+Mapping.m"; sourceTree = "<group>"; };
-		FDE6D457C8EA4FC8328E484CA4EE211F /* DGReleaseInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGReleaseInstance.h; sourceTree = "<group>"; };
 		FFA7BCE92881137C092937AB939EBE09 /* RKMappingOperationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingOperationDataSource.h; path = Code/ObjectMapping/RKMappingOperationDataSource.h; sourceTree = "<group>"; };
 		FFEE0FF112F8B8E5BF2D419F5814AB4E /* RKObjectParameterization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectParameterization.h; path = Code/Network/RKObjectParameterization.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1099,13 +1099,16 @@
 			name = Testing;
 			sourceTree = "<group>";
 		};
-		1274CA9E4E8067C90F0E6BBA46CC2589 /* Wantlist */ = {
+		12DCE45EA813482E9561307CCF6760DE /* User */ = {
 			isa = PBXGroup;
 			children = (
-				2063926E614977C321BA952721BC03EA /* DGWantlist.h */,
-				66BE5BBE205770375F7FE1407A6C18EA /* DGWantlist.m */,
+				D6C5322833468905636FEFB314271A12 /* DGUser.h */,
+				9CD156913D6E5B1D53711AA532421B70 /* DGUser.m */,
+				CD58C75DD937BF225C805115CAECD718 /* Collection */,
+				615C18852B9658B6F7898495FAB53B05 /* Profile */,
+				A93FEB32529C461BE4688C396D7BC3A4 /* Wantlist */,
 			);
-			path = Wantlist;
+			path = User;
 			sourceTree = "<group>";
 		};
 		13DBE2D17D712FE3F025B90216546D77 /* RKValueTransformers */ = {
@@ -1255,19 +1258,6 @@
 			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
-		243742A9FBA23E23E4D4D3053EC66237 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				C2F0BC756A84BBDF5E189B84F49604C8 /* DGUser.h */,
-				EC13E9E4FADCA3CC01157271DF8B1A37 /* DGUser.m */,
-				3CFC86482177D84ABB100FFF4E74FA3F /* Collection */,
-				8F295417427F5D8FC40E8ECD2792F5ED /* Identity */,
-				8B4B0F553B6AEF6F873B5FDCA6405C63 /* Profile */,
-				1274CA9E4E8067C90F0E6BBA46CC2589 /* Wantlist */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		248C654244BBB4F612A3AB164B3BDD84 /* TransitionKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1320,6 +1310,21 @@
 			path = "Target Support Files/Pods-DiscogsAPITests";
 			sourceTree = "<group>";
 		};
+		3139E10E53C05764385B148575CDCADE /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */,
+				697B038A9AC9DA8C26D602AA571C7927 /* DGCollectionField+Mapping.m */,
+				B0600E8D151BCD913201402006CCBE0C /* DGCollectionFieldInstance+Mapping.h */,
+				3EA3BD5E424C55FF5F944C775958ADE6 /* DGCollectionFieldInstance+Mapping.m */,
+				7FC7805D5B387A1D2307DA795B293CEF /* DGCollectionFolder+Mapping.h */,
+				4C5FB15984B9C5A8944048365B56D6C1 /* DGCollectionFolder+Mapping.m */,
+				BB19812864F717734A35142B7C35EC6A /* DGReleaseInstance+Mapping.h */,
+				C4E15F42CB7CED86DFA24678BC5E7E29 /* DGReleaseInstance+Mapping.m */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		314B7BDFE921E9FA27E8F5655B16CFAF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1339,21 +1344,6 @@
 				4637F9C4124CF71DEB6911E39073736A /* Price */,
 			);
 			path = Marketplace;
-			sourceTree = "<group>";
-		};
-		330A62FB9ABD2D197757DCD918248126 /* Collection */ = {
-			isa = PBXGroup;
-			children = (
-				2072EEA55D1361AF8A78D29EA3D8A677 /* DGCollectionField+Mapping.h */,
-				E72B76179FA8405089E92BCADC4BB9B5 /* DGCollectionField+Mapping.m */,
-				459FF93D2B3AC1B73C0182948E4BC4E7 /* DGCollectionFieldInstance+Mapping.h */,
-				FBE8D30875C2AA1C8BCCA438F0F62F14 /* DGCollectionFieldInstance+Mapping.m */,
-				F33B5BF3CB55F5A29F30B5A34E031884 /* DGCollectionFolder+Mapping.h */,
-				A4B971BD60C8C15CA10C0150161E4421 /* DGCollectionFolder+Mapping.m */,
-				20E03E75890E27CD03660F82FDE7363B /* DGReleaseInstance+Mapping.h */,
-				8F6CD413CE82DEFFA83D275B5AA27726 /* DGReleaseInstance+Mapping.m */,
-			);
-			path = Collection;
 			sourceTree = "<group>";
 		};
 		34B58BAE34E27650305D4CDF589B4548 /* Support Files */ = {
@@ -1424,23 +1414,6 @@
 			path = Artist;
 			sourceTree = "<group>";
 		};
-		3CFC86482177D84ABB100FFF4E74FA3F /* Collection */ = {
-			isa = PBXGroup;
-			children = (
-				46EA99E433B50D0C1186A050B8B6AB35 /* DGCollection.h */,
-				74B47754546B6B7F8EB2ABBA352B3F34 /* DGCollection.m */,
-				199AFD4FF078AB8AB918F840717336DC /* DGCollectionField.h */,
-				F9743C4F2BF7E408A98EAFCEAFACC926 /* DGCollectionField.m */,
-				89C8486546BD3AC94D8FFD680A52CAF1 /* DGCollectionFieldInstance.h */,
-				762D0681D3F1B2CDD0979553FD7BDCE5 /* DGCollectionFieldInstance.m */,
-				7FC6DE384A0AAB7AA7F646146728257A /* DGCollectionFolder.h */,
-				36D483EB2DD8C933E5BC44EF04958BAE /* DGCollectionFolder.m */,
-				FDE6D457C8EA4FC8328E484CA4EE211F /* DGReleaseInstance.h */,
-				E83267C7E8A292C5EB4F5528C995DBB4 /* DGReleaseInstance.m */,
-			);
-			path = Collection;
-			sourceTree = "<group>";
-		};
 		4052D826B7D35A72895058B6D9ED3402 /* Listing */ = {
 			isa = PBXGroup;
 			children = (
@@ -1452,12 +1425,13 @@
 			path = Listing;
 			sourceTree = "<group>";
 		};
-		428D3C8EC4B57A1EE563B0B8944B7802 /* Mapping */ = {
+		42413B10EF132A4BAA88D94A8CF91F55 /* DiscogsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				949B2F39095C7B7583D001FCA97002E9 /* User */,
+				C1A7F8DAA775CECEC450DDF7F3F369DB /* Mapping */,
+				12DCE45EA813482E9561307CCF6760DE /* User */,
 			);
-			path = Mapping;
+			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
 		42BC62A6F9B95174534CB47D6D4C799A /* Mapping */ = {
@@ -1497,6 +1471,15 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		4B4F4ADDF89F1A39F5C68990D593F746 /* DiscogsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8C328B27787B1CDEAD5A591B39E61F83 /* Authentication */,
+				B80D80547BF654A954669B21E7EC9FB0 /* Mapping */,
+			);
+			path = DiscogsAPI;
+			sourceTree = "<group>";
+		};
 		4FB80FC0B1D7DF80A84A9EC90FB967F2 /* SOCKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1513,6 +1496,16 @@
 				A469E152635CAF1AEE12E54A780C13A2 /* Mapping */,
 			);
 			path = DiscogsAPI;
+			sourceTree = "<group>";
+		};
+		514AACDBC2B813151ABD55836D30CEF1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3139E10E53C05764385B148575CDCADE /* Collection */,
+				B789BD5044B57BEBB64B83C15DDBA2D5 /* Profile */,
+				726A32291EBB3DB3B607D4E6D6276282 /* Wantlist */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		576AF3B7A18F2CC01B6414760032B7D6 /* Release */ = {
@@ -1532,6 +1525,15 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		5DAA19F0E6D68FF2FCDBA022FDF81908 /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				A48DDE92944C9950F00B2C3929F60EEC /* DGIdentity.h */,
+				ACE07F64406D3448BA8CE0FAC200C761 /* DGIdentity.m */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
 		6140A51A50AD3930B53BA87A8ABEA0B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1545,20 +1547,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		65160C51D899166BF7A9173B6A67F8C7 /* Wantlist */ = {
+		615C18852B9658B6F7898495FAB53B05 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B38B8EB47113BAD4891C927797FC8E9B /* DGWantlist+Mapping.h */,
-				A303FFA89D41AFB2163D973064208730 /* DGWantlist+Mapping.m */,
-			);
-			path = Wantlist;
-			sourceTree = "<group>";
-		};
-		6641D60C90E46A717B551ACAF06B4C6E /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				98748BF8403D6C8C648DF926B692DF07 /* DGProfile+Mapping.h */,
-				BE8110BDC1C698C1A53BEA353D570FC4 /* DGProfile+Mapping.m */,
+				12E43EB4B463892CFD1B1250544FB6C0 /* DGProfile.h */,
+				31FD73E6DA0CC0F1217640151A04524C /* DGProfile.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1632,6 +1625,15 @@
 			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
+		726A32291EBB3DB3B607D4E6D6276282 /* Wantlist */ = {
+			isa = PBXGroup;
+			children = (
+				09E081A70F599B47D0EC65CBCDC7004B /* DGWantlist+Mapping.h */,
+				716D68EEE46E2B74CBFAEE3A9E73A8F9 /* DGWantlist+Mapping.m */,
+			);
+			path = Wantlist;
+			sourceTree = "<group>";
+		};
 		765079F416F26BE89082A54276461B6E /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -1680,20 +1682,20 @@
 			);
 			sourceTree = "<group>";
 		};
+		7F11FF4C612631F4D737BEA5FEA3E1F5 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BC06108254CAD46C89D532866385E5EA /* Identity */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		8737C15250F8E19979C8830D672404DD /* AFOAuth1Client */ = {
 			isa = PBXGroup;
 			children = (
 				8C0F9D0EB6BEAFC585F5CF70AC38BD35 /* AFOAuth1Client */,
 			);
 			path = AFOAuth1Client;
-			sourceTree = "<group>";
-		};
-		87802AB35AD643A1C57AEB019DF4EF81 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				F22E8DA753C2DE73F5C586C67537FAB7 /* DiscogsAPI */,
-			);
-			name = Authentication;
 			sourceTree = "<group>";
 		};
 		89F3DC754E19D1670AEDE817D6704F1B /* Support Files */ = {
@@ -1731,15 +1733,6 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		8B4B0F553B6AEF6F873B5FDCA6405C63 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				B8D8AA57644E9F31E23EE2A1065E3B3B /* DGProfile.h */,
-				E5F4E529B098A1B51F659E1B19750172 /* DGProfile.m */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		8B8A350F6F524A9EB0D18D67D628B797 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -1758,24 +1751,18 @@
 			path = AFOAuth1Client;
 			sourceTree = "<group>";
 		};
-		8F295417427F5D8FC40E8ECD2792F5ED /* Identity */ = {
+		8C328B27787B1CDEAD5A591B39E61F83 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				165D3816C5B6995EDEB197E5E6B92CD4 /* DGIdentity.h */,
-				E37CA594BCD2939D064EEADFA711D46F /* DGIdentity.m */,
+				59DA28BFD086821CAA550872DF73D861 /* DGAuthentication.h */,
+				6CC6DCD3591B95AFED69BE1FB227890C /* DGAuthentication.m */,
+				422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */,
+				D910CB028A95984D1943085833F72AB1 /* DGAuthView.m */,
+				16E5F46E047E2F68D8F1B7C8E2E8C005 /* DGTokenStore.h */,
+				96FD9C893848A8935614E6F65E9BE1AC /* DGTokenStore.m */,
+				5DAA19F0E6D68FF2FCDBA022FDF81908 /* Identity */,
 			);
-			path = Identity;
-			sourceTree = "<group>";
-		};
-		949B2F39095C7B7583D001FCA97002E9 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				330A62FB9ABD2D197757DCD918248126 /* Collection */,
-				B272FEF37D8E0EE1EEA84868AC15E199 /* Identity */,
-				6641D60C90E46A717B551ACAF06B4C6E /* Profile */,
-				65160C51D899166BF7A9173B6A67F8C7 /* Wantlist */,
-			);
-			path = User;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		9527C2EAEB1FCCBCA89DD6A0CC670FEE /* iOS */ = {
@@ -1841,6 +1828,15 @@
 			path = "Target Support Files/Pods-DiscogsAPI-Discogs-swift";
 			sourceTree = "<group>";
 		};
+		A93FEB32529C461BE4688C396D7BC3A4 /* Wantlist */ = {
+			isa = PBXGroup;
+			children = (
+				E543EE0DBC74A8D8EEFAED85655A605A /* DGWantlist.h */,
+				5D9B50BB8070E70D494D62AB0A23FC12 /* DGWantlist.m */,
+			);
+			path = Wantlist;
+			sourceTree = "<group>";
+		};
 		AA2DDF77662E4EB979DE75A0D19CDDDD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1872,10 +1868,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		ABB8E3C46B1A3297D38D399A1923DCDC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4B4F4ADDF89F1A39F5C68990D593F746 /* DiscogsAPI */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		AEB8654C85A560EDE926C6DB36413DB6 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				EC480B895BC80C981449E59D8DC75217 /* DiscogsAPI */,
+				42413B10EF132A4BAA88D94A8CF91F55 /* DiscogsAPI */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -1890,15 +1894,6 @@
 				0C951BAB9A63F17A8C92EDE0C8C68782 /* Testing */,
 			);
 			path = RestKit;
-			sourceTree = "<group>";
-		};
-		B272FEF37D8E0EE1EEA84868AC15E199 /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				5FE0F6968FEF0EC8F9687B8836CCB061 /* DGIdentity+Mapping.h */,
-				1666873241266AF81119FB7A35C0E45F /* DGIdentity+Mapping.m */,
-			);
-			path = Identity;
 			sourceTree = "<group>";
 		};
 		B68AC01BE838366CE0D337302BF8BCD6 /* DiscogsAPI */ = {
@@ -1920,6 +1915,23 @@
 				E8CEFF71720EDE888E7CDAD66392DC07 /* Support Files */,
 			);
 			path = ISO8601DateFormatterValueTransformer;
+			sourceTree = "<group>";
+		};
+		B789BD5044B57BEBB64B83C15DDBA2D5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				361F5D2A87A62C149D06214F8F325FDA /* DGProfile+Mapping.h */,
+				321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B80D80547BF654A954669B21E7EC9FB0 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				7F11FF4C612631F4D737BEA5FEA3E1F5 /* Authentication */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		B96548787F3C0C2C8F94C72081F66444 /* Order */ = {
@@ -1960,17 +1972,21 @@
 			path = "Pods/Target Support Files/DiscogsAPI";
 			sourceTree = "<group>";
 		};
-		C412F11817BECF652DC8E28EA9F22B66 /* Authentication */ = {
+		BC06108254CAD46C89D532866385E5EA /* Identity */ = {
 			isa = PBXGroup;
 			children = (
-				477E8859DAF3DD30154A4A00472C4718 /* DGAuthentication.h */,
-				D89FA219A504EC28D1E11B7F4156EDA9 /* DGAuthentication.m */,
-				D508AFC44E407E3FD04F45A826F68633 /* DGAuthView.h */,
-				CFABABE450F44C7E5A743CC564414B90 /* DGAuthView.m */,
-				6E5FA89EB2479A74D37B4A5A14E9A813 /* DGTokenStore.h */,
-				0BFD920D3F5A57109E19CD5EF606BB14 /* DGTokenStore.m */,
+				7083E123EF3DF51E8E0567B007A987F8 /* DGIdentity+Mapping.h */,
+				397A6F39F664A95EE6C7D6EA3B9FEA0E /* DGIdentity+Mapping.m */,
 			);
-			path = Authentication;
+			path = Identity;
+			sourceTree = "<group>";
+		};
+		C1A7F8DAA775CECEC450DDF7F3F369DB /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				514AACDBC2B813151ABD55836D30CEF1 /* User */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		CC4D3666126CF3718166E9AF7EC33BA3 /* Support Files */ = {
@@ -1985,6 +2001,23 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RestKit";
+			sourceTree = "<group>";
+		};
+		CD58C75DD937BF225C805115CAECD718 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				C00FBD9A1133A2FFC5C854AC4AD74291 /* DGCollection.h */,
+				86193DEABC5E285F761809021BEFD4EA /* DGCollection.m */,
+				796A6F734895056F91934511B55CBFDB /* DGCollectionField.h */,
+				C8FB7A0E8F02A07FB6F977BD5920C35D /* DGCollectionField.m */,
+				0A335F8D5D459340CE0E91F5B157A618 /* DGCollectionFieldInstance.h */,
+				F2D1784116484461C22ADCCB99F2AAE0 /* DGCollectionFieldInstance.m */,
+				82538C90B037D58F214B3D7C82E45AD5 /* DGCollectionFolder.h */,
+				599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */,
+				AB84CBC5BEC8600FD6559591A790BDCC /* DGReleaseInstance.h */,
+				5AADDD9FAD1E66ADB8249D2F3753C145 /* DGReleaseInstance.m */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		D9E6852C0244E67CF8EDA3AC0CB73634 /* DiscogsAPI */ = {
@@ -2112,27 +2145,10 @@
 			path = Release;
 			sourceTree = "<group>";
 		};
-		EC480B895BC80C981449E59D8DC75217 /* DiscogsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				428D3C8EC4B57A1EE563B0B8944B7802 /* Mapping */,
-				243742A9FBA23E23E4D4D3053EC66237 /* User */,
-			);
-			path = DiscogsAPI;
-			sourceTree = "<group>";
-		};
-		F22E8DA753C2DE73F5C586C67537FAB7 /* DiscogsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				C412F11817BECF652DC8E28EA9F22B66 /* Authentication */,
-			);
-			path = DiscogsAPI;
-			sourceTree = "<group>";
-		};
 		F3CAECD33632C9E12685F3252D93A5B6 /* DiscogsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				87802AB35AD643A1C57AEB019DF4EF81 /* Authentication */,
+				ABB8E3C46B1A3297D38D399A1923DCDC /* Authentication */,
 				8B8A350F6F524A9EB0D18D67D628B797 /* Core */,
 				03AE0CB8BBB7741AFA016DFB558816CF /* Database */,
 				B68AC01BE838366CE0D337302BF8BCD6 /* DiscogsAPI */,

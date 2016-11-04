@@ -4,6 +4,7 @@
 
 #import "DiscogsAPI.h"
 #import "DGAuthentication.h"
+#import "DGIdentity.h"
 #import "DGEndpoint.h"
 #import "DGObject.h"
 #import "DGDatabase.h"
@@ -30,7 +31,6 @@
 #import "DGPagination.h"
 #import "DGResource.h"
 #import "DGUser.h"
-#import "DGIdentity.h"
 #import "DGProfile.h"
 #import "DGCollection.h"
 #import "DGCollectionField.h"

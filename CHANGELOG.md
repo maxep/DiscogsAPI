@@ -1,7 +1,26 @@
 #Change Log
-All notable changes to `DisocgsAPI` project will be documented in this file.
+All notable changes to `DiscogsAPI` project will be documented in this file.
 
 --- 
+
+## [1.6.0](https://github.com/maxep/DiscogsAPI/releases/tag/v1.6.0) - November 4, 2016
+
+#### Added
+- Listings and Orders to Marketplace endpoint.
+- Unit tests.
+
+#### Removed
+- Carthage compatibility. RestKit is now a pod dependency using frameworks.
+  As RestKit is not compatible with Carthage and to avoid duplicated symbols, Carthage can't be supported.
+
+#### Updated
+- Upgrade to RestKit 0.27.0
+- `[DiscogsAPI client]` has been renamed to `[Discogs api]`.
+- Swift 3 in example.
+
+#### Fixed
+- CocoaPods 1.1.1
+- External browser authentication.
 
 ## [1.5.0](https://github.com/maxep/DiscogsAPI/releases/tag/v1.5.0) - July 1, 2016
 
