@@ -50,6 +50,7 @@
 		2085A073A87DE0B39AB460A120BDA762 /* lcl_RK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFD596C9F4AA0818DB2F246C4874865 /* lcl_RK.m */; };
 		21410E655A94657A6C74BEFEF5E3AB11 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0F3C3EB50CAC8D41CD3D2ABD856EC7 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21FEE79F6299C44FCEF5F10406801FA9 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		222E0BC861208157EFCC21436DE7EF3B /* Pods-DiscogsAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6BF27122AD682743E6009F9184077D8 /* Pods-DiscogsAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22498811F7831A1B83F11DD56681FD4C /* AFRKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8356DA8236F7C0ED307D7B1F95A68 /* AFRKHTTPRequestOperation.m */; };
 		23FA088FC1C4DA7230CF11C37683F0AC /* RKMapperOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA3AFF8E0592EB192C53EABCC885F9D /* RKMapperOperation_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24EB2D6C3D86E31FD25EE6949C9EC988 /* RKISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C61DE0BF5A87A3FCB2BE57D963C462FA /* RKISO8601DateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +89,7 @@
 		3BE37A14F67F0504A8629D4164E8999C /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */; };
 		3DED833C51D88F361FBC11548C14E4C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
 		3DEFDD72CC2B5215DE6808242D8BA2B5 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7795D66807B4BBF4F0B294443F9357 /* DGEndpoint.m */; };
+		3E881F60DDF22F57C10FDDA813134C41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		40775FD09182A88350B1B3A2592DB8CC /* DGVideo+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F57B838576E1E4B28DE19DB7ADB9F /* DGVideo+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4186C14A73BD335B52C34FB41E30D113 /* RKMIMETypeSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F1016E52CE70D27D5319FE927B96EA0A /* RKMIMETypeSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		439A1CA33248FD4420F5099F9B7D860E /* RKTestFixture.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CF2ED48C7B418E63EE23EB9480FDBB /* RKTestFixture.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,7 +126,6 @@
 		616105CF76D4029E9A6EE54AF89D45AB /* DGSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E1414F8524E00D87A7AC801E95FE43 /* DGSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62955C422656C5020EF82B9BDDEF1378 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		6372ECA4893794262A945167CF342EF0 /* DGIdentifier+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF4017730E7B3404611179CA87AF8E /* DGIdentifier+Mapping.m */; };
-		639694E698BDCCCA290DCAA248D62769 /* Pods-DiscogsAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE54B03D9D89C54C5BA4FB1B23BF203 /* Pods-DiscogsAPITests-dummy.m */; };
 		64F8F75DDC8FE252FA1262ADAD441082 /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E5D7AD1E7AD16580AFF53D487D2001 /* DGMasterVersion+Mapping.m */; };
 		659A8C295B60585D113E8C71F374474F /* UIImageView+AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 62FCEA87A5D747BBB0141BA9ED73BB0B /* UIImageView+AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		665C98DD5F4B2C1438F1580FA9E9718F /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -227,7 +228,6 @@
 		AFBB286B6FAF8BD3711FCAF74BD0D7C2 /* DGCollectionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */; };
 		B066A5D7DF4E48D6532789E1C1B9051F /* DGPagination+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B761641F84DB080D6CBDD2EB5D6730 /* DGPagination+Mapping.m */; };
 		B08407D2E3B766012EC509BA96897A43 /* RKMappingResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0DD85B4446E2D786875093BEFDC9B0 /* RKMappingResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0A1189E85DA7FD804486E39C1720580 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		B0A6C2BA89DF40291460AE71BC06CC3D /* DGTrack+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD08C288E65FB1835020AE9F4030072 /* DGTrack+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B0E0C1333A29EC3C0BA85564AC2B44D3 /* RKTestHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ED04B118A0835C338B142C5A7205DD3F /* RKTestHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2BAB40315ED869995368839714BA7DF /* RKMappingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D454DD746F53931D76119A4765A47 /* RKMappingOperation.m */; };
@@ -306,11 +306,11 @@
 		E0EB6D0A92B5976F9F47A85D45C45939 /* DGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7F44E181CC70BA4CF6A4B855764481 /* DGLabel.m */; };
 		E1066CE946482EBAC98F6269566A4C1B /* RKHTTPUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EED688E1E8533049F8A03842EC55D6 /* RKHTTPUtilities.m */; };
 		E54FBAA0B10CE55C2BB34C747CA342F1 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0434F0053629FC217CD87FED296B9C85 /* DGOperation.m */; };
+		E56291AD9C5EB4CD4721BF9DFBB554DC /* Pods-DiscogsAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE54B03D9D89C54C5BA4FB1B23BF203 /* Pods-DiscogsAPITests-dummy.m */; };
 		E6574632AE395F92587182AEE5408165 /* RKPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD99491EACAF4EC06EC620A7FD047D2 /* RKPathMatcher.m */; };
 		E69FB7A718E58A413270A9459F722298 /* RKMapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F65B4679AC8A37EECA7276BB802EA /* RKMapperOperation.m */; };
 		E7ED51E1F2FDE6F81021F1CB8EF84668 /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6BC5515DC731D6F916D53B01D8FBC0 /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8464CCA58217ACAD83363F3712F6C3E /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B50BB8070E70D494D62AB0A23FC12 /* DGWantlist.m */; };
-		E9E99146A232E0C1041C79A4B138B4A4 /* Pods-DiscogsAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6BF27122AD682743E6009F9184077D8 /* Pods-DiscogsAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9F2A5E632D0C20E42EBE7C3FE23A242 /* RKManagedObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B5121CDBFF8FE7F07433DD40ABA5B07 /* RKManagedObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA1B773FF64C2A7B1013851D77DA8A61 /* RKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C7BB318F3960111F8D9D46D159FC6D /* RKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA882C9CB0E307F383FBF14731337B12 /* AFRKNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DDCF557F123180BF25CCF899C8D387 /* AFRKNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -364,13 +364,6 @@
 			remoteGlobalIDString = 84D85C7F100965596E24C8BA09AF9DC4;
 			remoteInfo = ISO8601DateFormatterValueTransformer;
 		};
-		252DCE4BDC669181A3B79036AB87851A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84A110F7C5630871DF47E0F744331CA3;
-			remoteInfo = RestKit;
-		};
 		29828A1DFE986340B1B923131C3BEB39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -420,13 +413,6 @@
 			remoteGlobalIDString = 7B0DCF7847CEEE3E62978F3548EFA24F;
 			remoteInfo = SOCKit;
 		};
-		5ECD211319B2AC4098FCEA5AA5BB0691 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83A5C0DB2D2D5EB191F8AFCF354E729F;
-			remoteInfo = TransitionKit;
-		};
 		6DB1E4ABE28C140C4C9F4F0CF740D789 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -475,13 +461,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 83A5C0DB2D2D5EB191F8AFCF354E729F;
 			remoteInfo = TransitionKit;
-		};
-		971C05294A908E0EBB6BCD973E4A35BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 58E0215B7207D3693AE41AF9A726F776;
-			remoteInfo = RKValueTransformers;
 		};
 		9942A73CC064FD6755BB8D65D215AA5A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -539,21 +518,7 @@
 			remoteGlobalIDString = 84A110F7C5630871DF47E0F744331CA3;
 			remoteInfo = RestKit;
 		};
-		BD00CEC99C6C47AF323AC76589136FDA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B0DCF7847CEEE3E62978F3548EFA24F;
-			remoteInfo = SOCKit;
-		};
 		BEFF0E99B8291CF8ADB28FAC600B5E7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84D85C7F100965596E24C8BA09AF9DC4;
-			remoteInfo = ISO8601DateFormatterValueTransformer;
-		};
-		E936D52C0B5F4C55660D07EDAB2A1719 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -955,11 +920,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B05966EFBD4CE7E8FFA4E3B55D01414 /* Frameworks */ = {
+		1954E2396EAD116EB1779031333AFFF6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A1189E85DA7FD804486E39C1720580 /* Foundation.framework in Frameworks */,
+				3E881F60DDF22F57C10FDDA813134C41 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2209,6 +2174,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E479AE0C3CDF452CD53B8BE321064C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222E0BC861208157EFCC21436DE7EF3B /* Pods-DiscogsAPITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E646C646EE43E2B5F5ED02B7D5C7159 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2400,14 +2373,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE11AF79A996B212DFC4625A9F1FD230 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9E99146A232E0C1041C79A4B138B4A4 /* Pods-DiscogsAPITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -2569,22 +2534,17 @@
 			productReference = C9FBB3D22FDCA016F292479DC1218CD0 /* Pods_DiscogsAPI_Discogs_objc.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C7213F1579F2B7A4D38CC2B8FF4E765B /* Pods-DiscogsAPITests */ = {
+		B71AE0C59992380B193220B0AC4344E1 /* Pods-DiscogsAPITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6D25A34EA6C8A6FD1893DA08E9AA108B /* Build configuration list for PBXNativeTarget "Pods-DiscogsAPITests" */;
+			buildConfigurationList = B19386BAB37F12FBC89CFBBA7CEA7689 /* Build configuration list for PBXNativeTarget "Pods-DiscogsAPITests" */;
 			buildPhases = (
-				C269FD02074B0E9912D7D3600DE2442C /* Sources */,
-				0B05966EFBD4CE7E8FFA4E3B55D01414 /* Frameworks */,
-				FE11AF79A996B212DFC4625A9F1FD230 /* Headers */,
+				38A9C3EE1E7B7A5B77329C88C73ABBB2 /* Sources */,
+				1954E2396EAD116EB1779031333AFFF6 /* Frameworks */,
+				5E479AE0C3CDF452CD53B8BE321064C4 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				349901951FB3C92F739573ECB743D597 /* PBXTargetDependency */,
-				EF6BB6B62FCCD6A1CD3F6F3DE1318B67 /* PBXTargetDependency */,
-				EFA499928B889168B0A2AE6D7CFE017A /* PBXTargetDependency */,
-				9A67F4ADE3A2F45B6B05CA1A31A1E4D2 /* PBXTargetDependency */,
-				A1B79E3BE3F76DFC970217E3832AD6A4 /* PBXTargetDependency */,
 			);
 			name = "Pods-DiscogsAPITests";
 			productName = "Pods-DiscogsAPITests";
@@ -2639,7 +2599,7 @@
 				6610592D959ED9EA9A5700E8C3B11F05 /* Pods-DiscogsAPI */,
 				9A7D7CC04B7B122FD0F095E02C36CB10 /* Pods-DiscogsAPI-Discogs-objc */,
 				813BF2CDE2553D2608737C5F67399067 /* Pods-DiscogsAPI-Discogs-swift */,
-				C7213F1579F2B7A4D38CC2B8FF4E765B /* Pods-DiscogsAPITests */,
+				B71AE0C59992380B193220B0AC4344E1 /* Pods-DiscogsAPITests */,
 				84A110F7C5630871DF47E0F744331CA3 /* RestKit */,
 				58E0215B7207D3693AE41AF9A726F776 /* RKValueTransformers */,
 				7B0DCF7847CEEE3E62978F3548EFA24F /* SOCKit */,
@@ -2673,6 +2633,14 @@
 			files = (
 				DEAAF4D9F763CC13E7C7DC49B65F25AC /* RKValueTransformers-dummy.m in Sources */,
 				C4333DB30D6A66360B74361AF960B934 /* RKValueTransformers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A9C3EE1E7B7A5B77329C88C73ABBB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56291AD9C5EB4CD4721BF9DFBB554DC /* Pods-DiscogsAPITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2767,14 +2735,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CE4BEFA25F2ACB79EA32862D7FB5E54 /* Pods-DiscogsAPI-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C269FD02074B0E9912D7D3600DE2442C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				639694E698BDCCCA290DCAA248D62769 /* Pods-DiscogsAPITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2927,12 +2887,6 @@
 			target = 58E0215B7207D3693AE41AF9A726F776 /* RKValueTransformers */;
 			targetProxy = 76232023176C50977AB9A4DA4B3E2C07 /* PBXContainerItemProxy */;
 		};
-		349901951FB3C92F739573ECB743D597 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ISO8601DateFormatterValueTransformer;
-			target = 84D85C7F100965596E24C8BA09AF9DC4 /* ISO8601DateFormatterValueTransformer */;
-			targetProxy = E936D52C0B5F4C55660D07EDAB2A1719 /* PBXContainerItemProxy */;
-		};
 		557AD8F485D3EB76C909FA1F3FD8409A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TransitionKit;
@@ -2993,18 +2947,6 @@
 			target = 7B0DCF7847CEEE3E62978F3548EFA24F /* SOCKit */;
 			targetProxy = 17FD36C82847B2969F6EA0C2347B14E1 /* PBXContainerItemProxy */;
 		};
-		9A67F4ADE3A2F45B6B05CA1A31A1E4D2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SOCKit;
-			target = 7B0DCF7847CEEE3E62978F3548EFA24F /* SOCKit */;
-			targetProxy = BD00CEC99C6C47AF323AC76589136FDA /* PBXContainerItemProxy */;
-		};
-		A1B79E3BE3F76DFC970217E3832AD6A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TransitionKit;
-			target = 83A5C0DB2D2D5EB191F8AFCF354E729F /* TransitionKit */;
-			targetProxy = 5ECD211319B2AC4098FCEA5AA5BB0691 /* PBXContainerItemProxy */;
-		};
 		A3FFC739FA697FE0431F60C5211830E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RKValueTransformers;
@@ -3046,18 +2988,6 @@
 			name = TransitionKit;
 			target = 83A5C0DB2D2D5EB191F8AFCF354E729F /* TransitionKit */;
 			targetProxy = B6E360092B207FC3680C6CE27492D6EC /* PBXContainerItemProxy */;
-		};
-		EF6BB6B62FCCD6A1CD3F6F3DE1318B67 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RKValueTransformers;
-			target = 58E0215B7207D3693AE41AF9A726F776 /* RKValueTransformers */;
-			targetProxy = 971C05294A908E0EBB6BCD973E4A35BD /* PBXContainerItemProxy */;
-		};
-		EFA499928B889168B0A2AE6D7CFE017A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RestKit;
-			target = 84A110F7C5630871DF47E0F744331CA3 /* RestKit */;
-			targetProxy = 252DCE4BDC669181A3B79036AB87851A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3443,41 +3373,6 @@
 			};
 			name = Release;
 		};
-		51188C070372F898856641105326D35A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 041B62B43B4F7BFB787C109B4F4DADC3 /* Pods-DiscogsAPITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DiscogsAPITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_DiscogsAPITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		684DFDC2C5A80C83E60028833BAB43FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C8C67F57E7E01CB903C2D9123FE56E6 /* Pods-DiscogsAPI-Discogs-swift.release.xcconfig */;
@@ -3679,7 +3574,7 @@
 			};
 			name = Debug;
 		};
-		CE7641D2129E478C6E1C4BA2082767B9 /* Debug */ = {
+		CA78EFEE818E95D15FC8B67A10321D1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E865A267285C4365AA12FC1E58AB911 /* Pods-DiscogsAPITests.debug.xcconfig */;
 			buildSettings = {
@@ -3778,6 +3673,41 @@
 			};
 			name = Debug;
 		};
+		F458EBBE0D969240DCF75440C86E5063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041B62B43B4F7BFB787C109B4F4DADC3 /* Pods-DiscogsAPITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DiscogsAPITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DiscogsAPITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F4DE0184BC6315E49D10766C2A31E2C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C58DBC7EEBB2C0362482F3863E8E256 /* RKValueTransformers.xcconfig */;
@@ -3858,15 +3788,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D25A34EA6C8A6FD1893DA08E9AA108B /* Build configuration list for PBXNativeTarget "Pods-DiscogsAPITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CE7641D2129E478C6E1C4BA2082767B9 /* Debug */,
-				51188C070372F898856641105326D35A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8A3C1D6CD3F2332F133EB17587BA6ED6 /* Build configuration list for PBXNativeTarget "TransitionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3890,6 +3811,15 @@
 			buildConfigurations = (
 				1400C10BDE9D9F6C822B6AFF024C4427 /* Debug */,
 				684DFDC2C5A80C83E60028833BAB43FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B19386BAB37F12FBC89CFBBA7CEA7689 /* Build configuration list for PBXNativeTarget "Pods-DiscogsAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA78EFEE818E95D15FC8B67A10321D1C /* Debug */,
+				F458EBBE0D969240DCF75440C86E5063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

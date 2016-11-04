@@ -82,18 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RKValueTransformers/RKValueTransformers.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RestKit/RestKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SOCKit/SOCKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TransitionKit/TransitionKit.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RKValueTransformers/RKValueTransformers.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RestKit/RestKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SOCKit/SOCKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TransitionKit/TransitionKit.framework"
-fi

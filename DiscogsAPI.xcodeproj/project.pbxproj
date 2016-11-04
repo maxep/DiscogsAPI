@@ -25,7 +25,6 @@
 		9C0F098C1DB5228F00FB09D9 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F098A1DB5228F00FB09D9 /* DGOrder.m */; };
 		9C0F09901DB5274300FB09D9 /* DGOrder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F098E1DB5274300FB09D9 /* DGOrder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C0F09911DB5274300FB09D9 /* DGOrder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F098F1DB5274300FB09D9 /* DGOrder+Mapping.m */; };
-		9C1CCA471DBA9AEA0049AD5D /* DiscogsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D63B311CFF91B10001942B /* DiscogsAPI.framework */; };
 		9C1CCA501DBAA2750049AD5D /* release.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C1CCA4E1DBAA20A0049AD5D /* release.json */; };
 		9C1CCA521DBAA4A70049AD5D /* DGDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1CCA511DBAA4A70049AD5D /* DGDatabaseTests.m */; };
 		9C1CCA571DBAA5DB0049AD5D /* DGTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1CCA541DBAA55E0049AD5D /* DGTestCase.m */; };
@@ -67,6 +66,7 @@
 		9CA7942C1D0560460006EE89 /* DGSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794261D0560460006EE89 /* DGSearchViewController.m */; };
 		9CA794311D0560560006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */; };
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
+		D033E22A87C06F4E69185C44 /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB17D640D59A0FEC7DD610D3 /* Pods_DiscogsAPITests.framework */; };
 		D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
@@ -191,18 +191,7 @@
 		D0A589011CFF9B0A008DF0A4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589001CFF9B0A008DF0A4 /* MobileCoreServices.framework */; };
 		D0A589031CFF9B1A008DF0A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589021CFF9B1A008DF0A4 /* SystemConfiguration.framework */; };
 		D0A589061CFF9E6A008DF0A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589051CFF9E6A008DF0A4 /* Security.framework */; };
-		E76FDD758CF25B4018F60936 /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB17D640D59A0FEC7DD610D3 /* Pods_DiscogsAPITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9C1CCA481DBA9AEA0049AD5D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0D63B281CFF91B10001942B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0D63B301CFF91B10001942B;
-			remoteInfo = DiscogsAPI;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1BBAA9A0D9396AF522A62D35 /* Pods-DiscogsAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -432,8 +421,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C1CCA471DBA9AEA0049AD5D /* DiscogsAPI.framework in Frameworks */,
-				E76FDD758CF25B4018F60936 /* Pods_DiscogsAPITests.framework in Frameworks */,
+				D033E22A87C06F4E69185C44 /* Pods_DiscogsAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,17 +1209,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C1CCA4A1DBA9AEA0049AD5D /* Build configuration list for PBXNativeTarget "DiscogsAPITests" */;
 			buildPhases = (
-				7F130FBA53D68193E8E172EF /* [CP] Check Pods Manifest.lock */,
+				746B49A2AB70A2F62F1C880C /* [CP] Check Pods Manifest.lock */,
 				9C1CCA3E1DBA9AEA0049AD5D /* Sources */,
 				9C1CCA3F1DBA9AEA0049AD5D /* Frameworks */,
 				9C1CCA401DBA9AEA0049AD5D /* Resources */,
-				783B293F348E60EF1FF63655 /* [CP] Embed Pods Frameworks */,
-				BBD4539A8E823F51FAD1484F /* [CP] Copy Pods Resources */,
+				FA004E3C99150EE1DD8BD49A /* [CP] Embed Pods Frameworks */,
+				BAD837F7A20B0AA06D2971A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9C1CCA491DBA9AEA0049AD5D /* PBXTargetDependency */,
 			);
 			name = DiscogsAPITests;
 			productName = DiscogsAPITests;
@@ -1282,12 +1269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0D63B391CFF91B20001942B /* Build configuration list for PBXNativeTarget "DiscogsAPI" */;
 			buildPhases = (
-				D35E555CE147319E0A43C692 /* [CP] Check Pods Manifest.lock */,
+				870F1AAFA8A81B03EFD70847 /* [CP] Check Pods Manifest.lock */,
 				D0D63B2C1CFF91B10001942B /* Sources */,
 				D0D63B2D1CFF91B10001942B /* Frameworks */,
 				D0D63B2E1CFF91B10001942B /* Headers */,
 				D0D63B2F1CFF91B10001942B /* Resources */,
-				3A7AE7CBBDE74659C3207ED8 /* [CP] Copy Pods Resources */,
+				BD89FB9B8ACAA8014210DD73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1418,21 +1405,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		3A7AE7CBBDE74659C3207ED8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		50CD91ACFCA7BE01CC7F2EFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1478,22 +1450,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		783B293F348E60EF1FF63655 /* [CP] Embed Pods Frameworks */ = {
+		746B49A2AB70A2F62F1C880C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7F130FBA53D68193E8E172EF /* [CP] Check Pods Manifest.lock */ = {
+		870F1AAFA8A81B03EFD70847 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1523,7 +1495,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-swift/Pods-DiscogsAPI-Discogs-swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBD4539A8E823F51FAD1484F /* [CP] Copy Pods Resources */ = {
+		BAD837F7A20B0AA06D2971A2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1536,6 +1508,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD89FB9B8ACAA8014210DD73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CEAE3A7CB31B036DFA700329 /* [CP] Copy Pods Resources */ = {
@@ -1553,19 +1540,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-swift/Pods-DiscogsAPI-Discogs-swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D35E555CE147319E0A43C692 /* [CP] Check Pods Manifest.lock */ = {
+		FA004E3C99150EE1DD8BD49A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1690,14 +1677,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9C1CCA491DBA9AEA0049AD5D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0D63B301CFF91B10001942B /* DiscogsAPI */;
-			targetProxy = 9C1CCA481DBA9AEA0049AD5D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9C1CCA4B1DBA9AEA0049AD5D /* Debug */ = {
