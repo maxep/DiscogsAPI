@@ -32,19 +32,12 @@
 
 @synthesize pagination;
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void(^)(NSError * _Nullable error))failure {
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
-    [self.pagination loadNextPageWithResponseDesciptor:[DGListing responseDescriptor] success:^(NSArray *objects) {
-        if ([objects.firstObject isKindOfClass:[DGListing class]]) {
-            DGInventoryResponse* response = objects.firstObject;
-            
-            self.pagination = response.pagination;
-            NSMutableArray *results = self.listings.mutableCopy;
-            [results addObjectsFromArray:response.listings];
-            self.listings = results;
-            
-            success();
-        }
+    [self.pagination loadNextPageWithResponseClass:[DGInventoryResponse class] success:^(DGInventoryResponse *response) {
+        self.pagination = response.pagination;
+        self.listings = [self.listings arrayByAddingObjectsFromArray:response.listings];
+        success();
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         if (failure) failure(error);

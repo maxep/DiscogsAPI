@@ -23,12 +23,16 @@
 #import "DGPagination.h"
 #import "DGMapping.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DGPaginationUrls (Mapping) <DGObject>
 
 @end
 
 @interface DGPagination (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
-- (void)loadNextPageWithResponseDesciptor:(RKResponseDescriptor *)responseDescriptor success:(void (^)(NSArray *objects))success failure:(void (^)(NSError *error))failure;
+- (void)loadNextPageWithResponseClass:(Class<DGResponseObject>)responseClass success:(void (^)(id response))success failure:(nullable void (^)(NSError * _Nullable error))failure;
 
 @end
+
+NS_ASSUME_NONNULL_END

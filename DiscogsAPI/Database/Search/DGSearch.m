@@ -62,18 +62,12 @@
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {
-    [self.pagination loadNextPageWithResponseDesciptor:[DGSearchResponse responseDescriptor] success:^(NSArray *objects) {
-        if ([[objects firstObject] isKindOfClass:[DGSearchResponse class]]) {
-            DGSearchResponse* response = [objects firstObject];
-            
-            self.pagination = response.pagination;
-            NSMutableArray* results = [self.results mutableCopy];
-            [results addObjectsFromArray:response.results];
-            self.results = results;
-            
-            success();
-        }
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+    
+    [self.pagination loadNextPageWithResponseClass:[DGSearchResponse class] success:^(DGSearchResponse *response) {
+        self.pagination = response.pagination;
+        self.results = [self.results arrayByAddingObjectsFromArray:response.results];
+        success();
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         if (failure) failure(error);

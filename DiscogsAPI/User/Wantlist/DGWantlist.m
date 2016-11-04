@@ -48,19 +48,12 @@
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
-    [self.pagination loadNextPageWithResponseDesciptor:[DGWantlistResponse responseDescriptor] success:^(NSArray *objects) {
-        if ([[objects firstObject] isKindOfClass:[DGWantlistResponse class]]) {
-            DGWantlistResponse* response = [objects firstObject];
-            
-            self.pagination = response.pagination;
-            NSMutableArray* wants = [self.wants mutableCopy];
-            [wants addObjectsFromArray:response.wants];
-            self.wants = wants;
-            
-            success();
-        }
+    [self.pagination loadNextPageWithResponseClass:[DGWantlistResponse class] success:^(DGWantlistResponse *response) {
+        self.pagination = response.pagination;
+        self.wants = [self.wants arrayByAddingObjectsFromArray:response.wants];
+        success();
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         if (failure) failure(error);

@@ -73,20 +73,27 @@
     return @{ @"page" : self.page, @"per_page" : self.perPage };
 }
 
-- (void)loadNextPageWithResponseDesciptor:(RKResponseDescriptor *)responseDescriptor success:(void (^)(NSArray *objects))success failure:(void (^)(NSError *error))failure {
+- (void)loadNextPageWithResponseClass:(Class<DGResponseObject>)responseClass success:(void (^)(id response))success failure:(nullable void (^)(NSError * _Nullable error))failure {
     if(self.urls.next) {
         
         RKObjectManager *manager = [RKObjectManager sharedManager];
         NSURLRequest *requestURL = [manager.HTTPClient requestWithMethod:@"GET" path:self.urls.next parameters:nil];
         
-        RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ responseDescriptor ]];
+        RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ responseClass.responseDescriptor ]];
         
         [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-             success(mappingResult.array);
-         } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-             RKLogError(@"Operation failed with error: %@", error);
-             if (failure) failure(error);
-         }];
+            if ([mappingResult.firstObject isKindOfClass:responseClass]) {
+                success(mappingResult.firstObject);
+                
+            } else if (failure) {
+                failure([NSError errorWithDomain:@"Discogs.api"
+                                            code:NSURLErrorCannotParseResponse
+                                        userInfo:@{NSLocalizedDescriptionKey : @"Bad response from Discogs server"}]);
+            }
+        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+            RKLogError(@"Operation failed with error: %@", error);
+            if (failure) failure(error);
+        }];
         
         [manager enqueueObjectRequestOperation:objectRequestOperation];
     }

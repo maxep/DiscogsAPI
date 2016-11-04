@@ -124,17 +124,10 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
     
-    [self.pagination loadNextPageWithResponseDesciptor:[DGCollectionReleasesResponse responseDescriptor] success:^(NSArray *objects) {
-        if ([[objects firstObject] isKindOfClass:[DGCollectionReleasesResponse class]]) {
-            DGCollectionReleasesResponse* response = [objects firstObject];
-            
-            self.pagination = response.pagination;
-            NSMutableArray* releases = [self.releases mutableCopy];
-            [releases addObjectsFromArray:response.releases];
-            self.releases = releases;
-            
-            success();
-        }
+    [self.pagination loadNextPageWithResponseClass:[DGCollectionReleasesResponse class] success:^(DGCollectionReleasesResponse *response) {
+        self.pagination = response.pagination;
+        self.releases = [self.releases arrayByAddingObjectsFromArray:response.releases];
+        success();
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         if (failure) failure(error);

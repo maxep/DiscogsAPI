@@ -52,18 +52,12 @@
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError *error))failure {
-    [self.pagination loadNextPageWithResponseDesciptor:[DGLabelReleasesResponse responseDescriptor] success:^(NSArray *objects) {
-        if ([[objects firstObject] isKindOfClass:[DGLabelReleasesResponse class]]) {
-            DGLabelReleasesResponse* response = [objects firstObject];
-            
-            self.pagination = response.pagination;
-            NSMutableArray* releases = [self.releases mutableCopy];
-            [releases addObjectsFromArray:response.releases];
-            self.releases = releases;
-            
-            success();
-        }
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+    
+    [self.pagination loadNextPageWithResponseClass:[DGLabelReleasesResponse class] success:^(DGLabelReleasesResponse *response) {
+        self.pagination = response.pagination;
+        self.releases = [self.releases arrayByAddingObjectsFromArray:response.releases];
+        success();
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         if (failure) failure(error);
