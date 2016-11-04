@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
                                 '#import <Security/Security.h>',
                                 '#import <RestKit/RestKit.h>'
     ss.private_header_files = 'DiscogsAPI/Core/DGHTTPClient.h',
-                              'DiscogsAPI/Mapping/Configuration/*.h',
+                              'DiscogsAPI/Configuration/*.h',
                               'AFOAuth1Client/AFOAuth1Client/*.h'
   end
   
@@ -98,6 +98,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Mapping' do |ss|
     ss.source_files   = 'DiscogsAPI/Mapping'
+    ss.private_header_files = 'DiscogsAPI/Mapping/*.h'
   end
 
 end

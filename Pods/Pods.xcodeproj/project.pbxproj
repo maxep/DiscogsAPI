@@ -20,6 +20,7 @@
 		0BC063F99793F82A9CE410A8EDD9C8B0 /* Pods-DiscogsAPI-Discogs-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A695DC1CE1C0844CA04B320DE5C5C8 /* Pods-DiscogsAPI-Discogs-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C63BC3203AED16F677F6247F3260EB6 /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = 481E80FF48FB4AB6D428809FDCA402E1 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D8CCC3DE07DE28E0EB13352F096CBDF /* RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 722E8FA3B3982CE73B744A14F49542DD /* RKMapping.m */; };
+		0DC6F2E91E385235FC4EA19AFF96F63C /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F03782CC2A1098A112F579D1EBE985 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0DFC8F5DE58D57A565563D1B2A1A4399 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA202D5EC5F7EF92A7576CB1DEEFCF8 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E9C73836D7262D72ADAF1B3DE4E0C26 /* DGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D68361C2D3AC9AEDD98F5205DD481079 /* DGArtist.m */; };
 		0EA0BEF4427E81F277E9ABE146CC6EF6 /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B47754546B6B7F8EB2ABBA352B3F34 /* DGCollection.m */; };
@@ -80,7 +81,6 @@
 		33EBB16647EEA80D824B146CFA7C3C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		359F6F57A0377BC3B65CEC60222AC146 /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CCBCB7FFCAD1127D976815569DDC5 /* DGRelease+Mapping.m */; };
 		35ED2C78BE38E9766323CD101F53E1BA /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 477E8859DAF3DD30154A4A00472C4718 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3763959D2F14E6B29820CDECECB8766B /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F03782CC2A1098A112F579D1EBE985 /* DGOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		395B4EBF2DC30FFD754BD57825543738 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 8670DD237F17144656B8081430021F7B /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		397B16E94D24FD19C1758E35A72FCFFC /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB59B1D678500DDC0B2077DA0BF0613 /* DGMaster+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		39F34E6A0279466AFDB1D22D83A779C5 /* DGCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E1434693415C2530C0EC6BEBC47DA /* DGCommunity.m */; };
@@ -170,7 +170,6 @@
 		8649FB39060E76A98E2F00D42FDDD250 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 627EC94F132E2169AB651C78E3E3AC10 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		86E27B8DE536A3905AFC9C2D2B389F86 /* SOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */; };
 		86F14DAE34308C597AD7C69E78FEB7D8 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9289DE456F5B82C7A7CDFA21059DCE08 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8724E040E6B4CD1DDE31D7F834285F7F /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9AA2C8B483F0BB845D5961F02BCCA60 /* DGMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8786B399C18FE68D2CC6B67958754623 /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D780B85261865E7D70D2044D4F2B2D9 /* DGTrack.m */; };
 		880BA173E15D398DE640A951242FF737 /* TransitionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E45A5B0CD5F64B2A47368E48E58DD25 /* TransitionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88579A607EE1C802064DBBBA84D8FD24 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CD413CE82DEFFA83D275B5AA27726 /* DGReleaseInstance+Mapping.m */; };
@@ -213,6 +212,7 @@
 		A8EAC0961915B602ABDE12430254CB2D /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC84AA926C602D5C538165137B18A1A /* DGCommunity+Mapping.m */; };
 		A9428BEFC18803D6218077D3A0A934C5 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1666873241266AF81119FB7A35C0E45F /* DGIdentity+Mapping.m */; };
 		AA1857C4F8B75F80CB494A663335BF4C /* TKState.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A2178652A7D290050A4C3E0D8D4EE /* TKState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AA3D1480D276DF62A4FDA08F60323492 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9AA2C8B483F0BB845D5961F02BCCA60 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AAC7AC33B2956E02770ED4AF4B1B2CD7 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 2063926E614977C321BA952721BC03EA /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABEEEFBBCE8003938279C5E5C8D2C6CB /* AFRKImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C8CBDE5E24D1FF119E14E07032DAB8 /* AFRKImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABF856BFC9BA4788769A86836AAE3A91 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = A555BD048A321E33461F89C5AFD8FC76 /* DGOrder.m */; };
@@ -246,6 +246,7 @@
 		BAE30DE0187CB1010AF4A097F9AC1D9A /* AFRKNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E93DCF2B63AE2E7B9DD7E1AD314DDAF1 /* AFRKNetworkActivityIndicatorManager.m */; };
 		C0742C63D93A4477AFA43E2A0143735E /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EF23F16EABB2311BBC530AC0B2BCA1 /* DGInventory.m */; };
 		C0804828812AEEE6B12A35FB48924FF3 /* RKRelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8D26427DD6082D29D251D60666810C /* RKRelationshipMapping.m */; };
+		C1016C3040189FED17030C0A326FAD69 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DE142EFD6CAAA4679922E13CEC9AB5 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C1A65012DB0637B84FF750629ECC93FE /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5DB1810AC3A2DBC851F38AB5F0A1A1 /* SOCKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C1BCCE17FBC7CA76160EE94DC05DECAB /* ISO8601DateFormatterValueTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */; };
 		C204B90222049CF520D686138E3743E5 /* RKRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BBDDB687E283171BACB1F873C85B96 /* RKRoute.m */; };
@@ -316,7 +317,6 @@
 		EB1739113CA72CE5809FE1F449FF9AD9 /* RKRouteSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE729663DC07EDE4716C4889ED244B3 /* RKRouteSet.m */; };
 		ECEF0A285ED7CDF08F1ABA0CF83DFFF0 /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A303FFA89D41AFB2163D973064208730 /* DGWantlist+Mapping.m */; };
 		ED5373567464FC20B080D5B2E42F2FDE /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = F33B5BF3CB55F5A29F30B5A34E031884 /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F06CEA2A480788280C0FDDB0F4A199CB /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DE142EFD6CAAA4679922E13CEC9AB5 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F168D21040977687FC404B3AEAE3E00F /* RKSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F8248A69EC4540522101462797669C /* RKSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1C9DA82E77C5FC72EAE46F72020BB76 /* RKTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1280E0481CEA379CC5CE0224958F2197 /* RKTestFactory.m */; };
 		F2AB8F2CD347C9EA3DE13C688DD985E3 /* DGArtistRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = AB70A64CE5FF84E4BE6AC9883A65AFD6 /* DGArtistRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2222,7 +2222,7 @@
 				7D35BD9D470F81ADDE204E05EA32C308 /* DGCommunity+Mapping.h in Headers */,
 				DD8B9BA6B890964F343533140DA9F766 /* DGCommunity.h in Headers */,
 				D4E253CCF66F707AC973534E772CD8EA /* DGDatabase.h in Headers */,
-				F06CEA2A480788280C0FDDB0F4A199CB /* DGEndpoint+Configuration.h in Headers */,
+				C1016C3040189FED17030C0A326FAD69 /* DGEndpoint+Configuration.h in Headers */,
 				1794AD5E0504CA7B51180EAFB16EE541 /* DGEndpoint.h in Headers */,
 				FDED7B4316597E3F82FCE3A66BC04D19 /* DGFormat+Mapping.h in Headers */,
 				2AFB65664035EE16E316A960354B2733 /* DGFormat.h in Headers */,
@@ -2241,7 +2241,7 @@
 				FD2D7A5D08E015023C06051A73637042 /* DGLabelRelease.h in Headers */,
 				2D53BB7D181AA9B0B32A5C2F6DA7C118 /* DGListing+Mapping.h in Headers */,
 				85257E8054CE7FA47297DADB5EEAA480 /* DGListing.h in Headers */,
-				8724E040E6B4CD1DDE31D7F834285F7F /* DGMapping.h in Headers */,
+				AA3D1480D276DF62A4FDA08F60323492 /* DGMapping.h in Headers */,
 				0C63BC3203AED16F677F6247F3260EB6 /* DGMarketplace.h in Headers */,
 				397B16E94D24FD19C1758E35A72FCFFC /* DGMaster+Mapping.h in Headers */,
 				D6BEECD5EFCECCFDCA3B103D62DB2E89 /* DGMaster.h in Headers */,
@@ -2250,7 +2250,7 @@
 				5EBCF0232DB198B26BC23A35A071042D /* DGMember+Mapping.h in Headers */,
 				7E93FE65C36D8434C5920C275E4B8E53 /* DGMember.h in Headers */,
 				9FD7BEEFE86A002BD8620BE1FFEF84CD /* DGObject.h in Headers */,
-				3763959D2F14E6B29820CDECECB8766B /* DGOperation.h in Headers */,
+				0DC6F2E91E385235FC4EA19AFF96F63C /* DGOperation.h in Headers */,
 				FCC64FE247E823A272138DCAB561062E /* DGOrder+Mapping.h in Headers */,
 				21410E655A94657A6C74BEFEF5E3AB11 /* DGOrder.h in Headers */,
 				A8C227A295F726B5B9E983E01CA3BCCB /* DGPagination+Mapping.h in Headers */,

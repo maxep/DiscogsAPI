@@ -63,7 +63,7 @@
       ],
       "private_header_files": [
         "DiscogsAPI/Core/DGHTTPClient.h",
-        "DiscogsAPI/Mapping/Configuration/*.h",
+        "DiscogsAPI/Configuration/*.h",
         "AFOAuth1Client/AFOAuth1Client/*.h"
       ]
     },
@@ -168,7 +168,8 @@
     },
     {
       "name": "Mapping",
-      "source_files": "DiscogsAPI/Mapping"
+      "source_files": "DiscogsAPI/Mapping",
+      "private_header_files": "DiscogsAPI/Mapping/*.h"
     }
   ]
 }
