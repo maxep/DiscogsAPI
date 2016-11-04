@@ -56,7 +56,6 @@
 }
 
 - (void)searchFor:(DGSearchRequest *)request success:(void (^)(DGSearchResponse *response))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGSearchResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -65,9 +64,8 @@
 }
 
 - (void)getArtist:(NSNumber *)artistID success:(void (^)(DGArtist *artist))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
-    DGArtist *artist    = [DGArtist artist];
+    DGArtist *artist    = [DGArtist new];
     artist.ID           = artistID;
     
     DGOperation *operation = [self.manager operationWithRequest:artist method:RKRequestMethodGET responseClass:[DGArtist class]];
@@ -77,7 +75,6 @@
 }
 
 - (void)getArtistReleases:(DGArtistReleaseRequest *)request success:(void (^)(DGArtistReleaseResponse *response))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGArtistReleaseResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -86,7 +83,6 @@
 }
 
 - (void)getRelease:(NSNumber *)releaseID success:(void (^)(DGRelease *release))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGRelease *release  = [DGRelease new];
     release.ID          = releaseID;
@@ -98,7 +94,6 @@
 }
 
 - (void)getMaster:(NSNumber *)masterID success:(void (^)(DGMaster *master))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGMaster *master    = [DGMaster new];
     master.ID           = masterID;
@@ -110,7 +105,6 @@
 }
 
 - (void)getMasterVersion:(DGMasterVersionRequest *)request success:(void (^)(DGMasterVersionResponse *response))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGMasterVersionResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -119,7 +113,6 @@
 }
 
 - (void)getLabel:(NSNumber *)labelID success:(void (^)(DGLabel *label))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGLabel *label  = [DGLabel new];
     label.ID        = labelID;
@@ -131,7 +124,6 @@
 }
 
 - (void)getLabelReleases:(DGLabelReleasesRequest *)request success:(void (^)(DGLabelReleasesResponse *response))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGLabelReleasesResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];

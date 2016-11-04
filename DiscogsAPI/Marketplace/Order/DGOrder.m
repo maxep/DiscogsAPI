@@ -60,16 +60,12 @@ NSString * DGSortOrdersAsString(DGSortOrders sort) {
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError * _Nullable))failure {
-    [self.pagination loadNextPageWithResponseDesciptor:[DGListOrdersResponse responseDescriptor] success:^(NSArray *objects) {
-        if ([[objects firstObject] isKindOfClass:[DGListOrdersResponse class]]) {
-            DGListOrdersResponse *response = [objects firstObject];
-            
-            self.pagination = response.pagination;
-            self.orders = [self.orders arrayByAddingObjectsFromArray:response.orders];
-            
-            success();
-        }
+- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+    
+    [self.pagination loadNextPageWithResponseClass:[DGListOrdersResponse class] success:^(DGListOrdersResponse *response) {
+        self.pagination = response.pagination;
+        self.orders = [self.orders arrayByAddingObjectsFromArray:response.orders];
+        success();
     } failure:^(NSError *error) {
         RKLogError(@"Operation failed with error: %@", error);
         if (failure) failure(error);

@@ -65,13 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *type;
 
-/**
- Creates and initializes a `DGArtistRelease` object.
- 
- @return The newly-initialized artist release object.
- */
-+ (DGArtistRelease *)release;
-
 @end
 
 /**
@@ -79,18 +72,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface DGArtistReleaseRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong) NSNumber      *artistID;
+@property (nonatomic, strong) DGPagination *pagination;
 
-+ (DGArtistReleaseRequest *)request;
+@property (nonatomic, strong) NSNumber *artistID;
 
 @end
 
 @interface DGArtistReleaseResponse : NSObject <DGPaginated>
 
 @property (nonatomic, strong) NSArray<DGArtistRelease *> *releases;
-
-+ (DGArtistReleaseResponse *)response;
 
 @end
 

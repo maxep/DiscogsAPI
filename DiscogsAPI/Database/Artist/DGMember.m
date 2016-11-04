@@ -24,9 +24,4 @@
 
 @implementation DGMember
 
-+ (DGMember*) member
-{
-    return [[DGMember alloc] init];
-}
-
 @end

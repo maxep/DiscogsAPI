@@ -25,9 +25,4 @@
 
 @implementation DGArtist
 
-+ (DGArtist*) artist
-{
-    return [[DGArtist alloc] init];
-}
-
 @end

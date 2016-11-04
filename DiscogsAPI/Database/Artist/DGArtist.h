@@ -77,14 +77,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *releasesURL;
 
-
-/**
- Creates and initializes a `DGArtist` object.
- 
- @return The newly-initialized artist object.
- */
-+ (DGArtist*)artist;
-
 @end
 
 NS_ASSUME_NONNULL_END

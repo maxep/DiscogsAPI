@@ -25,22 +25,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define DGCheckReachability(ret) { \
-    if(!self.isReachable) { \
-        if(failure) \
-            failure([self errorWithCode:NSURLErrorNotConnectedToInternet info:@"Not connected"]); \
-        return ret; \
-    } \
-}
-
-#define DGCheckURL(url, ret) { \
-    if( !url || [url isEqualToString:@""] ) { \
-        if (failure) \
-            failure([self errorWithCode:NSURLErrorZeroByteResource info:@"URL is empty"]); \
-        return ret; \
-    } \
-}
-
 /**
  `DGEndpoint` category to hold and configure the `RKObjectManager` with the endpoint specifications.
  */

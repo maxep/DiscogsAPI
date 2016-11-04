@@ -34,13 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) BOOL active;
 
-/**
- Creates and initializes a `DGMember` object.
- 
- @return The newly-initialized member object.
- */
-+ (DGMember*)member;
-
 @end
 
 NS_ASSUME_NONNULL_END

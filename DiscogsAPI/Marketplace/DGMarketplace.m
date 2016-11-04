@@ -57,7 +57,6 @@
 }
 
 - (void)getInventory:(DGInventoryRequest *)request success:(void (^)(DGInventoryResponse *response))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGInventoryResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -66,7 +65,6 @@
 }
 
 - (void)getListing:(DGListingRequest *)request success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGListing class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -75,7 +73,6 @@
 }
 
 - (void)editListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:listing method:RKRequestMethodPOST];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -84,7 +81,6 @@
 }
 
 - (void)createListing:(DGListing *)listing success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGCreateListingRequest *request = [DGCreateListingRequest new];
     request.listing = listing;
@@ -100,7 +96,6 @@
 }
 
 - (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:listing method:RKRequestMethodDELETE];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -109,7 +104,6 @@
 }
 
 - (void)getOrder:(NSNumber *)orderID success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOrder *order = [DGOrder new];
     order.ID = orderID;
@@ -121,7 +115,6 @@
 }
 
 - (void)getOrders:(DGListOrdersRequest *)request success:(void (^)(DGListOrdersResponse *response))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGListOrdersResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -130,7 +123,6 @@
 }
 
 - (void)editOrder:(DGOrder *)order success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:order method:RKRequestMethodPOST responseClass:[DGOrder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
@@ -139,7 +131,6 @@
 }
 
 - (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability();
     
     DGPriceSuggestionsRequest *request = [DGPriceSuggestionsRequest new];
     request.releaseID = releaseID;

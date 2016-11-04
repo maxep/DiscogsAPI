@@ -47,7 +47,6 @@ DGMediaType StringDGMediaType(NSString *str) {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
         
         //Setup client
         DGHTTPClient *client = [[DGHTTPClient alloc] init];
@@ -63,8 +62,6 @@ DGMediaType StringDGMediaType(NSString *str) {
     return discogs;
 }
 
-#pragma mark Public Methods
-
 - (instancetype)initWithManager:(RKObjectManager *)manager {
     self = [super initWithManager:manager];
     if (self) {
@@ -77,6 +74,8 @@ DGMediaType StringDGMediaType(NSString *str) {
     }
     return self;
 }
+
+#pragma mark Public Methods
 
 - (void)cancelAllOperations {
     [self.manager.operationQueue cancelAllOperations];

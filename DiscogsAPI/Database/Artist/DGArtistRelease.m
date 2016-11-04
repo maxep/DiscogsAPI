@@ -25,17 +25,9 @@
 
 @implementation DGArtistRelease
 
-+ (DGArtistRelease *)release {
-    return [[DGArtistRelease alloc] init];
-}
-
 @end
 
 @implementation DGArtistReleaseRequest
-
-+ (DGArtistReleaseRequest *)request {
-    return [[DGArtistReleaseRequest alloc] init];
-}
 
 - (id)init {
     self = [super init];
@@ -50,10 +42,6 @@
 @implementation DGArtistReleaseResponse
 
 @synthesize pagination;
-
-+ (DGArtistReleaseResponse *)response {
-    return [[DGArtistReleaseResponse alloc] init];
-}
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
     

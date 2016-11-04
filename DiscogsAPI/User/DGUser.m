@@ -47,7 +47,6 @@
 #pragma mark Public Methods
 
 - (void)getProfile:(NSString *)userName success:(void (^)(DGProfile *profile))success failure:(void (^)(NSError *error))failure {
-    DGCheckReachability();
     
     DGProfile *profile = [DGProfile new];
     profile.userName = userName;
@@ -59,8 +58,6 @@
 }
 
 - (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile *profile))success failure:(void (^)(NSError *error))failure {
-
-    DGCheckReachability();
     
     DGOperation *operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];

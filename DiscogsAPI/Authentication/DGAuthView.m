@@ -29,11 +29,11 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
 
 @implementation DGAuthView
 
-+ (DGAuthView*) viewWithRequest:(NSURLRequest*) request {
++ (DGAuthView *)viewWithRequest:(NSURLRequest *)request {
     return [[DGAuthView alloc] initWithRequest:request];
 }
 
-- (id)initWithRequest:(NSURLRequest*) request {
+- (instancetype)initWithRequest:(NSURLRequest *)request {
     if (self = [super init]) {
         self.delegate = self;
         self.opaque = NO;

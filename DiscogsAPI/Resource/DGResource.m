@@ -26,15 +26,11 @@
 @implementation DGResource
 
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
-    DGCheckReachability(); DGCheckURL(imageURL,);
-    
     RKObjectRequestOperation *operation = (RKObjectRequestOperation *)[self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
     [self.manager enqueueObjectRequestOperation:operation];
 }
 
 - (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
-    DGCheckURL(url, nil);
-    
     NSString *path = url;
     
     if (self.proxyURL) {
@@ -44,7 +40,7 @@
     
     NSURLRequest *requestURL = [self.manager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];
     
-    AFRKImageRequestOperation* operation = [AFRKImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+    AFRKImageRequestOperation *operation = [AFRKImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         if (success) {
             success(image);
         }
