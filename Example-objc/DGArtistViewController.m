@@ -48,7 +48,7 @@
     }];
     
     // Get artist release
-    DGArtistReleaseRequest *request = [DGArtistReleaseRequest request];
+    DGArtistReleaseRequest *request = [DGArtistReleaseRequest new];
     request.artistID = self.objectID;
     request.pagination.perPage = @25;
     
