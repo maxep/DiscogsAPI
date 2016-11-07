@@ -53,9 +53,6 @@ DGMediaType StringDGMediaType(NSString *str) {
         RKObjectManager *manager = [[RKObjectManager alloc] initWithHTTPClient:client];
         discogs = [[Discogs alloc] initWithManager:manager];
         
-        //Share Object Manager
-        [RKObjectManager setSharedManager:manager];
-        
         AFRKNetworkActivityIndicatorManager.sharedManager.enabled = YES;
     });
     
@@ -73,6 +70,10 @@ DGMediaType StringDGMediaType(NSString *str) {
         self.resource       = [[DGResource alloc] initWithManager:manager];
     }
     return self;
+}
+
+- (void)configureManager:(RKObjectManager *)manager {
+    manager.requestSerializationMIMEType = RKMIMETypeJSON;
 }
 
 #pragma mark Public Methods

@@ -24,13 +24,13 @@
 
 NSString * const kDGBaseURL = @"https://api.discogs.com/";
 
-static NSString * const kDGRequestTokenURL = @"https://api.discogs.com/oauth/request_token";
-static NSString * const kDGAuthorizeURL    = @"http://www.discogs.com/oauth/authorize";
-static NSString * const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/access_token";
+static NSString * const kDGRequestTokenURL = @"oauth/request_token";
+static NSString * const kDGAuthorizeURL    = @"https://discogs.com/oauth/authorize";
+static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
 
 @interface DGHTTPClient ()
-@property (nonatomic,strong) NSString   *authorizationHeader;
-@property (nonatomic,readonly) NSString *acceptHeader;
+@property (nonatomic, strong) NSString   *authorizationHeader;
+@property (nonatomic, readonly) NSString *acceptHeader;
 @end
 
 @implementation DGHTTPClient
@@ -94,12 +94,8 @@ static NSString * const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acc
 
 #pragma mark - AFHTTPClient
 
-- (NSMutableURLRequest *)requestWithMethod:(NSString *)method
-                                      path:(NSString *)path
-                                parameters:(NSDictionary *)parameters {
-    NSMutableURLRequest *request = [super requestWithMethod:method
-                                                       path:path
-                                                 parameters:parameters];
+- (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters {
+    NSMutableURLRequest *request = [super requestWithMethod:method path:path parameters:parameters];
     
     [request setValue:self.acceptHeader forHTTPHeaderField:@"Accept"];
     if (self.accessToken) {
@@ -112,14 +108,8 @@ static NSString * const kDGAccessTokenURL  = @"https://api.discogs.com/oauth/acc
     return request;
 }
 
-- (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
-                                                   path:(NSString *)path
-                                             parameters:(NSDictionary *)parameters
-                              constructingBodyWithBlock:(void (^)(id <AFRKMultipartFormData> formData))block {
-    NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method
-                                                                    path:path
-                                                              parameters:parameters
-                                               constructingBodyWithBlock:block];
+- (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters constructingBodyWithBlock:(void (^)(id <AFRKMultipartFormData> formData))block {
+    NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method path:path parameters:parameters constructingBodyWithBlock:block];
     
     [request setValue:self.acceptHeader forHTTPHeaderField:@"Accept"];
     if (self.accessToken) {

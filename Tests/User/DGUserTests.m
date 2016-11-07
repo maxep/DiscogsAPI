@@ -52,7 +52,37 @@
     XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
 }
 
-#pragma mark Profile
+- (void)testEditProfileOperation {
+    DGProfile *profile = [DGProfile new];
+    profile.userName = @"maxepTestUser";
+    
+    DGOperation<DGProfile *> *operation = [self.manager operationWithRequest:profile method:RKRequestMethodGET responseClass:[DGProfile class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
+    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
+    
+    profile = operation.mappingResult.firstObject;
+    profile.profile = @"Test";
+    operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
+    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
+    XCTAssertEqualObjects([operation.mappingResult.firstObject profile], @"Test", @"Expected to edit profile");
+    
+    profile.profile = @"";
+    operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+}
+
+#pragma mark Wantlist
 
 - (void)testWantlistMapping {
     
