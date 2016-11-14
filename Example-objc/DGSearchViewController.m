@@ -67,7 +67,7 @@
 - (void)authenticate {
     
     NSURL *callback = [NSURL URLWithString:@"discogs://success"];
-    [Discogs.api.authentication authenticateWithCallback:callback success:^{
+    [Discogs.api.authentication authenticateWithCallback:callback success:^(DGIdentity *identity){
         
     } failure:^(NSError * _Nullable error) {
         NSLog(@"Error: %@", error);

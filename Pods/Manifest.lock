@@ -51,7 +51,7 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  DiscogsAPI: e03d148c7db993354e2aee679fb8f912613a6b44
+  DiscogsAPI: 3d30fe761d319551973889ed83e5137eb866546b
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   RestKit: a0244db34e14ed9cf059fcee2be6733cc162c34a
   RKValueTransformers: e5ed67e3811229b616fe01bddeeafe3bb337b1b9

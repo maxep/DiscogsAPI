@@ -40,6 +40,8 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
  */
 @interface DGAuthentication : DGEndpoint
 
+@property (nonatomic, readonly, nullable) DGIdentity *identity;
+
 /**
  Gets authentified user identity.
  
@@ -66,7 +68,7 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithCallback:(NSURL *)callback success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)authenticateWithCallback:(NSURL *)callback success:(void (^)(DGIdentity *identity))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Initiate an authenticate process.
@@ -75,12 +77,7 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
  @param success  A block object to be executed when the authenticate operation finishes successfully. This block has no return value and no argument.
  @param failure  A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)())success failure:(nullable DGFailureBlock)failure;
-
-/**
- Remove Discogs account credential from keychain.
- */
-- (void)removeAccountCredential;
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)(DGIdentity *identity))success failure:(nullable DGFailureBlock)failure;
 
 @end
 

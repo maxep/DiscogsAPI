@@ -1,28 +1,60 @@
-// DGTokenStore.m
 //
-// Copyright (c) 2016 Maxime Epain
+//  DGIdentity+Keychain.m
+//  DiscogsAPI
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Created by Maxime Epain on 12/11/2016.
+//  Copyright © 2016 Maxime Epain. All rights reserved.
 //
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
 
-#import "DGTokenStore.h"
+#import "DGIdentity+Keychain.h"
 
-@implementation DGTokenStore
+@implementation DGIdentity (Keychain)
+
+#pragma mark <NSSecureCoding>
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        self.ID = [coder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(ID))];
+        self.resourceURL = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(resourceURL))];
+        self.uri = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(uri))];
+        self.consumerName = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(consumerName))];
+        self.userName = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(userName))];
+        self.token = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(token))];
+        self.secret = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(secret))];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.ID forKey:NSStringFromSelector(@selector(ID))];
+    [coder encodeObject:self.resourceURL forKey:NSStringFromSelector(@selector(resourceURL))];
+    [coder encodeObject:self.uri forKey:NSStringFromSelector(@selector(uri))];
+    [coder encodeObject:self.consumerName forKey:NSStringFromSelector(@selector(consumerName))];
+    [coder encodeObject:self.userName forKey:NSStringFromSelector(@selector(userName))];
+    [coder encodeObject:self.token forKey:NSStringFromSelector(@selector(token))];
+    [coder encodeObject:self.secret forKey:NSStringFromSelector(@selector(secret))];
+}
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
+#pragma mark <NSCopying>
+
+- (id)copyWithZone:(NSZone *)zone {
+    DGIdentity *copy = [[[self class] allocWithZone:zone] init];
+    copy.ID             = self.ID.copy;
+    copy.resourceURL    = self.resourceURL.copy;
+    copy.uri            = self.uri.copy;
+    copy.consumerName   = self.consumerName.copy;
+    copy.userName       = self.userName.copy;
+    copy.token          = self.token.copy;
+    copy.secret         = self.secret.copy;
+    return copy;
+}
+
+#pragma mark Keychain
 
 static NSString * const DGOAuth1CredentialServiceName = @"DGOAuthCredentialService";
 static NSString * DGAccessGroup = nil;
@@ -65,7 +97,7 @@ static NSMutableDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *i
     DGAccessGroup = accessGroup;
 }
 
-+ (AFOAuth1Token *)retrieveCredentialWithIdentifier:(NSString *)identifier {
++ (DGIdentity *)retrieveIdentityWithIdentifier:(NSString *)identifier {
     NSMutableDictionary *query = DGKeychainQueryDictionaryWithIdentifier(identifier);
     query[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
     query[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
@@ -79,12 +111,12 @@ static NSMutableDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *i
     }
     
     NSData *data = (__bridge_transfer NSData *)result;
-    AFOAuth1Token *credential = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    DGIdentity *identity = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     
-    return credential;
+    return identity;
 }
 
-+ (BOOL)deleteCredentialWithIdentifier:(NSString *)identifier {
++ (BOOL)deleteIdentityWithIdentifier:(NSString *)identifier {
     NSMutableDictionary *query = DGKeychainQueryDictionaryWithIdentifier(identifier);
     
     OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
@@ -96,20 +128,19 @@ static NSMutableDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *i
     return (status == errSecSuccess);
 }
 
-+ (BOOL)storeCredential:(AFOAuth1Token *)credential
-         withIdentifier:(NSString *)identifier {
++ (BOOL)storeIdentity:(DGIdentity *)identity withIdentifier:(NSString *)identifier {
     NSMutableDictionary *query = [DGKeychainQueryDictionaryWithIdentifier(identifier) mutableCopy];
     
-    if (!credential) {
-        return [self deleteCredentialWithIdentifier:identifier];
+    if (!identity) {
+        return [self deleteIdentityWithIdentifier:identifier];
     }
     
     NSMutableDictionary *update = [NSMutableDictionary dictionary];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:credential];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:identity];
     update[(__bridge id)kSecValueData] = data;
     
     OSStatus status;
-    BOOL exists = !![self retrieveCredentialWithIdentifier:identifier];
+    BOOL exists = !![self retrieveIdentityWithIdentifier:identifier];
     
     if (exists) {
         status = SecItemUpdate((__bridge CFDictionaryRef)query, (__bridge CFDictionaryRef)update);

@@ -33,13 +33,13 @@ class DGAuthViewController: UIViewController {
         navigationController?.navigationBar.isOpaque = true;
         
         // Authenticate the user by showing the authentication view
-        Discogs.api().authentication.authenticate(preparedAuthorizationViewHandler: { (authView) in
+        Discogs.api.authentication.authenticate(preparedAuthorizationViewHandler: { (authView) in
             authView.frame = UIScreen.main.bounds
             self.view.addSubview(authView)
-            }, success: { 
+            }, success: { (identity) in
                 self.dismiss(animated: true, completion: nil)
             }) { (error) in
-                print(error)
+                print(error ?? "Error")
         }
     }
     

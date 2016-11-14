@@ -34,7 +34,7 @@
     [Discogs.api.authentication authenticateWithPreparedAuthorizationViewHandler:^(UIView *authView) {
         authView.frame = [[UIScreen mainScreen] bounds];
         [self.view addSubview:authView];
-    } success:^{
+    } success:^(DGIdentity *identity){
         [self dismissViewControllerAnimated:YES completion:nil];
     } failure:^(NSError *error) {
         NSLog(@"Error: %@", error);

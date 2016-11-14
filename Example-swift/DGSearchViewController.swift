@@ -49,7 +49,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         searchController.searchBar.delegate = self
         
         // Check Authentication status
-        Discogs.api().isAuthenticated { (success) in
+        Discogs.api.isAuthenticated { (success) in
             
             if !success {
                 let authentViewController = DGAuthViewController()
@@ -91,10 +91,10 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
             request.type = type
             request.pagination.perPage = 25
 
-            Discogs.api().database.search(for: request, success: { (response) in
+            Discogs.api.database.search(for: request, success: { (response) in
                 self.response = response
             }) { (error) in
-                print(error)
+                print(error ?? "Error")
             }
         }
     }
@@ -123,7 +123,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         cell.detailTextLabel?.text = result.type
         
         // Get a Discogs image
-        Discogs.api().resource.getImage(result.thumb!, success: { (image) in
+        Discogs.api.resource.getImage(result.thumb!, success: { (image) in
             cell.imageView?.image = image
         })
         

@@ -88,12 +88,7 @@ typedef NS_ENUM(NSInteger, DGMediaType){
  
  @return The shared discogs api client.
  */
-+ (Discogs *)api;
-
-/**
- Cancell all queued and current operations with Discogs.
- */
-- (void)cancelAllOperations;
+@property (class, readonly) Discogs *api;
 
 /**
  Checks if the user is authenticated.

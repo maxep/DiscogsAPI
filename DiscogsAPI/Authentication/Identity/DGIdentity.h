@@ -32,12 +32,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  User name.
  */
-@property (nonatomic, strong, nullable) NSString * userName;
+@property (nonatomic, strong, nullable) NSString *userName;
 
 /**
  User consumer name.
  */
-@property (nonatomic, strong, nullable) NSString * consumerName;
+@property (nonatomic, strong, nullable) NSString *consumerName;
+
+/**
+  OAuth access token.
+ */
+@property (nonatomic, strong, nullable) NSString *token;
+
+/**
+ OAuth access token secret.
+ */
+@property (nonatomic, strong, nullable) NSString *secret;
 
 @end
 

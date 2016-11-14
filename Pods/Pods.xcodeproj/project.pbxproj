@@ -7,339 +7,339 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0018EE1DC85527E62A4672472D98783D /* DGOrder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B780CFEDECC3F22633B4120F3734AF37 /* DGOrder+Mapping.m */; };
+		037DA491A91B471448AE07A79BF8F5F1 /* DGLabelRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD6617F8DE2DDB460A444611B24D6B3 /* DGLabelRelease+Mapping.m */; };
 		03A1EA48DD97387F4B338F0A85E39878 /* RKHTTPUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2570162B5442187A1269B7246B23F575 /* RKHTTPUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03E1107CAFCDA13E90E9949991ED05CE /* RKURLEncodedSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEFD5FF962327ABB2138141D1468A0C /* RKURLEncodedSerialization.m */; };
 		05CC45C85723910AA01EF2822BAF5188 /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
-		06654E99CFC19D9F3D9B2ACECC3E467F /* DGProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E43EB4B463892CFD1B1250544FB6C0 /* DGProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0751AD4170A9EBA410645D60C498A423 /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D780B85261865E7D70D2044D4F2B2D9 /* DGTrack.m */; };
 		075F2C5B90517F852389F90AC23E4C81 /* RKRequestDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A2804A942471D34D066D134F58A37 /* RKRequestDescriptor.m */; };
+		08A5E42E8603376C3F5B33D283D3E7DD /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC7805D5B387A1D2307DA795B293CEF /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		08BF60242287D2593B38AA6D36CA2D5C /* RKMappingTest.h in Headers */ = {isa = PBXBuildFile; fileRef = DC99DB70F5A51B6CABC0366A8DA0E0B3 /* RKMappingTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		091CC1C69B75E2234FE166C2D4A52A85 /* DGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3535E164B566604DB924F208AA5EA929 /* DGDatabase.m */; };
 		096C0891FB1D891ACA8A880A761FB2E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		09B90BCE07C2AE448C80729984BD996A /* RKMIMETypeSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F64416315799267D2A884A282BCC51D9 /* RKMIMETypeSerialization.m */; };
-		0A7D5BFE38253C3F4CF4548FA42D27E6 /* DGCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = C00FBD9A1133A2FFC5C854AC4AD74291 /* DGCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A9FF743D0D9BC15500E8A0AE39D46CF /* DGLabelRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EF2F44DCF019F2E8DD98921C069C13 /* DGLabelRelease.m */; };
+		0B58034972EC8415427533A384AE0250 /* DGArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 1701043A5EC0E07A6556CD77CB98C065 /* DGArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BC063F99793F82A9CE410A8EDD9C8B0 /* Pods-DiscogsAPI-Discogs-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A695DC1CE1C0844CA04B320DE5C5C8 /* Pods-DiscogsAPI-Discogs-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C63BC3203AED16F677F6247F3260EB6 /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = 481E80FF48FB4AB6D428809FDCA402E1 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C7B4CD16BFDF4FD59C354AC8BD95BC1 /* DiscogsAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E634C76518100230C4ED1FEC745A01BB /* DiscogsAPI-dummy.m */; };
 		0D8CCC3DE07DE28E0EB13352F096CBDF /* RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 722E8FA3B3982CE73B744A14F49542DD /* RKMapping.m */; };
-		0DC6F2E91E385235FC4EA19AFF96F63C /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F03782CC2A1098A112F579D1EBE985 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0DFC8F5DE58D57A565563D1B2A1A4399 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA202D5EC5F7EF92A7576CB1DEEFCF8 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E9C73836D7262D72ADAF1B3DE4E0C26 /* DGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D68361C2D3AC9AEDD98F5205DD481079 /* DGArtist.m */; };
-		0EA0BEF4427E81F277E9ABE146CC6EF6 /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86193DEABC5E285F761809021BEFD4EA /* DGCollection.m */; };
+		101AC8F26C3964CF24AF8EE522525062 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFC554ABCEEE8B007200CF8346CD4A /* DGIdentity+Keychain.m */; };
+		1034BA46DDE5CAF016C79C1DBDFE167E /* DiscogsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6199F99E75943D038653CFD4B53A4F3F /* DiscogsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10BA07CEDB935EA5F92147602FCF8155 /* RKPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0296C59EF92FB5E5BFB346CD4B10C /* RKPaginator.m */; };
+		10CED3DBD5E87CF95BB74B36BB5ADD97 /* DGListing+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C243AF3AA66B0C57142842646D4663 /* DGListing+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		10D44A515790C05379EC9835C712F185 /* RKOperationStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B05AF7D078BBF8462BA1239FA3A33 /* RKOperationStateMachine.m */; };
 		124F59EE1CC5A8370D022922C4B9CE1D /* RKRequestDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C005CCFB83F575B4F29054F84CA7770C /* RKRequestDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13C7396B5F9BC5A3DBCA0D653B60E488 /* DGMaster+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F7532B210E6E1035702AA2AE02054 /* DGMaster+Mapping.m */; };
 		159298CF270E5C636C66269238FCBDC8 /* RKErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA6BE976805F313875EB8F6443EC0A /* RKErrorMessage.m */; };
 		166040081E6F7A978EB61182132CD1FB /* lcl_config_logger_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = BA5B3500FB2539A012B0C3B92CEC6919 /* lcl_config_logger_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16BB43C2F1225ED3DDC64B235448EE13 /* DGPagination+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 55062F777931729ADCEA11032096F2C8 /* DGPagination+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		17471F297A0655C1E20E754097F65C6A /* AFRKURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AD43CD6A342D052F897059E02E0364 /* AFRKURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1794AD5E0504CA7B51180EAFB16EE541 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC055254E8F8585F73838DC51DA28FA /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18A493DB62A657B6ACD58535718399CB /* RKTestNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = A34359B6DE2841B5C9BC1D040853C22A /* RKTestNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18DEAAB947EEAEAAAE142A31FF962CA6 /* RKMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 35C52DCF621BD8CDB2922F00D9D2133A /* RKMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18F3A1CD0C0042E774021445434B3D05 /* DGArtistRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B97CAE3CFCD833A687172A1772AB46 /* DGArtistRelease+Mapping.m */; };
-		1B3A55DF335A86868B8290F8BECDD385 /* DGResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBA9DFD7FEDAD2C29E0B7E43A568762 /* DGResource.m */; };
-		1BBFAACFD08813DD4FA9F88D58F3620D /* DGVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5E350B16FB6896AA071D2FCED61316 /* DGVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19D535D76FD6E28E11A9C60C656C8F7C /* DGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7639C60417B4A68623998B34A0425B3C /* DGImage.m */; };
 		1C6024FC6DBBDE60B5C1CAD601C8FA44 /* RKTestFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CBB7F7AB648B34CBC82DD5D8EEAD7 /* RKTestFixture.m */; };
-		1D1A803C7297BAC6B9F71BD327172263 /* DGMember+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1706DBF5F05AC450A8177B51409819DA /* DGMember+Mapping.m */; };
-		1D4324438CA6C5CD809485798F8F76B1 /* DGArtist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D9EF36C1F7307AEBC335E988AB352C /* DGArtist+Mapping.m */; };
 		1D6EAC017B97BBC7E484A8F609BE1576 /* RKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A5EED28B5541153C620C1E90DB5E86 /* RKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DD6F9293DF7A2EB60476C74389EE78B /* TransitionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */; };
 		1DFABD3E99C7089B3519D2A3A1E053E2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6463163A48B4B14D84DEA4C692412337 /* Security.framework */; };
+		1E3A9687F9C5926295084B87144BCB3F /* DGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D68361C2D3AC9AEDD98F5205DD481079 /* DGArtist.m */; };
 		1E3D2688B1EC6FF49973D9525B05528C /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
 		1E4DBD1D4AF88485C8349E24A4301B13 /* AFRKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F317C97057D6F6377E877598517A39ED /* AFRKHTTPClient.m */; };
 		1F80875CD1676B22A2C86A07CE4A592B /* RKObjectUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D358D4DB9EBCD763520FB6A43DF338 /* RKObjectUtilities.m */; };
 		1F8E96ABE602F9A6D86547C58D9DBD73 /* RKMappingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6F7A1F03DA648EE42C6662DDD1CA65 /* RKMappingResult.m */; };
 		2085A073A87DE0B39AB460A120BDA762 /* lcl_RK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFD596C9F4AA0818DB2F246C4874865 /* lcl_RK.m */; };
-		21410E655A94657A6C74BEFEF5E3AB11 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0F3C3EB50CAC8D41CD3D2ABD856EC7 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21FEE79F6299C44FCEF5F10406801FA9 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		222E0BC861208157EFCC21436DE7EF3B /* Pods-DiscogsAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6BF27122AD682743E6009F9184077D8 /* Pods-DiscogsAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22498811F7831A1B83F11DD56681FD4C /* AFRKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8356DA8236F7C0ED307D7B1F95A68 /* AFRKHTTPRequestOperation.m */; };
+		2399F7863B35A7B69E0000605E561DDE /* DGArtist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 126E8009360A9207FA65CA07B9BB7AFC /* DGArtist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		23FA088FC1C4DA7230CF11C37683F0AC /* RKMapperOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FA3AFF8E0592EB192C53EABCC885F9D /* RKMapperOperation_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24EB2D6C3D86E31FD25EE6949C9EC988 /* RKISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C61DE0BF5A87A3FCB2BE57D963C462FA /* RKISO8601DateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2595951889A7F5677682C122DC5339CE /* DGMasterVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E074D93B34581EF7BD3AF12CCB232BA5 /* DGMasterVersion.m */; };
 		2617075B6C1F3AD6A15BADF74D1F7241 /* TKState.h in Headers */ = {isa = PBXBuildFile; fileRef = 03644BD415C744237ED5004B6A427229 /* TKState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26CE4DE0B6E96B16A189A23F99ED7235 /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */; };
 		27A059A20F0E97160ED4FC265A1F8F15 /* TKStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A6F4E348114BA41DDD4E2BB4A6032B /* TKStateMachine.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		27ACE79998F2337B72398D61B0439BC4 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = BB19812864F717734A35142B7C35EC6A /* DGReleaseInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		27DA3C60B3BCCAA5B0DFC469606377F7 /* AFRKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4D02DF5516DD5AC9ED96F5CF9B6AAD /* AFRKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29975E3508B3E319CA613B20DD6CD688 /* RKMapperOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D53C185BD4ED1FDA636D78110B1C3076 /* RKMapperOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29AC87119D99346779D38485B9082535 /* RKOperationStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E7EA53BCB7811C0D0081A5285B83749 /* RKOperationStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29F6BA56F70886DF873845DB2D8A6FDA /* RKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D47A8FB3F2865DFB19361ECCDD7EDCE6 /* RKHTTPRequestOperation.m */; };
-		2AFB65664035EE16E316A960354B2733 /* DGFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D464E25DD94855A91428A3050D10517 /* DGFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B6D6113B2B0CAEC9885FC072BF5D89C /* DGMember+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1706DBF5F05AC450A8177B51409819DA /* DGMember+Mapping.m */; };
 		2C2572BAADB1D45F75BCEE64A27CF204 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		2D53BB7D181AA9B0B32A5C2F6DA7C118 /* DGListing+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C243AF3AA66B0C57142842646D4663 /* DGListing+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		2C9FAAE3C176B2998F95E0810C9891A4 /* DGIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 434F742120D50C675631874C7A288723 /* DGIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DC9F5B6F0510555E675881AAE2A1BBF /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2506107749B1BD37D4BC4A0AB12D32 /* RestKit.framework */; };
-		2F8FAA711AC55B1B8147BC86A419BFF8 /* DGPrice+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1A349FB15D42E378E0E68125D77E6 /* DGPrice+Mapping.m */; };
 		305C6BD1B6EFE7E40EFADC49CC787999 /* RKObjectMappingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BD5E0E26D51C153DCFD6BB26DD28D7 /* RKObjectMappingMatcher.m */; };
 		30934588E0921FBF0F7494E37BE6889B /* RKResponseMapperOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD79D1CFA94E347C01D3081A425A941 /* RKResponseMapperOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31916D7257DB86D00EFB3C56BD42634E /* DGVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9686CA33554BDD3140170B40B7EFF /* DGVideo.m */; };
-		319A733197F2D13E174C94085C1A7B01 /* DGOrder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B780CFEDECC3F22633B4120F3734AF37 /* DGOrder+Mapping.m */; };
 		3208FD4776E7F9B048E53E30C7B2A0DB /* TKEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = BF89F4A4D6F097F16CC94FC4EFE8E36A /* TKEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		324BA6C3FBDBFED69CFD1418B452DC5B /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = D910CB028A95984D1943085833F72AB1 /* DGAuthView.m */; };
-		32511EE9D64D8C3878C34AE60310F406 /* DGResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 66CA4CDBB603199565A8618D78D6831D /* DGResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326D9A39EB87AEF5A8921D04157CB9B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		330282168C7322069F2F0CD5D92D2BE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */; };
 		33A6411DEDC11DEB4E290FBF220107A8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */; };
-		33D03594AB66D21B404A6200F17DABBD /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E081A70F599B47D0EC65CBCDC7004B /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		33D1F42674A434F06BD0BEEFC24B64E0 /* DGSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74E8B810D43C41748B3660DE020473 /* DGSearch.m */; };
 		33EBB16647EEA80D824B146CFA7C3C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		359F6F57A0377BC3B65CEC60222AC146 /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CCBCB7FFCAD1127D976815569DDC5 /* DGRelease+Mapping.m */; };
-		35ED2C78BE38E9766323CD101F53E1BA /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 59DA28BFD086821CAA550872DF73D861 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		395B4EBF2DC30FFD754BD57825543738 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 8670DD237F17144656B8081430021F7B /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		397B16E94D24FD19C1758E35A72FCFFC /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB59B1D678500DDC0B2077DA0BF0613 /* DGMaster+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		39F34E6A0279466AFDB1D22D83A779C5 /* DGCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E1434693415C2530C0EC6BEBC47DA /* DGCommunity.m */; };
+		34523C8A2E78C1A5EE61FC53BA86AD80 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0434F0053629FC217CD87FED296B9C85 /* DGOperation.m */; };
+		3611EFA8AAFA15F9F12FBF786E4300FB /* DGCollectionFieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A335F8D5D459340CE0E91F5B157A618 /* DGCollectionFieldInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36616AE7B2956AD68F9BCBD8E7157111 /* DGIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CD941411506A81580DA5322638250217 /* DGIdentifier.m */; };
+		37490EDD2D1E365544FEC914FC7CF13C /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 361F5D2A87A62C149D06214F8F325FDA /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		39BC7EB401B2DB26EFB0194E828DA543 /* DGOrder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E56BF9B45149E67834F1A785A54749 /* DGOrder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3A0AB049A802103C1EED13A92398D910 /* RKMIMETypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF9730CE7A8DC4EB655060B1E824AA /* RKMIMETypes.m */; };
-		3BE37A14F67F0504A8629D4164E8999C /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */; };
+		3B188BC131612F0D77C3E7ADA3CBBA71 /* DGInventory+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E452BFF5BE44174B62F2606CDB19826 /* DGInventory+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3B95301A920B70B5F7C8641017B90A3D /* DGMasterVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E074D93B34581EF7BD3AF12CCB232BA5 /* DGMasterVersion.m */; };
+		3BA080A7B577A28D1827012CB6465D45 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0F3C3EB50CAC8D41CD3D2ABD856EC7 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BD2C630D7C60168A01CFBF17403FD30 /* DGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD156913D6E5B1D53711AA532421B70 /* DGUser.m */; };
 		3DED833C51D88F361FBC11548C14E4C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
-		3DEFDD72CC2B5215DE6808242D8BA2B5 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7795D66807B4BBF4F0B294443F9357 /* DGEndpoint.m */; };
 		3E881F60DDF22F57C10FDDA813134C41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		40775FD09182A88350B1B3A2592DB8CC /* DGVideo+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F57B838576E1E4B28DE19DB7ADB9F /* DGVideo+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3ECF73B1CEC64300C6CD6B522E6F99BE /* DGLabelRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EF2F44DCF019F2E8DD98921C069C13 /* DGLabelRelease.m */; };
+		415B837C83C525E95B3B3B3005E90467 /* DGVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5E350B16FB6896AA071D2FCED61316 /* DGVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		417F9815E69BBD6316F1D8D8B09A6B9E /* DGDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A3EFB92980596AB78500B7E4E6ACFB /* DGDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4186C14A73BD335B52C34FB41E30D113 /* RKMIMETypeSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F1016E52CE70D27D5319FE927B96EA0A /* RKMIMETypeSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		439A1CA33248FD4420F5099F9B7D860E /* RKTestFixture.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CF2ED48C7B418E63EE23EB9480FDBB /* RKTestFixture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		449523075D48B8358882E004906111B2 /* DGFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AE3E9B194B2546524D8647E8E8C5 /* DGFormat.m */; };
+		44564DB3841D5CC9725F90643C369729 /* DGIdentifier+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF4017730E7B3404611179CA87AF8E /* DGIdentifier+Mapping.m */; };
+		44B2448E31448DD38506385958684F03 /* DGFormat+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C00D68C004A949F7AFC579DA192EF8FE /* DGFormat+Mapping.m */; };
 		44F9621222EF6A5D3656DD117967CFE5 /* RKISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 108EA661F270F1D4F16EF3D0E93A6277 /* RKISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		457A19E25BD0590BBC3C9AA2C8F10864 /* DGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E1B536DC7C73467B27544FFC575677 /* DGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46965EA184BD6A05792773EFA4D9F0AC /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B0600E8D151BCD913201402006CCBE0C /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4628AB1EFF5487C7748D3B0C62C4382E /* DGFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D464E25DD94855A91428A3050D10517 /* DGFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		474416D3803AE5734CE14AFC18128307 /* RKMappingErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = B2562DA8D5C734D02F1F8FDA2D511A8E /* RKMappingErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47465E16E3B37DDE90419EB042F009CC /* RKConnectionTestExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = CB4D95706211F528BD9D9357C80144E1 /* RKConnectionTestExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47B3B30363CAF403BE41F02456430BE4 /* DGCollectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FB7A0E8F02A07FB6F977BD5920C35D /* DGCollectionField.m */; };
-		49BA1FA9569A96CA8C66A532FD53EDA6 /* DGRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = 913A2EE101889FA287C4AAC252FA4E99 /* DGRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4864635BD10243DB480DC7263C11EE2C /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA202D5EC5F7EF92A7576CB1DEEFCF8 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49F607BEB77BEE3F316C8F186D0E63A8 /* DGListing+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E902C58DDE9D2B054AD26751279E7B5 /* DGListing+Mapping.m */; };
 		4AF1DEDE214C7B34B092B5D5A3B62E69 /* RKMIMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E0F6FA96B250955140457B5BA7684E4C /* RKMIMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BFEC0297B525F865D296659221CFEF4 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7795D66807B4BBF4F0B294443F9357 /* DGEndpoint.m */; };
 		4D329A9118370A1DFCD5872EE62024AB /* TransitionKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AD8A144BC2DC1F89AACC3FEFD0AEB9 /* TransitionKit-dummy.m */; };
-		4D8497BCECC3685DABB30C8C6DF5687F /* DGArtist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 126E8009360A9207FA65CA07B9BB7AFC /* DGArtist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5006774C32CB1F2EE9CE224A1BFAF7EA /* DGPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = 074F258ECD3C3ECE1CA3CDF0EEDD5956 /* DGPagination.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B6CC6A5B2A372B033FAD2AFCEF0A43 /* DGCollectionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 796A6F734895056F91934511B55CBFDB /* DGCollectionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50D18B729AEE6AFAAFBC05BCCDB8BE21 /* TransitionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7155E9BFBC03A81991CD9098D54A94D1 /* TransitionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		515A4FBAFF30057B83D9B8508199B469 /* RKErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CD7A30B44C883283B4D8B0437A47F9 /* RKErrorMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5227165CEC73C4453E4C5824993E7682 /* DGMember+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C6A3CB6E7A7BABA846DE02618529650 /* DGMember+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		52313836FC7E69E8F531D4C9F887FF8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */; };
 		52E26414942061C624F053F5CC733FC3 /* RKObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3883443E95F1F7919F38F85F5520F3 /* RKObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		532B7655D4D863ADAA570ECA17D6CC80 /* DGMasterVersion+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 253EB599EBA8832B23ABEC3C97D0E278 /* DGMasterVersion+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5419946D2AEE929F199E4B211FFD4DBB /* RKNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF8DE3AEE7CE499B0C10D18C40F0FE4 /* RKNSJSONSerialization.m */; };
 		562DF4EBC410BBB974C259A3BBA8B810 /* UIImageView+AFRKNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A0BD46612650B10B754575534DF2 /* UIImageView+AFRKNetworking.m */; };
-		570681D2AF5612B55F86204EDEE6160D /* DGInventory+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A22440B445EBC56249DC0D1D57FE07 /* DGInventory+Mapping.m */; };
 		5723A0B482D8FEB860F919FAB4F3FDE8 /* AFRKImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70485FA947B3C1BEAA9AD98A86AE3561 /* AFRKImageRequestOperation.m */; };
 		58A39B4D4D2DB2A2026DFD11BF32261C /* Pods-DiscogsAPI-Discogs-objc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3CB61D005543784316A0D16A02A8B72 /* Pods-DiscogsAPI-Discogs-objc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58CE082239E7B1C141A4532287B7B2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		592BAE3500BC9CD38807B6FD50D6AF5B /* DGCollectionFieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A335F8D5D459340CE0E91F5B157A618 /* DGCollectionFieldInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		594ABCAD0AE8C35BA057BFAB02DA1031 /* DGMasterVersion+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 253EB599EBA8832B23ABEC3C97D0E278 /* DGMasterVersion+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5A9D2926279C277381E5A22F83BBC775 /* RKTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDECDBDE789B95DAA083ABCA3DD5403 /* RKTestConstants.m */; };
+		5AAFD16B52152CFAD22A513DF29F02DF /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 149E04FDA80912E09B4EC7E4EBC6EF13 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5AFBD54153A2C8E33232B6F276AED3EF /* DGCommunity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9E4422B92C348A451DF563040B57519 /* DGCommunity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5B41766DC93060F23F2B134173E5E117 /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB15984B9C5A8944048365B56D6C1 /* DGCollectionFolder+Mapping.m */; };
 		5BC8F6443A7D9E3D0EDCCED31560F709 /* RKRelationshipMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C71724B9ACE5AD4DAA67EC2F42F3CB /* RKRelationshipMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C33235097DF619A8C6DDB21EA6B3945 /* RKURLEncodedSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E0C9CE4199EF882B0499D0A855799F1 /* RKURLEncodedSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D1BA06BCFD5619E4330FEF96956E6D8 /* RKDotNetDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 824B5893D32FE9A930EC0BA9C6E2F711 /* RKDotNetDateFormatter.m */; };
-		5EBCF0232DB198B26BC23A35A071042D /* DGMember+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C6A3CB6E7A7BABA846DE02618529650 /* DGMember+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5F22A80A1CA323870EBDE98A0D8E102F /* DGImage+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDEE0EA70113C9FE9F82022268B0A1 /* DGImage+Mapping.m */; };
-		616105CF76D4029E9A6EE54AF89D45AB /* DGSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E1414F8524E00D87A7AC801E95FE43 /* DGSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D6EA44FB47011C1DE620D4C670C79D4 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EB062A7DC7425F9220E17C53650C8BB8 /* DGIdentity+Mapping.m */; };
+		60052BFB1DA8F5120E0369B27AC3D8F3 /* DGReleaseInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = BB19812864F717734A35142B7C35EC6A /* DGReleaseInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		60DB79C50C574872818F164BDD46BA30 /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = 481E80FF48FB4AB6D428809FDCA402E1 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096A403F5477DE2163F0EE8AD4B81C /* DGSearch+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FD94A5C88C5DF0FA85ECBE07871FB1 /* DGSearch+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		61B41A010031790BE4D3563295B2B732 /* DGArtistRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = AB70A64CE5FF84E4BE6AC9883A65AFD6 /* DGArtistRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62955C422656C5020EF82B9BDDEF1378 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		6372ECA4893794262A945167CF342EF0 /* DGIdentifier+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF4017730E7B3404611179CA87AF8E /* DGIdentifier+Mapping.m */; };
-		64F8F75DDC8FE252FA1262ADAD441082 /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E5D7AD1E7AD16580AFF53D487D2001 /* DGMasterVersion+Mapping.m */; };
+		657EEC5AC46DE14EF60B3712E2E78611 /* DGVideo+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FBD222A7219098E079A0A563EEBE01 /* DGVideo+Mapping.m */; };
+		658F9ED6A55094D371020C57D10D7355 /* DGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7F44E181CC70BA4CF6A4B855764481 /* DGLabel.m */; };
 		659A8C295B60585D113E8C71F374474F /* UIImageView+AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 62FCEA87A5D747BBB0141BA9ED73BB0B /* UIImageView+AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		665C98DD5F4B2C1438F1580FA9E9718F /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		65D01B5C71D56F6449AAC682A319FBC3 /* DGArtist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D9EF36C1F7307AEBC335E988AB352C /* DGArtist+Mapping.m */; };
+		664C0E9DA0C29439E3F4773288C71BD7 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DE142EFD6CAAA4679922E13CEC9AB5 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		672A608CAD241FFDAE9BF6ACA465B0AA /* RKResponseDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EA5368A3656222A335A3D0337CABE2B /* RKResponseDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6867C56FD28595CC83F81CBE59FFED1D /* DGPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = 074F258ECD3C3ECE1CA3CDF0EEDD5956 /* DGPagination.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		687F6D75D85768EF0F9BE1C83071F5D6 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9289DE456F5B82C7A7CDFA21059DCE08 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		68D1D08EF5BD3FBA12EB757FD0266D31 /* TKStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC2B58E1543A6929B8173A5B50A4F3A /* TKStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6972C9508776995FB498FD7ED5B845A0 /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94DCCC52C26256824622985140BECE /* DGLabel+Mapping.m */; };
+		695A714F83310311D3FF348748EFF570 /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1AB4FF1C7FE6E501DEE88ED53066B9 /* DGAuthView.m */; };
+		69A34335678A19DA807F42955C10AA7D /* DGRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 33156A8C3E1369F999F524356D370C92 /* DGRelease.m */; };
+		69F988CD418891E1DB41F1F8AFAB08EB /* DGProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FD73E6DA0CC0F1217640151A04524C /* DGProfile.m */; };
 		6AE706F4A1ED22D6A5D58259A92E842A /* RKPropertyMappingTestExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE072B2CE41BF61AAE2CE2ADB2CAC54 /* RKPropertyMappingTestExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CA10004763F4A9EED873B40E6E63ADB /* DGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C5322833468905636FEFB314271A12 /* DGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CA1BA87D2AAB69B1568FF2FE67DDDBE /* DGResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 66CA4CDBB603199565A8618D78D6831D /* DGResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D0BE2C70D2A885D44E66CC6D5969599 /* RKStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D84E2B7C4EC3F17FE1D22E953B17645 /* RKStringTokenizer.m */; };
 		6D149A6376EBEB9F2062AE24C7C3C09D /* RKConnectionTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 230599FCBC6CA7A070F3BE2D72E4C688 /* RKConnectionTestExpectation.m */; };
 		6D3387138370E45BFEED70DC71EA60FF /* RKValueTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 908CC6AFF8B6C3E69EFE76093D0FB716 /* RKValueTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E24A008D0D729A7A302050CF3B70F3F /* RKPropertyMappingTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = B778C7485AAB3BD433572E022FF178B1 /* RKPropertyMappingTestExpectation.m */; };
 		6EBA3D2EB03512969133FC5F42FC9F91 /* RKMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 614C2EECC2929885103F68D2A9179484 /* RKMappingTest.m */; };
+		6F32EE7A5B539C23C8E399207DB7BACC /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F03782CC2A1098A112F579D1EBE985 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6F4286FAA0666681AC14339961F1F258 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		70251872B19EF6D775E754E03D440FCA /* RKRouteSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A876888A67EA757E56FFADD4972CE9E /* RKRouteSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		713993FF5EFF7E947CA3BBB9940807BD /* DGFormat+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C00D68C004A949F7AFC579DA192EF8FE /* DGFormat+Mapping.m */; };
-		713A5D289973BECC94410A1031269CBE /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C54B8D02EB492BB7924A790A5C9949C /* DiscogsAPI.m */; };
 		714C2C8155F198DBF8B6AA8B097CDFD3 /* ISO8601DateFormatterValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C15EFD94CFE8275ACE8160F8D4097C /* ISO8601DateFormatterValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71B17B66C87B2A9AB060BA5BFB301FA9 /* DGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 954554EF07A2E7D5CA6F8655A2CE8F42 /* DGMember.m */; };
 		7299B9A7BB1917F35D1D1453A2F059A5 /* ISO8601DateFormatterValueTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */; };
+		7326A42CFFBE7AB5883D08CC24395A25 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = A555BD048A321E33461F89C5AFD8FC76 /* DGOrder.m */; };
+		7515F021A9AE9A8CB3D9D962A4E39C82 /* DGCollectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FB7A0E8F02A07FB6F977BD5920C35D /* DGCollectionField.m */; };
 		754E38A69062C339394FB6FE798C0B23 /* RKObjectRequestOperationSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 063CA837BC18B22B5377848D6D586447 /* RKObjectRequestOperationSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75E180AB4FBB0DC2BB883F77BF23A7E1 /* DGRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = 913A2EE101889FA287C4AAC252FA4E99 /* DGRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7760469D4E1966BA311CBF3D6C3DF13C /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EF23F16EABB2311BBC530AC0B2BCA1 /* DGInventory.m */; };
 		77988CF9A572FB71C2109D05BCF234B8 /* lcl_config_extensions_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCE70AB458DC5CC6E9299B418E831CE /* lcl_config_extensions_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A38E87A59C524BB1BBF802536288F6C /* DGVideo+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FBD222A7219098E079A0A563EEBE01 /* DGVideo+Mapping.m */; };
+		78CC94CEDC952E62E99EB7D5C83E643B /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B50BB8070E70D494D62AB0A23FC12 /* DGWantlist.m */; };
+		79AB2E2BA7D63D120FF3A7AC3947E785 /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB59B1D678500DDC0B2077DA0BF0613 /* DGMaster+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7AA8C871E3B399796E8A26C98E7708D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */; };
 		7AD100B5A467B7A0DB82E5D498A7C962 /* TKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 744FEC2AE14D6A0F4E25E68569F3ED8F /* TKEvent.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7B838AD5DCA8C217319D6EBB912D37A8 /* Pods-DiscogsAPI-Discogs-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF3977F53990A8AFEB78EEA89F299EF /* Pods-DiscogsAPI-Discogs-swift-dummy.m */; };
-		7D0CB85A73876B58B1584CC7D0FC7217 /* DGRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = BFFDF91DF43282A1ED45F02AE9E64879 /* DGRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7D35BD9D470F81ADDE204E05EA32C308 /* DGCommunity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9E4422B92C348A451DF563040B57519 /* DGCommunity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7E93FE65C36D8434C5920C275E4B8E53 /* DGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = CB74C0DBA960076B90F8833C0EA25D36 /* DGMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DB7758375FEDD0EAA968D68E353281E /* DGInventory+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A22440B445EBC56249DC0D1D57FE07 /* DGInventory+Mapping.m */; };
+		7DE189A8F41E92F2243D5FD12A980FC0 /* DGVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9686CA33554BDD3140170B40B7EFF /* DGVideo.m */; };
 		7EA8016D1A20252226BB913361B0BD39 /* RKObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C71E7C6626C58922E416A090B97A0D /* RKObjectMapping.m */; };
 		7F392AD0CAD953D57794C365C9C9D9D2 /* RKDotNetDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD992FD4388B5CB11EFEBB51483D91F /* RKDotNetDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		803474E8BB2D729E15E0EFDB92159277 /* DGArtistRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BF6106505B57717680B8F386C3763E /* DGArtistRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		81186754C43AD801678AE0E72710B80A /* DGListing.h in Headers */ = {isa = PBXBuildFile; fileRef = A651AF0C92B3E6799C70129C1C50FADE /* DGListing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8145BF18A268071443A3792D735E0E79 /* AFRKXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDED473B869DE1D2D870B8506B11027 /* AFRKXMLRequestOperation.m */; };
-		818AD8B7B4860176B13792DE7A9B1FE2 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FD9C893848A8935614E6F65E9BE1AC /* DGTokenStore.m */; };
 		81AA5FC9146CD10E253966274DC680DC /* RKBenchmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CB02FD79F52716E1924BECE1B183230 /* RKBenchmark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		826B05FA9C98F1816EF89F8FC630805F /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E5F46E047E2F68D8F1B7C8E2E8C005 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		83DF556CF2209EF38468039B76616031 /* DGIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CD941411506A81580DA5322638250217 /* DGIdentifier.m */; };
+		83B6542A7AA0B7022F41B8166307A892 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4E90F6CF3DA7E5A69C149F665AC7C0 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8443500FC757F4CA8FCF06F796AB94AE /* RKObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D030B9CBBE0FE4B8F054F13107091BC /* RKObjectManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847736DBB02431DDD44DDCCD2153898B /* Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4A1163E64339F3D6F0BBBD8D15B17B /* Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84AD6267B778F8A0598FFDB075004351 /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21753FE30E9A0D39D8D8997DE9E0CDDA /* SOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85257E8054CE7FA47297DADB5EEAA480 /* DGListing.h in Headers */ = {isa = PBXBuildFile; fileRef = A651AF0C92B3E6799C70129C1C50FADE /* DGListing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85A72167F4F850E5F5AF9AF223C2ADB9 /* DGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD156913D6E5B1D53711AA532421B70 /* DGUser.m */; };
-		8649FB39060E76A98E2F00D42FDDD250 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 627EC94F132E2169AB651C78E3E3AC10 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		850BDD28C3D77243C36433F953EB069D /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E5D7AD1E7AD16580AFF53D487D2001 /* DGMasterVersion+Mapping.m */; };
+		8603A0F6252B04457B4F4632C762B7F0 /* DGMasterVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F0B747984456C6D74B174325713155 /* DGMasterVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		865EB3A3539E35B54D5CA66D585CF5EF /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AFB55865245282C41D627C36CBC65EA /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86E27B8DE536A3905AFC9C2D2B389F86 /* SOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */; };
-		86F14DAE34308C597AD7C69E78FEB7D8 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9289DE456F5B82C7A7CDFA21059DCE08 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8786B399C18FE68D2CC6B67958754623 /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D780B85261865E7D70D2044D4F2B2D9 /* DGTrack.m */; };
+		870012BD44385A18BBC23BF27F061FCD /* DGCommunity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0A5B69BD540A7D6E168E508F1B2FCA /* DGCommunity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8759C0E45B35253F53F9C4764E7DEFE6 /* DGMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B9668E6CEB6CE4E6F9780C98144E05 /* DGMaster.m */; };
+		87FC3727DFB4E8EF8CD5E28D5753D1BC /* DGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 954554EF07A2E7D5CA6F8655A2CE8F42 /* DGMember.m */; };
 		880BA173E15D398DE640A951242FF737 /* TransitionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E45A5B0CD5F64B2A47368E48E58DD25 /* TransitionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88579A607EE1C802064DBBBA84D8FD24 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E15F42CB7CED86DFA24678BC5E7E29 /* DGReleaseInstance+Mapping.m */; };
 		88BC3178A378DF5E8CC0EDB57E64FD7E /* SOCKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E78B56FFE6505980D61B3C39439440 /* SOCKit-dummy.m */; };
 		891503A9666873331BA66347BE41FBE7 /* RKPathMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6199F326A1BC6771AA1F34E9A5DDB4 /* RKPathMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89DF919D6B329967D97F5D0485D0CF75 /* RKObjectUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E0AB874FB7DD082B1A02B08DAC647E /* RKObjectUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A0672D2608EA58E9A01AD4482585BE6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
-		8B877213EB7F2B7D323212C5DFA6CDE6 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E3AAA92306A004235FD82D2DD82386 /* DGEndpoint+Configuration.m */; };
 		8CE4BEFA25F2ACB79EA32862D7FB5E54 /* Pods-DiscogsAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD75E820F4CB385EE82F452EEBA3EB /* Pods-DiscogsAPI-dummy.m */; };
+		8DF14D974A98E9404F51A0CF5B5D6F4A /* DGSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74E8B810D43C41748B3660DE020473 /* DGSearch.m */; };
+		8E5145993E272AAD596BB3413D880ED9 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E15F42CB7CED86DFA24678BC5E7E29 /* DGReleaseInstance+Mapping.m */; };
 		8EC1BD245F282E20A74696764DFE73B3 /* AFRKJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 43B7941D25511F4F14723FF51C5575D8 /* AFRKJSONRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F91BB17C6D0ABD26F83C4095920EC76 /* RKRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = B7072B7D13D170CE3CD43FC5A295CF6F /* RKRoute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FE44B8F42F5178CDBFC6664C4354814 /* DGReleaseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AADDD9FAD1E66ADB8249D2F3753C145 /* DGReleaseInstance.m */; };
+		8FE5FB79ED0EEB66FE644A6D0AA216F5 /* DGArtistRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BF6106505B57717680B8F386C3763E /* DGArtistRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9095449059265D8B05E669D0E2BA7846 /* RKDynamicMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = DF54478A0C7F04E5D1E4C305E30884A7 /* RKDynamicMapping.m */; };
+		9215F349E251040BE72C5BBD018B669F /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0694DF1EA3B96CA13154C5F2D1CA1AA8 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92B7173C83C59008D6D95AF933DE1C90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
+		93A03002663F9BE9A15ACE7AD8B42DBA /* DGCollectionFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 82538C90B037D58F214B3D7C82E45AD5 /* DGCollectionFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94291BE5F70E80E8E16E3886928933CB /* RKNSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = ED78ABB06472A7E1894323A2DD4FAFE7 /* RKNSJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		942B1214CB6E1CDF47ECC0CB025AD43B /* RKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BE6CB048F65F844100257C62981AB5 /* RKRouter.m */; };
 		946742661E6CF7AFE6F4B5C0DDD7F0DB /* RKErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4926479BBFD94C009E4E02BE31EE5205 /* RKErrors.m */; };
-		95AEC9473F6F996461FAF993CD0C7634 /* DGProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FD73E6DA0CC0F1217640151A04524C /* DGProfile.m */; };
-		9683751652A6CF5664AECBB53EA56724 /* DGMarketplace.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EFB00777B1001518941259E0B75F6 /* DGMarketplace.m */; };
+		9595040E56A98084C0BFE69B2D414D85 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = DD901C1903FDF21BB6FB6F29F455E5AA /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		96B1C2BF83E404E21BBEDB8755FAC6E4 /* DGReleaseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AADDD9FAD1E66ADB8249D2F3753C145 /* DGReleaseInstance.m */; };
 		986C25B7E65E920C1E9A76851C73D9C2 /* Pods-DiscogsAPI-Discogs-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB868B2B7CBB82DD5B5EBC13E57300F4 /* Pods-DiscogsAPI-Discogs-objc-dummy.m */; };
+		998A942E5DE4705FB3072888F5D8C150 /* DGVideo+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F57B838576E1E4B28DE19DB7ADB9F /* DGVideo+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9A379EA915A56279B951392FFB4CEFA4 /* RestKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED08E6827DCBA3079C26DD09720EDE /* RestKit-dummy.m */; };
+		9BC2A1E15E6CE2B6AFF86ACBF9339A04 /* DGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F906F4C3F6E3F2565A08ED021DFF1BF /* DGPagination.m */; };
 		9CA152FB5D854573FD1ED0EF1246F4B3 /* RKPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A7404DF8291EF9E031668120BF963 /* RKPropertyMapping.m */; };
 		9DA4DAC86F7F23E434B65DB2A9C2E014 /* RKMappingOperationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA7BCE92881137C092937AB939EBE09 /* RKMappingOperationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FD7BEEFE86A002BD8620BE1FFEF84CD /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 73BC0334C18058540D5E97DAFCCDEB70 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0873436AC82C36BAF94B605A877E9C7 /* DiscogsAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E634C76518100230C4ED1FEC745A01BB /* DiscogsAPI-dummy.m */; };
+		9E59C6BEFA7842D71CE815C6B12F3CCC /* DGPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 640AE82F12A9103CF900DF2779003DF0 /* DGPrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EEF22B28B32E677FE56D66233686812 /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 73BC0334C18058540D5E97DAFCCDEB70 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F474B69EA51CC4C7DD84C032161389D /* DGFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AE3E9B194B2546524D8647E8E8C5 /* DGFormat.m */; };
+		9FCE689DA4DB6D3612A0C169BD2E9549 /* DGPagination+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B761641F84DB080D6CBDD2EB5D6730 /* DGPagination+Mapping.m */; };
+		A023FA2FFD4329DE34FBA737CFE07E3B /* DGSearch+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A864146EDA7EF04C5654F8DD60960588 /* DGSearch+Mapping.m */; };
 		A0F88FA3789B0514AEC26F9ED2D34B16 /* RKBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 676CC910005863F2BDA746428A400AE1 /* RKBenchmark.m */; };
 		A13B37AC5F2ABFA4CAA83564C4F93197 /* TKTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = A63547714A656DB5B6AB10B72BFF8F64 /* TKTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A195D8AA73F21D6188DC32C323AEF34B /* RKPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A597EE6D25E169E7A257E6C60E19855 /* RKPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1AFDCD9CF501D7EBF73A8ED1F62508B /* RKResponseMapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 445BC27D7CA137C09D12778798186C7A /* RKResponseMapperOperation.m */; };
-		A25C02A5449044AE5F63EA9B0923CDEC /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = C48B9BEC34CE27D8FD23E8ECB299C6C6 /* AFOAuth1Client.m */; };
-		A27EAC45DC7029557315F37CD7BD1373 /* DGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7639C60417B4A68623998B34A0425B3C /* DGImage.m */; };
-		A5B22C04E9908D12226570CA7A4E2D3B /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB15984B9C5A8944048365B56D6C1 /* DGCollectionFolder+Mapping.m */; };
+		A2745977ECF1694B3A2C9AE57D0D6519 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E3AAA92306A004235FD82D2DD82386 /* DGEndpoint+Configuration.m */; };
+		A5ECFA514281C1B1E082CAE719CB6437 /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D700EF5FAD0FC790010E386BEFA7CAC5 /* DGPrice+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A677D87B43FAA61AE0669A075558F706 /* DGCollectionFieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D1784116484461C22ADCCB99F2AAE0 /* DGCollectionFieldInstance.m */; };
 		A761A4DE0B8DDB64C16DD0A8678E3130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		A77C7AE3CD869D6E94CA84913E951895 /* RKTestNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 362B1EEFAA64956C3DD71C085E525DBF /* RKTestNotificationObserver.m */; };
-		A7D1C6F86F512BE9CE085DCE7A856E91 /* DGSearch+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FD94A5C88C5DF0FA85ECBE07871FB1 /* DGSearch+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A817F9E8E744FE30A00AAEF44DE1E159 /* DGSearch+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A864146EDA7EF04C5654F8DD60960588 /* DGSearch+Mapping.m */; };
 		A86C421B43B418AF5FF7B26FF2669280 /* RKErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = AC4C21B5CBA3B5C2044D109E9AA391D9 /* RKErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8C227A295F726B5B9E983E01CA3BCCB /* DGPagination+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 55062F777931729ADCEA11032096F2C8 /* DGPagination+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A8D3E3B5619499C951CAAB7C79FAC8AB /* AFRKPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B4782701D993763100C50932170F389B /* AFRKPropertyListRequestOperation.m */; };
-		A8EAC0961915B602ABDE12430254CB2D /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC84AA926C602D5C538165137B18A1A /* DGCommunity+Mapping.m */; };
-		A9428BEFC18803D6218077D3A0A934C5 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 397A6F39F664A95EE6C7D6EA3B9FEA0E /* DGIdentity+Mapping.m */; };
 		AA1857C4F8B75F80CB494A663335BF4C /* TKState.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A2178652A7D290050A4C3E0D8D4EE /* TKState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AA3D1480D276DF62A4FDA08F60323492 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9AA2C8B483F0BB845D5961F02BCCA60 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AAC7AC33B2956E02770ED4AF4B1B2CD7 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = E543EE0DBC74A8D8EEFAED85655A605A /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8EC593167B0FB5844616A9434CA9F0 /* DGArtistRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B97CAE3CFCD833A687172A1772AB46 /* DGArtistRelease+Mapping.m */; };
 		ABEEEFBBCE8003938279C5E5C8D2C6CB /* AFRKImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C8CBDE5E24D1FF119E14E07032DAB8 /* AFRKImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABF856BFC9BA4788769A86836AAE3A91 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = A555BD048A321E33461F89C5AFD8FC76 /* DGOrder.m */; };
-		AC69676A9974A008F732F8BF14C01104 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFE5D131BB01827EF8DAFC830CBD5DA /* DGObject.m */; };
+		AC87FBF250ED4624AA156BB8AE305C4E /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D2C2A8550EF453E0DC4F8B5781AD23 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC8F78376BBA3F13FB68E10336ED487C /* RKPropertyInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B255DBD5216C917320CADE27692C9 /* RKPropertyInspector.m */; };
 		AC9DA7672B9F4472CC8BC0B1DCAE8C33 /* RKPropertyInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = DC13F6EE0A61D405D90390A598C23B62 /* RKPropertyInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACA5ED5AA82032C2F4BABCE4D366636D /* DGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E1B536DC7C73467B27544FFC575677 /* DGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACCB39910159F975A9C55763C8A2EF35 /* RKAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DA771FE63B276102773A5ECD5C412A /* RKAttributeMapping.m */; };
-		ACE8408953D0CDE7EA8F3E05D365F1BD /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 7083E123EF3DF51E8E0567B007A987F8 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AD2F975680B019E542F636EE269EC808 /* DGCollectionFieldInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3BD5E424C55FF5F944C775958ADE6 /* DGCollectionFieldInstance+Mapping.m */; };
 		AF4AC34F13138A09CDDD7F79DA2D78F4 /* RKTestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CC287D5E3229539D58F644275047CF1E /* RKTestHelpers.m */; };
 		AF70F2F6598A09538C05F46859DC44AB /* RKObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8872CC57CF9E94404C904AC53BE179E0 /* RKObjectRequestOperation.m */; };
-		AFB405659596C41F13526826440E29EE /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4E90F6CF3DA7E5A69C149F665AC7C0 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AFBB286B6FAF8BD3711FCAF74BD0D7C2 /* DGCollectionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */; };
-		B066A5D7DF4E48D6532789E1C1B9051F /* DGPagination+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B761641F84DB080D6CBDD2EB5D6730 /* DGPagination+Mapping.m */; };
 		B08407D2E3B766012EC509BA96897A43 /* RKMappingResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0DD85B4446E2D786875093BEFDC9B0 /* RKMappingResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0A6C2BA89DF40291460AE71BC06CC3D /* DGTrack+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD08C288E65FB1835020AE9F4030072 /* DGTrack+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B0E0C1333A29EC3C0BA85564AC2B44D3 /* RKTestHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ED04B118A0835C338B142C5A7205DD3F /* RKTestHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B11CEACCB1C237E9AF4A7BCE8BAF6226 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8B0AE62EC7B6D3621BF691A549217 /* DGHTTPClient.m */; };
+		B24CF80EB136669063DC60487F014238 /* DGTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = E5973D7843294EF0AC1EBDC4CFE6F632 /* DGTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2BAB40315ED869995368839714BA7DF /* RKMappingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D454DD746F53931D76119A4765A47 /* RKMappingOperation.m */; };
-		B346B9AF76B0717488479240A8E289AF /* DGImage+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 33A596A818FD42D83D52A0BBE556DA00 /* DGImage+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B39C1F85F510D8764AFC084ACFA14E48 /* DGInventory+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E452BFF5BE44174B62F2606CDB19826 /* DGInventory+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B34620B0FFD9931B08304BDD886B69F4 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = E543EE0DBC74A8D8EEFAED85655A605A /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4AAE556541B7A3345944D4C24221140 /* TKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C2ECF15A51D59CB7BEB80C9D5A8142 /* TKTransition.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B69D7712C58C3955FE3037D2E823DD31 /* ISO8601DateFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F7A23C1B6150015CC1A192CC61587 /* ISO8601DateFormatterValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B6C219FEFC6FB6D20DE84D03C17B0CB6 /* DGCollectionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */; };
 		B7592411B0F737FB95A9CB78FCBDEB5C /* RKAttributeMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 34925FECCED6C9119ADB0729B58E822F /* RKAttributeMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B771EFE6DB27C25EEDD1BEB18909378D /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E457A1859492B338BC4A08F72DCEFF /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B7F110A3BCB7226B30339D6266048E3C /* RKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4CDC2F062B16DF3BFFEB10E8267BC /* RKLog.m */; };
-		B827F80684D0E6807BC9272E32DA3B7A /* DGCollectionFieldInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3BD5E424C55FF5F944C775958ADE6 /* DGCollectionFieldInstance+Mapping.m */; };
 		B8BE2BA193F20630C8A1ADD0FD80DE03 /* TransitionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */; };
 		B9448A6E1AE165EED913D9B034335CD0 /* RKObjectMappingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D896D2B4D78745A437486071FA653C2 /* RKObjectMappingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94568E2427C57779D6AEEDB9410A02E /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B0600E8D151BCD913201402006CCBE0C /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B9742074CEC9D144EC577EF89363E957 /* DGLabel+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D01BD4618E8E13DB69509B9A26D08D5 /* DGLabel+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BA95E0953AA0722D142CF8B7D1530A9F /* AFRKHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F44F02D215CDEA426565946E07F9A8 /* AFRKHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA966AD6660A043B9D8CB6E0691F0BDA /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
+		BAB8A6FFA6A7D5C74CBBF5705911A0DB /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 627EC94F132E2169AB651C78E3E3AC10 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BAE2E2A21A3DA862FD40FA4E2D94DDCA /* RKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A03A84047F3F2CE05F4B7CBFD9B5EE /* RKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAE30DE0187CB1010AF4A097F9AC1D9A /* AFRKNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E93DCF2B63AE2E7B9DD7E1AD314DDAF1 /* AFRKNetworkActivityIndicatorManager.m */; };
-		C0742C63D93A4477AFA43E2A0143735E /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EF23F16EABB2311BBC530AC0B2BCA1 /* DGInventory.m */; };
+		BD934E9FE73C6B2CBCE1D854F98FECB2 /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A5E0511D8C946E9D35C803DCC22BC /* DGListing.m */; };
+		C025C8A7F7C1911757FCD252D89F015F /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 8670DD237F17144656B8081430021F7B /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C0804828812AEEE6B12A35FB48924FF3 /* RKRelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8D26427DD6082D29D251D60666810C /* RKRelationshipMapping.m */; };
-		C1016C3040189FED17030C0A326FAD69 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DE142EFD6CAAA4679922E13CEC9AB5 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C1A65012DB0637B84FF750629ECC93FE /* SOCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5DB1810AC3A2DBC851F38AB5F0A1A1 /* SOCKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C1BCCE17FBC7CA76160EE94DC05DECAB /* ISO8601DateFormatterValueTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */; };
 		C204B90222049CF520D686138E3743E5 /* RKRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BBDDB687E283171BACB1F873C85B96 /* RKRoute.m */; };
-		C2AA5762A0DF1570C02BE37F2AF4857C /* DGPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 640AE82F12A9103CF900DF2779003DF0 /* DGPrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2B413BB05376B739C66B11C07AA4393 /* RKObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5EC75776B58E07B2F52545A3D0E8 /* RKObjectManager.m */; };
-		C39513A0F116BC001683B3D4AEB54C3B /* DGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62771A44B9D4FE3FF9748A0A011EFE33 /* DGImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3490B9C7AB97012CE5DEFF30ECF7656 /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86193DEABC5E285F761809021BEFD4EA /* DGCollection.m */; };
 		C4333DB30D6A66360B74361AF960B934 /* RKValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F342089993ABFD284E5CEBE72E904 /* RKValueTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C43A94B286F9221DC395F41342521EEF /* RKStringTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2AB66B7965E9EC2C1BE3F27F5FB5CEA /* RKStringTokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C44D550E6741F8646A8F1E046072B829 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 795343940CAA18664C9029183EB7EFA5 /* DGAuthentication.m */; };
 		C5BD72415986B9161089BF2023B91A6A /* RKValueTransformers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E3C7E26714F8AB6A9410A8C8EF2D06 /* RKValueTransformers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5E3D8D6B4B56D08DE766E375BE1EBCB /* DGReleaseInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84CBC5BEC8600FD6559591A790BDCC /* DGReleaseInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C633E4F7A425A65D1488949993193CB0 /* RKDynamicMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E050AEFCFE38E49574A1628135F8C0C7 /* RKDynamicMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C69612E2260EDA3D8D6A184827C85971 /* DGArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 1701043A5EC0E07A6556CD77CB98C065 /* DGArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C80E9FDA79B269EFA18BC1E72D1C0380 /* DGMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B9668E6CEB6CE4E6F9780C98144E05 /* DGMaster.m */; };
+		C66E82858EF5E89E98C78F70659A172C /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E081A70F599B47D0EC65CBCDC7004B /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7B4FB2B713C0B94A694C338D15FB344 /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 716D68EEE46E2B74CBFAEE3A9E73A8F9 /* DGWantlist+Mapping.m */; };
 		C85CD86D502038ACD16054AFFE695E8B /* AFRKJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5552BB5639045F79259A85240EAAE1 /* AFRKJSONRequestOperation.m */; };
-		CA7D8F4034256B452EC8C36E1A5B86D0 /* DGIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 434F742120D50C675631874C7A288723 /* DGIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAEC67ACAACE5DB808FDE8D0B3594774 /* DGPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7ED498AD780EDA6919AE8DF90B9B1D /* DGPrice.m */; };
+		CAA2AFD9F2892D00A9086F22408AFA3A /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C54B8D02EB492BB7924A790A5C9949C /* DiscogsAPI.m */; };
 		CB0EEA1CF52DBE55312D642852933C9D /* ISO8601DateFormatterValueTransformer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 072E23474B3453A6D5C37F3EBE72EB75 /* ISO8601DateFormatterValueTransformer-dummy.m */; };
 		CB301268321DD84E72E1BDF669D32D43 /* RKPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41EE80BE09FD965501FABE1ADCA762 /* RKPathUtilities.m */; };
 		CC4AA35871D26D0F0B860DF7E1E88B55 /* Support.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C9217B6033E0E51708A643774213F5 /* Support.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCA1AEC3864E46C7FE65F0783316016E /* DGTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = E5973D7843294EF0AC1EBDC4CFE6F632 /* DGTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCCFB6FAC9D4D5B777B5D0A522220DD1 /* lcl_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB0FFB60442529B91E35D8D058EF9A2 /* lcl_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD7BB6C4D5761BF7560296822E5684AB /* ObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7360278C5FD2C5F61D68545B95AC68 /* ObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF623BB3D01F6F2DF65371A57BE19234 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D8B0AE62EC7B6D3621BF691A549217 /* DGHTTPClient.m */; };
-		CF91910FC065C08949B50D4DFD9CBD98 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0694DF1EA3B96CA13154C5F2D1CA1AA8 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF96CC00A91B1789060775F8300B8CB5 /* DGCollectionField+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 697B038A9AC9DA8C26D602AA571C7927 /* DGCollectionField+Mapping.m */; };
 		D03D63FCA63C4C20DD333266511F168C /* RKManagedObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59498D0D1FA09931DCD449EA0255CB /* RKManagedObjectRequestOperation.m */; };
 		D072BEE7AC57116FF4E59F9DA6F2C733 /* RKObjectMappingOperationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BE58DB509A211B0048B2A4CF6CB56E /* RKObjectMappingOperationDataSource.m */; };
-		D342507CB4F7BF09173BD8D9D72B6CE8 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE07F64406D3448BA8CE0FAC200C761 /* DGIdentity.m */; };
+		D0A53F367C123AC9028FBB11182D8100 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6911109FDA051BAAEEF8CD39C0255C8C /* DGIdentity.m */; };
+		D17D08234B1F85BC6330DC9D542A9660 /* DGRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = BFFDF91DF43282A1ED45F02AE9E64879 /* DGRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D304947D7842DA91D9CC4C30C2C94E3C /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC055254E8F8585F73838DC51DA28FA /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D350C7C1DA513A1C57612FB430E88349 /* RKResponseDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8FD3A39CAE9474ACA5B180891D8B16 /* RKResponseDescriptor.m */; };
 		D3A2F316B7B84C0B5043234797EAD194 /* AFRKURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF718FD221B8445F6598DE9012F705F6 /* AFRKURLConnectionOperation.m */; };
-		D3BE918141838F0C957D6264E1DAB0B1 /* DGLabel+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D01BD4618E8E13DB69509B9A26D08D5 /* DGLabel+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D402757297AB83667172B8124B493B6C /* RKPaginator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0404D1B32F8A717EF6DCDB04272EEC /* RKPaginator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D486E64639EB53F26DCEE370583FB80E /* Pods-DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA82F6A1542D8FC2882F661DCADB750 /* Pods-DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4E253CCF66F707AC973534E772CD8EA /* DGDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A3EFB92980596AB78500B7E4E6ACFB /* DGDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D52A93C9466D99A36070E3F374A29C2B /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4D631DEE061B9C61A44C28954B3B3D /* DGTrack+Mapping.m */; };
-		D544CD56B237B8C1DB25007D6B641047 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = A48DDE92944C9950F00B2C3929F60EEC /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5E258F824434CB3BA913BEC30720FFF /* RKDictionaryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5484094171257ACDA6A2190557C8CF /* RKDictionaryUtilities.m */; };
-		D6BEECD5EFCECCFDCA3B103D62DB2E89 /* DGMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 929C45D15204EBFEA714B4365D3C5484 /* DGMaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D677DA8ED6D5DB5713BE16672476D6B0 /* DGCollectionField+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 697B038A9AC9DA8C26D602AA571C7927 /* DGCollectionField+Mapping.m */; };
 		D71506174F6FF08C774616F3EF3641BD /* RestKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D374D9419BAD7609760A20393E86D6 /* RestKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D73150A48BE032EF2C4EDA3F7C8424A3 /* lcl_config_components_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = E446BFCCD5AA6F6EF484CF7DDB1EE299 /* lcl_config_components_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7B214C00A5BA1D56CCE56B08AE3A5AD /* DGListing+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E902C58DDE9D2B054AD26751279E7B5 /* DGListing+Mapping.m */; };
-		D85AB5A725FD60B498F504F9EE51F10E /* DiscogsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6199F99E75943D038653CFD4B53A4F3F /* DiscogsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D87F635BD2E86A7FF2CF08B4F4EA2900 /* DGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F906F4C3F6E3F2565A08ED021DFF1BF /* DGPagination.m */; };
 		D8986A3DBF9A91CC8B0D7B011A8BE5E6 /* RKObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8F63A7873C89D449A83D8D32E45BED /* RKObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D90673B23290E283E7B30D4859EF5684 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 361F5D2A87A62C149D06214F8F325FDA /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D8EBE06FBD3823E1818F53A8CD95B157 /* DGArtistRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = DF629C00AE369EE0E735EA8666F485CF /* DGArtistRelease.m */; };
 		D9148506241C2D842C13E7E91AE1F200 /* RKMappingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB8B2597492613A67EC7FFA0D72436A /* RKMappingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9CDB848710A9AF601843EEDEC0FF1F3 /* DGCollectionFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 82538C90B037D58F214B3D7C82E45AD5 /* DGCollectionFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAA143D4155768EBAD63BFE73B109E57 /* DGMasterVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F0B747984456C6D74B174325713155 /* DGMasterVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DABA1226858F51720EC1A2D5AA3D7A58 /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC84AA926C602D5C538165137B18A1A /* DGCommunity+Mapping.m */; };
 		DC06DEFA353B6646DE431B50339869EF /* RKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = CED6F8C933EB79F185EB7915B43D8CE5 /* RKRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD8B9BA6B890964F343533140DA9F766 /* DGCommunity.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E0A5B69BD540A7D6E168E508F1B2FCA /* DGCommunity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCAC4F32699EC0F122B5EBDA842C9467 /* DGPrice+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1A349FB15D42E378E0E68125D77E6 /* DGPrice+Mapping.m */; };
+		DD17E4762351F7268048213A8182CE3E /* DGImage+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 33A596A818FD42D83D52A0BBE556DA00 /* DGImage+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DD19A2DBDBD72FB5D1405F18442F8F40 /* DGLabelRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = A527CE55E3117B381BE7287AB878BA0E /* DGLabelRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDDF07E5B3CB864A480C0FB12B4B5776 /* AFRKXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB0E73E01D8A54CF603F3C240955DFA /* AFRKXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE8C50A0ADAD821196FD9CC5139F1242 /* ISO8601DateFormatterValueTransformer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F81E97C983F2195917F66349550C1C6C /* ISO8601DateFormatterValueTransformer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEAAF4D9F763CC13E7C7DC49B65F25AC /* RKValueTransformers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 488337F42DE4F119CF041FBDE19A69CC /* RKValueTransformers-dummy.m */; };
 		DEE40099CD92B34A40F676A578966E0B /* RKObjectParameterization.h in Headers */ = {isa = PBXBuildFile; fileRef = FFEE0FF112F8B8E5BF2D419F5814AB4E /* RKObjectParameterization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF54D827D031257DDC64A8DC77BB7721 /* RKObjectParameterization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1B641039BD33A1F0700F073BC78E63 /* RKObjectParameterization.m */; };
-		DF74C756A16A50EF30EF2EFDEC9FA818 /* DGRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 33156A8C3E1369F999F524356D370C92 /* DGRelease.m */; };
-		E0EB6D0A92B5976F9F47A85D45C45939 /* DGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7F44E181CC70BA4CF6A4B855764481 /* DGLabel.m */; };
 		E1066CE946482EBAC98F6269566A4C1B /* RKHTTPUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EED688E1E8533049F8A03842EC55D6 /* RKHTTPUtilities.m */; };
-		E54FBAA0B10CE55C2BB34C747CA342F1 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0434F0053629FC217CD87FED296B9C85 /* DGOperation.m */; };
+		E12816948FA83EAF2F0160603C8A8962 /* DGMaster+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F7532B210E6E1035702AA2AE02054 /* DGMaster+Mapping.m */; };
+		E1DE49726EAA0DE3F6ED9ECC49B185FC /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = C48B9BEC34CE27D8FD23E8ECB299C6C6 /* AFOAuth1Client.m */; };
+		E33E4FDD7157C27591B3A0998DAED46C /* DGImage+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDEE0EA70113C9FE9F82022268B0A1 /* DGImage+Mapping.m */; };
 		E56291AD9C5EB4CD4721BF9DFBB554DC /* Pods-DiscogsAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE54B03D9D89C54C5BA4FB1B23BF203 /* Pods-DiscogsAPITests-dummy.m */; };
+		E5935E09F83A61EE6A4BBE725954BF95 /* DGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 62771A44B9D4FE3FF9748A0A011EFE33 /* DGImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6574632AE395F92587182AEE5408165 /* RKPathMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD99491EACAF4EC06EC620A7FD047D2 /* RKPathMatcher.m */; };
 		E69FB7A718E58A413270A9459F722298 /* RKMapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F65B4679AC8A37EECA7276BB802EA /* RKMapperOperation.m */; };
+		E7AB7028C8E2E22773A29EEABF539F5E /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFE5D131BB01827EF8DAFC830CBD5DA /* DGObject.m */; };
 		E7ED51E1F2FDE6F81021F1CB8EF84668 /* RestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6BC5515DC731D6F916D53B01D8FBC0 /* RestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8464CCA58217ACAD83363F3712F6C3E /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B50BB8070E70D494D62AB0A23FC12 /* DGWantlist.m */; };
+		E893709635FF2317C27C45EB4183BD7C /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E9AA2C8B483F0BB845D5961F02BCCA60 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E8DA626BC9D04FE58ECFA6746D312E2D /* DGResource.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBA9DFD7FEDAD2C29E0B7E43A568762 /* DGResource.m */; };
 		E9F2A5E632D0C20E42EBE7C3FE23A242 /* RKManagedObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B5121CDBFF8FE7F07433DD40ABA5B07 /* RKManagedObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA1B773FF64C2A7B1013851D77DA8A61 /* RKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C7BB318F3960111F8D9D46D159FC6D /* RKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA6047070AB4C2A5E6ED6CC517087171 /* DGMarketplace.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EFB00777B1001518941259E0B75F6 /* DGMarketplace.m */; };
 		EA882C9CB0E307F383FBF14731337B12 /* AFRKNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DDCF557F123180BF25CCF899C8D387 /* AFRKNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB0C70CDEBC5E86B3E87C525642B0CA2 /* DGTrack+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD08C288E65FB1835020AE9F4030072 /* DGTrack+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EB1739113CA72CE5809FE1F449FF9AD9 /* RKRouteSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE729663DC07EDE4716C4889ED244B3 /* RKRouteSet.m */; };
-		ECEF0A285ED7CDF08F1ABA0CF83DFFF0 /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 716D68EEE46E2B74CBFAEE3A9E73A8F9 /* DGWantlist+Mapping.m */; };
-		ED5373567464FC20B080D5B2E42F2FDE /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC7805D5B387A1D2307DA795B293CEF /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EC112037445B065F54B435E5FE615ED5 /* DGSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E1414F8524E00D87A7AC801E95FE43 /* DGSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC6DE89380581AC525B1718FC506C062 /* DGReleaseInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84CBC5BEC8600FD6559591A790BDCC /* DGReleaseInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE78E56861C5B465F331FC2FB1CECFF4 /* DGCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = C00FBD9A1133A2FFC5C854AC4AD74291 /* DGCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE893473CB2A214284409ECBDDCE3E94 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE1DD945C7235D217C28E6A212F813D /* DGFormat+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F168D21040977687FC404B3AEAE3E00F /* RKSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F8248A69EC4540522101462797669C /* RKSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1C9DA82E77C5FC72EAE46F72020BB76 /* RKTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1280E0481CEA379CC5CE0224958F2197 /* RKTestFactory.m */; };
-		F2AB8F2CD347C9EA3DE13C688DD985E3 /* DGArtistRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = AB70A64CE5FF84E4BE6AC9883A65AFD6 /* DGArtistRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3248DF2685161BEC9A94259D901C437 /* DGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C5322833468905636FEFB314271A12 /* DGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3598E1F27E309532212A007030DDE2D /* SOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */; };
-		F35D9F9ED5F289E42F7725FE7ACE4633 /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D700EF5FAD0FC790010E386BEFA7CAC5 /* DGPrice+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F3D7380F0FAC71F64D87CDE5831E4915 /* DGCollectionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 796A6F734895056F91934511B55CBFDB /* DGCollectionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4B71DF292AAF47A6E4557950DDF9C3B /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A5E0511D8C946E9D35C803DCC22BC /* DGListing.m */; };
+		F3CD3F78BA071D91AC3AF8EF34713C3C /* DGPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7ED498AD780EDA6919AE8DF90B9B1D /* DGPrice.m */; };
+		F46AE6EA9F67FCC7C51523C652F4A8CF /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94DCCC52C26256824622985140BECE /* DGLabel+Mapping.m */; };
 		F4CE7660FE93F4F25CAFE31B03CB7243 /* SOCKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0091FC6F110888B25629548DF5D2A792 /* SOCKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5611CED65F129280218A67DAA4FD86C /* DGLabelRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD6617F8DE2DDB460A444611B24D6B3 /* DGLabelRelease+Mapping.m */; };
+		F4F14766A0DA394E9BD6E074AAAB6262 /* DGProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E43EB4B463892CFD1B1250544FB6C0 /* DGProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F76326544D02E68FC3EA8015EEF88561 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F7E1F682284D52AA469EBBE24439D733 /* RKPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F328146E9FE6B7E883CEC775B2ACA1E /* RKPathUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7EC411A2DA96FBBB9522EE769D21E1D /* DGArtistRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = DF629C00AE369EE0E735EA8666F485CF /* DGArtistRelease.m */; };
-		F80DB5EF783D7F15FD55726C26F04D32 /* DGCollectionFieldInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D1784116484461C22ADCCB99F2AAE0 /* DGCollectionFieldInstance.m */; };
+		F7F41DD79A1DACDE97B394B3C55F6BC2 /* DGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = CB74C0DBA960076B90F8833C0EA25D36 /* DGMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F91F627B67F453D7B945EDF8911103B3 /* DGCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E1434693415C2530C0EC6BEBC47DA /* DGCommunity.m */; };
 		F92C445EA3AA5ACBCBCC354B9E86A96E /* AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C6F742D43175B8495E0328263C38F345 /* AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA0CCEF625A61886934CBC3A54919850 /* DGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3535E164B566604DB924F208AA5EA929 /* DGDatabase.m */; };
+		FA9FA2F6F5F4A56FDE93757CC8D5332E /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CCBCB7FFCAD1127D976815569DDC5 /* DGRelease+Mapping.m */; };
 		FAB33B94FE194FA0026D886720F4700C /* RKDictionaryUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CB39B9195FA6F4A45715BBC9A8681C7 /* RKDictionaryUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAB70A5A386F9AD83DC00FD83A4CCD11 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 537FE7C7F44D9C4412025366B44FE374 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB1D53A67A124BDE375A159FD960EDA2 /* RKTestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7533B46D332CF6146ED803BC4E28FEE1 /* RKTestFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC5570A414A9E9FC7396D42691DF0ECA /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4D631DEE061B9C61A44C28954B3B3D /* DGTrack+Mapping.m */; };
 		FCB038BBF9FE11429A49A8728B322A1B /* AFRKPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A227F8D15E121FC79482DEB0047929 /* AFRKPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCBCDB4BAB359439CAC2762F1ADDBC01 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6DCD3591B95AFED69BE1FB227890C /* DGAuthentication.m */; };
-		FCC64FE247E823A272138DCAB561062E /* DGOrder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E56BF9B45149E67834F1A785A54749 /* DGOrder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FD2D7A5D08E015023C06051A73637042 /* DGLabelRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = A527CE55E3117B381BE7287AB878BA0E /* DGLabelRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDED7B4316597E3F82FCE3A66BC04D19 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE1DD945C7235D217C28E6A212F813D /* DGFormat+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FEB488548B945B0B59AD04AD6B91D802 /* RKObjectMappingOperationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A19EE4380CD6552F000A33C0057ED4F3 /* RKObjectMappingOperationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF5F6FAB88D8CEE712120EBC998E50F4 /* DGMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 929C45D15204EBFEA714B4365D3C5484 /* DGMaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -569,9 +569,9 @@
 		1280E0481CEA379CC5CE0224958F2197 /* RKTestFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestFactory.m; path = Code/Testing/RKTestFactory.m; sourceTree = "<group>"; };
 		12C7BB318F3960111F8D9D46D159FC6D /* RKMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMacros.h; path = Code/Support/RKMacros.h; sourceTree = "<group>"; };
 		12E43EB4B463892CFD1B1250544FB6C0 /* DGProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGProfile.h; sourceTree = "<group>"; };
+		149E04FDA80912E09B4EC7E4EBC6EF13 /* DGAuthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		14AC5EC75776B58E07B2F52545A3D0E8 /* RKObjectManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectManager.m; path = Code/Network/RKObjectManager.m; sourceTree = "<group>"; };
 		14DDCF557F123180BF25CCF899C8D387 /* AFRKNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKNetworkActivityIndicatorManager.h; path = Code/Network/AFNetworking/AFRKNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		16E5F46E047E2F68D8F1B7C8E2E8C005 /* DGTokenStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
 		1701043A5EC0E07A6556CD77CB98C065 /* DGArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGArtist.h; sourceTree = "<group>"; };
 		1706DBF5F05AC450A8177B51409819DA /* DGMember+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMember+Mapping.m"; sourceTree = "<group>"; };
 		177B255DBD5216C917320CADE27692C9 /* RKPropertyInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyInspector.m; path = Code/ObjectMapping/RKPropertyInspector.m; sourceTree = "<group>"; };
@@ -602,6 +602,7 @@
 		26C9686CA33554BDD3140170B40B7EFF /* DGVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGVideo.m; sourceTree = "<group>"; };
 		27CD7A30B44C883283B4D8B0437A47F9 /* RKErrorMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKErrorMessage.h; path = Code/ObjectMapping/RKErrorMessage.h; sourceTree = "<group>"; };
 		292F0CCA3B6F505992B5A68EE808EB6E /* Pods-DiscogsAPI-Discogs-objc-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DiscogsAPI-Discogs-objc-acknowledgements.plist"; sourceTree = "<group>"; };
+		29D2C2A8550EF453E0DC4F8B5781AD23 /* DGAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		2B5121CDBFF8FE7F07433DD40ABA5B07 /* RKManagedObjectRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKManagedObjectRequestOperation.h; path = Code/Network/RKManagedObjectRequestOperation.h; sourceTree = "<group>"; };
 		2BA82F6A1542D8FC2882F661DCADB750 /* Pods-DiscogsAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DiscogsAPI-umbrella.h"; sourceTree = "<group>"; };
 		2BCE70AB458DC5CC6E9299B418E831CE /* lcl_config_extensions_RK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lcl_config_extensions_RK.h; path = Code/Support/lcl_config_extensions_RK.h; sourceTree = "<group>"; };
@@ -631,7 +632,6 @@
 		361F5D2A87A62C149D06214F8F325FDA /* DGProfile+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGProfile+Mapping.h"; sourceTree = "<group>"; };
 		362B1EEFAA64956C3DD71C085E525DBF /* RKTestNotificationObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestNotificationObserver.m; path = Code/Testing/RKTestNotificationObserver.m; sourceTree = "<group>"; };
 		394D35BEE99F5C1E2D4A667104BEA28A /* Pods-DiscogsAPITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DiscogsAPITests-resources.sh"; sourceTree = "<group>"; };
-		397A6F39F664A95EE6C7D6EA3B9FEA0E /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		39D358D4DB9EBCD763520FB6A43DF338 /* RKObjectUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectUtilities.m; path = Code/ObjectMapping/RKObjectUtilities.m; sourceTree = "<group>"; };
 		3A597EE6D25E169E7A257E6C60E19855 /* RKPropertyMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPropertyMapping.h; path = Code/ObjectMapping/RKPropertyMapping.h; sourceTree = "<group>"; };
 		3C5DB1810AC3A2DBC851F38AB5F0A1A1 /* SOCKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SOCKit.m; sourceTree = "<group>"; };
@@ -640,7 +640,6 @@
 		3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA3BD5E424C55FF5F944C775958ADE6 /* DGCollectionFieldInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFieldInstance+Mapping.m"; sourceTree = "<group>"; };
 		40A3EFB92980596AB78500B7E4E6ACFB /* DGDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGDatabase.h; sourceTree = "<group>"; };
-		422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		4289D8AC6AFA126089042E8DA9E8CEE2 /* Pods-DiscogsAPI-Discogs-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPI-Discogs-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		434F742120D50C675631874C7A288723 /* DGIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentifier.h; sourceTree = "<group>"; };
@@ -654,6 +653,7 @@
 		4926479BBFD94C009E4E02BE31EE5205 /* RKErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKErrors.m; path = Code/Support/RKErrors.m; sourceTree = "<group>"; };
 		4A855900DD5F47591678B8D9D840BC7F /* Pods-DiscogsAPI-Discogs-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DiscogsAPI-Discogs-swift.modulemap"; sourceTree = "<group>"; };
 		4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4AFB55865245282C41D627C36CBC65EA /* DGIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentity.h; sourceTree = "<group>"; };
 		4BD79D1CFA94E347C01D3081A425A941 /* RKResponseMapperOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKResponseMapperOperation.h; path = Code/Network/RKResponseMapperOperation.h; sourceTree = "<group>"; };
 		4C0A5E0511D8C946E9D35C803DCC22BC /* DGListing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGListing.m; sourceTree = "<group>"; };
 		4C5FB15984B9C5A8944048365B56D6C1 /* DGCollectionFolder+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFolder+Mapping.m"; sourceTree = "<group>"; };
@@ -670,7 +670,6 @@
 		560481BEA226355F5C4BB004FFF2E652 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57BD5E0E26D51C153DCFD6BB26DD28D7 /* RKObjectMappingMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectMappingMatcher.m; path = Code/ObjectMapping/RKObjectMappingMatcher.m; sourceTree = "<group>"; };
 		599801FFCA7359445DE73031B66249D7 /* DGCollectionFolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFolder.m; sourceTree = "<group>"; };
-		59DA28BFD086821CAA550872DF73D861 /* DGAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		5A0F3C3EB50CAC8D41CD3D2ABD856EC7 /* DGOrder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGOrder.h; sourceTree = "<group>"; };
 		5AADDD9FAD1E66ADB8249D2F3753C145 /* DGReleaseInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGReleaseInstance.m; sourceTree = "<group>"; };
 		5BA4778B6BC0869DE978D8F70FF5186A /* TransitionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionKit-prefix.pch"; sourceTree = "<group>"; };
@@ -692,17 +691,16 @@
 		66EB2F1D787836057F59113DDF58546B /* TransitionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TransitionKit.modulemap; sourceTree = "<group>"; };
 		676CC910005863F2BDA746428A400AE1 /* RKBenchmark.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKBenchmark.m; path = Code/Testing/RKBenchmark.m; sourceTree = "<group>"; };
 		68F8248A69EC4540522101462797669C /* RKSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKSerialization.h; path = Code/Support/RKSerialization.h; sourceTree = "<group>"; };
+		6911109FDA051BAAEEF8CD39C0255C8C /* DGIdentity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentity.m; sourceTree = "<group>"; };
 		697B038A9AC9DA8C26D602AA571C7927 /* DGCollectionField+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionField+Mapping.m"; sourceTree = "<group>"; };
 		69E56BF9B45149E67834F1A785A54749 /* DGOrder+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGOrder+Mapping.h"; sourceTree = "<group>"; };
 		6C0DD85B4446E2D786875093BEFDC9B0 /* RKMappingResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingResult.h; path = Code/ObjectMapping/RKMappingResult.h; sourceTree = "<group>"; };
 		6C4A1163E64339F3D6F0BBBD8D15B17B /* Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Testing.h; path = Code/Testing.h; sourceTree = "<group>"; };
 		6C58DBC7EEBB2C0362482F3863E8E256 /* RKValueTransformers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKValueTransformers.xcconfig; sourceTree = "<group>"; };
-		6CC6DCD3591B95AFED69BE1FB227890C /* DGAuthentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		6D84E2B7C4EC3F17FE1D22E953B17645 /* RKStringTokenizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKStringTokenizer.m; path = Code/Support/RKStringTokenizer.m; sourceTree = "<group>"; };
 		6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9F65B4679AC8A37EECA7276BB802EA /* RKMapperOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMapperOperation.m; path = Code/ObjectMapping/RKMapperOperation.m; sourceTree = "<group>"; };
 		70485FA947B3C1BEAA9AD98A86AE3561 /* AFRKImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKImageRequestOperation.m; path = Code/Network/AFNetworking/AFRKImageRequestOperation.m; sourceTree = "<group>"; };
-		7083E123EF3DF51E8E0567B007A987F8 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		7155E9BFBC03A81991CD9098D54A94D1 /* TransitionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionKit-umbrella.h"; sourceTree = "<group>"; };
 		716D68EEE46E2B74CBFAEE3A9E73A8F9 /* DGWantlist+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGWantlist+Mapping.m"; sourceTree = "<group>"; };
 		722E8FA3B3982CE73B744A14F49542DD /* RKMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMapping.m; path = Code/ObjectMapping/RKMapping.m; sourceTree = "<group>"; };
@@ -717,6 +715,7 @@
 		76BF9CCA30A455E426705655E133B2D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77882B7A5CFBB9E2E1880158947743EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C243AF3AA66B0C57142842646D4663 /* DGListing+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGListing+Mapping.h"; sourceTree = "<group>"; };
+		795343940CAA18664C9029183EB7EFA5 /* DGAuthentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		796A6F734895056F91934511B55CBFDB /* DGCollectionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionField.h; sourceTree = "<group>"; };
 		7A3D454DD746F53931D76119A4765A47 /* RKMappingOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMappingOperation.m; path = Code/ObjectMapping/RKMappingOperation.m; sourceTree = "<group>"; };
 		7C3E1434693415C2530C0EC6BEBC47DA /* DGCommunity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCommunity.m; sourceTree = "<group>"; };
@@ -759,7 +758,6 @@
 		94CF2ED48C7B418E63EE23EB9480FDBB /* RKTestFixture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestFixture.h; path = Code/Testing/RKTestFixture.h; sourceTree = "<group>"; };
 		954554EF07A2E7D5CA6F8655A2CE8F42 /* DGMember.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMember.m; sourceTree = "<group>"; };
 		958F57B838576E1E4B28DE19DB7ADB9F /* DGVideo+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGVideo+Mapping.h"; sourceTree = "<group>"; };
-		96FD9C893848A8935614E6F65E9BE1AC /* DGTokenStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
 		97BE58DB509A211B0048B2A4CF6CB56E /* RKObjectMappingOperationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectMappingOperationDataSource.m; path = Code/ObjectMapping/RKObjectMappingOperationDataSource.m; sourceTree = "<group>"; };
 		98B97CAE3CFCD833A687172A1772AB46 /* DGArtistRelease+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGArtistRelease+Mapping.m"; sourceTree = "<group>"; };
 		99729DB37F1A12CD1E357FA3E73B8488 /* Pods-DiscogsAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DiscogsAPI-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -779,7 +777,6 @@
 		A19EE4380CD6552F000A33C0057ED4F3 /* RKObjectMappingOperationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectMappingOperationDataSource.h; path = Code/ObjectMapping/RKObjectMappingOperationDataSource.h; sourceTree = "<group>"; };
 		A34359B6DE2841B5C9BC1D040853C22A /* RKTestNotificationObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestNotificationObserver.h; path = Code/Testing/RKTestNotificationObserver.h; sourceTree = "<group>"; };
 		A446D4FCFF1DD5544E1282398DD23995 /* SOCKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SOCKit.xcconfig; sourceTree = "<group>"; };
-		A48DDE92944C9950F00B2C3929F60EEC /* DGIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentity.h; sourceTree = "<group>"; };
 		A4FBD222A7219098E079A0A563EEBE01 /* DGVideo+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGVideo+Mapping.m"; sourceTree = "<group>"; };
 		A527CE55E3117B381BE7287AB878BA0E /* DGLabelRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGLabelRelease.h; sourceTree = "<group>"; };
 		A555BD048A321E33461F89C5AFD8FC76 /* DGOrder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGOrder.m; sourceTree = "<group>"; };
@@ -796,8 +793,8 @@
 		AB70A64CE5FF84E4BE6AC9883A65AFD6 /* DGArtistRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGArtistRelease.h; sourceTree = "<group>"; };
 		AB84CBC5BEC8600FD6559591A790BDCC /* DGReleaseInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGReleaseInstance.h; sourceTree = "<group>"; };
 		AC4C21B5CBA3B5C2044D109E9AA391D9 /* RKErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKErrors.h; path = Code/Support/RKErrors.h; sourceTree = "<group>"; };
-		ACE07F64406D3448BA8CE0FAC200C761 /* DGIdentity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentity.m; sourceTree = "<group>"; };
 		ADBA9DFD7FEDAD2C29E0B7E43A568762 /* DGResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGResource.m; sourceTree = "<group>"; };
+		ADBFC554ABCEEE8B007200CF8346CD4A /* DGIdentity+Keychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Keychain.m"; sourceTree = "<group>"; };
 		AE7795D66807B4BBF4F0B294443F9357 /* DGEndpoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGEndpoint.m; sourceTree = "<group>"; };
 		AE8FD3A39CAE9474ACA5B180891D8B16 /* RKResponseDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKResponseDescriptor.m; path = Code/Network/RKResponseDescriptor.m; sourceTree = "<group>"; };
 		AFD08C288E65FB1835020AE9F4030072 /* DGTrack+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGTrack+Mapping.h"; sourceTree = "<group>"; };
@@ -851,6 +848,7 @@
 		CC287D5E3229539D58F644275047CF1E /* RKTestHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestHelpers.m; path = Code/Testing/RKTestHelpers.m; sourceTree = "<group>"; };
 		CD941411506A81580DA5322638250217 /* DGIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentifier.m; sourceTree = "<group>"; };
 		CED6F8C933EB79F185EB7915B43D8CE5 /* RKRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRouter.h; path = Code/Network/RKRouter.h; sourceTree = "<group>"; };
+		CF1AB4FF1C7FE6E501DEE88ED53066B9 /* DGAuthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
 		CF718FD221B8445F6598DE9012F705F6 /* AFRKURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKURLConnectionOperation.m; path = Code/Network/AFNetworking/AFRKURLConnectionOperation.m; sourceTree = "<group>"; };
 		CF8F63A7873C89D449A83D8D32E45BED /* RKObjectRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectRequestOperation.h; path = Code/Network/RKObjectRequestOperation.h; sourceTree = "<group>"; };
 		D0E3C7E26714F8AB6A9410A8C8EF2D06 /* RKValueTransformers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKValueTransformers-umbrella.h"; sourceTree = "<group>"; };
@@ -864,7 +862,6 @@
 		D700EF5FAD0FC790010E386BEFA7CAC5 /* DGPrice+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGPrice+Mapping.h"; sourceTree = "<group>"; };
 		D709CD92772AB805F98E538052302D90 /* Pods_DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C303454B22C33446774349BF1EAAAF /* DGCollectionField+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionField+Mapping.h"; sourceTree = "<group>"; };
-		D910CB028A95984D1943085833F72AB1 /* DGAuthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
 		D9C53CBCBD9CDACC06472F40ED6BC65C /* RKValueTransformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKValueTransformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEFD5FF962327ABB2138141D1468A0C /* RKURLEncodedSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKURLEncodedSerialization.m; path = Code/Support/RKURLEncodedSerialization.m; sourceTree = "<group>"; };
 		DB5E350B16FB6896AA071D2FCED61316 /* DGVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGVideo.h; sourceTree = "<group>"; };
@@ -875,6 +872,7 @@
 		DC99DB70F5A51B6CABC0366A8DA0E0B3 /* RKMappingTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingTest.h; path = Code/Testing/RKMappingTest.h; sourceTree = "<group>"; };
 		DD3883443E95F1F7919F38F85F5520F3 /* RKObjectMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectMapping.h; path = Code/ObjectMapping/RKObjectMapping.h; sourceTree = "<group>"; };
 		DD7F44E181CC70BA4CF6A4B855764481 /* DGLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGLabel.m; sourceTree = "<group>"; };
+		DD901C1903FDF21BB6FB6F29F455E5AA /* DGIdentity+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Keychain.h"; sourceTree = "<group>"; };
 		DF54478A0C7F04E5D1E4C305E30884A7 /* RKDynamicMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKDynamicMapping.m; path = Code/ObjectMapping/RKDynamicMapping.m; sourceTree = "<group>"; };
 		DF629C00AE369EE0E735EA8666F485CF /* DGArtistRelease.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGArtistRelease.m; sourceTree = "<group>"; };
 		DF7DDFBEFE087C0899C174B34199CDDB /* Pods_DiscogsAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -883,6 +881,7 @@
 		E074D93B34581EF7BD3AF12CCB232BA5 /* DGMasterVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMasterVersion.m; sourceTree = "<group>"; };
 		E0F6FA96B250955140457B5BA7684E4C /* RKMIMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMIMETypes.h; path = Code/Support/RKMIMETypes.h; sourceTree = "<group>"; };
 		E11D025DCC0631B34624CEE7F04E16C0 /* Pods-DiscogsAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DiscogsAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E1E457A1859492B338BC4A08F72DCEFF /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		E446BFCCD5AA6F6EF484CF7DDB1EE299 /* lcl_config_components_RK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lcl_config_components_RK.h; path = Code/Support/lcl_config_components_RK.h; sourceTree = "<group>"; };
 		E51CBB7F7AB648B34CBC82DD5D8EEAD7 /* RKTestFixture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestFixture.m; path = Code/Testing/RKTestFixture.m; sourceTree = "<group>"; };
 		E543EE0DBC74A8D8EEFAED85655A605A /* DGWantlist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGWantlist.h; sourceTree = "<group>"; };
@@ -895,6 +894,7 @@
 		E9E4422B92C348A451DF563040B57519 /* DGCommunity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCommunity+Mapping.h"; sourceTree = "<group>"; };
 		EA4D631DEE061B9C61A44C28954B3B3D /* DGTrack+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGTrack+Mapping.m"; sourceTree = "<group>"; };
 		EA6199F326A1BC6771AA1F34E9A5DDB4 /* RKPathMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPathMatcher.h; path = Code/Network/RKPathMatcher.h; sourceTree = "<group>"; };
+		EB062A7DC7425F9220E17C53650C8BB8 /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		EB59498D0D1FA09931DCD449EA0255CB /* RKManagedObjectRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKManagedObjectRequestOperation.m; path = Code/Network/RKManagedObjectRequestOperation.m; sourceTree = "<group>"; };
 		EBF8DE3AEE7CE499B0C10D18C40F0FE4 /* RKNSJSONSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKNSJSONSerialization.m; path = Code/Support/RKNSJSONSerialization.m; sourceTree = "<group>"; };
 		ECFE5D131BB01827EF8DAFC830CBD5DA /* DGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGObject.m; sourceTree = "<group>"; };
@@ -1355,6 +1355,17 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		3B628DD749FFBF7216BAC4C9E32D1674 /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				4AFB55865245282C41D627C36CBC65EA /* DGIdentity.h */,
+				6911109FDA051BAAEEF8CD39C0255C8C /* DGIdentity.m */,
+				DD901C1903FDF21BB6FB6F29F455E5AA /* DGIdentity+Keychain.h */,
+				ADBFC554ABCEEE8B007200CF8346CD4A /* DGIdentity+Keychain.m */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
 		3BDCC1321F5A853119FB7D13E5F2347A /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -1436,15 +1447,6 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
-		4B4F4ADDF89F1A39F5C68990D593F746 /* DiscogsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				8C328B27787B1CDEAD5A591B39E61F83 /* Authentication */,
-				B80D80547BF654A954669B21E7EC9FB0 /* Mapping */,
-			);
-			path = DiscogsAPI;
-			sourceTree = "<group>";
-		};
 		4FB80FC0B1D7DF80A84A9EC90FB967F2 /* SOCKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1490,15 +1492,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		5DAA19F0E6D68FF2FCDBA022FDF81908 /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				A48DDE92944C9950F00B2C3929F60EEC /* DGIdentity.h */,
-				ACE07F64406D3448BA8CE0FAC200C761 /* DGIdentity.m */,
-			);
-			path = Identity;
-			sourceTree = "<group>";
-		};
 		6140A51A50AD3930B53BA87A8ABEA0B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1519,6 +1512,18 @@
 				31FD73E6DA0CC0F1217640151A04524C /* DGProfile.m */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		6258B54633F94848336022FCB469E145 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				29D2C2A8550EF453E0DC4F8B5781AD23 /* DGAuthentication.h */,
+				795343940CAA18664C9029183EB7EFA5 /* DGAuthentication.m */,
+				149E04FDA80912E09B4EC7E4EBC6EF13 /* DGAuthView.h */,
+				CF1AB4FF1C7FE6E501DEE88ED53066B9 /* DGAuthView.m */,
+				3B628DD749FFBF7216BAC4C9E32D1674 /* Identity */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		66A783E185739A496E8EE505448768EA /* Support */ = {
@@ -1647,14 +1652,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		7F11FF4C612631F4D737BEA5FEA3E1F5 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				BC06108254CAD46C89D532866385E5EA /* Identity */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		8737C15250F8E19979C8830D672404DD /* AFOAuth1Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -1716,20 +1713,6 @@
 			path = AFOAuth1Client;
 			sourceTree = "<group>";
 		};
-		8C328B27787B1CDEAD5A591B39E61F83 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				59DA28BFD086821CAA550872DF73D861 /* DGAuthentication.h */,
-				6CC6DCD3591B95AFED69BE1FB227890C /* DGAuthentication.m */,
-				422A48643A4485AD5D59DF66A04DAD99 /* DGAuthView.h */,
-				D910CB028A95984D1943085833F72AB1 /* DGAuthView.m */,
-				16E5F46E047E2F68D8F1B7C8E2E8C005 /* DGTokenStore.h */,
-				96FD9C893848A8935614E6F65E9BE1AC /* DGTokenStore.m */,
-				5DAA19F0E6D68FF2FCDBA022FDF81908 /* Identity */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		9527C2EAEB1FCCBCA89DD6A0CC670FEE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1740,6 +1723,24 @@
 				80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		981958566382C209D970919354B43AE1 /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				E1E457A1859492B338BC4A08F72DCEFF /* DGIdentity+Mapping.h */,
+				EB062A7DC7425F9220E17C53650C8BB8 /* DGIdentity+Mapping.m */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
+		9BD411602319262DBFEB320CF56FE3F1 /* DiscogsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				6258B54633F94848336022FCB469E145 /* Authentication */,
+				A05E761CA693D9905A3FC58257E120FB /* Mapping */,
+			);
+			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
 		9DFC9F179229100CA0BCC01E0E66CC45 /* DiscogsAPI */ = {
@@ -1754,6 +1755,14 @@
 			isa = PBXGroup;
 			children = (
 				E0C8AE190F7D387A315C7AE33497D60B /* Database */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
+		A05E761CA693D9905A3FC58257E120FB /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				B470AC43A4CA4B79BDD8AC7E6F3D4344 /* Authentication */,
 			);
 			path = Mapping;
 			sourceTree = "<group>";
@@ -1836,7 +1845,7 @@
 		ABB8E3C46B1A3297D38D399A1923DCDC /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				4B4F4ADDF89F1A39F5C68990D593F746 /* DiscogsAPI */,
+				9BD411602319262DBFEB320CF56FE3F1 /* DiscogsAPI */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -1859,6 +1868,14 @@
 				0C951BAB9A63F17A8C92EDE0C8C68782 /* Testing */,
 			);
 			path = RestKit;
+			sourceTree = "<group>";
+		};
+		B470AC43A4CA4B79BDD8AC7E6F3D4344 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				981958566382C209D970919354B43AE1 /* Identity */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		B68AC01BE838366CE0D337302BF8BCD6 /* DiscogsAPI */ = {
@@ -1889,14 +1906,6 @@
 				321673E773A65E595E934F9DBE6183DB /* DGProfile+Mapping.m */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		B80D80547BF654A954669B21E7EC9FB0 /* Mapping */ = {
-			isa = PBXGroup;
-			children = (
-				7F11FF4C612631F4D737BEA5FEA3E1F5 /* Authentication */,
-			);
-			path = Mapping;
 			sourceTree = "<group>";
 		};
 		B96548787F3C0C2C8F94C72081F66444 /* Order */ = {
@@ -1935,15 +1944,6 @@
 			);
 			name = "Support Files";
 			path = "Pods/Target Support Files/DiscogsAPI";
-			sourceTree = "<group>";
-		};
-		BC06108254CAD46C89D532866385E5EA /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				7083E123EF3DF51E8E0567B007A987F8 /* DGIdentity+Mapping.h */,
-				397A6F39F664A95EE6C7D6EA3B9FEA0E /* DGIdentity+Mapping.m */,
-			);
-			path = Identity;
 			sourceTree = "<group>";
 		};
 		C1A7F8DAA775CECEC450DDF7F3F369DB /* Mapping */ = {
@@ -2190,90 +2190,90 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B93D7E44DB421052ACF5ABFE8F284D6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8649FB39060E76A98E2F00D42FDDD250 /* AFOAuth1Client.h in Headers */,
-				4D8497BCECC3685DABB30C8C6DF5687F /* DGArtist+Mapping.h in Headers */,
-				C69612E2260EDA3D8D6A184827C85971 /* DGArtist.h in Headers */,
-				803474E8BB2D729E15E0EFDB92159277 /* DGArtistRelease+Mapping.h in Headers */,
-				F2AB8F2CD347C9EA3DE13C688DD985E3 /* DGArtistRelease.h in Headers */,
-				35ED2C78BE38E9766323CD101F53E1BA /* DGAuthentication.h in Headers */,
-				665C98DD5F4B2C1438F1580FA9E9718F /* DGAuthView.h in Headers */,
-				0A7D5BFE38253C3F4CF4548FA42D27E6 /* DGCollection.h in Headers */,
-				21FEE79F6299C44FCEF5F10406801FA9 /* DGCollectionField+Mapping.h in Headers */,
-				F3D7380F0FAC71F64D87CDE5831E4915 /* DGCollectionField.h in Headers */,
-				46965EA184BD6A05792773EFA4D9F0AC /* DGCollectionFieldInstance+Mapping.h in Headers */,
-				592BAE3500BC9CD38807B6FD50D6AF5B /* DGCollectionFieldInstance.h in Headers */,
-				ED5373567464FC20B080D5B2E42F2FDE /* DGCollectionFolder+Mapping.h in Headers */,
-				D9CDB848710A9AF601843EEDEC0FF1F3 /* DGCollectionFolder.h in Headers */,
-				7D35BD9D470F81ADDE204E05EA32C308 /* DGCommunity+Mapping.h in Headers */,
-				DD8B9BA6B890964F343533140DA9F766 /* DGCommunity.h in Headers */,
-				D4E253CCF66F707AC973534E772CD8EA /* DGDatabase.h in Headers */,
-				C1016C3040189FED17030C0A326FAD69 /* DGEndpoint+Configuration.h in Headers */,
-				1794AD5E0504CA7B51180EAFB16EE541 /* DGEndpoint.h in Headers */,
-				FDED7B4316597E3F82FCE3A66BC04D19 /* DGFormat+Mapping.h in Headers */,
-				2AFB65664035EE16E316A960354B2733 /* DGFormat.h in Headers */,
-				AFB405659596C41F13526826440E29EE /* DGHTTPClient.h in Headers */,
-				395B4EBF2DC30FFD754BD57825543738 /* DGIdentifier+Mapping.h in Headers */,
-				CA7D8F4034256B452EC8C36E1A5B86D0 /* DGIdentifier.h in Headers */,
-				ACE8408953D0CDE7EA8F3E05D365F1BD /* DGIdentity+Mapping.h in Headers */,
-				D544CD56B237B8C1DB25007D6B641047 /* DGIdentity.h in Headers */,
-				B346B9AF76B0717488479240A8E289AF /* DGImage+Mapping.h in Headers */,
-				C39513A0F116BC001683B3D4AEB54C3B /* DGImage.h in Headers */,
-				B39C1F85F510D8764AFC084ACFA14E48 /* DGInventory+Mapping.h in Headers */,
-				0DFC8F5DE58D57A565563D1B2A1A4399 /* DGInventory.h in Headers */,
-				D3BE918141838F0C957D6264E1DAB0B1 /* DGLabel+Mapping.h in Headers */,
-				457A19E25BD0590BBC3C9AA2C8F10864 /* DGLabel.h in Headers */,
-				86F14DAE34308C597AD7C69E78FEB7D8 /* DGLabelRelease+Mapping.h in Headers */,
-				FD2D7A5D08E015023C06051A73637042 /* DGLabelRelease.h in Headers */,
-				2D53BB7D181AA9B0B32A5C2F6DA7C118 /* DGListing+Mapping.h in Headers */,
-				85257E8054CE7FA47297DADB5EEAA480 /* DGListing.h in Headers */,
-				AA3D1480D276DF62A4FDA08F60323492 /* DGMapping.h in Headers */,
-				0C63BC3203AED16F677F6247F3260EB6 /* DGMarketplace.h in Headers */,
-				397B16E94D24FD19C1758E35A72FCFFC /* DGMaster+Mapping.h in Headers */,
-				D6BEECD5EFCECCFDCA3B103D62DB2E89 /* DGMaster.h in Headers */,
-				532B7655D4D863ADAA570ECA17D6CC80 /* DGMasterVersion+Mapping.h in Headers */,
-				DAA143D4155768EBAD63BFE73B109E57 /* DGMasterVersion.h in Headers */,
-				5EBCF0232DB198B26BC23A35A071042D /* DGMember+Mapping.h in Headers */,
-				7E93FE65C36D8434C5920C275E4B8E53 /* DGMember.h in Headers */,
-				9FD7BEEFE86A002BD8620BE1FFEF84CD /* DGObject.h in Headers */,
-				0DC6F2E91E385235FC4EA19AFF96F63C /* DGOperation.h in Headers */,
-				FCC64FE247E823A272138DCAB561062E /* DGOrder+Mapping.h in Headers */,
-				21410E655A94657A6C74BEFEF5E3AB11 /* DGOrder.h in Headers */,
-				A8C227A295F726B5B9E983E01CA3BCCB /* DGPagination+Mapping.h in Headers */,
-				5006774C32CB1F2EE9CE224A1BFAF7EA /* DGPagination.h in Headers */,
-				F35D9F9ED5F289E42F7725FE7ACE4633 /* DGPrice+Mapping.h in Headers */,
-				C2AA5762A0DF1570C02BE37F2AF4857C /* DGPrice.h in Headers */,
-				D90673B23290E283E7B30D4859EF5684 /* DGProfile+Mapping.h in Headers */,
-				06654E99CFC19D9F3D9B2ACECC3E467F /* DGProfile.h in Headers */,
-				7D0CB85A73876B58B1584CC7D0FC7217 /* DGRelease+Mapping.h in Headers */,
-				49BA1FA9569A96CA8C66A532FD53EDA6 /* DGRelease.h in Headers */,
-				27ACE79998F2337B72398D61B0439BC4 /* DGReleaseInstance+Mapping.h in Headers */,
-				C5E3D8D6B4B56D08DE766E375BE1EBCB /* DGReleaseInstance.h in Headers */,
-				32511EE9D64D8C3878C34AE60310F406 /* DGResource.h in Headers */,
-				A7D1C6F86F512BE9CE085DCE7A856E91 /* DGSearch+Mapping.h in Headers */,
-				616105CF76D4029E9A6EE54AF89D45AB /* DGSearch.h in Headers */,
-				826B05FA9C98F1816EF89F8FC630805F /* DGTokenStore.h in Headers */,
-				B0A6C2BA89DF40291460AE71BC06CC3D /* DGTrack+Mapping.h in Headers */,
-				CCA1AEC3864E46C7FE65F0783316016E /* DGTrack.h in Headers */,
-				6CA10004763F4A9EED873B40E6E63ADB /* DGUser.h in Headers */,
-				40775FD09182A88350B1B3A2592DB8CC /* DGVideo+Mapping.h in Headers */,
-				1BBFAACFD08813DD4FA9F88D58F3620D /* DGVideo.h in Headers */,
-				33D03594AB66D21B404A6200F17DABBD /* DGWantlist+Mapping.h in Headers */,
-				AAC7AC33B2956E02770ED4AF4B1B2CD7 /* DGWantlist.h in Headers */,
-				CF91910FC065C08949B50D4DFD9CBD98 /* DiscogsAPI-umbrella.h in Headers */,
-				D85AB5A725FD60B498F504F9EE51F10E /* DiscogsAPI.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E53CF2886354B3B284D919371625F18 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4CE7660FE93F4F25CAFE31B03CB7243 /* SOCKit-umbrella.h in Headers */,
 				84AD6267B778F8A0598FFDB075004351 /* SOCKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF6824AD3A994AA30A85F5275317287 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB8A6FFA6A7D5C74CBBF5705911A0DB /* AFOAuth1Client.h in Headers */,
+				2399F7863B35A7B69E0000605E561DDE /* DGArtist+Mapping.h in Headers */,
+				0B58034972EC8415427533A384AE0250 /* DGArtist.h in Headers */,
+				8FE5FB79ED0EEB66FE644A6D0AA216F5 /* DGArtistRelease+Mapping.h in Headers */,
+				61B41A010031790BE4D3563295B2B732 /* DGArtistRelease.h in Headers */,
+				AC87FBF250ED4624AA156BB8AE305C4E /* DGAuthentication.h in Headers */,
+				5AAFD16B52152CFAD22A513DF29F02DF /* DGAuthView.h in Headers */,
+				EE78E56861C5B465F331FC2FB1CECFF4 /* DGCollection.h in Headers */,
+				F76326544D02E68FC3EA8015EEF88561 /* DGCollectionField+Mapping.h in Headers */,
+				50B6CC6A5B2A372B033FAD2AFCEF0A43 /* DGCollectionField.h in Headers */,
+				B94568E2427C57779D6AEEDB9410A02E /* DGCollectionFieldInstance+Mapping.h in Headers */,
+				3611EFA8AAFA15F9F12FBF786E4300FB /* DGCollectionFieldInstance.h in Headers */,
+				08A5E42E8603376C3F5B33D283D3E7DD /* DGCollectionFolder+Mapping.h in Headers */,
+				93A03002663F9BE9A15ACE7AD8B42DBA /* DGCollectionFolder.h in Headers */,
+				5AFBD54153A2C8E33232B6F276AED3EF /* DGCommunity+Mapping.h in Headers */,
+				870012BD44385A18BBC23BF27F061FCD /* DGCommunity.h in Headers */,
+				417F9815E69BBD6316F1D8D8B09A6B9E /* DGDatabase.h in Headers */,
+				664C0E9DA0C29439E3F4773288C71BD7 /* DGEndpoint+Configuration.h in Headers */,
+				D304947D7842DA91D9CC4C30C2C94E3C /* DGEndpoint.h in Headers */,
+				EE893473CB2A214284409ECBDDCE3E94 /* DGFormat+Mapping.h in Headers */,
+				4628AB1EFF5487C7748D3B0C62C4382E /* DGFormat.h in Headers */,
+				83B6542A7AA0B7022F41B8166307A892 /* DGHTTPClient.h in Headers */,
+				C025C8A7F7C1911757FCD252D89F015F /* DGIdentifier+Mapping.h in Headers */,
+				2C9FAAE3C176B2998F95E0810C9891A4 /* DGIdentifier.h in Headers */,
+				9595040E56A98084C0BFE69B2D414D85 /* DGIdentity+Keychain.h in Headers */,
+				B771EFE6DB27C25EEDD1BEB18909378D /* DGIdentity+Mapping.h in Headers */,
+				865EB3A3539E35B54D5CA66D585CF5EF /* DGIdentity.h in Headers */,
+				DD17E4762351F7268048213A8182CE3E /* DGImage+Mapping.h in Headers */,
+				E5935E09F83A61EE6A4BBE725954BF95 /* DGImage.h in Headers */,
+				3B188BC131612F0D77C3E7ADA3CBBA71 /* DGInventory+Mapping.h in Headers */,
+				4864635BD10243DB480DC7263C11EE2C /* DGInventory.h in Headers */,
+				B9742074CEC9D144EC577EF89363E957 /* DGLabel+Mapping.h in Headers */,
+				ACA5ED5AA82032C2F4BABCE4D366636D /* DGLabel.h in Headers */,
+				687F6D75D85768EF0F9BE1C83071F5D6 /* DGLabelRelease+Mapping.h in Headers */,
+				DD19A2DBDBD72FB5D1405F18442F8F40 /* DGLabelRelease.h in Headers */,
+				10CED3DBD5E87CF95BB74B36BB5ADD97 /* DGListing+Mapping.h in Headers */,
+				81186754C43AD801678AE0E72710B80A /* DGListing.h in Headers */,
+				E893709635FF2317C27C45EB4183BD7C /* DGMapping.h in Headers */,
+				60DB79C50C574872818F164BDD46BA30 /* DGMarketplace.h in Headers */,
+				79AB2E2BA7D63D120FF3A7AC3947E785 /* DGMaster+Mapping.h in Headers */,
+				FF5F6FAB88D8CEE712120EBC998E50F4 /* DGMaster.h in Headers */,
+				594ABCAD0AE8C35BA057BFAB02DA1031 /* DGMasterVersion+Mapping.h in Headers */,
+				8603A0F6252B04457B4F4632C762B7F0 /* DGMasterVersion.h in Headers */,
+				5227165CEC73C4453E4C5824993E7682 /* DGMember+Mapping.h in Headers */,
+				F7F41DD79A1DACDE97B394B3C55F6BC2 /* DGMember.h in Headers */,
+				9EEF22B28B32E677FE56D66233686812 /* DGObject.h in Headers */,
+				6F32EE7A5B539C23C8E399207DB7BACC /* DGOperation.h in Headers */,
+				39BC7EB401B2DB26EFB0194E828DA543 /* DGOrder+Mapping.h in Headers */,
+				3BA080A7B577A28D1827012CB6465D45 /* DGOrder.h in Headers */,
+				16BB43C2F1225ED3DDC64B235448EE13 /* DGPagination+Mapping.h in Headers */,
+				6867C56FD28595CC83F81CBE59FFED1D /* DGPagination.h in Headers */,
+				A5ECFA514281C1B1E082CAE719CB6437 /* DGPrice+Mapping.h in Headers */,
+				9E59C6BEFA7842D71CE815C6B12F3CCC /* DGPrice.h in Headers */,
+				37490EDD2D1E365544FEC914FC7CF13C /* DGProfile+Mapping.h in Headers */,
+				F4F14766A0DA394E9BD6E074AAAB6262 /* DGProfile.h in Headers */,
+				D17D08234B1F85BC6330DC9D542A9660 /* DGRelease+Mapping.h in Headers */,
+				75E180AB4FBB0DC2BB883F77BF23A7E1 /* DGRelease.h in Headers */,
+				60052BFB1DA8F5120E0369B27AC3D8F3 /* DGReleaseInstance+Mapping.h in Headers */,
+				EC6DE89380581AC525B1718FC506C062 /* DGReleaseInstance.h in Headers */,
+				6CA1BA87D2AAB69B1568FF2FE67DDDBE /* DGResource.h in Headers */,
+				61096A403F5477DE2163F0EE8AD4B81C /* DGSearch+Mapping.h in Headers */,
+				EC112037445B065F54B435E5FE615ED5 /* DGSearch.h in Headers */,
+				EB0C70CDEBC5E86B3E87C525642B0CA2 /* DGTrack+Mapping.h in Headers */,
+				B24CF80EB136669063DC60487F014238 /* DGTrack.h in Headers */,
+				F3248DF2685161BEC9A94259D901C437 /* DGUser.h in Headers */,
+				998A942E5DE4705FB3072888F5D8C150 /* DGVideo+Mapping.h in Headers */,
+				415B837C83C525E95B3B3B3005E90467 /* DGVideo.h in Headers */,
+				C66E82858EF5E89E98C78F70659A172C /* DGWantlist+Mapping.h in Headers */,
+				B34620B0FFD9931B08304BDD886B69F4 /* DGWantlist.h in Headers */,
+				9215F349E251040BE72C5BBD018B669F /* DiscogsAPI-umbrella.h in Headers */,
+				1034BA46DDE5CAF016C79C1DBDFE167E /* DiscogsAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2555,9 +2555,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6FBFD89DAA6A77059A02B240290B4C5 /* Build configuration list for PBXNativeTarget "DiscogsAPI" */;
 			buildPhases = (
-				E8DE1AC6B539D0ABB8ADD7302469C5C1 /* Sources */,
+				CDAB821A8C3C4CE0320C207BBDC163F4 /* Sources */,
 				E992D5C2A7F9EF4A461495E89F9C018A /* Frameworks */,
-				6B93D7E44DB421052ACF5ABFE8F284D6 /* Headers */,
+				AFF6824AD3A994AA30A85F5275317287 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -2738,80 +2738,80 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8DE1AC6B539D0ABB8ADD7302469C5C1 /* Sources */ = {
+		CDAB821A8C3C4CE0320C207BBDC163F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25C02A5449044AE5F63EA9B0923CDEC /* AFOAuth1Client.m in Sources */,
-				1D4324438CA6C5CD809485798F8F76B1 /* DGArtist+Mapping.m in Sources */,
-				0E9C73836D7262D72ADAF1B3DE4E0C26 /* DGArtist.m in Sources */,
-				18F3A1CD0C0042E774021445434B3D05 /* DGArtistRelease+Mapping.m in Sources */,
-				F7EC411A2DA96FBBB9522EE769D21E1D /* DGArtistRelease.m in Sources */,
-				FCBCDB4BAB359439CAC2762F1ADDBC01 /* DGAuthentication.m in Sources */,
-				324BA6C3FBDBFED69CFD1418B452DC5B /* DGAuthView.m in Sources */,
-				0EA0BEF4427E81F277E9ABE146CC6EF6 /* DGCollection.m in Sources */,
-				CF96CC00A91B1789060775F8300B8CB5 /* DGCollectionField+Mapping.m in Sources */,
-				47B3B30363CAF403BE41F02456430BE4 /* DGCollectionField.m in Sources */,
-				B827F80684D0E6807BC9272E32DA3B7A /* DGCollectionFieldInstance+Mapping.m in Sources */,
-				F80DB5EF783D7F15FD55726C26F04D32 /* DGCollectionFieldInstance.m in Sources */,
-				A5B22C04E9908D12226570CA7A4E2D3B /* DGCollectionFolder+Mapping.m in Sources */,
-				AFBB286B6FAF8BD3711FCAF74BD0D7C2 /* DGCollectionFolder.m in Sources */,
-				A8EAC0961915B602ABDE12430254CB2D /* DGCommunity+Mapping.m in Sources */,
-				39F34E6A0279466AFDB1D22D83A779C5 /* DGCommunity.m in Sources */,
-				FA0CCEF625A61886934CBC3A54919850 /* DGDatabase.m in Sources */,
-				8B877213EB7F2B7D323212C5DFA6CDE6 /* DGEndpoint+Configuration.m in Sources */,
-				3DEFDD72CC2B5215DE6808242D8BA2B5 /* DGEndpoint.m in Sources */,
-				713993FF5EFF7E947CA3BBB9940807BD /* DGFormat+Mapping.m in Sources */,
-				449523075D48B8358882E004906111B2 /* DGFormat.m in Sources */,
-				CF623BB3D01F6F2DF65371A57BE19234 /* DGHTTPClient.m in Sources */,
-				6372ECA4893794262A945167CF342EF0 /* DGIdentifier+Mapping.m in Sources */,
-				83DF556CF2209EF38468039B76616031 /* DGIdentifier.m in Sources */,
-				A9428BEFC18803D6218077D3A0A934C5 /* DGIdentity+Mapping.m in Sources */,
-				D342507CB4F7BF09173BD8D9D72B6CE8 /* DGIdentity.m in Sources */,
-				5F22A80A1CA323870EBDE98A0D8E102F /* DGImage+Mapping.m in Sources */,
-				A27EAC45DC7029557315F37CD7BD1373 /* DGImage.m in Sources */,
-				570681D2AF5612B55F86204EDEE6160D /* DGInventory+Mapping.m in Sources */,
-				C0742C63D93A4477AFA43E2A0143735E /* DGInventory.m in Sources */,
-				6972C9508776995FB498FD7ED5B845A0 /* DGLabel+Mapping.m in Sources */,
-				E0EB6D0A92B5976F9F47A85D45C45939 /* DGLabel.m in Sources */,
-				F5611CED65F129280218A67DAA4FD86C /* DGLabelRelease+Mapping.m in Sources */,
-				0A9FF743D0D9BC15500E8A0AE39D46CF /* DGLabelRelease.m in Sources */,
-				D7B214C00A5BA1D56CCE56B08AE3A5AD /* DGListing+Mapping.m in Sources */,
-				F4B71DF292AAF47A6E4557950DDF9C3B /* DGListing.m in Sources */,
-				9683751652A6CF5664AECBB53EA56724 /* DGMarketplace.m in Sources */,
-				13C7396B5F9BC5A3DBCA0D653B60E488 /* DGMaster+Mapping.m in Sources */,
-				C80E9FDA79B269EFA18BC1E72D1C0380 /* DGMaster.m in Sources */,
-				64F8F75DDC8FE252FA1262ADAD441082 /* DGMasterVersion+Mapping.m in Sources */,
-				2595951889A7F5677682C122DC5339CE /* DGMasterVersion.m in Sources */,
-				1D1A803C7297BAC6B9F71BD327172263 /* DGMember+Mapping.m in Sources */,
-				71B17B66C87B2A9AB060BA5BFB301FA9 /* DGMember.m in Sources */,
-				AC69676A9974A008F732F8BF14C01104 /* DGObject.m in Sources */,
-				E54FBAA0B10CE55C2BB34C747CA342F1 /* DGOperation.m in Sources */,
-				319A733197F2D13E174C94085C1A7B01 /* DGOrder+Mapping.m in Sources */,
-				ABF856BFC9BA4788769A86836AAE3A91 /* DGOrder.m in Sources */,
-				B066A5D7DF4E48D6532789E1C1B9051F /* DGPagination+Mapping.m in Sources */,
-				D87F635BD2E86A7FF2CF08B4F4EA2900 /* DGPagination.m in Sources */,
-				2F8FAA711AC55B1B8147BC86A419BFF8 /* DGPrice+Mapping.m in Sources */,
-				CAEC67ACAACE5DB808FDE8D0B3594774 /* DGPrice.m in Sources */,
-				3BE37A14F67F0504A8629D4164E8999C /* DGProfile+Mapping.m in Sources */,
-				95AEC9473F6F996461FAF993CD0C7634 /* DGProfile.m in Sources */,
-				359F6F57A0377BC3B65CEC60222AC146 /* DGRelease+Mapping.m in Sources */,
-				DF74C756A16A50EF30EF2EFDEC9FA818 /* DGRelease.m in Sources */,
-				88579A607EE1C802064DBBBA84D8FD24 /* DGReleaseInstance+Mapping.m in Sources */,
-				8FE44B8F42F5178CDBFC6664C4354814 /* DGReleaseInstance.m in Sources */,
-				1B3A55DF335A86868B8290F8BECDD385 /* DGResource.m in Sources */,
-				A817F9E8E744FE30A00AAEF44DE1E159 /* DGSearch+Mapping.m in Sources */,
-				33D1F42674A434F06BD0BEEFC24B64E0 /* DGSearch.m in Sources */,
-				818AD8B7B4860176B13792DE7A9B1FE2 /* DGTokenStore.m in Sources */,
-				D52A93C9466D99A36070E3F374A29C2B /* DGTrack+Mapping.m in Sources */,
-				8786B399C18FE68D2CC6B67958754623 /* DGTrack.m in Sources */,
-				85A72167F4F850E5F5AF9AF223C2ADB9 /* DGUser.m in Sources */,
-				7A38E87A59C524BB1BBF802536288F6C /* DGVideo+Mapping.m in Sources */,
-				31916D7257DB86D00EFB3C56BD42634E /* DGVideo.m in Sources */,
-				ECEF0A285ED7CDF08F1ABA0CF83DFFF0 /* DGWantlist+Mapping.m in Sources */,
-				E8464CCA58217ACAD83363F3712F6C3E /* DGWantlist.m in Sources */,
-				A0873436AC82C36BAF94B605A877E9C7 /* DiscogsAPI-dummy.m in Sources */,
-				713A5D289973BECC94410A1031269CBE /* DiscogsAPI.m in Sources */,
+				E1DE49726EAA0DE3F6ED9ECC49B185FC /* AFOAuth1Client.m in Sources */,
+				65D01B5C71D56F6449AAC682A319FBC3 /* DGArtist+Mapping.m in Sources */,
+				1E3A9687F9C5926295084B87144BCB3F /* DGArtist.m in Sources */,
+				AB8EC593167B0FB5844616A9434CA9F0 /* DGArtistRelease+Mapping.m in Sources */,
+				D8EBE06FBD3823E1818F53A8CD95B157 /* DGArtistRelease.m in Sources */,
+				C44D550E6741F8646A8F1E046072B829 /* DGAuthentication.m in Sources */,
+				695A714F83310311D3FF348748EFF570 /* DGAuthView.m in Sources */,
+				C3490B9C7AB97012CE5DEFF30ECF7656 /* DGCollection.m in Sources */,
+				D677DA8ED6D5DB5713BE16672476D6B0 /* DGCollectionField+Mapping.m in Sources */,
+				7515F021A9AE9A8CB3D9D962A4E39C82 /* DGCollectionField.m in Sources */,
+				AD2F975680B019E542F636EE269EC808 /* DGCollectionFieldInstance+Mapping.m in Sources */,
+				A677D87B43FAA61AE0669A075558F706 /* DGCollectionFieldInstance.m in Sources */,
+				5B41766DC93060F23F2B134173E5E117 /* DGCollectionFolder+Mapping.m in Sources */,
+				B6C219FEFC6FB6D20DE84D03C17B0CB6 /* DGCollectionFolder.m in Sources */,
+				DABA1226858F51720EC1A2D5AA3D7A58 /* DGCommunity+Mapping.m in Sources */,
+				F91F627B67F453D7B945EDF8911103B3 /* DGCommunity.m in Sources */,
+				091CC1C69B75E2234FE166C2D4A52A85 /* DGDatabase.m in Sources */,
+				A2745977ECF1694B3A2C9AE57D0D6519 /* DGEndpoint+Configuration.m in Sources */,
+				4BFEC0297B525F865D296659221CFEF4 /* DGEndpoint.m in Sources */,
+				44B2448E31448DD38506385958684F03 /* DGFormat+Mapping.m in Sources */,
+				9F474B69EA51CC4C7DD84C032161389D /* DGFormat.m in Sources */,
+				B11CEACCB1C237E9AF4A7BCE8BAF6226 /* DGHTTPClient.m in Sources */,
+				44564DB3841D5CC9725F90643C369729 /* DGIdentifier+Mapping.m in Sources */,
+				36616AE7B2956AD68F9BCBD8E7157111 /* DGIdentifier.m in Sources */,
+				101AC8F26C3964CF24AF8EE522525062 /* DGIdentity+Keychain.m in Sources */,
+				5D6EA44FB47011C1DE620D4C670C79D4 /* DGIdentity+Mapping.m in Sources */,
+				D0A53F367C123AC9028FBB11182D8100 /* DGIdentity.m in Sources */,
+				E33E4FDD7157C27591B3A0998DAED46C /* DGImage+Mapping.m in Sources */,
+				19D535D76FD6E28E11A9C60C656C8F7C /* DGImage.m in Sources */,
+				7DB7758375FEDD0EAA968D68E353281E /* DGInventory+Mapping.m in Sources */,
+				7760469D4E1966BA311CBF3D6C3DF13C /* DGInventory.m in Sources */,
+				F46AE6EA9F67FCC7C51523C652F4A8CF /* DGLabel+Mapping.m in Sources */,
+				658F9ED6A55094D371020C57D10D7355 /* DGLabel.m in Sources */,
+				037DA491A91B471448AE07A79BF8F5F1 /* DGLabelRelease+Mapping.m in Sources */,
+				3ECF73B1CEC64300C6CD6B522E6F99BE /* DGLabelRelease.m in Sources */,
+				49F607BEB77BEE3F316C8F186D0E63A8 /* DGListing+Mapping.m in Sources */,
+				BD934E9FE73C6B2CBCE1D854F98FECB2 /* DGListing.m in Sources */,
+				EA6047070AB4C2A5E6ED6CC517087171 /* DGMarketplace.m in Sources */,
+				E12816948FA83EAF2F0160603C8A8962 /* DGMaster+Mapping.m in Sources */,
+				8759C0E45B35253F53F9C4764E7DEFE6 /* DGMaster.m in Sources */,
+				850BDD28C3D77243C36433F953EB069D /* DGMasterVersion+Mapping.m in Sources */,
+				3B95301A920B70B5F7C8641017B90A3D /* DGMasterVersion.m in Sources */,
+				2B6D6113B2B0CAEC9885FC072BF5D89C /* DGMember+Mapping.m in Sources */,
+				87FC3727DFB4E8EF8CD5E28D5753D1BC /* DGMember.m in Sources */,
+				E7AB7028C8E2E22773A29EEABF539F5E /* DGObject.m in Sources */,
+				34523C8A2E78C1A5EE61FC53BA86AD80 /* DGOperation.m in Sources */,
+				0018EE1DC85527E62A4672472D98783D /* DGOrder+Mapping.m in Sources */,
+				7326A42CFFBE7AB5883D08CC24395A25 /* DGOrder.m in Sources */,
+				9FCE689DA4DB6D3612A0C169BD2E9549 /* DGPagination+Mapping.m in Sources */,
+				9BC2A1E15E6CE2B6AFF86ACBF9339A04 /* DGPagination.m in Sources */,
+				DCAC4F32699EC0F122B5EBDA842C9467 /* DGPrice+Mapping.m in Sources */,
+				F3CD3F78BA071D91AC3AF8EF34713C3C /* DGPrice.m in Sources */,
+				26CE4DE0B6E96B16A189A23F99ED7235 /* DGProfile+Mapping.m in Sources */,
+				69F988CD418891E1DB41F1F8AFAB08EB /* DGProfile.m in Sources */,
+				FA9FA2F6F5F4A56FDE93757CC8D5332E /* DGRelease+Mapping.m in Sources */,
+				69A34335678A19DA807F42955C10AA7D /* DGRelease.m in Sources */,
+				8E5145993E272AAD596BB3413D880ED9 /* DGReleaseInstance+Mapping.m in Sources */,
+				96B1C2BF83E404E21BBEDB8755FAC6E4 /* DGReleaseInstance.m in Sources */,
+				E8DA626BC9D04FE58ECFA6746D312E2D /* DGResource.m in Sources */,
+				A023FA2FFD4329DE34FBA737CFE07E3B /* DGSearch+Mapping.m in Sources */,
+				8DF14D974A98E9404F51A0CF5B5D6F4A /* DGSearch.m in Sources */,
+				FC5570A414A9E9FC7396D42691DF0ECA /* DGTrack+Mapping.m in Sources */,
+				0751AD4170A9EBA410645D60C498A423 /* DGTrack.m in Sources */,
+				3BD2C630D7C60168A01CFBF17403FD30 /* DGUser.m in Sources */,
+				657EEC5AC46DE14EF60B3712E2E78611 /* DGVideo+Mapping.m in Sources */,
+				7DE189A8F41E92F2243D5FD12A980FC0 /* DGVideo.m in Sources */,
+				C7B4FB2B713C0B94A694C338D15FB344 /* DGWantlist+Mapping.m in Sources */,
+				78CC94CEDC952E62E99EB7D5C83E643B /* DGWantlist.m in Sources */,
+				0C7B4CD16BFDF4FD59C354AC8BD95BC1 /* DiscogsAPI-dummy.m in Sources */,
+				CAA2AFD9F2892D00A9086F22408AFA3A /* DiscogsAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

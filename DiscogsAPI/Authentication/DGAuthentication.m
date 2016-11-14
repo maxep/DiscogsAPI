@@ -24,9 +24,9 @@
 #import "DGAuthentication.h"
 #import "DGHTTPClient.h"
 
-#import "DGTokenStore.h"
 #import "DGAuthView.h"
 
+#import "DGIdentity+Keychain.h"
 #import "DGIdentity+Mapping.h"
 
 static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
@@ -37,67 +37,73 @@ NSString * const DGApplicationLaunchedWithURLNotification = @"kAFApplicationLaun
 NSString * const DGApplicationLaunchOptionsURLKey = @"UIApplicationLaunchOptionsURLKey";
 NSString * const DGCallback = @"discogsapi://success";
 
-static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
+static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIdentifier";
 
 @interface DGAuthentication ()
-@property (nonatomic,strong) NSString *consumerKey;
-@property (nonatomic,strong) NSString *consumerSecret;
-@property (nonatomic,strong) NSString *accessToken;
+@property (nonatomic, strong) DGHTTPClient *HTTPClient;
+@property (nonatomic, strong) DGIdentity *identity;
+@property (nonatomic, strong) NSString *consumerKey;
+@property (nonatomic, strong) NSString *consumerSecret;
+@property (nonatomic, strong) NSString *accessToken;
 @end
 
-@implementation DGAuthentication {
-    DGHTTPClient *_HTTPClient;
-}
+@implementation DGAuthentication
 
-- (void)configureManager:(RKObjectManager *)objectManager {
+- (void)configureManager:(RKObjectManager *)manager {
     
     self.consumerKey    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
     self.consumerSecret = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
     self.accessToken    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsAccessToken];
     
-    objectManager.HTTPClient = self.HTTPClient;
+    manager.HTTPClient = self.HTTPClient;
     
     //User Identity
-    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
+    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
 }
 
 - (void)identityWithSuccess:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
     DGIdentity *identity = [DGIdentity new];
     
-    DGOperation *operation = [self.manager operationWithRequest:identity method:RKRequestMethodGET responseClass:[DGIdentity class]];
-    [operation setCompletionBlockWithSuccess:success failure:failure];
+    DGOperation<DGIdentity *> *operation = [self.manager operationWithRequest:identity method:RKRequestMethodGET responseClass:[DGIdentity class]];
+    [operation setCompletionBlockWithSuccess:^(DGIdentity * _Nonnull response) {
+        
+        response.token = self.HTTPClient.accessToken.key;
+        response.secret = self.HTTPClient.accessToken.secret;
+        self.identity = response;
+        
+        [DGIdentity storeIdentity:response withIdentifier:kDGIdentityKeychainIdentifier];
+        success(response);
+    } failure:failure];
     
     [self.queue addOperation:operation];
 }
 
-- (void)authenticateWithCallback:(NSURL *)callback success:(void (^)())success failure:(void (^)(NSError *error))failure {
+- (void)authenticateWithCallback:(NSURL *)callback success:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
     
     if (self.isReachable) {
         
-        [self identityWithSuccess:^(DGIdentity * _Nonnull identity) {
-            success();
-        } failure:^(NSError *error) {
+        [self identityWithSuccess:success failure:^(NSError *error) {
             
             if (error.code == 401) {
-                [self removeAccountCredential];
+                
+                [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
+                    [self identityWithSuccess:success failure:failure];
+                } failure:failure];
+                
+            } else if (failure) {
+                failure(error);
             }
             
-            [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
-                [DGTokenStore storeCredential:accessToken withIdentifier:kDGOAuth1CredentialDiscogsAccount];
-                success();
-            } failure:^(NSError *error) {
-                failure(error);
-            }];
-            
         }];
-    } else if (self.HTTPClient.accessToken) {
-        success();
+        
+    } else if (self.identity) {
+        success(self.identity);
     } else if (failure) {
         failure([NSError errorWithCode:NSURLErrorNotConnectedToInternet description:@"User not athenticated yet but no internet connection"]);
     }
 }
 
-- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)())success failure:(void (^)(NSError *error))failure {
+- (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
     
     NSURL *callback = [NSURL URLWithString:DGCallback];
     
@@ -109,27 +115,33 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     [self authenticateWithCallback:callback success:success failure:failure];
 }
 
-- (void)removeAccountCredential {
-    [DGTokenStore deleteCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
-    self.HTTPClient.accessToken = nil;
-}
-
 #pragma mark Properties
+
+@synthesize identity = _identity;
+
+- (DGIdentity *)identity {
+    if (!_identity) {
+        _identity = [DGIdentity retrieveIdentityWithIdentifier:kDGIdentityKeychainIdentifier];
+    }
+    return _identity;
+}
 
 - (DGHTTPClient *)HTTPClient {
     
     if (!_HTTPClient) {
         if (self.consumerKey && self.consumerSecret) {
-            _HTTPClient = [DGHTTPClient clientWithConsumerKey:self.consumerKey
-                                               consumerSecret:self.consumerSecret];
+            _HTTPClient = [DGHTTPClient clientWithConsumerKey:self.consumerKey consumerSecret:self.consumerSecret];
         } else if(self.accessToken) {
             _HTTPClient = [DGHTTPClient clientWithAccessToken:self.accessToken];
         } else {
             _HTTPClient = [DGHTTPClient new];
         }
         
+        if (self.identity) {
+            _HTTPClient.accessToken = [[AFOAuth1Token alloc] initWithKey:self.identity.token secret:self.identity.secret session:nil expiration:nil renewable:NO];
+        }
+        
         _HTTPClient.signatureMethod = AFPlainTextSignatureMethod;
-        _HTTPClient.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
     }
     return _HTTPClient;
 }

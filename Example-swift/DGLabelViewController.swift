@@ -35,7 +35,7 @@ class DGLabelViewController: DGViewController {
         super.viewDidLoad()
         
         // Get label details
-        Discogs.api().database.getLabel(self.objectID, success: { (label) in
+        Discogs.api.database.getLabel(self.objectID, success: { (label) in
             
             self.titleLabel.text    = label.name
             self.detailLabel.text   = label.contactInfo
@@ -43,13 +43,13 @@ class DGLabelViewController: DGViewController {
             
             // Get a Discogs image
             if let image = label.images.first {
-                Discogs.api().resource.getImage(image.resourceURL!, success: { (image) in
+                Discogs.api.resource.getImage(image.resourceURL!, success: { (image) in
                     self.coverView?.image = image
                 })
             }
             
         }) { (error) in
-                print(error)
+                print(error ?? "Error")
         }
 
         // Get label release
@@ -57,10 +57,10 @@ class DGLabelViewController: DGViewController {
         request.labelID = objectID
         request.pagination.perPage = 25
         
-        Discogs.api().database.getLabelReleases(request, success: { (response) in
+        Discogs.api.database.getLabelReleases(request, success: { (response) in
             self.response = response
         }) { (error) in
-            print(error)
+            print(error ?? "Error")
         }
     }
 
@@ -105,7 +105,7 @@ class DGLabelViewController: DGViewController {
         cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
-        Discogs.api().resource.getImage(result.thumb!, success: { (image) in
+        Discogs.api.resource.getImage(result.thumb!, success: { (image) in
             cell.imageView?.image = image
         })
         
