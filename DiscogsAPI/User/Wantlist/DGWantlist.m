@@ -96,7 +96,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGWantlistResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)addToWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(void (^)(NSError *error))failure {
@@ -104,7 +104,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPUT responseClass:[DGWant class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)editReleaseInWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(void (^)(NSError *error))failure {
@@ -112,7 +112,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST responseClass:[DGWant class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
@@ -121,7 +121,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodDELETE];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 @end

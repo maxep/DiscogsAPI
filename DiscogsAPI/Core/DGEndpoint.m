@@ -22,6 +22,17 @@
 
 #import "DGEndpoint+Configuration.h"
 
+@interface DGEndpoint ()
+
+@end
+
 @implementation DGEndpoint
+
+- (NSOperationQueue *)queue {
+    if (!_queue) {
+        _queue = [[NSOperationQueue alloc] init];
+    }
+    return _queue;
+}
 
 @end

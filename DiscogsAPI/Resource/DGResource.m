@@ -27,7 +27,7 @@
 
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
     RKObjectRequestOperation *operation = (RKObjectRequestOperation *)[self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {

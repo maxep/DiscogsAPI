@@ -78,10 +78,6 @@ DGMediaType StringDGMediaType(NSString *str) {
 
 #pragma mark Public Methods
 
-- (void)cancelAllOperations {
-    [self.manager.operationQueue cancelAllOperations];
-}
-
 - (void)isAuthenticated:(void (^)(BOOL success))success {
     
     [self.authentication identityWithSuccess:^(DGIdentity * _Nonnull identity) {

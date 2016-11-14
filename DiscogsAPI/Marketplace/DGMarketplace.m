@@ -61,7 +61,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGInventoryResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getListing:(DGListingRequest *)request success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure {
@@ -69,7 +69,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGListing class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
 
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)editListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure {
@@ -77,7 +77,7 @@
     DGOperation *operation = [self.manager operationWithRequest:listing method:RKRequestMethodPOST];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)createListing:(DGListing *)listing success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure {
@@ -92,7 +92,7 @@
         success(listing);
     } failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure {
@@ -100,7 +100,7 @@
     DGOperation *operation = [self.manager operationWithRequest:listing method:RKRequestMethodDELETE];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getOrder:(NSNumber *)orderID success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure {
@@ -111,7 +111,7 @@
     DGOperation *operation = [self.manager operationWithRequest:order method:RKRequestMethodGET responseClass:[DGOrder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getOrders:(DGListOrdersRequest *)request success:(void (^)(DGListOrdersResponse *response))success failure:(nullable DGFailureBlock)failure {
@@ -119,7 +119,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGListOrdersResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)editOrder:(DGOrder *)order success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure {
@@ -127,7 +127,7 @@
     DGOperation *operation = [self.manager operationWithRequest:order method:RKRequestMethodPOST responseClass:[DGOrder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(nullable DGFailureBlock)failure {
@@ -138,7 +138,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGPriceSuggestionsResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 @end

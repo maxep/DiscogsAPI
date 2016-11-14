@@ -67,7 +67,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     DGOperation *operation = [self.manager operationWithRequest:identity method:RKRequestMethodGET responseClass:[DGIdentity class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)authenticateWithCallback:(NSURL *)callback success:(void (^)())success failure:(void (^)(NSError *error))failure {

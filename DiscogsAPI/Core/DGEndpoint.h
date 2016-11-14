@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef void(^DGFailureBlock)(NSError * _Nullable error);
 
+@property (nonatomic, strong) NSOperationQueue *queue;
+
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 

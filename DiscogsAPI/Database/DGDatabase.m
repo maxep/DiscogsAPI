@@ -60,7 +60,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGSearchResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
 
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getArtist:(NSNumber *)artistID success:(void (^)(DGArtist *artist))success failure:(void (^)(NSError *error))failure {
@@ -71,7 +71,7 @@
     DGOperation *operation = [self.manager operationWithRequest:artist method:RKRequestMethodGET responseClass:[DGArtist class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getArtistReleases:(DGArtistReleaseRequest *)request success:(void (^)(DGArtistReleaseResponse *response))success failure:(void (^)(NSError *error))failure {
@@ -79,7 +79,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGArtistReleaseResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getRelease:(NSNumber *)releaseID success:(void (^)(DGRelease *release))success failure:(void (^)(NSError *error))failure {
@@ -90,7 +90,7 @@
     DGOperation *operation = [self.manager operationWithRequest:release method:RKRequestMethodGET responseClass:[DGRelease class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getMaster:(NSNumber *)masterID success:(void (^)(DGMaster *master))success failure:(void (^)(NSError *error))failure {
@@ -101,7 +101,7 @@
     DGOperation *operation = [self.manager operationWithRequest:master method:RKRequestMethodGET responseClass:[DGMaster class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getMasterVersion:(DGMasterVersionRequest *)request success:(void (^)(DGMasterVersionResponse *response))success failure:(void (^)(NSError *error))failure {
@@ -109,7 +109,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGMasterVersionResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
 
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getLabel:(NSNumber *)labelID success:(void (^)(DGLabel *label))success failure:(void (^)(NSError *error))failure {
@@ -120,7 +120,7 @@
     DGOperation *operation = [self.manager operationWithRequest:label method:RKRequestMethodGET responseClass:[DGLabel class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getLabelReleases:(DGLabelReleasesRequest *)request success:(void (^)(DGLabelReleasesResponse *response))success failure:(void (^)(NSError *error))failure {
@@ -128,7 +128,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGLabelReleasesResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 @end

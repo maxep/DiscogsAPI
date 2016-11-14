@@ -75,7 +75,7 @@
         if (failure) failure(error);
     }];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(void (^)(NSError *error))failure {
@@ -83,7 +83,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGCollectionFolder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)createCollectionFolder:(DGCreateCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(void (^)(NSError *error))failure {
@@ -91,7 +91,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST responseClass:[DGCollectionFolder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)editCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)(DGCollectionFolder *folder))success failure:(void (^)(NSError *error))failure {
@@ -99,7 +99,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST responseClass:[DGCollectionFolder class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)deleteCollectionFolder:(DGCollectionFolderRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
@@ -107,7 +107,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodDELETE];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getCollectionReleases:(DGCollectionReleasesRequest *)request success:(void (^)(DGCollectionReleasesResponse *response))success failure:(void (^)(NSError *error))failure {
@@ -115,7 +115,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGCollectionReleasesResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)addToCollectionFolder:(DGAddToCollectionFolderRequest *)request success:(void (^)(DGAddToCollectionFolderResponse *response))success failure:(void (^)(NSError *error))failure {
@@ -123,7 +123,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST responseClass:[DGAddToCollectionFolderResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)changeRatingOfRelease:(DGChangeRatingOfReleaseRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
@@ -131,7 +131,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(nonnull void (^)(DGReleaseInstance *response))success failure:(void (^)(NSError *error))failure {
@@ -139,7 +139,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGReleaseInstance class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)deleteInstanceFromFolder:(DGReleaseInstanceRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
@@ -147,7 +147,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodDELETE];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)getCollectionFields:(NSString *)userName success:(void (^)(NSArray<DGCollectionField *> *fields))success failure:(void (^)(NSError *error))failure {
@@ -166,7 +166,7 @@
         if (failure) failure(error);
     }];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 - (void)editFieldsInstance:(DGEditFieldsInstanceRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
@@ -174,7 +174,7 @@
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.manager enqueueObjectRequestOperation:operation];
+    [self.queue addOperation:operation];
 }
 
 @end
