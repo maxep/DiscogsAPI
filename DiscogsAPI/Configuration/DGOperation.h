@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface DGOperation<DGResponseType> : RKObjectRequestOperation
 
+@property (nonatomic, readonly) DGResponseType response;
+
 /**
  Creates and initializers an operation with the given URL request and map to the response class.
 

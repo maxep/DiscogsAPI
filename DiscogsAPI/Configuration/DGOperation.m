@@ -48,17 +48,16 @@ NSString * const DGErrorDomain = @"com.discogs.api";
 
 - (void)setCompletionBlockWithSuccess:(void (^)(id))success failure:(void (^)(NSError *))failure {
     
-    __unsafe_unretained typeof(self) weakSelf = self;
-    [super setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    __weak typeof(self) weakSelf = self;
+    [super setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+        __typeof(self) const strongSelf = weakSelf;
         
-        if (!weakSelf->_responseClass) {
-            success(nil);
-            
-        } else if ([mappingResult.firstObject isKindOfClass:weakSelf->_responseClass]) {
-            success(mappingResult.firstObject);
-            
+        NSError *error;
+        [strongSelf validateResult:result error:&error];
+        if (!error) {
+            success(strongSelf.response);
         } else if (failure) {
-            failure([NSError errorWithCode:NSURLErrorCannotParseResponse description:@"Bad response from Discogs server"]);
+            failure(error);
         }
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -68,6 +67,28 @@ NSString * const DGErrorDomain = @"com.discogs.api";
             failure([NSError errorWithCode:code description:description]);
         }
     }];
+}
+
+- (void)validateResult:(RKMappingResult *)result error:(NSError **)error {
+    if (!self->_responseClass) {
+        return;
+    }
+    
+    id object = result.dictionary[[NSNull null]];
+    if (object) {
+        if ([object isKindOfClass:_responseClass]) {
+            _response = object;
+        }
+        return;
+    }
+    
+    NSArray *array = result.array;
+    if (array.count < 0 || [array.firstObject isKindOfClass:_responseClass]) {
+        _response = array;
+        return;
+    }
+    
+    *error = [NSError errorWithCode:NSURLErrorCannotParseResponse description:@"Bad response from Discogs server"];
 }
 
 @end
