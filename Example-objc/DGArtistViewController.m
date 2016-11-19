@@ -24,7 +24,7 @@
 #import <DiscogsAPI/DiscogsAPI.h>
 
 @interface DGArtistViewController ()
-@property (nonatomic, strong) DGArtistReleaseResponse *response;
+@property (nonatomic, strong) DGArtistReleasesResponse *response;
 @end
 
 @implementation DGArtistViewController
@@ -48,11 +48,11 @@
     }];
     
     // Get artist release
-    DGArtistReleaseRequest *request = [DGArtistReleaseRequest new];
+    DGArtistReleasesRequest *request = [DGArtistReleasesRequest new];
     request.artistID = self.objectID;
     request.pagination.perPage = @25;
     
-    [Discogs.api.database getArtistReleases:request success:^(DGArtistReleaseResponse * _Nonnull response) {
+    [Discogs.api.database getArtistReleases:request success:^(DGArtistReleasesResponse * _Nonnull response) {
         self.response = response;
     } failure:^(NSError * _Nullable error) {
         NSLog(@"Error : %@", error);
@@ -64,7 +64,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setResponse:(DGArtistReleaseResponse *)response {
+- (void)setResponse:(DGArtistReleasesResponse *)response {
     _response = response;
     [self.tableView reloadData];
 }

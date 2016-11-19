@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated artist releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getArtistReleases:(DGArtistReleaseRequest *)request success:(void (^)(DGArtistReleaseResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getArtistReleases:(DGArtistReleasesRequest *)request success:(void (^)(DGArtistReleasesResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 /**
  Gets a release from Discogs database.
@@ -109,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated master releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getMasterVersion:(DGMasterVersionRequest *)request success:(void (^)(DGMasterVersionResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getMasterVersion:(DGMasterVersionsRequest *)request success:(void (^)(DGMasterVersionsResponse *response))success failure:(nullable DGFailureBlock)failure;
 
 @end
 

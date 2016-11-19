@@ -41,14 +41,14 @@
     
     //Artist
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGArtist class] pathPattern:@"artists/:ID" method:RKRequestMethodGET]];
-    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGArtistReleaseRequest class] pathPattern:@"artists/:artistID/releases" method:RKRequestMethodGET]];
+    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGArtistReleasesRequest class] pathPattern:@"artists/:artistID/releases" method:RKRequestMethodGET]];
     
     //Release
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGRelease class] pathPattern:@"releases/:ID" method:RKRequestMethodGET]];
     
     //Master
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGMaster class] pathPattern:@"masters/:ID" method:RKRequestMethodGET]];
-    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGMasterVersionRequest class] pathPattern:@"masters/:masterID/versions" method:RKRequestMethodGET]];
+    [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGMasterVersionsRequest class] pathPattern:@"masters/:masterID/versions" method:RKRequestMethodGET]];
     
     //Label
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGLabel class] pathPattern:@"labels/:ID" method:RKRequestMethodGET]];
@@ -74,9 +74,9 @@
     [self.queue addOperation:operation];
 }
 
-- (void)getArtistReleases:(DGArtistReleaseRequest *)request success:(void (^)(DGArtistReleaseResponse *response))success failure:(void (^)(NSError *error))failure {
+- (void)getArtistReleases:(DGArtistReleasesRequest *)request success:(void (^)(DGArtistReleasesResponse *response))success failure:(void (^)(NSError *error))failure {
     
-    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGArtistReleaseResponse class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGArtistReleasesResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.queue addOperation:operation];
@@ -104,9 +104,9 @@
     [self.queue addOperation:operation];
 }
 
-- (void)getMasterVersion:(DGMasterVersionRequest *)request success:(void (^)(DGMasterVersionResponse *response))success failure:(void (^)(NSError *error))failure {
+- (void)getMasterVersion:(DGMasterVersionsRequest *)request success:(void (^)(DGMasterVersionsResponse *response))success failure:(void (^)(NSError *error))failure {
     
-    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGMasterVersionResponse class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGMasterVersionsResponse class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
 
     [self.queue addOperation:operation];

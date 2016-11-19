@@ -25,7 +25,7 @@ import DiscogsAPI
 
 class DGArtistViewController: DGViewController {
     
-    fileprivate var response : DGArtistReleaseResponse! {
+    fileprivate var response : DGArtistReleasesResponse! {
         didSet {
             tableView.reloadData()
         }
@@ -56,7 +56,7 @@ class DGArtistViewController: DGViewController {
         }
 
         // Get artist release
-        let request = DGArtistReleaseRequest()
+        let request = DGArtistReleasesRequest()
         request.artistID = self.objectID
         request.pagination.perPage = 25
         

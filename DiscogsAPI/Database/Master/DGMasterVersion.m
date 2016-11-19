@@ -27,7 +27,7 @@
 
 @end
 
-@implementation DGMasterVersionRequest
+@implementation DGMasterVersionsRequest
 
 - (instancetype)init {
     self = [super init];
@@ -40,7 +40,7 @@
 
 @end
 
-@implementation DGMasterVersionResponse
+@implementation DGMasterVersionsResponse
 
 @synthesize pagination;
 
@@ -54,7 +54,7 @@
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
-    [self.pagination loadNextPageWithResponseClass:[DGMasterVersionResponse class] success:^(DGMasterVersionResponse *response) {
+    [self.pagination loadNextPageWithResponseClass:[DGMasterVersionsResponse class] success:^(DGMasterVersionsResponse *response) {
         self.pagination = response.pagination;
         self.versions = [self.versions arrayByAddingObjectsFromArray:response.versions];
         success();

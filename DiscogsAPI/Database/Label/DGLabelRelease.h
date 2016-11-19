@@ -41,15 +41,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/**
+ Label's releases paginated request.
+ */
 @interface DGLabelReleasesRequest : NSObject
 
+/**
+ The request pagination parameters.
+ */
 @property (nonatomic, strong) DGPagination *pagination;
+
+/**
+ Requested label ID.
+ */
 @property (nonatomic, strong) NSNumber *labelID;
 
 @end
 
+/**
+ The paginated labels releases response.
+ */
 @interface DGLabelReleasesResponse : NSObject <DGPaginated>
 
+/**
+ The label's releases requested.
+ */
 @property (nonatomic, strong) NSArray<DGLabelRelease *> *releases;
 
 @end

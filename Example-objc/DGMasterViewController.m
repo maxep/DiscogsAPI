@@ -24,7 +24,7 @@
 #import <DiscogsAPI/DiscogsAPI.h>
 
 @interface DGMasterViewController ()
-@property (nonatomic, strong) DGMasterVersionResponse *response;
+@property (nonatomic, strong) DGMasterVersionsResponse *response;
 @end
 
 @implementation DGMasterViewController
@@ -49,11 +49,11 @@
     }];
     
     // Get master versions
-    DGMasterVersionRequest *request = [DGMasterVersionRequest new];
+    DGMasterVersionsRequest *request = [DGMasterVersionsRequest new];
     request.masterID = self.objectID;
     request.pagination.perPage = @25;
     
-    [Discogs.api .database getMasterVersion:request success:^(DGMasterVersionResponse * _Nonnull response) {
+    [Discogs.api .database getMasterVersion:request success:^(DGMasterVersionsResponse * _Nonnull response) {
         self.response = response;
     } failure:^(NSError * _Nullable error) {
         NSLog(@"Error : %@", error);
@@ -65,7 +65,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setResponse:(DGMasterVersionResponse *)response {
+- (void)setResponse:(DGMasterVersionsResponse *)response {
     _response = response;
     [self.tableView reloadData];
 }

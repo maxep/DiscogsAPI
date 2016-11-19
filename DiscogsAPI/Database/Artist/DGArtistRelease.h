@@ -70,16 +70,28 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Artist releases and masters request. 
  */
-@interface DGArtistReleaseRequest : NSObject
+@interface DGArtistReleasesRequest : NSObject
 
+/**
+ The request pagination parameters.
+ */
 @property (nonatomic, strong) DGPagination *pagination;
 
+/**
+  Artist id to request.
+ */
 @property (nonatomic, strong) NSNumber *artistID;
 
 @end
 
-@interface DGArtistReleaseResponse : NSObject <DGPaginated>
+/**
+ The paginated artist releases response.
+ */
+@interface DGArtistReleasesResponse : NSObject <DGPaginated>
 
+/**
+ The artist's releases requested.
+ */
 @property (nonatomic, strong) NSArray<DGArtistRelease *> *releases;
 
 @end

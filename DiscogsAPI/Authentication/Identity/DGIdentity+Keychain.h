@@ -11,6 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ DGIdentity protocol to store identity into keychain.
+ */
 @interface DGIdentity (Keychain) <NSSecureCoding, NSCopying>
 
 /**

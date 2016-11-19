@@ -31,15 +31,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface DGMasterVersionRequest : NSObject
+/**
+ The master versions request.
+ */
+@interface DGMasterVersionsRequest : NSObject
 
-@property (nonatomic, strong) DGPagination  *pagination;
-@property (nonatomic, strong) NSNumber      *masterID;
+/**
+ The request pagination parameters.
+ */
+@property (nonatomic, strong) DGPagination *pagination;
+
+/**
+ Requested master ID.
+ */
+@property (nonatomic, strong) NSNumber *masterID;
 
 @end
 
-@interface DGMasterVersionResponse : NSObject <DGPaginated>
+/**
+ The paginated master versions response.
+ */
+@interface DGMasterVersionsResponse : NSObject <DGPaginated>
 
+/**
+ The master's versions requested.
+ */
 @property (nonatomic, strong) NSArray<DGMasterVersion *> *versions;
 
 @end

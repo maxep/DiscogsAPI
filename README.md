@@ -112,12 +112,12 @@ The following examples shows how to access Discogs database objects through the 
 ##### Master Release Versions
 
 ```objective-c
-    DGMasterVersionRequest *request = [DGMasterVersionRequest new];
+    DGMasterVersionsRequest *request = [DGMasterVersionsRequest new];
     request.masterID = @1000;
     request.pagination.page = @3;
     request.pagination.perPage = @25;
 
-    [Discogs.api.database getMasterVersion:request success:^(DGMasterVersionResponse *response) {
+    [Discogs.api.database getMasterVersion:request success:^(DGMasterVersionsResponse *response) {
         NSLog(@"Versions: %@", response.versions);
     } failure:^(NSError *error) {
         NSLog(@"Error: %@", error);
@@ -135,12 +135,12 @@ The following examples shows how to access Discogs database objects through the 
 ##### Artist Releases
 
 ```objective-c
-    DGArtistReleaseRequest *request = [DGArtistReleaseRequest new];
+    DGArtistReleasesRequest *request = [DGArtistReleasesRequest new];
     request.artistID = @108713;
     request.pagination.page = @3;
     request.pagination.perPage = @25;
     
-    [Discogs.api.database getArtistReleases:request success:^(DGArtistReleaseResponse *response) {
+    [Discogs.api.database getArtistReleases:request success:^(DGArtistReleasesResponse *response) {
         NSLog(@"Releases: %@", response.releases);
     } failure:^(NSError *error) {
         NSLog(@"Error: %@", error);

@@ -25,7 +25,7 @@ import DiscogsAPI
 
 class DGMasterViewController: DGViewController {
     
-    fileprivate var response : DGMasterVersionResponse! {
+    fileprivate var response : DGMasterVersionsResponse! {
         didSet {
             tableView.reloadData()
         }
@@ -54,7 +54,7 @@ class DGMasterViewController: DGViewController {
         }
         
         // Get master versions
-        let request = DGMasterVersionRequest()
+        let request = DGMasterVersionsRequest()
         request.masterID = self.objectID
         request.pagination.perPage = 25
         

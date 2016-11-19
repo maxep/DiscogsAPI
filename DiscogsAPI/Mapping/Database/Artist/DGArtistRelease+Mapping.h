@@ -27,10 +27,10 @@
 
 @end
 
-@interface DGArtistReleaseRequest (Mapping) <DGRequestObject>
+@interface DGArtistReleasesRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGArtistReleaseResponse (Mapping) <DGResponseObject>
+@interface DGArtistReleasesResponse (Mapping) <DGResponseObject>
 
 @end

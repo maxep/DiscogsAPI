@@ -27,10 +27,10 @@
 
 @end
 
-@interface DGMasterVersionRequest (Mapping) <DGRequestObject>
+@interface DGMasterVersionsRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGMasterVersionResponse (Mapping) <DGResponseObject>
+@interface DGMasterVersionsResponse (Mapping) <DGResponseObject>
 
 @end

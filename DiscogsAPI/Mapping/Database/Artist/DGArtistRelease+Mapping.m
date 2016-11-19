@@ -48,7 +48,7 @@
 
 @end
 
-@implementation DGArtistReleaseRequest (Mapping)
+@implementation DGArtistReleasesRequest (Mapping)
 
 - (NSDictionary *)parameters {
     return self.pagination.parameters;
@@ -56,10 +56,10 @@
 
 @end
 
-@implementation DGArtistReleaseResponse (Mapping)
+@implementation DGArtistReleasesResponse (Mapping)
 
 + (RKResponseDescriptor*) responseDescriptor {
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGArtistReleaseResponse class]];
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGArtistReleasesResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
     

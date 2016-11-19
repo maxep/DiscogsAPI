@@ -134,7 +134,7 @@
                                                   @"catno"          : @"catno",
                                                   @"year"           : @"year",
                                                   @"genre"          : @"genre",
-                                                  @"resource_url"   : @"resourceUrl",
+                                                  @"resource_url"   : @"resourceURL",
                                                   @"type"           : @"type",
                                                   @"id"             : @"ID"
                                                   }

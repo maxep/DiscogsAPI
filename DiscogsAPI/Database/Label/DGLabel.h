@@ -26,15 +26,49 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class DGImage;
 
+/**
+ Discogs Label description.
+ */
 @interface DGLabel : DGObject
 
+/**
+ The profile.
+ */
 @property (nonatomic, strong, nullable) NSString *profile;
+
+/**
+ Releases URL.
+ */
 @property (nonatomic, strong, nullable) NSString *releasesURL;
+
+/**
+ Label's name.
+ */
 @property (nonatomic, strong, nullable) NSString *name;
+
+/**
+ Contact infos.
+ */
 @property (nonatomic, strong, nullable) NSString *contactInfo;
+
+/**
+ Sublabels list.
+ */
 @property (nonatomic, strong) NSArray<DGLabel *> *subLabels;
+
+/**
+ Label's URLs.
+ */
 @property (nonatomic, strong) NSArray<NSString *> *urls;
+
+/**
+ Label's image resources.
+ */
 @property (nonatomic, strong) NSArray<DGImage *> *images;
+
+/**
+ Data quality.
+ */
 @property (nonatomic, strong, nullable) NSString *dataQuality;
 
 @end

@@ -27,7 +27,7 @@
 
 @end
 
-@implementation DGArtistReleaseRequest
+@implementation DGArtistReleasesRequest
 
 - (id)init {
     self = [super init];
@@ -39,13 +39,13 @@
 
 @end
 
-@implementation DGArtistReleaseResponse
+@implementation DGArtistReleasesResponse
 
 @synthesize pagination;
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
-    [self.pagination loadNextPageWithResponseClass:[DGArtistReleaseResponse class] success:^(DGArtistReleaseResponse *response) {
+    [self.pagination loadNextPageWithResponseClass:[DGArtistReleasesResponse class] success:^(DGArtistReleasesResponse *response) {
         self.pagination = response.pagination;
         self.releases = [self.releases arrayByAddingObjectsFromArray:response.releases];
         success();

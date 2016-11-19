@@ -52,9 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Abstract method to configure the manager.
 
- @param objectManager The manager to configure.
+ @param manager The manager to configure.
  */
-- (void)configureManager:(RKObjectManager *)objectManager;
+- (void)configureManager:(RKObjectManager *)manager;
 
 @end
 
