@@ -7,19 +7,18 @@ end
 
 target 'DiscogsAPI' do
     podspec
+end
+
+target 'DiscogsAPITests' do
+    import_pods
     pod 'RestKit/Testing', '~> 0.27.0'
-    
-    target 'DiscogsAPITests' do
-        inherit! :search_paths
-    end
-    
-    target 'Discogs-objc' do
-		import_pods
-    end
-    
-   target 'Discogs-swift' do
-       import_pods
-   end
-   
+end
+
+target 'Discogs-objc' do
+    import_pods
+end
+
+target 'Discogs-swift' do
+    import_pods
 end
 

@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BD28F9C9602A96CB98AF3E4 /* Pods_DiscogsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5DD0B0AE19551C1C1A58CF /* Pods_DiscogsAPI.framework */; };
-		750923C3C3684533BAC6BE7C /* Pods_DiscogsAPI_Discogs_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45290842C8E977DF56F4BB17 /* Pods_DiscogsAPI_Discogs_swift.framework */; };
-		957484FA337B61862AB8AB34 /* Pods_DiscogsAPI_Discogs_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD6F1E9C044905F59353EE8 /* Pods_DiscogsAPI_Discogs_objc.framework */; };
+		0C9CC96E4C3832E875C1362F /* Pods_DiscogsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773B396CECFA85BD82936371 /* Pods_DiscogsAPI.framework */; };
 		9C0AB1EB1DB11ABD004716A1 /* DGListing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0AB1E91DB11ABD004716A1 /* DGListing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0AB1EC1DB11ABD004716A1 /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0AB1EA1DB11ABD004716A1 /* DGListing.m */; };
 		9C0AB1F01DB11B0D004716A1 /* DGListing+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0AB1EE1DB11B0D004716A1 /* DGListing+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -68,7 +66,8 @@
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
 		9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */; };
 		9CCD125C1DD75271002BEEA8 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */; };
-		D033E22A87C06F4E69185C44 /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB17D640D59A0FEC7DD610D3 /* Pods_DiscogsAPITests.framework */; };
+		ABD760626F171F7AF351175A /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */; };
+		CAB1402FCB50CCA204F7DDD5 /* Pods_Discogs_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFD6BC5763E4B7FFC46703D /* Pods_Discogs_objc.framework */; };
 		D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
@@ -191,29 +190,16 @@
 		D0A589011CFF9B0A008DF0A4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589001CFF9B0A008DF0A4 /* MobileCoreServices.framework */; };
 		D0A589031CFF9B1A008DF0A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589021CFF9B1A008DF0A4 /* SystemConfiguration.framework */; };
 		D0A589061CFF9E6A008DF0A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A589051CFF9E6A008DF0A4 /* Security.framework */; };
+		D48501422AFEC4C9380A28A2 /* Pods_Discogs_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8413614F43229038E96CD5C /* Pods_Discogs_swift.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9C1CB3CC1DDA08110055FE8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0D63B281CFF91B10001942B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CA794081D055FB40006EE89;
-			remoteInfo = "Discogs-objc";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1BBAA9A0D9396AF522A62D35 /* Pods-DiscogsAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests.debug.xcconfig"; sourceTree = "<group>"; };
-		20B955060C036B6261E35B9C /* Pods-DiscogsAPI-Discogs-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI-Discogs-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI-Discogs-swift/Pods-DiscogsAPI-Discogs-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		33812A763705B9B4F13B5B96 /* Pods-Discogs-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.debug.xcconfig"; sourceTree = "<group>"; };
-		45290842C8E977DF56F4BB17 /* Pods_DiscogsAPI_Discogs_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI_Discogs_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CD6F1E9C044905F59353EE8 /* Pods_DiscogsAPI_Discogs_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI_Discogs_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FF4D721E5F82C1237C165D8 /* Pods-DiscogsAPI-Discogs-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI-Discogs-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		52F40CB5A7933A3EF4FA8720 /* Pods-Discogs-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-swift/Pods-Discogs-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		65B306E0B8BAC4CEEFD806F1 /* Pods-DiscogsAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests.release.xcconfig"; sourceTree = "<group>"; };
-		6B5DD0B0AE19551C1C1A58CF /* Pods_DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		773B396CECFA85BD82936371 /* Pods_DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B061AB3D946D326A25443F /* Pods-DiscogsAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.release.xcconfig"; sourceTree = "<group>"; };
-		8BA102FCB86544D37D45897F /* Pods_Discogs_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discogs_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
 		9814D72CBC293A1A34B4968F /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		9C0AB1E91DB11ABD004716A1 /* DGListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DGListing.h; path = Listing/DGListing.h; sourceTree = "<group>"; };
@@ -295,8 +281,7 @@
 		9CA794301D0560560006EE89 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Keychain.h"; sourceTree = "<group>"; };
 		9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Keychain.m"; sourceTree = "<group>"; };
-		AB17D640D59A0FEC7DD610D3 /* Pods_DiscogsAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3960F4CF34B7E6F8663E349 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
+		D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DiscogsAPI-umbrella.h"; path = "Framework/DiscogsAPI-umbrella.h"; sourceTree = SOURCE_ROOT; };
 		D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
@@ -422,8 +407,9 @@
 		D0A589051CFF9E6A008DF0A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D0D63B311CFF91B10001942B /* DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D63B361CFF91B20001942B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Framework/Info.plist; sourceTree = "<group>"; };
-		F5D79023688C827C9FEFE89D /* Pods-DiscogsAPI-Discogs-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI-Discogs-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI-Discogs-swift/Pods-DiscogsAPI-Discogs-swift.release.xcconfig"; sourceTree = "<group>"; };
-		FC4467D7D3C4F29A0F3D9D32 /* Pods_Discogs_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discogs_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99C1CD375203090C3D98556 /* Pods-Discogs-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-swift/Pods-Discogs-swift.release.xcconfig"; sourceTree = "<group>"; };
+		E8413614F43229038E96CD5C /* Pods_Discogs_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discogs_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFD6BC5763E4B7FFC46703D /* Pods_Discogs_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Discogs_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,7 +417,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D033E22A87C06F4E69185C44 /* Pods_DiscogsAPITests.framework in Frameworks */,
+				ABD760626F171F7AF351175A /* Pods_DiscogsAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +425,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				750923C3C3684533BAC6BE7C /* Pods_DiscogsAPI_Discogs_swift.framework in Frameworks */,
+				D48501422AFEC4C9380A28A2 /* Pods_Discogs_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +433,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				957484FA337B61862AB8AB34 /* Pods_DiscogsAPI_Discogs_objc.framework in Frameworks */,
+				CAB1402FCB50CCA204F7DDD5 /* Pods_Discogs_objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +444,7 @@
 				D0A589061CFF9E6A008DF0A4 /* Security.framework in Frameworks */,
 				D0A589031CFF9B1A008DF0A4 /* SystemConfiguration.framework in Frameworks */,
 				D0A589011CFF9B0A008DF0A4 /* MobileCoreServices.framework in Frameworks */,
-				6BD28F9C9602A96CB98AF3E4 /* Pods_DiscogsAPI.framework in Frameworks */,
+				0C9CC96E4C3832E875C1362F /* Pods_DiscogsAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,12 +1091,10 @@
 				88B061AB3D946D326A25443F /* Pods-DiscogsAPI.release.xcconfig */,
 				33812A763705B9B4F13B5B96 /* Pods-Discogs-objc.debug.xcconfig */,
 				8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */,
-				4FF4D721E5F82C1237C165D8 /* Pods-DiscogsAPI-Discogs-objc.debug.xcconfig */,
-				B3960F4CF34B7E6F8663E349 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */,
-				20B955060C036B6261E35B9C /* Pods-DiscogsAPI-Discogs-swift.debug.xcconfig */,
-				F5D79023688C827C9FEFE89D /* Pods-DiscogsAPI-Discogs-swift.release.xcconfig */,
 				1BBAA9A0D9396AF522A62D35 /* Pods-DiscogsAPITests.debug.xcconfig */,
 				65B306E0B8BAC4CEEFD806F1 /* Pods-DiscogsAPITests.release.xcconfig */,
+				52F40CB5A7933A3EF4FA8720 /* Pods-Discogs-swift.debug.xcconfig */,
+				D99C1CD375203090C3D98556 /* Pods-Discogs-swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1121,12 +1105,10 @@
 				D0A589051CFF9E6A008DF0A4 /* Security.framework */,
 				D0A589021CFF9B1A008DF0A4 /* SystemConfiguration.framework */,
 				D0A589001CFF9B0A008DF0A4 /* MobileCoreServices.framework */,
-				8BA102FCB86544D37D45897F /* Pods_Discogs_objc.framework */,
-				FC4467D7D3C4F29A0F3D9D32 /* Pods_Discogs_swift.framework */,
-				6B5DD0B0AE19551C1C1A58CF /* Pods_DiscogsAPI.framework */,
-				4CD6F1E9C044905F59353EE8 /* Pods_DiscogsAPI_Discogs_objc.framework */,
-				45290842C8E977DF56F4BB17 /* Pods_DiscogsAPI_Discogs_swift.framework */,
-				AB17D640D59A0FEC7DD610D3 /* Pods_DiscogsAPITests.framework */,
+				EBFD6BC5763E4B7FFC46703D /* Pods_Discogs_objc.framework */,
+				E8413614F43229038E96CD5C /* Pods_Discogs_swift.framework */,
+				773B396CECFA85BD82936371 /* Pods_DiscogsAPI.framework */,
+				D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1229,7 +1211,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9C1CB3CD1DDA08110055FE8E /* PBXTargetDependency */,
 			);
 			name = DiscogsAPITests;
 			productName = DiscogsAPITests;
@@ -1443,7 +1424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		681005B6F7495E7BFFA6456C /* [CP] Copy Pods Resources */ = {
@@ -1458,7 +1439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-objc/Pods-DiscogsAPI-Discogs-objc-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		746B49A2AB70A2F62F1C880C /* [CP] Check Pods Manifest.lock */ = {
@@ -1503,7 +1484,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-swift/Pods-DiscogsAPI-Discogs-swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Discogs-swift/Pods-Discogs-swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BAD837F7A20B0AA06D2971A2 /* [CP] Copy Pods Resources */ = {
@@ -1548,7 +1529,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscogsAPI-Discogs-swift/Pods-DiscogsAPI-Discogs-swift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Discogs-swift/Pods-Discogs-swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA004E3C99150EE1DD8BD49A /* [CP] Embed Pods Frameworks */ = {
@@ -1689,14 +1670,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9C1CB3CD1DDA08110055FE8E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9CA794081D055FB40006EE89 /* Discogs-objc */;
-			targetProxy = 9C1CB3CC1DDA08110055FE8E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		9C1CCA4B1DBA9AEA0049AD5D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1710,7 +1683,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.maxep.DiscogsAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Discogs-objc.app/Discogs-objc";
 			};
 			name = Debug;
 		};
@@ -1726,13 +1698,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.maxep.DiscogsAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Discogs-objc.app/Discogs-objc";
 			};
 			name = Release;
 		};
 		9CA793E81D04EB3A0006EE89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20B955060C036B6261E35B9C /* Pods-DiscogsAPI-Discogs-swift.debug.xcconfig */;
+			baseConfigurationReference = 52F40CB5A7933A3EF4FA8720 /* Pods-Discogs-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1749,7 +1720,7 @@
 		};
 		9CA793E91D04EB3A0006EE89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5D79023688C827C9FEFE89D /* Pods-DiscogsAPI-Discogs-swift.release.xcconfig */;
+			baseConfigurationReference = D99C1CD375203090C3D98556 /* Pods-Discogs-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1765,7 +1736,7 @@
 		};
 		9CA7941E1D055FB40006EE89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF4D721E5F82C1237C165D8 /* Pods-DiscogsAPI-Discogs-objc.debug.xcconfig */;
+			baseConfigurationReference = 33812A763705B9B4F13B5B96 /* Pods-Discogs-objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1780,7 +1751,7 @@
 		};
 		9CA7941F1D055FB40006EE89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3960F4CF34B7E6F8663E349 /* Pods-DiscogsAPI-Discogs-objc.release.xcconfig */;
+			baseConfigurationReference = 8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

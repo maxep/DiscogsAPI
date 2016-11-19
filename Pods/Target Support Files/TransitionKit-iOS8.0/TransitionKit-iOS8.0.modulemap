@@ -1,0 +1,6 @@
+framework module TransitionKit {
+  umbrella header "TransitionKit-iOS8.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

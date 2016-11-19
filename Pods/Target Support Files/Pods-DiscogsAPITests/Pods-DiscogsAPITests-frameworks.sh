@@ -82,3 +82,20 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer-iOS10.0/ISO8601DateFormatterValueTransformer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RKValueTransformers-iOS10.0/RKValueTransformers.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RestKit-Network-ObjectMapping-Support-Testing/RestKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SOCKit-iOS10.0/SOCKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TransitionKit-iOS10.0/TransitionKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DiscogsAPI-iOS10.0/DiscogsAPI.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer-iOS10.0/ISO8601DateFormatterValueTransformer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RKValueTransformers-iOS10.0/RKValueTransformers.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RestKit-Network-ObjectMapping-Support-Testing/RestKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SOCKit-iOS10.0/SOCKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TransitionKit-iOS10.0/TransitionKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DiscogsAPI-iOS10.0/DiscogsAPI.framework"
+fi
