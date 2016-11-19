@@ -27,32 +27,62 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ A wanted release reprsentation.
+ */
 @interface DGWant : DGObject
 
+/// The release rating.
 @property (nonatomic, strong, nullable) NSNumber  *rating;
+
+/// The release notes.
 @property (nonatomic, strong, nullable) NSString  *notes;
+
+/// The wanted release.
 @property (nonatomic, strong, nullable) DGRelease *DGRelease;
 
 @end
 
+/**
+ Request a wanted release.
+ */
 @interface DGWantRequest : NSObject
 
+/// The user name.
 @property (nonatomic, strong) NSString *userName;
+
+/// The wanted release ID.
 @property (nonatomic, strong) NSNumber *releaseID;
+
+/// The release notes.
 @property (nonatomic, strong) NSString *notes;
+
+/// The release rating.
 @property (nonatomic, strong) NSNumber *rating;
 
 @end
 
+/**
+ Request the user wantlist.
+ */
 @interface DGWantlistRequest : NSObject
 
+/// The paginated parameters.
 @property (nonatomic, strong) DGPagination  *pagination;
+
+/// The user name.
 @property (nonatomic, strong) NSString *userName;
 
 @end
 
+/**
+ The paginated wantlist response.
+ */
 @interface DGWantlistResponse : NSObject <DGPaginated>
 
+/**
+ The want list.
+ */
 @property (nonatomic, strong) NSArray<DGWant *> *wants;
 
 @end

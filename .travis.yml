@@ -12,5 +12,5 @@ install:
 
 script:
 - pod install
-- set -o pipefail && xcodebuild -workspace DiscogsAPI.xcworkspace -scheme DiscogsAPI -sdk iphonesimulator -configuration Release -destination "platform=iOS Simulator,name=iPhone 7" clean build test | xcpretty -c
+- travis_retry set -o pipefail && xcodebuild -workspace DiscogsAPI.xcworkspace -scheme DiscogsAPI -sdk iphonesimulator -configuration Release -destination "platform=iOS Simulator,name=iPhone 7" clean build test | xcpretty -c
 - pod lib lint --quick

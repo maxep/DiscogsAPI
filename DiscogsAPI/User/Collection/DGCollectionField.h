@@ -25,19 +25,51 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ User's collection fields request.
+ */
 @interface DGCollectionFieldsRequest : NSObject
 
+/**
+ The request user name.
+ */
 @property (nonatomic, strong, nullable) NSString *userName;
 
 @end
 
+/**
+ A collection field.
+ */
 @interface DGCollectionField : DGObject
 
+/**
+ Field name.
+ */
 @property (nonatomic, strong, nullable) NSString  *name;
+
+/**
+ Field number of line.
+ */
 @property (nonatomic, strong, nullable) NSNumber  *lines;
+
+/**
+ Field type.
+ */
 @property (nonatomic, strong, nullable) NSString  *type;
+
+/**
+ Field position.
+ */
 @property (nonatomic, strong, nullable) NSNumber  *position;
+
+/**
+ Field options.
+ */
 @property (nonatomic, strong) NSArray<NSString *> *options;
+
+/**
+ Is Field public.
+ */
 @property (nonatomic) BOOL isPublic;
 
 @end

@@ -70,58 +70,140 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
  */
 @interface DGCollectionFolderRequest : NSObject
 
+/**
+ Collectio username.
+ */
 @property (nonatomic, strong) NSString *userName;
+
+/**
+ Requested folder ID.
+ */
 @property (nonatomic, strong) NSNumber *folderID;
+
+/**
+ Requested folder name.
+ */
 @property (nonatomic, strong) NSString *name;
 
 @end
 
+/**
+ Request to create a collection folder.
+ */
 @interface DGCreateCollectionFolderRequest : NSObject
 
+/**
+ The collection username.
+ */
 @property (nonatomic, strong) NSString *userName;
+
+/**
+ The collection folder name.
+ */
 @property (nonatomic, strong) NSString *folderName;
 
 @end
 
+/**
+ Request to get the collection folders.
+ */
 @interface DGCollectionFoldersRequest : NSObject
 
+/**
+ The collection username.
+ */
 @property (nonatomic, strong) NSString *userName;
 
 @end
 
+/**
+ A collection folder reprsentation.
+ */
 @interface DGCollectionFolder : DGObject
 
+/**
+ Count of folder's releases.
+ */
 @property (nonatomic, strong) NSNumber *count;
+
+/**
+ Folder name.
+ */
 @property (nonatomic, strong, nullable) NSString *name;
 
 @end
 
+/**
+ Request to add a release to a collection folder.
+ */
 @interface DGAddToCollectionFolderRequest : NSObject
 
+/**
+ The collection username.
+ */
 @property (nonatomic, strong) NSString  *userName;
+
+/**
+ The release ID to add.
+ */
 @property (nonatomic, strong) NSNumber  *releaseID;
+
+/**
+ The destination folder ID.
+ */
 @property (nonatomic, strong) NSNumber  *folderID;
 
 @end
 
+/**
+ Response a add request.
+ */
 @interface DGAddToCollectionFolderResponse : DGObject
 
 @end
 
+/**
+ Get collection folder's releases request.
+ */
 @interface DGCollectionReleasesRequest : NSObject
 
-@property (nonatomic, strong) DGPagination      *pagination;
-@property (nonatomic, strong) NSString          *userName;
-@property (nonatomic, strong) NSNumber          *folderID;
-@property (nonatomic) DGSortFolderItems      sort;
-@property (nonatomic) DGSortOrder    sortOrder;
+/**
+ The pagination paramerters.
+ */
+@property (nonatomic, strong) DGPagination *pagination;
+
+/**
+ The collection username.
+ */
+@property (nonatomic, strong) NSString *userName;
+
+/**
+ The requested collection folder ID.
+ */
+@property (nonatomic, strong) NSNumber *folderID;
+
+/**
+ The sort description.
+ */
+@property (nonatomic) DGSortFolderItems sort;
+
+/**
+ The sort order.
+ */
+@property (nonatomic) DGSortOrder sortOrder;
 
 @end
 
 @class DGReleaseInstance;
 
+/**
+ The paginated collection folder releases response.
+ */
 @interface DGCollectionReleasesResponse : NSObject <DGPaginated>
 
+/**
+ The folder releases.
+ */
 @property (nonatomic, strong) NSArray<DGReleaseInstance *> *releases;
 
 @end

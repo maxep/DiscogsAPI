@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class DGCollectionFieldInstance;
 @class DGLabel;
 
+/**
+ The collection release instance representation.
+ */
 @interface DGReleaseInstance : DGObject
 
 /// user rating for this release instance
@@ -56,32 +59,58 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/**
+ The collection release instance request?
+ */
 @interface DGReleaseInstanceRequest : NSObject
 
+/**
+ The collection username.
+ */
 @property (nonatomic, strong) NSString *userName;
+
+/**
+ The request folder ID.
+ */
 @property (nonatomic, strong) NSNumber *folderID;
+
+/**
+ The requested release ID.
+ */
 @property (nonatomic, strong) NSNumber *releaseID;
+
+/**
+ the requestion instance ID.
+ */
 @property (nonatomic, strong) NSNumber *instanceID;
 
 @end
 
-@interface DGEditFieldsInstanceRequest : NSObject
+/**
+ Edit a fields request.
+ */
+@interface DGEditFieldsInstanceRequest : DGReleaseInstanceRequest
 
-@property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSNumber *folderID;
-@property (nonatomic, strong) NSNumber *releaseID;
-@property (nonatomic, strong) NSNumber *instanceID;
+/**
+ The fields ID to edit.
+ */
 @property (nonatomic, strong) NSNumber *fieldID;
+
+/**
+ The fields value.
+ */
 @property (nonatomic, strong) NSString *value;
 
 @end
 
-@interface DGChangeRatingOfReleaseRequest : NSObject
+/**
+ The rating request.
+ */
+@interface DGChangeRatingOfReleaseRequest : DGReleaseInstanceRequest
 
-@property (nonatomic, strong) NSString  *userName;
-@property (nonatomic, strong) NSNumber  *folderID;
-@property (nonatomic, strong) NSNumber  *releaseID;
-@property (nonatomic, strong) NSNumber  *instanceID;
+/**
+ The new release rating.
+ */
 @property (nonatomic, strong) NSNumber  *rating;
 
 @end

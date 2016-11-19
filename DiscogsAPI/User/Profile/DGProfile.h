@@ -24,28 +24,72 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Discogs User profile.
+ */
 @interface DGProfile : DGObject
 
-@property (nonatomic, strong, nullable) NSString * profile;
-@property (nonatomic, strong, nullable) NSString * wantlistURL;
-@property (nonatomic, strong, nullable) NSNumber * rank;
-@property (nonatomic, strong, nullable) NSNumber * numPending;
-@property (nonatomic, strong, nullable) NSNumber * numForSale;
-@property (nonatomic, strong, nullable) NSString * homePage;
-@property (nonatomic, strong, nullable) NSString * location;
-@property (nonatomic, strong, nullable) NSString * collectionFoldersURL;
-@property (nonatomic, strong, nullable) NSString * userName;
-@property (nonatomic, strong, nullable) NSString * collectionFieldsURL;
-@property (nonatomic, strong, nullable) NSNumber * releasesContributed;
-@property (nonatomic, strong, nullable) NSString * registered;
-@property (nonatomic, strong, nullable) NSNumber * ratingAvg;
-@property (nonatomic, strong, nullable) NSNumber * numCollection;
-@property (nonatomic, strong, nullable) NSNumber * releasesRated;
-@property (nonatomic, strong, nullable) NSNumber * numLists;
-@property (nonatomic, strong, nullable) NSString * name;
-@property (nonatomic, strong, nullable) NSNumber * numWantlist;
+/// The user profile description.
+@property (nonatomic, strong, nullable) NSString *profile;
+
+/// The user wantlistURL.
+@property (nonatomic, strong, nullable) NSString *wantlistURL;
+
+/// User rank.
+@property (nonatomic, strong, nullable) NSNumber *rank;
+
+/// Number of pending contribution.
+@property (nonatomic, strong, nullable) NSNumber *numPending;
+
+/// Number of item for sale.
+@property (nonatomic, strong, nullable) NSNumber *numForSale;
+
+/// User homepage.
+@property (nonatomic, strong, nullable) NSString *homePage;
+
+/// User location
+@property (nonatomic, strong, nullable) NSString *location;
+
+/// User collection folders URL.
+@property (nonatomic, strong, nullable) NSString *collectionFoldersURL;
+
+/// User name.
+@property (nonatomic, strong, nullable) NSString *userName;
+
+/// User collection fields URL.
+@property (nonatomic, strong, nullable) NSString *collectionFieldsURL;
+
+/// Number of contributed releases.
+@property (nonatomic, strong, nullable) NSNumber *releasesContributed;
+
+/// User registration date.
+@property (nonatomic, strong, nullable) NSDate *registered;
+
+/// User rating average
+@property (nonatomic, strong, nullable) NSNumber *ratingAvg;
+
+/// Number of release in user collection.
+@property (nonatomic, strong, nullable) NSNumber *numCollection;
+
+/// Number of rated release.
+@property (nonatomic, strong, nullable) NSNumber *releasesRated;
+
+/// Number of list.
+@property (nonatomic, strong, nullable) NSNumber *numLists;
+
+/// User fullname.
+@property (nonatomic, strong, nullable) NSString *name;
+
+/// Number on releases in user wantlist.
+@property (nonatomic, strong, nullable) NSNumber *numWantlist;
+
+/// User inventory URL.
 @property (nonatomic, strong, nullable) NSString * inventoryURL;
+
+/// user avater URL.
 @property (nonatomic, strong, nullable) NSString * avatarURL;
+
+/// User email.
 @property (nonatomic, strong, nullable) NSString * email;
 
 @end
