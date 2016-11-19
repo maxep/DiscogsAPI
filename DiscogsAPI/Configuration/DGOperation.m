@@ -25,9 +25,13 @@
 // The error domain for Discogs generated errors
 NSString * const DGErrorDomain = @"com.discogs.api";
 
-@implementation DGOperation {
-    Class _responseClass;
-}
+@interface DGOperation ()
+@property (nonatomic, strong) RKMappingResult *mappingResult;
+@end
+
+@implementation DGOperation
+
+@dynamic mappingResult;
 
 + (instancetype)operationWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass {
     return [[self alloc] initWithRequest:request responseClass:responseClass];
@@ -39,27 +43,14 @@ NSString * const DGErrorDomain = @"com.discogs.api";
         [responseDescriptors addObject:[responseClass responseDescriptor]];
     }
     
-    self = [super initWithRequest:request responseDescriptors:responseDescriptors];
-    if (self) {
-        _responseClass = responseClass;
-    }
-    return self;
+    return [super initWithRequest:request responseDescriptors:responseDescriptors];
 }
 
 - (void)setCompletionBlockWithSuccess:(void (^)(id))success failure:(void (^)(NSError *))failure {
     
     __weak typeof(self) weakSelf = self;
     [super setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-        __typeof(self) const strongSelf = weakSelf;
-        
-        NSError *error;
-        [strongSelf validateResult:result error:&error];
-        if (!error) {
-            success(strongSelf.response);
-        } else if (failure) {
-            failure(error);
-        }
-        
+        success(weakSelf.response);
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         if (failure) {
             NSInteger code = operation.HTTPRequestOperation.response.statusCode;
@@ -69,26 +60,15 @@ NSString * const DGErrorDomain = @"com.discogs.api";
     }];
 }
 
-- (void)validateResult:(RKMappingResult *)result error:(NSError **)error {
-    if (!self->_responseClass) {
-        return;
-    }
+- (void)setMappingResult:(RKMappingResult *)mappingResult {
+    _mappingResult = mappingResult;
     
-    id object = result.dictionary[[NSNull null]];
+    id object = mappingResult.dictionary[[NSNull null]];
     if (object) {
-        if ([object isKindOfClass:_responseClass]) {
-            _response = object;
-        }
-        return;
+        _response = object;
+    } else {
+        _response = mappingResult.array;
     }
-    
-    NSArray *array = result.array;
-    if (array.count < 0 || [array.firstObject isKindOfClass:_responseClass]) {
-        _response = array;
-        return;
-    }
-    
-    *error = [NSError errorWithCode:NSURLErrorCannotParseResponse description:@"Bad response from Discogs server"];
 }
 
 @end
