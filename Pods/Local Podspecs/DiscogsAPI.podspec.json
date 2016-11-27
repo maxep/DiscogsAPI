@@ -80,6 +80,7 @@
       "private_header_files": [
         "DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h",
         "DiscogsAPI/Authentication/DGAuthView.h",
+        "DiscogsAPI/Authentication/DGTokenStore.h",
         "DiscogsAPI/Mapping/Authentication/**/*.h"
       ],
       "dependencies": {

@@ -26,6 +26,7 @@
 
 #import "DGAuthView.h"
 
+#import "DGTokenStore.h"
 #import "DGIdentity+Keychain.h"
 #import "DGIdentity+Mapping.h"
 
@@ -37,6 +38,7 @@ NSString * const DGApplicationLaunchedWithURLNotification = @"kAFApplicationLaun
 NSString * const DGApplicationLaunchOptionsURLKey = @"UIApplicationLaunchOptionsURLKey";
 NSString * const DGCallback = @"discogsapi://success";
 
+static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
 static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIdentifier";
 
 @interface DGAuthentication ()
@@ -98,6 +100,8 @@ static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIden
         
     } else if (self.identity) {
         success(self.identity);
+    } else if (self.HTTPClient.accessToken) {
+        success(nil);
     } else if (failure) {
         failure([NSError errorWithCode:NSURLErrorNotConnectedToInternet description:@"User not athenticated yet but no internet connection"]);
     }
@@ -139,6 +143,8 @@ static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIden
         
         if (self.identity) {
             _HTTPClient.accessToken = [[AFOAuth1Token alloc] initWithKey:self.identity.token secret:self.identity.secret session:nil expiration:nil renewable:NO];
+        } else {
+            _HTTPClient.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
         }
         
         _HTTPClient.signatureMethod = AFPlainTextSignatureMethod;

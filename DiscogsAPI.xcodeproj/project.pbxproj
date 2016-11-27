@@ -66,6 +66,8 @@
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
 		9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */; };
 		9CCD125C1DD75271002BEEA8 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */; };
+		9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */; };
+		9CE9512E1DEB44E7006BD7B1 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9512C1DEB44E7006BD7B1 /* DGTokenStore.m */; };
 		ABD760626F171F7AF351175A /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */; };
 		CAB1402FCB50CCA204F7DDD5 /* Pods_Discogs_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFD6BC5763E4B7FFC46703D /* Pods_Discogs_objc.framework */; };
 		D0A587E51CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -281,6 +283,8 @@
 		9CA794301D0560560006EE89 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Keychain.h"; sourceTree = "<group>"; };
 		9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Keychain.m"; sourceTree = "<group>"; };
+		9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
+		9CE9512C1DEB44E7006BD7B1 /* DGTokenStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
 		D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A587E41CFF92E4008DF0A4 /* DiscogsAPI-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DiscogsAPI-umbrella.h"; path = "Framework/DiscogsAPI-umbrella.h"; sourceTree = SOURCE_ROOT; };
 		D0A587E81CFF9481008DF0A4 /* DGAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
@@ -657,6 +661,8 @@
 				D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */,
 				D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */,
 				D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */,
+				9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */,
+				9CE9512C1DEB44E7006BD7B1 /* DGTokenStore.m */,
 				D0A5887B1CFF9482008DF0A4 /* Identity */,
 			);
 			path = Authentication;
@@ -1133,6 +1139,7 @@
 				D0A588961CFF9482008DF0A4 /* DGMember.h in Headers */,
 				D0A588A81CFF9482008DF0A4 /* DGLabelRelease.h in Headers */,
 				D0A588B21CFF9482008DF0A4 /* DiscogsAPI.h in Headers */,
+				9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */,
 				D0A588F81CFF9482008DF0A4 /* DGIdentity.h in Headers */,
 				D0A5889E1CFF9482008DF0A4 /* DGImage.h in Headers */,
 				D0A588F21CFF9482008DF0A4 /* DGCollectionFolder.h in Headers */,
@@ -1628,6 +1635,7 @@
 				D0A588D71CFF9482008DF0A4 /* DGCollectionField+Mapping.m in Sources */,
 				9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */,
 				D0A588D31CFF9482008DF0A4 /* DGPrice+Mapping.m in Sources */,
+				9CE9512E1DEB44E7006BD7B1 /* DGTokenStore.m in Sources */,
 				9CCD125C1DD75271002BEEA8 /* DGIdentity+Keychain.m in Sources */,
 				D0A588BF1CFF9482008DF0A4 /* DGIdentifier+Mapping.m in Sources */,
 				D0A588E71CFF9482008DF0A4 /* DGPrice.m in Sources */,

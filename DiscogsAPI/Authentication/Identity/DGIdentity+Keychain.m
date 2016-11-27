@@ -56,7 +56,7 @@
 
 #pragma mark Keychain
 
-static NSString * const DGOAuth1CredentialServiceName = @"DGOAuthCredentialService";
+static NSString * const DGIdentityService = @"DGIdentityService";
 static NSString * DGAccessGroup = nil;
 static CFTypeRef DGSecurityAccessibility = NULL;
 
@@ -64,7 +64,7 @@ static NSMutableDictionary * DGKeychainQueryDictionaryWithIdentifier(NSString *i
     
     NSMutableDictionary *query = [NSMutableDictionary dictionary];
     query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
-    query[(__bridge id)kSecAttrService] = DGOAuth1CredentialServiceName;
+    query[(__bridge id)kSecAttrService] = DGIdentityService;
     
     if (identifier) {
         query[(__bridge id)kSecAttrAccount] = identifier;
