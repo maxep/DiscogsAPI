@@ -3,6 +3,17 @@ All notable changes to `DiscogsAPI` project will be documented in this file.
 
 --- 
 
+## [1.6.1](https://github.com/maxep/DiscogsAPI/releases/tag/v1.6.0) - November 27, 2016
+
+#### Fixed
+- Fix parameters encoding for HTTP request methods other than `GET`, `HEAD` or `DELETE`.
+- Fix external browser authentication.
+
+#### Added
+- Refactor `DGMasterVersionRequest` to `DGMasterVersionsRequest`.
+- Refactor `DGArtistReleaseRequest ` to `DGArtistReleasesRequest`.
+- Add identity to the authent flow and store identity into keychain instead of tokens only.
+
 ## [1.6.0](https://github.com/maxep/DiscogsAPI/releases/tag/v1.6.0) - November 4, 2016
 
 #### Added
