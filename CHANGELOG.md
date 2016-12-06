@@ -3,7 +3,12 @@ All notable changes to `DiscogsAPI` project will be documented in this file.
 
 --- 
 
-## [1.6.1](https://github.com/maxep/DiscogsAPI/releases/tag/v1.6.0) - November 27, 2016
+## [1.6.2](https://github.com/maxep/DiscogsAPI/releases/tag/1.6.2) - December 6, 2016
+
+#### Added
+- Add Identity to endpoints.
+
+## [1.6.1](https://github.com/maxep/DiscogsAPI/releases/tag/1.6.1) - November 27, 2016
 
 #### Fixed
 - Fix parameters encoding for HTTP request methods other than `GET`, `HEAD` or `DELETE`.

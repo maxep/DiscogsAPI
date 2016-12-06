@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DiscogsAPI"
-  s.version      = "1.6.1"
+  s.version      = "1.6.2"
   s.summary      = "An Objective-C interface for Discogs API v2.0."
   s.description  = <<-DESC
                     Features:
@@ -26,79 +26,92 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Authentication', 'Database', 'User', 'Marketplace', 'Resource'
 
   s.subspec 'Core' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Core',
-    						'DiscogsAPI/Configuration',
-    						'AFOAuth1Client/AFOAuth1Client'
-    ss.dependency 'RestKit/ObjectMapping', '~> 0.27.0'
-    ss.dependency 'RestKit/Network', '~> 0.27.0'
+    ss.source_files = 'DiscogsAPI/Core',
+                      'DiscogsAPI/Configuration',
+                      'AFOAuth1Client/AFOAuth1Client',
+                      'DiscogsAPI/Authentication/Identity'
+
     ss.prefix_header_contents = '#import <SystemConfiguration/SystemConfiguration.h>',
                                 '#import <MobileCoreServices/MobileCoreServices.h>',
                                 '#import <Security/Security.h>',
                                 '#import <RestKit/RestKit.h>'
+
     ss.private_header_files = 'DiscogsAPI/Core/DGHTTPClient.h',
                               'DiscogsAPI/Configuration/*.h',
-                              'AFOAuth1Client/AFOAuth1Client/*.h'
+                              'AFOAuth1Client/AFOAuth1Client/*.h',
+                              'DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h'
+
     ss.dependency 'DiscogsAPI/Mapping'
+    ss.dependency 'RestKit/ObjectMapping', '~> 0.27.0'
+    ss.dependency 'RestKit/Network', '~> 0.27.0'
   end
-  
+
   s.subspec 'Authentication' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Authentication',
-    						'DiscogsAPI/Authentication/Identity',
-    						'DiscogsAPI/Mapping/Authentication/**/*'
-    ss.private_header_files = 'DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h',
-                              'DiscogsAPI/Authentication/DGAuthView.h',
+    ss.source_files = 'DiscogsAPI/Authentication',
+                      'DiscogsAPI/Mapping/Authentication/**/*'
+
+    ss.private_header_files = 'DiscogsAPI/Authentication/DGAuthView.h',
                               'DiscogsAPI/Authentication/DGTokenStore.h',
                               'DiscogsAPI/Mapping/Authentication/**/*.h'
+
     ss.dependency 'DiscogsAPI/Core'
   end
 
   s.subspec 'Database' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Database',
-    						'DiscogsAPI/Database/Release', 
-    						'DiscogsAPI/Database/Artist', 
-    						'DiscogsAPI/Database/Label', 
-    						'DiscogsAPI/Database/Master', 
-    						'DiscogsAPI/Database/Search',
-    						'DiscogsAPI/Database/Data',
-    						'DiscogsAPI/Mapping/Database/**/*'
+    ss.source_files = 'DiscogsAPI/Database',
+                      'DiscogsAPI/Database/Release',
+                      'DiscogsAPI/Database/Artist',
+                      'DiscogsAPI/Database/Label',
+                      'DiscogsAPI/Database/Master',
+                      'DiscogsAPI/Database/Search',
+                      'DiscogsAPI/Database/Data',
+                      'DiscogsAPI/Mapping/Database/**/*'
+
     ss.private_header_files = 'DiscogsAPI/Mapping/Database/**/*.h'
+
     ss.dependency 'DiscogsAPI/Pagination'
   end
   
   s.subspec 'User' do |ss|
-    ss.source_files   = 	'DiscogsAPI/User',
-    						'DiscogsAPI/User/Profile', 
-    						'DiscogsAPI/User/Collection', 
-    						'DiscogsAPI/User/Wantlist',
-    						'DiscogsAPI/Mapping/User/**/*'
+    ss.source_files = 'DiscogsAPI/User',
+                      'DiscogsAPI/User/Profile',
+                      'DiscogsAPI/User/Collection',
+                      'DiscogsAPI/User/Wantlist',
+                      'DiscogsAPI/Mapping/User/**/*'
+
     ss.private_header_files = 'DiscogsAPI/Mapping/User/**/*.h'
+
     ss.dependency 'DiscogsAPI/Database'
   end
   
   s.subspec 'Marketplace' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Marketplace',
-    						'DiscogsAPI/Marketplace/Price',
-                            'DiscogsAPI/Marketplace/Listing',
-                            'DiscogsAPI/Marketplace/Order',
-    						'DiscogsAPI/Mapping/Marketplace/**/*'
+    ss.source_files = 'DiscogsAPI/Marketplace',
+                      'DiscogsAPI/Marketplace/Price',
+                      'DiscogsAPI/Marketplace/Listing',
+                      'DiscogsAPI/Marketplace/Order',
+                      'DiscogsAPI/Mapping/Marketplace/**/*'
+
     ss.private_header_files = 'DiscogsAPI/Mapping/Marketplace/**/*.h'
+
     ss.dependency 'DiscogsAPI/User'
   end
   
   s.subspec 'Pagination' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Pagination',
-    						'DiscogsAPI/Mapping/Pagination'
+    ss.source_files = 'DiscogsAPI/Pagination',
+                      'DiscogsAPI/Mapping/Pagination'
+
     ss.private_header_files = 'DiscogsAPI/Mapping/Pagination/**/*.h'
+
     ss.dependency 'DiscogsAPI/Core'
   end
   
   s.subspec 'Resource' do |ss|
-    ss.source_files   = 	'DiscogsAPI/Resource'
+    ss.source_files = 'DiscogsAPI/Resource'
     ss.dependency 'DiscogsAPI/Core'
   end
 
   s.subspec 'Mapping' do |ss|
-    ss.source_files   = 'DiscogsAPI/Mapping'
+    ss.source_files = 'DiscogsAPI/Mapping'
     ss.private_header_files = 'DiscogsAPI/Mapping/*.h'
   end
 
