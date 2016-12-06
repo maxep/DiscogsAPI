@@ -49,7 +49,7 @@
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"price" toKeyPath:@"price" withMapping:[DGPrice mapping]]];
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"seller" toKeyPath:@"seller" withMapping:[DGProfile mapping]]];
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"release" toKeyPath:@"dgRelease" withMapping:[DGRelease mapping]]];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"release" toKeyPath:@"release_" withMapping:[DGRelease mapping]]];
     return mapping;
 }
 

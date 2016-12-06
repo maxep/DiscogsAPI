@@ -25,20 +25,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Inventory request description.
+ */
 @interface DGInventoryRequest : NSObject
 
+/// The inventory user name.
 @property (nonatomic, strong, nullable) NSString *username;
 
+/// Inventory status to request.
 @property (nonatomic, strong, nullable) NSString *status;
 
+/// Request sort description.
 @property (nonatomic) DGListingSort sort;
 
+/// Request sort order.
 @property (nonatomic) DGSortOrder sortOrder;
 
 @end
 
+/**
+ Inventory paginated response.
+ */
 @interface DGInventoryResponse : NSObject <DGPaginated>
 
+/// Listing inventory.
 @property (nonatomic, strong, nullable) NSArray<DGListing *> *listings;
 
 @end

@@ -26,6 +26,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Sort listing descriptor
+
+ - DGListingSortListed: Sort by listed time.
+ - DGListingSortPrice: Sort by price.
+ - DGListingSortItem: Sort by Item.
+ - DGListingSortArtist: Sort by Artist.
+ - DGListingSortLabel: Sort by Label.
+ - DGListingSortCatno: Sort by Catno.
+ - DGListingSortAudio: Sort by Audio.
+ - DGListingSortStatus: Sort by listing status.
+ - DGListingSortLocation: Sort by location.
+ */
 typedef NS_ENUM(NSInteger, DGListingSort){
     DGListingSortListed,
     DGListingSortPrice,
@@ -38,63 +51,99 @@ typedef NS_ENUM(NSInteger, DGListingSort){
     DGListingSortLocation
 };
 
+/**
+ Returns a sort descriptor as string.
+
+ @param sort A sort desciptor.
+ @return A sort descriptor string.
+ */
 extern NSString *DGListingSortAsString(DGListingSort sort);
 
 @class DGProfile;
 @class DGRelease;
 
+/**
+ A listing respresentation.
+ */
 @interface DGListing : DGObject
 
+/// Listing status.
 @property (nonatomic, strong, nullable) NSString *status;
 
+/// Listing price.
 @property (nonatomic, strong, nullable) DGPrice *price;
 
+/// Is the listing allows offers.
 @property (nonatomic) BOOL allowOffers;
 
+/// Sleeve condition description.
 @property (nonatomic, strong, nullable) NSString *sleeveCondition;
 
+/// General lsiting condition.
 @property (nonatomic, strong, nullable) NSString *condition;
 
+/// Posted date.
 @property (nonatomic, strong, nullable) NSDate *posted;
 
+/// Ships location.
 @property (nonatomic, strong, nullable) NSString *shipsFrom;
 
+/// Listing comments.
 @property (nonatomic, strong, nullable) NSString *comments;
 
+/// Listing seller profile.
 @property (nonatomic, strong, nullable) DGProfile *seller;
 
-@property (nonatomic, strong, nullable) DGRelease *dgRelease;
+/// Listing release.
+@property (nonatomic, strong, nullable) DGRelease *release_;
 
+/// Has audio.
 @property (nonatomic) BOOL audio;
 
+/// Listing location.
 @property (nonatomic, strong, nullable) NSString *location;
 
+/// Listing external id.
 @property (nonatomic, strong, nullable) NSString *externalID;
 
+/// Listing weight.
 @property (nonatomic, strong, nullable) NSNumber *weight;
 
+/// Format quantity.
 @property (nonatomic, strong, nullable) NSNumber *formatQuantity;
 
 @end
 
+/**
+ Listing request.
+ */
 @interface DGListingRequest : NSObject
 
+/// Listing ID to request.
 @property (nonatomic, strong) NSNumber *listingID;
 
+/// Listing requested currency.
 @property (nonatomic) DGCurrency currency;
 
 @end
 
+/**
+ Create a listing request.
+ */
 @interface DGCreateListingRequest : NSObject
 
+/// The listing to create.
 @property (nonatomic, strong, nullable) DGListing *listing;
 
 @end
 
+/// The listing creation response.
 @interface DGCreateListingResponse : NSObject
 
+/// The created listing ID.
 @property (nonatomic, strong, nullable) NSNumber *listingID;
 
+/// The listing resource URL.
 @property (nonatomic, strong, nullable) NSString *resourceURL;
 
 @end

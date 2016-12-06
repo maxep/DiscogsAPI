@@ -24,6 +24,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Currency descriptor.
+
+ - DGCurrencyNone: None.
+ - DGCurrencyUSD: Dollar US.
+ - DGCurrencyGBP: Pound.
+ - DGCurrencyEUR: Euro.
+ - DGCurrencyCAD: Dollar Canadian.
+ - DGCurrencyAUD: Dollar Australian.
+ - DGCurrencyJPY: Japanese Yen.
+ - DGCurrencyCHF: Swiss Franc.
+ - DGCurrencyMXN: Mexican Peso.
+ - DGCurrencyBRL: Brezilian Real.
+ - DGCurrencyNZD: Dollar New Zealand.
+ - DGCurrencySEK: Swedish crown.
+ - DGCurrencyZAR: South African Rand.
+ */
 typedef NS_ENUM(NSInteger, DGCurrency){
     DGCurrencyNone = 0,
     DGCurrencyUSD,
@@ -40,30 +57,64 @@ typedef NS_ENUM(NSInteger, DGCurrency){
     DGCurrencyZAR
 };
 
+/**
+ Returns currency as string.
+
+ @param current Currency descriptor.
+ @return Currency as string.
+ */
 extern NSString *DGCurrencyAsString(DGCurrency current);
 
+/**
+ Price representation.
+ */
 @interface DGPrice : NSObject
 
+/// Currency.
 @property (nonatomic, strong, nullable) NSString *currency;
+
+/// Price value.
 @property (nonatomic, strong, nullable) NSNumber *value;
 
 @end
 
+/**
+ Price suggestions request.
+ */
 @interface DGPriceSuggestionsRequest : NSObject
 
+/// Requested release ID.
 @property (nonatomic, strong) NSNumber *releaseID;
 
 @end
 
+/**
+ Price suggestions response.
+ */
 @interface DGPriceSuggestionsResponse : NSObject
 
+/// Price for mint item.
 @property (nonatomic, strong, nullable) DGPrice *mint;
+
+/// Price for near mint item.
 @property (nonatomic, strong, nullable) DGPrice *nearMint;
+
+/// Price for very good plus item.
 @property (nonatomic, strong, nullable) DGPrice *veryGoodPlus;
+
+/// Price for very good item.
 @property (nonatomic, strong, nullable) DGPrice *veryGood;
+
+/// Price for good plus item.
 @property (nonatomic, strong, nullable) DGPrice *goodPlus;
+
+/// Price for good item.
 @property (nonatomic, strong, nullable) DGPrice *good;
+
+/// Price for fair item.
 @property (nonatomic, strong, nullable) DGPrice *fair;
+
+/// Price for poor item.
 @property (nonatomic, strong, nullable) DGPrice *poor;
 
 @end
