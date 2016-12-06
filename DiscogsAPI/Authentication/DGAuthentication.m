@@ -27,7 +27,6 @@
 #import "DGAuthView.h"
 
 #import "DGTokenStore.h"
-#import "DGIdentity+Keychain.h"
 #import "DGIdentity+Mapping.h"
 
 static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
@@ -39,11 +38,9 @@ NSString * const DGApplicationLaunchOptionsURLKey = @"UIApplicationLaunchOptions
 NSString * const DGCallback = @"discogsapi://success";
 
 static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
-static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIdentifier";
 
 @interface DGAuthentication ()
 @property (nonatomic, strong) DGHTTPClient *HTTPClient;
-@property (nonatomic, strong) DGIdentity *identity;
 @property (nonatomic, strong) NSString *consumerKey;
 @property (nonatomic, strong) NSString *consumerSecret;
 @property (nonatomic, strong) NSString *accessToken;
@@ -72,9 +69,8 @@ static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIden
         response.token = self.HTTPClient.accessToken.key;
         response.secret = self.HTTPClient.accessToken.secret;
         self.identity = response;
-        
-        [DGIdentity storeIdentity:response withIdentifier:kDGIdentityKeychainIdentifier];
         success(response);
+        
     } failure:failure];
     
     [self.queue addOperation:operation];
@@ -120,15 +116,6 @@ static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIden
 }
 
 #pragma mark Properties
-
-@synthesize identity = _identity;
-
-- (DGIdentity *)identity {
-    if (!_identity) {
-        _identity = [DGIdentity retrieveIdentityWithIdentifier:kDGIdentityKeychainIdentifier];
-    }
-    return _identity;
-}
 
 - (DGHTTPClient *)HTTPClient {
     

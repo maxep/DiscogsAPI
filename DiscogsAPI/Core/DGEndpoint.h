@@ -22,6 +22,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "DGIdentity.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -35,9 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^DGFailureBlock)(NSError * _Nullable error);
 
 /**
+ The user identity used to request to the endpoint.
+ */
+@property (nonatomic, readonly, nullable) DGIdentity *identity;
+
+/**
  Endpoint operation queue.
  */
-@property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, readonly) NSOperationQueue *queue;
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;

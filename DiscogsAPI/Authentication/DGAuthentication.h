@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint.h"
-#import "DGIdentity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -39,8 +38,6 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
  Next queries will contains these two tokens in their 'Authorization' header.
  */
 @interface DGAuthentication : DGEndpoint
-
-@property (nonatomic, readonly, nullable) DGIdentity *identity;
 
 /**
  Gets authentified user identity.
