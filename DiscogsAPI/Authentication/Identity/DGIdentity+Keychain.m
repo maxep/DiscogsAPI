@@ -8,6 +8,8 @@
 
 #import "DGIdentity+Keychain.h"
 
+NSString * const kDGIdentityCurrentIdentifier = @"DGIdentityCurrentIdentifier";
+
 @implementation DGIdentity (Keychain)
 
 #pragma mark <NSSecureCoding>

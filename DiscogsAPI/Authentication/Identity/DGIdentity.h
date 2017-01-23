@@ -30,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGIdentity : DGObject
 
 /**
+ The currently autenticated user identity.
+ */
+@property (class, readonly, nullable) DGIdentity *current;
+
+/**
  User name.
  */
 @property (nonatomic, strong, nullable) NSString *userName;

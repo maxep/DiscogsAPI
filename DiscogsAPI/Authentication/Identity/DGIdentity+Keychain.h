@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString * const kDGIdentityCurrentIdentifier;
+
 /**
  DGIdentity protocol to store identity into keychain.
  */

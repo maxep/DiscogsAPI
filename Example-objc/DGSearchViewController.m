@@ -20,10 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGSearchViewController.h"
-#import "DGAuthViewController.h"
-#import "DGViewController.h"
 #import <DiscogsAPI/DiscogsAPI.h>
+
+#import "DGSearchViewController.h"
+#import "DGViewController.h"
 
 @interface DGSearchViewController () <UISearchResultsUpdating, UISearchBarDelegate>
 @property (nonatomic, strong) UISearchController *searchController;
@@ -40,38 +40,24 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.searchBar.delegate = self;
     self.definesPresentationContext = YES;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     
     self.searchController.searchBar.scopeButtonTitles = @[@"All", @"Release", @"Master", @"Artist", @"Label"];
-    self.searchController.searchBar.delegate = self;
     
-    [Discogs.api isAuthenticated:^(BOOL success) {
-        if (!success) {
-            
-            [self authenticate];
-            
-            //Present Authentication controller
-//            DGAuthViewController *authentViewController = [[DGAuthViewController alloc] init];
-//            UINavigationController *authentNavigationController = [[UINavigationController alloc] initWithRootViewController:authentViewController];
-//            [self.navigationController presentViewController:authentNavigationController animated:YES completion:nil];
-        }
+    NSURL *callback = [NSURL URLWithString:@"discogs-objc://success"];
+    
+    [Discogs.api.authentication authenticateWithCallback:callback success:^(DGIdentity * _Nonnull identity) {
+        NSLog(@"Authenticated user: %@", identity);
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"Error: %@", error);
     }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)authenticate {
-    
-    NSURL *callback = [NSURL URLWithString:@"discogs://success"];
-    [Discogs.api.authentication authenticateWithCallback:callback success:^(DGIdentity *identity){
-        
-    } failure:^(NSError * _Nullable error) {
-        NSLog(@"Error: %@", error);
-    }];
 }
 
 #pragma mark Properties

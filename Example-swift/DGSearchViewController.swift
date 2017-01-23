@@ -48,14 +48,11 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         searchController.searchBar.scopeButtonTitles = ["All", "Release", "Master", "Artist", "Label"]
         searchController.searchBar.delegate = self
         
-        // Check Authentication status
-        Discogs.api.isAuthenticated { (success) in
-            
-            if !success {
-                let authentViewController = DGAuthViewController()
-                let authentNavigationController = UINavigationController.init(rootViewController: authentViewController)
-                self.navigationController?.present(authentNavigationController, animated: true, completion: nil)
-            }
+        let callback = URL(string: "discogs-swift://success")
+        Discogs.api.authentication.authenticate(withCallback: callback!, success: { (identity) in
+            print("Authenticated user: \(identity)")
+        }) { (error) in
+            print(error ?? "Error")
         }
     }
     

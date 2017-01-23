@@ -38,7 +38,7 @@
 			<string>Discogs Authentication</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>discogs</string>
+				<string>discogs-objc</string>
 			</array>
 		</dict>
 	</array>

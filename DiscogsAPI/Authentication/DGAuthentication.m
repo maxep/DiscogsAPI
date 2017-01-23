@@ -27,14 +27,13 @@
 #import "DGAuthView.h"
 
 #import "DGTokenStore.h"
+#import "DGIdentity+Keychain.h"
 #import "DGIdentity+Mapping.h"
 
 static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
 static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
 static NSString * const kDiscogsAccessToken    = @"DiscogsAccessToken";
 
-NSString * const DGApplicationLaunchedWithURLNotification = @"kAFApplicationLaunchedWithURLNotification";
-NSString * const DGApplicationLaunchOptionsURLKey = @"UIApplicationLaunchOptionsURLKey";
 NSString * const DGCallback = @"discogsapi://success";
 
 static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
@@ -46,7 +45,9 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 @property (nonatomic, strong) NSString *accessToken;
 @end
 
-@implementation DGAuthentication
+@implementation DGAuthentication {
+    NSString *_callback;
+}
 
 - (void)configureManager:(RKObjectManager *)manager {
     
@@ -68,7 +69,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         
         response.token = self.HTTPClient.accessToken.key;
         response.secret = self.HTTPClient.accessToken.secret;
-        self.identity = response;
+        [DGIdentity storeIdentity:response withIdentifier:kDGIdentityCurrentIdentifier];
         success(response);
         
     } failure:failure];
@@ -84,6 +85,8 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             
             if (error.code == 401) {
                 
+                _callback = callback.absoluteString;
+                
                 [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
                     [self identityWithSuccess:success failure:failure];
                 } failure:failure];
@@ -94,8 +97,8 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             
         }];
         
-    } else if (self.identity) {
-        success(self.identity);
+    } else if ([DGIdentity current]) {
+        success([DGIdentity current]);
     } else if (self.HTTPClient.accessToken) {
         success(nil);
     } else if (failure) {
@@ -103,15 +106,26 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     }
 }
 
+- (BOOL)openURL:(NSURL *)url {
+
+    if (_callback && [url.absoluteString hasPrefix:_callback]) {
+        NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:@{kAFApplicationLaunchOptionsURLKey: url}];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        
+        _callback = nil;
+        return YES;
+    }
+    return NO;
+}
+
 - (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
-    
-    NSURL *callback = [NSURL URLWithString:DGCallback];
     
     [self.HTTPClient setServiceProviderRequestHandler:^(NSURLRequest *request) {
         DGAuthView *view = [DGAuthView viewWithRequest:request];
         authView(view);
     } completion:nil];
     
+    NSURL *callback = [NSURL URLWithString:DGCallback];
     [self authenticateWithCallback:callback success:success failure:failure];
 }
 
@@ -128,8 +142,9 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             _HTTPClient = [DGHTTPClient new];
         }
         
-        if (self.identity) {
-            _HTTPClient.accessToken = [[AFOAuth1Token alloc] initWithKey:self.identity.token secret:self.identity.secret session:nil expiration:nil renewable:NO];
+        DGIdentity *identity = [DGIdentity current];
+        if (identity) {
+            _HTTPClient.accessToken = [[AFOAuth1Token alloc] initWithKey:identity.token secret:identity.secret session:nil expiration:nil renewable:NO];
         } else {
             _HTTPClient.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
         }

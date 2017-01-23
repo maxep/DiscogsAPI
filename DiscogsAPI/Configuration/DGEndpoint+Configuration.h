@@ -31,11 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGEndpoint (Configuration)
 
 /**
- Dynamic identity setter.
- */
-@property (nonatomic, nullable) DGIdentity *identity;
-
-/**
  Whether or not the endpoint is reachable.
  */
 @property (nonatomic, readonly) BOOL isReachable;

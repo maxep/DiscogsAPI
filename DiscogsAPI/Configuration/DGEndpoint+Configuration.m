@@ -25,8 +25,6 @@
 
 @implementation DGEndpoint (Configuration)
 
-@dynamic identity;
-
 - (instancetype)initWithManager:(RKObjectManager *)manager {
     self = [super init];
     if (self) {

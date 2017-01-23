@@ -49,7 +49,6 @@
 		9CA793F51D04ED5F0006EE89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */; };
 		9CA793F71D04ED5F0006EE89 /* DGAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793EC1D04ED5F0006EE89 /* DGAppDelegate.swift */; };
 		9CA793F81D04ED5F0006EE89 /* DGArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793ED1D04ED5F0006EE89 /* DGArtistViewController.swift */; };
-		9CA793F91D04ED5F0006EE89 /* DGAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793EE1D04ED5F0006EE89 /* DGAuthViewController.swift */; };
 		9CA793FA1D04ED5F0006EE89 /* DGLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793EF1D04ED5F0006EE89 /* DGLabelViewController.swift */; };
 		9CA793FB1D04ED5F0006EE89 /* DGMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F01D04ED5F0006EE89 /* DGMasterViewController.swift */; };
 		9CA793FC1D04ED5F0006EE89 /* DGReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */; };
@@ -60,7 +59,6 @@
 		9CA794031D04ED8A0006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794011D04ED8A0006EE89 /* Main.storyboard */; };
 		9CA7940D1D055FB40006EE89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA7940C1D055FB40006EE89 /* main.m */; };
 		9CA7942A1D0560460006EE89 /* DGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794221D0560460006EE89 /* DGAppDelegate.m */; };
-		9CA7942B1D0560460006EE89 /* DGAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794241D0560460006EE89 /* DGAuthViewController.m */; };
 		9CA7942C1D0560460006EE89 /* DGSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794261D0560460006EE89 /* DGSearchViewController.m */; };
 		9CA794311D0560560006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */; };
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
@@ -261,7 +259,6 @@
 		9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA793EC1D04ED5F0006EE89 /* DGAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGAppDelegate.swift; sourceTree = "<group>"; };
 		9CA793ED1D04ED5F0006EE89 /* DGArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DGArtistViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		9CA793EE1D04ED5F0006EE89 /* DGAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DGAuthViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CA793EF1D04ED5F0006EE89 /* DGLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DGLabelViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CA793F01D04ED5F0006EE89 /* DGMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DGMasterViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DGReleaseViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -274,8 +271,6 @@
 		9CA7940C1D055FB40006EE89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA794211D0560460006EE89 /* DGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAppDelegate.h; sourceTree = "<group>"; };
 		9CA794221D0560460006EE89 /* DGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAppDelegate.m; sourceTree = "<group>"; };
-		9CA794231D0560460006EE89 /* DGAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthViewController.h; sourceTree = "<group>"; };
-		9CA794241D0560460006EE89 /* DGAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DGAuthViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9CA794251D0560460006EE89 /* DGSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGSearchViewController.h; sourceTree = "<group>"; };
 		9CA794261D0560460006EE89 /* DGSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DGSearchViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9CA794281D0560460006EE89 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -594,7 +589,6 @@
 			children = (
 				9CA793EC1D04ED5F0006EE89 /* DGAppDelegate.swift */,
 				9CA793F31D04ED5F0006EE89 /* DGViewController.swift */,
-				9CA793EE1D04ED5F0006EE89 /* DGAuthViewController.swift */,
 				9CA793F21D04ED5F0006EE89 /* DGSearchViewController.swift */,
 				9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */,
 				9CA793F01D04ED5F0006EE89 /* DGMasterViewController.swift */,
@@ -613,8 +607,6 @@
 			children = (
 				9CA794211D0560460006EE89 /* DGAppDelegate.h */,
 				9CA794221D0560460006EE89 /* DGAppDelegate.m */,
-				9CA794231D0560460006EE89 /* DGAuthViewController.h */,
-				9CA794241D0560460006EE89 /* DGAuthViewController.m */,
 				9CA794251D0560460006EE89 /* DGSearchViewController.h */,
 				9CA794261D0560460006EE89 /* DGSearchViewController.m */,
 				9C55DB2A1D06196000DF8AFE /* DGViewController.h */,
@@ -1578,7 +1570,6 @@
 				9CA793FE1D04ED5F0006EE89 /* DGViewController.swift in Sources */,
 				9CA793FC1D04ED5F0006EE89 /* DGReleaseViewController.swift in Sources */,
 				9CA793FD1D04ED5F0006EE89 /* DGSearchViewController.swift in Sources */,
-				9CA793F91D04ED5F0006EE89 /* DGAuthViewController.swift in Sources */,
 				9CA793F71D04ED5F0006EE89 /* DGAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1590,7 +1581,6 @@
 				9CA7940D1D055FB40006EE89 /* main.m in Sources */,
 				9CA7942A1D0560460006EE89 /* DGAppDelegate.m in Sources */,
 				9C55DB3E1D06FE1600DF8AFE /* DGViewController.m in Sources */,
-				9CA7942B1D0560460006EE89 /* DGAuthViewController.m in Sources */,
 				9CA7942C1D0560460006EE89 /* DGSearchViewController.m in Sources */,
 				9C55DB3F1D06FE1A00DF8AFE /* DGReleaseViewController.m in Sources */,
 				9C55DB411D06FE2200DF8AFE /* DGArtistViewController.m in Sources */,

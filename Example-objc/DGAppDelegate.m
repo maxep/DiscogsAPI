@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGAppDelegate.h"
-#import <DiscogsAPI/DGAuthentication.h>
+#import <DiscogsAPI/DiscogsAPI.h>
 
 @implementation DGAppDelegate
 
@@ -56,10 +56,10 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    NSNotification *notification = [NSNotification notificationWithName:DGApplicationLaunchedWithURLNotification object:nil userInfo:@{DGApplicationLaunchOptionsURLKey: url}];
-    [[NSNotificationCenter defaultCenter] postNotification:notification];
-    return YES;
+    if ([Discogs.api.authentication openURL:url]) {
+        return YES;
+    }
+    return NO;
 }
-
 
 @end

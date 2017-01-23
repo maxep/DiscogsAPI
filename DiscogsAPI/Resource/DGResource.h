@@ -24,6 +24,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class UIImage;
+
 /**
  Resource class to manage Discogs resources.
  */

@@ -20,8 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGIdentity.h"
+#import "DGIdentity+Keychain.h"
 
 @implementation DGIdentity
+
++ (DGIdentity *)current {
+    static DGIdentity *current = nil;
+    if (!current) {
+        current = [DGIdentity retrieveIdentityWithIdentifier:kDGIdentityCurrentIdentifier];
+    }
+    return current;
+}
 
 @end

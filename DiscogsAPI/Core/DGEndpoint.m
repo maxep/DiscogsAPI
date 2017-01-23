@@ -20,26 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
-#import "DGIdentity+Keychain.h"
+#import "DGEndpoint.h"
 
-static NSString * const kDGIdentityKeychainIdentifier = @"DGIdentityKeychainIdentifier";
 @implementation DGEndpoint
 
-static DGIdentity *_identity;
 @synthesize queue = _queue;
-
-- (DGIdentity *)identity {
-    if (!_identity) {
-        _identity = [DGIdentity retrieveIdentityWithIdentifier:kDGIdentityKeychainIdentifier];
-    }
-    return _identity;
-}
-
-- (void)setIdentity:(DGIdentity *)identity {
-    _identity = identity;
-    [DGIdentity storeIdentity:identity withIdentifier:kDGIdentityKeychainIdentifier];
-}
 
 - (NSOperationQueue *)queue {
     if (!_queue) {

@@ -21,16 +21,15 @@
 // THE SOFTWARE.
 
 #import "DGEndpoint.h"
+#import "DGIdentity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  */
-extern NSString * const DGApplicationLaunchedWithURLNotification;
+extern NSString * const DGCallback /* discogsapi://success */;
 
-/**
- */
-extern NSString * const DGApplicationLaunchOptionsURLKey;
+@class UIWebView;
 
 /**
  Authentification class to manage the Discogs authentification process.
@@ -49,15 +48,13 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
 
 /**
  Initiates an authenticate process.
- Register your application to launch from a custom URL scheme, and use that with the path /success as your callback URL. The callback for the custom URL scheme should send a notification, which will complete the OAuth transaction.
+ Register your application to launch from a custom URL scheme, and use that with the path /success as your callback URL. The callback for the custom URL scheme should call the `openURL:` method, which will complete the OAuth transaction.
  
  Here's how to respond to the custom URL scheme on iOS:
  
  ```
-    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-         NSNotification *notification = [NSNotification notificationWithName:DGApplicationLaunchedWithURLNotification object:nil userInfo:@{DGApplicationLaunchOptionsURLKey: url}];
-         [[NSNotificationCenter defaultCenter] postNotification:notification];
-         return YES;
+    - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+        return [Discogs.api.authentication openURL:url])
     }
  ```
  
@@ -66,6 +63,14 @@ extern NSString * const DGApplicationLaunchOptionsURLKey;
  @param failure A block object to be executed when the authenticate operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
 - (void)authenticateWithCallback:(NSURL *)callback success:(void (^)(DGIdentity *identity))success failure:(nullable DGFailureBlock)failure;
+
+/**
+ Call this method from the [UIApplicationDelegate application:openURL:options:] method of the AppDelegate for your app. It should be invoked for the proper processing of responses during interaction with Safari as part of the authentication flow.
+
+ @param url The URL as passed to [UIApplicationDelegate application:openURL:options:] .
+ @return Returns: YES if the url was intended for the Discogs authentication, NO if not.
+ */
+- (BOOL)openURL:(NSURL *)url;
 
 /**
  Initiate an authenticate process.

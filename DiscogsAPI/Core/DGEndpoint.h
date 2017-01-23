@@ -22,8 +22,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "DGIdentity.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -35,11 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  A block that can act as a failure for a task.
  */
 typedef void(^DGFailureBlock)(NSError * _Nullable error);
-
-/**
- The user identity used to request to the endpoint.
- */
-@property (nonatomic, readonly, nullable) DGIdentity *identity;
 
 /**
  Endpoint operation queue.
