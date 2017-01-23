@@ -22,6 +22,21 @@
 
 #import "DGCollectionFolder+Mapping.h"
 
+@implementation DGCollectionFolder
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.count = @0;
+        self.name = @"";
+    }
+    return self;
+}
+
+@end
+
+#pragma mark - Get Collection Folder
+
 extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
     return @[@"label", @"artist", @"title", @"catno", @"format", @"rating", @"added", @"year"][sort];
 }
@@ -40,6 +55,8 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @end
 
+#pragma mark - Create Collection Folder
+
 @implementation DGCreateCollectionFolderRequest
 
 - (instancetype)init {
@@ -53,6 +70,8 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @end
 
+#pragma mark - Get Collection Folders
+
 @implementation DGCollectionFoldersRequest
 
 - (instancetype)init {
@@ -65,17 +84,7 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @end
 
-@implementation DGCollectionFolder
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.count = @0;
-    }
-    return self;
-}
-
-@end
+#pragma mark - Add To Collection Folder
 
 @implementation DGAddToCollectionFolderRequest
 
@@ -94,7 +103,9 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @end
 
-@implementation DGCollectionReleasesRequest
+#pragma mark - Get Collection Items
+
+@implementation DGCollectionFolderItemsRequest
 
 - (id)init {
     if (self = [super init]) {
@@ -110,7 +121,21 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 @end
 
-@implementation DGCollectionReleasesResponse
+@implementation DGCollectionReleaseItemsRequest
+
+- (id)init {
+    if (self = [super init]) {
+        
+        self.pagination = [DGPagination new];
+        self.releaseID  = @0;
+        self.userName   = @"";
+    }
+    return self;
+}
+
+@end
+
+@implementation DGCollectionItemsResponse
 
 @synthesize pagination;
 
@@ -124,7 +149,7 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
 
 - (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
     
-    [self.pagination loadNextPageWithResponseClass:[DGCollectionReleasesResponse class] success:^(DGCollectionReleasesResponse *response) {
+    [self.pagination loadNextPageWithResponseClass:[DGCollectionItemsResponse class] success:^(DGCollectionItemsResponse *response) {
         self.pagination = response.pagination;
         self.releases = [self.releases arrayByAddingObjectsFromArray:response.releases];
         success();

@@ -45,3 +45,11 @@
 }
 
 @end
+
+@implementation DGCollectionFieldsRequest (Mapping)
+
+- (NSDictionary *)parameters {
+    return nil;
+}
+
+@end

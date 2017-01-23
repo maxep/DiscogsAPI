@@ -27,9 +27,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.artists = @[];
         self.notes = @[];
-        self.labels = @[];
     }
     return self;
 }

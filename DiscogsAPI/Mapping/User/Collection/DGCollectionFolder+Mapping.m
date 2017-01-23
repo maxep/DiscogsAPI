@@ -58,10 +58,6 @@
     return mapping;
 }
 
-+ (RKResponseDescriptor *)foldersResponseDescriptor {
-    return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionFolder mapping] method:RKRequestMethodAny pathPattern:nil keyPath:@"folders" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-}
-
 + (RKResponseDescriptor *)responseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionFolder mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
@@ -71,14 +67,10 @@
 @implementation DGCollectionFoldersRequest (Mapping)
 
 + (RKResponseDescriptor *)responseDescriptor {
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionFoldersRequest class]];
-    
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"folders" toKeyPath:@"folders" withMapping:[DGCollectionFolder mapping]]];
-    
-    return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionFolder mapping] method:RKRequestMethodAny pathPattern:nil keyPath:@"folders" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
-- (NSDictionary*) parameters {
+- (NSDictionary *) parameters {
     return nil; // @{ @"username" : self.userName };
 }
 
@@ -111,24 +103,30 @@
 
 @end
 
-@implementation DGCollectionReleasesRequest (Mapping)
+@implementation DGCollectionFolderItemsRequest (Mapping)
 
 - (NSDictionary *)parameters {
-    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                      @"sort"       : DGSortFolderItemsAsString(self.sort),
-                                                                                      @"sort_order" : DGSortOrderAsString(self.sortOrder)
-                                                                                      }];
-    
-    [parameters addEntriesFromDictionary:[self.pagination parameters]];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"sort"] = DGSortFolderItemsAsString(self.sort);
+    parameters[@"sort_order"] = DGSortOrderAsString(self.sortOrder);    
+    [parameters addEntriesFromDictionary:self.pagination.parameters];
     return parameters;
 }
 
 @end
 
-@implementation DGCollectionReleasesResponse (Mapping)
+@implementation DGCollectionReleaseItemsRequest (Mapping)
+
+- (NSDictionary *)parameters {
+    return self.pagination.parameters;
+}
+
+@end
+
+@implementation DGCollectionItemsResponse (Mapping)
 
 + (RKMapping *)mapping {
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionReleasesResponse class]];
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGCollectionItemsResponse class]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"pagination" toKeyPath:@"pagination" withMapping:[DGPagination mapping]]];
     
@@ -138,7 +136,7 @@
 }
 
 + (RKResponseDescriptor *)responseDescriptor {
-    return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionReleasesResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    return [RKResponseDescriptor responseDescriptorWithMapping:[DGCollectionItemsResponse mapping] method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 }
 
 @end

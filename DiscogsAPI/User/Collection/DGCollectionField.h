@@ -26,18 +26,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- User's collection fields request.
- */
-@interface DGCollectionFieldsRequest : NSObject
-
-/**
- The request user name.
- */
-@property (nonatomic, strong, nullable) NSString *userName;
-
-@end
-
-/**
  A collection field.
  */
 @interface DGCollectionField : DGObject
@@ -71,6 +59,20 @@ NS_ASSUME_NONNULL_BEGIN
  Is Field public.
  */
 @property (nonatomic) BOOL isPublic;
+
+@end
+
+#pragma mark - List Custom Fields
+
+/**
+ User's collection fields request.
+ */
+@interface DGCollectionFieldsRequest : NSObject
+
+/**
+ The request user name.
+ */
+@property (nonatomic, strong, nullable) NSString *userName;
 
 @end
 

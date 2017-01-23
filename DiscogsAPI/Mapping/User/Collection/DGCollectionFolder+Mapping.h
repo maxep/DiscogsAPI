@@ -33,11 +33,9 @@
 
 @interface DGCollectionFolder (Mapping) <DGObject, DGResponseObject>
 
-+ (RKResponseDescriptor *)foldersResponseDescriptor;
-
 @end
 
-@interface DGCollectionFoldersRequest (Mapping) <DGRequestObject>
+@interface DGCollectionFoldersRequest (Mapping) <DGRequestObject, DGResponseObject>
 
 @end
 
@@ -49,11 +47,14 @@
 
 @end
 
-@interface DGCollectionReleasesRequest (Mapping) <DGRequestObject>
+@interface DGCollectionFolderItemsRequest (Mapping) <DGRequestObject>
 
 @end
 
-@interface DGCollectionReleasesResponse (Mapping) <DGResponseObject>
+@interface DGCollectionReleaseItemsRequest (Mapping) <DGRequestObject>
 
 @end
 
+@interface DGCollectionItemsResponse (Mapping) <DGResponseObject>
+
+@end

@@ -26,6 +26,21 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ A collection folder representation.
+ */
+@interface DGCollectionFolder : DGObject
+
+/// Count of folder's releases.
+@property (nonatomic, strong) NSNumber *count;
+
+/// Folder name.
+@property (nonatomic, strong, nullable) NSString *name;
+
+@end
+
+#pragma mark - Get Collection Folder
+
+/**
  Sort description of folder items.
  */
 typedef NS_ENUM(NSInteger, DGSortFolderItems){
@@ -87,6 +102,8 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 
 @end
 
+#pragma mark - Create Collection Folder
+
 /**
  Request to create a collection folder.
  */
@@ -104,6 +121,8 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 
 @end
 
+#pragma mark - Get Collection Folders
+
 /**
  Request to get the collection folders.
  */
@@ -116,22 +135,7 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 
 @end
 
-/**
- A collection folder reprsentation.
- */
-@interface DGCollectionFolder : DGObject
-
-/**
- Count of folder's releases.
- */
-@property (nonatomic, strong) NSNumber *count;
-
-/**
- Folder name.
- */
-@property (nonatomic, strong, nullable) NSString *name;
-
-@end
+#pragma mark - Add To Collection Folder
 
 /**
  Request to add a release to a collection folder.
@@ -162,48 +166,54 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort);
 
 @end
 
-/**
- Get collection folder's releases request.
- */
-@interface DGCollectionReleasesRequest : NSObject
+#pragma mark - Get Collection Items
 
 /**
- The pagination paramerters.
+ Get collection items by folder request.
  */
+@interface DGCollectionFolderItemsRequest : NSObject
+
+/// The pagination paramerters.
 @property (nonatomic, strong) DGPagination *pagination;
 
-/**
- The collection username.
- */
+/// The collection username.
 @property (nonatomic, strong) NSString *userName;
 
-/**
- The requested collection folder ID.
- */
+/// The requested collection folder ID.
 @property (nonatomic, strong) NSNumber *folderID;
 
-/**
- The sort description.
- */
+/// The sort description.
 @property (nonatomic) DGSortFolderItems sort;
 
-/**
- The sort order.
- */
+/// The sort order.
 @property (nonatomic) DGSortOrder sortOrder;
+
+@end
+
+/**
+ Get collection items by release request.
+ */
+@interface DGCollectionReleaseItemsRequest : NSObject
+
+/// The pagination paramerters.
+@property (nonatomic, strong) DGPagination *pagination;
+
+/// The collection username.
+@property (nonatomic, strong) NSString *userName;
+
+/// The requested collection folder ID.
+@property (nonatomic, strong) NSNumber *releaseID;
 
 @end
 
 @class DGReleaseInstance;
 
 /**
- The paginated collection folder releases response.
+ The paginated collection items response.
  */
-@interface DGCollectionReleasesResponse : NSObject <DGPaginated>
+@interface DGCollectionItemsResponse : NSObject <DGPaginated>
 
-/**
- The folder releases.
- */
+/// The folder releases.
 @property (nonatomic, strong) NSArray<DGReleaseInstance *> *releases;
 
 @end

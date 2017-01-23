@@ -22,7 +22,7 @@
 
 #import "DGReleaseInstance+Mapping.h"
 
-#import "DGArtist+Mapping.h"
+#import "DGRelease+Mapping.h"
 #import "DGCollectionFieldInstance+Mapping.h"
 
 @implementation DGReleaseInstance (Mapping)
@@ -30,16 +30,14 @@
 + (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGReleaseInstance class]];
     [mapping addAttributeMappingsFromDictionary:@{
-                                                  @"instance_id"                : @"ID",
-                                                  @"rating"                     : @"rating",
-                                                  @"basic_information.thumb"    : @"thumb",
-                                                  @"basic_information.title"    : @"title",
-                                                  @"basic_information.year"     : @"year",
-                                                  @"basic_information.id"       : @"releaseID",
-                                                  @"basic_information.labels"   : @"labels"
+                                                  @"instance_id"    : @"id",
+                                                  @"uri"            : @"uri",
+                                                  @"resource_url"   : @"resourceURL",
+                                                  @"rating"         : @"rating",
+                                                  @"folder_id"      : @"folderID"
                                                   }];
     
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"basic_information.artists" toKeyPath:@"artists" withMapping:[DGArtist mapping]]];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"basic_information" toKeyPath:@"basicInformation" withMapping:[DGRelease mapping]]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"notes" toKeyPath:@"notes" withMapping:[DGCollectionFieldInstance mapping]]];
     

@@ -26,3 +26,7 @@
 @interface DGCollectionField (Mapping) <DGObject, DGResponseObject>
 
 @end
+
+@interface DGCollectionFieldsRequest (Mapping) <DGRequestObject>
+
+@end
