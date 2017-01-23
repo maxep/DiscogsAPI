@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString  *notes;
 
 /// The wanted release.
-@property (nonatomic, strong, nullable) DGRelease *DGRelease;
+@property (nonatomic, strong, nullable) DGRelease *basicInformation;
 
 @end
 

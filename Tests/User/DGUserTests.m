@@ -99,8 +99,8 @@
     
     DGWant *want = response.wants[0];
     XCTAssertEqualObjects(want.rating, @4);
-    XCTAssertEqualObjects(want.DGRelease.title, @"Year Zero");
-    XCTAssertEqualObjects(want.DGRelease.ID, @1867708);
+    XCTAssertEqualObjects(want.basicInformation.title, @"Year Zero");
+    XCTAssertEqualObjects(want.basicInformation.ID, @1867708);
 }
 
 - (void)testWantlistOperation {

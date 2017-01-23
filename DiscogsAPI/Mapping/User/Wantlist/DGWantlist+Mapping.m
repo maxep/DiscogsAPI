@@ -71,7 +71,7 @@
                                                   @"resource_url"   : @"resourceURL"
                                                   }];
     
-    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"basic_information" toKeyPath:@"DGRelease" withMapping:[DGRelease mapping]]];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"basic_information" toKeyPath:@"basicInformation" withMapping:[DGRelease mapping]]];
     
     return mapping;
 }
