@@ -30,7 +30,7 @@
 + (RKMapping *)mapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[DGReleaseInstance class]];
     [mapping addAttributeMappingsFromDictionary:@{
-                                                  @"instance_id"    : @"id",
+                                                  @"instance_id"    : @"ID",
                                                   @"uri"            : @"uri",
                                                   @"resource_url"   : @"resourceURL",
                                                   @"rating"         : @"rating",
