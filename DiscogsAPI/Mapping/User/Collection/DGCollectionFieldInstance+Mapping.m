@@ -1,7 +1,7 @@
 // DGCollectionFieldInstance+Mapping.m
 //
 // Created by Nate Rivard on 5/1/16.
-// Copyright (c) 2016 Maxime Epain
+// Copyright (c) 2017 Maxime Epain
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

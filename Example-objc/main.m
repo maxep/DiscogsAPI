@@ -3,7 +3,7 @@
 //  DiscogsAPI
 //
 //  Created by Maxime Epain on 16/08/2015.
-//  Copyright (c) 2016 Maxime Epain. All rights reserved.
+//  Copyright (c) 2017 Maxime Epain. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
