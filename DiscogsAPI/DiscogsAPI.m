@@ -76,18 +76,6 @@ DGMediaType StringDGMediaType(NSString *str) {
     manager.requestSerializationMIMEType = RKMIMETypeJSON;
 }
 
-#pragma mark Public Methods
-
-- (void)isAuthenticated:(void (^)(BOOL success))success {
-    
-    [self.authentication identityWithSuccess:^(DGIdentity * _Nonnull identity) {
-        success(YES);
-    } failure:^(NSError *error) {
-        success(    error.code == NSURLErrorNotConnectedToInternet/* &&
-                    self.authentication.oAuth1Client.accessToken*/);
-    }];
-}
-
 #pragma mark Properties
 
 - (DGMediaType)mediaType {

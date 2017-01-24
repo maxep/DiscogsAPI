@@ -90,13 +90,6 @@ typedef NS_ENUM(NSInteger, DGMediaType){
  */
 @property (class, readonly) Discogs *api;
 
-/**
- Checks if the user is authenticated.
-
- @param success A block object called with the authentication status. This block has no return value and one argument: whether or not the user is authenticated.
- */
-- (void)isAuthenticated:(void (^)(BOOL success))success;
-
 @end
 
 @interface DiscogsAPI : Discogs
