@@ -131,6 +131,9 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 
 #pragma mark Properties
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 - (DGHTTPClient *)HTTPClient {
     
     if (!_HTTPClient) {
@@ -153,5 +156,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     }
     return _HTTPClient;
 }
+
+#pragma GCC diagnostic pop
 
 @end

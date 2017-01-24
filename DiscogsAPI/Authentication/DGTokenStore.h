@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Token store to save and retrieve OAuth account tokens into Apple keychain.
  */
+DEPRECATED_MSG_ATTRIBUTE("DGTokenStore has been deprecated, token are now store with the current DGIdentity.")
 @interface DGTokenStore : NSObject
 
 /**
