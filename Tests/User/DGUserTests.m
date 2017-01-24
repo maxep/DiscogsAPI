@@ -1,17 +1,30 @@
+// DGUserTests.m
 //
-//  DGUserTests.m
-//  DiscogsAPI
+// Copyright (c) 2017 Maxime Epain
 //
-//  Created by Maxime Epain on 22/10/2016.
-//  Copyright © 2016 Maxime Epain. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "DGTestCase.h"
 
 #import <DiscogsAPI/DGProfile+Mapping.h>
-#import <DiscogsAPI/DGWantlist+Mapping.h>
 
-@interface DGUserTests<DGUser> : DGTestCase
+@interface DGUserTests : DGTestCase<DGUser *>
 
 @end
 
@@ -80,40 +93,6 @@
     
     [operation start];
     [operation waitUntilFinished];
-}
-
-#pragma mark Wantlist
-
-- (void)testWantlistMapping {
-    
-    DGWantlistResponse *response = [DGWantlistResponse new];
-    id json = [RKTestFixture parsedObjectWithContentsOfFixture:@"wantlist.json"];
-    RKMappingTest *test = [RKMappingTest testForMapping:DGWantlistResponse.responseDescriptor.mapping sourceObject:json destinationObject:response];
-    
-    XCTAssertTrue(test.evaluate);
-    
-    XCTAssertEqualObjects(response.pagination.perPage, @50);
-    XCTAssertEqualObjects(response.pagination.pages, @1);
-    XCTAssertEqualObjects(response.pagination.page, @1);
-    XCTAssertEqualObjects(response.pagination.items, @2);
-    
-    DGWant *want = response.wants[0];
-    XCTAssertEqualObjects(want.rating, @4);
-    XCTAssertEqualObjects(want.basicInformation.title, @"Year Zero");
-    XCTAssertEqualObjects(want.basicInformation.ID, @1867708);
-}
-
-- (void)testWantlistOperation {
-    DGWantlistRequest *request = [DGWantlistRequest new];
-    request.userName = @"maxepTestUser";
-    
-    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGWantlistResponse class]];
-    
-    [operation start];
-    [operation waitUntilFinished];
-    
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGWantlistResponse class]], @"Expected to load a profile");
 }
 
 @end

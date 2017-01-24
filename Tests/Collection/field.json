@@ -1,0 +1,17 @@
+{
+      "name": "Media",
+      "options": [
+        "Mint (M)",
+        "Near Mint (NM or M-)",
+        "Very Good Plus (VG+)",
+        "Very Good (VG)",
+        "Good Plus (G+)",
+        "Good (G)",
+        "Fair (F)",
+        "Poor (P)"
+      ],
+      "id": 1,
+      "position": 1,
+      "type": "dropdown",
+      "public": true
+    }
