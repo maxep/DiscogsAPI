@@ -73,24 +73,6 @@ NSString * const DGErrorDomain = @"com.discogs.api";
 
 @end
 
-@implementation RKObjectManager (DGOperation)
-
-- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method {
-    return [self operationWithRequest:request method:method responseClass:nil];
-}
-
-- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method responseClass:(Class<DGResponseObject>)responseClass {
-    NSDictionary *parameters = nil;
-    if ([request respondsToSelector:@selector(parameters)]) {
-        parameters = request.parameters;
-    }
-    
-    NSURLRequest *requestURL = [self requestWithObject:request method:method path:nil parameters:parameters];
-    return [DGOperation operationWithRequest:requestURL responseClass:responseClass];
-}
-
-@end
-
 @implementation NSError (Discogs)
 
 + (instancetype)errorWithCode:(NSInteger)code description:(NSString *)description {

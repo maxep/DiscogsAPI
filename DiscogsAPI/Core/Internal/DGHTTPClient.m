@@ -51,6 +51,7 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
     NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
     if (self = [super initWithBaseURL:baseURL key:key secret:secret]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs key=%@, secret=%@", key, secret];
+        self.signatureMethod = AFPlainTextSignatureMethod;
     }
     return self;
 }
@@ -59,6 +60,7 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
     NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
     if (self = [super initWithBaseURL:baseURL]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs token=%@", token];
+        self.signatureMethod = AFPlainTextSignatureMethod;
     }
     return self;
 }

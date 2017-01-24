@@ -21,26 +21,38 @@
 // THE SOFTWARE.
 
 #import "DiscogsAPI.h"
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGHTTPClient.h"
+
+static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
+static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
+static NSString * const kDiscogsAccessToken    = @"DiscogsAccessToken";
 
 NSString *DGMediaTypeAsString(DGMediaType type) {
     return @[@"discogs", @"html", @"plaintext"][type];
 }
 
-DGMediaType StringDGMediaType(NSString *str) {
+DGMediaType DGMediaTypeFromString(NSString *str) {
     return [@{@"discogs":@0, @"html":@1, @"plaintext":@2}[str] integerValue];
 }
 
-@interface Discogs ()
-@property (nonatomic, strong) DGAuthentication  *authentication;
-@property (nonatomic, strong) DGDatabase        *database;
-@property (nonatomic, strong) DGUser            *user;
-@property (nonatomic, strong) DGMarketplace     *marketplace;
-@property (nonatomic, strong) DGResource        *resource;
-@end
-
 @implementation Discogs
+
+static NSString * ConsumerKey    = nil;
+static NSString * ConsumerSecret = nil;
+static NSString * AccessToken    = nil;
+
++ (void)setConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
+    ConsumerKey = key;
+    ConsumerSecret = secret;
+    AccessToken = nil;
+}
+
++ (void)setPersonalAccessToken:(NSString *)token {
+    ConsumerKey = nil;
+    ConsumerSecret = nil;
+    AccessToken = token;
+}
 
 + (Discogs *)api {
     static Discogs *discogs = nil;
@@ -48,9 +60,20 @@ DGMediaType StringDGMediaType(NSString *str) {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
+        NSString *consumerKey    = ConsumerKey?:    [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
+        NSString *consumerSecret = ConsumerSecret?: [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
+        NSString *accessToken    = AccessToken?:    [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsAccessToken];
+        
+        DGObjectManager *manager = nil;
+        if (consumerKey && consumerSecret) {
+            manager = [DGObjectManager managerWithConsumerKey:consumerKey consumerSecret:consumerSecret];
+        } else if(accessToken) {
+            manager = [DGObjectManager managerWithPersonalAccessToken:accessToken];
+        } else {
+            manager = [DGObjectManager manager];
+        }
+        
         //Setup client
-        DGHTTPClient *client = [[DGHTTPClient alloc] init];
-        RKObjectManager *manager = [[RKObjectManager alloc] initWithHTTPClient:client];
         discogs = [[Discogs alloc] initWithManager:manager];
         
         AFRKNetworkActivityIndicatorManager.sharedManager.enabled = YES;
@@ -59,33 +82,27 @@ DGMediaType StringDGMediaType(NSString *str) {
     return discogs;
 }
 
-- (instancetype)initWithManager:(RKObjectManager *)manager {
+- (instancetype)initWithManager:(DGObjectManager *)manager {
     self = [super initWithManager:manager];
     if (self) {
         //Create and configure endpoints
-        self.authentication = [[DGAuthentication alloc] initWithManager:manager];
-        self.database       = [[DGDatabase alloc] initWithManager:manager];
-        self.user           = [[DGUser alloc] initWithManager:manager];
-        self.marketplace    = [[DGMarketplace alloc] initWithManager:manager];
-        self.resource       = [[DGResource alloc] initWithManager:manager];
+        _authentication = [[DGAuthentication alloc] initWithManager:manager];
+        _database       = [[DGDatabase alloc] initWithManager:manager];
+        _user           = [[DGUser alloc] initWithManager:manager];
+        _marketplace    = [[DGMarketplace alloc] initWithManager:manager];
+        _resource       = [[DGResource alloc] initWithManager:manager];
     }
     return self;
-}
-
-- (void)configureManager:(RKObjectManager *)manager {
-    manager.requestSerializationMIMEType = RKMIMETypeJSON;
 }
 
 #pragma mark Properties
 
 - (DGMediaType)mediaType {
-    // TODO (maxep) : find a better way
-    return StringDGMediaType([(DGHTTPClient *)self.manager.HTTPClient mediaType]);
+    return DGMediaTypeFromString(self.manager.HTTPClient.mediaType);
 }
 
 - (void)setMediaType:(DGMediaType)mediaType {
-    // TODO (maxep) : find a better way
-    [(DGHTTPClient *)self.manager.HTTPClient setMediaType:DGMediaTypeAsString(mediaType)];
+    self.manager.HTTPClient.mediaType = DGMediaTypeAsString(mediaType);
 }
 
 @end

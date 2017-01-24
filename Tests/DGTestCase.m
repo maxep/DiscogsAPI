@@ -42,7 +42,7 @@
     
     [_client setDefaultHeader:@"User-Agent" value:userAgent];
     
-    _manager = [[RKObjectManager alloc] initWithHTTPClient:self.client];
+    _manager = [[DGObjectManager alloc] initWithHTTPClient:self.client];
     _manager.requestSerializationMIMEType = RKMIMETypeJSON;
 }
     

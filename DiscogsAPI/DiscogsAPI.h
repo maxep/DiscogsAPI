@@ -84,6 +84,23 @@ typedef NS_ENUM(NSInteger, DGMediaType){
 @property (nonatomic,readwrite) DGMediaType mediaType;
 
 /**
+ Sets the application consumer key and secret.
+ This method should be called before any call to `Discogs.api`.
+ 
+ @param key The consumer key.
+ @param secret The consumer secret.
+ */
++ (void)setConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
+
+/**
+ Sets the application personal access token.
+ This method should be called before any call to `Discogs.api`.
+ 
+ @param token The personal access token.
+ */
++ (void)setPersonalAccessToken:(NSString *)token;
+
+/**
  The shared discogs api client.
  
  @return The shared discogs api client.

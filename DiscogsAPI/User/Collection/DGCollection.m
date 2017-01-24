@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGCollection.h"
 #import "DGReleaseInstance+Mapping.h"
 #import "DGCollectionFolder+Mapping.h"
@@ -28,7 +28,7 @@
 
 @implementation DGCollection
 
-- (void)configureManager:(RKObjectManager *)manager {
+- (void)configureManager:(DGObjectManager *)manager {
     
     //User collection folders
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGCollectionFoldersRequest class] pathPattern:@"users/:userName/collection/folders" method:RKRequestMethodAny]];

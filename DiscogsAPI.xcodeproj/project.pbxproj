@@ -39,12 +39,14 @@
 		9C4724E81E3760C900D6FEB2 /* listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E71E3760C900D6FEB2 /* listing.json */; };
 		9C4724EA1E3773EC00D6FEB2 /* field.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E91E3773EC00D6FEB2 /* field.json */; };
 		9C4724EC1E37861D00D6FEB2 /* collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724EB1E37861D00D6FEB2 /* collection.json */; };
-		9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Configuration.m */; };
+		9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Private.m */; };
 		9C4724F61E37A38B00D6FEB2 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C4724F71E37A38B00D6FEB2 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */; };
 		9C4724F81E37A38B00D6FEB2 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724F21E37A38B00D6FEB2 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C4724F91E37A38B00D6FEB2 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724F31E37A38B00D6FEB2 /* DGOperation.m */; };
+		9C4724FC1E37AD5B00D6FEB2 /* DGObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724FA1E37AD5B00D6FEB2 /* DGObjectManager.h */; };
+		9C4724FD1E37AD5B00D6FEB2 /* DGObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724FB1E37AD5B00D6FEB2 /* DGObjectManager.m */; };
 		9C55DB3E1D06FE1600DF8AFE /* DGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2B1D06196000DF8AFE /* DGViewController.m */; };
 		9C55DB3F1D06FE1A00DF8AFE /* DGReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2F1D0619B800DF8AFE /* DGReleaseViewController.m */; };
 		9C55DB401D06FE1E00DF8AFE /* DGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB331D0619CB00DF8AFE /* DGMasterViewController.m */; };
@@ -63,7 +65,6 @@
 		9CA793FC1D04ED5F0006EE89 /* DGReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F11D04ED5F0006EE89 /* DGReleaseViewController.swift */; };
 		9CA793FD1D04ED5F0006EE89 /* DGSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F21D04ED5F0006EE89 /* DGSearchViewController.swift */; };
 		9CA793FE1D04ED5F0006EE89 /* DGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA793F31D04ED5F0006EE89 /* DGViewController.swift */; };
-		9CA793FF1D04ED5F0006EE89 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CA793F41D04ED5F0006EE89 /* Info.plist */; };
 		9CA794021D04ED8A0006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794001D04ED8A0006EE89 /* Launch Screen.storyboard */; };
 		9CA794031D04ED8A0006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794011D04ED8A0006EE89 /* Main.storyboard */; };
 		9CA7940D1D055FB40006EE89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA7940C1D055FB40006EE89 /* main.m */; };
@@ -246,12 +247,14 @@
 		9C4724E71E3760C900D6FEB2 /* listing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = listing.json; path = Maketplace/listing.json; sourceTree = "<group>"; };
 		9C4724E91E3773EC00D6FEB2 /* field.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = field.json; path = Collection/field.json; sourceTree = "<group>"; };
 		9C4724EB1E37861D00D6FEB2 /* collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collection.json; sourceTree = "<group>"; };
-		9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
-		9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Configuration.m"; sourceTree = "<group>"; };
+		9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Private.h"; sourceTree = "<group>"; };
+		9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Private.m"; sourceTree = "<group>"; };
 		9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
 		9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
 		9C4724F21E37A38B00D6FEB2 /* DGOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperation.h; sourceTree = "<group>"; };
 		9C4724F31E37A38B00D6FEB2 /* DGOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperation.m; sourceTree = "<group>"; };
+		9C4724FA1E37AD5B00D6FEB2 /* DGObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGObjectManager.h; sourceTree = "<group>"; };
+		9C4724FB1E37AD5B00D6FEB2 /* DGObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGObjectManager.m; sourceTree = "<group>"; };
 		9C55DB2A1D06196000DF8AFE /* DGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGViewController.h; sourceTree = "<group>"; };
 		9C55DB2B1D06196000DF8AFE /* DGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGViewController.m; sourceTree = "<group>"; };
 		9C55DB2E1D0619B800DF8AFE /* DGReleaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGReleaseViewController.h; sourceTree = "<group>"; };
@@ -582,12 +585,14 @@
 		9C4724ED1E37A38B00D6FEB2 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Configuration.h */,
-				9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Configuration.m */,
-				9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */,
-				9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */,
+				9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Private.h */,
+				9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Private.m */,
 				9C4724F21E37A38B00D6FEB2 /* DGOperation.h */,
 				9C4724F31E37A38B00D6FEB2 /* DGOperation.m */,
+				9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */,
+				9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */,
+				9C4724FA1E37AD5B00D6FEB2 /* DGObjectManager.h */,
+				9C4724FB1E37AD5B00D6FEB2 /* DGObjectManager.m */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -1151,6 +1156,7 @@
 			files = (
 				D0A588AA1CFF9482008DF0A4 /* DGMaster.h in Headers */,
 				D0A588B01CFF9482008DF0A4 /* DGSearch.h in Headers */,
+				9C4724FC1E37AD5B00D6FEB2 /* DGObjectManager.h in Headers */,
 				D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */,
 				D0A588A41CFF9482008DF0A4 /* DGDatabase.h in Headers */,
 				D0A588AC1CFF9482008DF0A4 /* DGMasterVersion.h in Headers */,
@@ -1209,7 +1215,7 @@
 				D0A588D21CFF9482008DF0A4 /* DGPrice+Mapping.h in Headers */,
 				D0A588BC1CFF9482008DF0A4 /* DGFormat+Mapping.h in Headers */,
 				D0A588C81CFF9482008DF0A4 /* DGLabelRelease+Mapping.h in Headers */,
-				9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Configuration.h in Headers */,
+				9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Private.h in Headers */,
 				9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */,
 				9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */,
 				9C4724F81E37A38B00D6FEB2 /* DGOperation.h in Headers */,
@@ -1391,7 +1397,6 @@
 				9CA794031D04ED8A0006EE89 /* Main.storyboard in Resources */,
 				9CA793F51D04ED5F0006EE89 /* Assets.xcassets in Resources */,
 				9CA794021D04ED8A0006EE89 /* Launch Screen.storyboard in Resources */,
-				9CA793FF1D04ED5F0006EE89 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1629,7 +1634,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Configuration.m in Sources */,
+				9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Private.m in Sources */,
+				9C4724FD1E37AD5B00D6FEB2 /* DGObjectManager.m in Sources */,
 				D0A588AF1CFF9482008DF0A4 /* DGRelease.m in Sources */,
 				D0A588B51CFF9482008DF0A4 /* DGArtist+Mapping.m in Sources */,
 				D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */,

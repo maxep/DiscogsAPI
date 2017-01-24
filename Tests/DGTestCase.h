@@ -27,13 +27,13 @@
 #import <DiscogsAPI/DiscogsAPI.h>
 #import <DiscogsAPI/DGOperation.h>
 #import <DiscogsAPI/DGHTTPClient.h>
-#import <DiscogsAPI/DGEndpoint+Configuration.h>
+#import <DiscogsAPI/DGEndpoint+Private.h>
 
 @interface DGTestCase<__covariant EndpointType : DGEndpoint *> : XCTestCase
 
 @property (nonatomic, readonly) DGHTTPClient *client;
 
-@property (nonatomic, readonly) RKObjectManager *manager;
+@property (nonatomic, readonly) DGObjectManager *manager;
 
 @property (nonatomic, strong) EndpointType endpoint;
 

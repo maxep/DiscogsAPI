@@ -22,11 +22,6 @@ extern NSString * const kDGIdentityCurrentIdentifier;
 @interface DGIdentity (Keychain) <NSSecureCoding, NSCopying>
 
 /**
- The currently autenticated user identity.
- */
-@property (class, nullable) DGIdentity *current;
-
-/**
  Sets the accessibility type for all future identities saved to the Keychain.
  The default accessibility type is `kSecAttrAccessibleWhenUnlocked`.
  
@@ -68,6 +63,16 @@ extern NSString * const kDGIdentityCurrentIdentifier;
  @return 'YES' if it succeeded. Otherwise 'NO'.
  */
 + (BOOL)storeIdentity:(nullable DGIdentity *)identity withIdentifier:(NSString *)identifier;
+
+/**
+ The currently authenticated user identity.
+ */
+@property (class, nullable) DGIdentity *current;
+
+/**
+ The user access token.
+ */
+@property (nonatomic, strong) AFOAuth1Token *accessToken;
 
 @end
 

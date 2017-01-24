@@ -20,14 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGProfile+Mapping.h"
 
 #import "DGUser.h"
 
 @implementation DGUser
 
-- (instancetype)initWithManager:(RKObjectManager *)manager {
+- (instancetype)initWithManager:(DGObjectManager *)manager {
     self = [super initWithManager:manager];
     if (self) {
         _wantlist = [[DGWantlist alloc] initWithManager:manager];
@@ -38,7 +38,7 @@
 
 #pragma mark Configuration
 
-- (void)configureManager:(RKObjectManager*)objectManager {
+- (void)configureManager:(DGObjectManager*)objectManager {
     //User Profile
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGProfile class] pathPattern:@"users/:userName" method:RKRequestMethodAny]];
 }

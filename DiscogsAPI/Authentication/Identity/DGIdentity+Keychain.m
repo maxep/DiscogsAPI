@@ -13,6 +13,7 @@ NSString * const kDGIdentityCurrentIdentifier = @"DGIdentityCurrentIdentifier";
 @implementation DGIdentity (Keychain)
 
 @dynamic current;
+@dynamic accessToken;
 
 #pragma mark <NSSecureCoding>
 
@@ -24,8 +25,15 @@ NSString * const kDGIdentityCurrentIdentifier = @"DGIdentityCurrentIdentifier";
         self.uri = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(uri))];
         self.consumerName = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(consumerName))];
         self.userName = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(userName))];
-        self.token = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(token))];
-        self.secret = [coder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(secret))];
+        
+        // Backward compatibility
+        NSString *token = [coder decodeObjectOfClass:[NSString class] forKey:@"token"];
+        NSString *secret = [coder decodeObjectOfClass:[NSString class] forKey:@"secret"];
+        if (token && secret) {
+            self.accessToken = [[AFOAuth1Token alloc] initWithKey:token secret:secret session:nil expiration:nil renewable:NO];
+        } else {
+            self.accessToken = [coder decodeObjectOfClass:[AFOAuth1Token class] forKey:NSStringFromSelector(@selector(accessToken))];
+        }
     }
     return self;
 }
@@ -36,8 +44,7 @@ NSString * const kDGIdentityCurrentIdentifier = @"DGIdentityCurrentIdentifier";
     [coder encodeObject:self.uri forKey:NSStringFromSelector(@selector(uri))];
     [coder encodeObject:self.consumerName forKey:NSStringFromSelector(@selector(consumerName))];
     [coder encodeObject:self.userName forKey:NSStringFromSelector(@selector(userName))];
-    [coder encodeObject:self.token forKey:NSStringFromSelector(@selector(token))];
-    [coder encodeObject:self.secret forKey:NSStringFromSelector(@selector(secret))];
+    [coder encodeObject:self.accessToken forKey:NSStringFromSelector(@selector(accessToken))];
 }
 
 + (BOOL)supportsSecureCoding {
@@ -53,8 +60,7 @@ NSString * const kDGIdentityCurrentIdentifier = @"DGIdentityCurrentIdentifier";
     copy.uri            = self.uri.copy;
     copy.consumerName   = self.consumerName.copy;
     copy.userName       = self.userName.copy;
-    copy.token          = self.token.copy;
-    copy.secret         = self.secret.copy;
+    copy.accessToken    = self.accessToken.copy;
     return copy;
 }
 

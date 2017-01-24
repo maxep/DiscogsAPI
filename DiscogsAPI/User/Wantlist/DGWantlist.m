@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGPagination+Mapping.h"
 #import "DGWantlist+Mapping.h"
 
@@ -82,7 +82,7 @@
 
 @implementation DGWantlist
 
-- (void)configureManager:(RKObjectManager *)objectManager {
+- (void)configureManager:(DGObjectManager *)objectManager {
     
     //User wantlist
     [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[DGWantlistRequest class] pathPattern:@"users/:userName/wants" method:RKRequestMethodGET]];

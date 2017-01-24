@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import <RestKit/RestKit.h>
+
 #import "DGMapping.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -64,34 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param failure The block to be executed on the completion of an unsuccessful operation. This block has no return value and takes two arguments: the receiver operation and the error that occurred during the execution of the operation.
  */
 - (void)setCompletionBlockWithSuccess:(void (^)(DGResponseType response))success failure:(nullable void (^)(NSError * _Nullable error))failure;
-
-@end
-
-/**
- An RKObjectManager category that creates `DGOperation` objects.
- */
-@interface RKObjectManager (DGOperation)
-
-/**
- Creates a `DGOperation` operation with the given request object.
-
- @param request The request object.
- @param method  The HTTP method for request.
-
- @return The operation.
- */
-- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method;
-
-/**
- Creates a `DGOperation` operation with the given request object for the given response class.
-
- @param request       The request object.
- @param method        The HTTP method for request.
- @param responseClass The response class.
-
- @return The operation.
- */
-- (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method responseClass:(nullable Class<DGResponseObject>)responseClass;
 
 @end
 

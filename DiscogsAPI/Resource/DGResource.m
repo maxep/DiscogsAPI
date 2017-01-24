@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGResource.h"
 
 @implementation DGResource

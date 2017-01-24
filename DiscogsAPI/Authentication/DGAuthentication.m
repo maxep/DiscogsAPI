@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGAuthentication.h"
 #import "DGHTTPClient.h"
 
@@ -30,36 +30,31 @@
 #import "DGIdentity+Keychain.h"
 #import "DGIdentity+Mapping.h"
 
-static NSString * const kDiscogsConsumerKey    = @"DiscogsConsumerKey";
-static NSString * const kDiscogsConsumerSecret = @"DiscogsConsumerSecret";
-static NSString * const kDiscogsAccessToken    = @"DiscogsAccessToken";
-
 NSString * const DGCallback = @"discogsapi://success";
 
 static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialDiscogsAccount";
-
-@interface DGAuthentication ()
-@property (nonatomic, strong) DGHTTPClient *HTTPClient;
-@property (nonatomic, strong) NSString *consumerKey;
-@property (nonatomic, strong) NSString *consumerSecret;
-@property (nonatomic, strong) NSString *accessToken;
-@end
 
 @implementation DGAuthentication {
     NSString *_callback;
 }
 
-- (void)configureManager:(RKObjectManager *)manager {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+- (void)configureManager:(DGObjectManager *)manager {
     
-    self.consumerKey    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerKey];
-    self.consumerSecret = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsConsumerSecret];
-    self.accessToken    = [[NSBundle mainBundle] objectForInfoDictionaryKey:kDiscogsAccessToken];
-    
-    manager.HTTPClient = self.HTTPClient;
-    
+    if (DGIdentity.current) {
+        manager.HTTPClient.accessToken = DGIdentity.current.accessToken;
+    } else {
+        //Backward compatibility
+        manager.HTTPClient.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
+    }
+
     //User Identity
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGIdentity class] pathPattern:@"oauth/identity" method:RKRequestMethodGET]];
 }
+
+#pragma GCC diagnostic pop
 
 - (void)identityWithSuccess:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
     DGIdentity *identity = [DGIdentity new];
@@ -67,8 +62,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     DGOperation<DGIdentity *> *operation = [self.manager operationWithRequest:identity method:RKRequestMethodGET responseClass:[DGIdentity class]];
     [operation setCompletionBlockWithSuccess:^(DGIdentity * _Nonnull response) {
         
-        response.token = self.HTTPClient.accessToken.key;
-        response.secret = self.HTTPClient.accessToken.secret;
+        response.accessToken = self.manager.HTTPClient.accessToken;
         [DGIdentity storeIdentity:response withIdentifier:kDGIdentityCurrentIdentifier];
         success(response);
         
@@ -95,7 +89,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         if (error.code == 401) {
             _callback = callback.absoluteString;
             
-            [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
+            [self.manager.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
                 [self identityWithSuccess:success failure:failure];
             } failure:failure];
             
@@ -119,7 +113,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
 
 - (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
     
-    [self.HTTPClient setServiceProviderRequestHandler:^(NSURLRequest *request) {
+    [self.manager.HTTPClient setServiceProviderRequestHandler:^(NSURLRequest *request) {
         DGAuthView *view = [DGAuthView viewWithRequest:request];
         authView(view);
     } completion:nil];
@@ -127,35 +121,5 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     NSURL *callback = [NSURL URLWithString:DGCallback];
     [self authenticateWithCallback:callback success:success failure:failure];
 }
-
-#pragma mark Properties
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
-- (DGHTTPClient *)HTTPClient {
-    
-    if (!_HTTPClient) {
-        if (self.consumerKey && self.consumerSecret) {
-            _HTTPClient = [DGHTTPClient clientWithConsumerKey:self.consumerKey consumerSecret:self.consumerSecret];
-        } else if(self.accessToken) {
-            _HTTPClient = [DGHTTPClient clientWithPersonalAccessToken:self.accessToken];
-        } else {
-            _HTTPClient = [DGHTTPClient new];
-        }
-        
-        DGIdentity *identity = DGIdentity.current;
-        if (identity) {
-            _HTTPClient.accessToken = [[AFOAuth1Token alloc] initWithKey:identity.token secret:identity.secret session:nil expiration:nil renewable:NO];
-        } else {
-            _HTTPClient.accessToken = [DGTokenStore retrieveCredentialWithIdentifier:kDGOAuth1CredentialDiscogsAccount];
-        }
-        
-        _HTTPClient.signatureMethod = AFPlainTextSignatureMethod;
-    }
-    return _HTTPClient;
-}
-
-#pragma GCC diagnostic pop
 
 @end

@@ -22,6 +22,10 @@
 
 #import "DGIdentity+Keychain.h"
 
+@interface DGIdentity ()
+@property (nonatomic, strong) AFOAuth1Token *accessToken;
+@end
+
 @implementation DGIdentity
 
 static DGIdentity *_current = nil;

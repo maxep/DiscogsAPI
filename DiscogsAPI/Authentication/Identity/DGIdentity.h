@@ -44,16 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSString *consumerName;
 
-/**
-  OAuth access token.
- */
-@property (nonatomic, strong, nullable) NSString *token;
-
-/**
- OAuth access token secret.
- */
-@property (nonatomic, strong, nullable) NSString *secret;
-
 @end
 
 NS_ASSUME_NONNULL_END

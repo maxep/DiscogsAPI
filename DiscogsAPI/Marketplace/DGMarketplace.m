@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGMarketplace.h"
 
 #import "DGInventory+Mapping.h"
@@ -30,7 +30,7 @@
 
 @implementation DGMarketplace
 
-- (void)configureManager:(RKObjectManager *)manager {
+- (void)configureManager:(DGObjectManager *)manager {
     
     //Inventory
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGInventoryRequest class] pathPattern:@"/users/:username/inventory" method:RKRequestMethodGET]];

@@ -22,7 +22,7 @@
 
 #import "DGDatabase.h"
 
-#import "DGEndpoint+Configuration.h"
+#import "DGEndpoint+Private.h"
 #import "DGSearch+Mapping.h"
 #import "DGArtist+Mapping.h"
 #import "DGArtistRelease+Mapping.h"
@@ -34,7 +34,7 @@
 
 @implementation DGDatabase
 
-- (void)configureManager:(RKObjectManager *)manager {
+- (void)configureManager:(DGObjectManager *)manager {
     
     //Search
     [manager.router.routeSet addRoute:[RKRoute routeWithClass:[DGSearchRequest class] pathPattern:@"database/search" method:RKRequestMethodGET]];

@@ -1,4 +1,4 @@
-// DGEndpoint+Configuration.h
+// DGEndpoint+Configuration.m
 //
 // Copyright (c) 2017 Maxime Epain
 //
@@ -20,42 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint.h"
-#import "DGOperation.h"
+#import <objc/runtime.h>
+#import "DGEndpoint+Private.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@implementation DGEndpoint (Private)
 
-/**
- `DGEndpoint` category to hold and configure the `RKObjectManager` with the endpoint specifications.
- */
-@interface DGEndpoint (Configuration)
+- (instancetype)initWithManager:(DGObjectManager *)manager {
+    self = [super init];
+    if (self) {
+        objc_setAssociatedObject(self, @selector(manager), manager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self configureManager:manager];
+    }
+    return self;
+}
 
-/**
- Whether or not the endpoint is reachable.
- */
-@property (nonatomic, readonly) BOOL isReachable;
+- (void)configureManager:(DGObjectManager *)objectManager {
 
-/**
- The `RKObjectManager`
- */
-@property (nonatomic, readonly) RKObjectManager *manager;
+}
 
-/**
- Initializes an endpoint and configure the `RKObjectManager`object.
+#pragma mark Properties
 
- @param manager The manager to configure.
+- (DGObjectManager *)manager {
+    return objc_getAssociatedObject(self, @selector(manager));
+}
 
- @return The initialized endpoint.
- */
-- (instancetype)initWithManager:(RKObjectManager *)manager;
-
-/**
- Abstract method to configure the manager.
-
- @param manager The manager to configure.
- */
-- (void)configureManager:(RKObjectManager *)manager;
+- (BOOL)isReachable {
+    return self.manager.HTTPClient.networkReachabilityStatus != AFRKNetworkReachabilityStatusNotReachable;
+}
 
 @end
-
-NS_ASSUME_NONNULL_END
