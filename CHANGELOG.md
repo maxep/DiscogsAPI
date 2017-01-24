@@ -3,6 +3,33 @@ All notable changes to `DiscogsAPI` project will be documented in this file.
 
 --- 
 
+## [1.7.0](https://github.com/maxep/DiscogsAPI/releases/tag/1.7.0) - January 24, 2017
+
+#### Added
+- Class method `[DGIdentity current]` to get the currently authenticated user's identity.
+- `DGObjectManager` class to manage App key/secret or personal access token and create request operation.
+- `DGCollectionFieldsRequest`.
+- `[DGCollection getItemsByRelease:success:failure:]`.
+- - Collection tests.
+
+#### Removed
+- Method `[Discogs isAuthenticated:]`: Authentication can be check with `[DGAuthentication identityWithSuccess:failure:]`
+
+#### Updated
+- `DGReleaseInstance` structure.
+- Refacto `[DGCollection getCollectionFolders:success:failure:]` to `[DGCollection getFolders:success:failure:]`.
+- Refacto `[DGCollection getCollectionFolder:success:failure:]` to `[DGCollection getFolder:success:failure:]`.
+- Refacto `[DGCollection deleteCollectionFolder:success:failure:]` to `[DGCollection deleteFolder:success:failure:]`.
+- Refacto `[DGCollection createCollectionFolder:success:failure:]` to `[DGCollection createFolder:success:failure:]`.
+- Refacto `[DGCollection getCollectionReleases:success:failure:]` to `[DGCollection getItemsByFolder:success:failure:]`.
+- Refacto `[DGCollection addToCollectionFolder:success:failure:]` to `[DGCollection addToFolder:success:failure:]`.
+- Refacto `[DGCollection getCollectionFields:success:failure:]` to `[DGCollection getFields:success:failure:]`.
+- Refacto `[DGCollection editFieldsInstance:success:failure:]` to `[DGCollection editField:success:failure:]`.
+
+
+#### Fixed
+- DGReleaseInstance ID mapping.
+
 ## [1.6.2](https://github.com/maxep/DiscogsAPI/releases/tag/1.6.2) - December 6, 2016
 
 #### Added
