@@ -68,7 +68,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         
     } failure:^(NSError * _Nullable error) {
         
-        if (error.code == 401) {
+        if (error.code == DGErrorCodeUnauthorized) {
             DGIdentity.current = nil;
         }
         
@@ -86,7 +86,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     
     [self identityWithSuccess:success failure:^(NSError *error) {
         
-        if (error.code == 401) {
+        if (error.code == DGErrorCodeUnauthorized) {
             _callback = callback.absoluteString;
             
             [self.manager.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {

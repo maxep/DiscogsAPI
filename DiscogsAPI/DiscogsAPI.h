@@ -31,20 +31,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Discogs Media Type.
+ If you are requesting information from an endpoint that may have text formatting in it, you can choose which kind of formatting you want to be returned by settin the media type. We currently support 3 types:
+
+ - DGDiscogsMediaType: Discogs format {@see https://www.discogs.com/help/text-formatting.html}
+ - DGHTMLMediaType: HTML format.
+ - DGPlainTextMediaType: Plain text format.
  */
 typedef NS_ENUM(NSInteger, DGMediaType){
-    /**
-     Discogs Media Type.
-     */
     DGDiscogsMediaType = 0,
-    /**
-     HTML media type.
-     */
     DGHTMLMediaType,
-    /**
-     Plain text media type.
-     */
     DGPlainTextMediaType
 };
 
