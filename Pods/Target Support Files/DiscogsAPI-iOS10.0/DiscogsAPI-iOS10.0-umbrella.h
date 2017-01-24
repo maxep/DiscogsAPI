@@ -4,9 +4,9 @@
 
 #import "DiscogsAPI.h"
 #import "DGAuthentication.h"
+#import "DGIdentity.h"
 #import "DGEndpoint.h"
 #import "DGObject.h"
-#import "DGIdentity.h"
 #import "DGDatabase.h"
 #import "DGRelease.h"
 #import "DGArtist.h"

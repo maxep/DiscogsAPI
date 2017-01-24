@@ -27,19 +27,16 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'DiscogsAPI/Core',
-                      'DiscogsAPI/Configuration',
-                      'AFOAuth1Client/AFOAuth1Client',
-                      'DiscogsAPI/Authentication/Identity'
+                      'DiscogsAPI/Core/Internal',
+                      'AFOAuth1Client/AFOAuth1Client'
 
     ss.prefix_header_contents = '#import <SystemConfiguration/SystemConfiguration.h>',
                                 '#import <MobileCoreServices/MobileCoreServices.h>',
                                 '#import <Security/Security.h>',
                                 '#import <RestKit/RestKit.h>'
 
-    ss.private_header_files = 'DiscogsAPI/Core/DGHTTPClient.h',
-                              'DiscogsAPI/Configuration/*.h',
-                              'AFOAuth1Client/AFOAuth1Client/*.h',
-                              'DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h'
+    ss.private_header_files = 'DiscogsAPI/Core/Internal/*.h',
+                              'AFOAuth1Client/AFOAuth1Client/*.h'
 
     ss.dependency 'DiscogsAPI/Mapping'
     ss.dependency 'RestKit/ObjectMapping', '~> 0.27.0'
@@ -48,10 +45,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'Authentication' do |ss|
     ss.source_files = 'DiscogsAPI/Authentication',
+                      'DiscogsAPI/Authentication/Identity',
                       'DiscogsAPI/Mapping/Authentication/**/*'
 
     ss.private_header_files = 'DiscogsAPI/Authentication/DGAuthView.h',
                               'DiscogsAPI/Authentication/DGTokenStore.h',
+                              'DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h',
                               'DiscogsAPI/Mapping/Authentication/**/*.h'
 
     ss.dependency 'DiscogsAPI/Core'

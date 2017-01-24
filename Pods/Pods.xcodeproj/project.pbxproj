@@ -20,10 +20,10 @@
 		03199967352D5F5A850F1785E208AEDE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */; };
 		03236CCCB0C2B33ABBC5FAD16BC9D8C8 /* RKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = BA390E073AABAF2DA9C645C8861E33D6 /* RKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		033B57A0D504AFA58CF7DD74DAFD60D9 /* RKResponseMapperOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F59F961D71ED65AB60821BADD36DBDC /* RKResponseMapperOperation.m */; };
-		039FF3CE2B4A1901520526C6168D7E9B /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D29CEEA1314B4F685056C70EE0311AE3 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		039FF3CE2B4A1901520526C6168D7E9B /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AF0788E3BD03273352F0643074267210 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03B7C02C77E3590638911FD211C4AEE5 /* ISO8601DateFormatterValueTransformer-iOS9.3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7FBBAA1948122E79B68A018C847E832 /* ISO8601DateFormatterValueTransformer-iOS9.3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		046FC4223AAF07B673543BB5872E2AE7 /* DGProfile+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EBEC2398FDA18C0295D80D9653485C /* DGProfile+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		04F0F0C66430018AB1F67C3BF6918B08 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B3DC5E1D2D610B92F93F9E347EE8A1 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		04F0F0C66430018AB1F67C3BF6918B08 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B4C3ADF796735FFA7D1701AE023FF1 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		055E151CD5A7DC96DF610BF334453208 /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F35489A0B285504F59324FFD638C39BF /* DGLabel+Mapping.m */; };
 		056026C58E13FEAF3CC380C52966AA98 /* RKRequestDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F35137F08266E9938BCB4BC1EB073B /* RKRequestDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		057E88B3EF1C5A9B8D3890F8466655B0 /* RKObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1566E3B6B864BB4CB4DADBA28A9959 /* RKObjectMapping.m */; };
@@ -43,7 +43,7 @@
 		091EEC7887C479564689F6E9BFD2C3A4 /* RKNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5185643D2EC291C840A9FF86F1EB8E /* RKNSJSONSerialization.m */; };
 		0938DE499C8B20B580CD9D0285EBD9A8 /* RKPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3D7A7E2506DCD7E515C3BD1668F820 /* RKPropertyMapping.m */; };
 		096F4E225F546819F06DDC6AE981CFF4 /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D9DBB8FC09FE5D100E26D975D67598 /* DGListing.m */; };
-		09903470B1483C7AD8EFBF0830C14E83 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AFC9C6ECF81E304ED94839D6914D7 /* DGObject.m */; };
+		09903470B1483C7AD8EFBF0830C14E83 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE89B1B670F70AE59C2FD6F075E79C8A /* DGObject.m */; };
 		09956DA82D5871ACBAA80E3CCC909621 /* SOCKit-iOS9.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC3430356BCFB3E1731BC69915044D8 /* SOCKit-iOS9.3-dummy.m */; };
 		09CBD8F08DD2DAB5EAB4341A563F4F26 /* RKMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F7429B7072ED6946FD5AB0CEE4AF68 /* RKMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09E3A3E572F24D0941FD634A2A1A2FF6 /* RKErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C686F6F9153FB2932B97D2858D004F26 /* RKErrorMessage.m */; };
@@ -59,14 +59,14 @@
 		0D4A01C219E383170494F05C485720D1 /* DiscogsAPI-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C556CA70FDFBDA3663CE47E7D337BDC /* DiscogsAPI-iOS10.0-dummy.m */; };
 		0E1F5B27A88D6EE1F6850957EA8B205B /* RKNSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 07918F2377AB22F006B98846C29DFD52 /* RKNSJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E2852760FF4C1008A968392B4C8283A /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB50BC1151DCD87D00C4C22177B95F7 /* DiscogsAPI.m */; };
-		0E342DF7BB32F290ED68948E3D37D09C /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3C51D9726E373D7BD64F159CB750E1 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E342DF7BB32F290ED68948E3D37D09C /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF591D12CBB1655755B2C390AE16961 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F246097562E803E930F5C361D90DA91 /* ISO8601DateFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDAF77AEA57C4CCBF7D96A794896A6 /* ISO8601DateFormatterValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0F5B7D90D4BC1DAD510A328BCAD64E97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		0F8740F75E4E54F81B52FE38CDBB4701 /* DGMember+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C431A57C68FA6542DBD6B9C8B59A2 /* DGMember+Mapping.m */; };
 		10991DC8E8348E5CA1649B1D9DC5CED3 /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6F25FD57C290A74C5F7F47D7BB2936 /* DGInventory.m */; };
 		10A8B7E4BA6EF4D6F7C06567D7B4607B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		112E4101DB4D3A908B539E7EA823BD2F /* DGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5765D6F075C15CC8E5A8836839271BEB /* DGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		113441A205498F3A2A728FF7F6E4EC14 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3C51D9726E373D7BD64F159CB750E1 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		113441A205498F3A2A728FF7F6E4EC14 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF591D12CBB1655755B2C390AE16961 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1178747B6CAB212EB94C035F2A41CA8F /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5915A7FA279519A9A84B19C35636396 /* DGOrder.m */; };
 		11BC5F27F4CB0FC43AD2B252320C5EB1 /* RKDictionaryUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 238DCACE7161833CD62D9B65A21B63C1 /* RKDictionaryUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12880C58041A0557929AA39D23F23799 /* DGResource.h in Headers */ = {isa = PBXBuildFile; fileRef = DDFA6DCFB5C120BAE61C563D5B9A41F2 /* DGResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,13 +92,13 @@
 		17ACF0D29D3DBD2B0571CBEFBD0A0318 /* ISO8601DateFormatterValueTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */; };
 		17B2B03E2E09CEC187204E8B1A082FBA /* Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B43A6480EA4785B5D077553E238130F /* Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17C69A3AA528158DCC5F3D82CFF7A38C /* RKRequestDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F35137F08266E9938BCB4BC1EB073B /* RKRequestDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17E80A54491FB8EDF76E6284497B2329 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AFC9C6ECF81E304ED94839D6914D7 /* DGObject.m */; };
+		17E80A54491FB8EDF76E6284497B2329 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE89B1B670F70AE59C2FD6F075E79C8A /* DGObject.m */; };
 		17FFF4D887D3B3894ED5E65C18BDF987 /* AFRKNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2EC8C6BD70446C622ECCFAA27B2 /* AFRKNetworkActivityIndicatorManager.m */; };
 		188AAFA6BDCF9E38F97B2FAE0A63E1CE /* DGLabelRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0E8D97C39F30D48ED9BB6CA52BE59 /* DGLabelRelease+Mapping.m */; };
 		18F06E0CB9BCFEC7963B4A4613787FA2 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = E965235D031DBDCBB0CE37BBCD747E9E /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19D3472F7247D7F515FE283CAEB43198 /* TransitionKit-iOS9.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8602EB7909D7A965634D9192D12B6F /* TransitionKit-iOS9.3-dummy.m */; };
 		19DEB5F994A1CDFD5B27C0A3BABC4528 /* AFRKXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F00CB542100EBF80AAA4660120B7DAB0 /* AFRKXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A226FC45DE6E6A58B3AF7ED570723A9 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E5E2C74B6AC1B79883C9988B971BD /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1A226FC45DE6E6A58B3AF7ED570723A9 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB1D66F6501BC2974509E1728B92F2E /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1A25B49724A7BE172391A5EE5CA187FC /* RKPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3D7A7E2506DCD7E515C3BD1668F820 /* RKPropertyMapping.m */; };
 		1A284CFBD59A59D28C8C574E3CDEA192 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F903BC906685749987A593BB4D2D012 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1AD33B5D91F44F9590E7D50635922AE7 /* DGSearch+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4349C5B657ED3FD105D020BCD551BCAF /* DGSearch+Mapping.m */; };
@@ -124,11 +124,11 @@
 		20BF69A4AB7368DE7C1013C05290ABBD /* ISO8601DateFormatterValueTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */; };
 		210F4F4F3D79B5AF48674492806F6FE5 /* RKObjectUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 89018603DE6045D9E61117765560C523 /* RKObjectUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21235244C35880B02D8AB54A6D5BA3D7 /* DGImage+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B28706EBAEBE6E8DA762E2096C38EF /* DGImage+Mapping.m */; };
-		217F6C8BA7F4601295BFCDB0602A479E /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 5896EAEBF440F0C896A00C1D5815DDD9 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		217F6C8BA7F4601295BFCDB0602A479E /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = DF30CBA756BDBB748959AFC528596E37 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2205EB4F24BF33F820E8B8CFF66218B7 /* RKMappingResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 87BB5655FEBC6B88ED79AC1875BB1BB3 /* RKMappingResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2206CCB08F97219363D584698B776BFF /* DGMasterVersion+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 824A2FAF64FF2642E666FE066D7066BD /* DGMasterVersion+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		23157DE197E8427DABD45E9023ED5CD6 /* RKMappingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA71F32BEBE42DCE9F506824F408DD /* RKMappingResult.m */; };
-		234251380490E95A041F2D1E8E87AC9A /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 486599BDB1272ED07EFF525C941C96DF /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		234251380490E95A041F2D1E8E87AC9A /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFBA8D365CB46A49A8AE81045DC63D7 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		239002B80D000C8CF90DF111D04C59E8 /* lcl_config_components_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = AE138AA3ED9FA022429322937FEDF98F /* lcl_config_components_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23A6DF476CDF84B4BAE07209B93F0B8E /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFC82147419D7C324718DE5E742D5C /* DGCommunity+Mapping.m */; };
 		23BB04074C129A2235E6DA4EA2D6B872 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */; };
@@ -159,7 +159,7 @@
 		29E0FAF77B788EF970B9E6DDA8CA00E7 /* RKManagedObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 336E575C8CFF940AAC432B20CCA9955E /* RKManagedObjectRequestOperation.m */; };
 		2A4A02E6AE02E58904250A23DF63C45C /* TransitionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */; };
 		2AABE50E8FC572ED23D29DC5CC3432F8 /* RKMappingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4287BDE8110511452608694307AEF809 /* RKMappingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B117E61E654B1A774848FBF598F485C /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FDBFBD2235C45964F5B628E10F7C67 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		2B117E61E654B1A774848FBF598F485C /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E046A413E14EEF37ED105B0667D9F0 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		2B59D114A4B38FA6D353368BA56EA2B7 /* TransitionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */; };
 		2BE5E4F756C425A54387B13AFA3E791E /* DGPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA2852F0A969563D21E1EFD4967D55D /* DGPrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C4157F114E3BCAAF20373A9303AEDEF /* ISO8601DateFormatterValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DA1FF6915E8AE1B891739350A87D361 /* ISO8601DateFormatterValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,19 +170,19 @@
 		2E507828732994476AD5C8E39FD37F37 /* DGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C69EE6AE8F1A916D6E03892582A6DC /* DGArtist.m */; };
 		2EC046257C4A2DED26FF14A8490C2EAF /* RKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = BA390E073AABAF2DA9C645C8861E33D6 /* RKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2ED5D294976037111A9E90A5972E4C83 /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 184A4F456473BFAD7DBA9846B612D933 /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		2EE1B7C65690FFA8571AD1A602B44E5B /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3BD5B02110525A8902C05D07F34A7 /* DGAuthentication.m */; };
+		2EE1B7C65690FFA8571AD1A602B44E5B /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = FC52C64471DFE1332105DD59D3738F3B /* DGAuthentication.m */; };
 		2F00886BE368B3643F2FC2D74E76C11F /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB3C1D4A379AD5E4E07A0622D09EE44 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F143DCD464BFBA634BA1AD76FBAC875 /* DGCommunity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D8A8B53739674A3802E2710E9C3497 /* DGCommunity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		2F6C2145C4C035808C371643FA54CF6E /* RKMapperOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 675AF6178618D40BC8CBE7C1B51A6511 /* RKMapperOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FF2DC9CCF63F055B84C91A7438306FF /* DGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 192083237A2E471423A9CEE14E5580C9 /* DGDatabase.m */; };
 		2FFB30AC5A38B72EAB825522BAB9C7C2 /* RKObjectUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 89018603DE6045D9E61117765560C523 /* RKObjectUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3096E14F700B4D144D4D3FBC5D364058 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C2C03C177420F3C68CDF10328458D /* DGOperation.m */; };
+		3096E14F700B4D144D4D3FBC5D364058 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B441B2A929A113EC4E56B5C7EC63 /* DGOperation.m */; };
 		3107000C4755205E730A8E8645BF6FB5 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C74C48B0310B88BB23EB7EA279147CF /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31429C2C69E80094EC72A728969FFADE /* DGReleaseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D45458BDEB90CFEE1B167884DB919C /* DGReleaseInstance.m */; };
 		318480188534FAA56E0810675A9B9660 /* DGMaster+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1442F7E5DBA8BA716C4E9CDA49FA6819 /* DGMaster+Mapping.m */; };
 		31FC714CE44908A37F7F7603A2E75DFE /* RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 347CA6D778C9633AA05C06C31C3A211C /* RKMapping.m */; };
 		3285F589D4F15BBA91614B55754D1153 /* RKOperationStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 432D4893E340088AF5D5E39D4C50FCFD /* RKOperationStateMachine.m */; };
-		32EA8481CF337DB2004AC0E37B7CB94E /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D29CEEA1314B4F685056C70EE0311AE3 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32EA8481CF337DB2004AC0E37B7CB94E /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AF0788E3BD03273352F0643074267210 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3319452A001A0B65750C430FFBAD5F13 /* lcl_config_components_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = AE138AA3ED9FA022429322937FEDF98F /* lcl_config_components_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3325D1C1775EB151D3D69683E4AF9196 /* RKObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04718EE0D97AA4B07F2CCD258D9DAC8F /* RKObjectRequestOperation.m */; };
 		346EE0E925E4F489C72E43106BFC3E09 /* RKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD150EAB87EB3F6EC2DA79083CCAC5B /* RKLog.m */; };
@@ -196,7 +196,7 @@
 		35B53E172716CBE35BE31D62A21D72A2 /* DGIdentifier+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C74616EC0E5AFDE89CF4F0C50A2041 /* DGIdentifier+Mapping.m */; };
 		35ECE93CC0B4DBBDB7E2A81183C28E70 /* RKObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E6DE32A7B2B3EE4E732051EAF1C8AA /* RKObjectManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35EFA212D92C2AA344ADF11384718225 /* RKRouteSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D295A1C0E836340C74897DFFC07879 /* RKRouteSet.m */; };
-		361ED1CFB62F3E31E74EBB3B3773C2DE /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E463E94144C2EF09DD80DA6766BB2EB1 /* DGEndpoint.m */; };
+		361ED1CFB62F3E31E74EBB3B3773C2DE /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7BC1104DC97D2605C48C6FB9C76998 /* DGEndpoint.m */; };
 		3638A90846CD51C37B441440477549B5 /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 695EAD56F513D68DD4CF9A6FF87F2357 /* DGPrice+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		363B78226FF73C6B04A18B907A754D3A /* RKObjectRequestOperationSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA924FE64ED95861F3B3801AF8FEE4C /* RKObjectRequestOperationSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3695E95F287EB52EB2904B128ACFE720 /* Pods-DiscogsAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6682019C426A7117D1669AA39D29349 /* Pods-DiscogsAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -260,7 +260,7 @@
 		459D1D475A800F5A669B90018FB9D5CE /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F35489A0B285504F59324FFD638C39BF /* DGLabel+Mapping.m */; };
 		45E545BD059F0D1F009AC6E2BB9400BF /* AFRKJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E26ABAD1DACBA90E5CD6C240049D7B3 /* AFRKJSONRequestOperation.m */; };
 		45F236DB07060C78A8D0F03E9D4F1CCF /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
-		465ADC39E9F2C4866FCA2786A7B1238C /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 5896EAEBF440F0C896A00C1D5815DDD9 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		465ADC39E9F2C4866FCA2786A7B1238C /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = DF30CBA756BDBB748959AFC528596E37 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46CC9E44A2AB2F9BFB30026A11E99558 /* AFRKURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 41ECDAC9BDC1E553C51DAACA41F6C519 /* AFRKURLConnectionOperation.m */; };
 		46FC0B27DAF20393F2022A28B21AC250 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DC24611C0645FD42AE7A05CB234D3B6C /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		47264DD5C39A0CAB075466B58FE503ED /* Support.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4B43F0CEAA5B7EBF72170FC38F4E38 /* Support.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -275,7 +275,7 @@
 		4928791E5200D0A3407FC4359475191B /* DGCollectionFolder+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE2779BB0E697C26C0DF46FDA3E5C56 /* DGCollectionFolder+Mapping.m */; };
 		494EA367212076293D273D5DF809230E /* RKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD97452250DEF08F06F87C6A45E9FC9 /* RKLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4965A014CA4ADD62B80D776916CCD23A /* ISO8601DateFormatterValueTransformer-iOS9.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1394059D77DBEB88882E0C6F8A9DFA8 /* ISO8601DateFormatterValueTransformer-iOS9.3-dummy.m */; };
-		498E86457843C986F23DA4A09BB67FAB /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF1B2484CC7816B46EDE07D1CDC86D8 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		498E86457843C986F23DA4A09BB67FAB /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A9D9023927E7F112F5B20C51F126C0 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		49F0865FAFA4BECE0F0B90683D52EC4A /* DGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 088B74C1BF36949A0189ABD1D5B6B6D6 /* DGImage.m */; };
 		4A447749059CC2872D2819A87AC08AB6 /* RKObjectParameterization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBC82824FD58B3675B6C452555849A /* RKObjectParameterization.m */; };
 		4A4791E403A1FD137F0AA219A2651008 /* DGRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AA64443FBDD5B67E32B4C7C3FCC740 /* DGRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -301,7 +301,7 @@
 		4FA13AE4E08EC3677055BDF5B63E3B8B /* RKNSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5185643D2EC291C840A9FF86F1EB8E /* RKNSJSONSerialization.m */; };
 		50B93ACF3D83B1FD0BFA8DC998924EB2 /* RKURLEncodedSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CB4CAE11A3A7CB954C1465999E95BF /* RKURLEncodedSerialization.m */; };
 		50E3B7CBB946767A725175CEFCF4AF3B /* AFRKURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC18B5A129D19247725CE45FFE3972A /* AFRKURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5191F9566723E6630F7A1D21FCF9E58D /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D29CEEA1314B4F685056C70EE0311AE3 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5191F9566723E6630F7A1D21FCF9E58D /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AF0788E3BD03273352F0643074267210 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51B64504014F10CD626B10428041CE71 /* DGWantlist.m in Sources */ = {isa = PBXBuildFile; fileRef = E76EC7AC71DF2E571E0F51679890A5B6 /* DGWantlist.m */; };
 		51D9B6502D98B74F149BE171BA7BDBA1 /* RKObjectParameterization.h in Headers */ = {isa = PBXBuildFile; fileRef = 769930274880D3486B7B4390043C0310 /* RKObjectParameterization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51FD0D683B92E40518C9DC0DAF5843BB /* RKSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FE5A17B031F3A3A721338CC7AD6A71 /* RKSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -321,7 +321,7 @@
 		550C764827648C88A9C1A278116EFEF6 /* DGPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA2852F0A969563D21E1EFD4967D55D /* DGPrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5556E41C617AA814BC22EC9E7CC10976 /* RKDynamicMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACFE7BED626E5C8700A965A22519856 /* RKDynamicMapping.m */; };
 		5565C0941D05E7FFB3EF60574E2CBB52 /* DGArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 911BFE52F9F84901214E93064F8D5B8B /* DGArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5681031989A8B85C5D85E6A5F7BFF0FF /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF11FBD3FD88ABBF8A3AC995892A900 /* AFOAuth1Client.m */; };
+		5681031989A8B85C5D85E6A5F7BFF0FF /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFAC98CC251FDBB6F28B326369CEF88 /* AFOAuth1Client.m */; };
 		5682CF5A073E31A7F4DF27C4DD04F5BA /* RKRouteSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E609D3D31C4A1D49E25C6E27D3A69CF /* RKRouteSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		569160CEC714621AC3EB2C1568AFD9B5 /* DGMember+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C431A57C68FA6542DBD6B9C8B59A2 /* DGMember+Mapping.m */; };
 		56A3E7487EC3E216698D9D57774DA7DF /* DGSearch+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4349C5B657ED3FD105D020BCD551BCAF /* DGSearch+Mapping.m */; };
@@ -343,11 +343,11 @@
 		5B79D2777FF98BB2E5DDF17002F25BD9 /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E0FFCC860D1968C4E3401E9BAEC825DB /* SOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B9E42DA7FC084CEFC2F8AD85B42BB37 /* AFRKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 18043640926793DFCE69A7E72609A6C3 /* AFRKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BB17FBED711BDB57E5F5AF9B5A2E837 /* RKManagedObjectRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BE64E651B5D91BCD5144011867667605 /* RKManagedObjectRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C3950025D5BCA786A6909124807FC90 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = F18AAFF17B3326D3CE9BFC437E541239 /* DGEndpoint+Configuration.m */; };
+		5C3950025D5BCA786A6909124807FC90 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E22D6D76B9F6E6A86442F700AA337D /* DGEndpoint+Configuration.m */; };
 		5C63EC3444F7DC9207ADC8D6DAC5498D /* RKValueTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF0A6D4AAB35C420C7A490149E03AF1 /* RKValueTransformers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C6A608E55B268C98EA0FC72FC34F429 /* RKObjectParameterization.h in Headers */ = {isa = PBXBuildFile; fileRef = 769930274880D3486B7B4390043C0310 /* RKObjectParameterization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CD025CE09813AC661523C534EAAC986 /* RKPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5104BC5CD3425742E8F17660B0949CC /* RKPaginator.m */; };
-		5CFACA4FA4AA8AB49560706CA8B34275 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FDBFBD2235C45964F5B628E10F7C67 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5CFACA4FA4AA8AB49560706CA8B34275 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E046A413E14EEF37ED105B0667D9F0 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5D34CF5C0B6D409D5A4915CDC21DA097 /* RKObjectMappingOperationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 755E2AB63151E68F9CD60C2F6035DB36 /* RKObjectMappingOperationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D8B47EBECB9BEF2CD941EE569D31442 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F903BC906685749987A593BB4D2D012 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5DBB9F216F0A839AF1CE5450B5C00897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
@@ -362,7 +362,7 @@
 		60C148822D209600863DADA99186FBFE /* DGFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F1EEFAB03D979F7167F943DCEA44D4 /* DGFormat.m */; };
 		60CFFC3CC4B853283407288ECAB019B1 /* RKMappingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 894FFDEDA04525A5549AD15E543D2310 /* RKMappingOperation.m */; };
 		60D3ACD8DC43876E1ECFA771F9DEB30F /* DGIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = A97F62196282DD4C04D15C9B5352AFA0 /* DGIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		612CAD2A41BAE7211B121887D74FF72E /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FDBFBD2235C45964F5B628E10F7C67 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		612CAD2A41BAE7211B121887D74FF72E /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E046A413E14EEF37ED105B0667D9F0 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		614FD982D34EF157BA98931FAC7F258C /* RKSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FE5A17B031F3A3A721338CC7AD6A71 /* RKSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61FC90FC02E8CF662511B4E7522C8C0F /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBB15BADDD777AB90409C1CF3612E4 /* DGMasterVersion+Mapping.m */; };
 		6251E3EC60C3C487031B33A44B156B76 /* RKMapperOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A641D31C924F327D7592472B9175E76 /* RKMapperOperation_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -381,12 +381,12 @@
 		6452FE67BF3119BC7E33C2F276019454 /* RKPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 384F56AE9D543E983B40B4192CF70A72 /* RKPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		648194BBBA3A7140A79DB2B4C94F0AA1 /* AFRKPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 160F566212F91D78A00A538FC92EFEC0 /* AFRKPropertyListRequestOperation.m */; };
 		64AB998144CE540654D0D4642503EB94 /* DGCommunity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFC82147419D7C324718DE5E742D5C /* DGCommunity+Mapping.m */; };
-		64E647FB714090CAA43ED55A08059D72 /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF11FBD3FD88ABBF8A3AC995892A900 /* AFOAuth1Client.m */; };
+		64E647FB714090CAA43ED55A08059D72 /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFAC98CC251FDBB6F28B326369CEF88 /* AFOAuth1Client.m */; };
 		6520C94ED69E3A28393A44DA480C1FDF /* Pods-Discogs-objc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B55C0218D6D682F342D37D841790750 /* Pods-Discogs-objc-dummy.m */; };
 		657DBF8DEDE0D7B705E09C50DDD44434 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		658551E912D0D19B5F6BD1E3206F8DF8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
 		6664491BCEDA29BD1E5A7C0AD9A3850C /* RKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA7242E34CE24B594607BC2605EFE /* RKRouter.m */; };
-		66B03D581470FD1B77192F0B7213A644 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A17AFC9C6ECF81E304ED94839D6914D7 /* DGObject.m */; };
+		66B03D581470FD1B77192F0B7213A644 /* DGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE89B1B670F70AE59C2FD6F075E79C8A /* DGObject.m */; };
 		66B9C69D83DF8EC0B5E4FC46FE127FEB /* DGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9862777D3C7B04D649167BC32507DC57 /* DGUser.m */; };
 		66C55B2ACC89697955BF0E54B289A52B /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B47310098D683B50E02F6F10110A29C8 /* DGRelease+Mapping.m */; };
 		66FE4C6C3FD5BB0A4253D8D114402BE1 /* DGCommunity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074A682BC26B06BF61FDF7890EC2CAD /* DGCommunity.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -410,10 +410,10 @@
 		6C9612C8B4431E12DB241A995131DF19 /* TransitionKit-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED85FE9F76C15CAB2260954429BA6B3 /* TransitionKit-iOS10.0-dummy.m */; };
 		6D4C66E0E014259623D90F2D40A7DDC2 /* RKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = D780C2B6C19B2749399369BC4C5B2601 /* RKRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D91E987D933E5784159C294BAE4F03C /* DGMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C53DF2076F8040276D27A87B64E42 /* DGMaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E1418B01363305FAD1625E807CF02C7 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = F18AAFF17B3326D3CE9BFC437E541239 /* DGEndpoint+Configuration.m */; };
+		6E1418B01363305FAD1625E807CF02C7 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E22D6D76B9F6E6A86442F700AA337D /* DGEndpoint+Configuration.m */; };
 		6E20B79C434B2A1C262E07389FC8CFD0 /* DGProfile+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D4F123153023150005D76F4F074DFE /* DGProfile+Mapping.m */; };
 		6E44DF49B2305493CC748DD935BDAF91 /* RKErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = CF352D5F2B114B4948170910B6BDB02E /* RKErrorMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E6807102244372D7DDD93D86F6678C5 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E5E2C74B6AC1B79883C9988B971BD /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		6E6807102244372D7DDD93D86F6678C5 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB1D66F6501BC2974509E1728B92F2E /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6F3212A7DA8C5B0300E8F8434E918A2A /* Pods-DiscogsAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8A12397747170A4BACAD87DA475FD8 /* Pods-DiscogsAPITests-dummy.m */; };
 		6F59FE17DD92017006F2A20A3E63C702 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */; };
 		6F9DCDCA3B73F96143CDEDBDD3A5D75F /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E253DC42595EBEE067C140870DFB3E21 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -421,7 +421,7 @@
 		70918656C2D0B8C9AB22C33BE0676BC2 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 080FBC569C9DB81244734CBDAB3F93DD /* DGReleaseInstance+Mapping.m */; };
 		70A195D3FE0991A6F419A3A3D13E99CB /* DGVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9282E85BF6D5C6C3CF6242EA0359AC29 /* DGVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70E77FD643ADD8DEE904CFD886E4BD12 /* DGReleaseInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 080FBC569C9DB81244734CBDAB3F93DD /* DGReleaseInstance+Mapping.m */; };
-		711F4A2C1446C47D40C2CE45792585B4 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7CEBC2DAB2FF95466A0651BB6B314A /* DGHTTPClient.m */; };
+		711F4A2C1446C47D40C2CE45792585B4 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A32ADBDDA84B6F02803751CC8F7791D3 /* DGHTTPClient.m */; };
 		718BAC46DC71DD92C380EA482A0566CB /* DGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 425935A7AE9AA3007C6DE44A1B608128 /* DGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724F609A4C1BC7E4F5BE90FB8AC426C9 /* RKPropertyInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCCF44DB92A8C727948BBF616BC43A0 /* RKPropertyInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7296458EF959286C558FCB5DF7245D14 /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
@@ -434,8 +434,8 @@
 		7509B478D8BBBC20964AE1E5FDD746CB /* AFRKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F641AF93369755252D5C3E07AE8C88A0 /* AFRKHTTPRequestOperation.m */; };
 		75614DE141532C9ADBCDE982022C0A94 /* DGWantlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C74C48B0310B88BB23EB7EA279147CF /* DGWantlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7590EF62322C7B32537C0790A1257A11 /* TransitionKit-iOS9.3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C29271C07522C5F0A1D95A8258EB4C1 /* TransitionKit-iOS9.3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		759396FC494F30FC1C587E8C837A7CCF /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 89FCA8CC3F6D424677B41E3DB5FCB2ED /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		75ACA4623574597DC6B51C9FC5BFC8CE /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E463E94144C2EF09DD80DA6766BB2EB1 /* DGEndpoint.m */; };
+		759396FC494F30FC1C587E8C837A7CCF /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 382EBEBAE9543784D096404B83CB9C29 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		75ACA4623574597DC6B51C9FC5BFC8CE /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7BC1104DC97D2605C48C6FB9C76998 /* DGEndpoint.m */; };
 		76379492573C3772DBA27FA8A29488A9 /* RestKit-Network-ObjectMapping-Support-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC8FDA1C0A26AFE7FEA14E6DF26FDB4 /* RestKit-Network-ObjectMapping-Support-iOS8.0-dummy.m */; };
 		7656A575E0D9F3D0BBD1FE3E8B84DA98 /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DEA79349307048FC0EA90412E4B6FAB /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7682D74965C1BC4A4348CC5D885F6636 /* DGArtist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = D1391E9160958419E191BDFFC3951896 /* DGArtist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -456,7 +456,7 @@
 		78F5A825A5CF1FA79263051291D671B0 /* DGIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F5486CAD4F132BF56BBBD3119AA1DFFF /* DGIdentifier.m */; };
 		790FCC72DCAB5224D52790DCCF11E44D /* ISO8601DateFormatterValueTransformer-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 072A824DFFB07F29FDCF1FA6F8A5A5F1 /* ISO8601DateFormatterValueTransformer-iOS8.0-dummy.m */; };
 		7940B83904712B5FC9888C17667C12B9 /* RKMIMETypeSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F1330C0BF080050D92195BD428F3DCF1 /* RKMIMETypeSerialization.m */; };
-		7948C1CB3D6F43F9BF1F5DFB0CFF323F /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E463E94144C2EF09DD80DA6766BB2EB1 /* DGEndpoint.m */; };
+		7948C1CB3D6F43F9BF1F5DFB0CFF323F /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7BC1104DC97D2605C48C6FB9C76998 /* DGEndpoint.m */; };
 		796D1FE218FE0DEB47076BA672429BEE /* RKOperationStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 432D4893E340088AF5D5E39D4C50FCFD /* RKOperationStateMachine.m */; };
 		79D46FFBFFFAAB50B5ACA25AE5199A22 /* RKRouteSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E609D3D31C4A1D49E25C6E27D3A69CF /* RKRouteSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A21CEDFF2D4B15D313E6EE78F44142B /* DGArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C69EE6AE8F1A916D6E03892582A6DC /* DGArtist.m */; };
@@ -475,15 +475,15 @@
 		7EC0C98F2FFED2E58E16E7635120B1E6 /* RKMapperOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A641D31C924F327D7592472B9175E76 /* RKMapperOperation_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EE0ADEF60C55CE92268963182C12D03 /* RKObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04718EE0D97AA4B07F2CCD258D9DAC8F /* RKObjectRequestOperation.m */; };
 		7EE908C49ED444146712305B4B08D478 /* AFRKPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 160F566212F91D78A00A538FC92EFEC0 /* AFRKPropertyListRequestOperation.m */; };
-		7F89400B9D505C2C9600AC47A5EA59B3 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E5E2C74B6AC1B79883C9988B971BD /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7F89400B9D505C2C9600AC47A5EA59B3 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB1D66F6501BC2974509E1728B92F2E /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7FBDDDBF3EED0580E60857301445FBB2 /* TKStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D560BA330B3121490D7EB161F9886525 /* TKStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7FF68F15D4ED79D54CBD88E7E91C9121 /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB13BB2BD8ADAE2D9B2FA147F6ADB32 /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		803EB141ABC3D6591B51AC6D13CC9971 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C2C03C177420F3C68CDF10328458D /* DGOperation.m */; };
+		803EB141ABC3D6591B51AC6D13CC9971 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B441B2A929A113EC4E56B5C7EC63 /* DGOperation.m */; };
 		8040C26403DF91A9449FD5C609D96DCE /* UIImageView+AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FE8ABB970BD3F086A690B39A313EEF /* UIImageView+AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80C6031903C53E6D4E4D5603149E33C7 /* RKTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 620813F6CF5271D303BEC6FCA6B8E7A7 /* RKTestConstants.m */; };
-		80C9BFA13F6B1CB84C10D3129E3A38F0 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 486599BDB1272ED07EFF525C941C96DF /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		80C9BFA13F6B1CB84C10D3129E3A38F0 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFBA8D365CB46A49A8AE81045DC63D7 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		80D2BB156B4EEDD48173937B6E7DF8AF /* TransitionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4952B73D6852F215EE2688EACD831E /* TransitionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		811D9587108268E1441D2981A2BF952F /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A0C6543D52E651C3FBD5C8037C8C6 /* DGAuthView.m */; };
+		811D9587108268E1441D2981A2BF952F /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20143359CD3AC7F6AF422D23643BB4DE /* DGAuthView.m */; };
 		8124D00355672FE862DD7B83E5E8E1B0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
 		8162D5A641E80F93122CD64DC9D91914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		81BA4D9FD93826B97E5CD382B9EA9936 /* TransitionKit-iOS8.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DE73612B1A543929BB55848A615B9F /* TransitionKit-iOS8.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -493,10 +493,10 @@
 		83A405F9831F780927D7364FF19BFE28 /* RKNSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 07918F2377AB22F006B98846C29DFD52 /* RKNSJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84011F3022CB21C07778567D00612FCA /* RKMappingErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 480E29D9EACF18659559C6E98B130254 /* RKMappingErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		840888B8674A16AE0AB43D03C98EDF12 /* DGCollectionField.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CFF5A3A22FD00FF55423F22406C9F9 /* DGCollectionField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8476CCC36D0B9EC6345CAC58B3819320 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3BD5B02110525A8902C05D07F34A7 /* DGAuthentication.m */; };
+		8476CCC36D0B9EC6345CAC58B3819320 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = FC52C64471DFE1332105DD59D3738F3B /* DGAuthentication.m */; };
 		8564280D24507CA9DAB3386F41935606 /* DGCollectionField+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F561FE8C07C290FEDF31D3CA8B957E14 /* DGCollectionField+Mapping.m */; };
 		858654C26472A3138DF28032B76C907B /* RKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE336522A8C85E97E60F5D1925E062 /* RKHTTPRequestOperation.m */; };
-		85DD114FBF90875304E2A53217DEDEAE /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A03055A610E7FB88BA7A610B9B5B45 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85DD114FBF90875304E2A53217DEDEAE /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 17EDFE8AB1128977884B54A32062FF85 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		862B76BFADA21442FCD8DA8618CEBA1C /* SOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E0FFCC860D1968C4E3401E9BAEC825DB /* SOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		862F9462EA0993C0CF436FC2D5913EC1 /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
 		864CC0411046713027D11D5F9E427EFC /* TKStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D560BA330B3121490D7EB161F9886525 /* TKStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -514,11 +514,11 @@
 		8AFAFCDAA6545D7D5D9E8BD793E01B17 /* TKTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 732239DA0DA52EECB464C41ED40B9045 /* TKTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AFF35FC8A893FE0483B8BEDB88D9DFD /* RKRequestDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F35137F08266E9938BCB4BC1EB073B /* RKRequestDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B579946D2D39009FC6795AF2D37EC8F /* DGMasterVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A25F59682650B9A8CCC89F4113D6AFD3 /* DGMasterVersion.m */; };
-		8BB5290B515388C2468B9950EB8E5D98 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF1B2484CC7816B46EDE07D1CDC86D8 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8BB5290B515388C2468B9950EB8E5D98 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A9D9023927E7F112F5B20C51F126C0 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8BD1717F9F6C2D15F259F577F33BE31F /* RKAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E5B8C68484EE4E1174C040A7C48B9C /* RKAttributeMapping.m */; };
 		8C03FF42947F33A563B058E484853B86 /* RKObjectMappingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C70EEC680D4C882D653B7084DC7472 /* RKObjectMappingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C323D4F298FF4B95DF607C16F5087CF /* AFRKNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F2937378A6D5896DC30D0B5C93DB643F /* AFRKNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CB3CACEA0BBF92FB1A3E3264A84602C /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB8939A6C818FFB1B774DC46F938AA2 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8CB3CACEA0BBF92FB1A3E3264A84602C /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E964D15880EE92F6B5789CA4B4B037 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8D17B3E721728C23F23A930C7B63C495 /* DGLabel+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = B3396F7593D9770B666726FDD40E9FCE /* DGLabel+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		8D9F9B0ECB6C057B3C4F7D96EF2FDB67 /* RKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D0056DBABE2917F320459F7FDBEBB3 /* RKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DAE1D5F4A243CB77166B49728CAE4D9 /* RKTestFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 6554187C52BF52E06A5C99BB338FD5C6 /* RKTestFixture.m */; };
@@ -556,7 +556,7 @@
 		97862060F83B57C4B0C2B33D953877E6 /* RKMIMETypeSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = C810F3779495C990496E9980768724B6 /* RKMIMETypeSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97F6C3918120EFE0B77B41B45F4EC3BF /* DiscogsAPI-iOS8.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B94EB7C200F840802099977D9F054 /* DiscogsAPI-iOS8.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9810A338D23F827C60B98128FCEC42A7 /* ObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2A745E7358E58AE622B6F037118BA9 /* ObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		983193850494F4EE65A5B177889D598C /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C2C03C177420F3C68CDF10328458D /* DGOperation.m */; };
+		983193850494F4EE65A5B177889D598C /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4B441B2A929A113EC4E56B5C7EC63 /* DGOperation.m */; };
 		98899D1074577FA3FF99058C0964AE29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		98BF64AE72C6F66FB3BDF59E1430AA35 /* RKRelationshipMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E5A7FE3280FB89278A017AF985FFB2 /* RKRelationshipMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98BF746A3FB20451DEB183BE5E133749 /* DGArtistRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F80B610EE3413429E185675080069AA /* DGArtistRelease+Mapping.m */; };
@@ -566,27 +566,27 @@
 		9AC1301FE1B739A5E4B45A3004025FCD /* RKMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 347CA6D778C9633AA05C06C31C3A211C /* RKMapping.m */; };
 		9AD8308AA61AAC204C94FEF557A3EDC6 /* RKMIMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B122881E75EB48F9813E9A3BB6D173 /* RKMIMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AF20171BA2A236EB8C349BF8755B423 /* DGMember+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ECD4F2C36075090E099F97380C29BBB /* DGMember+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9B3444E59B12030CE695F0817419481F /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E76F3C90A4AACD7565704F81474441DB /* DGIdentity+Mapping.m */; };
+		9B3444E59B12030CE695F0817419481F /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6DC39A8FE4AD4DB4E02B186492F6F2 /* DGIdentity+Mapping.m */; };
 		9BA16CD44401D6AD88ABD540C4B4090E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
 		9C8022CA34932CA6654D3F5F6661B615 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8D4556851053F949ED9FDC28498E7 /* SystemConfiguration.framework */; };
 		9C8E1776C603239E2E58F9F326C5656C /* TransitionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA60D8975503B0ED2D71823C6EA263 /* TransitionKit.framework */; };
 		9CEC6B2EFCDEDFBD0EB83A72B0325E7C /* DGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DD3DD97778FEC72E38DF34CB264FAB /* DGPagination.m */; };
 		9D4240981CB5FD692917A6694DAE4EB6 /* lcl_config_logger_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2315600F67A338A3BD3F39F340FA9F /* lcl_config_logger_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DD537DFABF0F7E24BB16C1CEE4DE2D7 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 89FCA8CC3F6D424677B41E3DB5FCB2ED /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9DD537DFABF0F7E24BB16C1CEE4DE2D7 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 382EBEBAE9543784D096404B83CB9C29 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9E12CB3F1F805EEA41E7A703649D2E43 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5915A7FA279519A9A84B19C35636396 /* DGOrder.m */; };
 		9E4390311BE6621DEDD346B0CE34D29F /* DGArtist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9592E691E9CAFB807301A9376DDFA2D4 /* DGArtist+Mapping.m */; };
 		9E579BCCB75C445ADD118621621B510B /* DGArtist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9592E691E9CAFB807301A9376DDFA2D4 /* DGArtist+Mapping.m */; };
 		9E62063BBD8F0156A45C570FABACCE96 /* DGCollectionFieldInstance+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 184A4F456473BFAD7DBA9846B612D933 /* DGCollectionFieldInstance+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9E8B64B8F251C1F057BFD8B006F8637E /* RKURLEncodedSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = EDEB06467F9979305D81D0560334EC87 /* RKURLEncodedSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E95A116997ACBDFEEB8BD67652FFB40 /* RKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD150EAB87EB3F6EC2DA79083CCAC5B /* RKLog.m */; };
-		9EA7E6FD78DF637ACB32DA0677252BAB /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FC178F00D344C2DBFDEBEFFC7AE1CD06 /* DGTokenStore.m */; };
-		9ECC77C27E4B76813FE9187D793547A6 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = F18AAFF17B3326D3CE9BFC437E541239 /* DGEndpoint+Configuration.m */; };
+		9EA7E6FD78DF637ACB32DA0677252BAB /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A0FDD56A97FE360852B45491F82DCB /* DGTokenStore.m */; };
+		9ECC77C27E4B76813FE9187D793547A6 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E22D6D76B9F6E6A86442F700AA337D /* DGEndpoint+Configuration.m */; };
 		9F67805EA32A70065528801AD66B484D /* TKTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 732239DA0DA52EECB464C41ED40B9045 /* TKTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FF6A80538746999A31104255E99A01D /* DGWantlist+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 201A2AE6994A2B0BED5D2E1FDB6DC7BA /* DGWantlist+Mapping.m */; };
 		A0460764A69A53C93B7FAD72EAF5005D /* ISO8601DateFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEDAF77AEA57C4CCBF7D96A794896A6 /* ISO8601DateFormatterValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A0A2EEEC4DAD4E75F6ED395731E3756A /* RKPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2484CE09479C090A26CC358B861D02F1 /* RKPathUtilities.m */; };
 		A0B8BD81ADF7B15CA34AEEFEE1F2D975 /* DGListing+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 406DEB3AD3C1DB19EABAD70AAA4EF2EA /* DGListing+Mapping.m */; };
-		A0EBFA08B8D07E5C4215738CFD0440D2 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7CEBC2DAB2FF95466A0651BB6B314A /* DGHTTPClient.m */; };
+		A0EBFA08B8D07E5C4215738CFD0440D2 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A32ADBDDA84B6F02803751CC8F7791D3 /* DGHTTPClient.m */; };
 		A10E49DEAC10BEABE1126BC8D764B994 /* DGReleaseInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D45458BDEB90CFEE1B167884DB919C /* DGReleaseInstance.m */; };
 		A13A534FD256173B5F2AF1D72A45D315 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2506107749B1BD37D4BC4A0AB12D32 /* RestKit.framework */; };
 		A15DB0425DFFBD1469D938AED3E5394E /* AFRKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 18043640926793DFCE69A7E72609A6C3 /* AFRKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -594,14 +594,14 @@
 		A248EFC0D823D412DF9FD95D6BF913D4 /* RKValueTransformers-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EF494284311642E4E15DBA5F3E1131 /* RKValueTransformers-iOS10.0-dummy.m */; };
 		A26D08912A4AA7D3F13BD74F414AC666 /* DGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D2CEC568BC2D8FB69C1E3521C34188 /* DGMember.m */; };
 		A3230A8A59E09EC5572F055EEF32ED8F /* TKState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF64DBF1186A59A2E5876FFA7D8D3D3 /* TKState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A3D49D17FD15A847AB0EEAD5E88DC9E1 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8472F6171CB3D49F2FBC43C994FBBA /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A3D49D17FD15A847AB0EEAD5E88DC9E1 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E3D35610455144626D7F3FDE0BEA01 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A3D8F8EDCF1D16C89DCD65379A884C18 /* DGMaster+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1442F7E5DBA8BA716C4E9CDA49FA6819 /* DGMaster+Mapping.m */; };
 		A4005D9795A88D855113EBAED46B1BE1 /* DGCollectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D03285928F9069252729A9ED30C9270 /* DGCollectionField.m */; };
 		A400C0C92C78EAB911903D4E48CE5F06 /* RKResponseDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A8723442927B67B751EBDE4ED78B1F /* RKResponseDescriptor.m */; };
 		A497D9F69A778354B4C416BEB194972E /* RKDynamicMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACFE7BED626E5C8700A965A22519856 /* RKDynamicMapping.m */; };
 		A53EF060E636D78FF039A29F00C0A9B4 /* DGMember+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ECD4F2C36075090E099F97380C29BBB /* DGMember+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A55322F16A0CE73D7A58910EDE813531 /* RKTestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B88D88F6D34D514CB1231B36F750762F /* RKTestFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A56A973004811F1415FC85394F43E0B5 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = F848918738087F1FE3CD953CD0FAF650 /* DGIdentity.m */; };
+		A56A973004811F1415FC85394F43E0B5 /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C676E3305AAD63072D17450E41C160 /* DGIdentity.m */; };
 		A599E848387C979B6C7B404A95AE5D76 /* TKStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AF871D3DAB2D834E21DED326CA897A /* TKStateMachine.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A5ADF713DEEC52B4305CC9032E680A23 /* RKObjectMappingMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C70EEC680D4C882D653B7084DC7472 /* RKObjectMappingMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A67944F0EFB40A07C3925D67EC7B3676 /* DGMarketplace.m in Sources */ = {isa = PBXBuildFile; fileRef = F6177EA1EF86F58F00EF8E26F7D10FCF /* DGMarketplace.m */; };
@@ -628,25 +628,25 @@
 		ACD6A7BE872D2326E48DB39065CD5137 /* RKMappingOperationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = E672739AF6FF54123ACB0201B70FEBC9 /* RKMappingOperationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACD6E2C765CA9921135C97F8015CE4B0 /* AFRKXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF6D197D338B75C45888FCE30DE60F /* AFRKXMLRequestOperation.m */; };
 		ACE162726B6C5979C9127C2A080C7D7A /* AFRKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FAEFAAFD57E5EA1D6DAD1B38ADEB /* AFRKHTTPClient.m */; };
-		AD0233C95399A5F3B192DF4220E5A6C0 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3BD5B02110525A8902C05D07F34A7 /* DGAuthentication.m */; };
+		AD0233C95399A5F3B192DF4220E5A6C0 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = FC52C64471DFE1332105DD59D3738F3B /* DGAuthentication.m */; };
 		AD5D2775433090F191CB984E1F656C1B /* DGDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5796522FBB70F37A5471CC1ED80A6463 /* DGDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF5378CC0ABCFE3825EF8BCD19A0552 /* DGWantlist+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DC78D65288087BE80EB08E838BD77002 /* DGWantlist+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AE4040D64F2C2175F771457C69533828 /* DGMarketplace.m in Sources */ = {isa = PBXBuildFile; fileRef = F6177EA1EF86F58F00EF8E26F7D10FCF /* DGMarketplace.m */; };
 		AEBDF9E5C314D41A0E47EC2FED86D194 /* TKEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F705A539B5C721B1B4557E78607313F7 /* TKEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEDA3824DF1C864845D9525FFF0AF9C1 /* RKConnectionTestExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C275A3446FC40B3FD01C02F1B8D9A3 /* RKConnectionTestExpectation.m */; };
-		AEE7226DA953D51852B3AE018215FFF8 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E76F3C90A4AACD7565704F81474441DB /* DGIdentity+Mapping.m */; };
-		AF5BEFC8734DD64A05CE63717F884FF1 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A03055A610E7FB88BA7A610B9B5B45 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEE7226DA953D51852B3AE018215FFF8 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6DC39A8FE4AD4DB4E02B186492F6F2 /* DGIdentity+Mapping.m */; };
+		AF5BEFC8734DD64A05CE63717F884FF1 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 17EDFE8AB1128977884B54A32062FF85 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF91ECEE11FDAE3186B9A8E1CBB944E6 /* DGCollectionFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EFE5A68921044378E9B3FBCC16FEA /* DGCollectionFolder.m */; };
 		AF9ACBE1A632C98FD7A594805445DA26 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E253DC42595EBEE067C140870DFB3E21 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AFDE0E61F3C314CF806D47AD86E16F20 /* AFRKPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EEF9C9808EB7F961579A6F3F8B419180 /* AFRKPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B016A0C9F44495A7F2B4BF65DB0732EE /* Pods-Discogs-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87D460861EEF11562C98A86AA16CE498 /* Pods-Discogs-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0393B92E05B87D4C228AD92F122D7BD /* RKMIMETypes.m in Sources */ = {isa = PBXBuildFile; fileRef = F90200C8F54579EB090503B1F7F08F35 /* RKMIMETypes.m */; };
-		B072C684917A95E79DFFB39105C6B45E /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = F848918738087F1FE3CD953CD0FAF650 /* DGIdentity.m */; };
+		B072C684917A95E79DFFB39105C6B45E /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C676E3305AAD63072D17450E41C160 /* DGIdentity.m */; };
 		B07340593FB298194D0E099501C7F788 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */; };
 		B0B531F0F0016E6DDD4396244CE361A5 /* RKStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 964948137F56CDABECCB294128F4E0D3 /* RKStringTokenizer.m */; };
 		B0B59FD2CE1991950BC4B482B05B82C0 /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D684C57AD5DCD68AD02C0E940E393DC /* DGTrack.m */; };
 		B0CD5CD534E50C836646E29E185A5DB4 /* DGCollectionFieldInstance+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D811AEA21FD5BC054CBBB5EF3420FD /* DGCollectionFieldInstance+Mapping.m */; };
-		B0E90E6CE86337EA6FB85645700477B8 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8472F6171CB3D49F2FBC43C994FBBA /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B0E90E6CE86337EA6FB85645700477B8 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E3D35610455144626D7F3FDE0BEA01 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B0F890383244F93600ADCD74D1DE48BA /* RKMIMETypes.m in Sources */ = {isa = PBXBuildFile; fileRef = F90200C8F54579EB090503B1F7F08F35 /* RKMIMETypes.m */; };
 		B118AE7E3D0B0D54D39E040C841FA692 /* TKTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F95F0595BA65F44CA32A7997598EBA9A /* TKTransition.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B152A2E6693C63C848F6B4C3AA7046EC /* DGVideo+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F75992DBAAF504BF4F924807D4AEEA /* DGVideo+Mapping.m */; };
@@ -681,7 +681,7 @@
 		B725F2E0DE4B3187AEE506CFE3DAC6E5 /* AFRKImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 168C1C275DC4D6E15C86FD19AD5E40D9 /* AFRKImageRequestOperation.m */; };
 		B771DBA0D61E47094F6F582E89971A51 /* RKStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 964948137F56CDABECCB294128F4E0D3 /* RKStringTokenizer.m */; };
 		B83CFC551180CF10C185F22B14FB24B9 /* AFRKPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 160F566212F91D78A00A538FC92EFEC0 /* AFRKPropertyListRequestOperation.m */; };
-		B86160F9F24ED1CB9316EFF89E9483EB /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B3DC5E1D2D610B92F93F9E347EE8A1 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B86160F9F24ED1CB9316EFF89E9483EB /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B4C3ADF796735FFA7D1701AE023FF1 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B8AF2849C86832CFA9462F1B1E5A664F /* DGCommunity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D8A8B53739674A3802E2710E9C3497 /* DGCommunity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		B8B68D5D9B29DEF2539DF09263503C86 /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF011DD90EF6ED9AA1C4670D9FEA36B /* DGCollection.m */; };
 		B8BB41AC6953ABA647E7B247BED545FF /* SOCKit-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46DED95C70FDF8F13DC0449DAAD36D /* SOCKit-iOS10.0-dummy.m */; };
@@ -712,7 +712,7 @@
 		BEC615ED38F91F93A3159A1ABA1EAC20 /* UIImageView+AFRKNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BA75ED71684763CA8093A055AD1C47 /* UIImageView+AFRKNetworking.m */; };
 		BEEF76A5C20274BDF2F955F0991AB55A /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
 		BFB53E68ED241DE6E7231E6FD710C8DC /* RKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA7242E34CE24B594607BC2605EFE /* RKRouter.m */; };
-		BFBE798D25639782B0D7D5D8DBF3AF70 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FC178F00D344C2DBFDEBEFFC7AE1CD06 /* DGTokenStore.m */; };
+		BFBE798D25639782B0D7D5D8DBF3AF70 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A0FDD56A97FE360852B45491F82DCB /* DGTokenStore.m */; };
 		BFDA04F64CE904CB04934086CDD08830 /* DGCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 56948FBF3AB53E874B092EC3A2BD4097 /* DGCommunity.m */; };
 		C08057BBA6C989748A95A41B5E2EA6FA /* DGCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF011DD90EF6ED9AA1C4670D9FEA36B /* DGCollection.m */; };
 		C0942D537061F04C3DCDCD66C837BB8D /* AFRKNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC92D1ECBD1DD51E15A64BAF72DBECC /* AFRKNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -723,11 +723,11 @@
 		C263AAB14FBE9F3424DC6BED8918DFCF /* DGCollectionFieldInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE413DF89EA877F5B6B623CE92CDC9D /* DGCollectionFieldInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C27AEE4ED8833867F07E1DE4EFB7E3E4 /* RKObjectMappingOperationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 211106B337FFE3C79F4507B3BB6776AB /* RKObjectMappingOperationDataSource.m */; };
 		C28D7E0D5E8090B6D272B6AA0E15BF2B /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
-		C290BEE9700E5D6F4A9D96E1078D5703 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E76F3C90A4AACD7565704F81474441DB /* DGIdentity+Mapping.m */; };
+		C290BEE9700E5D6F4A9D96E1078D5703 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6DC39A8FE4AD4DB4E02B186492F6F2 /* DGIdentity+Mapping.m */; };
 		C2AB66A0C4F1F715162D8BDCBB85F2E7 /* RKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = D780C2B6C19B2749399369BC4C5B2601 /* RKRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3559A51B689AE69D382F387CEE7FBB2 /* DGMasterVersion+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBB15BADDD777AB90409C1CF3612E4 /* DGMasterVersion+Mapping.m */; };
 		C53AD3ECAD7D39BDA402B181B276AEAA /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
-		C550C74090360C9D2693FC4B7447E9D9 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 5896EAEBF440F0C896A00C1D5815DDD9 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C550C74090360C9D2693FC4B7447E9D9 /* DGAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = DF30CBA756BDBB748959AFC528596E37 /* DGAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C57E133EA8E0CDC5E28881F0291C6CF6 /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D684C57AD5DCD68AD02C0E940E393DC /* DGTrack.m */; };
 		C5A0EFFAAE2D30199EE5E7C666AA78C2 /* DGDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5796522FBB70F37A5471CC1ED80A6463 /* DGDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5A7310B3EF46C6D294D9F9BCE8FC377 /* DGIdentifier+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DC24611C0645FD42AE7A05CB234D3B6C /* DGIdentifier+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -735,7 +735,7 @@
 		C676C4168BB4DD5F9B09F3ED0FD7AE07 /* DGIdentifier+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C74616EC0E5AFDE89CF4F0C50A2041 /* DGIdentifier+Mapping.m */; };
 		C67807A0556BBE95E4A0F637DAAF69D5 /* DGMasterVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A25F59682650B9A8CCC89F4113D6AFD3 /* DGMasterVersion.m */; };
 		C6D61BE7B49838811D31848F2E383862 /* DGLabelRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = AB300E63221AB5D42F51B7D98FFC1903 /* DGLabelRelease.m */; };
-		C72025F2BBB4DE8EC3753D57B11001CA /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7CEBC2DAB2FF95466A0651BB6B314A /* DGHTTPClient.m */; };
+		C72025F2BBB4DE8EC3753D57B11001CA /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A32ADBDDA84B6F02803751CC8F7791D3 /* DGHTTPClient.m */; };
 		C795D6950D978CCDAECDB15C4D8C351E /* RKMappingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA71F32BEBE42DCE9F506824F408DD /* RKMappingResult.m */; };
 		C7E5C0A9F95B0F5BF091C048D2268FB3 /* DGVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C5EA61399FD9D9BEE43B71D76A06C8 /* DGVideo.m */; };
 		C7E7A19386C68908D753662D68BB6D2A /* ObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2A745E7358E58AE622B6F037118BA9 /* ObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -751,7 +751,7 @@
 		C9B0C595B69442F41D3DFB6A03AF1DBC /* DGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D2CEC568BC2D8FB69C1E3521C34188 /* DGMember.m */; };
 		C9DC74A2018AE2E6904E3D2C6C59481D /* DGLabel+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F35489A0B285504F59324FFD638C39BF /* DGLabel+Mapping.m */; };
 		C9E0ED1F5CC53F9D333F3957A57E1A4D /* RKObjectUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 89018603DE6045D9E61117765560C523 /* RKObjectUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA0598364FECDD2BDA5FCB9DC9436E0C /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF11FBD3FD88ABBF8A3AC995892A900 /* AFOAuth1Client.m */; };
+		CA0598364FECDD2BDA5FCB9DC9436E0C /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFAC98CC251FDBB6F28B326369CEF88 /* AFOAuth1Client.m */; };
 		CA561CFD3142FB550FB8AF3D718E7461 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		CA5EDFB3F9FEF7C8E0C85FB8DBA975AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
 		CAEA24F09EF3095AC0A3452B5F86B22F /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DD0CB2F7E2B21E9F7C8CA0D6A6541 /* DGTrack+Mapping.m */; };
@@ -831,8 +831,8 @@
 		DD8477569E7D9378DFBC39D182CD5802 /* RKStringTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7917C09A51ABAF0B8CA90521E679DB14 /* RKStringTokenizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDD2D022115E34F1C872A86E7F6A62A5 /* RKValueTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AC627A7CD80E9F81FFDE02125967 /* RKValueTransformers.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		DDF09587F9285C7E7DAE7F4C219B8007 /* RKObjectMappingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 68733BF3DF9011F3A0E28AD1B2B25904 /* RKObjectMappingMatcher.m */; };
-		DE1EA1B796A2BF62AAFD8BA66AEA02A0 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8472F6171CB3D49F2FBC43C994FBBA /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		DE20F7F3724991A1980801FA290E2EEB /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 486599BDB1272ED07EFF525C941C96DF /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DE1EA1B796A2BF62AAFD8BA66AEA02A0 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E3D35610455144626D7F3FDE0BEA01 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DE20F7F3724991A1980801FA290E2EEB /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFBA8D365CB46A49A8AE81045DC63D7 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DEADBE21AA2CE36232E77A61BB050BB3 /* RKHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE336522A8C85E97E60F5D1925E062 /* RKHTTPRequestOperation.m */; };
 		DEB91FE8398D84A8998524315A1C91C1 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B8CEB350360E3C0B1145277DD5880D /* DGFormat+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DEE765362E11F19F3FC5F6202A4FD9AF /* DGPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A3EBC40F6CBD9FC21BA0238B0B7C3D /* DGPagination.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -850,7 +850,7 @@
 		E3842B66805467CC62EF61DFCECC9043 /* RKPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2484CE09479C090A26CC358B861D02F1 /* RKPathUtilities.m */; };
 		E3D4583A0A826A87474C2C637A7773A8 /* RestKit-Network-ObjectMapping-Support-iOS8.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FFC743F3CB4E396EC5B5AC7441F8CCE /* RestKit-Network-ObjectMapping-Support-iOS8.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4309C5B2CD5E19E8CC0BF91150595E1 /* lcl_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = B6EF85F0731B4E1F8008FEC56302AB54 /* lcl_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E481CE673FD02BE2B60DB65D24B1E018 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB8939A6C818FFB1B774DC46F938AA2 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E481CE673FD02BE2B60DB65D24B1E018 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E964D15880EE92F6B5789CA4B4B037 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4946A7C25BC1A975E151FE5E31030B4 /* DGProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = DA82D05BCE20C84C2850E5FFFC769D67 /* DGProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4E30B938281413069268B78AEF83E8A /* RKPropertyInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE697700F4F7386861326162D5470B4 /* RKPropertyInspector.m */; };
 		E6126153A336B7A26314A24CB77065FE /* DGPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 595C53495CA8AD86696DFC01A4029841 /* DGPrice.m */; };
@@ -858,16 +858,16 @@
 		E628D67A2188BF19CA11F5C4CF9F36A4 /* ISO8601DateFormatterValueTransformer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9F760D5C3C339117D36C2CD1744DE0 /* ISO8601DateFormatterValueTransformer.framework */; };
 		E6580253E41E1C284002A2820EC737B5 /* RKObjectRequestOperationSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA924FE64ED95861F3B3801AF8FEE4C /* RKObjectRequestOperationSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E72B53B0A9109C31C253FF4A78532138 /* lcl_config_extensions_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B933F6691C6231988F298BE3F83C8AD /* lcl_config_extensions_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E72FDC6E99BC7333E8F4298A071D6954 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 89FCA8CC3F6D424677B41E3DB5FCB2ED /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E72FDC6E99BC7333E8F4298A071D6954 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 382EBEBAE9543784D096404B83CB9C29 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E75695E4C92027A01EF938E0CC3E4E67 /* AFRKImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 168C1C275DC4D6E15C86FD19AD5E40D9 /* AFRKImageRequestOperation.m */; };
 		E76607139D03514F5A040D02026749CD /* DGMaster+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 437F5D5778986AD3794B94AD5F8C9562 /* DGMaster+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E794EE7EE723B769CA192EFA795BC361 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B3DC5E1D2D610B92F93F9E347EE8A1 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E794EE7EE723B769CA192EFA795BC361 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B4C3ADF796735FFA7D1701AE023FF1 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E816B72DE9768E454D0B1FFEAB7EDBAF /* RKObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = F92D97D0681AEE51165C2FDDFEBB3497 /* RKObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E86164F0F6CA08541228CB8F09B5794F /* ISO8601DateFormatterValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DA1FF6915E8AE1B891739350A87D361 /* ISO8601DateFormatterValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C7813F5D6D6F0CCE38D9877A7216CD /* lcl_config_extensions_RK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B933F6691C6231988F298BE3F83C8AD /* lcl_config_extensions_RK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C9761EBF59955ED3EE690A8BDC2772 /* TKStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AF871D3DAB2D834E21DED326CA897A /* TKStateMachine.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		E8CA440D1EA04A1A09B70A559BD178B7 /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DD0CB2F7E2B21E9F7C8CA0D6A6541 /* DGTrack+Mapping.m */; };
-		E8DFB796F6562B59E1C94B0C80E1187F /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 135671F3F12A63368380B9211AD525E2 /* DGIdentity+Keychain.m */; };
+		E8DFB796F6562B59E1C94B0C80E1187F /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B4550C3C6BDB84492A79BCAF8A743D /* DGIdentity+Keychain.m */; };
 		E8FC6D3FFD30647C276F124D6DFBC51D /* DiscogsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB50BC1151DCD87D00C4C22177B95F7 /* DiscogsAPI.m */; };
 		E98ACE0FCA86D95775A4CEFDC1C7F520 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = E965235D031DBDCBB0CE37BBCD747E9E /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9B549AD707C90FDADF6CD4B7B9B9E4A /* TKEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F705A539B5C721B1B4557E78607313F7 /* TKEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -877,10 +877,10 @@
 		EA3FE621FFADCF97743E7854BDB51A3F /* DGPrice+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 695EAD56F513D68DD4CF9A6FF87F2357 /* DGPrice+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EA4EEBC36C4E519682309BB0FFBD1356 /* RKRelationshipMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E5A7FE3280FB89278A017AF985FFB2 /* RKRelationshipMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB6B3C81080BC8E30E3EFA1CCB0447B2 /* DGTrack+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = CE22D61F66616D671007DC70C79E3A82 /* DGTrack+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		EB7A4A580F294F83C9984B397ED631A3 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB8939A6C818FFB1B774DC46F938AA2 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EB7A4A580F294F83C9984B397ED631A3 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E964D15880EE92F6B5789CA4B4B037 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EB86D2A430DA89E54C41CBA9CA8DDF13 /* DGImage+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B28706EBAEBE6E8DA762E2096C38EF /* DGImage+Mapping.m */; };
 		EB9B158B01E66BF8BC9F4A4FD2156A6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */; };
-		EBC607F521EA99DA8812782CDA277E6F /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A0C6543D52E651C3FBD5C8037C8C6 /* DGAuthView.m */; };
+		EBC607F521EA99DA8812782CDA277E6F /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20143359CD3AC7F6AF422D23643BB4DE /* DGAuthView.m */; };
 		EC0735174CFF88DB21B9CF6FAAB8B4BB /* RKErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0648321C612FBA8D5861A5A5C675EA /* RKErrors.m */; };
 		EC4BF4FDD15ABE0DBD38CDA7BA827B69 /* DGTrack+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6DD0CB2F7E2B21E9F7C8CA0D6A6541 /* DGTrack+Mapping.m */; };
 		EC836D823A98AB78F2D7C1622C249695 /* RKMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F7429B7072ED6946FD5AB0CEE4AF68 /* RKMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -893,14 +893,14 @@
 		EE8D46AF2159E8B671C7B06DFF2968CB /* DGRelease+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = B47310098D683B50E02F6F10110A29C8 /* DGRelease+Mapping.m */; };
 		EED5FE744289CB138BEF56380A7D54A0 /* DGCollectionFolder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DEA79349307048FC0EA90412E4B6FAB /* DGCollectionFolder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EF9965E9DEDEB9B9F80B8379BA01B6C1 /* RKPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2484CE09479C090A26CC358B861D02F1 /* RKPathUtilities.m */; };
-		F019E380BDFFCEC85C24B7F002B3819C /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A0C6543D52E651C3FBD5C8037C8C6 /* DGAuthView.m */; };
+		F019E380BDFFCEC85C24B7F002B3819C /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20143359CD3AC7F6AF422D23643BB4DE /* DGAuthView.m */; };
 		F0542528C354E2381AA5C10199235F97 /* DGMarketplace.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB3C1D4A379AD5E4E07A0622D09EE44 /* DGMarketplace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F087BF5F1C0FB0A57DFE01C98E0322CE /* RKObjectRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04718EE0D97AA4B07F2CCD258D9DAC8F /* RKObjectRequestOperation.m */; };
 		F0E3EBCDD6BDAA33A08D1FD855108FDD /* DGRelease.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AA64443FBDD5B67E32B4C7C3FCC740 /* DGRelease.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1374FA6601D4E72799157D874989F92 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6463163A48B4B14D84DEA4C692412337 /* Security.framework */; };
 		F18A7E892383A9F5D8B137618374E692 /* DGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A08383C983D11F5B5641DBAEEEA55A /* DGMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1FAF160C4BC3A9880749D126628704F /* DGCollectionField+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB13BB2BD8ADAE2D9B2FA147F6ADB32 /* DGCollectionField+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F1FB4C9B88FF73BA3DCC1D3AC62A87A0 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A03055A610E7FB88BA7A610B9B5B45 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1FB4C9B88FF73BA3DCC1D3AC62A87A0 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 17EDFE8AB1128977884B54A32062FF85 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F24C8A3E5133EF35D644250A2105C5BB /* RKMappingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4287BDE8110511452608694307AEF809 /* RKMappingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2548A6A4696A61839C768F020A96AE9 /* DGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 192083237A2E471423A9CEE14E5580C9 /* DGDatabase.m */; };
 		F25BC28D82B00755F02FB96C9228F6AA /* RKPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5104BC5CD3425742E8F17660B0949CC /* RKPaginator.m */; };
@@ -908,7 +908,7 @@
 		F3672A3422C5EF23D38516B7119C8EBD /* DGImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F666256C987D2BB7E11DBF5D700C4EA /* DGImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F36CCAFCBF6CE9AD6F29AF80C49C5E73 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5340DAB942AD80A3F97F81FA61508FB9 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F380969ADA30D2C3229952C2A721BFFF /* DGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DD3DD97778FEC72E38DF34CB264FAB /* DGPagination.m */; };
-		F40A725E3F56DC5A2EE13D0F76CCFA94 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 135671F3F12A63368380B9211AD525E2 /* DGIdentity+Keychain.m */; };
+		F40A725E3F56DC5A2EE13D0F76CCFA94 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B4550C3C6BDB84492A79BCAF8A743D /* DGIdentity+Keychain.m */; };
 		F43F86DC1CC595FED19BFFB1EEA57764 /* RKPathMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 77772601A44A99932CCAF974B408C128 /* RKPathMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4B0BC20CDC6467F7E0754F14CBB2AB0 /* DGLabelRelease+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E253DC42595EBEE067C140870DFB3E21 /* DGLabelRelease+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F53EAB3EEE198453A48EDBC37528A758 /* DGArtistRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D6DEB928C9CE955C9D98A0D9E7373 /* DGArtistRelease.m */; };
@@ -917,7 +917,7 @@
 		F67E7F641EDC15344AB14A2D1FB16CDE /* DGPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 595C53495CA8AD86696DFC01A4029841 /* DGPrice.m */; };
 		F6C50823C847ED48639EB9892D7A7109 /* DGMember+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 820C431A57C68FA6542DBD6B9C8B59A2 /* DGMember+Mapping.m */; };
 		F6C62A6C97B4750D388AE7CB6FF91030 /* RKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D0056DBABE2917F320459F7FDBEBB3 /* RKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F717342C4B6157F922CE66DF37E3933D /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 135671F3F12A63368380B9211AD525E2 /* DGIdentity+Keychain.m */; };
+		F717342C4B6157F922CE66DF37E3933D /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B4550C3C6BDB84492A79BCAF8A743D /* DGIdentity+Keychain.m */; };
 		F7BCE8C5158200A096C2F5FED4DAFA1D /* DGFormat+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 0476920D8A1802C2967452FDE17B81C9 /* DGFormat+Mapping.m */; };
 		F7CA59F292782DA331B0E50AC58D82B3 /* AFRKXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F00CB542100EBF80AAA4660120B7DAB0 /* AFRKXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F849C06677DE690D7F2E4368A8DFD2EE /* DGTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D684C57AD5DCD68AD02C0E940E393DC /* DGTrack.m */; };
@@ -926,7 +926,7 @@
 		F912C74D887C0C2EC0CF50D1EF988822 /* AFRKHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8F3A317B60FE80E6A3A443EF26A0DC /* AFRKHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F914B7EC24845A4EC2B31D546D61F17D /* DGArtistRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D6DEB928C9CE955C9D98A0D9E7373 /* DGArtistRelease.m */; };
 		F971B3C500B4056904C9F91D554B07D9 /* SOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9ABA734D1546C2E6D52AF708DDCAC0 /* SOCKit.framework */; };
-		F97AF3A178CD5F4104F6E7DECC016D62 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF1B2484CC7816B46EDE07D1CDC86D8 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F97AF3A178CD5F4104F6E7DECC016D62 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A9D9023927E7F112F5B20C51F126C0 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F98890116589617DCF2ACFDEEAAF1175 /* DGCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 56948FBF3AB53E874B092EC3A2BD4097 /* DGCommunity.m */; };
 		F9A7581E92E066975F208C41CB08F231 /* DGLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 425935A7AE9AA3007C6DE44A1B608128 /* DGLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9B44B72D3D2448CD2A2F388398CA74D /* Pods-Discogs-objc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F592B5DFBE42C93B51E835F7AAC0E49 /* Pods-Discogs-objc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -937,7 +937,7 @@
 		FB9817B4CA95E00F599D6C02859E3295 /* DGCollectionFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E031771BBAAC40DF39CF6521F9B686 /* DGCollectionFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBB3B440BCFAB4AD8D8EFF0A3653C8C7 /* DGFormat+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B8CEB350360E3C0B1145277DD5880D /* DGFormat+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FC243F8BE5D6A2FDD28C649EED575BC7 /* RKErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0648321C612FBA8D5861A5A5C675EA /* RKErrors.m */; };
-		FC28FC035CF0A61017C6355DA7431C9C /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = F848918738087F1FE3CD953CD0FAF650 /* DGIdentity.m */; };
+		FC28FC035CF0A61017C6355DA7431C9C /* DGIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C676E3305AAD63072D17450E41C160 /* DGIdentity.m */; };
 		FC99B70775E552BE67C7F8C773F84D65 /* DGInventory+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = C35A293F481711BA846777CFBECC33C2 /* DGInventory+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FCEB9DACF7FA3DA66E1C7C000F1CFCA0 /* AFRKHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8F3A317B60FE80E6A3A443EF26A0DC /* AFRKHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD09C1A5C1E02CD5DAC2C980DCF16317 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */; };
@@ -947,8 +947,8 @@
 		FD76260465A1A7EE7007BFAA5C3ACC30 /* RKPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 384F56AE9D543E983B40B4192CF70A72 /* RKPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD785A0C9A329D4836595573FCAD7D3D /* RKObjectMappingMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 68733BF3DF9011F3A0E28AD1B2B25904 /* RKObjectMappingMatcher.m */; };
 		FDC36B2E06D82F9AADE894274EB851EE /* RKDotNetDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F874400393869D4F84A9D52A6F7A4 /* RKDotNetDateFormatter.m */; };
-		FDDF2151DA830F841E29DDE878C223A1 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FC178F00D344C2DBFDEBEFFC7AE1CD06 /* DGTokenStore.m */; };
-		FE34B68E50613CE0DAD0A6ED78F1AC20 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3C51D9726E373D7BD64F159CB750E1 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDDF2151DA830F841E29DDE878C223A1 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A0FDD56A97FE360852B45491F82DCB /* DGTokenStore.m */; };
+		FE34B68E50613CE0DAD0A6ED78F1AC20 /* DGIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF591D12CBB1655755B2C390AE16961 /* DGIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE96F3F4C208256B31B90B9B754C201A /* RKValueTransformers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */; };
 		FEB2D620824F5436070EE424DE34072E /* lcl_RK.m in Sources */ = {isa = PBXBuildFile; fileRef = C66FCA822F92AFD858B06D072C3ECB13 /* lcl_RK.m */; };
 		FF1264DC3694D9044044E7A0FA33A0C7 /* RKRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 29B7A400380759E79251F67FFA02F6CE /* RKRoute.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1340,6 +1340,7 @@
 		04B80405678CC0EB5C2629F5C2E7AB81 /* DGReleaseInstance+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGReleaseInstance+Mapping.h"; sourceTree = "<group>"; };
 		051AB28A2C1979345C49FB738B69BF0B /* Pods-Discogs-swift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Discogs-swift-resources.sh"; sourceTree = "<group>"; };
 		054BD344FD6FE9FBB939ADACB94E8AE3 /* RKDictionaryUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKDictionaryUtilities.m; path = Code/Support/RKDictionaryUtilities.m; sourceTree = "<group>"; };
+		06E22D6D76B9F6E6A86442F700AA337D /* DGEndpoint+Configuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Configuration.m"; sourceTree = "<group>"; };
 		072A824DFFB07F29FDCF1FA6F8A5A5F1 /* ISO8601DateFormatterValueTransformer-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ISO8601DateFormatterValueTransformer-iOS8.0-dummy.m"; path = "../ISO8601DateFormatterValueTransformer-iOS8.0/ISO8601DateFormatterValueTransformer-iOS8.0-dummy.m"; sourceTree = "<group>"; };
 		075D44A515CC4760E992A4AE1A79C236 /* TransitionKit-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "TransitionKit-iOS10.0.modulemap"; sourceTree = "<group>"; };
 		07918F2377AB22F006B98846C29DFD52 /* RKNSJSONSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKNSJSONSerialization.h; path = Code/Support/RKNSJSONSerialization.h; sourceTree = "<group>"; };
@@ -1347,7 +1348,9 @@
 		080FBC569C9DB81244734CBDAB3F93DD /* DGReleaseInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGReleaseInstance+Mapping.m"; sourceTree = "<group>"; };
 		088B74C1BF36949A0189ABD1D5B6B6D6 /* DGImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGImage.m; sourceTree = "<group>"; };
 		08A12C66CC17361AC934F1AE672AD252 /* SOCKit-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SOCKit-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
+		08E3D35610455144626D7F3FDE0BEA01 /* DGHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
 		09F85CA5DE494154F2F978E7341D0991 /* RKPropertyMappingTestExpectation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyMappingTestExpectation.m; path = Code/Testing/RKPropertyMappingTestExpectation.m; sourceTree = "<group>"; };
+		0AA4B441B2A929A113EC4E56B5C7EC63 /* DGOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGOperation.m; sourceTree = "<group>"; };
 		0B43A6480EA4785B5D077553E238130F /* Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Testing.h; path = Code/Testing.h; sourceTree = "<group>"; };
 		0B9B2DB1F54C5ACADFBF880CB75BBBFF /* ISO8601DateFormatterValueTransformer-iOS10.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ISO8601DateFormatterValueTransformer-iOS10.0-prefix.pch"; sourceTree = "<group>"; };
 		0BBB44E54754E395988D5EC62D11E7C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../ISO8601DateFormatterValueTransformer-iOS9.3/Info.plist"; sourceTree = "<group>"; };
@@ -1362,16 +1365,15 @@
 		10508620D9AD1BBD8D103D5BA9A2CD03 /* DGSearch+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGSearch+Mapping.h"; sourceTree = "<group>"; };
 		10A87000999CC6F39617BF5E390D7004 /* SOCKit-iOS9.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SOCKit-iOS9.3-umbrella.h"; path = "../SOCKit-iOS9.3/SOCKit-iOS9.3-umbrella.h"; sourceTree = "<group>"; };
 		131F874400393869D4F84A9D52A6F7A4 /* RKDotNetDateFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKDotNetDateFormatter.m; path = Code/Support/RKDotNetDateFormatter.m; sourceTree = "<group>"; };
-		135671F3F12A63368380B9211AD525E2 /* DGIdentity+Keychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Keychain.m"; sourceTree = "<group>"; };
 		1369EED0AB7D756552B85B7686A6FF7A /* TransitionKit-iOS9.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TransitionKit-iOS9.3-prefix.pch"; path = "../TransitionKit-iOS9.3/TransitionKit-iOS9.3-prefix.pch"; sourceTree = "<group>"; };
 		137732782AD16BAAE53EFC48DCEB5D44 /* TransitionKit-iOS8.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "TransitionKit-iOS8.0.xcconfig"; path = "../TransitionKit-iOS8.0/TransitionKit-iOS8.0.xcconfig"; sourceTree = "<group>"; };
 		1442F7E5DBA8BA716C4E9CDA49FA6819 /* DGMaster+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMaster+Mapping.m"; sourceTree = "<group>"; };
 		14A6B7D776747105DFB3BD13C710C0D3 /* SOCKit-iOS9.3.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SOCKit-iOS9.3.xcconfig"; path = "../SOCKit-iOS9.3/SOCKit-iOS9.3.xcconfig"; sourceTree = "<group>"; };
 		1583087EF1857B15D557DED68B42BECB /* Pods-DiscogsAPITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DiscogsAPITests.modulemap"; sourceTree = "<group>"; };
 		15AA64443FBDD5B67E32B4C7C3FCC740 /* DGRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGRelease.h; sourceTree = "<group>"; };
-		15FDBFBD2235C45964F5B628E10F7C67 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		160F566212F91D78A00A538FC92EFEC0 /* AFRKPropertyListRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKPropertyListRequestOperation.m; path = Code/Network/AFNetworking/AFRKPropertyListRequestOperation.m; sourceTree = "<group>"; };
 		168C1C275DC4D6E15C86FD19AD5E40D9 /* AFRKImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKImageRequestOperation.m; path = Code/Network/AFNetworking/AFRKImageRequestOperation.m; sourceTree = "<group>"; };
+		17EDFE8AB1128977884B54A32062FF85 /* DGEndpoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGEndpoint.h; sourceTree = "<group>"; };
 		18043640926793DFCE69A7E72609A6C3 /* AFRKHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKHTTPRequestOperation.h; path = Code/Network/AFNetworking/AFRKHTTPRequestOperation.h; sourceTree = "<group>"; };
 		184A4F456473BFAD7DBA9846B612D933 /* DGCollectionFieldInstance+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionFieldInstance+Mapping.h"; sourceTree = "<group>"; };
 		192083237A2E471423A9CEE14E5580C9 /* DGDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGDatabase.m; sourceTree = "<group>"; };
@@ -1383,7 +1385,9 @@
 		1D46DED95C70FDF8F13DC0449DAAD36D /* SOCKit-iOS10.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SOCKit-iOS10.0-dummy.m"; sourceTree = "<group>"; };
 		1E25EA92C1CAEA7F587E7F3A3C9C4E1F /* DGProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGProfile.m; sourceTree = "<group>"; };
 		1ECBB25ACDA324A96D3700F12EC03A1C /* RKPathMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPathMatcher.m; path = Code/Network/RKPathMatcher.m; sourceTree = "<group>"; };
+		1EFBA8D365CB46A49A8AE81045DC63D7 /* DGOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGOperation.h; sourceTree = "<group>"; };
 		1F6D8C65DCD2F50955980943B60B4452 /* RKValueTransformers-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RKValueTransformers-iOS10.0.xcconfig"; sourceTree = "<group>"; };
+		20143359CD3AC7F6AF422D23643BB4DE /* DGAuthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
 		201A2AE6994A2B0BED5D2E1FDB6DC7BA /* DGWantlist+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGWantlist+Mapping.m"; sourceTree = "<group>"; };
 		20E6DE32A7B2B3EE4E732051EAF1C8AA /* RKObjectManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectManager.h; path = Code/Network/RKObjectManager.h; sourceTree = "<group>"; };
 		2107DBA5A8AA6603DB42978E54F2EA4C /* Pods-DiscogsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1408,6 +1412,7 @@
 		30928CDF27A6239B70FCB0AD2ACE4766 /* DGLabelRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGLabelRelease.h; sourceTree = "<group>"; };
 		31727E9AEECFDFAD826440DE59E2415A /* RestKit-Network-ObjectMapping-Support-iOS9.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "RestKit-Network-ObjectMapping-Support-iOS9.3.modulemap"; path = "../RestKit-Network-ObjectMapping-Support-iOS9.3/RestKit-Network-ObjectMapping-Support-iOS9.3.modulemap"; sourceTree = "<group>"; };
 		317A667613500BE37519409079991E53 /* TransitionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C676E3305AAD63072D17450E41C160 /* DGIdentity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentity.m; sourceTree = "<group>"; };
 		32C1481983A6C8AFD4CD7BFA5EE6FBDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32F7429B7072ED6946FD5AB0CEE4AF68 /* RKMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMapping.h; path = Code/ObjectMapping/RKMapping.h; sourceTree = "<group>"; };
 		3360FE25E6FAD1B6F2F8707EC7F55274 /* RestKit-Network-ObjectMapping-Support-iOS9.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RestKit-Network-ObjectMapping-Support-iOS9.3-umbrella.h"; path = "../RestKit-Network-ObjectMapping-Support-iOS9.3/RestKit-Network-ObjectMapping-Support-iOS9.3-umbrella.h"; sourceTree = "<group>"; };
@@ -1418,6 +1423,7 @@
 		34F35137F08266E9938BCB4BC1EB073B /* RKRequestDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKRequestDescriptor.h; path = Code/Network/RKRequestDescriptor.h; sourceTree = "<group>"; };
 		34F4C4A2298641BD3F5FB78F0237E1CA /* DiscogsAPI-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DiscogsAPI-iOS8.0-dummy.m"; path = "../DiscogsAPI-iOS8.0/DiscogsAPI-iOS8.0-dummy.m"; sourceTree = "<group>"; };
 		36D811AEA21FD5BC054CBBB5EF3420FD /* DGCollectionFieldInstance+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFieldInstance+Mapping.m"; sourceTree = "<group>"; };
+		382EBEBAE9543784D096404B83CB9C29 /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
 		384F56AE9D543E983B40B4192CF70A72 /* RKPropertyMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPropertyMapping.h; path = Code/ObjectMapping/RKPropertyMapping.h; sourceTree = "<group>"; };
 		38BBA141814CD80347B564F3804B684A /* ISO8601DateFormatterValueTransformer-iOS8.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ISO8601DateFormatterValueTransformer-iOS8.0-umbrella.h"; path = "../ISO8601DateFormatterValueTransformer-iOS8.0/ISO8601DateFormatterValueTransformer-iOS8.0-umbrella.h"; sourceTree = "<group>"; };
 		3953CBEF4B0EEC93E3C7C1784B31E8C5 /* Pods-DiscogsAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DiscogsAPI-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -1436,6 +1442,7 @@
 		40386C38728B39BBCC72DC962225C0A6 /* RKBenchmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKBenchmark.h; path = Code/Testing/RKBenchmark.h; sourceTree = "<group>"; };
 		406DEB3AD3C1DB19EABAD70AAA4EF2EA /* DGListing+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGListing+Mapping.m"; sourceTree = "<group>"; };
 		41CFF5A3A22FD00FF55423F22406C9F9 /* DGCollectionField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionField.h; sourceTree = "<group>"; };
+		41E964D15880EE92F6B5789CA4B4B037 /* DGTokenStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
 		41ECDAC9BDC1E553C51DAACA41F6C519 /* AFRKURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKURLConnectionOperation.m; path = Code/Network/AFNetworking/AFRKURLConnectionOperation.m; sourceTree = "<group>"; };
 		4256FC376A2A6DD3519A09B217D887F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		425935A7AE9AA3007C6DE44A1B608128 /* DGLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGLabel.h; sourceTree = "<group>"; };
@@ -1448,7 +1455,6 @@
 		475BED5396B95C78456920FEB2177A13 /* RKRoute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKRoute.m; path = Code/Network/RKRoute.m; sourceTree = "<group>"; };
 		480E29D9EACF18659559C6E98B130254 /* RKMappingErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingErrors.h; path = Code/ObjectMapping/RKMappingErrors.h; sourceTree = "<group>"; };
 		48155F9156DD0BAA0855430AC8BC8672 /* DGLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGLabel.m; sourceTree = "<group>"; };
-		486599BDB1272ED07EFF525C941C96DF /* DGOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGOperation.h; sourceTree = "<group>"; };
 		4A3CA03A55C847BF71794DB7D2FEC4B9 /* RKResponseMapperOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKResponseMapperOperation.h; path = Code/Network/RKResponseMapperOperation.h; sourceTree = "<group>"; };
 		4A78F122AF386C854B6A2DFB622689C7 /* DGFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGFormat.h; sourceTree = "<group>"; };
 		4ABF5958F3EA31957B0F3972D2DFDCC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -1456,14 +1462,13 @@
 		4B143320DB6A1997CB79DC9EE809D7F2 /* TransitionKit-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionKit-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
 		4B4952B73D6852F215EE2688EACD831E /* TransitionKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TransitionKit.h; path = Code/TransitionKit.h; sourceTree = "<group>"; };
 		4B55C0218D6D682F342D37D841790750 /* Pods-Discogs-objc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Discogs-objc-dummy.m"; sourceTree = "<group>"; };
-		4BF11FBD3FD88ABBF8A3AC995892A900 /* AFOAuth1Client.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
 		4CE697700F4F7386861326162D5470B4 /* RKPropertyInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyInspector.m; path = Code/ObjectMapping/RKPropertyInspector.m; sourceTree = "<group>"; };
 		4D1D24BFF37A78C48871D926EDB1982F /* DiscogsAPI-iOS9.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DiscogsAPI-iOS9.3-umbrella.h"; path = "../DiscogsAPI-iOS9.3/DiscogsAPI-iOS9.3-umbrella.h"; sourceTree = "<group>"; };
 		4D992BFD5D06B2E3C495CCE2CED2B676 /* DGSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGSearch.h; sourceTree = "<group>"; };
 		4DEA79349307048FC0EA90412E4B6FAB /* DGCollectionFolder+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGCollectionFolder+Mapping.h"; sourceTree = "<group>"; };
-		4E3C51D9726E373D7BD64F159CB750E1 /* DGIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentity.h; sourceTree = "<group>"; };
 		4ED85FE9F76C15CAB2260954429BA6B3 /* TransitionKit-iOS10.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionKit-iOS10.0-dummy.m"; sourceTree = "<group>"; };
 		4F0FE754216B44DBDC7F0685C3341229 /* RKMappingTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMappingTest.m; path = Code/Testing/RKMappingTest.m; sourceTree = "<group>"; };
+		4FF591D12CBB1655755B2C390AE16961 /* DGIdentity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentity.h; sourceTree = "<group>"; };
 		50A8D48E584949EA8AB303F5A3DF522B /* RKValueTransformers-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKValueTransformers-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
 		50C1D1846B3A03FDCA5AF7D73681B5E1 /* DiscogsAPI-iOS8.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DiscogsAPI-iOS8.0-prefix.pch"; path = "../DiscogsAPI-iOS8.0/DiscogsAPI-iOS8.0-prefix.pch"; sourceTree = "<group>"; };
 		515E779E20463FC958C02D619AC28477 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RestKit-Network-ObjectMapping-Support-iOS9.3/Info.plist"; sourceTree = "<group>"; };
@@ -1479,12 +1484,9 @@
 		56D96FBA1CA6250FD5063AFB80DF8557 /* RKTestNotificationObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestNotificationObserver.h; path = Code/Testing/RKTestNotificationObserver.h; sourceTree = "<group>"; };
 		5765D6F075C15CC8E5A8836839271BEB /* DGUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGUser.h; sourceTree = "<group>"; };
 		5796522FBB70F37A5471CC1ED80A6463 /* DGDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGDatabase.h; sourceTree = "<group>"; };
-		5896EAEBF440F0C896A00C1D5815DDD9 /* DGAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		5927A8E9F2A76F03E280844E2AE3936F /* TransitionKit-iOS9.3.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "TransitionKit-iOS9.3.xcconfig"; path = "../TransitionKit-iOS9.3/TransitionKit-iOS9.3.xcconfig"; sourceTree = "<group>"; };
 		595C53495CA8AD86696DFC01A4029841 /* DGPrice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGPrice.m; sourceTree = "<group>"; };
 		5A48AC627A7CD80E9F81FFDE02125967 /* RKValueTransformers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKValueTransformers.m; path = Code/RKValueTransformers.m; sourceTree = "<group>"; };
-		5AB8939A6C818FFB1B774DC46F938AA2 /* DGTokenStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
-		5BF1B2484CC7816B46EDE07D1CDC86D8 /* AFOAuth1Client.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFOAuth1Client.h; sourceTree = "<group>"; };
 		5BF64DBF1186A59A2E5876FFA7D8D3D3 /* TKState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKState.m; path = Code/TKState.m; sourceTree = "<group>"; };
 		5C74C48B0310B88BB23EB7EA279147CF /* DGWantlist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGWantlist.h; sourceTree = "<group>"; };
 		5CCCF44DB92A8C727948BBF616BC43A0 /* RKPropertyInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPropertyInspector.h; path = Code/ObjectMapping/RKPropertyInspector.h; sourceTree = "<group>"; };
@@ -1497,6 +1499,7 @@
 		5F8EFE5A68921044378E9B3FBCC16FEA /* DGCollectionFolder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFolder.m; sourceTree = "<group>"; };
 		5F903BC906685749987A593BB4D2D012 /* DGMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGMapping.h; sourceTree = "<group>"; };
 		5FA1F32EB7A8A93BAC96BDEA44E604E1 /* SOCKit-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SOCKit-iOS10.0.modulemap"; sourceTree = "<group>"; };
+		5FFAC98CC251FDBB6F28B326369CEF88 /* AFOAuth1Client.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
 		5FFBC82824FD58B3675B6C452555849A /* RKObjectParameterization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKObjectParameterization.m; path = Code/Network/RKObjectParameterization.m; sourceTree = "<group>"; };
 		5FFC743F3CB4E396EC5B5AC7441F8CCE /* RestKit-Network-ObjectMapping-Support-iOS8.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RestKit-Network-ObjectMapping-Support-iOS8.0-umbrella.h"; path = "../RestKit-Network-ObjectMapping-Support-iOS8.0/RestKit-Network-ObjectMapping-Support-iOS8.0-umbrella.h"; sourceTree = "<group>"; };
 		61054ACD7BDE640540F980FBBB2662EA /* RKObjectRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectRequestOperation.h; path = Code/Network/RKObjectRequestOperation.h; sourceTree = "<group>"; };
@@ -1520,7 +1523,7 @@
 		6A641D31C924F327D7592472B9175E76 /* RKMapperOperation_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMapperOperation_Private.h; path = Code/ObjectMapping/RKMapperOperation_Private.h; sourceTree = "<group>"; };
 		6A9478E1DA44D379D3A98302AB54A502 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABFF54F21A7A57DA58698487204357C /* Pods-Discogs-swift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Discogs-swift-frameworks.sh"; sourceTree = "<group>"; };
-		6D7CEBC2DAB2FF95466A0651BB6B314A /* DGHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
+		6DB1D66F6501BC2974509E1728B92F2E /* DGIdentity+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Keychain.h"; sourceTree = "<group>"; };
 		6E1B71AD6FAB323CDBF0913BB04C9068 /* DiscogsAPI-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "DiscogsAPI-iOS10.0.modulemap"; sourceTree = "<group>"; };
 		6E26ABAD1DACBA90E5CD6C240049D7B3 /* AFRKJSONRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKJSONRequestOperation.m; path = Code/Network/AFNetworking/AFRKJSONRequestOperation.m; sourceTree = "<group>"; };
 		6E631AAA3B65D1FFB27FE58AA84F3B7C /* TransitionKit-iOS8.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "TransitionKit-iOS8.0.modulemap"; path = "../TransitionKit-iOS8.0/TransitionKit-iOS8.0.modulemap"; sourceTree = "<group>"; };
@@ -1535,6 +1538,7 @@
 		731C01B23B736B32252C30EA9A0A36EB /* DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		732239DA0DA52EECB464C41ED40B9045 /* TKTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKTransition.h; path = Code/TKTransition.h; sourceTree = "<group>"; };
 		733FA6CB685E047E141F0F2F82D0E80A /* RestKit-Network-ObjectMapping-Support-iOS8.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RestKit-Network-ObjectMapping-Support-iOS8.0-prefix.pch"; path = "../RestKit-Network-ObjectMapping-Support-iOS8.0/RestKit-Network-ObjectMapping-Support-iOS8.0-prefix.pch"; sourceTree = "<group>"; };
+		74B4C3ADF796735FFA7D1701AE023FF1 /* DGAuthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		754D9F3094595BE01B88283A739E3EFF /* Pods-Discogs-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Discogs-swift.modulemap"; sourceTree = "<group>"; };
 		755E2AB63151E68F9CD60C2F6035DB36 /* RKObjectMappingOperationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectMappingOperationDataSource.h; path = Code/ObjectMapping/RKObjectMappingOperationDataSource.h; sourceTree = "<group>"; };
 		7575BCA98109CF9387B06473CC001848 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
@@ -1548,7 +1552,6 @@
 		796D7D16E2FC81653C16CD49CA97BA33 /* DGArtistRelease+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGArtistRelease+Mapping.h"; sourceTree = "<group>"; };
 		7C464B39B71949EB62D760123E17B702 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5C951765EE89332AA5108EB5150835 /* RKISO8601DateFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKISO8601DateFormatter.h; path = Code/RKISO8601DateFormatter.h; sourceTree = "<group>"; };
-		7C8C2C03C177420F3C68CDF10328458D /* DGOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGOperation.m; sourceTree = "<group>"; };
 		7D03285928F9069252729A9ED30C9270 /* DGCollectionField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionField.m; sourceTree = "<group>"; };
 		7D511CC926BDAF34FA107BE6029A6CD4 /* RestKit-Network-ObjectMapping-Support-iOS9.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RestKit-Network-ObjectMapping-Support-iOS9.3-prefix.pch"; path = "../RestKit-Network-ObjectMapping-Support-iOS9.3/RestKit-Network-ObjectMapping-Support-iOS9.3-prefix.pch"; sourceTree = "<group>"; };
 		7DD1382467CE248426BF582092656C1B /* SOCKit-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SOCKit-iOS10.0.xcconfig"; sourceTree = "<group>"; };
@@ -1562,7 +1565,6 @@
 		820C431A57C68FA6542DBD6B9C8B59A2 /* DGMember+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMember+Mapping.m"; sourceTree = "<group>"; };
 		824A2FAF64FF2642E666FE066D7066BD /* DGMasterVersion+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGMasterVersion+Mapping.h"; sourceTree = "<group>"; };
 		83162F08DBAE3EAED201AA1B200F52D1 /* Pods-Discogs-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Discogs-swift.release.xcconfig"; sourceTree = "<group>"; };
-		83A03055A610E7FB88BA7A610B9B5B45 /* DGEndpoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGEndpoint.h; sourceTree = "<group>"; };
 		8597CCBE1EA2A02C4A54ADA801F2AEA3 /* Pods-DiscogsAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DiscogsAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		87BB5655FEBC6B88ED79AC1875BB1BB3 /* RKMappingResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingResult.h; path = Code/ObjectMapping/RKMappingResult.h; sourceTree = "<group>"; };
 		87D460861EEF11562C98A86AA16CE498 /* Pods-Discogs-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Discogs-swift-umbrella.h"; sourceTree = "<group>"; };
@@ -1570,10 +1572,8 @@
 		89018603DE6045D9E61117765560C523 /* RKObjectUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectUtilities.h; path = Code/ObjectMapping/RKObjectUtilities.h; sourceTree = "<group>"; };
 		891CA0FF6FD0433E25CB4632F8412E0C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894FFDEDA04525A5549AD15E543D2310 /* RKMappingOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMappingOperation.m; path = Code/ObjectMapping/RKMappingOperation.m; sourceTree = "<group>"; };
-		89FCA8CC3F6D424677B41E3DB5FCB2ED /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
 		8A96C455E84D2DE69BF01F01951E323D /* SOCKit-iOS8.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SOCKit-iOS8.0-prefix.pch"; path = "../SOCKit-iOS8.0/SOCKit-iOS8.0-prefix.pch"; sourceTree = "<group>"; };
 		8AB5D9A507C5D5BB0630D1C4A6133C2D /* SOCKit-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SOCKit-iOS8.0-dummy.m"; path = "../SOCKit-iOS8.0/SOCKit-iOS8.0-dummy.m"; sourceTree = "<group>"; };
-		8B5A0C6543D52E651C3FBD5C8037C8C6 /* DGAuthView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
 		8BEF68577C6A3E2DE90493A068DAFFEC /* ISO8601DateFormatterValueTransformer-iOS9.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "ISO8601DateFormatterValueTransformer-iOS9.3.modulemap"; path = "../ISO8601DateFormatterValueTransformer-iOS9.3/ISO8601DateFormatterValueTransformer-iOS9.3.modulemap"; sourceTree = "<group>"; };
 		8C8CBF1E2500D545FC432C04E8C848FB /* DGPrice+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGPrice+Mapping.m"; sourceTree = "<group>"; };
 		8CE2779BB0E697C26C0DF46FDA3E5C56 /* DGCollectionFolder+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionFolder+Mapping.m"; sourceTree = "<group>"; };
@@ -1601,13 +1601,11 @@
 		9406A49FFC442A24A8455D2B4521E207 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F0E942F28D2EC27349C614839DA13B /* RKPaginator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKPaginator.h; path = Code/Network/RKPaginator.h; sourceTree = "<group>"; };
 		956D8FB18A46D2BB7B20C59702CF0846 /* Pods-DiscogsAPITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DiscogsAPITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		958E5E2C74B6AC1B79883C9988B971BD /* DGIdentity+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Keychain.h"; sourceTree = "<group>"; };
 		9592E691E9CAFB807301A9376DDFA2D4 /* DGArtist+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGArtist+Mapping.m"; sourceTree = "<group>"; };
 		964948137F56CDABECCB294128F4E0D3 /* RKStringTokenizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKStringTokenizer.m; path = Code/Support/RKStringTokenizer.m; sourceTree = "<group>"; };
 		9676187705540B599081062769386229 /* DGOrder+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGOrder+Mapping.h"; sourceTree = "<group>"; };
 		97B8CEB350360E3C0B1145277DD5880D /* DGFormat+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGFormat+Mapping.h"; sourceTree = "<group>"; };
 		9862777D3C7B04D649167BC32507DC57 /* DGUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGUser.m; sourceTree = "<group>"; };
-		98B3DC5E1D2D610B92F93F9E347EE8A1 /* DGAuthView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		9914581998DFDDFE6FDDFBE69E7FB535 /* DGOrder+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGOrder+Mapping.m"; sourceTree = "<group>"; };
 		9A2A009B9A7C5B0D6373F3C8FCDDD0D6 /* RKValueTransformers-iOS9.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RKValueTransformers-iOS9.3-umbrella.h"; path = "../RKValueTransformers-iOS9.3/RKValueTransformers-iOS9.3-umbrella.h"; sourceTree = "<group>"; };
 		9AE426E2DF3578F13AE765C90D1C12BD /* Pods-Discogs-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Discogs-objc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1619,9 +1617,9 @@
 		A01820CED7255B5FEE6831B827F01599 /* TransitionKit-iOS9.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "TransitionKit-iOS9.3.modulemap"; path = "../TransitionKit-iOS9.3/TransitionKit-iOS9.3.modulemap"; sourceTree = "<group>"; };
 		A0BBB15BADDD777AB90409C1CF3612E4 /* DGMasterVersion+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGMasterVersion+Mapping.m"; sourceTree = "<group>"; };
 		A1394059D77DBEB88882E0C6F8A9DFA8 /* ISO8601DateFormatterValueTransformer-iOS9.3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ISO8601DateFormatterValueTransformer-iOS9.3-dummy.m"; path = "../ISO8601DateFormatterValueTransformer-iOS9.3/ISO8601DateFormatterValueTransformer-iOS9.3-dummy.m"; sourceTree = "<group>"; };
-		A17AFC9C6ECF81E304ED94839D6914D7 /* DGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGObject.m; sourceTree = "<group>"; };
 		A25F59682650B9A8CCC89F4113D6AFD3 /* DGMasterVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMasterVersion.m; sourceTree = "<group>"; };
 		A31F70C83119B1517C1560310B6C6D3B /* TransitionKit-iOS10.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionKit-iOS10.0-prefix.pch"; sourceTree = "<group>"; };
+		A32ADBDDA84B6F02803751CC8F7791D3 /* DGHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
 		A5835B6F01BE10C62F71AE177FC1BD49 /* Pods_DiscogsAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AF871D3DAB2D834E21DED326CA897A /* TKStateMachine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKStateMachine.m; path = Code/TKStateMachine.m; sourceTree = "<group>"; };
 		A5BAED26B4CFE3DEF6A3A1BC1AF74DFF /* RKHTTPUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKHTTPUtilities.h; path = Code/Network/RKHTTPUtilities.h; sourceTree = "<group>"; };
@@ -1632,6 +1630,7 @@
 		A71A8619BB79E56DEDFB9205595DB617 /* RKValueTransformers-iOS8.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "RKValueTransformers-iOS8.0.modulemap"; path = "../RKValueTransformers-iOS8.0/RKValueTransformers-iOS8.0.modulemap"; sourceTree = "<group>"; };
 		A7344FADF3985E14C8DE2FD7E99EB703 /* RKResponseDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKResponseDescriptor.h; path = Code/Network/RKResponseDescriptor.h; sourceTree = "<group>"; };
 		A74B7CF8063BF5C5A1A62182D29B4555 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../TransitionKit-iOS8.0/Info.plist"; sourceTree = "<group>"; };
+		A8A0FDD56A97FE360852B45491F82DCB /* DGTokenStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
 		A97F62196282DD4C04D15C9B5352AFA0 /* DGIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGIdentifier.h; sourceTree = "<group>"; };
 		AA8F3A317B60FE80E6A3A443EF26A0DC /* AFRKHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKHTTPClient.h; path = Code/Network/AFNetworking/AFRKHTTPClient.h; sourceTree = "<group>"; };
 		AAC92D1ECBD1DD51E15A64BAF72DBECC /* AFRKNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKNetworkActivityIndicatorManager.h; path = Code/Network/AFNetworking/AFRKNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
@@ -1645,6 +1644,7 @@
 		ADF8CF29CAA9591D28CEC2EF959EBAC6 /* RestKit-Network-ObjectMapping-Support-Testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RestKit-Network-ObjectMapping-Support-Testing.xcconfig"; sourceTree = "<group>"; };
 		AE138AA3ED9FA022429322937FEDF98F /* lcl_config_components_RK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lcl_config_components_RK.h; path = Code/Support/lcl_config_components_RK.h; sourceTree = "<group>"; };
 		AE4B43F0CEAA5B7EBF72170FC38F4E38 /* Support.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Support.h; path = Code/Support.h; sourceTree = "<group>"; };
+		AF0788E3BD03273352F0643074267210 /* DGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGObject.h; sourceTree = "<group>"; };
 		B22F2A6FADDF78A51D616F6DE04B4316 /* DGRelease.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGRelease.m; sourceTree = "<group>"; };
 		B23246E4F0CFCE4DBCEFDA2ABD8E3200 /* Pods-Discogs-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Discogs-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		B2BA75ED71684763CA8093A055AD1C47 /* UIImageView+AFRKNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFRKNetworking.m"; path = "Code/Network/AFNetworking/UIImageView+AFRKNetworking.m"; sourceTree = "<group>"; };
@@ -1666,7 +1666,6 @@
 		BD8843673214B6BE28421B5D066F9C63 /* RKMapperOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMapperOperation.m; path = Code/ObjectMapping/RKMapperOperation.m; sourceTree = "<group>"; };
 		BE2A18506D502FF9177EB2AD6C7DB8E3 /* DGReleaseInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGReleaseInstance.h; sourceTree = "<group>"; };
 		BE64E651B5D91BCD5144011867667605 /* RKManagedObjectRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKManagedObjectRequestOperation.h; path = Code/Network/RKManagedObjectRequestOperation.h; sourceTree = "<group>"; };
-		BFD3BD5B02110525A8902C05D07F34A7 /* DGAuthentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		C0B28706EBAEBE6E8DA762E2096C38EF /* DGImage+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGImage+Mapping.m"; sourceTree = "<group>"; };
 		C0C69EE6AE8F1A916D6E03892582A6DC /* DGArtist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGArtist.m; sourceTree = "<group>"; };
 		C1C74616EC0E5AFDE89CF4F0C50A2041 /* DGIdentifier+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentifier+Mapping.m"; sourceTree = "<group>"; };
@@ -1696,13 +1695,13 @@
 		CEEDAF77AEA57C4CCBF7D96A794896A6 /* ISO8601DateFormatterValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ISO8601DateFormatterValueTransformer.m; path = Code/ISO8601DateFormatterValueTransformer.m; sourceTree = "<group>"; };
 		CF352D5F2B114B4948170910B6BDB02E /* RKErrorMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKErrorMessage.h; path = Code/ObjectMapping/RKErrorMessage.h; sourceTree = "<group>"; };
 		CF489396B6F7665FB0A093BEA7708950 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RestKit-Network-ObjectMapping-Support-iOS8.0/Info.plist"; sourceTree = "<group>"; };
+		CF7BC1104DC97D2605C48C6FB9C76998 /* DGEndpoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGEndpoint.m; sourceTree = "<group>"; };
 		CF7FC1DA9DB31728F590E2FB075CB447 /* RestKit-Network-ObjectMapping-Support-iOS8.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "RestKit-Network-ObjectMapping-Support-iOS8.0.modulemap"; path = "../RestKit-Network-ObjectMapping-Support-iOS8.0/RestKit-Network-ObjectMapping-Support-iOS8.0.modulemap"; sourceTree = "<group>"; };
 		CFCB008E997C31A98DE3CD6C2452CB45 /* RKValueTransformers-iOS9.3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RKValueTransformers-iOS9.3-dummy.m"; path = "../RKValueTransformers-iOS9.3/RKValueTransformers-iOS9.3-dummy.m"; sourceTree = "<group>"; };
 		D0AFE736CA7BFB603A0EFDC60CFA547B /* DGCollectionFieldInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollectionFieldInstance.m; sourceTree = "<group>"; };
 		D1391E9160958419E191BDFFC3951896 /* DGArtist+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGArtist+Mapping.h"; sourceTree = "<group>"; };
 		D1D2CEC568BC2D8FB69C1E3521C34188 /* DGMember.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMember.m; sourceTree = "<group>"; };
 		D2130D62592E3F36E6AADB7C941C7F50 /* RKDynamicMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKDynamicMapping.h; path = Code/ObjectMapping/RKDynamicMapping.h; sourceTree = "<group>"; };
-		D29CEEA1314B4F685056C70EE0311AE3 /* DGObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGObject.h; sourceTree = "<group>"; };
 		D3F7CFE3061877B0D8DDE4BF76030610 /* RKTestFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKTestFactory.m; path = Code/Testing/RKTestFactory.m; sourceTree = "<group>"; };
 		D4B5204BD5AEDD57077EE9A318CB7A4B /* Pods-DiscogsAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DiscogsAPI-dummy.m"; sourceTree = "<group>"; };
 		D4DE73612B1A543929BB55848A615B9F /* TransitionKit-iOS8.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TransitionKit-iOS8.0-umbrella.h"; path = "../TransitionKit-iOS8.0/TransitionKit-iOS8.0-umbrella.h"; sourceTree = "<group>"; };
@@ -1723,20 +1722,19 @@
 		DAC18B5A129D19247725CE45FFE3972A /* AFRKURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKURLConnectionOperation.h; path = Code/Network/AFNetworking/AFRKURLConnectionOperation.h; sourceTree = "<group>"; };
 		DAC8FDA1C0A26AFE7FEA14E6DF26FDB4 /* RestKit-Network-ObjectMapping-Support-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RestKit-Network-ObjectMapping-Support-iOS8.0-dummy.m"; path = "../RestKit-Network-ObjectMapping-Support-iOS8.0/RestKit-Network-ObjectMapping-Support-iOS8.0-dummy.m"; sourceTree = "<group>"; };
 		DAE413DF89EA877F5B6B623CE92CDC9D /* DGCollectionFieldInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGCollectionFieldInstance.h; sourceTree = "<group>"; };
-		DB8472F6171CB3D49F2FBC43C994FBBA /* DGHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
 		DC16F830740C3D876C4F9E36AB5E72A4 /* DGArtistRelease.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGArtistRelease.h; sourceTree = "<group>"; };
 		DC24611C0645FD42AE7A05CB234D3B6C /* DGIdentifier+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentifier+Mapping.h"; sourceTree = "<group>"; };
 		DC78D65288087BE80EB08E838BD77002 /* DGWantlist+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGWantlist+Mapping.h"; sourceTree = "<group>"; };
 		DCF5FAEFAAFD57E5EA1D6DAD1B38ADEB /* AFRKHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKHTTPClient.m; path = Code/Network/AFNetworking/AFRKHTTPClient.m; sourceTree = "<group>"; };
 		DDFA6DCFB5C120BAE61C563D5B9A41F2 /* DGResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGResource.h; sourceTree = "<group>"; };
 		DE2A745E7358E58AE622B6F037118BA9 /* ObjectMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectMapping.h; path = Code/ObjectMapping.h; sourceTree = "<group>"; };
+		DF30CBA756BDBB748959AFC528596E37 /* DGAuthentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DGAuthentication.h; sourceTree = "<group>"; };
 		E0FFCC860D1968C4E3401E9BAEC825DB /* SOCKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SOCKit.h; sourceTree = "<group>"; };
 		E1AD16F169206EC894ABF88B20E8EAB1 /* DiscogsAPI-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DiscogsAPI-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
 		E253DC42595EBEE067C140870DFB3E21 /* DGLabelRelease+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGLabelRelease+Mapping.h"; sourceTree = "<group>"; };
 		E32CA0829AD515484B7EF9B539E9693D /* TransitionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C5EA61399FD9D9BEE43B71D76A06C8 /* DGVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGVideo.m; sourceTree = "<group>"; };
 		E3D295A1C0E836340C74897DFFC07879 /* RKRouteSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKRouteSet.m; path = Code/Network/RKRouteSet.m; sourceTree = "<group>"; };
-		E463E94144C2EF09DD80DA6766BB2EB1 /* DGEndpoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGEndpoint.m; sourceTree = "<group>"; };
 		E4A91A73D0CA2F349367676DECE39FD1 /* RestKit-Network-ObjectMapping-Support-Testing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "RestKit-Network-ObjectMapping-Support-Testing.modulemap"; sourceTree = "<group>"; };
 		E4BB8F94F424D1FFA744110C5241BB15 /* Pods-Discogs-objc-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Discogs-objc-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E4D45458BDEB90CFEE1B167884DB919C /* DGReleaseInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGReleaseInstance.m; sourceTree = "<group>"; };
@@ -1744,7 +1742,6 @@
 		E672739AF6FF54123ACB0201B70FEBC9 /* RKMappingOperationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKMappingOperationDataSource.h; path = Code/ObjectMapping/RKMappingOperationDataSource.h; sourceTree = "<group>"; };
 		E70E9E275B4DB25120D7FB7C8B894C42 /* RKTestHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestHelpers.h; path = Code/Testing/RKTestHelpers.h; sourceTree = "<group>"; };
 		E76EC7AC71DF2E571E0F51679890A5B6 /* DGWantlist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGWantlist.m; sourceTree = "<group>"; };
-		E76F3C90A4AACD7565704F81474441DB /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		E7FADF86C14ACAD643BC933621C3F76B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FBBAA1948122E79B68A018C847E832 /* ISO8601DateFormatterValueTransformer-iOS9.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ISO8601DateFormatterValueTransformer-iOS9.3-umbrella.h"; path = "../ISO8601DateFormatterValueTransformer-iOS9.3/ISO8601DateFormatterValueTransformer-iOS9.3-umbrella.h"; sourceTree = "<group>"; };
 		E8B286FF1CB2EBCDC0AAF8EFD6D82B12 /* RKValueTransformers-iOS9.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RKValueTransformers-iOS9.3-prefix.pch"; path = "../RKValueTransformers-iOS9.3/RKValueTransformers-iOS9.3-prefix.pch"; sourceTree = "<group>"; };
@@ -1752,24 +1749,27 @@
 		E9C6042C0DC388A9C1DBC18C6E6255C9 /* Pods-Discogs-objc-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Discogs-objc-resources.sh"; sourceTree = "<group>"; };
 		EAD150EAB87EB3F6EC2DA79083CCAC5B /* RKLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKLog.m; path = Code/Support/RKLog.m; sourceTree = "<group>"; };
 		EB1D2199A833CCD61AC8502D7A7B6DE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6DC39A8FE4AD4DB4E02B186492F6F2 /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
 		ECE1D8CB1FB57D3CA1B488C9C7CF8C21 /* DGRelease+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGRelease+Mapping.h"; sourceTree = "<group>"; };
 		EDEB06467F9979305D81D0560334EC87 /* RKURLEncodedSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKURLEncodedSerialization.h; path = Code/Support/RKURLEncodedSerialization.h; sourceTree = "<group>"; };
+		EE89B1B670F70AE59C2FD6F075E79C8A /* DGObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGObject.m; sourceTree = "<group>"; };
 		EED845E74DB0C0CAD3E38B8F6D7CED2E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../TransitionKit-iOS9.3/Info.plist"; sourceTree = "<group>"; };
 		EEF9C9808EB7F961579A6F3F8B419180 /* AFRKPropertyListRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKPropertyListRequestOperation.h; path = Code/Network/AFNetworking/AFRKPropertyListRequestOperation.h; sourceTree = "<group>"; };
 		F00CB542100EBF80AAA4660120B7DAB0 /* AFRKXMLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKXMLRequestOperation.h; path = Code/Network/AFNetworking/AFRKXMLRequestOperation.h; sourceTree = "<group>"; };
 		F0F1EEFAB03D979F7167F943DCEA44D4 /* DGFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGFormat.m; sourceTree = "<group>"; };
 		F1330C0BF080050D92195BD428F3DCF1 /* RKMIMETypeSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMIMETypeSerialization.m; path = Code/Support/RKMIMETypeSerialization.m; sourceTree = "<group>"; };
 		F1548F4436A3354DB95F36D6F17E2CFC /* Pods-DiscogsAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DiscogsAPI.modulemap"; sourceTree = "<group>"; };
-		F18AAFF17B3326D3CE9BFC437E541239 /* DGEndpoint+Configuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Configuration.m"; sourceTree = "<group>"; };
 		F1FEAE2E99A2EDEA1018F718F3B62465 /* DGResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGResource.m; sourceTree = "<group>"; };
 		F2937378A6D5896DC30D0B5C93DB643F /* AFRKNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFRKNetworking.h; path = Code/Network/AFNetworking/AFRKNetworking.h; sourceTree = "<group>"; };
 		F2FE8ABB970BD3F086A690B39A313EEF /* UIImageView+AFRKNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFRKNetworking.h"; path = "Code/Network/AFNetworking/UIImageView+AFRKNetworking.h"; sourceTree = "<group>"; };
 		F35489A0B285504F59324FFD638C39BF /* DGLabel+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGLabel+Mapping.m"; sourceTree = "<group>"; };
 		F389F02F752073D752F1EE43E33B645A /* RKValueTransformers-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "RKValueTransformers-iOS10.0.modulemap"; sourceTree = "<group>"; };
 		F3C7C2F0A7B0D67638362BAEAF133905 /* ISO8601DateFormatterValueTransformer-iOS9.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ISO8601DateFormatterValueTransformer-iOS9.3-prefix.pch"; path = "../ISO8601DateFormatterValueTransformer-iOS9.3/ISO8601DateFormatterValueTransformer-iOS9.3-prefix.pch"; sourceTree = "<group>"; };
+		F4B4550C3C6BDB84492A79BCAF8A743D /* DGIdentity+Keychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Keychain.m"; sourceTree = "<group>"; };
 		F5486CAD4F132BF56BBBD3119AA1DFFF /* DGIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentifier.m; sourceTree = "<group>"; };
 		F561FE8C07C290FEDF31D3CA8B957E14 /* DGCollectionField+Mapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGCollectionField+Mapping.m"; sourceTree = "<group>"; };
 		F5D0707A59586984E358ED0A34CAC7AC /* RKValueTransformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKValueTransformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E046A413E14EEF37ED105B0667D9F0 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		F5FDA5789B7633E1F36FB9C98358A2AD /* RKTestFixture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKTestFixture.h; path = Code/Testing/RKTestFixture.h; sourceTree = "<group>"; };
 		F6177EA1EF86F58F00EF8E26F7D10FCF /* DGMarketplace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGMarketplace.m; sourceTree = "<group>"; };
 		F641AF93369755252D5C3E07AE8C88A0 /* AFRKHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFRKHTTPRequestOperation.m; path = Code/Network/AFNetworking/AFRKHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -1780,7 +1780,7 @@
 		F7537E86E9179B44B286208BEF9EAB21 /* DGImage+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGImage+Mapping.h"; sourceTree = "<group>"; };
 		F828FCC437E3A8634CF07DD32C484EE7 /* DiscogsAPI-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DiscogsAPI-iOS10.0.xcconfig"; sourceTree = "<group>"; };
 		F8485BF709CA477DC2CD7F3F54652D51 /* Pods_DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F848918738087F1FE3CD953CD0FAF650 /* DGIdentity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGIdentity.m; sourceTree = "<group>"; };
+		F8A9D9023927E7F112F5B20C51F126C0 /* AFOAuth1Client.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFOAuth1Client.h; sourceTree = "<group>"; };
 		F901E58B0786E1A1A6147D5FB8C13EEE /* SOCKit-iOS9.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "SOCKit-iOS9.3.modulemap"; path = "../SOCKit-iOS9.3/SOCKit-iOS9.3.modulemap"; sourceTree = "<group>"; };
 		F90200C8F54579EB090503B1F7F08F35 /* RKMIMETypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKMIMETypes.m; path = Code/Support/RKMIMETypes.m; sourceTree = "<group>"; };
 		F92D97D0681AEE51165C2FDDFEBB3497 /* RKObjectMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RKObjectMapping.h; path = Code/ObjectMapping/RKObjectMapping.h; sourceTree = "<group>"; };
@@ -1790,7 +1790,7 @@
 		FA3D7A7E2506DCD7E515C3BD1668F820 /* RKPropertyMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RKPropertyMapping.m; path = Code/ObjectMapping/RKPropertyMapping.m; sourceTree = "<group>"; };
 		FABA9BEC0A5E57A522ADF5D887890B2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBD5721668720A140DE4A28F1A90DEEF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC178F00D344C2DBFDEBEFFC7AE1CD06 /* DGTokenStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
+		FC52C64471DFE1332105DD59D3738F3B /* DGAuthentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		FC5A1076E5E48EE104A8D1D2E866AAC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SOCKit-iOS9.3/Info.plist"; sourceTree = "<group>"; };
 		FCF011DD90EF6ED9AA1C4670D9FEA36B /* DGCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DGCollection.m; sourceTree = "<group>"; };
 		FCF112345EE1BD3422E6FADA3C9723FF /* DGPagination+Mapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGPagination+Mapping.h"; sourceTree = "<group>"; };
@@ -2030,12 +2030,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01BCC5ABBB3EC2BEEFF9A2A89C47E43B /* AFOAuth1Client */ = {
+		067D0D6D7613E7A124B8004B06AC9A40 /* Identity */ = {
 			isa = PBXGroup;
 			children = (
-				C59A02ACDA292EDD7C1F9CAB539305B8 /* AFOAuth1Client */,
+				F5E046A413E14EEF37ED105B0667D9F0 /* DGIdentity+Mapping.h */,
+				EB6DC39A8FE4AD4DB4E02B186492F6F2 /* DGIdentity+Mapping.m */,
 			);
-			path = AFOAuth1Client;
+			path = Identity;
 			sourceTree = "<group>";
 		};
 		07EE2F5912135CBCDA84AB35AC4FE645 /* Data */ = {
@@ -2108,26 +2109,6 @@
 			name = Testing;
 			sourceTree = "<group>";
 		};
-		14F85D53BA034C5404C06ABEFF57280E /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				4E3C51D9726E373D7BD64F159CB750E1 /* DGIdentity.h */,
-				F848918738087F1FE3CD953CD0FAF650 /* DGIdentity.m */,
-				958E5E2C74B6AC1B79883C9988B971BD /* DGIdentity+Keychain.h */,
-				135671F3F12A63368380B9211AD525E2 /* DGIdentity+Keychain.m */,
-			);
-			path = Identity;
-			sourceTree = "<group>";
-		};
-		153832FD36BBF69B7F0F73EFE4AB2EB0 /* DiscogsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				3F8393FF8DED6B9820FFB907806912A4 /* Authentication */,
-				C6D609982EDD6D715929AC694779B3FC /* Mapping */,
-			);
-			path = DiscogsAPI;
-			sourceTree = "<group>";
-		};
 		160640EF830B4E99FCA965A81B4D022A /* Pagination */ = {
 			isa = PBXGroup;
 			children = (
@@ -2142,6 +2123,28 @@
 				D504D5AD86A0980BD23D061E94A895BC /* Mapping */,
 			);
 			path = DiscogsAPI;
+			sourceTree = "<group>";
+		};
+		1834273CB90597D820A9751BE9E06E22 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				067D0D6D7613E7A124B8004B06AC9A40 /* Identity */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1A1D52D9910828DEFF3E0B56ECBFF3B9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DF30CBA756BDBB748959AFC528596E37 /* DGAuthentication.h */,
+				FC52C64471DFE1332105DD59D3738F3B /* DGAuthentication.m */,
+				74B4C3ADF796735FFA7D1701AE023FF1 /* DGAuthView.h */,
+				20143359CD3AC7F6AF422D23643BB4DE /* DGAuthView.m */,
+				41E964D15880EE92F6B5789CA4B4B037 /* DGTokenStore.h */,
+				A8A0FDD56A97FE360852B45491F82DCB /* DGTokenStore.m */,
+				C8591E7F1E4BF4A8555FB97023B8D46C /* Identity */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		1EA7841AC588077A130E4D41564AE516 /* ISO8601DateFormatterValueTransformer */ = {
@@ -2176,20 +2179,13 @@
 			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
-		2BE6F595BC3F6A8A1156F4BFCF4D16BC /* Authentication */ = {
+		28832B9FD1222203702155DB6D3A4A41 /* AFOAuth1Client */ = {
 			isa = PBXGroup;
 			children = (
-				14F85D53BA034C5404C06ABEFF57280E /* Identity */,
+				F8A9D9023927E7F112F5B20C51F126C0 /* AFOAuth1Client.h */,
+				5FFAC98CC251FDBB6F28B326369CEF88 /* AFOAuth1Client.m */,
 			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		342FA7F269DBDC5BF820080BABB64D2A /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				7CB624003C940E7F357CA6D2F5576291 /* Identity */,
-			);
-			path = Authentication;
+			path = AFOAuth1Client;
 			sourceTree = "<group>";
 		};
 		392FBC90DC71AC0B655E1E818B8A9893 /* Order */ = {
@@ -2238,19 +2234,6 @@
 			path = Listing;
 			sourceTree = "<group>";
 		};
-		3F8393FF8DED6B9820FFB907806912A4 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				5896EAEBF440F0C896A00C1D5815DDD9 /* DGAuthentication.h */,
-				BFD3BD5B02110525A8902C05D07F34A7 /* DGAuthentication.m */,
-				98B3DC5E1D2D610B92F93F9E347EE8A1 /* DGAuthView.h */,
-				8B5A0C6543D52E651C3FBD5C8037C8C6 /* DGAuthView.m */,
-				5AB8939A6C818FFB1B774DC46F938AA2 /* DGTokenStore.h */,
-				FC178F00D344C2DBFDEBEFFC7AE1CD06 /* DGTokenStore.m */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		41E6DBB103631B3F198C60E057CC9222 /* DiscogsAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -2263,7 +2246,7 @@
 		424DDD6F542AB35C5721F119FCEC5FA9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				153832FD36BBF69B7F0F73EFE4AB2EB0 /* DiscogsAPI */,
+				7897CC0BE7CD0110D08E2B5645E42651 /* DiscogsAPI */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -2309,6 +2292,19 @@
 				9EAFEC7CB14B90B2C0999E560A43CB3C /* DiscogsAPI */,
 			);
 			name = Marketplace;
+			sourceTree = "<group>";
+		};
+		58564162C1B9AB2904B3E15BD2E5C78B /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				382EBEBAE9543784D096404B83CB9C29 /* DGEndpoint+Configuration.h */,
+				06E22D6D76B9F6E6A86442F700AA337D /* DGEndpoint+Configuration.m */,
+				08E3D35610455144626D7F3FDE0BEA01 /* DGHTTPClient.h */,
+				A32ADBDDA84B6F02803751CC8F7791D3 /* DGHTTPClient.m */,
+				1EFBA8D365CB46A49A8AE81045DC63D7 /* DGOperation.h */,
+				0AA4B441B2A929A113EC4E56B5C7EC63 /* DGOperation.m */,
+			);
+			path = Internal;
 			sourceTree = "<group>";
 		};
 		5A1FDFFAC694C0F87D8A25784A3AE1D0 /* Price */ = {
@@ -2530,6 +2526,15 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		7897CC0BE7CD0110D08E2B5645E42651 /* DiscogsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1A1D52D9910828DEFF3E0B56ECBFF3B9 /* Authentication */,
+				AD7C77E924D16E0819FB31D47B4293F8 /* Mapping */,
+			);
+			path = DiscogsAPI;
+			sourceTree = "<group>";
+		};
 		7B54BB11E2FBE9B1EEDCB896C538939D /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -2540,15 +2545,6 @@
 				619C96283BB4F0ACC3DBA4A351D8145A /* Wantlist */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		7CB624003C940E7F357CA6D2F5576291 /* Identity */ = {
-			isa = PBXGroup;
-			children = (
-				15FDBFBD2235C45964F5B628E10F7C67 /* DGIdentity+Mapping.h */,
-				E76F3C90A4AACD7565704F81474441DB /* DGIdentity+Mapping.m */,
-			);
-			path = Identity;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -2628,21 +2624,11 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		84BD1F57F7011ED7910A451D7DD112A8 /* DiscogsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				2BE6F595BC3F6A8A1156F4BFCF4D16BC /* Authentication */,
-				EA9CD66CA2495178BBB09EDD32CA5A8A /* Configuration */,
-				A6CFC895591F18BAE6A7BCE6EE984137 /* Core */,
-			);
-			path = DiscogsAPI;
-			sourceTree = "<group>";
-		};
 		85FC93CD4E769CA1DECF8D0C99E04350 /* DiscogsAPI */ = {
 			isa = PBXGroup;
 			children = (
 				424DDD6F542AB35C5721F119FCEC5FA9 /* Authentication */,
-				F8464A0512FACC87BF27ED4FF5F9DB85 /* Core */,
+				F282B1EA9962DD117DCA0491A0509FFB /* Core */,
 				43A8A59910B1425D69555339DCDD9A4F /* Database */,
 				2231CA14E8950CFAFCF08B33CABCF6BA /* DiscogsAPI */,
 				FC4E3CE5C49ECD01DE453E0413A45033 /* Mapping */,
@@ -2663,6 +2649,14 @@
 				28DC3E99F0D1DB44B88E2E0C83BA32C6 /* DGPagination+Mapping.m */,
 			);
 			path = Pagination;
+			sourceTree = "<group>";
+		};
+		86E928E364E2751E830719BCCA312ED9 /* DiscogsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BAE756346003D4A9FD70469A9F77B /* Core */,
+			);
+			path = DiscogsAPI;
 			sourceTree = "<group>";
 		};
 		8745090DCF1EC822032938B9D67335EF /* Collection */ = {
@@ -2707,6 +2701,18 @@
 				201A2AE6994A2B0BED5D2E1FDB6DC7BA /* DGWantlist+Mapping.m */,
 			);
 			path = Wantlist;
+			sourceTree = "<group>";
+		};
+		8F5BAE756346003D4A9FD70469A9F77B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				17EDFE8AB1128977884B54A32062FF85 /* DGEndpoint.h */,
+				CF7BC1104DC97D2605C48C6FB9C76998 /* DGEndpoint.m */,
+				AF0788E3BD03273352F0643074267210 /* DGObject.h */,
+				EE89B1B670F70AE59C2FD6F075E79C8A /* DGObject.m */,
+				58564162C1B9AB2904B3E15BD2E5C78B /* Internal */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		91DA6098FB150DA7DBD4211F4360B8DE /* Profile */ = {
@@ -2799,17 +2805,12 @@
 			path = "Target Support Files/Pods-DiscogsAPITests";
 			sourceTree = "<group>";
 		};
-		A6CFC895591F18BAE6A7BCE6EE984137 /* Core */ = {
+		AD7C77E924D16E0819FB31D47B4293F8 /* Mapping */ = {
 			isa = PBXGroup;
 			children = (
-				83A03055A610E7FB88BA7A610B9B5B45 /* DGEndpoint.h */,
-				E463E94144C2EF09DD80DA6766BB2EB1 /* DGEndpoint.m */,
-				DB8472F6171CB3D49F2FBC43C994FBBA /* DGHTTPClient.h */,
-				6D7CEBC2DAB2FF95466A0651BB6B314A /* DGHTTPClient.m */,
-				D29CEEA1314B4F685056C70EE0311AE3 /* DGObject.h */,
-				A17AFC9C6ECF81E304ED94839D6914D7 /* DGObject.m */,
+				1834273CB90597D820A9751BE9E06E22 /* Authentication */,
 			);
-			path = Core;
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		AE2903620E14B52361568F5C1DE6BAF0 /* Mapping */ = {
@@ -2896,15 +2897,6 @@
 			path = Mapping;
 			sourceTree = "<group>";
 		};
-		C59A02ACDA292EDD7C1F9CAB539305B8 /* AFOAuth1Client */ = {
-			isa = PBXGroup;
-			children = (
-				5BF1B2484CC7816B46EDE07D1CDC86D8 /* AFOAuth1Client.h */,
-				4BF11FBD3FD88ABBF8A3AC995892A900 /* AFOAuth1Client.m */,
-			);
-			path = AFOAuth1Client;
-			sourceTree = "<group>";
-		};
 		C673EB3A6C135EB083E6F6279CAAB675 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -2914,14 +2906,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		C6D609982EDD6D715929AC694779B3FC /* Mapping */ = {
-			isa = PBXGroup;
-			children = (
-				342FA7F269DBDC5BF820080BABB64D2A /* Authentication */,
-			);
-			path = Mapping;
-			sourceTree = "<group>";
-		};
 		C791D95149328E31D7B4E3A1BC307D76 /* DiscogsAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -2929,6 +2913,25 @@
 				7E1AF81952E7ACBE652BAD8760635B4D /* Pagination */,
 			);
 			path = DiscogsAPI;
+			sourceTree = "<group>";
+		};
+		C8591E7F1E4BF4A8555FB97023B8D46C /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				4FF591D12CBB1655755B2C390AE16961 /* DGIdentity.h */,
+				31C676E3305AAD63072D17450E41C160 /* DGIdentity.m */,
+				6DB1D66F6501BC2974509E1728B92F2E /* DGIdentity+Keychain.h */,
+				F4B4550C3C6BDB84492A79BCAF8A743D /* DGIdentity+Keychain.m */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
+		C91113AF2C70D2CD6CA4630E720FB2ED /* AFOAuth1Client */ = {
+			isa = PBXGroup;
+			children = (
+				28832B9FD1222203702155DB6D3A4A41 /* AFOAuth1Client */,
+			);
+			path = AFOAuth1Client;
 			sourceTree = "<group>";
 		};
 		CAF7A0AA17C8245289DE2F9B13B9BFFF /* Order */ = {
@@ -3121,17 +3124,6 @@
 			path = Mapping;
 			sourceTree = "<group>";
 		};
-		EA9CD66CA2495178BBB09EDD32CA5A8A /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				89FCA8CC3F6D424677B41E3DB5FCB2ED /* DGEndpoint+Configuration.h */,
-				F18AAFF17B3326D3CE9BFC437E541239 /* DGEndpoint+Configuration.m */,
-				486599BDB1272ED07EFF525C941C96DF /* DGOperation.h */,
-				7C8C2C03C177420F3C68CDF10328458D /* DGOperation.m */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		EEFCEB7C99558F245C9C0B8FCBA86E71 /* SOCKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -3152,6 +3144,15 @@
 				1218964CAE746EB3F36E67462BC9F5DD /* Testing */,
 			);
 			path = RestKit;
+			sourceTree = "<group>";
+		};
+		F282B1EA9962DD117DCA0491A0509FFB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C91113AF2C70D2CD6CA4630E720FB2ED /* AFOAuth1Client */,
+				86E928E364E2751E830719BCCA312ED9 /* DiscogsAPI */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		F4FF821C601358D103545E220AA36811 /* TransitionKit */ = {
@@ -3187,15 +3188,6 @@
 			);
 			name = "Pods-Discogs-objc";
 			path = "Target Support Files/Pods-Discogs-objc";
-			sourceTree = "<group>";
-		};
-		F8464A0512FACC87BF27ED4FF5F9DB85 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				01BCC5ABBB3EC2BEEFF9A2A89C47E43B /* AFOAuth1Client */,
-				84BD1F57F7011ED7910A451D7DD112A8 /* DiscogsAPI */,
-			);
-			name = Core;
 			sourceTree = "<group>";
 		};
 		FA2C261A16C9BDF053D477C400BAF52B /* Master */ = {

@@ -44,9 +44,8 @@
       "name": "Core",
       "source_files": [
         "DiscogsAPI/Core",
-        "DiscogsAPI/Configuration",
-        "AFOAuth1Client/AFOAuth1Client",
-        "DiscogsAPI/Authentication/Identity"
+        "DiscogsAPI/Core/Internal",
+        "AFOAuth1Client/AFOAuth1Client"
       ],
       "prefix_header_contents": [
         "#import <SystemConfiguration/SystemConfiguration.h>",
@@ -55,10 +54,8 @@
         "#import <RestKit/RestKit.h>"
       ],
       "private_header_files": [
-        "DiscogsAPI/Core/DGHTTPClient.h",
-        "DiscogsAPI/Configuration/*.h",
-        "AFOAuth1Client/AFOAuth1Client/*.h",
-        "DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h"
+        "DiscogsAPI/Core/Internal/*.h",
+        "AFOAuth1Client/AFOAuth1Client/*.h"
       ],
       "dependencies": {
         "DiscogsAPI/Mapping": [
@@ -76,11 +73,13 @@
       "name": "Authentication",
       "source_files": [
         "DiscogsAPI/Authentication",
+        "DiscogsAPI/Authentication/Identity",
         "DiscogsAPI/Mapping/Authentication/**/*"
       ],
       "private_header_files": [
         "DiscogsAPI/Authentication/DGAuthView.h",
         "DiscogsAPI/Authentication/DGTokenStore.h",
+        "DiscogsAPI/Authentication/Identity/DGIdentity+Keychain.h",
         "DiscogsAPI/Mapping/Authentication/**/*.h"
       ],
       "dependencies": {

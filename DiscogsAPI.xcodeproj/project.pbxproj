@@ -17,8 +17,6 @@
 		9C0F09781DB261CE00FB09D9 /* DGInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09761DB261CE00FB09D9 /* DGInventory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0F09791DB261CE00FB09D9 /* DGInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09771DB261CE00FB09D9 /* DGInventory.m */; };
 		9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F097E1DB37D4100FB09D9 /* DGMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09811DB3F8C600FB09D9 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9C0F09841DB3F8C600FB09D9 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F09821DB3F8C600FB09D9 /* DGOperation.m */; };
 		9C0F098B1DB5228F00FB09D9 /* DGOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F09891DB5228F00FB09D9 /* DGOrder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0F098C1DB5228F00FB09D9 /* DGOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0F098A1DB5228F00FB09D9 /* DGOrder.m */; };
 		9C0F09901DB5274300FB09D9 /* DGOrder+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0F098E1DB5274300FB09D9 /* DGOrder+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -41,13 +39,19 @@
 		9C4724E81E3760C900D6FEB2 /* listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E71E3760C900D6FEB2 /* listing.json */; };
 		9C4724EA1E3773EC00D6FEB2 /* field.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E91E3773EC00D6FEB2 /* field.json */; };
 		9C4724EC1E37861D00D6FEB2 /* collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724EB1E37861D00D6FEB2 /* collection.json */; };
+		9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Configuration.m */; };
+		9C4724F61E37A38B00D6FEB2 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C4724F71E37A38B00D6FEB2 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */; };
+		9C4724F81E37A38B00D6FEB2 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724F21E37A38B00D6FEB2 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C4724F91E37A38B00D6FEB2 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724F31E37A38B00D6FEB2 /* DGOperation.m */; };
 		9C55DB3E1D06FE1600DF8AFE /* DGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2B1D06196000DF8AFE /* DGViewController.m */; };
 		9C55DB3F1D06FE1A00DF8AFE /* DGReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2F1D0619B800DF8AFE /* DGReleaseViewController.m */; };
 		9C55DB401D06FE1E00DF8AFE /* DGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB331D0619CB00DF8AFE /* DGMasterViewController.m */; };
 		9C55DB411D06FE2200DF8AFE /* DGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB371D0619DC00DF8AFE /* DGArtistViewController.m */; };
 		9C55DB421D06FE2600DF8AFE /* DGLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB3B1D0619F300DF8AFE /* DGLabelViewController.m */; };
 		9C55DB441D07124B00DF8AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C55DB431D07124B00DF8AFE /* Assets.xcassets */; };
-		9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */; };
+		9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C5B32DF1DCCFBE200CCF140 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B32DD1DCCFBE200CCF140 /* DGIdentity+Mapping.m */; };
 		9C88BCC81DB90AE200DC9E61 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C88BCC41DB90AE200DC9E61 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C88BCC91DB90AE200DC9E61 /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C88BCC51DB90AE200DC9E61 /* AFOAuth1Client.m */; };
@@ -67,9 +71,9 @@
 		9CA7942C1D0560460006EE89 /* DGSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA794261D0560460006EE89 /* DGSearchViewController.m */; };
 		9CA794311D0560560006EE89 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7942F1D0560560006EE89 /* Launch Screen.storyboard */; };
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
-		9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */; };
+		9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCD125C1DD75271002BEEA8 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */; };
-		9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */; };
+		9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CE9512E1DEB44E7006BD7B1 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9512C1DEB44E7006BD7B1 /* DGTokenStore.m */; };
 		ABD760626F171F7AF351175A /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */; };
 		CAB1402FCB50CCA204F7DDD5 /* Pods_Discogs_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFD6BC5763E4B7FFC46703D /* Pods_Discogs_objc.framework */; };
@@ -78,10 +82,6 @@
 		D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */; };
 		D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A588871CFF9482008DF0A4 /* DGAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */; };
-		D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D0A588891CFF9482008DF0A4 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */; };
-		D0A5888C1CFF9482008DF0A4 /* DGEndpoint+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */; };
-		D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D0A5888E1CFF9482008DF0A4 /* DGEndpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A5888F1CFF9482008DF0A4 /* DGEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */; };
 		D0A588901CFF9482008DF0A4 /* DGObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A587F61CFF9481008DF0A4 /* DGObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -219,8 +219,6 @@
 		9C0F097C1DB2626100FB09D9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C0F097D1DB2626100FB09D9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9C0F097E1DB37D4100FB09D9 /* DGMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGMapping.h; sourceTree = "<group>"; };
-		9C0F09811DB3F8C600FB09D9 /* DGOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperation.h; sourceTree = "<group>"; };
-		9C0F09821DB3F8C600FB09D9 /* DGOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperation.m; sourceTree = "<group>"; };
 		9C0F09871DB4C7EC00FB09D9 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		9C0F09891DB5228F00FB09D9 /* DGOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DGOrder.h; path = Order/DGOrder.h; sourceTree = "<group>"; };
 		9C0F098A1DB5228F00FB09D9 /* DGOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGOrder.m; path = Order/DGOrder.m; sourceTree = "<group>"; };
@@ -248,6 +246,12 @@
 		9C4724E71E3760C900D6FEB2 /* listing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = listing.json; path = Maketplace/listing.json; sourceTree = "<group>"; };
 		9C4724E91E3773EC00D6FEB2 /* field.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = field.json; path = Collection/field.json; sourceTree = "<group>"; };
 		9C4724EB1E37861D00D6FEB2 /* collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collection.json; sourceTree = "<group>"; };
+		9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
+		9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Configuration.m"; sourceTree = "<group>"; };
+		9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
+		9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
+		9C4724F21E37A38B00D6FEB2 /* DGOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperation.h; sourceTree = "<group>"; };
+		9C4724F31E37A38B00D6FEB2 /* DGOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperation.m; sourceTree = "<group>"; };
 		9C55DB2A1D06196000DF8AFE /* DGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGViewController.h; sourceTree = "<group>"; };
 		9C55DB2B1D06196000DF8AFE /* DGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGViewController.m; sourceTree = "<group>"; };
 		9C55DB2E1D0619B800DF8AFE /* DGReleaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGReleaseViewController.h; sourceTree = "<group>"; };
@@ -296,10 +300,6 @@
 		D0A587E91CFF9481008DF0A4 /* DGAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthentication.m; sourceTree = "<group>"; };
 		D0A587EA1CFF9481008DF0A4 /* DGAuthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGAuthView.h; sourceTree = "<group>"; };
 		D0A587EB1CFF9481008DF0A4 /* DGAuthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGAuthView.m; sourceTree = "<group>"; };
-		D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
-		D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHTTPClient.m; sourceTree = "<group>"; };
-		D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Configuration.m"; sourceTree = "<group>"; };
-		D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Configuration.h"; sourceTree = "<group>"; };
 		D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGEndpoint.h; sourceTree = "<group>"; };
 		D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGEndpoint.m; sourceTree = "<group>"; };
 		D0A587F61CFF9481008DF0A4 /* DGObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGObject.h; sourceTree = "<group>"; };
@@ -579,6 +579,19 @@
 			name = Collection;
 			sourceTree = "<group>";
 		};
+		9C4724ED1E37A38B00D6FEB2 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Configuration.h */,
+				9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Configuration.m */,
+				9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */,
+				9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */,
+				9C4724F21E37A38B00D6FEB2 /* DGOperation.h */,
+				9C4724F31E37A38B00D6FEB2 /* DGOperation.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
 		9C5B32DA1DCCFBE200CCF140 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,22 +704,10 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		D0A587F01CFF9481008DF0A4 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				D0A587F21CFF9481008DF0A4 /* DGEndpoint+Configuration.h */,
-				D0A587F11CFF9481008DF0A4 /* DGEndpoint+Configuration.m */,
-				9C0F09811DB3F8C600FB09D9 /* DGOperation.h */,
-				9C0F09821DB3F8C600FB09D9 /* DGOperation.m */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
 		D0A587F31CFF9481008DF0A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D0A587EC1CFF9481008DF0A4 /* DGHTTPClient.h */,
-				D0A587ED1CFF9481008DF0A4 /* DGHTTPClient.m */,
+				9C4724ED1E37A38B00D6FEB2 /* Internal */,
 				D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */,
 				D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */,
 				D0A587F61CFF9481008DF0A4 /* DGObject.h */,
@@ -1100,7 +1101,6 @@
 				D0A5881F1CFF9481008DF0A4 /* DiscogsAPI.h */,
 				D0A588201CFF9481008DF0A4 /* DiscogsAPI.m */,
 				D0A587F31CFF9481008DF0A4 /* Core */,
-				D0A587F01CFF9481008DF0A4 /* Configuration */,
 				D0A587E71CFF9481008DF0A4 /* Authentication */,
 				D0A588671CFF9482008DF0A4 /* Pagination */,
 				D0A587F81CFF9481008DF0A4 /* Database */,
@@ -1162,7 +1162,6 @@
 				D0A588961CFF9482008DF0A4 /* DGMember.h in Headers */,
 				D0A588A81CFF9482008DF0A4 /* DGLabelRelease.h in Headers */,
 				D0A588B21CFF9482008DF0A4 /* DiscogsAPI.h in Headers */,
-				9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */,
 				D0A588F81CFF9482008DF0A4 /* DGIdentity.h in Headers */,
 				D0A5889E1CFF9482008DF0A4 /* DGImage.h in Headers */,
 				D0A588F21CFF9482008DF0A4 /* DGCollectionFolder.h in Headers */,
@@ -1177,7 +1176,6 @@
 				D0A5889A1CFF9482008DF0A4 /* DGFormat.h in Headers */,
 				D0A588E41CFF9482008DF0A4 /* DGMarketplace.h in Headers */,
 				D0A588FA1CFF9482008DF0A4 /* DGProfile.h in Headers */,
-				9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */,
 				D0A588921CFF9482008DF0A4 /* DGArtist.h in Headers */,
 				D0A588EA1CFF9482008DF0A4 /* DGResource.h in Headers */,
 				D0A588A01CFF9482008DF0A4 /* DGTrack.h in Headers */,
@@ -1186,8 +1184,6 @@
 				9C0F098B1DB5228F00FB09D9 /* DGOrder.h in Headers */,
 				D0A588EC1CFF9482008DF0A4 /* DGCollection.h in Headers */,
 				D0A588F01CFF9482008DF0A4 /* DGCollectionFieldInstance.h in Headers */,
-				D0A5888D1CFF9482008DF0A4 /* DGEndpoint+Configuration.h in Headers */,
-				9C0F09831DB3F8C600FB09D9 /* DGOperation.h in Headers */,
 				9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */,
 				9C88BCC81DB90AE200DC9E61 /* AFOAuth1Client.h in Headers */,
 				9C0F09741DB17E2900FB09D9 /* DGInventory+Mapping.h in Headers */,
@@ -1212,13 +1208,17 @@
 				D0A588BE1CFF9482008DF0A4 /* DGIdentifier+Mapping.h in Headers */,
 				D0A588D21CFF9482008DF0A4 /* DGPrice+Mapping.h in Headers */,
 				D0A588BC1CFF9482008DF0A4 /* DGFormat+Mapping.h in Headers */,
-				9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */,
 				D0A588C81CFF9482008DF0A4 /* DGLabelRelease+Mapping.h in Headers */,
+				9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Configuration.h in Headers */,
+				9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */,
+				9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */,
+				9C4724F81E37A38B00D6FEB2 /* DGOperation.h in Headers */,
+				9C4724F61E37A38B00D6FEB2 /* DGHTTPClient.h in Headers */,
+				9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */,
 				D0A588E01CFF9482008DF0A4 /* DGProfile+Mapping.h in Headers */,
 				D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */,
 				D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */,
 				D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */,
-				D0A588881CFF9482008DF0A4 /* DGHTTPClient.h in Headers */,
 				D0A588E61CFF9482008DF0A4 /* DGPrice.h in Headers */,
 				D0A588FC1CFF9482008DF0A4 /* DGWantlist.h in Headers */,
 			);
@@ -1629,6 +1629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Configuration.m in Sources */,
 				D0A588AF1CFF9482008DF0A4 /* DGRelease.m in Sources */,
 				D0A588B51CFF9482008DF0A4 /* DGArtist+Mapping.m in Sources */,
 				D0A588851CFF9482008DF0A4 /* DGAuthentication.m in Sources */,
@@ -1640,6 +1641,7 @@
 				9C0F09791DB261CE00FB09D9 /* DGInventory.m in Sources */,
 				D0A588871CFF9482008DF0A4 /* DGAuthView.m in Sources */,
 				D0A588A91CFF9482008DF0A4 /* DGLabelRelease.m in Sources */,
+				9C4724F91E37A38B00D6FEB2 /* DGOperation.m in Sources */,
 				D0A588C11CFF9482008DF0A4 /* DGImage+Mapping.m in Sources */,
 				D0A588CD1CFF9482008DF0A4 /* DGMasterVersion+Mapping.m in Sources */,
 				D0A588C91CFF9482008DF0A4 /* DGLabelRelease+Mapping.m in Sources */,
@@ -1674,8 +1676,8 @@
 				D0A588971CFF9482008DF0A4 /* DGMember.m in Sources */,
 				D0A588DD1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m in Sources */,
 				D0A588AD1CFF9482008DF0A4 /* DGMasterVersion.m in Sources */,
-				9C0F09841DB3F8C600FB09D9 /* DGOperation.m in Sources */,
 				D0A588D91CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.m in Sources */,
+				9C4724F71E37A38B00D6FEB2 /* DGHTTPClient.m in Sources */,
 				D0A588FD1CFF9482008DF0A4 /* DGWantlist.m in Sources */,
 				D0A588BB1CFF9482008DF0A4 /* DGCommunity+Mapping.m in Sources */,
 				D0A5889B1CFF9482008DF0A4 /* DGFormat.m in Sources */,
@@ -1684,12 +1686,10 @@
 				D0A588F51CFF9482008DF0A4 /* DGReleaseInstance.m in Sources */,
 				D0A588A31CFF9482008DF0A4 /* DGVideo.m in Sources */,
 				D0A5889F1CFF9482008DF0A4 /* DGImage.m in Sources */,
-				D0A5888C1CFF9482008DF0A4 /* DGEndpoint+Configuration.m in Sources */,
 				D0A588991CFF9482008DF0A4 /* DGCommunity.m in Sources */,
 				D0A5889D1CFF9482008DF0A4 /* DGIdentifier.m in Sources */,
 				D0A588E31CFF9482008DF0A4 /* DGWantlist+Mapping.m in Sources */,
 				D0A588BD1CFF9482008DF0A4 /* DGFormat+Mapping.m in Sources */,
-				D0A588891CFF9482008DF0A4 /* DGHTTPClient.m in Sources */,
 				D0A588D11CFF9482008DF0A4 /* DGSearch+Mapping.m in Sources */,
 				9C5B32DF1DCCFBE200CCF140 /* DGIdentity+Mapping.m in Sources */,
 				D0A588A51CFF9482008DF0A4 /* DGDatabase.m in Sources */,
