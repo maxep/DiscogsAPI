@@ -11,12 +11,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ The keychain identifier for the current user identity.
+ */
 extern NSString * const kDGIdentityCurrentIdentifier;
 
 /**
  DGIdentity protocol to store identity into keychain.
  */
 @interface DGIdentity (Keychain) <NSSecureCoding, NSCopying>
+
+/**
+ The currently autenticated user identity.
+ */
+@property (class, nullable) DGIdentity *current;
 
 /**
  Sets the accessibility type for all future identities saved to the Keychain.

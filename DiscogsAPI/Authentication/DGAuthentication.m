@@ -72,38 +72,37 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         [DGIdentity storeIdentity:response withIdentifier:kDGIdentityCurrentIdentifier];
         success(response);
         
-    } failure:failure];
+    } failure:^(NSError * _Nullable error) {
+        
+        if (error.code == 401) {
+            DGIdentity.current = nil;
+        }
+        
+        if (DGIdentity.current) {
+            success(DGIdentity.current);
+        } else if (failure) {
+            failure(error);
+        }
+    }];
     
     [self.queue addOperation:operation];
 }
 
 - (void)authenticateWithCallback:(NSURL *)callback success:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {
     
-    if (self.isReachable) {
+    [self identityWithSuccess:success failure:^(NSError *error) {
         
-        [self identityWithSuccess:success failure:^(NSError *error) {
+        if (error.code == 401) {
+            _callback = callback.absoluteString;
             
-            if (error.code == 401) {
-                
-                _callback = callback.absoluteString;
-                
-                [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
-                    [self identityWithSuccess:success failure:failure];
-                } failure:failure];
-                
-            } else if (failure) {
-                failure(error);
-            }
+            [self.HTTPClient authorizeUsingOAuthWithCallbackURL:callback success:^(AFOAuth1Token *accessToken, id responseObject) {
+                [self identityWithSuccess:success failure:failure];
+            } failure:failure];
             
-        }];
-        
-    } else if ([DGIdentity current]) {
-        success([DGIdentity current]);
-    } else if (self.HTTPClient.accessToken) {
-        success(nil);
-    } else if (failure) {
-        failure([NSError errorWithCode:NSURLErrorNotConnectedToInternet description:@"User not athenticated yet but no internet connection"]);
-    }
+        } else if (failure) {
+            failure(error);
+        }
+    }];
 }
 
 - (BOOL)openURL:(NSURL *)url {
@@ -145,7 +144,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
             _HTTPClient = [DGHTTPClient new];
         }
         
-        DGIdentity *identity = [DGIdentity current];
+        DGIdentity *identity = DGIdentity.current;
         if (identity) {
             _HTTPClient.accessToken = [[AFOAuth1Token alloc] initWithKey:identity.token secret:identity.secret session:nil expiration:nil renewable:NO];
         } else {

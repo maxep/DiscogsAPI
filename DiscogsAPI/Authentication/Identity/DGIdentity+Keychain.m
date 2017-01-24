@@ -12,6 +12,8 @@ NSString * const kDGIdentityCurrentIdentifier = @"DGIdentityCurrentIdentifier";
 
 @implementation DGIdentity (Keychain)
 
+@dynamic current;
+
 #pragma mark <NSSecureCoding>
 
 - (instancetype)initWithCoder:(NSCoder *)coder {

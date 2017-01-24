@@ -24,12 +24,23 @@
 
 @implementation DGIdentity
 
+static DGIdentity *_current = nil;
+
 + (DGIdentity *)current {
-    static DGIdentity *current = nil;
-    if (!current) {
-        current = [DGIdentity retrieveIdentityWithIdentifier:kDGIdentityCurrentIdentifier];
+    if (!_current) {
+        _current = [DGIdentity retrieveIdentityWithIdentifier:kDGIdentityCurrentIdentifier];
     }
-    return current;
+    return _current;
+}
+
++ (void)setCurrent:(DGIdentity *)current {
+    _current = current;
+    [DGIdentity storeIdentity:current withIdentifier:kDGIdentityCurrentIdentifier];
+}
+
+- (NSString *)description {
+    NSString *format = @"<%@: \rUser Name: %@\rConsumer Name: %@\rResourec URL: %@ >";
+    return [NSString stringWithFormat:format, NSStringFromClass(self.class), self.userName, self.consumerName, self.resourceURL];
 }
 
 @end
