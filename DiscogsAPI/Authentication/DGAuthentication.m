@@ -139,7 +139,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         if (self.consumerKey && self.consumerSecret) {
             _HTTPClient = [DGHTTPClient clientWithConsumerKey:self.consumerKey consumerSecret:self.consumerSecret];
         } else if(self.accessToken) {
-            _HTTPClient = [DGHTTPClient clientWithAccessToken:self.accessToken];
+            _HTTPClient = [DGHTTPClient clientWithPersonalAccessToken:self.accessToken];
         } else {
             _HTTPClient = [DGHTTPClient new];
         }
