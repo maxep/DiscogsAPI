@@ -23,14 +23,29 @@
 #import "DGEndpoint+Private.h"
 #import "DGResource.h"
 
+static NSCache *DGImageCache() {
+    static NSCache *cache = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cache = [[NSCache alloc] init];
+    });
+    return cache;
+}
+
 @implementation DGResource
 
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
-    RKObjectRequestOperation *operation = (RKObjectRequestOperation *)[self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
+    NSOperation *operation = [self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
     [self.queue addOperation:operation];
 }
 
 - (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
+    
+    UIImage *image = [DGImageCache() objectForKey:url];
+    if (image) {
+        success(image);
+    }
+    
     NSString *path = url;
     
     if (self.proxyURL) {
@@ -41,9 +56,8 @@
     NSURLRequest *requestURL = [self.manager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];
     
     AFRKImageRequestOperation *operation = [AFRKImageRequestOperation imageRequestOperationWithRequest:requestURL imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        if (success) {
-            success(image);
-        }
+        [DGImageCache() setObject:image forKey:url];
+        success(image);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         if (failure) {
             failure(error);
