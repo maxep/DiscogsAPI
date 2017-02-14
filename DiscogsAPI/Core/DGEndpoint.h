@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, DGErrorCode){
 /**
  A block that can act as a failure for a task.
  */
-typedef void(^DGFailureBlock)(NSError * _Nullable error);
+typedef void(^DGFailureBlock)(NSError *error);
 
 /**
  Endpoint operation queue.
