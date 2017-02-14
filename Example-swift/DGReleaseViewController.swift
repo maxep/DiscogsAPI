@@ -51,7 +51,7 @@ class DGReleaseViewController: DGViewController {
             }
             
         }) { (error) in
-            print(error ?? "Error")
+            print(error)
         }
     }
     

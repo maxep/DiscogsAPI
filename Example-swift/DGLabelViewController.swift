@@ -49,7 +49,7 @@ class DGLabelViewController: DGViewController {
             }
             
         }) { (error) in
-                print(error ?? "Error")
+                print(error)
         }
 
         // Get label release
@@ -60,7 +60,7 @@ class DGLabelViewController: DGViewController {
         Discogs.api.database.getLabelReleases(request, success: { (response) in
             self.response = response
         }) { (error) in
-            print(error ?? "Error")
+            print(error)
         }
     }
 

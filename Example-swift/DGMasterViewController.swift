@@ -50,7 +50,7 @@ class DGMasterViewController: DGViewController {
             }
             
         }) { (error) in
-            print(error ?? "Error")
+            print(error)
         }
         
         // Get master versions
@@ -61,7 +61,7 @@ class DGMasterViewController: DGViewController {
         Discogs.api.database.getMasterVersion(request, success: { (response) in
             self.response = response
         }) { (error) in
-            print(error ?? "Error")
+            print(error)
         }
     }
 

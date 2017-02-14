@@ -52,7 +52,7 @@ class DGArtistViewController: DGViewController {
             }
             
             }) { (error) in
-                print(error ?? "Error")
+                print(error)
         }
 
         // Get artist release
@@ -63,7 +63,7 @@ class DGArtistViewController: DGViewController {
         Discogs.api.database .getArtistReleases(request, success: { (response) in
             self.response = response
             }) { (error) in
-                print(error ?? "Error")
+                print(error)
         }
     }
     

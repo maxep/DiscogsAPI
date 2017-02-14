@@ -52,7 +52,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         Discogs.api.authentication.authenticate(withCallback: callback!, success: { (identity) in
             print("Authenticated user: \(identity)")
         }) { (error) in
-            print(error ?? "Error")
+            print(error)
         }
     }
     
@@ -91,7 +91,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
             Discogs.api.database.search(for: request, success: { (response) in
                 self.response = response
             }) { (error) in
-                print(error ?? "Error")
+                print(error)
             }
         }
     }
