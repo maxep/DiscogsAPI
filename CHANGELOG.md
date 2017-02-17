@@ -3,6 +3,17 @@ All notable changes to `DiscogsAPI` project will be documented in this file.
 
 --- 
 
+## [1.7.1](https://github.com/maxep/DiscogsAPI/releases/tag/1.7.1) - February 14, 2017
+
+#### Fixed
+- Swift interpolation of failure callback.
+
+#### Added
+- Image cache in resources.
+
+#### Updated
+- Examples layout.
+
 ## [1.7.0](https://github.com/maxep/DiscogsAPI/releases/tag/1.7.0) - January 24, 2017
 
 #### Added
