@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C9CC96E4C3832E875C1362F /* Pods_DiscogsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773B396CECFA85BD82936371 /* Pods_DiscogsAPI.framework */; };
+		768E805B1E8093B200EFF531 /* DGCompany.h in Headers */ = {isa = PBXBuildFile; fileRef = 768E80591E8093B200EFF531 /* DGCompany.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		768E805C1E8093B200EFF531 /* DGCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 768E805A1E8093B200EFF531 /* DGCompany.m */; };
+		768E805F1E8093CD00EFF531 /* DGCompany+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 768E805D1E8093CD00EFF531 /* DGCompany+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		768E80601E8093CD00EFF531 /* DGCompany+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 768E805E1E8093CD00EFF531 /* DGCompany+Mapping.m */; };
+		768E80631E8093FB00EFF531 /* DGCompany+DiscogsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 768E80621E8093FB00EFF531 /* DGCompany+DiscogsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0AB1EB1DB11ABD004716A1 /* DGListing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0AB1E91DB11ABD004716A1 /* DGListing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C0AB1EC1DB11ABD004716A1 /* DGListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0AB1EA1DB11ABD004716A1 /* DGListing.m */; };
 		9C0AB1F01DB11B0D004716A1 /* DGListing+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0AB1EE1DB11B0D004716A1 /* DGListing+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -204,6 +209,11 @@
 		33812A763705B9B4F13B5B96 /* Pods-Discogs-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.debug.xcconfig"; sourceTree = "<group>"; };
 		52F40CB5A7933A3EF4FA8720 /* Pods-Discogs-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-swift/Pods-Discogs-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		65B306E0B8BAC4CEEFD806F1 /* Pods-DiscogsAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPITests/Pods-DiscogsAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		768E80591E8093B200EFF531 /* DGCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGCompany.h; sourceTree = "<group>"; };
+		768E805A1E8093B200EFF531 /* DGCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGCompany.m; sourceTree = "<group>"; };
+		768E805D1E8093CD00EFF531 /* DGCompany+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGCompany+Mapping.h"; sourceTree = "<group>"; };
+		768E805E1E8093CD00EFF531 /* DGCompany+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGCompany+Mapping.m"; sourceTree = "<group>"; };
+		768E80621E8093FB00EFF531 /* DGCompany+DiscogsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DGCompany+DiscogsAPI.h"; path = "Extensions/DGCompany+DiscogsAPI.h"; sourceTree = "<group>"; };
 		773B396CECFA85BD82936371 /* Pods_DiscogsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B061AB3D946D326A25443F /* Pods-DiscogsAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscogsAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscogsAPI/Pods-DiscogsAPI.release.xcconfig"; sourceTree = "<group>"; };
 		8CFAB43D822298E4A19E01AF /* Pods-Discogs-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Discogs-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Discogs-objc/Pods-Discogs-objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -463,6 +473,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768E80611E8093E800EFF531 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				768E80621E8093FB00EFF531 /* DGCompany+DiscogsAPI.h */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		9C0AB1E81DB11A7E004716A1 /* Listing */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +789,8 @@
 		D0A5880F1CFF9481008DF0A4 /* Label */ = {
 			isa = PBXGroup;
 			children = (
+				768E80591E8093B200EFF531 /* DGCompany.h */,
+				768E805A1E8093B200EFF531 /* DGCompany.m */,
 				D0A588101CFF9481008DF0A4 /* DGLabel.h */,
 				D0A588111CFF9481008DF0A4 /* DGLabel.m */,
 				D0A588121CFF9481008DF0A4 /* DGLabelRelease.h */,
@@ -869,6 +889,8 @@
 		D0A588371CFF9481008DF0A4 /* Label */ = {
 			isa = PBXGroup;
 			children = (
+				768E805D1E8093CD00EFF531 /* DGCompany+Mapping.h */,
+				768E805E1E8093CD00EFF531 /* DGCompany+Mapping.m */,
 				D0A588381CFF9481008DF0A4 /* DGLabel+Mapping.h */,
 				D0A588391CFF9481008DF0A4 /* DGLabel+Mapping.m */,
 				D0A5883A1CFF9481008DF0A4 /* DGLabelRelease+Mapping.h */,
@@ -1113,6 +1135,7 @@
 				D0A5886A1CFF9482008DF0A4 /* Resource */,
 				D0A588611CFF9482008DF0A4 /* Marketplace */,
 				D0A588211CFF9481008DF0A4 /* Mapping */,
+				768E80611E8093E800EFF531 /* Extensions */,
 				D0A587E61CFF945D008DF0A4 /* Framework */,
 			);
 			path = DiscogsAPI;
@@ -1169,6 +1192,7 @@
 				D0A588A81CFF9482008DF0A4 /* DGLabelRelease.h in Headers */,
 				D0A588B21CFF9482008DF0A4 /* DiscogsAPI.h in Headers */,
 				D0A588F81CFF9482008DF0A4 /* DGIdentity.h in Headers */,
+				768E805B1E8093B200EFF531 /* DGCompany.h in Headers */,
 				D0A5889E1CFF9482008DF0A4 /* DGImage.h in Headers */,
 				D0A588F21CFF9482008DF0A4 /* DGCollectionFolder.h in Headers */,
 				D0A588A21CFF9482008DF0A4 /* DGVideo.h in Headers */,
@@ -1176,6 +1200,7 @@
 				D0A588981CFF9482008DF0A4 /* DGCommunity.h in Headers */,
 				D0A588941CFF9482008DF0A4 /* DGArtistRelease.h in Headers */,
 				D0A588AE1CFF9482008DF0A4 /* DGRelease.h in Headers */,
+				768E80631E8093FB00EFF531 /* DGCompany+DiscogsAPI.h in Headers */,
 				D0A588E81CFF9482008DF0A4 /* DGPagination.h in Headers */,
 				D0A588EE1CFF9482008DF0A4 /* DGCollectionField.h in Headers */,
 				D0A588A61CFF9482008DF0A4 /* DGLabel.h in Headers */,
@@ -1206,6 +1231,7 @@
 				D0A588CE1CFF9482008DF0A4 /* DGRelease+Mapping.h in Headers */,
 				D0A588B81CFF9482008DF0A4 /* DGMember+Mapping.h in Headers */,
 				D0A588D01CFF9482008DF0A4 /* DGSearch+Mapping.h in Headers */,
+				768E805F1E8093CD00EFF531 /* DGCompany+Mapping.h in Headers */,
 				D0A588E21CFF9482008DF0A4 /* DGWantlist+Mapping.h in Headers */,
 				D0A588D81CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.h in Headers */,
 				9C0F09901DB5274300FB09D9 /* DGOrder+Mapping.h in Headers */,
@@ -1666,6 +1692,7 @@
 				D0A588DB1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.m in Sources */,
 				D0A588B91CFF9482008DF0A4 /* DGMember+Mapping.m in Sources */,
 				D0A588F71CFF9482008DF0A4 /* DGUser.m in Sources */,
+				768E805C1E8093B200EFF531 /* DGCompany.m in Sources */,
 				D0A588D71CFF9482008DF0A4 /* DGCollectionField+Mapping.m in Sources */,
 				9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */,
 				D0A588D31CFF9482008DF0A4 /* DGPrice+Mapping.m in Sources */,
@@ -1682,6 +1709,7 @@
 				D0A588971CFF9482008DF0A4 /* DGMember.m in Sources */,
 				D0A588DD1CFF9482008DF0A4 /* DGReleaseInstance+Mapping.m in Sources */,
 				D0A588AD1CFF9482008DF0A4 /* DGMasterVersion.m in Sources */,
+				768E80601E8093CD00EFF531 /* DGCompany+Mapping.m in Sources */,
 				D0A588D91CFF9482008DF0A4 /* DGCollectionFieldInstance+Mapping.m in Sources */,
 				9C4724F71E37A38B00D6FEB2 /* DGHTTPClient.m in Sources */,
 				D0A588FD1CFF9482008DF0A4 /* DGWantlist.m in Sources */,
