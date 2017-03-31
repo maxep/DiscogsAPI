@@ -156,7 +156,7 @@
     DGCollectionFieldsRequest *request = [DGCollectionFieldsRequest new];
     request.userName = userName;
     
-    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGReleaseInstance class]];
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodGET responseClass:[DGCollectionField class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
     [self.queue addOperation:operation];
