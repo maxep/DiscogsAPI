@@ -21,10 +21,8 @@
 // THE SOFTWARE.
 
 #import "DGCompany.h"
+#import "DGMapping.h"
 
-@interface DGCompany (Mapping)
-
-+ (RKMapping *)mapping;
-+ (RKResponseDescriptor *)responseDescriptor;
+@interface DGCompany (Mapping) <DGObject, DGRequestObject, DGResponseObject>
 
 @end
