@@ -32,7 +32,6 @@
 #import "DGImage.h"
 #import "DGTrack.h"
 #import "DGVideo.h"
-#import "DGCompany+DiscogsAPI.h"
 #import "DGMarketplace.h"
 #import "DGPrice.h"
 #import "DGInventory.h"

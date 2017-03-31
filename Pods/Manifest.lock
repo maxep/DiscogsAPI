@@ -2,7 +2,6 @@ PODS:
   - DiscogsAPI (1.7.1):
     - DiscogsAPI/Authentication (= 1.7.1)
     - DiscogsAPI/Database (= 1.7.1)
-    - DiscogsAPI/Extensions (= 1.7.1)
     - DiscogsAPI/Marketplace (= 1.7.1)
     - DiscogsAPI/Resource (= 1.7.1)
     - DiscogsAPI/User (= 1.7.1)
@@ -14,7 +13,6 @@ PODS:
     - RestKit/ObjectMapping (~> 0.27.0)
   - DiscogsAPI/Database (1.7.1):
     - DiscogsAPI/Pagination
-  - DiscogsAPI/Extensions (1.7.1)
   - DiscogsAPI/Mapping (1.7.1)
   - DiscogsAPI/Marketplace (1.7.1):
     - DiscogsAPI/User
@@ -53,7 +51,7 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  DiscogsAPI: d1292f327a983f5184a9fdf6e80d02358d48d736
+  DiscogsAPI: dcf6e040092247104bc56784f2adb079e9a01c7d
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   RestKit: a0244db34e14ed9cf059fcee2be6733cc162c34a
   RKValueTransformers: e5ed67e3811229b616fe01bddeeafe3bb337b1b9

@@ -22,8 +22,6 @@
 
 #import "DGObject.h"
 
-#import "DGCompany+DiscogsAPI.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 /** Sample JSON
@@ -36,6 +34,19 @@ NS_ASSUME_NONNULL_BEGIN
          "resource_url" = "https://api.discogs.com/labels/1873";
      }
  */
+
+/**
+ Primitive values for DGCompany.entityType
+ */
+typedef NS_ENUM(NSInteger, DGCompanyType) {
+    DGCompanyTypeLabel = 1,
+    DGCompanyTypeLicensedTo = 5,
+    DGCompanyTypePhonographicCopyright = 13,
+    DGCompanyTypeCopyright = 14,
+    DGCompanyTypePublishedBy = 21,
+    DGCompanyTypeRecordedAt = 23,
+    DGCompanyTypeMixedAt = 27,
+};
 
 /**
  Represents Labels and Companies (aka Entities) on a release
