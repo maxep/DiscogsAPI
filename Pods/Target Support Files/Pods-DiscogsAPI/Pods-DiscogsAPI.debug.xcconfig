@@ -1,7 +1,6 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ISO8601DateFormatterValueTransformer-iOS8.0" "$PODS_CONFIGURATION_BUILD_DIR/RKValueTransformers-iOS8.0" "$PODS_CONFIGURATION_BUILD_DIR/RestKit-Network-ObjectMapping-Support-iOS8.0" "$PODS_CONFIGURATION_BUILD_DIR/SOCKit-iOS8.0" "$PODS_CONFIGURATION_BUILD_DIR/TransitionKit-iOS8.0"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
 OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/ISO8601DateFormatterValueTransformer-iOS8.0/ISO8601DateFormatterValueTransformer.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RKValueTransformers-iOS8.0/RKValueTransformers.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RestKit-Network-ObjectMapping-Support-iOS8.0/RestKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SOCKit-iOS8.0/SOCKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/TransitionKit-iOS8.0/TransitionKit.framework/Headers"
 OTHER_LDFLAGS = $(inherited) -framework "ISO8601DateFormatterValueTransformer" -framework "RKValueTransformers" -framework "RestKit" -framework "SOCKit" -framework "TransitionKit"
 PODS_BUILD_DIR = $BUILD_DIR

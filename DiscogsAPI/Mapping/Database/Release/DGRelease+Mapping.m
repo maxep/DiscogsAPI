@@ -24,6 +24,7 @@
 #import "DGPagination+Mapping.h"
 #import "DGArtist+Mapping.h"
 #import "DGCommunity+Mapping.h"
+#import "DGCompany+Mapping.h"
 #import "DGFormat+Mapping.h"
 #import "DGIdentifier+Mapping.h"
 #import "DGImage+Mapping.h"
@@ -72,6 +73,10 @@
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"identifiers" toKeyPath:@"identifiers" withMapping:[DGIdentifier mapping]]];
     
     [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"formats" toKeyPath:@"formats" withMapping:[DGFormat mapping]]];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"labels" toKeyPath:@"labels" withMapping:[DGCompany mapping]]];
+    
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"companies" toKeyPath:@"companies" withMapping:[DGCompany mapping]]];
     
     return mapping;
 }

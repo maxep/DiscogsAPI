@@ -21,7 +21,10 @@
 // THE SOFTWARE.
 
 #import "DGObject.h"
+
+#import "DGArtist.h"
 #import "DGCommunity.h"
+#import "DGCompany.h"
 #import "DGFormat.h"
 #import "DGIdentifier.h"
 #import "DGImage.h"
@@ -148,6 +151,16 @@ NS_ASSUME_NONNULL_BEGIN
  Identifiers
  */
 @property (nonatomic, strong) NSArray<DGIdentifier *> *identifiers;
+
+/**
+ Labels
+ */
+@property (nonatomic, strong) NSArray<DGCompany *> *labels;
+
+/**
+ Companies (like copyright holders, etc.)
+ */
+@property (nonatomic, strong) NSArray<DGCompany *> *companies;
 
 /* ADD THE REST */
 
