@@ -122,4 +122,9 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
     [self authenticateWithCallback:callback success:success failure:failure];
 }
 
+- (void)logout {
+    DGIdentity.current = nil;
+    self.manager.HTTPClient.accessToken = nil;
+}
+
 @end

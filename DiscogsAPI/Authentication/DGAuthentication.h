@@ -82,6 +82,11 @@ extern NSString * const DGCallback /* discogsapi://success */;
  */
 - (void)authenticateWithPreparedAuthorizationViewHandler:(void (^)(UIWebView *authView))authView success:(void (^)(DGIdentity *identity))success failure:(nullable DGFailureBlock)failure;
 
+/**
+ Logs out the current identity and nilify access token.
+ */
+- (void)logout;
+
 @end
 
 NS_ASSUME_NONNULL_END
