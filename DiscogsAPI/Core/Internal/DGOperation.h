@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  NSError extension to create and map Discogs errors.
  */
-@interface NSError (Discogs) <DGResponseObject>
+@interface NSError (Mapping) <DGResponseObject>
 
 /**
  Creates an discogs error.
@@ -82,6 +82,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return An Disocgs NSError object with the specified error code and the description.
  */
 + (instancetype)errorWithCode:(NSInteger)code description:(NSString *)description;
+
+@end
+
+/**
+ NSNull extension to accept empty body responses (e.g 204).
+ */
+@interface NSNull (Mapping) <DGResponseObject>
 
 @end
 

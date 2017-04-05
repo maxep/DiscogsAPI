@@ -38,12 +38,15 @@ NSString * const DGErrorDomain = @"com.discogs.api";
 }
 
 - (instancetype)initWithRequest:(NSURLRequest *)request responseClass:(Class<DGResponseObject>)responseClass {
-    NSMutableArray *responseDescriptors = [NSMutableArray arrayWithObject:[NSError responseDescriptor]];
+    NSMutableArray *descriptors = [NSMutableArray array];
+    [descriptors addObject:[NSError responseDescriptor]];
+    [descriptors addObject:[NSNull responseDescriptor]];
+    
     if (responseClass) {
-        [responseDescriptors addObject:[responseClass responseDescriptor]];
+        [descriptors addObject:[responseClass responseDescriptor]];
     }
     
-    return [super initWithRequest:request responseDescriptors:responseDescriptors];
+    return [super initWithRequest:request responseDescriptors:descriptors];
 }
 
 - (void)setCompletionBlockWithSuccess:(void (^)(id))success failure:(void (^)(NSError *))failure {
@@ -73,7 +76,7 @@ NSString * const DGErrorDomain = @"com.discogs.api";
 
 @end
 
-@implementation NSError (Discogs)
+@implementation NSError (Mapping)
 
 + (instancetype)errorWithCode:(NSInteger)code description:(NSString *)description {
     return [self errorWithDomain:DGErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey : description}];
@@ -85,6 +88,15 @@ NSString * const DGErrorDomain = @"com.discogs.api";
     [mapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"message" toKeyPath:@"errorMessage"]];
     
     return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)];
+}
+
+@end
+
+@implementation NSNull (Mapping)
+
++ (RKResponseDescriptor *)responseDescriptor {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[NSNull class]];
+    return [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:RKStatusCodesOfResponsesWithOptionalBodies()];
 }
 
 @end
