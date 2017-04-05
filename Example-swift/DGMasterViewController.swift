@@ -26,16 +26,14 @@ import DiscogsAPI
 class DGMasterViewController: DGViewController {
     
     fileprivate var response : DGMasterVersionsResponse! {
-        didSet {
-            tableView.reloadData()
-        }
+        didSet { tableView.reloadData() }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Get master details
-        Discogs.api.database.getMaster(self.objectID, success: { (master) in
+        Discogs.api.database.getMaster(objectID, success: { (master) in
             
             self.titleLabel.text    = master.title
             self.detailLabel.text   = master.artists.first?.name
@@ -43,8 +41,8 @@ class DGMasterViewController: DGViewController {
             self.styleLabel.text    = master.genres.joined(separator: ", ")
             
             // Get a Discogs image
-            if let image = master.images.first {
-                Discogs.api.resource.getImage(image.resourceURL!, success: { (image) in
+            if let image = master.images.first, let url = image.resourceURL {
+                Discogs.api.resource.getImage(url, success: { (image) in
                     self.coverView?.image = image
                 })
             }
@@ -55,7 +53,7 @@ class DGMasterViewController: DGViewController {
         
         // Get master versions
         let request = DGMasterVersionsRequest()
-        request.masterID = self.objectID
+        request.masterID = objectID
         request.pagination.perPage = 25
         
         Discogs.api.database.getMasterVersion(request, success: { (response) in
@@ -74,22 +72,15 @@ class DGMasterViewController: DGViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.versions[(indexPath as NSIndexPath).row]
-            
-            if let destination = segue.destination as? DGViewController {
-                destination.objectID = result.id
-            }
+        if let indexPath = tableView.indexPathForSelectedRow, let destination = segue.destination as? DGViewController {
+            destination.objectID = response.versions[indexPath.row].id
         }
     }
     
     // MARK: UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.response?.versions.count as Int? {
-            return count
-        }
-        return 0
+        return response?.versions.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -98,21 +89,23 @@ class DGMasterViewController: DGViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
-        let version = self.response.versions[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
+        let version = response.versions[indexPath.row]
         
         cell.textLabel?.text       = version.title
         cell.detailTextLabel?.text = version.format
         cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
-        Discogs.api.resource.getImage(version.thumb!, success: { (image) in
-            cell.imageView?.image = image
-        })
+        if let thumb = version.thumb {
+            Discogs.api.resource.getImage(thumb, success: { (image) in
+                cell.imageView?.image = image
+            })
+        }
         
         // Load the next response page
-        if version === self.response.versions.last {
-            self.response.loadNextPage(success: {
+        if version === response.versions.last {
+            response.loadNextPage(success: {
                 self.tableView.reloadData()
             })
         }

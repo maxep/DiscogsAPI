@@ -26,16 +26,14 @@ import DiscogsAPI
 class DGReleaseViewController: DGViewController {
 
     fileprivate var trackList : [DGTrack]! {
-        didSet {
-            tableView.reloadData()
-        }
+        didSet { tableView.reloadData() }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Get release details
-        Discogs.api.database.getRelease(self.objectID, success: { (release) in
+        Discogs.api.database.getRelease(objectID, success: { (release) in
 
             self.titleLabel.text    = release.title
             self.detailLabel.text   = release.artists.first?.name
@@ -44,8 +42,8 @@ class DGReleaseViewController: DGViewController {
             self.trackList          = release.trackList
             
             // Get a Discogs image
-            if let image = release.images.first {
-                Discogs.api.resource.getImage(image.resourceURL!, success: { (image) in
+            if let image = release.images.first, let url = image.resourceURL {
+                Discogs.api.resource.getImage(url, success: { (image) in
                     self.coverView?.image = image
                 })
             }
@@ -63,10 +61,7 @@ class DGReleaseViewController: DGViewController {
     // MARK: UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.trackList?.count as Int? {
-            return count
-        }
-        return 0
+        return trackList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -76,8 +71,9 @@ class DGReleaseViewController: DGViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrackCell")!
         
-        let track = self.trackList[indexPath.row]
-        cell.textLabel?.text = track.position! + ".\t" + track.title!
+        let track = trackList[indexPath.row]
+        
+        cell.textLabel?.text = (track.position ?? "") + ".\t" + (track.title ?? "")
         cell.detailTextLabel?.text = track.duration
         
         return cell

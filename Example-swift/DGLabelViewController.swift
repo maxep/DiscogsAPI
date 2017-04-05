@@ -26,30 +26,28 @@ import DiscogsAPI
 class DGLabelViewController: DGViewController {
     
     fileprivate var response : DGLabelReleasesResponse!  {
-        didSet {
-            tableView.reloadData()
-        }
+        didSet { tableView.reloadData() }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Get label details
-        Discogs.api.database.getLabel(self.objectID, success: { (label) in
+        Discogs.api.database.getLabel(objectID, success: { (label) in
             
             self.titleLabel.text    = label.name
             self.detailLabel.text   = label.contactInfo
             self.styleLabel.text    = label.profile
             
             // Get a Discogs image
-            if let image = label.images.first {
-                Discogs.api.resource.getImage(image.resourceURL!, success: { (image) in
+            if let image = label.images.first, let url = image.resourceURL {
+                Discogs.api.resource.getImage(url, success: { (image) in
                     self.coverView?.image = image
                 })
             }
             
         }) { (error) in
-                print(error)
+            print(error)
         }
 
         // Get label release
@@ -73,22 +71,15 @@ class DGLabelViewController: DGViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = self.tableView.indexPathForSelectedRow {
-            let result = self.response.releases[indexPath.row]
-            
-            if let destination = segue.destination as? DGViewController {
-                destination.objectID = result.id
-            }
+        if let indexPath = tableView.indexPathForSelectedRow, let destination = segue.destination as? DGViewController {
+            destination.objectID = response.releases[indexPath.row].id
         }
     }
     
     // MARK: UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.response?.releases.count as Int? {
-            return count
-        }
-        return 0
+        return response?.releases.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -97,21 +88,23 @@ class DGLabelViewController: DGViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
-        let result = self.response.releases[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseCell")!
+        let result = response.releases[indexPath.row]
         
         cell.textLabel?.text       = result.title
         cell.detailTextLabel?.text = result.catno
         cell.imageView?.image      = UIImage(named: "default-release")
         
         // Get a Discogs image
-        Discogs.api.resource.getImage(result.thumb!, success: { (image) in
-            cell.imageView?.image = image
-        })
+        if let thumb = result.thumb {
+            Discogs.api.resource.getImage(thumb, success: { (image) in
+                cell.imageView?.image = image
+            })
+        }
         
         // Load the next response page
-        if result === self.response.releases.last {
-            self.response.loadNextPage(success: {
+        if result === response.releases.last {
+            response.loadNextPage(success: {
                 self.tableView.reloadData()
             })
         }
