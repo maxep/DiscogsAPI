@@ -71,8 +71,42 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGWantlistResponse class]], @"Expected to load a profile");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGWantlistResponse class]], @"Expected to load a wantlist response");
 }
+
+- (void)testEditWentlist {
+    
+    DGWantRequest *request = [DGWantRequest new];
+    request.userName = @"maxepTestUser";
+    request.releaseID = @4997673;
+    
+    DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodPUT responseClass:[DGWant class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 201, @"Expected 201 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGWant class]], @"Expected to load a wanted release");
+    
+    request.notes = @"Test";
+    
+    operation = [self.manager operationWithRequest:request method:RKRequestMethodPOST responseClass:[DGWant class]];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGWant class]], @"Expected to load a wanted release");
+    XCTAssertEqualObjects([operation.response notes], request.notes);
+
+    operation = [self.manager operationWithRequest:request method:RKRequestMethodDELETE];
+    
+    [operation start];
+    [operation waitUntilFinished];
+    
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 204, @"Expected 204 response");
+}
+
 
 @end

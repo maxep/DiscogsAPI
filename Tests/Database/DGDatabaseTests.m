@@ -65,8 +65,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGRelease class]], @"Expected to load a release");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGRelease class]], @"Expected to load a release");
 }
 
 #pragma mark Master
@@ -89,8 +89,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGMaster class]], @"Expected to load a master");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGMaster class]], @"Expected to load a master");
 }
 
 #pragma mark Artist
@@ -112,8 +112,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGArtist class]], @"Expected to load an artist");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGArtist class]], @"Expected to load an artist");
 }
 
 #pragma mark Label
@@ -135,8 +135,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGLabel class]], @"Expected to load a label");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGLabel class]], @"Expected to load a label");
 }
 
 #pragma mark Search
@@ -172,8 +172,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGSearchResponse class]], @"Expected to load a label");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGSearchResponse class]], @"Expected to load a label");
 }
 
 @end

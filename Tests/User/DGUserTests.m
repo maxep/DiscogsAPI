@@ -61,8 +61,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGProfile class]], @"Expected to load a profile");
 }
 
 - (void)testEditProfileOperation {
@@ -74,19 +74,19 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGProfile class]], @"Expected to load a profile");
     
-    profile = operation.mappingResult.firstObject;
+    profile = operation.response;
     profile.profile = @"Test";
     operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];
     
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGProfile class]], @"Expected to load a profile");
-    XCTAssertEqualObjects([operation.mappingResult.firstObject profile], @"Test", @"Expected to edit profile");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGProfile class]], @"Expected to load a profile");
+    XCTAssertEqualObjects([operation.response profile], @"Test", @"Expected to edit profile");
     
     profile.profile = @"";
     operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];

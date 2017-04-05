@@ -72,8 +72,8 @@
 //    [operation start];
 //    [operation waitUntilFinished];
 //    
-//    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-//    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGInventoryResponse class]], @"Expected to load a profile");
+//    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+//    XCTAssertTrue([operation.response isKindOfClass:[DGInventoryResponse class]], @"Expected to load a profile");
 //}
 
 #pragma mark Inventory
@@ -109,8 +109,8 @@
     [operation start];
     [operation waitUntilFinished];
     
-    XCTAssertTrue(operation.HTTPRequestOperation.response.statusCode == 200, @"Expected 200 response");
-    XCTAssertTrue([operation.mappingResult.firstObject isKindOfClass:[DGInventoryResponse class]], @"Expected to load a profile");
+    XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
+    XCTAssertTrue([operation.response isKindOfClass:[DGInventoryResponse class]], @"Expected to load a profile");
 }
 
 @end
