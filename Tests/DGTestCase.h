@@ -25,11 +25,12 @@
 #import <RestKit/Testing.h>
 
 #import <DiscogsAPI/DiscogsAPI.h>
-#import <DiscogsAPI/DGOperation.h>
-#import <DiscogsAPI/DGHTTPClient.h>
 #import <DiscogsAPI/DGEndpoint+Private.h>
 
-@interface DGTestCase<__covariant EndpointType : DGEndpoint *> : XCTestCase
+@interface DGTestCase<__covariant EndpointType : DGEndpoint *> : XCTestCase {
+    @protected
+    dispatch_queue_t callbackQueue;
+}
 
 @property (nonatomic, readonly) DGHTTPClient *client;
 

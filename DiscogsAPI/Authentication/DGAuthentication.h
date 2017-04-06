@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The OAuth callback used in the prepared authorization view of [DGAuthentication authenticateWithPreparedAuthorizationViewHandler:success:failure:].
  */
-extern NSString * const DGCallback /* discogsapi://success */;
+FOUNDATION_EXTERN NSString * const DGCallback /* discogsapi://success */;
 
 @class UIWebView;
 

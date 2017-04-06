@@ -79,7 +79,7 @@ static NSString * const kDGOAuth1CredentialDiscogsAccount = @"DGOAuthCredentialD
         }
     }];
     
-    [self.queue addOperation:operation];
+    [self.manager enqueueOperation:operation];
 }
 
 - (void)authenticateWithCallback:(NSURL *)callback success:(void (^)(DGIdentity *identity))success failure:(void (^)(NSError *error))failure {

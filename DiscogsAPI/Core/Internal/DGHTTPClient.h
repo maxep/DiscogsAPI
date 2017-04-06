@@ -45,7 +45,7 @@ FOUNDATION_EXTERN NSString * const kDGBaseURL;
  
  @return The newly-initialized Discogs client object.
  */
-+ (DGHTTPClient *)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
++ (instancetype)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
 
 /**
  Creates and initializes a `DGHTTPClient` object.
@@ -54,7 +54,7 @@ FOUNDATION_EXTERN NSString * const kDGBaseURL;
  
  @return The newly-initialized Discogs client object.
  */
-+ (DGHTTPClient *)clientWithPersonalAccessToken:(NSString *)token;
++ (instancetype)clientWithPersonalAccessToken:(NSString *)token;
 
 /**
  Initializes an `DGHTTPClient` object with the specified consumer key and secret.
@@ -62,14 +62,14 @@ FOUNDATION_EXTERN NSString * const kDGBaseURL;
  @param key The consumer key.
  @param secret The consumer secret.
  */
-- (id)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
+- (instancetype)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret;
 
 /**
  Initializes an `DGHTTPClient` object with the specified personal access token.
  
  @param token The personal access token.
  */
-- (id)initWithPersonalAccessToken:(NSString *)token;
+- (instancetype)initWithPersonalAccessToken:(NSString *)token;
 
 /**
  Creates and enqueues `AFHTTPRequestOperation` objects to make the necessary request token and access token requests.

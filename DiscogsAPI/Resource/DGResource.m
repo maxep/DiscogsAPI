@@ -23,6 +23,8 @@
 #import "DGEndpoint+Private.h"
 #import "DGResource.h"
 
+#import "DGOperationQueue.h"
+
 static NSCache *DGImageCache() {
     static NSCache *cache = nil;
     static dispatch_once_t onceToken;
@@ -34,9 +36,18 @@ static NSCache *DGImageCache() {
 
 @implementation DGResource
 
+- (instancetype)initWithManager:(DGObjectManager *)manager {
+    self = [super initWithManager:manager];
+    if (self) {
+        self.operationQueue = [DGOperationQueue new];
+    }
+    return self;
+}
+
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
     NSOperation *operation = [self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
-    [self.queue addOperation:operation];
+    
+    [self.operationQueue addOperation:operation];
 }
 
 - (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {

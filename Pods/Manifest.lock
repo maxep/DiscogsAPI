@@ -48,7 +48,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   DiscogsAPI:
-    :path: "."
+    :path: .
 
 SPEC CHECKSUMS:
   DiscogsAPI: dcf6e040092247104bc56784f2adb079e9a01c7d

@@ -53,7 +53,7 @@
     DGOperation *operation = [self.manager operationWithRequest:profile method:RKRequestMethodGET responseClass:[DGProfile class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.queue addOperation:operation];
+    [self.manager enqueueOperation:operation];
 }
 
 - (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile *profile))success failure:(void (^)(NSError *error))failure {
@@ -61,7 +61,7 @@
     DGOperation *operation = [self.manager operationWithRequest:profile method:RKRequestMethodPOST responseClass:[DGProfile class]];
     [operation setCompletionBlockWithSuccess:success failure:failure];
     
-    [self.queue addOperation:operation];
+    [self.manager enqueueOperation:operation];
 }
 
 @end

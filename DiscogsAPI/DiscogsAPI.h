@@ -79,6 +79,11 @@ typedef NS_ENUM(NSInteger, DGMediaType){
 @property (nonatomic,readwrite) DGMediaType mediaType;
 
 /**
+ The operation queue which manages endpoints requests.
+ */
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+
+/**
  Sets the application consumer key and secret.
  This method should be called before any call to `Discogs.api`.
  

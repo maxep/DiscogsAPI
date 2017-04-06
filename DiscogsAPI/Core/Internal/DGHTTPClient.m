@@ -35,11 +35,11 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
 
 @implementation DGHTTPClient
 
-+ (DGHTTPClient *)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
++ (instancetype)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
     return [[DGHTTPClient alloc] initWithConsumerKey:key consumerSecret:secret];
 }
 
-+ (DGHTTPClient *)clientWithPersonalAccessToken:(NSString *)token {
++ (instancetype)clientWithPersonalAccessToken:(NSString *)token {
     return [[DGHTTPClient alloc] initWithPersonalAccessToken:token];
 }
 
@@ -47,7 +47,7 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
     return [super initWithBaseURL:[NSURL URLWithString:kDGBaseURL]];
 }
 
-- (id)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
+- (instancetype)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
     NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
     if (self = [super initWithBaseURL:baseURL key:key secret:secret]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs key=%@, secret=%@", key, secret];
@@ -56,7 +56,7 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
     return self;
 }
 
-- (id)initWithPersonalAccessToken:(NSString *)token {
+- (instancetype)initWithPersonalAccessToken:(NSString *)token {
     NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
     if (self = [super initWithBaseURL:baseURL]) {
         self.authorizationHeader = [NSString stringWithFormat:@"Discogs token=%@", token];

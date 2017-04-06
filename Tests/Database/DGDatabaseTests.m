@@ -28,6 +28,8 @@
 #import <DiscogsAPI/DGLabel+Mapping.h>
 #import <DiscogsAPI/DGSearch+Mapping.h>
 
+#import <DiscogsAPI/DGOperationQueue.h>
+
 @interface DGDatabaseTests : DGTestCase<DGDatabase *>
 
 @end
@@ -175,5 +177,36 @@
     XCTAssertEqual(operation.HTTPRequestOperation.response.statusCode, 200, @"Expected 200 response");
     XCTAssertTrue([operation.response isKindOfClass:[DGSearchResponse class]], @"Expected to load a label");
 }
+
+//- (void)testRateLimit {
+//    DGOperationQueue *queue = [[DGOperationQueue alloc] init];
+//
+//    DGLabel *label = [DGLabel new];
+//    label.ID = @1;
+//    
+//    NSInteger count = 250;
+//    
+//    NSDate *start = [NSDate date];
+//    
+//    for (NSInteger i = 0; i < count; i++) {
+//        
+//        DGOperation *operation = [self.manager operationWithRequest:label method:RKRequestMethodGET responseClass:[DGLabel class]];
+//        operation.successCallbackQueue = callbackQueue;
+//        operation.failureCallbackQueue = callbackQueue;
+//
+//        [operation setCompletionBlockWithSuccess:^(id  _Nonnull response) {
+//            
+//        } failure:^(NSError * _Nullable error) {
+//            XCTFail(@"Error: %@", error);
+//        }];
+//        
+//        [queue addOperation:operation];
+//    }
+//    
+//    [queue waitUntilAllOperationsAreFinished];
+//    
+//    NSTimeInterval estimatedTime = count * kDGRateLimitWindow / (queue.rateLimit - 1);
+//    XCTAssertEqualWithAccuracy(-start.timeIntervalSinceNow, estimatedTime, 1);
+//}
 
 @end

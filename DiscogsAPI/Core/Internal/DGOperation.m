@@ -57,8 +57,7 @@ NSString * const DGErrorDomain = @"com.discogs.api";
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         if (failure) {
             NSInteger code = operation.HTTPRequestOperation.response.statusCode;
-            NSString *description = error.userInfo[NSLocalizedDescriptionKey];
-            failure([NSError errorWithCode:code description:description]);
+            failure([NSError errorWithDomain:DGErrorDomain code:code userInfo:@{ NSLocalizedDescriptionKey : error.localizedDescription} ]);
         }
     }];
 }
@@ -77,10 +76,6 @@ NSString * const DGErrorDomain = @"com.discogs.api";
 @end
 
 @implementation NSError (Mapping)
-
-+ (instancetype)errorWithCode:(NSInteger)code description:(NSString *)description {
-    return [self errorWithDomain:DGErrorDomain code:code userInfo:@{NSLocalizedDescriptionKey : description}];
-}
 
 + (RKResponseDescriptor *)responseDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];

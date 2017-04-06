@@ -1,4 +1,4 @@
-// DGEndpoint.m
+// DGOperationQueue.h
 //
 // Copyright (c) 2017 Maxime Epain
 //
@@ -20,8 +20,36 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint.h"
+#import <Foundation/Foundation.h>
 
-@implementation DGEndpoint
+NS_ASSUME_NONNULL_BEGIN
+
+FOUNDATION_EXTERN NSTimeInterval const kDGRateLimitWindow; // 60s
+
+/**
+ DGOperationQueue throttle operations to comply Discogs rate limit.
+ Each request operation will update the queue rate limit and the number of remaining requests following responses headers.
+ */
+@interface DGOperationQueue : NSOperationQueue
+
+/**
+ The total number of operations the queue can make in a one minute window. 240 by default.
+ */
+@property (nonatomic, readonly) NSInteger rateLimit;
+
+/**
+ The number of remaining operation returned by the last request response.
+ */
+@property (nonatomic, readonly) NSInteger rateLimitRemaining;
+
+/**
+ Initializes a Discogs operation queue with a default rate limit.
+
+ @param rateLimit The default rate limit.
+ @return The initialized operation queue.
+ */
+- (instancetype)initWithRateLimit:(NSInteger)rateLimit NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -35,6 +35,8 @@
 		9C31E3091DBD249600BA48B5 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3071DBD226900BA48B5 /* search.json */; };
 		9C31E3101DBD31EA00BA48B5 /* DGMaketplaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */; };
 		9C31E3121DBD329B00BA48B5 /* inventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3111DBD329B00BA48B5 /* inventory.json */; };
+		9C37A8CA1E96841F00956D66 /* DGOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C37A8C81E96841F00956D66 /* DGOperationQueue.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9C37A8CB1E96841F00956D66 /* DGOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C37A8C91E96841F00956D66 /* DGOperationQueue.m */; };
 		9C4724DC1E375E4D00D6FEB2 /* DGWantlistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724DB1E375E4D00D6FEB2 /* DGWantlistTests.m */; };
 		9C4724DF1E375F2600D6FEB2 /* wantlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724DE1E375F2600D6FEB2 /* wantlist.json */; };
 		9C4724E21E375F8800D6FEB2 /* DGCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724E11E375F8800D6FEB2 /* DGCollectionTests.m */; };
@@ -42,14 +44,13 @@
 		9C4724E61E3760BF00D6FEB2 /* label.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E51E3760BF00D6FEB2 /* label.json */; };
 		9C4724E81E3760C900D6FEB2 /* listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E71E3760C900D6FEB2 /* listing.json */; };
 		9C4724EA1E3773EC00D6FEB2 /* field.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724E91E3773EC00D6FEB2 /* field.json */; };
-		9C4724EC1E37861D00D6FEB2 /* collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724EB1E37861D00D6FEB2 /* collection.json */; };
 		9C4724F41E37A38B00D6FEB2 /* DGEndpoint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C4724F51E37A38B00D6FEB2 /* DGEndpoint+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Private.m */; };
 		9C4724F61E37A38B00D6FEB2 /* DGHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C4724F71E37A38B00D6FEB2 /* DGHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */; };
 		9C4724F81E37A38B00D6FEB2 /* DGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724F21E37A38B00D6FEB2 /* DGOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C4724F91E37A38B00D6FEB2 /* DGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724F31E37A38B00D6FEB2 /* DGOperation.m */; };
-		9C4724FC1E37AD5B00D6FEB2 /* DGObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724FA1E37AD5B00D6FEB2 /* DGObjectManager.h */; };
+		9C4724FC1E37AD5B00D6FEB2 /* DGObjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4724FA1E37AD5B00D6FEB2 /* DGObjectManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C4724FD1E37AD5B00D6FEB2 /* DGObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724FB1E37AD5B00D6FEB2 /* DGObjectManager.m */; };
 		9C55DB3E1D06FE1600DF8AFE /* DGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2B1D06196000DF8AFE /* DGViewController.m */; };
 		9C55DB3F1D06FE1A00DF8AFE /* DGReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C55DB2F1D0619B800DF8AFE /* DGReleaseViewController.m */; };
@@ -59,6 +60,8 @@
 		9C55DB441D07124B00DF8AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C55DB431D07124B00DF8AFE /* Assets.xcassets */; };
 		9C5B32DE1DCCFBE200CCF140 /* DGIdentity+Mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C5B32DF1DCCFBE200CCF140 /* DGIdentity+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B32DD1DCCFBE200CCF140 /* DGIdentity+Mapping.m */; };
+		9C5FBD411E9AD6EB00CCAD36 /* DGOperationQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5FBD401E9AD6EB00CCAD36 /* DGOperationQueueTest.m */; };
+		9C5FBD431E9ADA1700CCAD36 /* collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C5FBD421E9ADA1700CCAD36 /* collection.json */; };
 		9C88BCC81DB90AE200DC9E61 /* AFOAuth1Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C88BCC41DB90AE200DC9E61 /* AFOAuth1Client.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C88BCC91DB90AE200DC9E61 /* AFOAuth1Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C88BCC51DB90AE200DC9E61 /* AFOAuth1Client.m */; };
 		9CA793F51D04ED5F0006EE89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA793EA1D04ED5F0006EE89 /* Assets.xcassets */; };
@@ -247,6 +250,8 @@
 		9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGMaketplaceTests.m; path = Maketplace/DGMaketplaceTests.m; sourceTree = "<group>"; };
 		9C31E3111DBD329B00BA48B5 /* inventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = inventory.json; path = Maketplace/inventory.json; sourceTree = "<group>"; };
 		9C31E3151DBD391F00BA48B5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		9C37A8C81E96841F00956D66 /* DGOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperationQueue.h; sourceTree = "<group>"; };
+		9C37A8C91E96841F00956D66 /* DGOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperationQueue.m; sourceTree = "<group>"; };
 		9C4724DB1E375E4D00D6FEB2 /* DGWantlistTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGWantlistTests.m; path = Wantlist/DGWantlistTests.m; sourceTree = "<group>"; };
 		9C4724DE1E375F2600D6FEB2 /* wantlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wantlist.json; path = Wantlist/wantlist.json; sourceTree = "<group>"; };
 		9C4724E11E375F8800D6FEB2 /* DGCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGCollectionTests.m; path = Collection/DGCollectionTests.m; sourceTree = "<group>"; };
@@ -254,7 +259,6 @@
 		9C4724E51E3760BF00D6FEB2 /* label.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = label.json; path = Database/label.json; sourceTree = "<group>"; };
 		9C4724E71E3760C900D6FEB2 /* listing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = listing.json; path = Maketplace/listing.json; sourceTree = "<group>"; };
 		9C4724E91E3773EC00D6FEB2 /* field.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = field.json; path = Collection/field.json; sourceTree = "<group>"; };
-		9C4724EB1E37861D00D6FEB2 /* collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collection.json; sourceTree = "<group>"; };
 		9C4724EE1E37A38B00D6FEB2 /* DGEndpoint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGEndpoint+Private.h"; sourceTree = "<group>"; };
 		9C4724EF1E37A38B00D6FEB2 /* DGEndpoint+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGEndpoint+Private.m"; sourceTree = "<group>"; };
 		9C4724F01E37A38B00D6FEB2 /* DGHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHTTPClient.h; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 		9C55DB431D07124B00DF8AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C5B32DC1DCCFBE200CCF140 /* DGIdentity+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Mapping.h"; sourceTree = "<group>"; };
 		9C5B32DD1DCCFBE200CCF140 /* DGIdentity+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Mapping.m"; sourceTree = "<group>"; };
+		9C5FBD401E9AD6EB00CCAD36 /* DGOperationQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperationQueueTest.m; sourceTree = "<group>"; };
+		9C5FBD421E9ADA1700CCAD36 /* collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = collection.json; path = Collection/collection.json; sourceTree = "<group>"; };
 		9C88BCC41DB90AE200DC9E61 /* AFOAuth1Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOAuth1Client.h; sourceTree = "<group>"; };
 		9C88BCC51DB90AE200DC9E61 /* AFOAuth1Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOAuth1Client.m; sourceTree = "<group>"; };
 		9C88BCC61DB90AE200DC9E61 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -528,6 +534,7 @@
 			children = (
 				9C1CCA531DBAA55E0049AD5D /* DGTestCase.h */,
 				9C1CCA541DBAA55E0049AD5D /* DGTestCase.m */,
+				9C5FBD401E9AD6EB00CCAD36 /* DGOperationQueueTest.m */,
 				9C1CCA4D1DBAA1700049AD5D /* Database */,
 				9C31E3021DBB814F00BA48B5 /* User */,
 				9C4724DA1E375E1100D6FEB2 /* Wantlist */,
@@ -582,9 +589,9 @@
 		9C4724E01E375F4200D6FEB2 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				9C5FBD421E9ADA1700CCAD36 /* collection.json */,
 				9C4724E31E37605E00D6FEB2 /* folder.json */,
 				9C4724E91E3773EC00D6FEB2 /* field.json */,
-				9C4724EB1E37861D00D6FEB2 /* collection.json */,
 				9C4724E11E375F8800D6FEB2 /* DGCollectionTests.m */,
 			);
 			name = Collection;
@@ -723,6 +730,8 @@
 				9C4724ED1E37A38B00D6FEB2 /* Internal */,
 				D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */,
 				D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */,
+				9C37A8C81E96841F00956D66 /* DGOperationQueue.h */,
+				9C37A8C91E96841F00956D66 /* DGOperationQueue.m */,
 				D0A587F61CFF9481008DF0A4 /* DGObject.h */,
 				D0A587F71CFF9481008DF0A4 /* DGObject.m */,
 			);
@@ -1168,7 +1177,6 @@
 			files = (
 				D0A588AA1CFF9482008DF0A4 /* DGMaster.h in Headers */,
 				D0A588B01CFF9482008DF0A4 /* DGSearch.h in Headers */,
-				9C4724FC1E37AD5B00D6FEB2 /* DGObjectManager.h in Headers */,
 				D0A588841CFF9482008DF0A4 /* DGAuthentication.h in Headers */,
 				D0A588A41CFF9482008DF0A4 /* DGDatabase.h in Headers */,
 				D0A588AC1CFF9482008DF0A4 /* DGMasterVersion.h in Headers */,
@@ -1205,6 +1213,7 @@
 				D0A588F01CFF9482008DF0A4 /* DGCollectionFieldInstance.h in Headers */,
 				9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */,
 				9C88BCC81DB90AE200DC9E61 /* AFOAuth1Client.h in Headers */,
+				9C37A8CA1E96841F00956D66 /* DGOperationQueue.h in Headers */,
 				9C0F09741DB17E2900FB09D9 /* DGInventory+Mapping.h in Headers */,
 				9C0AB1F01DB11B0D004716A1 /* DGListing+Mapping.h in Headers */,
 				D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */,
@@ -1239,6 +1248,7 @@
 				D0A588C61CFF9482008DF0A4 /* DGLabel+Mapping.h in Headers */,
 				D0A588BA1CFF9482008DF0A4 /* DGCommunity+Mapping.h in Headers */,
 				D0A588CC1CFF9482008DF0A4 /* DGMasterVersion+Mapping.h in Headers */,
+				9C4724FC1E37AD5B00D6FEB2 /* DGObjectManager.h in Headers */,
 				D0A588E61CFF9482008DF0A4 /* DGPrice.h in Headers */,
 				D0A588FC1CFF9482008DF0A4 /* DGWantlist.h in Headers */,
 			);
@@ -1400,7 +1410,7 @@
 				9C4724DF1E375F2600D6FEB2 /* wantlist.json in Resources */,
 				9C4724E81E3760C900D6FEB2 /* listing.json in Resources */,
 				9C31E2FD1DBAC48F00BA48B5 /* master.json in Resources */,
-				9C4724EC1E37861D00D6FEB2 /* collection.json in Resources */,
+				9C5FBD431E9ADA1700CCAD36 /* collection.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1609,6 +1619,7 @@
 				9C1CCA571DBAA5DB0049AD5D /* DGTestCase.m in Sources */,
 				9C31E3041DBB818D00BA48B5 /* DGUserTests.m in Sources */,
 				9C4724E21E375F8800D6FEB2 /* DGCollectionTests.m in Sources */,
+				9C5FBD411E9AD6EB00CCAD36 /* DGOperationQueueTest.m in Sources */,
 				9C1CCA521DBAA4A70049AD5D /* DGDatabaseTests.m in Sources */,
 				9C31E3101DBD31EA00BA48B5 /* DGMaketplaceTests.m in Sources */,
 				9C4724DC1E375E4D00D6FEB2 /* DGWantlistTests.m in Sources */,
@@ -1682,6 +1693,7 @@
 				D0A588F71CFF9482008DF0A4 /* DGUser.m in Sources */,
 				768E805C1E8093B200EFF531 /* DGCompany.m in Sources */,
 				D0A588D71CFF9482008DF0A4 /* DGCollectionField+Mapping.m in Sources */,
+				9C37A8CB1E96841F00956D66 /* DGOperationQueue.m in Sources */,
 				9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */,
 				D0A588D31CFF9482008DF0A4 /* DGPrice+Mapping.m in Sources */,
 				9CE9512E1DEB44E7006BD7B1 /* DGTokenStore.m in Sources */,

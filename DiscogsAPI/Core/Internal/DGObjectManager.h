@@ -94,6 +94,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (DGOperation *)operationWithRequest:(id<DGRequestObject>)request method:(RKRequestMethod)method responseClass:(nullable Class<DGResponseObject>)responseClass;
 
+/**
+ Enqueues an `DGOperation` to the object manager's operation queue.
+ 
+ @param operation The object request operation to be enqueued.
+ */
+- (void)enqueueOperation:(DGOperation *)operation;
+
 @end
 
 NS_ASSUME_NONNULL_END

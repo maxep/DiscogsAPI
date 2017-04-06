@@ -53,11 +53,6 @@ typedef NS_ENUM(NSInteger, DGErrorCode){
  */
 typedef void(^DGFailureBlock)(NSError *error);
 
-/**
- Endpoint operation queue.
- */
-@property (nonatomic, readonly) NSOperationQueue *queue;
-
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 

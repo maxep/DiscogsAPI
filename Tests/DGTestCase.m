@@ -44,6 +44,8 @@
     
     _manager = [[DGObjectManager alloc] initWithHTTPClient:self.client];
     _manager.requestSerializationMIMEType = RKMIMETypeJSON;
-}
     
+    callbackQueue = dispatch_queue_create("fr.maxep.DiscogsAPI.test", NULL);
+}
+
 @end

@@ -15,6 +15,7 @@
 #import "DGIdentity.h"
 #import "DGEndpoint.h"
 #import "DGObject.h"
+#import "DGOperationQueue.h"
 #import "DGDatabase.h"
 #import "DGRelease.h"
 #import "DGArtist.h"

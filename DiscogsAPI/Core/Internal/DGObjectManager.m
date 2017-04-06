@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGObjectManager.h"
+#import "DGOperationQueue.h"
 
 @implementation DGObjectManager
 
@@ -42,15 +43,13 @@
 }
 
 + (instancetype)managerWithBaseURL:(NSURL *)baseURL; {
-    DGObjectManager *manager = [[self alloc] initWithHTTPClient:[DGHTTPClient clientWithBaseURL:baseURL]];
-    [manager.HTTPClient registerHTTPOperationClass:[AFRKJSONRequestOperation class]];
-    [manager setAcceptHeaderWithMIMEType:RKMIMETypeJSON];
-    return manager;
+    return [[self alloc] initWithHTTPClient:[DGHTTPClient clientWithBaseURL:baseURL]];
 }
 
 - (instancetype)initWithHTTPClient:(DGHTTPClient *)client {
     self = [super initWithHTTPClient:client];
     if (self) {
+        self.operationQueue = [[DGOperationQueue alloc] init];
         self.requestSerializationMIMEType = RKMIMETypeJSON;
     }
     return self;
@@ -68,6 +67,10 @@
     
     NSURLRequest *requestURL = [self requestWithObject:request method:method path:nil parameters:parameters];
     return [DGOperation operationWithRequest:requestURL responseClass:responseClass];
+}
+
+- (void)enqueueOperation:(DGOperation *)operation {
+    [self.operationQueue addOperation:operation];
 }
 
 @end

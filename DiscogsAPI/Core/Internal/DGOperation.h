@@ -73,16 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface NSError (Mapping) <DGResponseObject>
 
-/**
- Creates an discogs error.
-
- @param code        The error code for the error.
- @param description The error description.
-
- @return An Disocgs NSError object with the specified error code and the description.
- */
-+ (instancetype)errorWithCode:(NSInteger)code description:(NSString *)description;
-
 @end
 
 /**

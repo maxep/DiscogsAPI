@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "DGPagination+Mapping.h"
+#import "DGObjectManager.h"
 
 @implementation DGPaginationUrls (Mapping)
 
@@ -58,9 +59,7 @@
 
 + (RKRequestDescriptor *)requestDescriptor {
     RKObjectMapping *mapping = [RKObjectMapping requestMapping];
-    [mapping addAttributeMappingsFromDictionary:@{ @"page" : @"page",
-                                                  @"perPage" : @"per_page"
-                                                   }];
+    [mapping addAttributeMappingsFromDictionary:@{ @"page" : @"page", @"perPage" : @"per_page" }];
     return [RKRequestDescriptor requestDescriptorWithMapping:mapping objectClass:[DGPagination class] rootKeyPath:nil method:RKRequestMethodAny];
     
 }
@@ -74,28 +73,14 @@
 }
 
 - (void)loadNextPageWithResponseClass:(Class<DGResponseObject>)responseClass success:(void (^)(id response))success failure:(nullable void (^)(NSError * _Nullable error))failure {
+    
     if(self.urls.next) {
-        
-        RKObjectManager *manager = [RKObjectManager sharedManager];
+        DGObjectManager *manager = [DGObjectManager sharedManager];
         NSURLRequest *requestURL = [manager.HTTPClient requestWithMethod:@"GET" path:self.urls.next parameters:nil];
         
-        RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:requestURL responseDescriptors:@[ responseClass.responseDescriptor ]];
-        
-        [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-            if ([mappingResult.firstObject isKindOfClass:responseClass]) {
-                success(mappingResult.firstObject);
-                
-            } else if (failure) {
-                failure([NSError errorWithDomain:@"Discogs.api"
-                                            code:NSURLErrorCannotParseResponse
-                                        userInfo:@{NSLocalizedDescriptionKey : @"Bad response from Discogs server"}]);
-            }
-        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-            RKLogError(@"Operation failed with error: %@", error);
-            if (failure) failure(error);
-        }];
-        
-        [manager enqueueObjectRequestOperation:objectRequestOperation];
+        DGOperation *operation = [[DGOperation alloc] initWithRequest:requestURL responseClass:responseClass];
+        [operation setCompletionBlockWithSuccess:success failure:failure];
+        [manager enqueueOperation:operation];
     }
 }
 

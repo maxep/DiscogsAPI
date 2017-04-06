@@ -1,4 +1,4 @@
-// DGEndpoint.m
+// DGDatabaseTests.m
 //
 // Copyright (c) 2017 Maxime Epain
 //
@@ -20,8 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DGEndpoint.h"
+#import <DiscogsAPI/DGOperationQueue.h>
 
-@implementation DGEndpoint
+#import "DGTestCase.h"
+
+@interface DGOperationQueueTest : DGTestCase
+
+@end
+
+@implementation DGOperationQueueTest
+
+- (void)testRateLimit {
+    DGOperationQueue *queue = [[DGOperationQueue alloc] init];
+    
+    NSDate *start = [NSDate date];
+    
+    for (NSInteger i = 0; i < queue.rateLimit; i++) {
+        NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+            NSLog(@"Operation %li", i);
+        }];
+        [queue addOperation:operation];
+    }
+    
+    [queue waitUntilAllOperationsAreFinished];
+    XCTAssertEqualWithAccuracy(-start.timeIntervalSinceNow, kDGRateLimitWindow, 1);
+}
 
 @end

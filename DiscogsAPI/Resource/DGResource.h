@@ -32,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DGResource : DGEndpoint
 
 /**
+ The resource endpoint dispatches request on its own operation queue.
+ */
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+
+/**
  Proxy server url. (@example https://github.com/hendriks73/coxy )
  */
 @property (nonatomic, strong, nullable) NSString *proxyURL;
@@ -46,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
 
 /**
- Creates a Coxy image request operation for AFNetworking (https://github.com/AFNetworking/AFNetworking ).
+ Creates a image request operation.
  
  @param url     The Discogs image URL.
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.

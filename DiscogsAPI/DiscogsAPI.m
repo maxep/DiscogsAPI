@@ -105,6 +105,14 @@ static NSString * AccessToken    = nil;
     self.manager.HTTPClient.mediaType = DGMediaTypeAsString(mediaType);
 }
 
+- (NSOperationQueue *)operationQueue {
+    return self.manager.operationQueue;
+}
+
+- (void)setOperationQueue:(NSOperationQueue *)operationQueue {
+    self.manager.operationQueue = operationQueue;
+}
+
 @end
 
 @implementation DiscogsAPI
