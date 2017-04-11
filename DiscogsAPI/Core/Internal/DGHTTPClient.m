@@ -29,38 +29,51 @@ static NSString * const kDGAuthorizeURL    = @"https://discogs.com/oauth/authori
 static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
 
 @interface DGHTTPClient ()
-@property (nonatomic, strong) NSString   *authorizationHeader;
-@property (nonatomic, readonly) NSString *acceptHeader;
+@property (readwrite, nonatomic, copy) NSString *key;
+@property (readwrite, nonatomic, copy) NSString *secret;
+
+@property (readwrite, nonatomic, copy) NSString *personalAccessToken;
 @end
 
 @implementation DGHTTPClient
 
+@dynamic key;
+@dynamic secret;
+
 + (instancetype)clientWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
-    return [[DGHTTPClient alloc] initWithConsumerKey:key consumerSecret:secret];
+    return [[self alloc] initWithConsumerKey:key consumerSecret:secret];
 }
 
 + (instancetype)clientWithPersonalAccessToken:(NSString *)token {
-    return [[DGHTTPClient alloc] initWithPersonalAccessToken:token];
+    return [[self alloc] initWithPersonalAccessToken:token];
 }
 
 - (instancetype)init {
-    return [super initWithBaseURL:[NSURL URLWithString:kDGBaseURL]];
+    return [self initWithBaseURL:[NSURL URLWithString:kDGBaseURL]];
+}
+
+- (instancetype)initWithBaseURL:(NSURL *)url {
+    self = [super initWithBaseURL:url];
+    if (self) {
+        self.signatureMethod = AFPlainTextSignatureMethod;
+        self.mediaType = @"plaintext";
+    }
+    return self;
 }
 
 - (instancetype)initWithConsumerKey:(NSString *)key consumerSecret:(NSString *)secret {
-    NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
-    if (self = [super initWithBaseURL:baseURL key:key secret:secret]) {
-        self.authorizationHeader = [NSString stringWithFormat:@"Discogs key=%@, secret=%@", key, secret];
-        self.signatureMethod = AFPlainTextSignatureMethod;
+    self = [self init];
+    if (self) {
+        self.key = key;
+        self.secret = secret;
     }
     return self;
 }
 
 - (instancetype)initWithPersonalAccessToken:(NSString *)token {
-    NSURL *baseURL = [NSURL URLWithString:kDGBaseURL];
-    if (self = [super initWithBaseURL:baseURL]) {
-        self.authorizationHeader = [NSString stringWithFormat:@"Discogs token=%@", token];
-        self.signatureMethod = AFPlainTextSignatureMethod;
+    self = [self init];
+    if (self) {
+        self.personalAccessToken = token;
     }
     return self;
 }
@@ -83,15 +96,10 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
 
 #pragma mark Properties
 
-- (NSString *)acceptHeader {
-    return [NSString stringWithFormat:@"application/vnd.discogs.v2.%@+json", self.mediaType];
-}
-
-- (NSString *)mediaType {
-    if (!_mediaType) {
-        _mediaType = @"plaintext";
-    }
-    return _mediaType;
+- (void)setMediaType:(NSString *)mediaType {
+    _mediaType = mediaType;
+    NSString *accept = [NSString stringWithFormat:@"application/vnd.discogs.v2.%@+json", mediaType];
+    [self setDefaultHeader:@"Accept" value:accept];
 }
 
 #pragma mark - AFHTTPClient
@@ -99,27 +107,17 @@ static NSString * const kDGAccessTokenURL  = @"oauth/access_token";
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters {
     NSMutableURLRequest *request = [super requestWithMethod:method path:path parameters:parameters];
     
-    [request setValue:self.acceptHeader forHTTPHeaderField:@"Accept"];
-    if (self.accessToken) {
+    if (self.accessToken || [path isEqualToString:kDGRequestTokenURL]) {
         return request;
     }
     
-    if (![path isEqualToString:kDGRequestTokenURL]) {
-        [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
-    }
-    return request;
-}
-
-- (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters constructingBodyWithBlock:(void (^)(id <AFRKMultipartFormData> formData))block {
-    NSMutableURLRequest *request = [super multipartFormRequestWithMethod:method path:path parameters:parameters constructingBodyWithBlock:block];
-    
-    [request setValue:self.acceptHeader forHTTPHeaderField:@"Accept"];
-    if (self.accessToken) {
-        return request;
-    }
-    
-    if (![path isEqualToString:kDGRequestTokenURL])  {
-        [request setValue:self.authorizationHeader forHTTPHeaderField:@"Authorization"];
+    if (self.personalAccessToken) {
+        NSString *authorization = [NSString stringWithFormat:@"Discogs token=%@", self.personalAccessToken];
+        [request setValue:authorization forHTTPHeaderField:@"Authorization"];
+        
+    } else if (self.key && self.secret) {
+        NSString *authorization = [NSString stringWithFormat:@"Discogs key=%@, secret=%@", self.key, self.secret];
+        [request setValue:authorization forHTTPHeaderField:@"Authorization"];
     }
     
     return request;
