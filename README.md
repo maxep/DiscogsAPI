@@ -9,7 +9,7 @@ An Objective-C interface for [Discogs API v2.0](http://www.discogs.com/developer
 
 The implementation is based on [RestKit v0.27.0](https://github.com/RestKit/RestKit).
 
-##Features
+## Features
 - Supports OAuth process and store the token in keychain.
 - Supports Discogs Auth.
 - Database support: Release, Master Release, Master Release Versions, Artist, Artist Releases, Label, All Label Releases, Search.

@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the user profile.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getProfile:(NSString *)userName success:(void (^)(DGProfile *profile))success failure:(nullable DGFailureBlock)failure;
+- (void)getProfile:(NSString *)userName success:(void (^)(DGProfile *profile))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(profile:success:failure:));
 
 /**
  Edit a user’s profile data
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the edited user profile.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile *profile))success failure:(nullable DGFailureBlock)failure;
+- (void)editProfile:(DGProfile *)profile success:(void (^)(DGProfile *profile))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(edit(_:success:failure:));
 
 @end
 

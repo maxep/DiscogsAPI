@@ -46,12 +46,13 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         searchController.searchBar.scopeButtonTitles = ["All", "Release", "Master", "Artist", "Label"]
         searchController.searchBar.delegate = self
         
-        let callback = URL(string: "discogs-swift://success")
-        Discogs.api.authentication.authenticate(withCallback: callback!, success: { (identity) in
+        let callback = URL(string: "discogs-swift://success")!
+        Discogs.api.authentication.authenticate(withCallback: callback, success: { (identity) in
             print("Authenticated user: \(identity)")
         }) { (error) in
             print(error)
         }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +83,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
             request.type = type
             request.pagination.perPage = 25
 
-            Discogs.api.database.search(for: request, success: { (response) in
+            Discogs.api.database.search(request, success: { (response) in
                 self.response = response
             }) { (error) in
                 print(error)
@@ -112,7 +113,7 @@ class DGSearchViewController: UITableViewController, UISearchResultsUpdating, UI
         
         // Get a Discogs image
         if let thumb = result.thumb {
-            Discogs.api.resource.getImage(thumb, success: { (image) in
+            Discogs.api.resource.get(image: thumb, success: { (image) in
                 cell.imageView?.image = image
             })
         }

@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the search response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)searchFor:(DGSearchRequest *)request success:(void (^)(DGSearchResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)searchFor:(DGSearchRequest *)request success:(void (^)(DGSearchResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(search(_:success:failure:));
 
 /**
  Gets an artist from Discogs database.
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the artist.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getArtist:(NSNumber *)artistID success:(void (^)(DGArtist *artist))success failure:(nullable DGFailureBlock)failure;
+- (void)getArtist:(NSNumber *)artistID success:(void (^)(DGArtist *artist))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(artist:success:failure:));
 
 /**
  Gets an artist's releases.
@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated artist releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getArtistReleases:(DGArtistReleasesRequest *)request success:(void (^)(DGArtistReleasesResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getArtistReleases:(DGArtistReleasesRequest *)request success:(void (^)(DGArtistReleasesResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 /**
  Gets a release from Discogs database.
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success   A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the release.
  @param failure   A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getRelease:(NSNumber *)releaseID success:(void (^)(DGRelease *release))success failure:(nullable DGFailureBlock)failure;
+- (void)getRelease:(NSNumber *)releaseID success:(void (^)(DGRelease *release))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(release:success:failure:));
 
 /**
  Gets a master release from Dsicogs database.
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the master release.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getMaster:(NSNumber *)masterID success:(void (^)(DGMaster *master))success failure:(nullable DGFailureBlock)failure;
+- (void)getMaster:(NSNumber *)masterID success:(void (^)(DGMaster *master))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(master:success:failure:));
 
 /**
  Gets a label from Discogs database.
@@ -91,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the label.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getLabel:(NSNumber *)labelID success:(void (^)(DGLabel *label))success failure:(nullable DGFailureBlock)failure;
+- (void)getLabel:(NSNumber *)labelID success:(void (^)(DGLabel *label))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(label:success:failure:));
 
 /**
  Gets a labels's releases.
@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated label releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getLabelReleases:(DGLabelReleasesRequest *)request success:(void (^)(DGLabelReleasesResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getLabelReleases:(DGLabelReleasesRequest *)request success:(void (^)(DGLabelReleasesResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 /**
  Gets a master's versions
@@ -109,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated master releases response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getMasterVersion:(DGMasterVersionsRequest *)request success:(void (^)(DGMasterVersionsResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getMasterVersion:(DGMasterVersionsRequest *)request success:(void (^)(DGMasterVersionsResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 @end
 

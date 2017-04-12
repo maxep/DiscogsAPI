@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success  A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the image.
  @param failure  A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
+- (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(image:success:failure:));
 
 /**
  Creates a image request operation.

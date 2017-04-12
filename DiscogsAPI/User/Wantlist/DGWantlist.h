@@ -99,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the paginated wantlist response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getWantlist:(DGWantlistRequest *)request success:(void (^)(DGWantlistResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getWantlist:(DGWantlistRequest *)request success:(void (^)(DGWantlistResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 /**
  Add release to user's wantlist.
@@ -108,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the wanted release.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)addToWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(nullable DGFailureBlock)failure;
+- (void)addToWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(add(_:success:failure:));
 
 /**
  Edit release in user's wantlist.
@@ -117,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and one argument: the wanted release.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editReleaseInWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(nullable DGFailureBlock)failure;
+- (void)editReleaseInWantlist:(DGWantRequest *)request success:(void (^)(DGWant *want))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(edit(_:success:failure:));
 
 /**
  Delete release from user's wantlist.
@@ -126,7 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value no argument: the wanted release.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(delete(_:success:failure:));
 
 @end
 

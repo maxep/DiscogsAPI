@@ -33,7 +33,7 @@ class DGArtistViewController: DGViewController {
         super.viewDidLoad()
         
         // Get artist details
-        Discogs.api.database.getArtist(objectID, success: { (artist) in
+        Discogs.api.database.get(artist: objectID, success: { (artist) in
             
             self.titleLabel.text    = artist.name
             self.styleLabel.text    = artist.profile
@@ -44,9 +44,9 @@ class DGArtistViewController: DGViewController {
             
             // Get a Discogs image
             if let image = artist.images?.first, let url = image.resourceURL {
-                Discogs.api.resource.getImage(url, success: { (image) in
+                Discogs.api.resource.get(image: url, success: { (image) in
                     self.coverView?.image = image
-                }, failure:nil)
+                })
             }
             
         }) { (error) in
@@ -58,7 +58,7 @@ class DGArtistViewController: DGViewController {
         request.artistID = objectID
         request.pagination.perPage = 25
         
-        Discogs.api.database .getArtistReleases(request, success: { (response) in
+        Discogs.api.database.get(request, success: { (response) in
             self.response = response
         }) { (error) in
             print(error)
@@ -108,7 +108,7 @@ class DGArtistViewController: DGViewController {
         
         // Get a Discogs image
         if let thumb = release.thumb {
-            Discogs.api.resource.getImage(thumb, success: { (image) in
+            Discogs.api.resource.get(image: thumb, success: { (image) in
                 cell.imageView?.image = image
             })
         }

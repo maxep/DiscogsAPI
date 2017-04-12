@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the inventory response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getInventory:(DGInventoryRequest *)request success:(void (^)(DGInventoryResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getInventory:(DGInventoryRequest *)request success:(void (^)(DGInventoryResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 /**
  Gets the data associated with a listing.
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the requested listing.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getListing:(DGListingRequest *)request success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure;
+- (void)getListing:(DGListingRequest *)request success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 /**
  Edits the data associated with a listing.
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)editListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(edit(_:success:failure:));
 
 /**
  Creates a Marketplace listing.
@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the listing with ID and resource URL filled.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)createListing:(DGListing *)listing success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure;
+- (void)createListing:(DGListing *)listing success:(void (^)(DGListing *listing))success failure:(nullable DGFailureBlock)failure  NS_SWIFT_NAME(create(_:success:failure:));
 
 /**
  Permanently remove a listing from the Marketplace.
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure;
+- (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(delete(_:success:failure:));
 
 /**
  Edits the data associated with an order.
@@ -103,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the edited order.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editOrder:(DGOrder *)order success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure;
+- (void)editOrder:(DGOrder *)order success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(edit(_:success:failure:));
 
 /**
  Gets the data associated with an order.
@@ -113,7 +113,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the requested order.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getOrder:(NSNumber *)orderID success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure;
+- (void)getOrder:(NSNumber *)orderID success:(void (^)(DGOrder *order))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(order:success:failure:));
 
 /**
  Gets a list of the authenticated user’s orders. Accepts Pagination parameters.
@@ -122,7 +122,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the orders response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getOrders:(DGListOrdersRequest *)request success:(void (^)(DGListOrdersResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getOrders:(DGListOrdersRequest *)request success:(void (^)(DGListOrdersResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(_:success:failure:));
 
 /**
  Retrieves price suggestions for the provided Release ID. If no suggestions are available, an empty object will be returned.
@@ -132,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and one argument: the price suggestion response.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(nullable DGFailureBlock)failure;
+- (void)getPriceSuggestions:(NSNumber *)releaseID success:(void (^)(DGPriceSuggestionsResponse *response))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(get(price:success:failure:));
 
 @end
 

@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Object URL on Discogs website.
  */
-@property (nonatomic, strong, nullable) NSString  *uri;
+@property (nonatomic, strong, nullable) NSString *uri;
 
 @end
 
