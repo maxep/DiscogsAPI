@@ -50,6 +50,10 @@ static NSCache *DGImageCache() {
     [self.operationQueue addOperation:operation];
 }
 
+- (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success {
+    [self getImage:imageURL success:success failure:nil];
+}
+
 - (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
     
     UIImage *image = [DGImageCache() objectForKey:url];

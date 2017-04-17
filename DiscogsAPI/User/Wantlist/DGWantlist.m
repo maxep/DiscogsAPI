@@ -54,10 +54,7 @@
         self.pagination = response.pagination;
         self.wants = [self.wants arrayByAddingObjectsFromArray:response.wants];
         success();
-    } failure:^(NSError *error) {
-        RKLogError(@"Operation failed with error: %@", error);
-        if (failure) failure(error);
-    }];
+    } failure:failure];
 }
 
 @end

@@ -38,10 +38,7 @@
         self.pagination = response.pagination;
         self.listings = [self.listings arrayByAddingObjectsFromArray:response.listings];
         success();
-    } failure:^(NSError *error) {
-        RKLogError(@"Operation failed with error: %@", error);
-        if (failure) failure(error);
-    }];
+    } failure:failure];
 }
 
 @end
