@@ -35,8 +35,6 @@
 		9C31E3091DBD249600BA48B5 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3071DBD226900BA48B5 /* search.json */; };
 		9C31E3101DBD31EA00BA48B5 /* DGMaketplaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */; };
 		9C31E3121DBD329B00BA48B5 /* inventory.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C31E3111DBD329B00BA48B5 /* inventory.json */; };
-		9C37A8CA1E96841F00956D66 /* DGOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C37A8C81E96841F00956D66 /* DGOperationQueue.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9C37A8CB1E96841F00956D66 /* DGOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C37A8C91E96841F00956D66 /* DGOperationQueue.m */; };
 		9C4724DC1E375E4D00D6FEB2 /* DGWantlistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724DB1E375E4D00D6FEB2 /* DGWantlistTests.m */; };
 		9C4724DF1E375F2600D6FEB2 /* wantlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C4724DE1E375F2600D6FEB2 /* wantlist.json */; };
 		9C4724E21E375F8800D6FEB2 /* DGCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4724E11E375F8800D6FEB2 /* DGCollectionTests.m */; };
@@ -81,6 +79,8 @@
 		9CA794321D0560560006EE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA794301D0560560006EE89 /* Main.storyboard */; };
 		9CCD125B1DD75271002BEEA8 /* DGIdentity+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CCD125C1DD75271002BEEA8 /* DGIdentity+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */; };
+		9CD215571EAEA2F4003B2BCC /* DGOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD215551EAEA2F4003B2BCC /* DGOperationQueue.h */; };
+		9CD215581EAEA2F4003B2BCC /* DGOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD215561EAEA2F4003B2BCC /* DGOperationQueue.m */; };
 		9CE9512D1DEB44E7006BD7B1 /* DGTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9CE9512E1DEB44E7006BD7B1 /* DGTokenStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9512C1DEB44E7006BD7B1 /* DGTokenStore.m */; };
 		ABD760626F171F7AF351175A /* Pods_DiscogsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */; };
@@ -250,8 +250,6 @@
 		9C31E30F1DBD31EA00BA48B5 /* DGMaketplaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGMaketplaceTests.m; path = Maketplace/DGMaketplaceTests.m; sourceTree = "<group>"; };
 		9C31E3111DBD329B00BA48B5 /* inventory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = inventory.json; path = Maketplace/inventory.json; sourceTree = "<group>"; };
 		9C31E3151DBD391F00BA48B5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		9C37A8C81E96841F00956D66 /* DGOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperationQueue.h; sourceTree = "<group>"; };
-		9C37A8C91E96841F00956D66 /* DGOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperationQueue.m; sourceTree = "<group>"; };
 		9C4724DB1E375E4D00D6FEB2 /* DGWantlistTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGWantlistTests.m; path = Wantlist/DGWantlistTests.m; sourceTree = "<group>"; };
 		9C4724DE1E375F2600D6FEB2 /* wantlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wantlist.json; path = Wantlist/wantlist.json; sourceTree = "<group>"; };
 		9C4724E11E375F8800D6FEB2 /* DGCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGCollectionTests.m; path = Collection/DGCollectionTests.m; sourceTree = "<group>"; };
@@ -309,6 +307,8 @@
 		9CA794301D0560560006EE89 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CCD12591DD75271002BEEA8 /* DGIdentity+Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DGIdentity+Keychain.h"; sourceTree = "<group>"; };
 		9CCD125A1DD75271002BEEA8 /* DGIdentity+Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DGIdentity+Keychain.m"; sourceTree = "<group>"; };
+		9CD215551EAEA2F4003B2BCC /* DGOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGOperationQueue.h; sourceTree = "<group>"; };
+		9CD215561EAEA2F4003B2BCC /* DGOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGOperationQueue.m; sourceTree = "<group>"; };
 		9CE9512B1DEB44E7006BD7B1 /* DGTokenStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTokenStore.h; sourceTree = "<group>"; };
 		9CE9512C1DEB44E7006BD7B1 /* DGTokenStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTokenStore.m; sourceTree = "<group>"; };
 		D0068AB4D05C60FA7F7C30A9 /* Pods_DiscogsAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiscogsAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -608,6 +608,8 @@
 				9C4724F11E37A38B00D6FEB2 /* DGHTTPClient.m */,
 				9C4724FA1E37AD5B00D6FEB2 /* DGObjectManager.h */,
 				9C4724FB1E37AD5B00D6FEB2 /* DGObjectManager.m */,
+				9CD215551EAEA2F4003B2BCC /* DGOperationQueue.h */,
+				9CD215561EAEA2F4003B2BCC /* DGOperationQueue.m */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -730,8 +732,6 @@
 				9C4724ED1E37A38B00D6FEB2 /* Internal */,
 				D0A587F41CFF9481008DF0A4 /* DGEndpoint.h */,
 				D0A587F51CFF9481008DF0A4 /* DGEndpoint.m */,
-				9C37A8C81E96841F00956D66 /* DGOperationQueue.h */,
-				9C37A8C91E96841F00956D66 /* DGOperationQueue.m */,
 				D0A587F61CFF9481008DF0A4 /* DGObject.h */,
 				D0A587F71CFF9481008DF0A4 /* DGObject.m */,
 			);
@@ -1213,10 +1213,10 @@
 				D0A588F01CFF9482008DF0A4 /* DGCollectionFieldInstance.h in Headers */,
 				9C0F097F1DB37D4100FB09D9 /* DGMapping.h in Headers */,
 				9C88BCC81DB90AE200DC9E61 /* AFOAuth1Client.h in Headers */,
-				9C37A8CA1E96841F00956D66 /* DGOperationQueue.h in Headers */,
 				9C0F09741DB17E2900FB09D9 /* DGInventory+Mapping.h in Headers */,
 				9C0AB1F01DB11B0D004716A1 /* DGListing+Mapping.h in Headers */,
 				D0A588B61CFF9482008DF0A4 /* DGArtistRelease+Mapping.h in Headers */,
+				9CD215571EAEA2F4003B2BCC /* DGOperationQueue.h in Headers */,
 				D0A588DA1CFF9482008DF0A4 /* DGCollectionFolder+Mapping.h in Headers */,
 				D0A588D61CFF9482008DF0A4 /* DGCollectionField+Mapping.h in Headers */,
 				D0A588861CFF9482008DF0A4 /* DGAuthView.h in Headers */,
@@ -1693,7 +1693,7 @@
 				D0A588F71CFF9482008DF0A4 /* DGUser.m in Sources */,
 				768E805C1E8093B200EFF531 /* DGCompany.m in Sources */,
 				D0A588D71CFF9482008DF0A4 /* DGCollectionField+Mapping.m in Sources */,
-				9C37A8CB1E96841F00956D66 /* DGOperationQueue.m in Sources */,
+				9CD215581EAEA2F4003B2BCC /* DGOperationQueue.m in Sources */,
 				9C0F09751DB17E2900FB09D9 /* DGInventory+Mapping.m in Sources */,
 				D0A588D31CFF9482008DF0A4 /* DGPrice+Mapping.m in Sources */,
 				9CE9512E1DEB44E7006BD7B1 /* DGTokenStore.m in Sources */,
