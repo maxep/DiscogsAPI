@@ -42,8 +42,4 @@
     return self;
 }
 
-- (NSArray *)videos {
-    return [_videos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"embed == true"]];
-}
-
 @end
