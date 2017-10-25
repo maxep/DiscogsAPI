@@ -44,7 +44,7 @@ static NSString * const kDGRatelimit = @"X-Discogs-Ratelimit";
 static NSString * const kDGRatelimitRemaining = @"X-Discogs-Ratelimit-Remaining";
 
 - (instancetype)init {
-    return [self initWithRateLimit:240];
+    return [self initWithRateLimit:60];
 }
 
 - (instancetype)initWithRateLimit:(NSInteger)rateLimit {

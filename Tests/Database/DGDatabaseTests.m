@@ -183,28 +183,32 @@
 //
 //    DGLabel *label = [DGLabel new];
 //    label.ID = @1;
-//    
-//    NSInteger count = 250;
-//    
+//
+//    NSInteger count = 61;
+//
 //    NSDate *start = [NSDate date];
-//    
+//
 //    for (NSInteger i = 0; i < count; i++) {
-//        
+//
 //        DGOperation *operation = [self.manager operationWithRequest:label method:RKRequestMethodGET responseClass:[DGLabel class]];
 //        operation.successCallbackQueue = callbackQueue;
 //        operation.failureCallbackQueue = callbackQueue;
 //
+//        __weak DGOperation *weakOperation = operation;
 //        [operation setCompletionBlockWithSuccess:^(id  _Nonnull response) {
-//            
+//
 //        } failure:^(NSError * _Nullable error) {
-//            XCTFail(@"Error: %@", error);
+//            NSLog(@"Operation %li\n \
+//                  After %f \n \
+//                  Response Header %@\nError: %@", i, -start.timeIntervalSinceNow, weakOperation.HTTPRequestOperation.response.allHeaderFields, error);
+//            XCTFail(@"");
 //        }];
-//        
+//
 //        [queue addOperation:operation];
 //    }
-//    
+//
 //    [queue waitUntilAllOperationsAreFinished];
-//    
+//
 //    NSTimeInterval estimatedTime = count * kDGRateLimitWindow / (queue.rateLimit - 1);
 //    XCTAssertEqualWithAccuracy(-start.timeIntervalSinceNow, estimatedTime, 1);
 //}

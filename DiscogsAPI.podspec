@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
                               'AFOAuth1Client/AFOAuth1Client/*.h'
 
     ss.dependency 'DiscogsAPI/Mapping'
-    ss.dependency 'RestKit/ObjectMapping', '~> 0.27.0'
-    ss.dependency 'RestKit/Network', '~> 0.27.0'
+    ss.dependency 'RestKit/ObjectMapping', '~> 0.27.2'
+    ss.dependency 'RestKit/Network', '~> 0.27.2'
   end
 
   s.subspec 'Authentication' do |ss|

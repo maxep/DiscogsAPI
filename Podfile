@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+platform :ios, '8.0'
+
 def import_pods
     pod 'DiscogsAPI', :path => '.'
 end

@@ -73,15 +73,6 @@
 #import "RKSerialization.h"
 #import "RKStringTokenizer.h"
 #import "RKURLEncodedSerialization.h"
-#import "Testing.h"
-#import "RKBenchmark.h"
-#import "RKConnectionTestExpectation.h"
-#import "RKMappingTest.h"
-#import "RKPropertyMappingTestExpectation.h"
-#import "RKTestFactory.h"
-#import "RKTestFixture.h"
-#import "RKTestHelpers.h"
-#import "RKTestNotificationObserver.h"
 
 FOUNDATION_EXPORT double RestKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char RestKitVersionString[];

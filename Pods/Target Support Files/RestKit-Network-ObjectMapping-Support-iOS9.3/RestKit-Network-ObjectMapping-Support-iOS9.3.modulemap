@@ -1,6 +1,0 @@
-framework module RestKit {
-  umbrella header "RestKit-Network-ObjectMapping-Support-iOS9.3-umbrella.h"
-
-  export *
-  module * { export * }
-}
