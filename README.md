@@ -7,7 +7,7 @@
 
 An Objective-C interface for [Discogs API v2.0](http://www.discogs.com/developers/).
 
-The implementation is based on [RestKit v0.27.0](https://github.com/RestKit/RestKit).
+The implementation is based on [RestKit](https://github.com/RestKit/RestKit).
 
 ## Features
 - Supports OAuth process and store the token in keychain.

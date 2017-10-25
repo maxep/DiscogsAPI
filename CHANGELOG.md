@@ -3,6 +3,20 @@ All notable changes to `DiscogsAPI` project will be documented in this file.
 
 --- 
 
+## [1.8.0](https://github.com/maxep/DiscogsAPI/releases/tag/1.8.0) - October 25, 2017
+
+#### Fixed
+- Accept empty body responses.
+
+#### Added
+- `DGOperationQueue` is the centrelized operation queue that takes care the discogs rate limit.
+- `DGCompany` to represent labels and companies field on releases. Thanks to [nrivard](https://github.com/nrivard).
+- Ability to logout
+
+#### Updated
+- Swift interpolation
+- Upgrade to RestKit 0.27.2
+
 ## [1.7.1](https://github.com/maxep/DiscogsAPI/releases/tag/1.7.1) - February 14, 2017
 
 #### Fixed
