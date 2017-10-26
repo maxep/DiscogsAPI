@@ -32,7 +32,7 @@
 
 @synthesize pagination;
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
     [self.pagination loadNextPageWithResponseClass:[DGInventoryResponse class] success:^(DGInventoryResponse *response) {
         self.pagination = response.pagination;

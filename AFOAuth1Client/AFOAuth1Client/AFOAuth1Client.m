@@ -27,7 +27,7 @@
 #import <CommonCrypto/CommonHMAC.h>
 
 typedef void (^AFServiceProviderRequestHandlerBlock)(NSURLRequest *request);
-typedef void (^AFServiceProviderRequestCompletionBlock)();
+typedef void (^AFServiceProviderRequestCompletionBlock)(void);
 
 static NSString * const kAFOAuth1Version = @"1.0";
 NSString * const kAFApplicationLaunchedWithURLNotification = @"kAFApplicationLaunchedWithURLNotification";
@@ -421,7 +421,7 @@ static NSDictionary * AFKeychainQueryDictionaryWithIdentifier(NSString *identifi
 #pragma mark -
 
 - (void)setServiceProviderRequestHandler:(void (^)(NSURLRequest *request))block
-                              completion:(void (^)())completion
+                              completion:(void (^)(void))completion
 {
     self.serviceProviderRequestHandler = block;
     self.serviceProviderRequestCompletion = completion;

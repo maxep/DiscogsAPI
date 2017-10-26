@@ -115,7 +115,7 @@ extern NSString *DGSortOrderAsString(DGSortOrder order);
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void(^)(NSError * _Nullable error))failure;
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(nullable void(^)(NSError * _Nullable error))failure;
 
 @end
 

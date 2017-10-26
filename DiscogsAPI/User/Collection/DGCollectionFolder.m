@@ -147,7 +147,7 @@ extern NSString * DGSortFolderItemsAsString(DGSortFolderItems sort) {
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(void (^)(NSError* error))failure {
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(void (^)(NSError* error))failure {
     
     [self.pagination loadNextPageWithResponseClass:[DGCollectionItemsResponse class] success:^(DGCollectionItemsResponse *response) {
         self.pagination = response.pagination;

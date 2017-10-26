@@ -72,10 +72,10 @@
     [self.manager enqueueOperation:operation];
 }
 
-- (void)editListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure {
+- (void)editListing:(DGListing *)listing success:(void (^)(void))success failure:(nullable DGFailureBlock)failure {
     
     DGOperation *operation = [self.manager operationWithRequest:listing method:RKRequestMethodPOST];
-    [operation setCompletionBlockWithSuccess:success failure:failure];
+    [operation setCompletionBlockWithEmptySuccess:success failure:failure];
     
     [self.manager enqueueOperation:operation];
 }
@@ -95,10 +95,10 @@
     [self.manager enqueueOperation:operation];
 }
 
-- (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure {
+- (void)deleteListing:(DGListing *)listing success:(void (^)(void))success failure:(nullable DGFailureBlock)failure {
     
     DGOperation *operation = [self.manager operationWithRequest:listing method:RKRequestMethodDELETE];
-    [operation setCompletionBlockWithSuccess:success failure:failure];
+    [operation setCompletionBlockWithEmptySuccess:success failure:failure];
     
     [self.manager enqueueOperation:operation];
 }

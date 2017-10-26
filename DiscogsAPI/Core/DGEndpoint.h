@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, DGErrorCode){
 /**
  A block that can act as a failure for a task.
  */
-typedef void(^DGFailureBlock)(NSError *error);
+typedef void(^DGFailureBlock)(NSError *_Nullable error);
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;

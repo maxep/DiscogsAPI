@@ -43,7 +43,7 @@
 
 @synthesize pagination;
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
     [self.pagination loadNextPageWithResponseClass:[DGArtistReleasesResponse class] success:^(DGArtistReleasesResponse *response) {
         self.pagination = response.pagination;

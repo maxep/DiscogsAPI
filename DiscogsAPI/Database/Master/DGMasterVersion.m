@@ -52,7 +52,7 @@
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
     [self.pagination loadNextPageWithResponseClass:[DGMasterVersionsResponse class] success:^(DGMasterVersionsResponse *response) {
         self.pagination = response.pagination;

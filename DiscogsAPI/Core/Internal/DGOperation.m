@@ -62,6 +62,12 @@ NSString * const DGErrorDomain = @"com.discogs.api";
     }];
 }
 
+- (void)setCompletionBlockWithEmptySuccess:(void (^)(void))success failure:(nullable void (^)(NSError * _Nullable error))failure {
+    [self setCompletionBlockWithSuccess:^(id  _Nonnull response) {
+        success();
+    } failure:failure];
+}
+
 - (void)setMappingResult:(RKMappingResult *)mappingResult {
     _mappingResult = mappingResult;
     

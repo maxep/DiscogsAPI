@@ -48,7 +48,7 @@
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
     [self.pagination loadNextPageWithResponseClass:[DGWantlistResponse class] success:^(DGWantlistResponse *response) {
         self.pagination = response.pagination;
@@ -112,11 +112,11 @@
     [self.manager enqueueOperation:operation];
 }
 
-- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)())success failure:(void (^)(NSError *error))failure {
+- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)(void))success failure:(void (^)(NSError *error))failure {
     
     
     DGOperation *operation = [self.manager operationWithRequest:request method:RKRequestMethodDELETE];
-    [operation setCompletionBlockWithSuccess:success failure:failure];
+    [operation setCompletionBlockWithEmptySuccess:success failure:failure];
     
     [self.manager enqueueOperation:operation];
 }

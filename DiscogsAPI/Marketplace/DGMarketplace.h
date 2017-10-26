@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)editListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(edit(_:success:failure:));
+- (void)editListing:(DGListing *)listing success:(void (^)(void))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(edit(_:success:failure:));
 
 /**
  Creates a Marketplace listing.
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the search operation finishes successfully. This block has no return value and no argument.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)deleteListing:(DGListing *)listing success:(void (^)())success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(delete(_:success:failure:));
+- (void)deleteListing:(DGListing *)listing success:(void (^)(void))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(delete(_:success:failure:));
 
 /**
  Edits the data associated with an order.

@@ -140,7 +140,7 @@ typedef NS_ENUM(NSUInteger, AFOAuthSignatureMethod) {
  @param completion A block to be executed when the request is finished. This block has no return value and takes no arguments.
  */
 - (void)setServiceProviderRequestHandler:(void (^)(NSURLRequest *request))block
-                              completion:(void (^)())completion;
+                              completion:(void (^)(void))completion;
 
 @end
 

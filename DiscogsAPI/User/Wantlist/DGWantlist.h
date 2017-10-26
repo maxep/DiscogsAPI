@@ -126,7 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param success A block object to be executed when the get operation finishes successfully. This block has no return value no argument: the wanted release.
  @param failure A block object to be executed when the synchronization operation finishes unsuccessfully. This block has no return value and takes one argument: The `NSError` object describing the error that occurred.
  */
-- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)())success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(delete(_:success:failure:));
+- (void)deleteReleaseFromWantlist:(DGWantRequest *)request success:(void (^)(void))success failure:(nullable DGFailureBlock)failure NS_SWIFT_NAME(delete(_:success:failure:));
 
 @end
 

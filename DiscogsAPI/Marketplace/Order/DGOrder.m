@@ -60,7 +60,7 @@ NSString * DGSortOrdersAsString(DGSortOrders sort) {
     return self;
 }
 
-- (void)loadNextPageWithSuccess:(void (^)())success failure:(nullable void (^)(NSError * _Nullable error))failure {
+- (void)loadNextPageWithSuccess:(void (^)(void))success failure:(nullable void (^)(NSError * _Nullable error))failure {
     
     [self.pagination loadNextPageWithResponseClass:[DGListOrdersResponse class] success:^(DGListOrdersResponse *response) {
         self.pagination = response.pagination;
