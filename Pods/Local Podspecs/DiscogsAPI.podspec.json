@@ -1,6 +1,6 @@
 {
   "name": "DiscogsAPI",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "summary": "An Objective-C interface for Discogs API v2.0.",
   "description": "Features:\n- Supports OAuth process and store the token in keychain.\n               - Supports Discogs Auth.\n- Database support: Release, Master Release, Master Release Versions, Artist, Artist Releases, Label, All Label Releases, Search.\n- User support: Identify, Profile, Collection, Wantlist.\n               - Marketplace support: Price suggestions, Listings, Orders.\n- Image support.",
   "homepage": "https://github.com/maxep/DiscogsAPI",
@@ -11,7 +11,7 @@
   "social_media_url": "https://twitter.com/MaximeEpain",
   "source": {
     "git": "https://github.com/maxep/DiscogsAPI.git",
-    "tag": "1.7.1"
+    "tag": "1.8.0"
   },
   "documentation_url": "http://cocoadocs.org/docsets/DiscogsAPI",
   "requires_arc": true,
