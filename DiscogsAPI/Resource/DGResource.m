@@ -39,14 +39,13 @@ static NSCache *DGImageCache() {
 - (instancetype)initWithManager:(DGObjectManager *)manager {
     self = [super initWithManager:manager];
     if (self) {
-        self.operationQueue = [DGOperationQueue new];
+        self.operationQueue = [NSOperationQueue new];
     }
     return self;
 }
 
 - (void)getImage:(NSString *)imageURL success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
-    NSOperation *operation = [self createImageRequestOperationWithUrl:imageURL success:success failure:failure];
-    
+    NSOperation *operation = [self imageRequestOperationWithUrl:imageURL success:success failure:failure];
     [self.operationQueue addOperation:operation];
 }
 
@@ -54,18 +53,20 @@ static NSCache *DGImageCache() {
     [self getImage:imageURL success:success failure:nil];
 }
 
-- (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
-    
-    UIImage *image = [DGImageCache() objectForKey:url];
-    if (image) {
-        success(image);
-    }
+- (NSOperation *)imageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure {
     
     NSString *path = url;
     
     if (self.proxyURL) {
         NSURL *discogsURL = [NSURL URLWithString:url];
         path = [NSString stringWithFormat:@"%@%@", self.proxyURL, discogsURL.path];
+    }
+    
+    UIImage *image = [DGImageCache() objectForKey:path];
+    if (image) {
+        return [NSBlockOperation blockOperationWithBlock:^{
+            success(image);
+        }];
     }
     
     NSURLRequest *requestURL = [self.manager.HTTPClient requestWithMethod:@"GET" path:path parameters:nil];

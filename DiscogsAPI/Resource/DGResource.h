@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The Coxy image request operation.
  */
-- (NSOperation *)createImageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
+- (NSOperation *)imageRequestOperationWithUrl:(NSString *)url success:(void (^)(UIImage *image))success failure:(nullable DGFailureBlock)failure;
 
 @end
 
